@@ -1,0 +1,2618 @@
+{
+  "prep-action-1": {
+    "ru": {
+      "title": "für и ohne",
+      "points": [
+        {
+          "title": "für, ohne",
+          "text": "für значит «для», ohne значит «без». С местоимением: für dich, für mich.",
+          "examples": [
+            {
+              "de": "Das ist ein Geschenk für Mama.",
+              "tr": "Это подарок для мамы."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "После этих предлогов Akkusativ: мужской род получает den, einen. Остальное без изменений.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Мы идём через парк."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Он идёт без зонта."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "für і ohne",
+      "points": [
+        {
+          "title": "für, ohne",
+          "text": "für означає «для», ohne означає «без». З займенником: für dich, für mich.",
+          "examples": [
+            {
+              "de": "Das ist ein Geschenk für Mama.",
+              "tr": "Це подарунок для мами."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "Після цих прийменників Akkusativ: чоловічий рід отримує den, einen. Решта без змін.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Ми йдемо через парк."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Він іде без парасольки."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "für and ohne",
+      "points": [
+        {
+          "title": "für, ohne",
+          "text": "für means \"for\", ohne means \"without\". With pronouns: für dich, für mich.",
+          "examples": [
+            {
+              "de": "Das ist ein Geschenk für Mama.",
+              "tr": "This is a present for Mum."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, um + accusative",
+          "text": "These prepositions take the accusative: masculine becomes den, einen. The rest stays the same.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "We walk through the park."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "He goes without an umbrella."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "für i ohne",
+      "points": [
+        {
+          "title": "für, ohne",
+          "text": "für znaczy „dla”, ohne znaczy „bez”. Z zaimkiem: für dich, für mich.",
+          "examples": [
+            {
+              "de": "Das ist ein Geschenk für Mama.",
+              "tr": "To prezent dla mamy."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "Po tych przyimkach Akkusativ: rodzaj męski dostaje den, einen. Reszta bez zmian.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Idziemy przez park."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "On idzie bez parasola."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "für y ohne",
+      "points": [
+        {
+          "title": "für, ohne",
+          "text": "für significa \"para\", ohne significa \"sin\". Con pronombre: für dich, für mich.",
+          "examples": [
+            {
+              "de": "Das ist ein Geschenk für Mama.",
+              "tr": "Es un regalo para mamá."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, um + acusativo",
+          "text": "Estas preposiciones van con acusativo: el masculino pasa a den, einen. Lo demás no cambia.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Caminamos por el parque."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Él va sin paraguas."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "für et ohne",
+      "points": [
+        {
+          "title": "für, ohne",
+          "text": "für veut dire « pour », ohne « sans ». Avec un pronom : für dich, für mich.",
+          "examples": [
+            {
+              "de": "Das ist ein Geschenk für Mama.",
+              "tr": "C’est un cadeau pour maman."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, um + accusatif",
+          "text": "Ces prépositions prennent l’accusatif : le masculin devient den, einen. Le reste ne change pas.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Nous traversons le parc."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Il part sans parapluie."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "für ve ohne",
+      "points": [
+        {
+          "title": "für, ohne",
+          "text": "für \"için\", ohne \"-sız\" demektir. Zamirle: für dich, für mich.",
+          "examples": [
+            {
+              "de": "Das ist ein Geschenk für Mama.",
+              "tr": "Bu annem için bir hediye."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "Bu edatlardan sonra Akkusativ: eril den, einen olur. Gerisi değişmez.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Parkın içinden geçiyoruz."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Şemsiyesiz gidiyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "für și ohne",
+      "points": [
+        {
+          "title": "für, ohne",
+          "text": "für înseamnă „pentru”, ohne „fără”. Cu pronume: für dich, für mich.",
+          "examples": [
+            {
+              "de": "Das ist ein Geschenk für Mama.",
+              "tr": "E un cadou pentru mama."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, um + acuzativ",
+          "text": "După aceste prepoziții, acuzativ: masculinul devine den, einen. Restul rămâne la fel.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Mergem prin parc."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "El pleacă fără umbrelă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "für va ohne",
+      "points": [
+        {
+          "title": "für, ohne",
+          "text": "für \"uchun\", ohne \"-siz\" degani. Olmosh bilan: für dich, für mich.",
+          "examples": [
+            {
+              "de": "Das ist ein Geschenk für Mama.",
+              "tr": "Bu oyim uchun sovg'a."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "Bu ko'makchilardan keyin Akkusativ: erkak rodi den, einen bo'ladi. Qolgani o'zgarmaydi.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Biz park orqali o'tamiz."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "U soyabonsiz ketyapti."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "für और ohne",
+      "points": [
+        {
+          "title": "für, ohne",
+          "text": "für मतलब \"के लिए\", ohne मतलब \"के बिना\"। सर्वनाम के साथ: für dich, für mich।",
+          "examples": [
+            {
+              "de": "Das ist ein Geschenk für Mama.",
+              "tr": "यह माँ के लिए तोहफ़ा है।"
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "इन संबंधसूचकों के बाद Akkusativ: पुल्लिंग den, einen बनता है। बाकी नहीं बदलता।",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "हम पार्क से होकर जाते हैं।"
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "वह बिना छाते के जा रहा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "für وohne",
+      "points": [
+        {
+          "title": "für, ohne",
+          "text": "für تعني \"لـ\"، وohne تعني \"بدون\". مع الضمير: für dich، für mich.",
+          "examples": [
+            {
+              "de": "Das ist ein Geschenk für Mama.",
+              "tr": "هذه هدية لأمي."
+            }
+          ]
+        },
+        {
+          "title": "für وohne وdurch وum + المفعول",
+          "text": "بعد هذه الحروف حالة المفعول: المذكر يصبح den أو einen. والباقي لا يتغير.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "نمشي عبر الحديقة."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "هو يذهب بدون مظلة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "prep-action-2": {
+    "ru": {
+      "title": "durch и um",
+      "points": [
+        {
+          "title": "durch, um",
+          "text": "durch значит «через, сквозь», um значит «вокруг», um die Ecke значит «за углом».",
+          "examples": [
+            {
+              "de": "Die Apotheke ist um die Ecke.",
+              "tr": "Аптека за углом."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "После этих предлогов Akkusativ: мужской род получает den, einen. Остальное без изменений.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Мы идём через парк."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Он идёт без зонта."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "durch і um",
+      "points": [
+        {
+          "title": "durch, um",
+          "text": "durch означає «через, крізь», um означає «навколо», um die Ecke означає «за рогом».",
+          "examples": [
+            {
+              "de": "Die Apotheke ist um die Ecke.",
+              "tr": "Аптека за рогом."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "Після цих прийменників Akkusativ: чоловічий рід отримує den, einen. Решта без змін.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Ми йдемо через парк."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Він іде без парасольки."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "durch and um",
+      "points": [
+        {
+          "title": "durch, um",
+          "text": "durch means \"through\", um means \"around\", um die Ecke means \"round the corner\".",
+          "examples": [
+            {
+              "de": "Die Apotheke ist um die Ecke.",
+              "tr": "The pharmacy is round the corner."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, um + accusative",
+          "text": "These prepositions take the accusative: masculine becomes den, einen. The rest stays the same.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "We walk through the park."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "He goes without an umbrella."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "durch i um",
+      "points": [
+        {
+          "title": "durch, um",
+          "text": "durch znaczy „przez”, um znaczy „wokół”, um die Ecke znaczy „za rogiem”.",
+          "examples": [
+            {
+              "de": "Die Apotheke ist um die Ecke.",
+              "tr": "Apteka jest za rogiem."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "Po tych przyimkach Akkusativ: rodzaj męski dostaje den, einen. Reszta bez zmian.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Idziemy przez park."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "On idzie bez parasola."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "durch y um",
+      "points": [
+        {
+          "title": "durch, um",
+          "text": "durch significa \"a través de\", um \"alrededor de\", um die Ecke \"a la vuelta de la esquina\".",
+          "examples": [
+            {
+              "de": "Die Apotheke ist um die Ecke.",
+              "tr": "La farmacia está a la vuelta de la esquina."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, um + acusativo",
+          "text": "Estas preposiciones van con acusativo: el masculino pasa a den, einen. Lo demás no cambia.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Caminamos por el parque."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Él va sin paraguas."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "durch et um",
+      "points": [
+        {
+          "title": "durch, um",
+          "text": "durch veut dire « à travers », um « autour », um die Ecke « au coin de la rue ».",
+          "examples": [
+            {
+              "de": "Die Apotheke ist um die Ecke.",
+              "tr": "La pharmacie est au coin de la rue."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, um + accusatif",
+          "text": "Ces prépositions prennent l’accusatif : le masculin devient den, einen. Le reste ne change pas.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Nous traversons le parc."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Il part sans parapluie."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "durch ve um",
+      "points": [
+        {
+          "title": "durch, um",
+          "text": "durch \"içinden\", um \"etrafında\", um die Ecke \"köşeyi dönünce\" demektir.",
+          "examples": [
+            {
+              "de": "Die Apotheke ist um die Ecke.",
+              "tr": "Eczane köşede."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "Bu edatlardan sonra Akkusativ: eril den, einen olur. Gerisi değişmez.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Parkın içinden geçiyoruz."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Şemsiyesiz gidiyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "durch și um",
+      "points": [
+        {
+          "title": "durch, um",
+          "text": "durch înseamnă „prin”, um „în jurul”, um die Ecke „după colț”.",
+          "examples": [
+            {
+              "de": "Die Apotheke ist um die Ecke.",
+              "tr": "Farmacia e după colț."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, um + acuzativ",
+          "text": "După aceste prepoziții, acuzativ: masculinul devine den, einen. Restul rămâne la fel.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Mergem prin parc."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "El pleacă fără umbrelă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "durch va um",
+      "points": [
+        {
+          "title": "durch, um",
+          "text": "durch \"orqali\", um \"atrofida\", um die Ecke \"muyulishda\" degani.",
+          "examples": [
+            {
+              "de": "Die Apotheke ist um die Ecke.",
+              "tr": "Dorixona muyulishda."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "Bu ko'makchilardan keyin Akkusativ: erkak rodi den, einen bo'ladi. Qolgani o'zgarmaydi.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Biz park orqali o'tamiz."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "U soyabonsiz ketyapti."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "durch और um",
+      "points": [
+        {
+          "title": "durch, um",
+          "text": "durch मतलब \"से होकर\", um मतलब \"चारों ओर\", um die Ecke मतलब \"कोने के पास\"।",
+          "examples": [
+            {
+              "de": "Die Apotheke ist um die Ecke.",
+              "tr": "दवाखाना कोने के पास है।"
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "इन संबंधसूचकों के बाद Akkusativ: पुल्लिंग den, einen बनता है। बाकी नहीं बदलता।",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "हम पार्क से होकर जाते हैं।"
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "वह बिना छाते के जा रहा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "durch وum",
+      "points": [
+        {
+          "title": "durch, um",
+          "text": "durch تعني \"عبر\"، وum \"حول\"، وum die Ecke \"عند الزاوية\".",
+          "examples": [
+            {
+              "de": "Die Apotheke ist um die Ecke.",
+              "tr": "الصيدلية عند الزاوية."
+            }
+          ]
+        },
+        {
+          "title": "für وohne وdurch وum + المفعول",
+          "text": "بعد هذه الحروف حالة المفعول: المذكر يصبح den أو einen. والباقي لا يتغير.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "نمشي عبر الحديقة."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "هو يذهب بدون مظلة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "prep-action-3": {
+    "ru": {
+      "title": "gegenüber и vorbei",
+      "points": [
+        {
+          "title": "gegenüber von, an ... vorbei",
+          "text": "gegenüber von значит «напротив», an ... vorbei значит «мимо». После них Dativ: gegenüber vom Bahnhof, am Park vorbei.",
+          "examples": [
+            {
+              "de": "Die Bank ist gegenüber von der Post.",
+              "tr": "Банк напротив почты."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "gegenüber і vorbei",
+      "points": [
+        {
+          "title": "gegenüber von, an ... vorbei",
+          "text": "gegenüber von означає «навпроти», an ... vorbei означає «повз». Після них Dativ: gegenüber vom Bahnhof, am Park vorbei.",
+          "examples": [
+            {
+              "de": "Die Bank ist gegenüber von der Post.",
+              "tr": "Банк навпроти пошти."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "gegenüber and vorbei",
+      "points": [
+        {
+          "title": "gegenüber von, an ... vorbei",
+          "text": "gegenüber von means \"opposite\", an ... vorbei means \"past\". They take the dative: gegenüber vom Bahnhof, am Park vorbei.",
+          "examples": [
+            {
+              "de": "Die Bank ist gegenüber von der Post.",
+              "tr": "The bank is opposite the post office."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "gegenüber i vorbei",
+      "points": [
+        {
+          "title": "gegenüber von, an ... vorbei",
+          "text": "gegenüber von znaczy „naprzeciwko”, an ... vorbei „obok, mimo”. Po nich Dativ: gegenüber vom Bahnhof, am Park vorbei.",
+          "examples": [
+            {
+              "de": "Die Bank ist gegenüber von der Post.",
+              "tr": "Bank jest naprzeciwko poczty."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "gegenüber y vorbei",
+      "points": [
+        {
+          "title": "gegenüber von, an ... vorbei",
+          "text": "gegenüber von significa \"enfrente de\", an ... vorbei \"por delante de\". Van con dativo: gegenüber vom Bahnhof, am Park vorbei.",
+          "examples": [
+            {
+              "de": "Die Bank ist gegenüber von der Post.",
+              "tr": "El banco está enfrente de correos."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "gegenüber et vorbei",
+      "points": [
+        {
+          "title": "gegenüber von, an ... vorbei",
+          "text": "gegenüber von veut dire « en face de », an ... vorbei « devant (en passant) ». Ils prennent le datif : gegenüber vom Bahnhof, am Park vorbei.",
+          "examples": [
+            {
+              "de": "Die Bank ist gegenüber von der Post.",
+              "tr": "La banque est en face de la poste."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "gegenüber ve vorbei",
+      "points": [
+        {
+          "title": "gegenüber von, an ... vorbei",
+          "text": "gegenüber von \"karşısında\", an ... vorbei \"önünden geçerek\" demektir. Ardından Dativ: gegenüber vom Bahnhof, am Park vorbei.",
+          "examples": [
+            {
+              "de": "Die Bank ist gegenüber von der Post.",
+              "tr": "Banka postanenin karşısında."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "gegenüber și vorbei",
+      "points": [
+        {
+          "title": "gegenüber von, an ... vorbei",
+          "text": "gegenüber von înseamnă „vizavi de”, an ... vorbei „pe lângă”. Sunt urmate de dativ: gegenüber vom Bahnhof, am Park vorbei.",
+          "examples": [
+            {
+              "de": "Die Bank ist gegenüber von der Post.",
+              "tr": "Banca e vizavi de poștă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "gegenüber va vorbei",
+      "points": [
+        {
+          "title": "gegenüber von, an ... vorbei",
+          "text": "gegenüber von \"qarshisida\", an ... vorbei \"yonidan o'tib\" degani. Ulardan keyin Dativ: gegenüber vom Bahnhof, am Park vorbei.",
+          "examples": [
+            {
+              "de": "Die Bank ist gegenüber von der Post.",
+              "tr": "Bank pochta qarshisida."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "gegenüber और vorbei",
+      "points": [
+        {
+          "title": "gegenüber von, an ... vorbei",
+          "text": "gegenüber von मतलब \"सामने\", an ... vorbei मतलब \"के पास से होकर\"। इनके बाद Dativ: gegenüber vom Bahnhof, am Park vorbei।",
+          "examples": [
+            {
+              "de": "Die Bank ist gegenüber von der Post.",
+              "tr": "बैंक डाकघर के सामने है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "gegenüber وvorbei",
+      "points": [
+        {
+          "title": "gegenüber von, an ... vorbei",
+          "text": "gegenüber von تعني \"مقابل\"، وan ... vorbei تعني \"مروراً بـ\". وبعدهما حالة الجر: gegenüber vom Bahnhof، am Park vorbei.",
+          "examples": [
+            {
+              "de": "Die Bank ist gegenüber von der Post.",
+              "tr": "البنك مقابل البريد."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "prep-action-4": {
+    "ru": {
+      "title": "Время: am, um, im",
+      "points": [
+        {
+          "title": "am, um, im",
+          "text": "am + день и часть дня, um + время на часах, im + месяц и время года.",
+          "examples": [
+            {
+              "de": "Im Sommer fahren wir ans Meer.",
+              "tr": "Летом мы едем на море."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Час: am, um, im",
+      "points": [
+        {
+          "title": "am, um, im",
+          "text": "am + день і частина дня, um + час на годиннику, im + місяць і пора року.",
+          "examples": [
+            {
+              "de": "Im Sommer fahren wir ans Meer.",
+              "tr": "Улітку ми їдемо на море."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Time: am, um, im",
+      "points": [
+        {
+          "title": "am, um, im",
+          "text": "am + day and part of the day, um + clock time, im + month and season.",
+          "examples": [
+            {
+              "de": "Im Sommer fahren wir ans Meer.",
+              "tr": "In summer we go to the seaside."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Czas: am, um, im",
+      "points": [
+        {
+          "title": "am, um, im",
+          "text": "am + dzień i pora dnia, um + godzina, im + miesiąc i pora roku.",
+          "examples": [
+            {
+              "de": "Im Sommer fahren wir ans Meer.",
+              "tr": "Latem jedziemy nad morze."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Tiempo: am, um, im",
+      "points": [
+        {
+          "title": "am, um, im",
+          "text": "am + día y parte del día, um + hora, im + mes y estación.",
+          "examples": [
+            {
+              "de": "Im Sommer fahren wir ans Meer.",
+              "tr": "En verano vamos al mar."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le temps : am, um, im",
+      "points": [
+        {
+          "title": "am, um, im",
+          "text": "am + jour et moment de la journée, um + heure, im + mois et saison.",
+          "examples": [
+            {
+              "de": "Im Sommer fahren wir ans Meer.",
+              "tr": "En été, nous allons à la mer."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Zaman: am, um, im",
+      "points": [
+        {
+          "title": "am, um, im",
+          "text": "am + gün ve günün bölümü, um + saat, im + ay ve mevsim.",
+          "examples": [
+            {
+              "de": "Im Sommer fahren wir ans Meer.",
+              "tr": "Yazın denize gideriz."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Timpul: am, um, im",
+      "points": [
+        {
+          "title": "am, um, im",
+          "text": "am + zi și parte a zilei, um + oră, im + lună și anotimp.",
+          "examples": [
+            {
+              "de": "Im Sommer fahren wir ans Meer.",
+              "tr": "Vara mergem la mare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Vaqt: am, um, im",
+      "points": [
+        {
+          "title": "am, um, im",
+          "text": "am + kun va kun qismi, um + soat, im + oy va fasl.",
+          "examples": [
+            {
+              "de": "Im Sommer fahren wir ans Meer.",
+              "tr": "Yozda dengizga boramiz."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "समय: am, um, im",
+      "points": [
+        {
+          "title": "am, um, im",
+          "text": "am + दिन और दिन का हिस्सा, um + घड़ी का समय, im + महीना और मौसम।",
+          "examples": [
+            {
+              "de": "Im Sommer fahren wir ans Meer.",
+              "tr": "गर्मियों में हम समुद्र किनारे जाते हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الزمن: am وum وim",
+      "points": [
+        {
+          "title": "am, um, im",
+          "text": "am + اليوم وجزء اليوم، um + الساعة، im + الشهر والفصل.",
+          "examples": [
+            {
+              "de": "Im Sommer fahren wir ans Meer.",
+              "tr": "في الصيف نذهب إلى البحر."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "prep-action-5": {
+    "ru": {
+      "title": "von ... bis и ab",
+      "points": [
+        {
+          "title": "von ... bis, bis, ab",
+          "text": "von ... bis значит «с ... до», bis значит «до», ab значит «начиная с».",
+          "examples": [
+            {
+              "de": "Ich arbeite von neun bis fünf.",
+              "tr": "Я работаю с девяти до пяти."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "von ... bis і ab",
+      "points": [
+        {
+          "title": "von ... bis, bis, ab",
+          "text": "von ... bis означає «з ... до», bis означає «до», ab означає «починаючи з».",
+          "examples": [
+            {
+              "de": "Ich arbeite von neun bis fünf.",
+              "tr": "Я працюю з дев’ятої до п’ятої."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "von ... bis and ab",
+      "points": [
+        {
+          "title": "von ... bis, bis, ab",
+          "text": "von ... bis means \"from ... to\", bis means \"until\", ab means \"from (onwards)\".",
+          "examples": [
+            {
+              "de": "Ich arbeite von neun bis fünf.",
+              "tr": "I work from nine to five."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "von ... bis i ab",
+      "points": [
+        {
+          "title": "von ... bis, bis, ab",
+          "text": "von ... bis znaczy „od ... do”, bis „do”, ab „od (począwszy)”.",
+          "examples": [
+            {
+              "de": "Ich arbeite von neun bis fünf.",
+              "tr": "Pracuję od dziewiątej do piątej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "von ... bis y ab",
+      "points": [
+        {
+          "title": "von ... bis, bis, ab",
+          "text": "von ... bis significa \"de ... a\", bis \"hasta\", ab \"a partir de\".",
+          "examples": [
+            {
+              "de": "Ich arbeite von neun bis fünf.",
+              "tr": "Trabajo de nueve a cinco."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "von ... bis et ab",
+      "points": [
+        {
+          "title": "von ... bis, bis, ab",
+          "text": "von ... bis veut dire « de ... à », bis « jusqu’à », ab « à partir de ».",
+          "examples": [
+            {
+              "de": "Ich arbeite von neun bis fünf.",
+              "tr": "Je travaille de neuf heures à dix-sept heures."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "von ... bis ve ab",
+      "points": [
+        {
+          "title": "von ... bis, bis, ab",
+          "text": "von ... bis \"-den ... -e kadar\", bis \"-e kadar\", ab \"-den itibaren\" demektir.",
+          "examples": [
+            {
+              "de": "Ich arbeite von neun bis fünf.",
+              "tr": "Dokuzdan beşe kadar çalışıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "von ... bis și ab",
+      "points": [
+        {
+          "title": "von ... bis, bis, ab",
+          "text": "von ... bis înseamnă „de la ... până la”, bis „până la”, ab „începând cu”.",
+          "examples": [
+            {
+              "de": "Ich arbeite von neun bis fünf.",
+              "tr": "Lucrez de la nouă la cinci."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "von ... bis va ab",
+      "points": [
+        {
+          "title": "von ... bis, bis, ab",
+          "text": "von ... bis \"...dan ...gacha\", bis \"...gacha\", ab \"...dan boshlab\" degani.",
+          "examples": [
+            {
+              "de": "Ich arbeite von neun bis fünf.",
+              "tr": "To'qqizdan beshgacha ishlayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "von ... bis और ab",
+      "points": [
+        {
+          "title": "von ... bis, bis, ab",
+          "text": "von ... bis मतलब \"से ... तक\", bis मतलब \"तक\", ab मतलब \"से शुरू\"।",
+          "examples": [
+            {
+              "de": "Ich arbeite von neun bis fünf.",
+              "tr": "मैं नौ से पाँच बजे तक काम करता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "von ... bis وab",
+      "points": [
+        {
+          "title": "von ... bis, bis, ab",
+          "text": "von ... bis تعني \"من ... إلى\"، وbis \"حتى\"، وab \"ابتداءً من\".",
+          "examples": [
+            {
+              "de": "Ich arbeite von neun bis fünf.",
+              "tr": "أعمل من التاسعة حتى الخامسة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "prep-action-6": {
+    "ru": {
+      "title": "seit, vor, nach",
+      "points": [
+        {
+          "title": "Время с Dativ: seit, vor, nach",
+          "text": "seit значит «уже какое-то время и до сих пор», vor значит «назад», nach значит «после». После них Dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Я жду уже час."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "два года назад"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "seit, vor, nach",
+      "points": [
+        {
+          "title": "Час із Dativ: seit, vor, nach",
+          "text": "seit означає «уже якийсь час і досі», vor означає «тому», nach означає «після». Після них Dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Я чекаю вже годину."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "два роки тому"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "seit, vor, nach",
+      "points": [
+        {
+          "title": "Time with dative: seit, vor, nach",
+          "text": "seit means \"for, since (and still now)\", vor means \"ago\", nach means \"after\". They take the dative: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "I’ve been waiting for an hour."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "two years ago"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "seit, vor, nach",
+      "points": [
+        {
+          "title": "Czas z Dativ: seit, vor, nach",
+          "text": "seit znaczy „od (i nadal)”, vor znaczy „temu”, nach znaczy „po”. Po nich Dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Czekam od godziny."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "dwa lata temu"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "seit, vor, nach",
+      "points": [
+        {
+          "title": "Tiempo con dativo: seit, vor, nach",
+          "text": "seit significa \"desde hace (y sigue)\", vor significa \"hace\", nach significa \"después de\". Van con dativo: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Llevo una hora esperando."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "hace dos años"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "seit, vor, nach",
+      "points": [
+        {
+          "title": "Le temps avec le datif : seit, vor, nach",
+          "text": "seit veut dire « depuis (et encore maintenant) », vor « il y a », nach « après ». Ils prennent le datif : vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "J’attends depuis une heure."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "il y a deux ans"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "seit, vor, nach",
+      "points": [
+        {
+          "title": "Dativ ile zaman: seit, vor, nach",
+          "text": "seit \"-den beri (hâlâ)\", vor \"önce\", nach \"sonra\" demektir. Ardından Dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Bir saattir bekliyorum."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "iki yıl önce"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "seit, vor, nach",
+      "points": [
+        {
+          "title": "Timpul cu dativ: seit, vor, nach",
+          "text": "seit înseamnă „de (și încă)”, vor înseamnă „acum ... (în urmă)”, nach înseamnă „după”. Sunt urmate de dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Aștept de o oră."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "acum doi ani"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "seit, vor, nach",
+      "points": [
+        {
+          "title": "Dativ bilan vaqt: seit, vor, nach",
+          "text": "seit \"...dan beri (hozirgacha)\", vor \"... oldin\", nach \"...dan keyin\" degani. Ulardan keyin Dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Bir soatdan beri kutyapman."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "ikki yil oldin"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "seit, vor, nach",
+      "points": [
+        {
+          "title": "Dativ के साथ समय: seit, vor, nach",
+          "text": "seit मतलब \"से (और अब भी)\", vor मतलब \"पहले\", nach मतलब \"के बाद\"। इनके बाद Dativ: vor zwei Jahren, seit einer Stunde।",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "मैं एक घंटे से इंतज़ार कर रहा हूँ।"
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "दो साल पहले"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "seit وvor وnach",
+      "points": [
+        {
+          "title": "الزمن مع الجر: seit وvor وnach",
+          "text": "seit تعني \"منذ (وما زال)\"، وvor تعني \"قبل ... مضت\"، وnach تعني \"بعد\". وبعدها حالة الجر: vor zwei Jahren، seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "أنتظر منذ ساعة."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "قبل سنتين"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "prep-action-9": {
+    "ru": {
+      "title": "Практика: прогулка с собакой",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "После этих предлогов Akkusativ: мужской род получает den, einen. Остальное без изменений.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Мы идём через парк."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Он идёт без зонта."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: прогулянка з собакою",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "Після цих прийменників Akkusativ: чоловічий рід отримує den, einen. Решта без змін.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Ми йдемо через парк."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Він іде без парасольки."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: walking the dog",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + accusative",
+          "text": "These prepositions take the accusative: masculine becomes den, einen. The rest stays the same.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "We walk through the park."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "He goes without an umbrella."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: spacer z psem",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "Po tych przyimkach Akkusativ: rodzaj męski dostaje den, einen. Reszta bez zmian.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Idziemy przez park."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "On idzie bez parasola."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: paseo con el perro",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + acusativo",
+          "text": "Estas preposiciones van con acusativo: el masculino pasa a den, einen. Lo demás no cambia.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Caminamos por el parque."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Él va sin paraguas."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : promenade avec le chien",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + accusatif",
+          "text": "Ces prépositions prennent l’accusatif : le masculin devient den, einen. Le reste ne change pas.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Nous traversons le parc."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Il part sans parapluie."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: köpek gezdirmek",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "Bu edatlardan sonra Akkusativ: eril den, einen olur. Gerisi değişmez.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Parkın içinden geçiyoruz."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Şemsiyesiz gidiyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: plimbare cu câinele",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + acuzativ",
+          "text": "După aceste prepoziții, acuzativ: masculinul devine den, einen. Restul rămâne la fel.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Mergem prin parc."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "El pleacă fără umbrelă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: it bilan sayr",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "Bu ko'makchilardan keyin Akkusativ: erkak rodi den, einen bo'ladi. Qolgani o'zgarmaydi.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Biz park orqali o'tamiz."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "U soyabonsiz ketyapti."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: कुत्ते के साथ सैर",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "इन संबंधसूचकों के बाद Akkusativ: पुल्लिंग den, einen बनता है। बाकी नहीं बदलता।",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "हम पार्क से होकर जाते हैं।"
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "वह बिना छाते के जा रहा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: نزهة مع الكلب",
+      "points": [
+        {
+          "title": "für وohne وdurch وum + المفعول",
+          "text": "بعد هذه الحروف حالة المفعول: المذكر يصبح den أو einen. والباقي لا يتغير.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "نمشي عبر الحديقة."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "هو يذهب بدون مظلة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "prep-action-10": {
+    "ru": {
+      "title": "Практика: моё расписание",
+      "points": [
+        {
+          "title": "Время с Dativ: seit, vor, nach",
+          "text": "seit значит «уже какое-то время и до сих пор», vor значит «назад», nach значит «после». После них Dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Я жду уже час."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "два года назад"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: мій розклад",
+      "points": [
+        {
+          "title": "Час із Dativ: seit, vor, nach",
+          "text": "seit означає «уже якийсь час і досі», vor означає «тому», nach означає «після». Після них Dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Я чекаю вже годину."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "два роки тому"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: my schedule",
+      "points": [
+        {
+          "title": "Time with dative: seit, vor, nach",
+          "text": "seit means \"for, since (and still now)\", vor means \"ago\", nach means \"after\". They take the dative: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "I’ve been waiting for an hour."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "two years ago"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: mój plan",
+      "points": [
+        {
+          "title": "Czas z Dativ: seit, vor, nach",
+          "text": "seit znaczy „od (i nadal)”, vor znaczy „temu”, nach znaczy „po”. Po nich Dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Czekam od godziny."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "dwa lata temu"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: mi horario",
+      "points": [
+        {
+          "title": "Tiempo con dativo: seit, vor, nach",
+          "text": "seit significa \"desde hace (y sigue)\", vor significa \"hace\", nach significa \"después de\". Van con dativo: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Llevo una hora esperando."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "hace dos años"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : mon emploi du temps",
+      "points": [
+        {
+          "title": "Le temps avec le datif : seit, vor, nach",
+          "text": "seit veut dire « depuis (et encore maintenant) », vor « il y a », nach « après ». Ils prennent le datif : vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "J’attends depuis une heure."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "il y a deux ans"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: programım",
+      "points": [
+        {
+          "title": "Dativ ile zaman: seit, vor, nach",
+          "text": "seit \"-den beri (hâlâ)\", vor \"önce\", nach \"sonra\" demektir. Ardından Dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Bir saattir bekliyorum."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "iki yıl önce"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: programul meu",
+      "points": [
+        {
+          "title": "Timpul cu dativ: seit, vor, nach",
+          "text": "seit înseamnă „de (și încă)”, vor înseamnă „acum ... (în urmă)”, nach înseamnă „după”. Sunt urmate de dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Aștept de o oră."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "acum doi ani"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: mening jadvalim",
+      "points": [
+        {
+          "title": "Dativ bilan vaqt: seit, vor, nach",
+          "text": "seit \"...dan beri (hozirgacha)\", vor \"... oldin\", nach \"...dan keyin\" degani. Ulardan keyin Dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Bir soatdan beri kutyapman."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "ikki yil oldin"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: मेरा कार्यक्रम",
+      "points": [
+        {
+          "title": "Dativ के साथ समय: seit, vor, nach",
+          "text": "seit मतलब \"से (और अब भी)\", vor मतलब \"पहले\", nach मतलब \"के बाद\"। इनके बाद Dativ: vor zwei Jahren, seit einer Stunde।",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "मैं एक घंटे से इंतज़ार कर रहा हूँ।"
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "दो साल पहले"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: جدولي",
+      "points": [
+        {
+          "title": "الزمن مع الجر: seit وvor وnach",
+          "text": "seit تعني \"منذ (وما زال)\"، وvor تعني \"قبل ... مضت\"، وnach تعني \"بعد\". وبعدها حالة الجر: vor zwei Jahren، seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "أنتظر منذ ساعة."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "قبل سنتين"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "prep-action-7": {
+    "ru": {
+      "title": "Повторение: действие и время",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "После этих предлогов Akkusativ: мужской род получает den, einen. Остальное без изменений.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Мы идём через парк."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Он идёт без зонта."
+            }
+          ]
+        },
+        {
+          "title": "Время с Dativ: seit, vor, nach",
+          "text": "seit значит «уже какое-то время и до сих пор», vor значит «назад», nach значит «после». После них Dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Я жду уже час."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "два года назад"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: дія і час",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "Після цих прийменників Akkusativ: чоловічий рід отримує den, einen. Решта без змін.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Ми йдемо через парк."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Він іде без парасольки."
+            }
+          ]
+        },
+        {
+          "title": "Час із Dativ: seit, vor, nach",
+          "text": "seit означає «уже якийсь час і досі», vor означає «тому», nach означає «після». Після них Dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Я чекаю вже годину."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "два роки тому"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: action and time",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + accusative",
+          "text": "These prepositions take the accusative: masculine becomes den, einen. The rest stays the same.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "We walk through the park."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "He goes without an umbrella."
+            }
+          ]
+        },
+        {
+          "title": "Time with dative: seit, vor, nach",
+          "text": "seit means \"for, since (and still now)\", vor means \"ago\", nach means \"after\". They take the dative: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "I’ve been waiting for an hour."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "two years ago"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: czynność i czas",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "Po tych przyimkach Akkusativ: rodzaj męski dostaje den, einen. Reszta bez zmian.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Idziemy przez park."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "On idzie bez parasola."
+            }
+          ]
+        },
+        {
+          "title": "Czas z Dativ: seit, vor, nach",
+          "text": "seit znaczy „od (i nadal)”, vor znaczy „temu”, nach znaczy „po”. Po nich Dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Czekam od godziny."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "dwa lata temu"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: acción y tiempo",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + acusativo",
+          "text": "Estas preposiciones van con acusativo: el masculino pasa a den, einen. Lo demás no cambia.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Caminamos por el parque."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Él va sin paraguas."
+            }
+          ]
+        },
+        {
+          "title": "Tiempo con dativo: seit, vor, nach",
+          "text": "seit significa \"desde hace (y sigue)\", vor significa \"hace\", nach significa \"después de\". Van con dativo: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Llevo una hora esperando."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "hace dos años"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : action et temps",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + accusatif",
+          "text": "Ces prépositions prennent l’accusatif : le masculin devient den, einen. Le reste ne change pas.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Nous traversons le parc."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Il part sans parapluie."
+            }
+          ]
+        },
+        {
+          "title": "Le temps avec le datif : seit, vor, nach",
+          "text": "seit veut dire « depuis (et encore maintenant) », vor « il y a », nach « après ». Ils prennent le datif : vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "J’attends depuis une heure."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "il y a deux ans"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: eylem ve zaman",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "Bu edatlardan sonra Akkusativ: eril den, einen olur. Gerisi değişmez.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Parkın içinden geçiyoruz."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Şemsiyesiz gidiyor."
+            }
+          ]
+        },
+        {
+          "title": "Dativ ile zaman: seit, vor, nach",
+          "text": "seit \"-den beri (hâlâ)\", vor \"önce\", nach \"sonra\" demektir. Ardından Dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Bir saattir bekliyorum."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "iki yıl önce"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: acțiune și timp",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + acuzativ",
+          "text": "După aceste prepoziții, acuzativ: masculinul devine den, einen. Restul rămâne la fel.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Mergem prin parc."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "El pleacă fără umbrelă."
+            }
+          ]
+        },
+        {
+          "title": "Timpul cu dativ: seit, vor, nach",
+          "text": "seit înseamnă „de (și încă)”, vor înseamnă „acum ... (în urmă)”, nach înseamnă „după”. Sunt urmate de dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Aștept de o oră."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "acum doi ani"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: harakat va vaqt",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "Bu ko'makchilardan keyin Akkusativ: erkak rodi den, einen bo'ladi. Qolgani o'zgarmaydi.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Biz park orqali o'tamiz."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "U soyabonsiz ketyapti."
+            }
+          ]
+        },
+        {
+          "title": "Dativ bilan vaqt: seit, vor, nach",
+          "text": "seit \"...dan beri (hozirgacha)\", vor \"... oldin\", nach \"...dan keyin\" degani. Ulardan keyin Dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Bir soatdan beri kutyapman."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "ikki yil oldin"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: क्रिया और समय",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "इन संबंधसूचकों के बाद Akkusativ: पुल्लिंग den, einen बनता है। बाकी नहीं बदलता।",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "हम पार्क से होकर जाते हैं।"
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "वह बिना छाते के जा रहा है।"
+            }
+          ]
+        },
+        {
+          "title": "Dativ के साथ समय: seit, vor, nach",
+          "text": "seit मतलब \"से (और अब भी)\", vor मतलब \"पहले\", nach मतलब \"के बाद\"। इनके बाद Dativ: vor zwei Jahren, seit einer Stunde।",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "मैं एक घंटे से इंतज़ार कर रहा हूँ।"
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "दो साल पहले"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الفعل والزمن",
+      "points": [
+        {
+          "title": "für وohne وdurch وum + المفعول",
+          "text": "بعد هذه الحروف حالة المفعول: المذكر يصبح den أو einen. والباقي لا يتغير.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "نمشي عبر الحديقة."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "هو يذهب بدون مظلة."
+            }
+          ]
+        },
+        {
+          "title": "الزمن مع الجر: seit وvor وnach",
+          "text": "seit تعني \"منذ (وما زال)\"، وvor تعني \"قبل ... مضت\"، وnach تعني \"بعد\". وبعدها حالة الجر: vor zwei Jahren، seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "أنتظر منذ ساعة."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "قبل سنتين"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "prep-action-8": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "После этих предлогов Akkusativ: мужской род получает den, einen. Остальное без изменений.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Мы идём через парк."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Он идёт без зонта."
+            }
+          ]
+        },
+        {
+          "title": "Время с Dativ: seit, vor, nach",
+          "text": "seit значит «уже какое-то время и до сих пор», vor значит «назад», nach значит «после». После них Dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Я жду уже час."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "два года назад"
+            }
+          ]
+        },
+        {
+          "title": "Новых правил нет",
+          "text": "Короткая шпаргалка: für, ohne, durch, um с Akkusativ; mit, zu, bei, seit, vor, nach с Dativ.",
+          "examples": [
+            {
+              "de": "Ich wohne seit 2020 hier.",
+              "tr": "Я живу здесь с 2020 года."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "Після цих прийменників Akkusativ: чоловічий рід отримує den, einen. Решта без змін.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Ми йдемо через парк."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Він іде без парасольки."
+            }
+          ]
+        },
+        {
+          "title": "Час із Dativ: seit, vor, nach",
+          "text": "seit означає «уже якийсь час і досі», vor означає «тому», nach означає «після». Після них Dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Я чекаю вже годину."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "два роки тому"
+            }
+          ]
+        },
+        {
+          "title": "Нових правил немає",
+          "text": "Коротка шпаргалка: für, ohne, durch, um з Akkusativ; mit, zu, bei, seit, vor, nach з Dativ.",
+          "examples": [
+            {
+              "de": "Ich wohne seit 2020 hier.",
+              "tr": "Я живу тут з 2020 року."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + accusative",
+          "text": "These prepositions take the accusative: masculine becomes den, einen. The rest stays the same.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "We walk through the park."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "He goes without an umbrella."
+            }
+          ]
+        },
+        {
+          "title": "Time with dative: seit, vor, nach",
+          "text": "seit means \"for, since (and still now)\", vor means \"ago\", nach means \"after\". They take the dative: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "I’ve been waiting for an hour."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "two years ago"
+            }
+          ]
+        },
+        {
+          "title": "No new rules",
+          "text": "Cheat sheet: für, ohne, durch, um with accusative; mit, zu, bei, seit, vor, nach with dative.",
+          "examples": [
+            {
+              "de": "Ich wohne seit 2020 hier.",
+              "tr": "I’ve lived here since 2020."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "Po tych przyimkach Akkusativ: rodzaj męski dostaje den, einen. Reszta bez zmian.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Idziemy przez park."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "On idzie bez parasola."
+            }
+          ]
+        },
+        {
+          "title": "Czas z Dativ: seit, vor, nach",
+          "text": "seit znaczy „od (i nadal)”, vor znaczy „temu”, nach znaczy „po”. Po nich Dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Czekam od godziny."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "dwa lata temu"
+            }
+          ]
+        },
+        {
+          "title": "Bez nowych reguł",
+          "text": "Ściąga: für, ohne, durch, um z Akkusativ; mit, zu, bei, seit, vor, nach z Dativ.",
+          "examples": [
+            {
+              "de": "Ich wohne seit 2020 hier.",
+              "tr": "Mieszkam tu od 2020 roku."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + acusativo",
+          "text": "Estas preposiciones van con acusativo: el masculino pasa a den, einen. Lo demás no cambia.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Caminamos por el parque."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Él va sin paraguas."
+            }
+          ]
+        },
+        {
+          "title": "Tiempo con dativo: seit, vor, nach",
+          "text": "seit significa \"desde hace (y sigue)\", vor significa \"hace\", nach significa \"después de\". Van con dativo: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Llevo una hora esperando."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "hace dos años"
+            }
+          ]
+        },
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Chuleta: für, ohne, durch, um con acusativo; mit, zu, bei, seit, vor, nach con dativo.",
+          "examples": [
+            {
+              "de": "Ich wohne seit 2020 hier.",
+              "tr": "Vivo aquí desde 2020."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + accusatif",
+          "text": "Ces prépositions prennent l’accusatif : le masculin devient den, einen. Le reste ne change pas.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Nous traversons le parc."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Il part sans parapluie."
+            }
+          ]
+        },
+        {
+          "title": "Le temps avec le datif : seit, vor, nach",
+          "text": "seit veut dire « depuis (et encore maintenant) », vor « il y a », nach « après ». Ils prennent le datif : vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "J’attends depuis une heure."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "il y a deux ans"
+            }
+          ]
+        },
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "Aide-mémoire : für, ohne, durch, um avec l’accusatif ; mit, zu, bei, seit, vor, nach avec le datif.",
+          "examples": [
+            {
+              "de": "Ich wohne seit 2020 hier.",
+              "tr": "J’habite ici depuis 2020."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "Bu edatlardan sonra Akkusativ: eril den, einen olur. Gerisi değişmez.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Parkın içinden geçiyoruz."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "Şemsiyesiz gidiyor."
+            }
+          ]
+        },
+        {
+          "title": "Dativ ile zaman: seit, vor, nach",
+          "text": "seit \"-den beri (hâlâ)\", vor \"önce\", nach \"sonra\" demektir. Ardından Dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Bir saattir bekliyorum."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "iki yıl önce"
+            }
+          ]
+        },
+        {
+          "title": "Yeni kural yok",
+          "text": "Kısa not: für, ohne, durch, um Akkusativ ile; mit, zu, bei, seit, vor, nach Dativ ile.",
+          "examples": [
+            {
+              "de": "Ich wohne seit 2020 hier.",
+              "tr": "2020’den beri burada yaşıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + acuzativ",
+          "text": "După aceste prepoziții, acuzativ: masculinul devine den, einen. Restul rămâne la fel.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Mergem prin parc."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "El pleacă fără umbrelă."
+            }
+          ]
+        },
+        {
+          "title": "Timpul cu dativ: seit, vor, nach",
+          "text": "seit înseamnă „de (și încă)”, vor înseamnă „acum ... (în urmă)”, nach înseamnă „după”. Sunt urmate de dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Aștept de o oră."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "acum doi ani"
+            }
+          ]
+        },
+        {
+          "title": "Fără reguli noi",
+          "text": "Fițuică: für, ohne, durch, um cu acuzativ; mit, zu, bei, seit, vor, nach cu dativ.",
+          "examples": [
+            {
+              "de": "Ich wohne seit 2020 hier.",
+              "tr": "Locuiesc aici din 2020."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "Bu ko'makchilardan keyin Akkusativ: erkak rodi den, einen bo'ladi. Qolgani o'zgarmaydi.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "Biz park orqali o'tamiz."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "U soyabonsiz ketyapti."
+            }
+          ]
+        },
+        {
+          "title": "Dativ bilan vaqt: seit, vor, nach",
+          "text": "seit \"...dan beri (hozirgacha)\", vor \"... oldin\", nach \"...dan keyin\" degani. Ulardan keyin Dativ: vor zwei Jahren, seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "Bir soatdan beri kutyapman."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "ikki yil oldin"
+            }
+          ]
+        },
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Qisqa eslatma: für, ohne, durch, um Akkusativ bilan; mit, zu, bei, seit, vor, nach Dativ bilan.",
+          "examples": [
+            {
+              "de": "Ich wohne seit 2020 hier.",
+              "tr": "2020-yildan beri shu yerda yashayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "für, ohne, durch, um + Akkusativ",
+          "text": "इन संबंधसूचकों के बाद Akkusativ: पुल्लिंग den, einen बनता है। बाकी नहीं बदलता।",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "हम पार्क से होकर जाते हैं।"
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "वह बिना छाते के जा रहा है।"
+            }
+          ]
+        },
+        {
+          "title": "Dativ के साथ समय: seit, vor, nach",
+          "text": "seit मतलब \"से (और अब भी)\", vor मतलब \"पहले\", nach मतलब \"के बाद\"। इनके बाद Dativ: vor zwei Jahren, seit einer Stunde।",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "मैं एक घंटे से इंतज़ार कर रहा हूँ।"
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "दो साल पहले"
+            }
+          ]
+        },
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "छोटा नोट: für, ohne, durch, um Akkusativ के साथ; mit, zu, bei, seit, vor, nach Dativ के साथ।",
+          "examples": [
+            {
+              "de": "Ich wohne seit 2020 hier.",
+              "tr": "मैं 2020 से यहाँ रहता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "für وohne وdurch وum + المفعول",
+          "text": "بعد هذه الحروف حالة المفعول: المذكر يصبح den أو einen. والباقي لا يتغير.",
+          "examples": [
+            {
+              "de": "Wir gehen durch den Park.",
+              "tr": "نمشي عبر الحديقة."
+            },
+            {
+              "de": "Er geht ohne Regenschirm.",
+              "tr": "هو يذهب بدون مظلة."
+            }
+          ]
+        },
+        {
+          "title": "الزمن مع الجر: seit وvor وnach",
+          "text": "seit تعني \"منذ (وما زال)\"، وvor تعني \"قبل ... مضت\"، وnach تعني \"بعد\". وبعدها حالة الجر: vor zwei Jahren، seit einer Stunde.",
+          "examples": [
+            {
+              "de": "Ich warte seit einer Stunde.",
+              "tr": "أنتظر منذ ساعة."
+            },
+            {
+              "de": "vor zwei Jahren",
+              "tr": "قبل سنتين"
+            }
+          ]
+        },
+        {
+          "title": "لا قواعد جديدة",
+          "text": "ملخص: für وohne وdurch وum مع المفعول؛ وmit وzu وbei وseit وvor وnach مع الجر.",
+          "examples": [
+            {
+              "de": "Ich wohne seit 2020 hier.",
+              "tr": "أسكن هنا منذ 2020."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

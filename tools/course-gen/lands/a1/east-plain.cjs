@@ -109,7 +109,8 @@ module.exports = {
 				['gut', 'хорошо', 'good, well', 'добре', 'dobrze', 'bien', 'bien', 'iyi', 'bine', 'yaxshi', 'अच्छा', 'جيد'],
 				['schlecht', 'плохо', 'bad', 'погано', 'źle', 'mal', 'mal', 'kötü', 'rău', 'yomon', 'बुरा', 'سيئ'],
 				['danke', 'спасибо', 'thank you', 'дякую', 'dziękuję', 'gracias', 'merci', 'teşekkürler', 'mulțumesc', 'rahmat', 'धन्यवाद', 'شكرًا'],
-				['sehr', 'очень', 'very', 'дуже', 'bardzo', 'muy', 'très', 'çok', 'foarte', 'juda', 'बहुत', 'جدًا']
+				['sehr', 'очень', 'very', 'дуже', 'bardzo', 'muy', 'très', 'çok', 'foarte', 'juda', 'बहुत', 'جدًا'],
+				['es geht', 'так себе, пойдёт', 'so-so, okay', 'так собі, піде', 'jako tako', 'regular, así así', 'comme ci, comme ça', 'idare eder', 'așa și așa', 'o‘rtacha', 'ठीक-ठाक', 'لا بأس']
 			],
 			tasks: [
 				['tr', ['Как дела?', 'How are you?', 'Як справи?', 'Jak się masz?', '¿Qué tal?', 'Ça va ?', 'Nasılsın?', 'Ce faci?', 'Ishlar qalay?', 'कैसे हो?', 'كيف الحال؟'],

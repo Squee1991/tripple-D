@@ -1,0 +1,2761 @@
+{
+  "clock-tower-one": {
+    "ru": {
+      "title": "Дни недели",
+      "points": [
+        {
+          "title": "Все мужского рода",
+          "text": "Дни недели все с der и с большой буквы. Почти все кончаются на -tag.",
+          "examples": [
+            {
+              "de": "Montag, Dienstag, Mittwoch, Donnerstag",
+              "tr": "понедельник, вторник, среда, четверг"
+            },
+            {
+              "de": "Freitag, Samstag, Sonntag",
+              "tr": "пятница, суббота, воскресенье"
+            },
+            {
+              "de": "Heute ist Freitag.",
+              "tr": "Сегодня пятница."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Дні тижня",
+      "points": [
+        {
+          "title": "Усі чоловічого роду",
+          "text": "Дні тижня всі з der і з великої літери. Майже всі закінчуються на -tag.",
+          "examples": [
+            {
+              "de": "Montag, Dienstag, Mittwoch, Donnerstag",
+              "tr": "понеділок, вівторок, середа, четвер"
+            },
+            {
+              "de": "Freitag, Samstag, Sonntag",
+              "tr": "пʼятниця, субота, неділя"
+            },
+            {
+              "de": "Heute ist Freitag.",
+              "tr": "Сьогодні пʼятниця."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Days of the week",
+      "points": [
+        {
+          "title": "All masculine",
+          "text": "All days take der and start with a capital letter. Almost all end in -tag.",
+          "examples": [
+            {
+              "de": "Montag, Dienstag, Mittwoch, Donnerstag",
+              "tr": "Monday, Tuesday, Wednesday, Thursday"
+            },
+            {
+              "de": "Freitag, Samstag, Sonntag",
+              "tr": "Friday, Saturday, Sunday"
+            },
+            {
+              "de": "Heute ist Freitag.",
+              "tr": "Today is Friday."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Dni tygodnia",
+      "points": [
+        {
+          "title": "Wszystkie rodzaju męskiego",
+          "text": "Wszystkie dni mają der i są pisane wielką literą. Prawie wszystkie kończą się na -tag.",
+          "examples": [
+            {
+              "de": "Montag, Dienstag, Mittwoch, Donnerstag",
+              "tr": "poniedziałek, wtorek, środa, czwartek"
+            },
+            {
+              "de": "Freitag, Samstag, Sonntag",
+              "tr": "piątek, sobota, niedziela"
+            },
+            {
+              "de": "Heute ist Freitag.",
+              "tr": "Dziś jest piątek."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Los días de la semana",
+      "points": [
+        {
+          "title": "Todos masculinos",
+          "text": "Todos los días llevan der y van con mayúscula. Casi todos terminan en -tag.",
+          "examples": [
+            {
+              "de": "Montag, Dienstag, Mittwoch, Donnerstag",
+              "tr": "lunes, martes, miércoles, jueves"
+            },
+            {
+              "de": "Freitag, Samstag, Sonntag",
+              "tr": "viernes, sábado, domingo"
+            },
+            {
+              "de": "Heute ist Freitag.",
+              "tr": "Hoy es viernes."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les jours de la semaine",
+      "points": [
+        {
+          "title": "Tous masculins",
+          "text": "Tous les jours prennent der et une majuscule. Presque tous finissent par -tag.",
+          "examples": [
+            {
+              "de": "Montag, Dienstag, Mittwoch, Donnerstag",
+              "tr": "lundi, mardi, mercredi, jeudi"
+            },
+            {
+              "de": "Freitag, Samstag, Sonntag",
+              "tr": "vendredi, samedi, dimanche"
+            },
+            {
+              "de": "Heute ist Freitag.",
+              "tr": "Aujourd’hui, c’est vendredi."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Haftanın günleri",
+      "points": [
+        {
+          "title": "Hepsi eril",
+          "text": "Bütün günler der alır ve büyük harfle yazılır. Neredeyse hepsi -tag ile biter.",
+          "examples": [
+            {
+              "de": "Montag, Dienstag, Mittwoch, Donnerstag",
+              "tr": "pazartesi, salı, çarşamba, perşembe"
+            },
+            {
+              "de": "Freitag, Samstag, Sonntag",
+              "tr": "cuma, cumartesi, pazar"
+            },
+            {
+              "de": "Heute ist Freitag.",
+              "tr": "Bugün cuma."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Zilele săptămânii",
+      "points": [
+        {
+          "title": "Toate masculine",
+          "text": "Toate zilele au der și se scriu cu majusculă. Aproape toate se termină în -tag.",
+          "examples": [
+            {
+              "de": "Montag, Dienstag, Mittwoch, Donnerstag",
+              "tr": "luni, marți, miercuri, joi"
+            },
+            {
+              "de": "Freitag, Samstag, Sonntag",
+              "tr": "vineri, sâmbătă, duminică"
+            },
+            {
+              "de": "Heute ist Freitag.",
+              "tr": "Azi e vineri."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Hafta kunlari",
+      "points": [
+        {
+          "title": "Hammasi erkak rodida",
+          "text": "Barcha kunlar der bilan va bosh harf bilan yoziladi. Deyarli hammasi -tag bilan tugaydi.",
+          "examples": [
+            {
+              "de": "Montag, Dienstag, Mittwoch, Donnerstag",
+              "tr": "dushanba, seshanba, chorshanba, payshanba"
+            },
+            {
+              "de": "Freitag, Samstag, Sonntag",
+              "tr": "juma, shanba, yakshanba"
+            },
+            {
+              "de": "Heute ist Freitag.",
+              "tr": "Bugun juma."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "सप्ताह के दिन",
+      "points": [
+        {
+          "title": "सभी पुल्लिंग",
+          "text": "सभी दिन der के साथ और बड़े अक्षर से। लगभग सभी -tag पर खत्म होते हैं।",
+          "examples": [
+            {
+              "de": "Montag, Dienstag, Mittwoch, Donnerstag",
+              "tr": "सोमवार, मंगलवार, बुधवार, गुरुवार"
+            },
+            {
+              "de": "Freitag, Samstag, Sonntag",
+              "tr": "शुक्रवार, शनिवार, रविवार"
+            },
+            {
+              "de": "Heute ist Freitag.",
+              "tr": "आज शुक्रवार है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "أيام الأسبوع",
+      "points": [
+        {
+          "title": "كلها مذكرة",
+          "text": "كل الأيام تأخذ der وتُكتب بحرف كبير. ومعظمها ينتهي بـ -tag.",
+          "examples": [
+            {
+              "de": "Montag, Dienstag, Mittwoch, Donnerstag",
+              "tr": "الاثنين، الثلاثاء، الأربعاء، الخميس"
+            },
+            {
+              "de": "Freitag, Samstag, Sonntag",
+              "tr": "الجمعة، السبت، الأحد"
+            },
+            {
+              "de": "Heute ist Freitag.",
+              "tr": "اليوم الجمعة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "clock-tower-two": {
+    "ru": {
+      "title": "Когда? am Montag",
+      "points": [
+        {
+          "title": "am + день",
+          "text": "Чтобы сказать «в какой день», ставим am: am Montag, am Wochenende. Вопрос: Wann? (когда?)",
+          "examples": [
+            {
+              "de": "Wann hast du Zeit? Am Samstag.",
+              "tr": "Когда у тебя есть время? В субботу."
+            }
+          ]
+        },
+        {
+          "title": "Время первым, глагол вторым",
+          "text": "Если время стоит в начале, глагол идёт сразу за ним, а потом ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "В понедельник я работаю."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Коли? am Montag",
+      "points": [
+        {
+          "title": "am + день",
+          "text": "Щоб сказати «у який день», ставимо am: am Montag, am Wochenende. Питання: Wann? (коли?)",
+          "examples": [
+            {
+              "de": "Wann hast du Zeit? Am Samstag.",
+              "tr": "Коли в тебе є час? У суботу."
+            }
+          ]
+        },
+        {
+          "title": "Час першим, дієслово другим",
+          "text": "Якщо час стоїть на початку, дієслово йде одразу за ним, а потім ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "У понеділок я працюю."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "When? am Montag",
+      "points": [
+        {
+          "title": "am + day",
+          "text": "To say \"on\" a day, use am: am Montag, am Wochenende. The question is Wann? (when?)",
+          "examples": [
+            {
+              "de": "Wann hast du Zeit? Am Samstag.",
+              "tr": "When do you have time? On Saturday."
+            }
+          ]
+        },
+        {
+          "title": "Time first, verb second",
+          "text": "If the time comes first, the verb comes right after it, then ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "On Monday I work."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Kiedy? am Montag",
+      "points": [
+        {
+          "title": "am + dzień",
+          "text": "Żeby powiedzieć „w który dzień”, mówimy am: am Montag, am Wochenende. Pytanie: Wann? (kiedy?)",
+          "examples": [
+            {
+              "de": "Wann hast du Zeit? Am Samstag.",
+              "tr": "Kiedy masz czas? W sobotę."
+            }
+          ]
+        },
+        {
+          "title": "Czas pierwszy, czasownik drugi",
+          "text": "Jeśli czas jest na początku, czasownik idzie zaraz po nim, a potem ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "W poniedziałek pracuję."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿Cuándo? am Montag",
+      "points": [
+        {
+          "title": "am + día",
+          "text": "Para decir \"el lunes\", se usa am: am Montag, am Wochenende. La pregunta es Wann? (¿cuándo?)",
+          "examples": [
+            {
+              "de": "Wann hast du Zeit? Am Samstag.",
+              "tr": "¿Cuándo tienes tiempo? El sábado."
+            }
+          ]
+        },
+        {
+          "title": "Tiempo primero, verbo segundo",
+          "text": "Si el tiempo va al principio, el verbo va justo después y luego ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "El lunes trabajo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Quand ? am Montag",
+      "points": [
+        {
+          "title": "am + jour",
+          "text": "Pour dire « lundi », on met am : am Montag, am Wochenende. La question : Wann ? (quand ?)",
+          "examples": [
+            {
+              "de": "Wann hast du Zeit? Am Samstag.",
+              "tr": "Quand as-tu le temps ? Samedi."
+            }
+          ]
+        },
+        {
+          "title": "Le temps d’abord, le verbe ensuite",
+          "text": "Si le temps est en premier, le verbe vient juste après, puis ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "Lundi, je travaille."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Ne zaman? am Montag",
+      "points": [
+        {
+          "title": "am + gün",
+          "text": "\"Pazartesi günü\" demek için am: am Montag, am Wochenende. Soru: Wann? (ne zaman?)",
+          "examples": [
+            {
+              "de": "Wann hast du Zeit? Am Samstag.",
+              "tr": "Ne zaman vaktin var? Cumartesi."
+            }
+          ]
+        },
+        {
+          "title": "Önce zaman, sonra fiil",
+          "text": "Zaman başta olursa fiil hemen ardından, sonra ich gelir.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "Pazartesi çalışıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Când? am Montag",
+      "points": [
+        {
+          "title": "am + zi",
+          "text": "Ca să spui „luni”, pui am: am Montag, am Wochenende. Întrebarea: Wann? (când?)",
+          "examples": [
+            {
+              "de": "Wann hast du Zeit? Am Samstag.",
+              "tr": "Când ai timp? Sâmbătă."
+            }
+          ]
+        },
+        {
+          "title": "Timpul primul, verbul al doilea",
+          "text": "Dacă timpul e la început, verbul vine imediat după el, apoi ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "Luni lucrez."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qachon? am Montag",
+      "points": [
+        {
+          "title": "am + kun",
+          "text": "\"Dushanba kuni\" deyish uchun am: am Montag, am Wochenende. Savol: Wann? (qachon?)",
+          "examples": [
+            {
+              "de": "Wann hast du Zeit? Am Samstag.",
+              "tr": "Qachon vaqting bor? Shanba kuni."
+            }
+          ]
+        },
+        {
+          "title": "Avval vaqt, keyin fe'l",
+          "text": "Vaqt boshida tursa, fe'l darhol undan keyin, so'ng ich keladi.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "Dushanba kuni ishlayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कब? am Montag",
+      "points": [
+        {
+          "title": "am + दिन",
+          "text": "\"सोमवार को\" कहने के लिए am: am Montag, am Wochenende। सवाल: Wann? (कब?)",
+          "examples": [
+            {
+              "de": "Wann hast du Zeit? Am Samstag.",
+              "tr": "तुम्हारे पास कब समय है? शनिवार को।"
+            }
+          ]
+        },
+        {
+          "title": "पहले समय, फिर क्रिया",
+          "text": "अगर समय शुरुआत में हो, तो क्रिया तुरंत उसके बाद, फिर ich।",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "सोमवार को मैं काम करता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "متى؟ am Montag",
+      "points": [
+        {
+          "title": "am + يوم",
+          "text": "لنقول \"يوم الاثنين\" نستعمل am: am Montag، am Wochenende. والسؤال: Wann؟ (متى؟)",
+          "examples": [
+            {
+              "de": "Wann hast du Zeit? Am Samstag.",
+              "tr": "متى عندك وقت؟ يوم السبت."
+            }
+          ]
+        },
+        {
+          "title": "الزمن أولاً والفعل ثانياً",
+          "text": "إذا جاء الزمن في البداية يأتي الفعل بعده مباشرة ثم ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "يوم الاثنين أعمل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "clock-tower-three": {
+    "ru": {
+      "title": "Утро, день, вечер",
+      "points": [
+        {
+          "title": "am, но in der Nacht",
+          "text": "Части суток с am: am Morgen, am Nachmittag, am Abend. Только ночь иначе: in der Nacht.",
+          "examples": [
+            {
+              "de": "Am Nachmittag habe ich Zeit.",
+              "tr": "После обеда у меня есть время."
+            },
+            {
+              "de": "In der Nacht schläft das Kind.",
+              "tr": "Ночью ребёнок спит."
+            }
+          ]
+        },
+        {
+          "title": "morgens: каждое утро",
+          "text": "Если что-то бывает регулярно, говорим morgens, abends, nachts с маленькой буквы.",
+          "examples": [
+            {
+              "de": "Morgens trinke ich Kaffee.",
+              "tr": "По утрам я пью кофе."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Ранок, день, вечір",
+      "points": [
+        {
+          "title": "am, але in der Nacht",
+          "text": "Частини доби з am: am Morgen, am Nachmittag, am Abend. Лише ніч інакше: in der Nacht.",
+          "examples": [
+            {
+              "de": "Am Nachmittag habe ich Zeit.",
+              "tr": "Після обіду в мене є час."
+            },
+            {
+              "de": "In der Nacht schläft das Kind.",
+              "tr": "Уночі дитина спить."
+            }
+          ]
+        },
+        {
+          "title": "morgens: щоранку",
+          "text": "Якщо щось буває регулярно, кажемо morgens, abends, nachts з малої літери.",
+          "examples": [
+            {
+              "de": "Morgens trinke ich Kaffee.",
+              "tr": "Зранку я п’ю каву."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Morning, afternoon, evening",
+      "points": [
+        {
+          "title": "am, but in der Nacht",
+          "text": "Parts of the day take am: am Morgen, am Nachmittag, am Abend. Only night is different: in der Nacht.",
+          "examples": [
+            {
+              "de": "Am Nachmittag habe ich Zeit.",
+              "tr": "In the afternoon I have time."
+            },
+            {
+              "de": "In der Nacht schläft das Kind.",
+              "tr": "At night the child sleeps."
+            }
+          ]
+        },
+        {
+          "title": "morgens: every morning",
+          "text": "For something regular, say morgens, abends, nachts in lowercase.",
+          "examples": [
+            {
+              "de": "Morgens trinke ich Kaffee.",
+              "tr": "In the mornings I drink coffee."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Rano, popołudnie, wieczór",
+      "points": [
+        {
+          "title": "am, ale in der Nacht",
+          "text": "Pory dnia z am: am Morgen, am Nachmittag, am Abend. Tylko noc inaczej: in der Nacht.",
+          "examples": [
+            {
+              "de": "Am Nachmittag habe ich Zeit.",
+              "tr": "Po południu mam czas."
+            },
+            {
+              "de": "In der Nacht schläft das Kind.",
+              "tr": "W nocy dziecko śpi."
+            }
+          ]
+        },
+        {
+          "title": "morgens: co rano",
+          "text": "Gdy coś dzieje się regularnie, mówimy morgens, abends, nachts małą literą.",
+          "examples": [
+            {
+              "de": "Morgens trinke ich Kaffee.",
+              "tr": "Rano piję kawę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Mañana, tarde, noche",
+      "points": [
+        {
+          "title": "am, pero in der Nacht",
+          "text": "Las partes del día van con am: am Morgen, am Nachmittag, am Abend. Solo la noche es distinta: in der Nacht.",
+          "examples": [
+            {
+              "de": "Am Nachmittag habe ich Zeit.",
+              "tr": "Por la tarde tengo tiempo."
+            },
+            {
+              "de": "In der Nacht schläft das Kind.",
+              "tr": "Por la noche el niño duerme."
+            }
+          ]
+        },
+        {
+          "title": "morgens: cada mañana",
+          "text": "Para algo habitual se dice morgens, abends, nachts en minúscula.",
+          "examples": [
+            {
+              "de": "Morgens trinke ich Kaffee.",
+              "tr": "Por las mañanas tomo café."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Matin, après-midi, soir",
+      "points": [
+        {
+          "title": "am, mais in der Nacht",
+          "text": "Les moments de la journée prennent am : am Morgen, am Nachmittag, am Abend. Seule la nuit change : in der Nacht.",
+          "examples": [
+            {
+              "de": "Am Nachmittag habe ich Zeit.",
+              "tr": "L’après-midi, j’ai le temps."
+            },
+            {
+              "de": "In der Nacht schläft das Kind.",
+              "tr": "La nuit, l’enfant dort."
+            }
+          ]
+        },
+        {
+          "title": "morgens : tous les matins",
+          "text": "Pour quelque chose de régulier, on dit morgens, abends, nachts en minuscule.",
+          "examples": [
+            {
+              "de": "Morgens trinke ich Kaffee.",
+              "tr": "Le matin, je bois du café."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sabah, öğleden sonra, akşam",
+      "points": [
+        {
+          "title": "am, ama in der Nacht",
+          "text": "Günün bölümleri am alır: am Morgen, am Nachmittag, am Abend. Sadece gece farklı: in der Nacht.",
+          "examples": [
+            {
+              "de": "Am Nachmittag habe ich Zeit.",
+              "tr": "Öğleden sonra vaktim var."
+            },
+            {
+              "de": "In der Nacht schläft das Kind.",
+              "tr": "Gece çocuk uyur."
+            }
+          ]
+        },
+        {
+          "title": "morgens: her sabah",
+          "text": "Düzenli olan şeyler için küçük harfle morgens, abends, nachts denir.",
+          "examples": [
+            {
+              "de": "Morgens trinke ich Kaffee.",
+              "tr": "Sabahları kahve içerim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Dimineața, după-amiaza, seara",
+      "points": [
+        {
+          "title": "am, dar in der Nacht",
+          "text": "Părțile zilei cu am: am Morgen, am Nachmittag, am Abend. Doar noaptea altfel: in der Nacht.",
+          "examples": [
+            {
+              "de": "Am Nachmittag habe ich Zeit.",
+              "tr": "După-amiaza am timp."
+            },
+            {
+              "de": "In der Nacht schläft das Kind.",
+              "tr": "Noaptea copilul doarme."
+            }
+          ]
+        },
+        {
+          "title": "morgens: în fiecare dimineață",
+          "text": "Pentru ceva regulat spunem morgens, abends, nachts cu literă mică.",
+          "examples": [
+            {
+              "de": "Morgens trinke ich Kaffee.",
+              "tr": "Dimineața beau cafea."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ertalab, tushdan keyin, kechqurun",
+      "points": [
+        {
+          "title": "am, lekin in der Nacht",
+          "text": "Kun qismlari am bilan: am Morgen, am Nachmittag, am Abend. Faqat tun boshqacha: in der Nacht.",
+          "examples": [
+            {
+              "de": "Am Nachmittag habe ich Zeit.",
+              "tr": "Tushdan keyin vaqtim bor."
+            },
+            {
+              "de": "In der Nacht schläft das Kind.",
+              "tr": "Tunda bola uxlaydi."
+            }
+          ]
+        },
+        {
+          "title": "morgens: har kuni ertalab",
+          "text": "Muntazam bo'ladigan narsa uchun kichik harf bilan morgens, abends, nachts deyiladi.",
+          "examples": [
+            {
+              "de": "Morgens trinke ich Kaffee.",
+              "tr": "Ertalablari qahva ichaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "सुबह, दोपहर, शाम",
+      "points": [
+        {
+          "title": "am, लेकिन in der Nacht",
+          "text": "दिन के हिस्से am के साथ: am Morgen, am Nachmittag, am Abend। सिर्फ़ रात अलग: in der Nacht।",
+          "examples": [
+            {
+              "de": "Am Nachmittag habe ich Zeit.",
+              "tr": "दोपहर में मेरे पास समय है।"
+            },
+            {
+              "de": "In der Nacht schläft das Kind.",
+              "tr": "रात में बच्चा सोता है।"
+            }
+          ]
+        },
+        {
+          "title": "morgens: हर सुबह",
+          "text": "नियमित काम के लिए छोटे अक्षर से morgens, abends, nachts कहते हैं।",
+          "examples": [
+            {
+              "de": "Morgens trinke ich Kaffee.",
+              "tr": "सुबह मैं कॉफ़ी पीता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الصباح والظهيرة والمساء",
+      "points": [
+        {
+          "title": "am لكن in der Nacht",
+          "text": "أجزاء اليوم مع am: am Morgen، am Nachmittag، am Abend. والليل فقط مختلف: in der Nacht.",
+          "examples": [
+            {
+              "de": "Am Nachmittag habe ich Zeit.",
+              "tr": "بعد الظهر عندي وقت."
+            },
+            {
+              "de": "In der Nacht schläft das Kind.",
+              "tr": "في الليل ينام الطفل."
+            }
+          ]
+        },
+        {
+          "title": "morgens: كل صباح",
+          "text": "للأمر المتكرر نقول morgens وabends وnachts بحرف صغير.",
+          "examples": [
+            {
+              "de": "Morgens trinke ich Kaffee.",
+              "tr": "في الصباح أشرب القهوة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "clock-tower-four": {
+    "ru": {
+      "title": "Который час?",
+      "points": [
+        {
+          "title": "Es ist ... Uhr",
+          "text": "Спросить: Wie spät ist es? Ответ: Es ist acht Uhr. Uhr после числа не меняется.",
+          "examples": [
+            {
+              "de": "Wie spät ist es? Es ist acht Uhr.",
+              "tr": "Который час? Восемь часов."
+            },
+            {
+              "de": "Es ist ein Uhr.",
+              "tr": "Сейчас час."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Котра година?",
+      "points": [
+        {
+          "title": "Es ist ... Uhr",
+          "text": "Запитати: Wie spät ist es? Відповідь: Es ist acht Uhr. Uhr після числа не змінюється.",
+          "examples": [
+            {
+              "de": "Wie spät ist es? Es ist acht Uhr.",
+              "tr": "Котра година? Восьма."
+            },
+            {
+              "de": "Es ist ein Uhr.",
+              "tr": "Перша година."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "What time is it?",
+      "points": [
+        {
+          "title": "Es ist ... Uhr",
+          "text": "Ask: Wie spät ist es? Answer: Es ist acht Uhr. Uhr doesn’t change after the number.",
+          "examples": [
+            {
+              "de": "Wie spät ist es? Es ist acht Uhr.",
+              "tr": "What time is it? It’s eight o’clock."
+            },
+            {
+              "de": "Es ist ein Uhr.",
+              "tr": "It’s one o’clock."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Która godzina?",
+      "points": [
+        {
+          "title": "Es ist ... Uhr",
+          "text": "Zapytać: Wie spät ist es? Odpowiedź: Es ist acht Uhr. Uhr po liczbie się nie zmienia.",
+          "examples": [
+            {
+              "de": "Wie spät ist es? Es ist acht Uhr.",
+              "tr": "Która godzina? Ósma."
+            },
+            {
+              "de": "Es ist ein Uhr.",
+              "tr": "Jest pierwsza."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿Qué hora es?",
+      "points": [
+        {
+          "title": "Es ist ... Uhr",
+          "text": "Preguntar: Wie spät ist es? Respuesta: Es ist acht Uhr. Uhr no cambia después del número.",
+          "examples": [
+            {
+              "de": "Wie spät ist es? Es ist acht Uhr.",
+              "tr": "¿Qué hora es? Son las ocho."
+            },
+            {
+              "de": "Es ist ein Uhr.",
+              "tr": "Es la una."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Quelle heure est-il ?",
+      "points": [
+        {
+          "title": "Es ist ... Uhr",
+          "text": "Demander : Wie spät ist es ? Réponse : Es ist acht Uhr. Uhr ne change pas après le nombre.",
+          "examples": [
+            {
+              "de": "Wie spät ist es? Es ist acht Uhr.",
+              "tr": "Quelle heure est-il ? Il est huit heures."
+            },
+            {
+              "de": "Es ist ein Uhr.",
+              "tr": "Il est une heure."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Saat kaç?",
+      "points": [
+        {
+          "title": "Es ist ... Uhr",
+          "text": "Sormak: Wie spät ist es? Cevap: Es ist acht Uhr. Sayıdan sonra Uhr değişmez.",
+          "examples": [
+            {
+              "de": "Wie spät ist es? Es ist acht Uhr.",
+              "tr": "Saat kaç? Saat sekiz."
+            },
+            {
+              "de": "Es ist ein Uhr.",
+              "tr": "Saat bir."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cât e ceasul?",
+      "points": [
+        {
+          "title": "Es ist ... Uhr",
+          "text": "Întrebi: Wie spät ist es? Răspuns: Es ist acht Uhr. Uhr nu se schimbă după număr.",
+          "examples": [
+            {
+              "de": "Wie spät ist es? Es ist acht Uhr.",
+              "tr": "Cât e ceasul? E ora opt."
+            },
+            {
+              "de": "Es ist ein Uhr.",
+              "tr": "E ora unu."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Soat necha?",
+      "points": [
+        {
+          "title": "Es ist ... Uhr",
+          "text": "So'rash: Wie spät ist es? Javob: Es ist acht Uhr. Sondan keyin Uhr o'zgarmaydi.",
+          "examples": [
+            {
+              "de": "Wie spät ist es? Es ist acht Uhr.",
+              "tr": "Soat necha? Soat sakkiz."
+            },
+            {
+              "de": "Es ist ein Uhr.",
+              "tr": "Soat bir."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कितने बजे हैं?",
+      "points": [
+        {
+          "title": "Es ist ... Uhr",
+          "text": "पूछना: Wie spät ist es? जवाब: Es ist acht Uhr। संख्या के बाद Uhr नहीं बदलता।",
+          "examples": [
+            {
+              "de": "Wie spät ist es? Es ist acht Uhr.",
+              "tr": "कितने बजे हैं? आठ बजे हैं।"
+            },
+            {
+              "de": "Es ist ein Uhr.",
+              "tr": "एक बजा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "كم الساعة؟",
+      "points": [
+        {
+          "title": "Es ist ... Uhr",
+          "text": "السؤال: Wie spät ist es؟ والجواب: Es ist acht Uhr. ولا تتغير Uhr بعد العدد.",
+          "examples": [
+            {
+              "de": "Wie spät ist es? Es ist acht Uhr.",
+              "tr": "كم الساعة؟ الساعة الثامنة."
+            },
+            {
+              "de": "Es ist ein Uhr.",
+              "tr": "الساعة الواحدة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "clock-tower-five": {
+    "ru": {
+      "title": "Во сколько? um acht Uhr",
+      "points": [
+        {
+          "title": "um + время",
+          "text": "Вопрос: Um wie viel Uhr? Ответ с um: um acht Uhr (в восемь).",
+          "examples": [
+            {
+              "de": "Der Kurs beginnt um neun Uhr.",
+              "tr": "Курс начинается в девять."
+            }
+          ]
+        },
+        {
+          "title": "Es ist или um?",
+          "text": "Es ist acht Uhr значит «сейчас восемь». Um acht Uhr значит «в восемь». День и время вместе: am Montag um zehn Uhr.",
+          "examples": [
+            {
+              "de": "Ich habe am Montag um zehn Uhr einen Termin.",
+              "tr": "У меня приём в понедельник в десять."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "О котрій? um acht Uhr",
+      "points": [
+        {
+          "title": "um + час",
+          "text": "Питання: Um wie viel Uhr? Відповідь з um: um acht Uhr (о восьмій).",
+          "examples": [
+            {
+              "de": "Der Kurs beginnt um neun Uhr.",
+              "tr": "Курс починається о дев’ятій."
+            }
+          ]
+        },
+        {
+          "title": "Es ist чи um?",
+          "text": "Es ist acht Uhr означає «зараз восьма». Um acht Uhr означає «о восьмій». День і час разом: am Montag um zehn Uhr.",
+          "examples": [
+            {
+              "de": "Ich habe am Montag um zehn Uhr einen Termin.",
+              "tr": "У мене прийом у понеділок о десятій."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "At what time? um acht Uhr",
+      "points": [
+        {
+          "title": "um + time",
+          "text": "Question: Um wie viel Uhr? Answer with um: um acht Uhr (at eight).",
+          "examples": [
+            {
+              "de": "Der Kurs beginnt um neun Uhr.",
+              "tr": "The course starts at nine."
+            }
+          ]
+        },
+        {
+          "title": "Es ist or um?",
+          "text": "Es ist acht Uhr means \"it’s eight now\". Um acht Uhr means \"at eight\". Day and time together: am Montag um zehn Uhr.",
+          "examples": [
+            {
+              "de": "Ich habe am Montag um zehn Uhr einen Termin.",
+              "tr": "I have an appointment on Monday at ten."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "O której? um acht Uhr",
+      "points": [
+        {
+          "title": "um + godzina",
+          "text": "Pytanie: Um wie viel Uhr? Odpowiedź z um: um acht Uhr (o ósmej).",
+          "examples": [
+            {
+              "de": "Der Kurs beginnt um neun Uhr.",
+              "tr": "Kurs zaczyna się o dziewiątej."
+            }
+          ]
+        },
+        {
+          "title": "Es ist czy um?",
+          "text": "Es ist acht Uhr znaczy „jest ósma”. Um acht Uhr znaczy „o ósmej”. Dzień i godzina razem: am Montag um zehn Uhr.",
+          "examples": [
+            {
+              "de": "Ich habe am Montag um zehn Uhr einen Termin.",
+              "tr": "Mam wizytę w poniedziałek o dziesiątej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿A qué hora? um acht Uhr",
+      "points": [
+        {
+          "title": "um + hora",
+          "text": "Pregunta: Um wie viel Uhr? Respuesta con um: um acht Uhr (a las ocho).",
+          "examples": [
+            {
+              "de": "Der Kurs beginnt um neun Uhr.",
+              "tr": "El curso empieza a las nueve."
+            }
+          ]
+        },
+        {
+          "title": "¿Es ist o um?",
+          "text": "Es ist acht Uhr significa \"son las ocho\". Um acht Uhr significa \"a las ocho\". Día y hora juntos: am Montag um zehn Uhr.",
+          "examples": [
+            {
+              "de": "Ich habe am Montag um zehn Uhr einen Termin.",
+              "tr": "Tengo una cita el lunes a las diez."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "À quelle heure ? um acht Uhr",
+      "points": [
+        {
+          "title": "um + heure",
+          "text": "Question : Um wie viel Uhr ? Réponse avec um : um acht Uhr (à huit heures).",
+          "examples": [
+            {
+              "de": "Der Kurs beginnt um neun Uhr.",
+              "tr": "Le cours commence à neuf heures."
+            }
+          ]
+        },
+        {
+          "title": "Es ist ou um ?",
+          "text": "Es ist acht Uhr veut dire « il est huit heures ». Um acht Uhr veut dire « à huit heures ». Jour et heure ensemble : am Montag um zehn Uhr.",
+          "examples": [
+            {
+              "de": "Ich habe am Montag um zehn Uhr einen Termin.",
+              "tr": "J’ai un rendez-vous lundi à dix heures."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Saat kaçta? um acht Uhr",
+      "points": [
+        {
+          "title": "um + saat",
+          "text": "Soru: Um wie viel Uhr? Cevap um ile: um acht Uhr (saat sekizde).",
+          "examples": [
+            {
+              "de": "Der Kurs beginnt um neun Uhr.",
+              "tr": "Kurs saat dokuzda başlıyor."
+            }
+          ]
+        },
+        {
+          "title": "Es ist mi, um mu?",
+          "text": "Es ist acht Uhr \"saat sekiz\" demektir. Um acht Uhr \"saat sekizde\" demektir. Gün ve saat birlikte: am Montag um zehn Uhr.",
+          "examples": [
+            {
+              "de": "Ich habe am Montag um zehn Uhr einen Termin.",
+              "tr": "Pazartesi saat onda randevum var."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "La ce oră? um acht Uhr",
+      "points": [
+        {
+          "title": "um + oră",
+          "text": "Întrebare: Um wie viel Uhr? Răspuns cu um: um acht Uhr (la opt).",
+          "examples": [
+            {
+              "de": "Der Kurs beginnt um neun Uhr.",
+              "tr": "Cursul începe la nouă."
+            }
+          ]
+        },
+        {
+          "title": "Es ist sau um?",
+          "text": "Es ist acht Uhr înseamnă „e ora opt”. Um acht Uhr înseamnă „la opt”. Zi și oră împreună: am Montag um zehn Uhr.",
+          "examples": [
+            {
+              "de": "Ich habe am Montag um zehn Uhr einen Termin.",
+              "tr": "Am o programare luni la zece."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Soat nechada? um acht Uhr",
+      "points": [
+        {
+          "title": "um + vaqt",
+          "text": "Savol: Um wie viel Uhr? Javob um bilan: um acht Uhr (soat sakkizda).",
+          "examples": [
+            {
+              "de": "Der Kurs beginnt um neun Uhr.",
+              "tr": "Kurs soat to'qqizda boshlanadi."
+            }
+          ]
+        },
+        {
+          "title": "Es ist yoki um?",
+          "text": "Es ist acht Uhr \"hozir soat sakkiz\" degani. Um acht Uhr \"soat sakkizda\" degani. Kun va vaqt birga: am Montag um zehn Uhr.",
+          "examples": [
+            {
+              "de": "Ich habe am Montag um zehn Uhr einen Termin.",
+              "tr": "Dushanba kuni soat o'nda uchrashuvim bor."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कितने बजे? um acht Uhr",
+      "points": [
+        {
+          "title": "um + समय",
+          "text": "सवाल: Um wie viel Uhr? जवाब um के साथ: um acht Uhr (आठ बजे)।",
+          "examples": [
+            {
+              "de": "Der Kurs beginnt um neun Uhr.",
+              "tr": "कोर्स नौ बजे शुरू होता है।"
+            }
+          ]
+        },
+        {
+          "title": "Es ist या um?",
+          "text": "Es ist acht Uhr मतलब \"अभी आठ बजे हैं\"। Um acht Uhr मतलब \"आठ बजे (किसी काम का समय)\"। दिन और समय साथ: am Montag um zehn Uhr।",
+          "examples": [
+            {
+              "de": "Ich habe am Montag um zehn Uhr einen Termin.",
+              "tr": "सोमवार को दस बजे मेरी अपॉइंटमेंट है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "في أي ساعة؟ um acht Uhr",
+      "points": [
+        {
+          "title": "um + الساعة",
+          "text": "السؤال: Um wie viel Uhr؟ والجواب مع um: um acht Uhr (في الثامنة).",
+          "examples": [
+            {
+              "de": "Der Kurs beginnt um neun Uhr.",
+              "tr": "تبدأ الدورة في التاسعة."
+            }
+          ]
+        },
+        {
+          "title": "Es ist أم um؟",
+          "text": "Es ist acht Uhr تعني \"الساعة الآن الثامنة\". وUm acht Uhr تعني \"في الثامنة\". واليوم مع الساعة: am Montag um zehn Uhr.",
+          "examples": [
+            {
+              "de": "Ich habe am Montag um zehn Uhr einen Termin.",
+              "tr": "عندي موعد يوم الاثنين في العاشرة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "clock-tower-six": {
+    "ru": {
+      "title": "Месяцы и времена года: im",
+      "points": [
+        {
+          "title": "im + месяц или время года",
+          "text": "Для месяцев и времён года говорим im: im Mai, im Sommer, im Winter.",
+          "examples": [
+            {
+              "de": "Mein Geburtstag ist im Juli.",
+              "tr": "Мой день рождения в июле."
+            },
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "Зимой холодно."
+            }
+          ]
+        },
+        {
+          "title": "Короткая шпаргалка",
+          "text": "am + день, um + время, im + месяц.",
+          "examples": [
+            {
+              "de": "am Freitag, um neun Uhr, im Juni",
+              "tr": "в пятницу, в девять, в июне"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Місяці та пори року: im",
+      "points": [
+        {
+          "title": "im + місяць чи пора року",
+          "text": "Для місяців і пір року кажемо im: im Mai, im Sommer, im Winter.",
+          "examples": [
+            {
+              "de": "Mein Geburtstag ist im Juli.",
+              "tr": "Мій день народження в липні."
+            },
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "Взимку холодно."
+            }
+          ]
+        },
+        {
+          "title": "Коротка шпаргалка",
+          "text": "am + день, um + час, im + місяць.",
+          "examples": [
+            {
+              "de": "am Freitag, um neun Uhr, im Juni",
+              "tr": "у пʼятницю, о девʼятій, у червні"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Months and seasons: im",
+      "points": [
+        {
+          "title": "im + month or season",
+          "text": "For months and seasons use im: im Mai, im Sommer, im Winter.",
+          "examples": [
+            {
+              "de": "Mein Geburtstag ist im Juli.",
+              "tr": "My birthday is in July."
+            },
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "In winter it’s cold."
+            }
+          ]
+        },
+        {
+          "title": "Quick cheat sheet",
+          "text": "am + day, um + time, im + month.",
+          "examples": [
+            {
+              "de": "am Freitag, um neun Uhr, im Juni",
+              "tr": "on Friday, at nine, in June"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Miesiące i pory roku: im",
+      "points": [
+        {
+          "title": "im + miesiąc albo pora roku",
+          "text": "Przy miesiącach i porach roku mówimy im: im Mai, im Sommer, im Winter.",
+          "examples": [
+            {
+              "de": "Mein Geburtstag ist im Juli.",
+              "tr": "Moje urodziny są w lipcu."
+            },
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "Zimą jest zimno."
+            }
+          ]
+        },
+        {
+          "title": "Krótka ściąga",
+          "text": "am + dzień, um + godzina, im + miesiąc.",
+          "examples": [
+            {
+              "de": "am Freitag, um neun Uhr, im Juni",
+              "tr": "w piątek, o dziewiątej, w czerwcu"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Meses y estaciones: im",
+      "points": [
+        {
+          "title": "im + mes o estación",
+          "text": "Con meses y estaciones se usa im: im Mai, im Sommer, im Winter.",
+          "examples": [
+            {
+              "de": "Mein Geburtstag ist im Juli.",
+              "tr": "Mi cumpleaños es en julio."
+            },
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "En invierno hace frío."
+            }
+          ]
+        },
+        {
+          "title": "Chuleta rápida",
+          "text": "am + día, um + hora, im + mes.",
+          "examples": [
+            {
+              "de": "am Freitag, um neun Uhr, im Juni",
+              "tr": "el viernes, a las nueve, en junio"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Mois et saisons : im",
+      "points": [
+        {
+          "title": "im + mois ou saison",
+          "text": "Pour les mois et les saisons, on dit im : im Mai, im Sommer, im Winter.",
+          "examples": [
+            {
+              "de": "Mein Geburtstag ist im Juli.",
+              "tr": "Mon anniversaire est en juillet."
+            },
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "En hiver, il fait froid."
+            }
+          ]
+        },
+        {
+          "title": "Petit aide-mémoire",
+          "text": "am + jour, um + heure, im + mois.",
+          "examples": [
+            {
+              "de": "am Freitag, um neun Uhr, im Juni",
+              "tr": "vendredi, à neuf heures, en juin"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Aylar ve mevsimler: im",
+      "points": [
+        {
+          "title": "im + ay ya da mevsim",
+          "text": "Aylar ve mevsimler için im: im Mai, im Sommer, im Winter.",
+          "examples": [
+            {
+              "de": "Mein Geburtstag ist im Juli.",
+              "tr": "Doğum günüm temmuzda."
+            },
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "Kışın hava soğuk."
+            }
+          ]
+        },
+        {
+          "title": "Kısa not",
+          "text": "am + gün, um + saat, im + ay.",
+          "examples": [
+            {
+              "de": "am Freitag, um neun Uhr, im Juni",
+              "tr": "cuma günü, saat dokuzda, haziranda"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Lunile și anotimpurile: im",
+      "points": [
+        {
+          "title": "im + lună sau anotimp",
+          "text": "Pentru luni și anotimpuri spunem im: im Mai, im Sommer, im Winter.",
+          "examples": [
+            {
+              "de": "Mein Geburtstag ist im Juli.",
+              "tr": "Ziua mea e în iulie."
+            },
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "Iarna e frig."
+            }
+          ]
+        },
+        {
+          "title": "Fițuică scurtă",
+          "text": "am + zi, um + oră, im + lună.",
+          "examples": [
+            {
+              "de": "am Freitag, um neun Uhr, im Juni",
+              "tr": "vineri, la nouă, în iunie"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Oylar va fasllar: im",
+      "points": [
+        {
+          "title": "im + oy yoki fasl",
+          "text": "Oylar va fasllar uchun im: im Mai, im Sommer, im Winter.",
+          "examples": [
+            {
+              "de": "Mein Geburtstag ist im Juli.",
+              "tr": "Mening tug'ilgan kunim iyulda."
+            },
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "Qishda sovuq."
+            }
+          ]
+        },
+        {
+          "title": "Qisqa eslatma",
+          "text": "am + kun, um + vaqt, im + oy.",
+          "examples": [
+            {
+              "de": "am Freitag, um neun Uhr, im Juni",
+              "tr": "juma kuni, soat to'qqizda, iyunda"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "महीने और मौसम: im",
+      "points": [
+        {
+          "title": "im + महीना या मौसम",
+          "text": "महीनों और मौसमों के लिए im: im Mai, im Sommer, im Winter।",
+          "examples": [
+            {
+              "de": "Mein Geburtstag ist im Juli.",
+              "tr": "मेरा जन्मदिन जुलाई में है।"
+            },
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "सर्दियों में ठंड होती है।"
+            }
+          ]
+        },
+        {
+          "title": "छोटा नोट",
+          "text": "am + दिन, um + समय, im + महीना।",
+          "examples": [
+            {
+              "de": "am Freitag, um neun Uhr, im Juni",
+              "tr": "शुक्रवार को, नौ बजे, जून में"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الشهور والفصول: im",
+      "points": [
+        {
+          "title": "im + شهر أو فصل",
+          "text": "مع الشهور والفصول نقول im: im Mai، im Sommer، im Winter.",
+          "examples": [
+            {
+              "de": "Mein Geburtstag ist im Juli.",
+              "tr": "عيد ميلادي في يوليو."
+            },
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "في الشتاء يكون الجو بارداً."
+            }
+          ]
+        },
+        {
+          "title": "ملخص سريع",
+          "text": "am + يوم، um + ساعة، im + شهر.",
+          "examples": [
+            {
+              "de": "am Freitag, um neun Uhr, im Juni",
+              "tr": "يوم الجمعة، في التاسعة، في يونيو"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "clock-tower-seven": {
+    "ru": {
+      "title": "Практика: моя неделя",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Каждую неделю: mittwochs (по средам), как morgens. Время в начале, глагол вторым.",
+          "examples": [
+            {
+              "de": "Mittwochs schwimme ich.",
+              "tr": "По средам я плаваю."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: мій тиждень",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Щотижня: mittwochs (щосереди), як morgens. Час на початку, дієслово другим.",
+          "examples": [
+            {
+              "de": "Mittwochs schwimme ich.",
+              "tr": "Щосереди я плаваю."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: my week",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "Every week: mittwochs (on Wednesdays), like morgens. Time first, verb second.",
+          "examples": [
+            {
+              "de": "Mittwochs schwimme ich.",
+              "tr": "On Wednesdays I swim."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: mój tydzień",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Co tydzień: mittwochs (w środy), jak morgens. Czas na początku, czasownik drugi.",
+          "examples": [
+            {
+              "de": "Mittwochs schwimme ich.",
+              "tr": "W środy pływam."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: mi semana",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Cada semana: mittwochs (los miércoles), como morgens. Tiempo primero, verbo segundo.",
+          "examples": [
+            {
+              "de": "Mittwochs schwimme ich.",
+              "tr": "Los miércoles nado."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : ma semaine",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "Chaque semaine : mittwochs (le mercredi), comme morgens. Le temps d’abord, le verbe en deuxième.",
+          "examples": [
+            {
+              "de": "Mittwochs schwimme ich.",
+              "tr": "Le mercredi, je nage."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: haftam",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Her hafta: mittwochs (çarşambaları), morgens gibi. Önce zaman, fiil ikinci.",
+          "examples": [
+            {
+              "de": "Mittwochs schwimme ich.",
+              "tr": "Çarşambaları yüzerim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: săptămâna mea",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "În fiecare săptămână: mittwochs (miercurea), ca morgens. Timpul primul, verbul al doilea.",
+          "examples": [
+            {
+              "de": "Mittwochs schwimme ich.",
+              "tr": "Miercurea înot."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: mening haftam",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Har hafta: mittwochs (chorshanba kunlari), morgens kabi. Vaqt boshida, fe'l ikkinchi.",
+          "examples": [
+            {
+              "de": "Mittwochs schwimme ich.",
+              "tr": "Chorshanba kunlari suzaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: मेरा सप्ताह",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "हर हफ़्ते: mittwochs (बुधवार को), morgens की तरह। पहले समय, फिर क्रिया।",
+          "examples": [
+            {
+              "de": "Mittwochs schwimme ich.",
+              "tr": "बुधवार को मैं तैरता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: أسبوعي",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "كل أسبوع: mittwochs (أيام الأربعاء)، مثل morgens. الزمن أولاً والفعل ثانياً.",
+          "examples": [
+            {
+              "de": "Mittwochs schwimme ich.",
+              "tr": "أيام الأربعاء أسبح."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "clock-tower-eight": {
+    "ru": {
+      "title": "Практика: договариваемся о встрече",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Согласиться: Ja, gern! или Das geht! Отказаться: Nein, leider nicht.",
+          "examples": [
+            {
+              "de": "Hast du am Freitag Zeit?",
+              "tr": "У тебя есть время в пятницу?"
+            },
+            {
+              "de": "Und am Samstag? Ja, das geht!",
+              "tr": "А в субботу? Да, подходит!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: домовляємося про зустріч",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Погодитися: Ja, gern! або Das geht! Відмовитися: Nein, leider nicht.",
+          "examples": [
+            {
+              "de": "Hast du am Freitag Zeit?",
+              "tr": "У тебе є час у пʼятницю?"
+            },
+            {
+              "de": "Und am Samstag? Ja, das geht!",
+              "tr": "А в суботу? Так, підходить!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: making plans",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "Agree: Ja, gern! or Das geht! Decline: Nein, leider nicht.",
+          "examples": [
+            {
+              "de": "Hast du am Freitag Zeit?",
+              "tr": "Are you free on Friday?"
+            },
+            {
+              "de": "Und am Samstag? Ja, das geht!",
+              "tr": "And on Saturday? Yes, that works!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: umawiamy się",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Zgodzić się: Ja, gern! albo Das geht! Odmówić: Nein, leider nicht.",
+          "examples": [
+            {
+              "de": "Hast du am Freitag Zeit?",
+              "tr": "Masz czas w piątek?"
+            },
+            {
+              "de": "Und am Samstag? Ja, das geht!",
+              "tr": "A w sobotę? Tak, pasuje!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: quedar",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Aceptar: Ja, gern! o Das geht! Rechazar: Nein, leider nicht.",
+          "examples": [
+            {
+              "de": "Hast du am Freitag Zeit?",
+              "tr": "¿Tienes tiempo el viernes?"
+            },
+            {
+              "de": "Und am Samstag? Ja, das geht!",
+              "tr": "¿Y el sábado? ¡Sí, me va bien!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : fixer un rendez-vous",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "Accepter : Ja, gern ! ou Das geht ! Refuser : Nein, leider nicht.",
+          "examples": [
+            {
+              "de": "Hast du am Freitag Zeit?",
+              "tr": "Tu as le temps vendredi ?"
+            },
+            {
+              "de": "Und am Samstag? Ja, das geht!",
+              "tr": "Et samedi ? Oui, ça marche !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: buluşma ayarlamak",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Kabul: Ja, gern! ya da Das geht! Reddetme: Nein, leider nicht.",
+          "examples": [
+            {
+              "de": "Hast du am Freitag Zeit?",
+              "tr": "Cuma vaktin var mı?"
+            },
+            {
+              "de": "Und am Samstag? Ja, das geht!",
+              "tr": "Peki cumartesi? Evet, olur!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: ne programăm o întâlnire",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Accepți: Ja, gern! sau Das geht! Refuzi: Nein, leider nicht.",
+          "examples": [
+            {
+              "de": "Hast du am Freitag Zeit?",
+              "tr": "Ai timp vineri?"
+            },
+            {
+              "de": "Und am Samstag? Ja, das geht!",
+              "tr": "Și sâmbătă? Da, merge!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: uchrashuvni kelishish",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Rozi bo'lish: Ja, gern! yoki Das geht! Rad etish: Nein, leider nicht.",
+          "examples": [
+            {
+              "de": "Hast du am Freitag Zeit?",
+              "tr": "Juma kuni vaqting bormi?"
+            },
+            {
+              "de": "Und am Samstag? Ja, das geht!",
+              "tr": "Shanba-chi? Ha, bo'ladi!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: मिलने का समय तय करना",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "हाँ कहना: Ja, gern! या Das geht! मना करना: Nein, leider nicht।",
+          "examples": [
+            {
+              "de": "Hast du am Freitag Zeit?",
+              "tr": "क्या तुम्हारे पास शुक्रवार को समय है?"
+            },
+            {
+              "de": "Und am Samstag? Ja, das geht!",
+              "tr": "और शनिवार? हाँ, चलेगा!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: ترتيب موعد",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "للموافقة: Ja, gern! أو Das geht! وللرفض: Nein, leider nicht.",
+          "examples": [
+            {
+              "de": "Hast du am Freitag Zeit?",
+              "tr": "هل عندك وقت يوم الجمعة؟"
+            },
+            {
+              "de": "Und am Samstag? Ja, das geht!",
+              "tr": "ويوم السبت؟ نعم، مناسب!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "clock-tower-nine": {
+    "ru": {
+      "title": "Повторение: am, um, im",
+      "points": [
+        {
+          "title": "am",
+          "text": "День и часть суток: am Montag, am Abend. Но in der Nacht.",
+          "examples": [
+            {
+              "de": "Am Abend sehe ich fern.",
+              "tr": "Вечером я смотрю телевизор."
+            }
+          ]
+        },
+        {
+          "title": "um",
+          "text": "Точное время: um acht Uhr.",
+          "examples": [
+            {
+              "de": "Um wie viel Uhr frühstückst du?",
+              "tr": "Во сколько ты завтракаешь?"
+            }
+          ]
+        },
+        {
+          "title": "im",
+          "text": "Месяц и время года: im August, im Winter.",
+          "examples": [
+            {
+              "de": "Im August haben wir Urlaub.",
+              "tr": "В августе у нас отпуск."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: am, um, im",
+      "points": [
+        {
+          "title": "am",
+          "text": "День і частина доби: am Montag, am Abend. Але in der Nacht.",
+          "examples": [
+            {
+              "de": "Am Abend sehe ich fern.",
+              "tr": "Увечері я дивлюся телевізор."
+            }
+          ]
+        },
+        {
+          "title": "um",
+          "text": "Точний час: um acht Uhr.",
+          "examples": [
+            {
+              "de": "Um wie viel Uhr frühstückst du?",
+              "tr": "О котрій ти снідаєш?"
+            }
+          ]
+        },
+        {
+          "title": "im",
+          "text": "Місяць і пора року: im August, im Winter.",
+          "examples": [
+            {
+              "de": "Im August haben wir Urlaub.",
+              "tr": "У серпні в нас відпустка."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: am, um, im",
+      "points": [
+        {
+          "title": "am",
+          "text": "Day and part of the day: am Montag, am Abend. But in der Nacht.",
+          "examples": [
+            {
+              "de": "Am Abend sehe ich fern.",
+              "tr": "In the evening I watch TV."
+            }
+          ]
+        },
+        {
+          "title": "um",
+          "text": "Exact time: um acht Uhr.",
+          "examples": [
+            {
+              "de": "Um wie viel Uhr frühstückst du?",
+              "tr": "What time do you have breakfast?"
+            }
+          ]
+        },
+        {
+          "title": "im",
+          "text": "Month and season: im August, im Winter.",
+          "examples": [
+            {
+              "de": "Im August haben wir Urlaub.",
+              "tr": "In August we have holidays."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: am, um, im",
+      "points": [
+        {
+          "title": "am",
+          "text": "Dzień i pora dnia: am Montag, am Abend. Ale in der Nacht.",
+          "examples": [
+            {
+              "de": "Am Abend sehe ich fern.",
+              "tr": "Wieczorem oglądam telewizję."
+            }
+          ]
+        },
+        {
+          "title": "um",
+          "text": "Dokładna godzina: um acht Uhr.",
+          "examples": [
+            {
+              "de": "Um wie viel Uhr frühstückst du?",
+              "tr": "O której jesz śniadanie?"
+            }
+          ]
+        },
+        {
+          "title": "im",
+          "text": "Miesiąc i pora roku: im August, im Winter.",
+          "examples": [
+            {
+              "de": "Im August haben wir Urlaub.",
+              "tr": "W sierpniu mamy urlop."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: am, um, im",
+      "points": [
+        {
+          "title": "am",
+          "text": "Día y parte del día: am Montag, am Abend. Pero in der Nacht.",
+          "examples": [
+            {
+              "de": "Am Abend sehe ich fern.",
+              "tr": "Por la noche veo la tele."
+            }
+          ]
+        },
+        {
+          "title": "um",
+          "text": "Hora exacta: um acht Uhr.",
+          "examples": [
+            {
+              "de": "Um wie viel Uhr frühstückst du?",
+              "tr": "¿A qué hora desayunas?"
+            }
+          ]
+        },
+        {
+          "title": "im",
+          "text": "Mes y estación: im August, im Winter.",
+          "examples": [
+            {
+              "de": "Im August haben wir Urlaub.",
+              "tr": "En agosto tenemos vacaciones."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : am, um, im",
+      "points": [
+        {
+          "title": "am",
+          "text": "Jour et moment de la journée : am Montag, am Abend. Mais in der Nacht.",
+          "examples": [
+            {
+              "de": "Am Abend sehe ich fern.",
+              "tr": "Le soir, je regarde la télé."
+            }
+          ]
+        },
+        {
+          "title": "um",
+          "text": "Heure précise : um acht Uhr.",
+          "examples": [
+            {
+              "de": "Um wie viel Uhr frühstückst du?",
+              "tr": "À quelle heure prends-tu le petit déjeuner ?"
+            }
+          ]
+        },
+        {
+          "title": "im",
+          "text": "Mois et saison : im August, im Winter.",
+          "examples": [
+            {
+              "de": "Im August haben wir Urlaub.",
+              "tr": "En août, nous sommes en vacances."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: am, um, im",
+      "points": [
+        {
+          "title": "am",
+          "text": "Gün ve günün bölümü: am Montag, am Abend. Ama in der Nacht.",
+          "examples": [
+            {
+              "de": "Am Abend sehe ich fern.",
+              "tr": "Akşam televizyon izlerim."
+            }
+          ]
+        },
+        {
+          "title": "um",
+          "text": "Kesin saat: um acht Uhr.",
+          "examples": [
+            {
+              "de": "Um wie viel Uhr frühstückst du?",
+              "tr": "Saat kaçta kahvaltı yaparsın?"
+            }
+          ]
+        },
+        {
+          "title": "im",
+          "text": "Ay ve mevsim: im August, im Winter.",
+          "examples": [
+            {
+              "de": "Im August haben wir Urlaub.",
+              "tr": "Ağustosta tatildeyiz."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: am, um, im",
+      "points": [
+        {
+          "title": "am",
+          "text": "Ziua și partea zilei: am Montag, am Abend. Dar in der Nacht.",
+          "examples": [
+            {
+              "de": "Am Abend sehe ich fern.",
+              "tr": "Seara mă uit la televizor."
+            }
+          ]
+        },
+        {
+          "title": "um",
+          "text": "Ora exactă: um acht Uhr.",
+          "examples": [
+            {
+              "de": "Um wie viel Uhr frühstückst du?",
+              "tr": "La ce oră iei micul dejun?"
+            }
+          ]
+        },
+        {
+          "title": "im",
+          "text": "Luna și anotimpul: im August, im Winter.",
+          "examples": [
+            {
+              "de": "Im August haben wir Urlaub.",
+              "tr": "În august avem concediu."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: am, um, im",
+      "points": [
+        {
+          "title": "am",
+          "text": "Kun va kun qismi: am Montag, am Abend. Lekin in der Nacht.",
+          "examples": [
+            {
+              "de": "Am Abend sehe ich fern.",
+              "tr": "Kechqurun televizor ko'raman."
+            }
+          ]
+        },
+        {
+          "title": "um",
+          "text": "Aniq vaqt: um acht Uhr.",
+          "examples": [
+            {
+              "de": "Um wie viel Uhr frühstückst du?",
+              "tr": "Soat nechada nonushta qilasan?"
+            }
+          ]
+        },
+        {
+          "title": "im",
+          "text": "Oy va fasl: im August, im Winter.",
+          "examples": [
+            {
+              "de": "Im August haben wir Urlaub.",
+              "tr": "Avgustda ta'tilimiz bor."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: am, um, im",
+      "points": [
+        {
+          "title": "am",
+          "text": "दिन और दिन का हिस्सा: am Montag, am Abend। लेकिन in der Nacht।",
+          "examples": [
+            {
+              "de": "Am Abend sehe ich fern.",
+              "tr": "शाम को मैं टीवी देखता हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "um",
+          "text": "सटीक समय: um acht Uhr।",
+          "examples": [
+            {
+              "de": "Um wie viel Uhr frühstückst du?",
+              "tr": "तुम कितने बजे नाश्ता करते हो?"
+            }
+          ]
+        },
+        {
+          "title": "im",
+          "text": "महीना और मौसम: im August, im Winter।",
+          "examples": [
+            {
+              "de": "Im August haben wir Urlaub.",
+              "tr": "अगस्त में हमारी छुट्टी होती है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: am وum وim",
+      "points": [
+        {
+          "title": "am",
+          "text": "اليوم وجزء اليوم: am Montag، am Abend. لكن in der Nacht.",
+          "examples": [
+            {
+              "de": "Am Abend sehe ich fern.",
+              "tr": "في المساء أشاهد التلفاز."
+            }
+          ]
+        },
+        {
+          "title": "um",
+          "text": "الساعة المحددة: um acht Uhr.",
+          "examples": [
+            {
+              "de": "Um wie viel Uhr frühstückst du?",
+              "tr": "في أي ساعة تفطر؟"
+            }
+          ]
+        },
+        {
+          "title": "im",
+          "text": "الشهر والفصل: im August، im Winter.",
+          "examples": [
+            {
+              "de": "Im August haben wir Urlaub.",
+              "tr": "في أغسطس عندنا إجازة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "clock-tower-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "am, um или im",
+          "text": "am + день, um + время, im + месяц.",
+          "examples": [
+            {
+              "de": "Im Juni haben wir wieder Urlaub.",
+              "tr": "В июне у нас снова отпуск."
+            }
+          ]
+        },
+        {
+          "title": "Который час",
+          "text": "Es ist zwei Uhr значит «сейчас два часа».",
+          "examples": []
+        },
+        {
+          "title": "Глагол на втором месте",
+          "text": "Время в начале, сразу за ним глагол.",
+          "examples": [
+            {
+              "de": "Am Mittag esse ich Suppe.",
+              "tr": "В полдень я ем суп."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "am, um чи im",
+          "text": "am + день, um + час, im + місяць.",
+          "examples": [
+            {
+              "de": "Im Juni haben wir wieder Urlaub.",
+              "tr": "У червні в нас знову відпустка."
+            }
+          ]
+        },
+        {
+          "title": "Котра година",
+          "text": "Es ist zwei Uhr означає «зараз друга година».",
+          "examples": []
+        },
+        {
+          "title": "Дієслово на другому місці",
+          "text": "Час на початку, одразу за ним дієслово.",
+          "examples": [
+            {
+              "de": "Am Mittag esse ich Suppe.",
+              "tr": "Опівдні я їм суп."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "am, um or im",
+          "text": "am + day, um + time, im + month.",
+          "examples": [
+            {
+              "de": "Im Juni haben wir wieder Urlaub.",
+              "tr": "In June we have holidays again."
+            }
+          ]
+        },
+        {
+          "title": "The time",
+          "text": "Es ist zwei Uhr means \"it’s two o’clock\".",
+          "examples": []
+        },
+        {
+          "title": "Verb in second place",
+          "text": "Time at the start, then the verb straight after.",
+          "examples": [
+            {
+              "de": "Am Mittag esse ich Suppe.",
+              "tr": "At noon I eat soup."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "am, um czy im",
+          "text": "am + dzień, um + godzina, im + miesiąc.",
+          "examples": [
+            {
+              "de": "Im Juni haben wir wieder Urlaub.",
+              "tr": "W czerwcu znów mamy urlop."
+            }
+          ]
+        },
+        {
+          "title": "Która godzina",
+          "text": "Es ist zwei Uhr znaczy „jest druga”.",
+          "examples": []
+        },
+        {
+          "title": "Czasownik na drugim miejscu",
+          "text": "Czas na początku, zaraz po nim czasownik.",
+          "examples": [
+            {
+              "de": "Am Mittag esse ich Suppe.",
+              "tr": "W południe jem zupę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "am, um o im",
+          "text": "am + día, um + hora, im + mes.",
+          "examples": [
+            {
+              "de": "Im Juni haben wir wieder Urlaub.",
+              "tr": "En junio volvemos a tener vacaciones."
+            }
+          ]
+        },
+        {
+          "title": "La hora",
+          "text": "Es ist zwei Uhr significa \"son las dos\".",
+          "examples": []
+        },
+        {
+          "title": "El verbo en segundo lugar",
+          "text": "El tiempo al principio y justo después el verbo.",
+          "examples": [
+            {
+              "de": "Am Mittag esse ich Suppe.",
+              "tr": "Al mediodía como sopa."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "am, um ou im",
+          "text": "am + jour, um + heure, im + mois.",
+          "examples": [
+            {
+              "de": "Im Juni haben wir wieder Urlaub.",
+              "tr": "En juin, nous sommes de nouveau en vacances."
+            }
+          ]
+        },
+        {
+          "title": "L’heure",
+          "text": "Es ist zwei Uhr veut dire « il est deux heures ».",
+          "examples": []
+        },
+        {
+          "title": "Le verbe en deuxième position",
+          "text": "Le temps au début, puis le verbe juste après.",
+          "examples": [
+            {
+              "de": "Am Mittag esse ich Suppe.",
+              "tr": "À midi, je mange de la soupe."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "am, um ya da im",
+          "text": "am + gün, um + saat, im + ay.",
+          "examples": [
+            {
+              "de": "Im Juni haben wir wieder Urlaub.",
+              "tr": "Haziranda yine tatildeyiz."
+            }
+          ]
+        },
+        {
+          "title": "Saat",
+          "text": "Es ist zwei Uhr \"saat iki\" demektir.",
+          "examples": []
+        },
+        {
+          "title": "Fiil ikinci sırada",
+          "text": "Zaman başta, hemen ardından fiil.",
+          "examples": [
+            {
+              "de": "Am Mittag esse ich Suppe.",
+              "tr": "Öğlen çorba yerim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "am, um sau im",
+          "text": "am + zi, um + oră, im + lună.",
+          "examples": [
+            {
+              "de": "Im Juni haben wir wieder Urlaub.",
+              "tr": "În iunie avem din nou concediu."
+            }
+          ]
+        },
+        {
+          "title": "Ora",
+          "text": "Es ist zwei Uhr înseamnă „e ora două”.",
+          "examples": []
+        },
+        {
+          "title": "Verbul pe locul doi",
+          "text": "Timpul la început, imediat după el verbul.",
+          "examples": [
+            {
+              "de": "Am Mittag esse ich Suppe.",
+              "tr": "La prânz mănânc supă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "am, um yoki im",
+          "text": "am + kun, um + vaqt, im + oy.",
+          "examples": [
+            {
+              "de": "Im Juni haben wir wieder Urlaub.",
+              "tr": "Iyunda yana ta'tilimiz bor."
+            }
+          ]
+        },
+        {
+          "title": "Soat",
+          "text": "Es ist zwei Uhr \"soat ikki\" degani.",
+          "examples": []
+        },
+        {
+          "title": "Fe'l ikkinchi o'rinda",
+          "text": "Vaqt boshida, darhol undan keyin fe'l.",
+          "examples": [
+            {
+              "de": "Am Mittag esse ich Suppe.",
+              "tr": "Tushda sho'rva yeyman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "am, um या im",
+          "text": "am + दिन, um + समय, im + महीना।",
+          "examples": [
+            {
+              "de": "Im Juni haben wir wieder Urlaub.",
+              "tr": "जून में फिर से हमारी छुट्टी है।"
+            }
+          ]
+        },
+        {
+          "title": "समय",
+          "text": "Es ist zwei Uhr मतलब \"दो बजे हैं\"।",
+          "examples": []
+        },
+        {
+          "title": "क्रिया दूसरे स्थान पर",
+          "text": "शुरुआत में समय, तुरंत बाद क्रिया।",
+          "examples": [
+            {
+              "de": "Am Mittag esse ich Suppe.",
+              "tr": "दोपहर में मैं सूप खाता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "am أم um أم im",
+          "text": "am + يوم، um + ساعة، im + شهر.",
+          "examples": [
+            {
+              "de": "Im Juni haben wir wieder Urlaub.",
+              "tr": "في يونيو عندنا إجازة مرة أخرى."
+            }
+          ]
+        },
+        {
+          "title": "الساعة",
+          "text": "Es ist zwei Uhr تعني \"الساعة الثانية\".",
+          "examples": []
+        },
+        {
+          "title": "الفعل في المكان الثاني",
+          "text": "الزمن في البداية ثم الفعل مباشرة.",
+          "examples": [
+            {
+              "de": "Am Mittag esse ich Suppe.",
+              "tr": "في الظهر آكل الحساء."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

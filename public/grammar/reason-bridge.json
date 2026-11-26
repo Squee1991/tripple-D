@@ -1,0 +1,2640 @@
+{
+  "reason-bridge-one": {
+    "ru": {
+      "title": "Поэтому: deshalb",
+      "points": [
+        {
+          "title": "deshalb: глагол сразу",
+          "text": "deshalb, deswegen, darum значат «поэтому». Это не придаточное: после них сразу глагол, потом подлежащее.",
+          "examples": [
+            {
+              "de": "Ich bin müde, deshalb gehe ich ins Bett.",
+              "tr": "Я устал, поэтому иду спать."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Тому: deshalb",
+      "points": [
+        {
+          "title": "deshalb: дієслово одразу",
+          "text": "deshalb, deswegen, darum означають «тому». Це не підрядне: після них одразу дієслово, потім підмет.",
+          "examples": [
+            {
+              "de": "Ich bin müde, deshalb gehe ich ins Bett.",
+              "tr": "Я втомився, тому йду спати."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "So: deshalb",
+      "points": [
+        {
+          "title": "deshalb: verb right after",
+          "text": "deshalb, deswegen, darum mean \"that’s why, so\". It’s not a subordinate clause: the verb comes straight after, then the subject.",
+          "examples": [
+            {
+              "de": "Ich bin müde, deshalb gehe ich ins Bett.",
+              "tr": "I’m tired, so I’m going to bed."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Dlatego: deshalb",
+      "points": [
+        {
+          "title": "deshalb: czasownik od razu",
+          "text": "deshalb, deswegen, darum znaczą „dlatego”. To nie zdanie podrzędne: zaraz po nich czasownik, potem podmiot.",
+          "examples": [
+            {
+              "de": "Ich bin müde, deshalb gehe ich ins Bett.",
+              "tr": "Jestem zmęczony, dlatego idę spać."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Por eso: deshalb",
+      "points": [
+        {
+          "title": "deshalb: verbo justo después",
+          "text": "deshalb, deswegen, darum significan \"por eso\". No es subordinada: justo después va el verbo y luego el sujeto.",
+          "examples": [
+            {
+              "de": "Ich bin müde, deshalb gehe ich ins Bett.",
+              "tr": "Estoy cansado, por eso me voy a la cama."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "C’est pourquoi : deshalb",
+      "points": [
+        {
+          "title": "deshalb : verbe juste après",
+          "text": "deshalb, deswegen, darum veulent dire « c’est pourquoi ». Ce n’est pas une subordonnée : le verbe suit tout de suite, puis le sujet.",
+          "examples": [
+            {
+              "de": "Ich bin müde, deshalb gehe ich ins Bett.",
+              "tr": "Je suis fatigué, c’est pourquoi je vais me coucher."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Bu yüzden: deshalb",
+      "points": [
+        {
+          "title": "deshalb: fiil hemen ardından",
+          "text": "deshalb, deswegen, darum \"bu yüzden\" demektir. Yan cümle değil: hemen fiil, sonra özne gelir.",
+          "examples": [
+            {
+              "de": "Ich bin müde, deshalb gehe ich ins Bett.",
+              "tr": "Yorgunum, bu yüzden yatmaya gidiyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "De aceea: deshalb",
+      "points": [
+        {
+          "title": "deshalb: verbul imediat",
+          "text": "deshalb, deswegen, darum înseamnă „de aceea”. Nu e subordonată: imediat vine verbul, apoi subiectul.",
+          "examples": [
+            {
+              "de": "Ich bin müde, deshalb gehe ich ins Bett.",
+              "tr": "Sunt obosit, de aceea mă culc."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Shuning uchun: deshalb",
+      "points": [
+        {
+          "title": "deshalb: fe'l darhol",
+          "text": "deshalb, deswegen, darum \"shuning uchun\" degani. Bu ergash gap emas: darhol fe'l, keyin ega.",
+          "examples": [
+            {
+              "de": "Ich bin müde, deshalb gehe ich ins Bett.",
+              "tr": "Charchadim, shuning uchun uxlagani ketaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "इसलिए: deshalb",
+      "points": [
+        {
+          "title": "deshalb: क्रिया तुरंत बाद",
+          "text": "deshalb, deswegen, darum मतलब \"इसलिए\"। यह उपवाक्य नहीं: तुरंत क्रिया, फिर कर्ता।",
+          "examples": [
+            {
+              "de": "Ich bin müde, deshalb gehe ich ins Bett.",
+              "tr": "मैं थका हूँ, इसलिए सोने जा रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "لذلك: deshalb",
+      "points": [
+        {
+          "title": "deshalb: الفعل بعدها مباشرة",
+          "text": "deshalb وdeswegen وdarum تعني \"لذلك\". وليست جملة فرعية: يأتي الفعل مباشرة ثم الفاعل.",
+          "examples": [
+            {
+              "de": "Ich bin müde, deshalb gehe ich ins Bett.",
+              "tr": "أنا متعب، لذلك سأذهب للنوم."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "reason-bridge-two": {
+    "ru": {
+      "title": "Потому что: weil или denn",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: глагол в конце. denn: обычный порядок слов. deshalb: сначала причина, потом следствие, и глагол сразу после deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Я остаюсь дома, потому что болен."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Я остаюсь дома: я болен."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Бо: weil чи denn",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: дієслово в кінці. denn: звичайний порядок слів. deshalb: спочатку причина, потім наслідок, і дієслово одразу після deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Я залишаюся вдома, бо хворий."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Я залишаюся вдома, адже я хворий."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Because: weil or denn",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: verb at the end. denn: normal word order. deshalb: first the reason, then the result, with the verb right after deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "I’m staying at home because I’m ill."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "I’m staying at home, for I’m ill."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Bo: weil czy denn",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: czasownik na końcu. denn: zwykły szyk. deshalb: najpierw przyczyna, potem skutek, czasownik zaraz po deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Zostaję w domu, bo jestem chory."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Zostaję w domu, bo jestem chory."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Porque: weil o denn",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: verbo al final. denn: orden normal. deshalb: primero la causa, luego la consecuencia, con el verbo justo después de deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Me quedo en casa porque estoy enfermo."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Me quedo en casa, pues estoy enfermo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Parce que : weil ou denn",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil : verbe à la fin. denn : ordre normal. deshalb : d’abord la cause, puis la conséquence, avec le verbe juste après deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Je reste à la maison parce que je suis malade."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Je reste à la maison, car je suis malade."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Çünkü: weil mi, denn mi",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: fiil sonda. denn: normal sıra. deshalb: önce sebep, sonra sonuç; fiil deshalb’dan hemen sonra.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Evde kalıyorum çünkü hastayım."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Evde kalıyorum, zira hastayım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Pentru că: weil sau denn",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: verbul la final. denn: ordine normală. deshalb: întâi cauza, apoi efectul, cu verbul imediat după deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Rămân acasă pentru că sunt bolnav."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Rămân acasă, căci sunt bolnav."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Chunki: weil yoki denn",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: fe'l oxirida. denn: oddiy tartib. deshalb: avval sabab, keyin natija, fe'l deshalb dan keyin darhol.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Uyda qolaman, chunki kasalman."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Uyda qolaman, axir kasalman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "क्योंकि: weil या denn",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: क्रिया अंत में। denn: सामान्य क्रम। deshalb: पहले कारण, फिर नतीजा, और deshalb के तुरंत बाद क्रिया।",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "मैं घर पर रहूँगा क्योंकि मैं बीमार हूँ।"
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "मैं घर पर रहूँगा, क्योंकि मैं बीमार हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "لأن: weil أم denn",
+      "points": [
+        {
+          "title": "weil وdenn وdeshalb",
+          "text": "weil: الفعل في الآخر. denn: ترتيب عادي. deshalb: السبب أولاً ثم النتيجة، والفعل بعد deshalb مباشرة.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "أبقى في البيت لأنني مريض."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "أبقى في البيت، فأنا مريض."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "reason-bridge-three": {
+    "ru": {
+      "title": "Всё равно: trotzdem",
+      "points": [
+        {
+          "title": "trotzdem и obwohl",
+          "text": "trotzdem (всё равно): глагол сразу после. obwohl (хотя): это придаточное, глагол в конце. Смысл один: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Хотя шёл дождь, мы пошли гулять."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Шёл дождь, но мы всё равно пошли гулять."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Все одно: trotzdem",
+      "points": [
+        {
+          "title": "trotzdem і obwohl",
+          "text": "trotzdem (все одно): дієслово одразу після. obwohl (хоча): це підрядне, дієслово в кінці. Зміст один: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Хоча йшов дощ, ми пішли гуляти."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Йшов дощ, але ми все одно пішли гуляти."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Still: trotzdem",
+      "points": [
+        {
+          "title": "trotzdem and obwohl",
+          "text": "trotzdem (anyway, still): the verb right after. obwohl (although): a subordinate clause, verb at the end. Same meaning: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Although it was raining, we went for a walk."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "It was raining, but we still went for a walk."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Mimo to: trotzdem",
+      "points": [
+        {
+          "title": "trotzdem i obwohl",
+          "text": "trotzdem (mimo to): czasownik zaraz po. obwohl (chociaż): zdanie podrzędne, czasownik na końcu. Znaczenie to samo: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Chociaż padało, poszliśmy na spacer."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Padało, mimo to poszliśmy na spacer."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Aun así: trotzdem",
+      "points": [
+        {
+          "title": "trotzdem y obwohl",
+          "text": "trotzdem (aun así): el verbo justo después. obwohl (aunque): subordinada, verbo al final. Mismo sentido: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Aunque llovía, fuimos a pasear."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Llovía, aun así fuimos a pasear."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Quand même : trotzdem",
+      "points": [
+        {
+          "title": "trotzdem et obwohl",
+          "text": "trotzdem (quand même) : verbe juste après. obwohl (bien que) : subordonnée, verbe à la fin. Même sens : Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Bien qu’il pleuve, nous sommes allés nous promener."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Il pleuvait, nous sommes quand même allés nous promener."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yine de: trotzdem",
+      "points": [
+        {
+          "title": "trotzdem ve obwohl",
+          "text": "trotzdem (yine de): fiil hemen ardından. obwohl (-e rağmen): yan cümle, fiil sonda. Anlam aynı: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Yağmur yağmasına rağmen yürüyüşe çıktık."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Yağmur yağıyordu, yine de yürüyüşe çıktık."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Totuși: trotzdem",
+      "points": [
+        {
+          "title": "trotzdem și obwohl",
+          "text": "trotzdem (totuși): verbul imediat după. obwohl (deși): subordonată, verbul la final. Același sens: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Deși ploua, am ieșit la plimbare."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Ploua, totuși am ieșit la plimbare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Baribir: trotzdem",
+      "points": [
+        {
+          "title": "trotzdem va obwohl",
+          "text": "trotzdem (baribir): fe'l darhol keyin. obwohl (garchi): ergash gap, fe'l oxirida. Ma'no bir: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Yomg'ir yog'ayotgan bo'lsa ham, sayrga chiqdik."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Yomg'ir yog'ardi, baribir sayrga chiqdik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "फिर भी: trotzdem",
+      "points": [
+        {
+          "title": "trotzdem और obwohl",
+          "text": "trotzdem (फिर भी): क्रिया तुरंत बाद। obwohl (हालाँकि): उपवाक्य, क्रिया अंत में। मतलब एक: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir।",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "बारिश हो रही थी, फिर भी हम टहलने गए।"
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "बारिश हो रही थी, फिर भी हम टहलने गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مع ذلك: trotzdem",
+      "points": [
+        {
+          "title": "trotzdem وobwohl",
+          "text": "trotzdem (مع ذلك): الفعل بعدها مباشرة. obwohl (رغم أن): جملة فرعية والفعل في الآخر. والمعنى واحد: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "رغم أنها كانت تمطر خرجنا للتنزه."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "كانت تمطر، ومع ذلك خرجنا للتنزه."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "reason-bridge-four": {
+    "ru": {
+      "title": "Хотя: obwohl",
+      "points": [
+        {
+          "title": "trotzdem и obwohl",
+          "text": "trotzdem (всё равно): глагол сразу после. obwohl (хотя): это придаточное, глагол в конце. Смысл один: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Хотя шёл дождь, мы пошли гулять."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Шёл дождь, но мы всё равно пошли гулять."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Хоча: obwohl",
+      "points": [
+        {
+          "title": "trotzdem і obwohl",
+          "text": "trotzdem (все одно): дієслово одразу після. obwohl (хоча): це підрядне, дієслово в кінці. Зміст один: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Хоча йшов дощ, ми пішли гуляти."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Йшов дощ, але ми все одно пішли гуляти."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Although: obwohl",
+      "points": [
+        {
+          "title": "trotzdem and obwohl",
+          "text": "trotzdem (anyway, still): the verb right after. obwohl (although): a subordinate clause, verb at the end. Same meaning: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Although it was raining, we went for a walk."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "It was raining, but we still went for a walk."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Chociaż: obwohl",
+      "points": [
+        {
+          "title": "trotzdem i obwohl",
+          "text": "trotzdem (mimo to): czasownik zaraz po. obwohl (chociaż): zdanie podrzędne, czasownik na końcu. Znaczenie to samo: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Chociaż padało, poszliśmy na spacer."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Padało, mimo to poszliśmy na spacer."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Aunque: obwohl",
+      "points": [
+        {
+          "title": "trotzdem y obwohl",
+          "text": "trotzdem (aun así): el verbo justo después. obwohl (aunque): subordinada, verbo al final. Mismo sentido: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Aunque llovía, fuimos a pasear."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Llovía, aun así fuimos a pasear."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Bien que : obwohl",
+      "points": [
+        {
+          "title": "trotzdem et obwohl",
+          "text": "trotzdem (quand même) : verbe juste après. obwohl (bien que) : subordonnée, verbe à la fin. Même sens : Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Bien qu’il pleuve, nous sommes allés nous promener."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Il pleuvait, nous sommes quand même allés nous promener."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Rağmen: obwohl",
+      "points": [
+        {
+          "title": "trotzdem ve obwohl",
+          "text": "trotzdem (yine de): fiil hemen ardından. obwohl (-e rağmen): yan cümle, fiil sonda. Anlam aynı: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Yağmur yağmasına rağmen yürüyüşe çıktık."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Yağmur yağıyordu, yine de yürüyüşe çıktık."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Deși: obwohl",
+      "points": [
+        {
+          "title": "trotzdem și obwohl",
+          "text": "trotzdem (totuși): verbul imediat după. obwohl (deși): subordonată, verbul la final. Același sens: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Deși ploua, am ieșit la plimbare."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Ploua, totuși am ieșit la plimbare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Garchi: obwohl",
+      "points": [
+        {
+          "title": "trotzdem va obwohl",
+          "text": "trotzdem (baribir): fe'l darhol keyin. obwohl (garchi): ergash gap, fe'l oxirida. Ma'no bir: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Yomg'ir yog'ayotgan bo'lsa ham, sayrga chiqdik."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Yomg'ir yog'ardi, baribir sayrga chiqdik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "हालाँकि: obwohl",
+      "points": [
+        {
+          "title": "trotzdem और obwohl",
+          "text": "trotzdem (फिर भी): क्रिया तुरंत बाद। obwohl (हालाँकि): उपवाक्य, क्रिया अंत में। मतलब एक: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir।",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "बारिश हो रही थी, फिर भी हम टहलने गए।"
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "बारिश हो रही थी, फिर भी हम टहलने गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "رغم أن: obwohl",
+      "points": [
+        {
+          "title": "trotzdem وobwohl",
+          "text": "trotzdem (مع ذلك): الفعل بعدها مباشرة. obwohl (رغم أن): جملة فرعية والفعل في الآخر. والمعنى واحد: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "رغم أنها كانت تمطر خرجنا للتنزه."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "كانت تمطر، ومع ذلك خرجنا للتنزه."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "reason-bridge-five": {
+    "ru": {
+      "title": "Хотя или всё равно?",
+      "points": [
+        {
+          "title": "trotzdem и obwohl",
+          "text": "trotzdem (всё равно): глагол сразу после. obwohl (хотя): это придаточное, глагол в конце. Смысл один: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Хотя шёл дождь, мы пошли гулять."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Шёл дождь, но мы всё равно пошли гулять."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Хоча чи все одно?",
+      "points": [
+        {
+          "title": "trotzdem і obwohl",
+          "text": "trotzdem (все одно): дієслово одразу після. obwohl (хоча): це підрядне, дієслово в кінці. Зміст один: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Хоча йшов дощ, ми пішли гуляти."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Йшов дощ, але ми все одно пішли гуляти."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Although or still?",
+      "points": [
+        {
+          "title": "trotzdem and obwohl",
+          "text": "trotzdem (anyway, still): the verb right after. obwohl (although): a subordinate clause, verb at the end. Same meaning: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Although it was raining, we went for a walk."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "It was raining, but we still went for a walk."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Chociaż czy mimo to?",
+      "points": [
+        {
+          "title": "trotzdem i obwohl",
+          "text": "trotzdem (mimo to): czasownik zaraz po. obwohl (chociaż): zdanie podrzędne, czasownik na końcu. Znaczenie to samo: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Chociaż padało, poszliśmy na spacer."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Padało, mimo to poszliśmy na spacer."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿Aunque o aun así?",
+      "points": [
+        {
+          "title": "trotzdem y obwohl",
+          "text": "trotzdem (aun así): el verbo justo después. obwohl (aunque): subordinada, verbo al final. Mismo sentido: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Aunque llovía, fuimos a pasear."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Llovía, aun así fuimos a pasear."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Bien que ou quand même ?",
+      "points": [
+        {
+          "title": "trotzdem et obwohl",
+          "text": "trotzdem (quand même) : verbe juste après. obwohl (bien que) : subordonnée, verbe à la fin. Même sens : Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Bien qu’il pleuve, nous sommes allés nous promener."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Il pleuvait, nous sommes quand même allés nous promener."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Rağmen mi, yine de mi?",
+      "points": [
+        {
+          "title": "trotzdem ve obwohl",
+          "text": "trotzdem (yine de): fiil hemen ardından. obwohl (-e rağmen): yan cümle, fiil sonda. Anlam aynı: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Yağmur yağmasına rağmen yürüyüşe çıktık."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Yağmur yağıyordu, yine de yürüyüşe çıktık."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Deși sau totuși?",
+      "points": [
+        {
+          "title": "trotzdem și obwohl",
+          "text": "trotzdem (totuși): verbul imediat după. obwohl (deși): subordonată, verbul la final. Același sens: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Deși ploua, am ieșit la plimbare."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Ploua, totuși am ieșit la plimbare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Garchi yoki baribir?",
+      "points": [
+        {
+          "title": "trotzdem va obwohl",
+          "text": "trotzdem (baribir): fe'l darhol keyin. obwohl (garchi): ergash gap, fe'l oxirida. Ma'no bir: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Yomg'ir yog'ayotgan bo'lsa ham, sayrga chiqdik."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Yomg'ir yog'ardi, baribir sayrga chiqdik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "हालाँकि या फिर भी?",
+      "points": [
+        {
+          "title": "trotzdem और obwohl",
+          "text": "trotzdem (फिर भी): क्रिया तुरंत बाद। obwohl (हालाँकि): उपवाक्य, क्रिया अंत में। मतलब एक: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir।",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "बारिश हो रही थी, फिर भी हम टहलने गए।"
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "बारिश हो रही थी, फिर भी हम टहलने गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "رغم أن أم مع ذلك؟",
+      "points": [
+        {
+          "title": "trotzdem وobwohl",
+          "text": "trotzdem (مع ذلك): الفعل بعدها مباشرة. obwohl (رغم أن): جملة فرعية والفعل في الآخر. والمعنى واحد: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "رغم أنها كانت تمطر خرجنا للتنزه."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "كانت تمطر، ومع ذلك خرجنا للتنزه."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "reason-bridge-six": {
+    "ru": {
+      "title": "Трудное решение",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: глагол в конце. denn: обычный порядок слов. deshalb: сначала причина, потом следствие, и глагол сразу после deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Я остаюсь дома, потому что болен."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Я остаюсь дома: я болен."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem и obwohl",
+          "text": "trotzdem (всё равно): глагол сразу после. obwohl (хотя): это придаточное, глагол в конце. Смысл один: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Хотя шёл дождь, мы пошли гулять."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Шёл дождь, но мы всё равно пошли гулять."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Важке рішення",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: дієслово в кінці. denn: звичайний порядок слів. deshalb: спочатку причина, потім наслідок, і дієслово одразу після deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Я залишаюся вдома, бо хворий."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Я залишаюся вдома, адже я хворий."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem і obwohl",
+          "text": "trotzdem (все одно): дієслово одразу після. obwohl (хоча): це підрядне, дієслово в кінці. Зміст один: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Хоча йшов дощ, ми пішли гуляти."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Йшов дощ, але ми все одно пішли гуляти."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "A hard decision",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: verb at the end. denn: normal word order. deshalb: first the reason, then the result, with the verb right after deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "I’m staying at home because I’m ill."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "I’m staying at home, for I’m ill."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem and obwohl",
+          "text": "trotzdem (anyway, still): the verb right after. obwohl (although): a subordinate clause, verb at the end. Same meaning: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Although it was raining, we went for a walk."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "It was raining, but we still went for a walk."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Trudna decyzja",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: czasownik na końcu. denn: zwykły szyk. deshalb: najpierw przyczyna, potem skutek, czasownik zaraz po deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Zostaję w domu, bo jestem chory."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Zostaję w domu, bo jestem chory."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem i obwohl",
+          "text": "trotzdem (mimo to): czasownik zaraz po. obwohl (chociaż): zdanie podrzędne, czasownik na końcu. Znaczenie to samo: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Chociaż padało, poszliśmy na spacer."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Padało, mimo to poszliśmy na spacer."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Una decisión difícil",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: verbo al final. denn: orden normal. deshalb: primero la causa, luego la consecuencia, con el verbo justo después de deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Me quedo en casa porque estoy enfermo."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Me quedo en casa, pues estoy enfermo."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem y obwohl",
+          "text": "trotzdem (aun así): el verbo justo después. obwohl (aunque): subordinada, verbo al final. Mismo sentido: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Aunque llovía, fuimos a pasear."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Llovía, aun así fuimos a pasear."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Une décision difficile",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil : verbe à la fin. denn : ordre normal. deshalb : d’abord la cause, puis la conséquence, avec le verbe juste après deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Je reste à la maison parce que je suis malade."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Je reste à la maison, car je suis malade."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem et obwohl",
+          "text": "trotzdem (quand même) : verbe juste après. obwohl (bien que) : subordonnée, verbe à la fin. Même sens : Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Bien qu’il pleuve, nous sommes allés nous promener."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Il pleuvait, nous sommes quand même allés nous promener."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Zor bir karar",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: fiil sonda. denn: normal sıra. deshalb: önce sebep, sonra sonuç; fiil deshalb’dan hemen sonra.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Evde kalıyorum çünkü hastayım."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Evde kalıyorum, zira hastayım."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem ve obwohl",
+          "text": "trotzdem (yine de): fiil hemen ardından. obwohl (-e rağmen): yan cümle, fiil sonda. Anlam aynı: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Yağmur yağmasına rağmen yürüyüşe çıktık."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Yağmur yağıyordu, yine de yürüyüşe çıktık."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "O decizie grea",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: verbul la final. denn: ordine normală. deshalb: întâi cauza, apoi efectul, cu verbul imediat după deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Rămân acasă pentru că sunt bolnav."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Rămân acasă, căci sunt bolnav."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem și obwohl",
+          "text": "trotzdem (totuși): verbul imediat după. obwohl (deși): subordonată, verbul la final. Același sens: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Deși ploua, am ieșit la plimbare."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Ploua, totuși am ieșit la plimbare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qiyin qaror",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: fe'l oxirida. denn: oddiy tartib. deshalb: avval sabab, keyin natija, fe'l deshalb dan keyin darhol.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Uyda qolaman, chunki kasalman."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Uyda qolaman, axir kasalman."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem va obwohl",
+          "text": "trotzdem (baribir): fe'l darhol keyin. obwohl (garchi): ergash gap, fe'l oxirida. Ma'no bir: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Yomg'ir yog'ayotgan bo'lsa ham, sayrga chiqdik."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Yomg'ir yog'ardi, baribir sayrga chiqdik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "मुश्किल फ़ैसला",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: क्रिया अंत में। denn: सामान्य क्रम। deshalb: पहले कारण, फिर नतीजा, और deshalb के तुरंत बाद क्रिया।",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "मैं घर पर रहूँगा क्योंकि मैं बीमार हूँ।"
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "मैं घर पर रहूँगा, क्योंकि मैं बीमार हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "trotzdem और obwohl",
+          "text": "trotzdem (फिर भी): क्रिया तुरंत बाद। obwohl (हालाँकि): उपवाक्य, क्रिया अंत में। मतलब एक: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir।",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "बारिश हो रही थी, फिर भी हम टहलने गए।"
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "बारिश हो रही थी, फिर भी हम टहलने गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "قرار صعب",
+      "points": [
+        {
+          "title": "weil وdenn وdeshalb",
+          "text": "weil: الفعل في الآخر. denn: ترتيب عادي. deshalb: السبب أولاً ثم النتيجة، والفعل بعد deshalb مباشرة.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "أبقى في البيت لأنني مريض."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "أبقى في البيت، فأنا مريض."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem وobwohl",
+          "text": "trotzdem (مع ذلك): الفعل بعدها مباشرة. obwohl (رغم أن): جملة فرعية والفعل في الآخر. والمعنى واحد: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "رغم أنها كانت تمطر خرجنا للتنزه."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "كانت تمطر، ومع ذلك خرجنا للتنزه."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "reason-bridge-seven": {
+    "ru": {
+      "title": "Практика: отпуск у моря",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: глагол в конце. denn: обычный порядок слов. deshalb: сначала причина, потом следствие, и глагол сразу после deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Я остаюсь дома, потому что болен."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Я остаюсь дома: я болен."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: відпустка біля моря",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: дієслово в кінці. denn: звичайний порядок слів. deshalb: спочатку причина, потім наслідок, і дієслово одразу після deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Я залишаюся вдома, бо хворий."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Я залишаюся вдома, адже я хворий."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: seaside holiday",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: verb at the end. denn: normal word order. deshalb: first the reason, then the result, with the verb right after deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "I’m staying at home because I’m ill."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "I’m staying at home, for I’m ill."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: urlop nad morzem",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: czasownik na końcu. denn: zwykły szyk. deshalb: najpierw przyczyna, potem skutek, czasownik zaraz po deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Zostaję w domu, bo jestem chory."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Zostaję w domu, bo jestem chory."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: vacaciones en el mar",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: verbo al final. denn: orden normal. deshalb: primero la causa, luego la consecuencia, con el verbo justo después de deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Me quedo en casa porque estoy enfermo."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Me quedo en casa, pues estoy enfermo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : vacances à la mer",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil : verbe à la fin. denn : ordre normal. deshalb : d’abord la cause, puis la conséquence, avec le verbe juste après deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Je reste à la maison parce que je suis malade."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Je reste à la maison, car je suis malade."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: deniz tatili",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: fiil sonda. denn: normal sıra. deshalb: önce sebep, sonra sonuç; fiil deshalb’dan hemen sonra.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Evde kalıyorum çünkü hastayım."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Evde kalıyorum, zira hastayım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: concediu la mare",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: verbul la final. denn: ordine normală. deshalb: întâi cauza, apoi efectul, cu verbul imediat după deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Rămân acasă pentru că sunt bolnav."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Rămân acasă, căci sunt bolnav."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: dengiz bo'yida ta'til",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: fe'l oxirida. denn: oddiy tartib. deshalb: avval sabab, keyin natija, fe'l deshalb dan keyin darhol.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Uyda qolaman, chunki kasalman."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Uyda qolaman, axir kasalman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: समुद्र किनारे छुट्टी",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: क्रिया अंत में। denn: सामान्य क्रम। deshalb: पहले कारण, फिर नतीजा, और deshalb के तुरंत बाद क्रिया।",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "मैं घर पर रहूँगा क्योंकि मैं बीमार हूँ।"
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "मैं घर पर रहूँगा, क्योंकि मैं बीमार हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: إجازة على البحر",
+      "points": [
+        {
+          "title": "weil وdenn وdeshalb",
+          "text": "weil: الفعل في الآخر. denn: ترتيب عادي. deshalb: السبب أولاً ثم النتيجة، والفعل بعد deshalb مباشرة.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "أبقى في البيت لأنني مريض."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "أبقى في البيت، فأنا مريض."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "reason-bridge-eight": {
+    "ru": {
+      "title": "Практика: спорт и здоровье",
+      "points": [
+        {
+          "title": "trotzdem и obwohl",
+          "text": "trotzdem (всё равно): глагол сразу после. obwohl (хотя): это придаточное, глагол в конце. Смысл один: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Хотя шёл дождь, мы пошли гулять."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Шёл дождь, но мы всё равно пошли гулять."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: спорт і здоров’я",
+      "points": [
+        {
+          "title": "trotzdem і obwohl",
+          "text": "trotzdem (все одно): дієслово одразу після. obwohl (хоча): це підрядне, дієслово в кінці. Зміст один: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Хоча йшов дощ, ми пішли гуляти."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Йшов дощ, але ми все одно пішли гуляти."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: sport and health",
+      "points": [
+        {
+          "title": "trotzdem and obwohl",
+          "text": "trotzdem (anyway, still): the verb right after. obwohl (although): a subordinate clause, verb at the end. Same meaning: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Although it was raining, we went for a walk."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "It was raining, but we still went for a walk."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: sport i zdrowie",
+      "points": [
+        {
+          "title": "trotzdem i obwohl",
+          "text": "trotzdem (mimo to): czasownik zaraz po. obwohl (chociaż): zdanie podrzędne, czasownik na końcu. Znaczenie to samo: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Chociaż padało, poszliśmy na spacer."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Padało, mimo to poszliśmy na spacer."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: deporte y salud",
+      "points": [
+        {
+          "title": "trotzdem y obwohl",
+          "text": "trotzdem (aun así): el verbo justo después. obwohl (aunque): subordinada, verbo al final. Mismo sentido: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Aunque llovía, fuimos a pasear."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Llovía, aun así fuimos a pasear."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : sport et santé",
+      "points": [
+        {
+          "title": "trotzdem et obwohl",
+          "text": "trotzdem (quand même) : verbe juste après. obwohl (bien que) : subordonnée, verbe à la fin. Même sens : Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Bien qu’il pleuve, nous sommes allés nous promener."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Il pleuvait, nous sommes quand même allés nous promener."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: spor ve sağlık",
+      "points": [
+        {
+          "title": "trotzdem ve obwohl",
+          "text": "trotzdem (yine de): fiil hemen ardından. obwohl (-e rağmen): yan cümle, fiil sonda. Anlam aynı: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Yağmur yağmasına rağmen yürüyüşe çıktık."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Yağmur yağıyordu, yine de yürüyüşe çıktık."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: sport și sănătate",
+      "points": [
+        {
+          "title": "trotzdem și obwohl",
+          "text": "trotzdem (totuși): verbul imediat după. obwohl (deși): subordonată, verbul la final. Același sens: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Deși ploua, am ieșit la plimbare."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Ploua, totuși am ieșit la plimbare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: sport va sog'liq",
+      "points": [
+        {
+          "title": "trotzdem va obwohl",
+          "text": "trotzdem (baribir): fe'l darhol keyin. obwohl (garchi): ergash gap, fe'l oxirida. Ma'no bir: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Yomg'ir yog'ayotgan bo'lsa ham, sayrga chiqdik."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Yomg'ir yog'ardi, baribir sayrga chiqdik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: खेल और स्वास्थ्य",
+      "points": [
+        {
+          "title": "trotzdem और obwohl",
+          "text": "trotzdem (फिर भी): क्रिया तुरंत बाद। obwohl (हालाँकि): उपवाक्य, क्रिया अंत में। मतलब एक: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir।",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "बारिश हो रही थी, फिर भी हम टहलने गए।"
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "बारिश हो रही थी, फिर भी हम टहलने गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: الرياضة والصحة",
+      "points": [
+        {
+          "title": "trotzdem وobwohl",
+          "text": "trotzdem (مع ذلك): الفعل بعدها مباشرة. obwohl (رغم أن): جملة فرعية والفعل في الآخر. والمعنى واحد: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "رغم أنها كانت تمطر خرجنا للتنزه."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "كانت تمطر، ومع ذلك خرجنا للتنزه."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "reason-bridge-nine": {
+    "ru": {
+      "title": "Повторение: причины",
+      "points": [
+        {
+          "title": "deshalb: глагол сразу",
+          "text": "deshalb, deswegen, darum значат «поэтому». Это не придаточное: после них сразу глагол, потом подлежащее.",
+          "examples": [
+            {
+              "de": "Ich bin müde, deshalb gehe ich ins Bett.",
+              "tr": "Я устал, поэтому иду спать."
+            }
+          ]
+        },
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: глагол в конце. denn: обычный порядок слов. deshalb: сначала причина, потом следствие, и глагол сразу после deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Я остаюсь дома, потому что болен."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Я остаюсь дома: я болен."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem и obwohl",
+          "text": "trotzdem (всё равно): глагол сразу после. obwohl (хотя): это придаточное, глагол в конце. Смысл один: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Хотя шёл дождь, мы пошли гулять."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Шёл дождь, но мы всё равно пошли гулять."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: причини",
+      "points": [
+        {
+          "title": "deshalb: дієслово одразу",
+          "text": "deshalb, deswegen, darum означають «тому». Це не підрядне: після них одразу дієслово, потім підмет.",
+          "examples": [
+            {
+              "de": "Ich bin müde, deshalb gehe ich ins Bett.",
+              "tr": "Я втомився, тому йду спати."
+            }
+          ]
+        },
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: дієслово в кінці. denn: звичайний порядок слів. deshalb: спочатку причина, потім наслідок, і дієслово одразу після deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Я залишаюся вдома, бо хворий."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Я залишаюся вдома, адже я хворий."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem і obwohl",
+          "text": "trotzdem (все одно): дієслово одразу після. obwohl (хоча): це підрядне, дієслово в кінці. Зміст один: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Хоча йшов дощ, ми пішли гуляти."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Йшов дощ, але ми все одно пішли гуляти."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: reasons",
+      "points": [
+        {
+          "title": "deshalb: verb right after",
+          "text": "deshalb, deswegen, darum mean \"that’s why, so\". It’s not a subordinate clause: the verb comes straight after, then the subject.",
+          "examples": [
+            {
+              "de": "Ich bin müde, deshalb gehe ich ins Bett.",
+              "tr": "I’m tired, so I’m going to bed."
+            }
+          ]
+        },
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: verb at the end. denn: normal word order. deshalb: first the reason, then the result, with the verb right after deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "I’m staying at home because I’m ill."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "I’m staying at home, for I’m ill."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem and obwohl",
+          "text": "trotzdem (anyway, still): the verb right after. obwohl (although): a subordinate clause, verb at the end. Same meaning: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Although it was raining, we went for a walk."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "It was raining, but we still went for a walk."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: przyczyny",
+      "points": [
+        {
+          "title": "deshalb: czasownik od razu",
+          "text": "deshalb, deswegen, darum znaczą „dlatego”. To nie zdanie podrzędne: zaraz po nich czasownik, potem podmiot.",
+          "examples": [
+            {
+              "de": "Ich bin müde, deshalb gehe ich ins Bett.",
+              "tr": "Jestem zmęczony, dlatego idę spać."
+            }
+          ]
+        },
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: czasownik na końcu. denn: zwykły szyk. deshalb: najpierw przyczyna, potem skutek, czasownik zaraz po deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Zostaję w domu, bo jestem chory."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Zostaję w domu, bo jestem chory."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem i obwohl",
+          "text": "trotzdem (mimo to): czasownik zaraz po. obwohl (chociaż): zdanie podrzędne, czasownik na końcu. Znaczenie to samo: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Chociaż padało, poszliśmy na spacer."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Padało, mimo to poszliśmy na spacer."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: causas",
+      "points": [
+        {
+          "title": "deshalb: verbo justo después",
+          "text": "deshalb, deswegen, darum significan \"por eso\". No es subordinada: justo después va el verbo y luego el sujeto.",
+          "examples": [
+            {
+              "de": "Ich bin müde, deshalb gehe ich ins Bett.",
+              "tr": "Estoy cansado, por eso me voy a la cama."
+            }
+          ]
+        },
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: verbo al final. denn: orden normal. deshalb: primero la causa, luego la consecuencia, con el verbo justo después de deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Me quedo en casa porque estoy enfermo."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Me quedo en casa, pues estoy enfermo."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem y obwohl",
+          "text": "trotzdem (aun así): el verbo justo después. obwohl (aunque): subordinada, verbo al final. Mismo sentido: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Aunque llovía, fuimos a pasear."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Llovía, aun así fuimos a pasear."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : causes",
+      "points": [
+        {
+          "title": "deshalb : verbe juste après",
+          "text": "deshalb, deswegen, darum veulent dire « c’est pourquoi ». Ce n’est pas une subordonnée : le verbe suit tout de suite, puis le sujet.",
+          "examples": [
+            {
+              "de": "Ich bin müde, deshalb gehe ich ins Bett.",
+              "tr": "Je suis fatigué, c’est pourquoi je vais me coucher."
+            }
+          ]
+        },
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil : verbe à la fin. denn : ordre normal. deshalb : d’abord la cause, puis la conséquence, avec le verbe juste après deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Je reste à la maison parce que je suis malade."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Je reste à la maison, car je suis malade."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem et obwohl",
+          "text": "trotzdem (quand même) : verbe juste après. obwohl (bien que) : subordonnée, verbe à la fin. Même sens : Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Bien qu’il pleuve, nous sommes allés nous promener."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Il pleuvait, nous sommes quand même allés nous promener."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: sebepler",
+      "points": [
+        {
+          "title": "deshalb: fiil hemen ardından",
+          "text": "deshalb, deswegen, darum \"bu yüzden\" demektir. Yan cümle değil: hemen fiil, sonra özne gelir.",
+          "examples": [
+            {
+              "de": "Ich bin müde, deshalb gehe ich ins Bett.",
+              "tr": "Yorgunum, bu yüzden yatmaya gidiyorum."
+            }
+          ]
+        },
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: fiil sonda. denn: normal sıra. deshalb: önce sebep, sonra sonuç; fiil deshalb’dan hemen sonra.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Evde kalıyorum çünkü hastayım."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Evde kalıyorum, zira hastayım."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem ve obwohl",
+          "text": "trotzdem (yine de): fiil hemen ardından. obwohl (-e rağmen): yan cümle, fiil sonda. Anlam aynı: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Yağmur yağmasına rağmen yürüyüşe çıktık."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Yağmur yağıyordu, yine de yürüyüşe çıktık."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: cauze",
+      "points": [
+        {
+          "title": "deshalb: verbul imediat",
+          "text": "deshalb, deswegen, darum înseamnă „de aceea”. Nu e subordonată: imediat vine verbul, apoi subiectul.",
+          "examples": [
+            {
+              "de": "Ich bin müde, deshalb gehe ich ins Bett.",
+              "tr": "Sunt obosit, de aceea mă culc."
+            }
+          ]
+        },
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: verbul la final. denn: ordine normală. deshalb: întâi cauza, apoi efectul, cu verbul imediat după deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Rămân acasă pentru că sunt bolnav."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Rămân acasă, căci sunt bolnav."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem și obwohl",
+          "text": "trotzdem (totuși): verbul imediat după. obwohl (deși): subordonată, verbul la final. Același sens: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Deși ploua, am ieșit la plimbare."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Ploua, totuși am ieșit la plimbare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: sabablar",
+      "points": [
+        {
+          "title": "deshalb: fe'l darhol",
+          "text": "deshalb, deswegen, darum \"shuning uchun\" degani. Bu ergash gap emas: darhol fe'l, keyin ega.",
+          "examples": [
+            {
+              "de": "Ich bin müde, deshalb gehe ich ins Bett.",
+              "tr": "Charchadim, shuning uchun uxlagani ketaman."
+            }
+          ]
+        },
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: fe'l oxirida. denn: oddiy tartib. deshalb: avval sabab, keyin natija, fe'l deshalb dan keyin darhol.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Uyda qolaman, chunki kasalman."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Uyda qolaman, axir kasalman."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem va obwohl",
+          "text": "trotzdem (baribir): fe'l darhol keyin. obwohl (garchi): ergash gap, fe'l oxirida. Ma'no bir: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Yomg'ir yog'ayotgan bo'lsa ham, sayrga chiqdik."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Yomg'ir yog'ardi, baribir sayrga chiqdik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: कारण",
+      "points": [
+        {
+          "title": "deshalb: क्रिया तुरंत बाद",
+          "text": "deshalb, deswegen, darum मतलब \"इसलिए\"। यह उपवाक्य नहीं: तुरंत क्रिया, फिर कर्ता।",
+          "examples": [
+            {
+              "de": "Ich bin müde, deshalb gehe ich ins Bett.",
+              "tr": "मैं थका हूँ, इसलिए सोने जा रहा हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: क्रिया अंत में। denn: सामान्य क्रम। deshalb: पहले कारण, फिर नतीजा, और deshalb के तुरंत बाद क्रिया।",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "मैं घर पर रहूँगा क्योंकि मैं बीमार हूँ।"
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "मैं घर पर रहूँगा, क्योंकि मैं बीमार हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "trotzdem और obwohl",
+          "text": "trotzdem (फिर भी): क्रिया तुरंत बाद। obwohl (हालाँकि): उपवाक्य, क्रिया अंत में। मतलब एक: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir।",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "बारिश हो रही थी, फिर भी हम टहलने गए।"
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "बारिश हो रही थी, फिर भी हम टहलने गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الأسباب",
+      "points": [
+        {
+          "title": "deshalb: الفعل بعدها مباشرة",
+          "text": "deshalb وdeswegen وdarum تعني \"لذلك\". وليست جملة فرعية: يأتي الفعل مباشرة ثم الفاعل.",
+          "examples": [
+            {
+              "de": "Ich bin müde, deshalb gehe ich ins Bett.",
+              "tr": "أنا متعب، لذلك سأذهب للنوم."
+            }
+          ]
+        },
+        {
+          "title": "weil وdenn وdeshalb",
+          "text": "weil: الفعل في الآخر. denn: ترتيب عادي. deshalb: السبب أولاً ثم النتيجة، والفعل بعد deshalb مباشرة.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "أبقى في البيت لأنني مريض."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "أبقى في البيت، فأنا مريض."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem وobwohl",
+          "text": "trotzdem (مع ذلك): الفعل بعدها مباشرة. obwohl (رغم أن): جملة فرعية والفعل في الآخر. والمعنى واحد: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "رغم أنها كانت تمطر خرجنا للتنزه."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "كانت تمطر، ومع ذلك خرجنا للتنزه."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "reason-bridge-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: глагол в конце. denn: обычный порядок слов. deshalb: сначала причина, потом следствие, и глагол сразу после deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Я остаюсь дома, потому что болен."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Я остаюсь дома: я болен."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem и obwohl",
+          "text": "trotzdem (всё равно): глагол сразу после. obwohl (хотя): это придаточное, глагол в конце. Смысл один: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Хотя шёл дождь, мы пошли гулять."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Шёл дождь, но мы всё равно пошли гулять."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: дієслово в кінці. denn: звичайний порядок слів. deshalb: спочатку причина, потім наслідок, і дієслово одразу після deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Я залишаюся вдома, бо хворий."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Я залишаюся вдома, адже я хворий."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem і obwohl",
+          "text": "trotzdem (все одно): дієслово одразу після. obwohl (хоча): це підрядне, дієслово в кінці. Зміст один: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Хоча йшов дощ, ми пішли гуляти."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Йшов дощ, але ми все одно пішли гуляти."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: verb at the end. denn: normal word order. deshalb: first the reason, then the result, with the verb right after deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "I’m staying at home because I’m ill."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "I’m staying at home, for I’m ill."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem and obwohl",
+          "text": "trotzdem (anyway, still): the verb right after. obwohl (although): a subordinate clause, verb at the end. Same meaning: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Although it was raining, we went for a walk."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "It was raining, but we still went for a walk."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: czasownik na końcu. denn: zwykły szyk. deshalb: najpierw przyczyna, potem skutek, czasownik zaraz po deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Zostaję w domu, bo jestem chory."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Zostaję w domu, bo jestem chory."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem i obwohl",
+          "text": "trotzdem (mimo to): czasownik zaraz po. obwohl (chociaż): zdanie podrzędne, czasownik na końcu. Znaczenie to samo: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Chociaż padało, poszliśmy na spacer."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Padało, mimo to poszliśmy na spacer."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: verbo al final. denn: orden normal. deshalb: primero la causa, luego la consecuencia, con el verbo justo después de deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Me quedo en casa porque estoy enfermo."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Me quedo en casa, pues estoy enfermo."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem y obwohl",
+          "text": "trotzdem (aun así): el verbo justo después. obwohl (aunque): subordinada, verbo al final. Mismo sentido: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Aunque llovía, fuimos a pasear."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Llovía, aun así fuimos a pasear."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil : verbe à la fin. denn : ordre normal. deshalb : d’abord la cause, puis la conséquence, avec le verbe juste après deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Je reste à la maison parce que je suis malade."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Je reste à la maison, car je suis malade."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem et obwohl",
+          "text": "trotzdem (quand même) : verbe juste après. obwohl (bien que) : subordonnée, verbe à la fin. Même sens : Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Bien qu’il pleuve, nous sommes allés nous promener."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Il pleuvait, nous sommes quand même allés nous promener."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: fiil sonda. denn: normal sıra. deshalb: önce sebep, sonra sonuç; fiil deshalb’dan hemen sonra.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Evde kalıyorum çünkü hastayım."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Evde kalıyorum, zira hastayım."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem ve obwohl",
+          "text": "trotzdem (yine de): fiil hemen ardından. obwohl (-e rağmen): yan cümle, fiil sonda. Anlam aynı: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Yağmur yağmasına rağmen yürüyüşe çıktık."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Yağmur yağıyordu, yine de yürüyüşe çıktık."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: verbul la final. denn: ordine normală. deshalb: întâi cauza, apoi efectul, cu verbul imediat după deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Rămân acasă pentru că sunt bolnav."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Rămân acasă, căci sunt bolnav."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem și obwohl",
+          "text": "trotzdem (totuși): verbul imediat după. obwohl (deși): subordonată, verbul la final. Același sens: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Deși ploua, am ieșit la plimbare."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Ploua, totuși am ieșit la plimbare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: fe'l oxirida. denn: oddiy tartib. deshalb: avval sabab, keyin natija, fe'l deshalb dan keyin darhol.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Uyda qolaman, chunki kasalman."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Uyda qolaman, axir kasalman."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem va obwohl",
+          "text": "trotzdem (baribir): fe'l darhol keyin. obwohl (garchi): ergash gap, fe'l oxirida. Ma'no bir: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Yomg'ir yog'ayotgan bo'lsa ham, sayrga chiqdik."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Yomg'ir yog'ardi, baribir sayrga chiqdik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: क्रिया अंत में। denn: सामान्य क्रम। deshalb: पहले कारण, फिर नतीजा, और deshalb के तुरंत बाद क्रिया।",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "मैं घर पर रहूँगा क्योंकि मैं बीमार हूँ।"
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "मैं घर पर रहूँगा, क्योंकि मैं बीमार हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "trotzdem और obwohl",
+          "text": "trotzdem (फिर भी): क्रिया तुरंत बाद। obwohl (हालाँकि): उपवाक्य, क्रिया अंत में। मतलब एक: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir।",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "बारिश हो रही थी, फिर भी हम टहलने गए।"
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "बारिश हो रही थी, फिर भी हम टहलने गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "weil وdenn وdeshalb",
+          "text": "weil: الفعل في الآخر. denn: ترتيب عادي. deshalb: السبب أولاً ثم النتيجة، والفعل بعد deshalb مباشرة.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "أبقى في البيت لأنني مريض."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "أبقى في البيت، فأنا مريض."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem وobwohl",
+          "text": "trotzdem (مع ذلك): الفعل بعدها مباشرة. obwohl (رغم أن): جملة فرعية والفعل في الآخر. والمعنى واحد: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "رغم أنها كانت تمطر خرجنا للتنزه."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "كانت تمطر، ومع ذلك خرجنا للتنزه."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

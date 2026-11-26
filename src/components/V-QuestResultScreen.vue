@@ -15,9 +15,12 @@
           </div>
         </div>
         <div class="success-content-wrapper">
-          <template v-if="!hasMistakes">
+          <template v-if="celebrate">
             <h2 class="success-title slide-down" v-if="animStep >= 1">{{ t('questModals.succesCompleted') }}</h2>
-            <p class="success-subtitle slide-down" v-if="animStep >= 1 && !previouslyCleared">
+            <p class="success-subtitle slide-down" v-if="animStep >= 1 && needsFix">
+              {{ t('questModals.fixForReward') }}
+            </p>
+            <p class="success-subtitle slide-down" v-else-if="animStep >= 1 && !previouslyCleared">
               {{ t('questModals.rewardGot') }}
             </p>
             <p class="success-subtitle slide-down" v-else-if="animStep >= 1 && previouslyCleared">
@@ -28,10 +31,10 @@
             <h2 class="success-title slide-down" v-if="animStep >= 1">{{ t('questModals.areErrors') }}</h2>
             <p class="success-subtitle slide-down" v-if="animStep >= 1">{{ t('questModals.mistakes') }}</p>
           </template>
-          <div class="success-mascot" :class="{'success-mascot--glow': !hasMistakes}" v-if="animStep >= 1">
+          <div class="success-mascot" :class="{'success-mascot--glow': celebrate}" v-if="animStep >= 1">
             <div class="mascot-lottie-wrapper">
               <DotLottieVue
-                  :data="JSON.stringify(!hasMistakes ? Hedgehog : HedgehogSad)"
+                  :data="JSON.stringify(celebrate ? Hedgehog : HedgehogSad)"
                   :autoplay="true"
                   :loop="true"
                   class="success-lottie"
@@ -52,12 +55,10 @@
           </div>
           <div class="success-actions" :class="{ 'visible': animStep >= (!hasMistakes && !previouslyCleared ? 4 : 2) }">
             <template v-if="!hasMistakes">
-              <!-- «Далее» ведёт сразу в следующий квест; реклама на выходе та же, что и у «Назад» -->
-              <button v-if="hasNextQuest" class="success-btn success-btn-primary" data-track="quest_result_next"
-                      @click="$emit('next')">
+              <!-- <button v-if="hasNextQuest" class="success-btn success-btn-primary" @click="$emit('next')">
                 {{ t('questModals.next') }}
-              </button>
-              <button class="success-btn" :class="hasNextQuest ? 'success-btn-secondary' : 'success-btn-primary'"
+              </button> -->
+              <button class="success-btn success-btn-primary"
                       @click="$emit('themes')">
                 {{ t('questModals.back') }}
               </button>
@@ -88,12 +89,17 @@ import Great from 'assets/images/Greatcon.svg'
 import Hedgehog from '~/assets/animation/hedgehog_thumbs_up.json'
 import HedgehogSad from '~/assets/animation/hedgehog_shrug_2.json'
 import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
+import { computed } from 'vue'
 
 const {t} = useI18n()
 
-defineProps({
+const props = defineProps({
   finished: Boolean,
   hasMistakes: Boolean,
+  // Квест пройден (набран минимум правильных), даже если ошибки ещё остались
+  passed: Boolean,
+  // Это повтор ошибок: если ошибки остались, экран не успеха
+  isRetry: Boolean,
   previouslyCleared: Boolean,
   animStep: Number,
   displayXp: Number,
@@ -101,6 +107,11 @@ defineProps({
   confettiParticles: Array,
   hasNextQuest: Boolean
 })
+
+// Первое прохождение с ошибками: экран успеха без салюта и без награды, награда после исправления ошибок.
+// Повтор ошибок, а ошибки остались: обычный экран «Есть ошибки»
+const needsFix = computed(() => props.hasMistakes && props.passed && !props.isRetry)
+const celebrate = computed(() => !props.hasMistakes || needsFix.value)
 
 defineEmits(['next', 'themes', 'retryMistakes'])
 </script>

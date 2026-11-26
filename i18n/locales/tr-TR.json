@@ -19518,9 +19518,7 @@
     "descriptionThematic": "Tereddütte kaldığınızda doğrudan alıştırma sırasında artikelleri ve ismin hallerini açıklar."
   },
   "questModals": {
-    "fixMistakesTitle": "Hatalarını düzeltelim",
-    "fixMistakesText": "Yanlış yaptığın görevleri tekrar çöz. Düzeltirsen ders tamamlanır.",
-    "fixMistakesBtn": "Hataları düzelt ({count})",
+    "fixForReward": "Ödülü almak için tüm görevleri doğru tamamla",
     "repeat": "Hataları tekrarla",
     "next": "Sonraki görev ➔",
     "back": "Konulara",
@@ -21083,6 +21081,7 @@
     "writing": "Yazma",
     "new": "Yeni",
     "writeLocked": "Yazmayı açmak için görevi tamamla",
+    "questLocked": "Önce önceki görevi tamamla",
     "writeAction": "Cümleleri duyarak yaz",
     "landDone": "Diyar tamamlandı!",
     "landGoal": "Tüm görevleri ve yazmayı bitir",

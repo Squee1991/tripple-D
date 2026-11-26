@@ -1,0 +1,2662 @@
+{
+  "time-road-one": {
+    "ru": {
+      "title": "Два года назад: vor",
+      "points": [
+        {
+          "title": "vor: назад",
+          "text": "vor + Dativ значит «... назад»: vor einem Jahr. Во множественном Dativ + -n: vor zwei Jahren. Обычно с Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Я приехал в Германию два года назад."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Два роки тому: vor",
+      "points": [
+        {
+          "title": "vor: тому",
+          "text": "vor + Dativ означає «... тому»: vor einem Jahr. У множині Dativ + -n: vor zwei Jahren. Зазвичай із Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Я приїхав до Німеччини два роки тому."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Two years ago: vor",
+      "points": [
+        {
+          "title": "vor: ago",
+          "text": "vor + dative means \"... ago\": vor einem Jahr. In the plural the dative adds -n: vor zwei Jahren. Usually with Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "I came to Germany two years ago."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Dwa lata temu: vor",
+      "points": [
+        {
+          "title": "vor: temu",
+          "text": "vor + Dativ znaczy „... temu”: vor einem Jahr. W liczbie mnogiej Dativ + -n: vor zwei Jahren. Zwykle z Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Przyjechałem do Niemiec dwa lata temu."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Hace dos años: vor",
+      "points": [
+        {
+          "title": "vor: hace",
+          "text": "vor + dativo significa \"hace ...\": vor einem Jahr. En plural el dativo añade -n: vor zwei Jahren. Normalmente con Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Llegué a Alemania hace dos años."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Il y a deux ans : vor",
+      "points": [
+        {
+          "title": "vor : il y a",
+          "text": "vor + datif veut dire « il y a ... » : vor einem Jahr. Au pluriel, le datif ajoute -n : vor zwei Jahren. En général avec le Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Je suis arrivé en Allemagne il y a deux ans."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "İki yıl önce: vor",
+      "points": [
+        {
+          "title": "vor: önce",
+          "text": "vor + Dativ \"... önce\" demektir: vor einem Jahr. Çoğulda Dativ -n alır: vor zwei Jahren. Genelde Perfekt ile.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "İki yıl önce Almanya’ya geldim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Acum doi ani: vor",
+      "points": [
+        {
+          "title": "vor: acum (în urmă)",
+          "text": "vor + dativ înseamnă „acum ...”: vor einem Jahr. La plural dativul adaugă -n: vor zwei Jahren. De obicei cu Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Am venit în Germania acum doi ani."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ikki yil oldin: vor",
+      "points": [
+        {
+          "title": "vor: oldin",
+          "text": "vor + Dativ \"... oldin\" degani: vor einem Jahr. Ko'plikda Dativ -n oladi: vor zwei Jahren. Odatda Perfekt bilan.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Men Germaniyaga ikki yil oldin kelganman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दो साल पहले: vor",
+      "points": [
+        {
+          "title": "vor: पहले",
+          "text": "vor + Dativ मतलब \"... पहले\": vor einem Jahr। बहुवचन में Dativ + -n: vor zwei Jahren। आमतौर पर Perfekt के साथ।",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "मैं दो साल पहले जर्मनी आया।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "قبل سنتين: vor",
+      "points": [
+        {
+          "title": "vor: قبل",
+          "text": "vor + الجر تعني \"قبل ...\": vor einem Jahr. وفي الجمع يضاف -n: vor zwei Jahren. وعادة مع Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "جئت إلى ألمانيا قبل سنتين."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-road-two": {
+    "ru": {
+      "title": "Уже три года: seit",
+      "points": [
+        {
+          "title": "seit: уже",
+          "text": "seit + Dativ значит «уже ..., с ...». Действие ещё идёт, поэтому глагол в настоящем времени: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Мы знакомы уже десять лет."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Уже три роки: seit",
+      "points": [
+        {
+          "title": "seit: уже",
+          "text": "seit + Dativ означає «уже ..., з ...». Дія ще триває, тому дієслово в теперішньому часі: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Ми знайомі вже десять років."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "For three years: seit",
+      "points": [
+        {
+          "title": "seit: for, since",
+          "text": "seit + dative means \"for ..., since ...\". The action is still going on, so German uses the present tense: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "We’ve known each other for ten years."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Od trzech lat: seit",
+      "points": [
+        {
+          "title": "seit: od",
+          "text": "seit + Dativ znaczy „od ...”. Czynność trwa, więc czasownik w czasie teraźniejszym: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Znamy się od dziesięciu lat."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Desde hace tres años: seit",
+      "points": [
+        {
+          "title": "seit: desde hace",
+          "text": "seit + dativo significa \"desde hace ...\". La acción sigue, por eso el verbo va en presente: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Nos conocemos desde hace diez años."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Depuis trois ans : seit",
+      "points": [
+        {
+          "title": "seit : depuis",
+          "text": "seit + datif veut dire « depuis ... ». L’action continue, donc le verbe est au présent : Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Nous nous connaissons depuis dix ans."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Üç yıldır: seit",
+      "points": [
+        {
+          "title": "seit: -den beri",
+          "text": "seit + Dativ \"...dir, -den beri\" demektir. Eylem sürüyor, bu yüzden fiil şimdiki zamanda: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "On yıldır tanışıyoruz."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "De trei ani: seit",
+      "points": [
+        {
+          "title": "seit: de",
+          "text": "seit + dativ înseamnă „de ...”. Acțiunea continuă, deci verbul e la prezent: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Ne cunoaștem de zece ani."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Uch yildan beri: seit",
+      "points": [
+        {
+          "title": "seit: ... dan beri",
+          "text": "seit + Dativ \"...dan beri\" degani. Harakat hali davom etyapti, shuning uchun fe'l hozirgi zamonda: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Biz o'n yildan beri tanishmiz."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "तीन साल से: seit",
+      "points": [
+        {
+          "title": "seit: से",
+          "text": "seit + Dativ मतलब \"... से\"। काम अभी भी चल रहा है, इसलिए क्रिया वर्तमान में: Ich wohne seit drei Jahren hier।",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "हम दस साल से एक-दूसरे को जानते हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "منذ ثلاث سنوات: seit",
+      "points": [
+        {
+          "title": "seit: منذ",
+          "text": "seit + الجر تعني \"منذ ...\". والفعل ما زال مستمراً، لذلك يأتي بالمضارع: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "نعرف بعضنا منذ عشر سنوات."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-road-three": {
+    "ru": {
+      "title": "На две недели: für",
+      "points": [
+        {
+          "title": "für: на срок, in: через",
+          "text": "für + Akkusativ значит «на какой срок»: für zwei Wochen. in + Dativ значит «через»: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Мы едем в Италию на две недели."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Я вернусь через час."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "На два тижні: für",
+      "points": [
+        {
+          "title": "für: на строк, in: через",
+          "text": "für + Akkusativ означає «на який строк»: für zwei Wochen. in + Dativ означає «через»: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Ми їдемо до Італії на два тижні."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Я повернуся за годину."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "For two weeks: für",
+      "points": [
+        {
+          "title": "für: for (a period), in: in (time)",
+          "text": "für + accusative means \"for (how long)\": für zwei Wochen. in + dative means \"in (from now)\": in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "We’re going to Italy for two weeks."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "I’ll be back in an hour."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Na dwa tygodnie: für",
+      "points": [
+        {
+          "title": "für: na (okres), in: za",
+          "text": "für + Akkusativ znaczy „na jak długo”: für zwei Wochen. in + Dativ znaczy „za”: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Jedziemy do Włoch na dwa tygodnie."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Wrócę za godzinę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Durante dos semanas: für",
+      "points": [
+        {
+          "title": "für: por (un periodo), in: dentro de",
+          "text": "für + acusativo significa \"por cuánto tiempo\": für zwei Wochen. in + dativo significa \"dentro de\": in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Nos vamos a Italia dos semanas."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Vuelvo dentro de una hora."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pour deux semaines : für",
+      "points": [
+        {
+          "title": "für : pour (une durée), in : dans",
+          "text": "für + accusatif veut dire « pour (une durée) » : für zwei Wochen. in + datif veut dire « dans » : in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Nous partons en Italie pour deux semaines."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Je reviens dans une heure."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "İki haftalığına: für",
+      "points": [
+        {
+          "title": "für: süreliğine, in: sonra",
+          "text": "für + Akkusativ \"ne kadar süreliğine\" demektir: für zwei Wochen. in + Dativ \"sonra\" demektir: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "İki haftalığına İtalya’ya gidiyoruz."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Bir saat sonra dönerim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Pentru două săptămâni: für",
+      "points": [
+        {
+          "title": "für: pentru (o perioadă), in: peste",
+          "text": "für + acuzativ înseamnă „pentru cât timp”: für zwei Wochen. in + dativ înseamnă „peste”: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Mergem în Italia pentru două săptămâni."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Mă întorc peste o oră."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ikki haftaga: für",
+      "points": [
+        {
+          "title": "für: muddatga, in: ...dan keyin",
+          "text": "für + Akkusativ \"qancha muddatga\" degani: für zwei Wochen. in + Dativ \"...dan keyin\" degani: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Biz Italiyaga ikki haftaga boramiz."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Bir soatdan keyin qaytaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दो हफ़्ते के लिए: für",
+      "points": [
+        {
+          "title": "für: अवधि के लिए, in: बाद",
+          "text": "für + Akkusativ मतलब \"कितने समय के लिए\": für zwei Wochen। in + Dativ मतलब \"बाद\": in zwei Tagen, in einer Stunde।",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "हम दो हफ़्ते के लिए इटली जा रहे हैं।"
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "मैं एक घंटे में वापस आऊँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "لمدة أسبوعين: für",
+      "points": [
+        {
+          "title": "für: لمدة، in: بعد",
+          "text": "für + المفعول تعني \"لمدة\": für zwei Wochen. وin + الجر تعني \"بعد\": in zwei Tagen، in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "نسافر إلى إيطاليا لمدة أسبوعين."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "سأعود بعد ساعة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-road-four": {
+    "ru": {
+      "title": "Через час, после работы",
+      "points": [
+        {
+          "title": "für: на срок, in: через",
+          "text": "für + Akkusativ значит «на какой срок»: für zwei Wochen. in + Dativ значит «через»: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Мы едем в Италию на две недели."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Я вернусь через час."
+            }
+          ]
+        },
+        {
+          "title": "nach и vor + Dativ",
+          "text": "nach dem Essen значит «после еды», vor dem Essen значит «перед едой». Не путай с vor einer Woche (неделю назад).",
+          "examples": [
+            {
+              "de": "Nach dem Unterricht trinken wir Kaffee.",
+              "tr": "После урока мы пьём кофе."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "За годину, після роботи",
+      "points": [
+        {
+          "title": "für: на строк, in: через",
+          "text": "für + Akkusativ означає «на який строк»: für zwei Wochen. in + Dativ означає «через»: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Ми їдемо до Італії на два тижні."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Я повернуся за годину."
+            }
+          ]
+        },
+        {
+          "title": "nach і vor + Dativ",
+          "text": "nach dem Essen означає «після їжі», vor dem Essen означає «перед їжею». Не плутай з vor einer Woche (тиждень тому).",
+          "examples": [
+            {
+              "de": "Nach dem Unterricht trinken wir Kaffee.",
+              "tr": "Після уроку ми п’ємо каву."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "In an hour, after work",
+      "points": [
+        {
+          "title": "für: for (a period), in: in (time)",
+          "text": "für + accusative means \"for (how long)\": für zwei Wochen. in + dative means \"in (from now)\": in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "We’re going to Italy for two weeks."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "I’ll be back in an hour."
+            }
+          ]
+        },
+        {
+          "title": "nach and vor + dative",
+          "text": "nach dem Essen means \"after the meal\", vor dem Essen means \"before the meal\". Don’t confuse with vor einer Woche (a week ago).",
+          "examples": [
+            {
+              "de": "Nach dem Unterricht trinken wir Kaffee.",
+              "tr": "After class we drink coffee."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Za godzinę, po pracy",
+      "points": [
+        {
+          "title": "für: na (okres), in: za",
+          "text": "für + Akkusativ znaczy „na jak długo”: für zwei Wochen. in + Dativ znaczy „za”: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Jedziemy do Włoch na dwa tygodnie."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Wrócę za godzinę."
+            }
+          ]
+        },
+        {
+          "title": "nach i vor + Dativ",
+          "text": "nach dem Essen znaczy „po jedzeniu”, vor dem Essen „przed jedzeniem”. Nie myl z vor einer Woche (tydzień temu).",
+          "examples": [
+            {
+              "de": "Nach dem Unterricht trinken wir Kaffee.",
+              "tr": "Po lekcji pijemy kawę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Dentro de una hora, después del trabajo",
+      "points": [
+        {
+          "title": "für: por (un periodo), in: dentro de",
+          "text": "für + acusativo significa \"por cuánto tiempo\": für zwei Wochen. in + dativo significa \"dentro de\": in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Nos vamos a Italia dos semanas."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Vuelvo dentro de una hora."
+            }
+          ]
+        },
+        {
+          "title": "nach y vor + dativo",
+          "text": "nach dem Essen significa \"después de comer\", vor dem Essen \"antes de comer\". No confundas con vor einer Woche (hace una semana).",
+          "examples": [
+            {
+              "de": "Nach dem Unterricht trinken wir Kaffee.",
+              "tr": "Después de clase tomamos café."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Dans une heure, après le travail",
+      "points": [
+        {
+          "title": "für : pour (une durée), in : dans",
+          "text": "für + accusatif veut dire « pour (une durée) » : für zwei Wochen. in + datif veut dire « dans » : in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Nous partons en Italie pour deux semaines."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Je reviens dans une heure."
+            }
+          ]
+        },
+        {
+          "title": "nach et vor + datif",
+          "text": "nach dem Essen veut dire « après le repas », vor dem Essen « avant le repas ». Ne confonds pas avec vor einer Woche (il y a une semaine).",
+          "examples": [
+            {
+              "de": "Nach dem Unterricht trinken wir Kaffee.",
+              "tr": "Après le cours, nous buvons un café."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Bir saat sonra, işten sonra",
+      "points": [
+        {
+          "title": "für: süreliğine, in: sonra",
+          "text": "für + Akkusativ \"ne kadar süreliğine\" demektir: für zwei Wochen. in + Dativ \"sonra\" demektir: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "İki haftalığına İtalya’ya gidiyoruz."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Bir saat sonra dönerim."
+            }
+          ]
+        },
+        {
+          "title": "nach ve vor + Dativ",
+          "text": "nach dem Essen \"yemekten sonra\", vor dem Essen \"yemekten önce\" demektir. vor einer Woche (bir hafta önce) ile karıştırma.",
+          "examples": [
+            {
+              "de": "Nach dem Unterricht trinken wir Kaffee.",
+              "tr": "Dersten sonra kahve içeriz."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Peste o oră, după muncă",
+      "points": [
+        {
+          "title": "für: pentru (o perioadă), in: peste",
+          "text": "für + acuzativ înseamnă „pentru cât timp”: für zwei Wochen. in + dativ înseamnă „peste”: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Mergem în Italia pentru două săptămâni."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Mă întorc peste o oră."
+            }
+          ]
+        },
+        {
+          "title": "nach și vor + dativ",
+          "text": "nach dem Essen înseamnă „după masă”, vor dem Essen „înainte de masă”. Nu confunda cu vor einer Woche (acum o săptămână).",
+          "examples": [
+            {
+              "de": "Nach dem Unterricht trinken wir Kaffee.",
+              "tr": "După oră bem cafea."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Bir soatdan keyin, ishdan keyin",
+      "points": [
+        {
+          "title": "für: muddatga, in: ...dan keyin",
+          "text": "für + Akkusativ \"qancha muddatga\" degani: für zwei Wochen. in + Dativ \"...dan keyin\" degani: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Biz Italiyaga ikki haftaga boramiz."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Bir soatdan keyin qaytaman."
+            }
+          ]
+        },
+        {
+          "title": "nach va vor + Dativ",
+          "text": "nach dem Essen \"ovqatdan keyin\", vor dem Essen \"ovqatdan oldin\" degani. vor einer Woche (bir hafta oldin) bilan adashtirma.",
+          "examples": [
+            {
+              "de": "Nach dem Unterricht trinken wir Kaffee.",
+              "tr": "Darsdan keyin qahva ichamiz."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "एक घंटे में, काम के बाद",
+      "points": [
+        {
+          "title": "für: अवधि के लिए, in: बाद",
+          "text": "für + Akkusativ मतलब \"कितने समय के लिए\": für zwei Wochen। in + Dativ मतलब \"बाद\": in zwei Tagen, in einer Stunde।",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "हम दो हफ़्ते के लिए इटली जा रहे हैं।"
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "मैं एक घंटे में वापस आऊँगा।"
+            }
+          ]
+        },
+        {
+          "title": "nach और vor + Dativ",
+          "text": "nach dem Essen मतलब \"खाने के बाद\", vor dem Essen मतलब \"खाने से पहले\"। vor einer Woche (एक हफ़्ता पहले) से मत मिलाओ।",
+          "examples": [
+            {
+              "de": "Nach dem Unterricht trinken wir Kaffee.",
+              "tr": "कक्षा के बाद हम कॉफ़ी पीते हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "بعد ساعة، بعد العمل",
+      "points": [
+        {
+          "title": "für: لمدة، in: بعد",
+          "text": "für + المفعول تعني \"لمدة\": für zwei Wochen. وin + الجر تعني \"بعد\": in zwei Tagen، in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "نسافر إلى إيطاليا لمدة أسبوعين."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "سأعود بعد ساعة."
+            }
+          ]
+        },
+        {
+          "title": "nach وvor + الجر",
+          "text": "nach dem Essen تعني \"بعد الأكل\"، وvor dem Essen \"قبل الأكل\". لا تخلط مع vor einer Woche (قبل أسبوع).",
+          "examples": [
+            {
+              "de": "Nach dem Unterricht trinken wir Kaffee.",
+              "tr": "بعد الدرس نشرب القهوة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-road-five": {
+    "ru": {
+      "title": "С понедельника до пятницы",
+      "points": [
+        {
+          "title": "ab, bis, von ... bis",
+          "text": "ab значит «начиная с», bis значит «до», von ... bis значит «с ... до». Bis morgen! значит «до завтра».",
+          "examples": [
+            {
+              "de": "Ab Montag arbeite ich in einem neuen Büro.",
+              "tr": "С понедельника я работаю в новом офисе."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "З понеділка до п’ятниці",
+      "points": [
+        {
+          "title": "ab, bis, von ... bis",
+          "text": "ab означає «починаючи з», bis означає «до», von ... bis означає «з ... до». Bis morgen! означає «до завтра».",
+          "examples": [
+            {
+              "de": "Ab Montag arbeite ich in einem neuen Büro.",
+              "tr": "З понеділка я працюю в новому офісі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "From Monday to Friday",
+      "points": [
+        {
+          "title": "ab, bis, von ... bis",
+          "text": "ab means \"from (onwards)\", bis means \"until\", von ... bis means \"from ... to\". Bis morgen! means \"see you tomorrow\".",
+          "examples": [
+            {
+              "de": "Ab Montag arbeite ich in einem neuen Büro.",
+              "tr": "From Monday I’m working in a new office."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Od poniedziałku do piątku",
+      "points": [
+        {
+          "title": "ab, bis, von ... bis",
+          "text": "ab znaczy „od (począwszy)”, bis „do”, von ... bis „od ... do”. Bis morgen! znaczy „do jutra”.",
+          "examples": [
+            {
+              "de": "Ab Montag arbeite ich in einem neuen Büro.",
+              "tr": "Od poniedziałku pracuję w nowym biurze."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "De lunes a viernes",
+      "points": [
+        {
+          "title": "ab, bis, von ... bis",
+          "text": "ab significa \"a partir de\", bis \"hasta\", von ... bis \"de ... a\". Bis morgen! significa \"hasta mañana\".",
+          "examples": [
+            {
+              "de": "Ab Montag arbeite ich in einem neuen Büro.",
+              "tr": "A partir del lunes trabajo en una oficina nueva."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Du lundi au vendredi",
+      "points": [
+        {
+          "title": "ab, bis, von ... bis",
+          "text": "ab veut dire « à partir de », bis « jusqu’à », von ... bis « de ... à ». Bis morgen ! veut dire « à demain ».",
+          "examples": [
+            {
+              "de": "Ab Montag arbeite ich in einem neuen Büro.",
+              "tr": "À partir de lundi, je travaille dans un nouveau bureau."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pazartesiden cumaya",
+      "points": [
+        {
+          "title": "ab, bis, von ... bis",
+          "text": "ab \"-den itibaren\", bis \"-e kadar\", von ... bis \"-den -e kadar\" demektir. Bis morgen! \"yarın görüşürüz\" demektir.",
+          "examples": [
+            {
+              "de": "Ab Montag arbeite ich in einem neuen Büro.",
+              "tr": "Pazartesiden itibaren yeni bir ofiste çalışıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "De luni până vineri",
+      "points": [
+        {
+          "title": "ab, bis, von ... bis",
+          "text": "ab înseamnă „începând cu”, bis „până la”, von ... bis „de la ... până la”. Bis morgen! înseamnă „pe mâine”.",
+          "examples": [
+            {
+              "de": "Ab Montag arbeite ich in einem neuen Büro.",
+              "tr": "De luni lucrez într-un birou nou."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Dushanbadan jumagacha",
+      "points": [
+        {
+          "title": "ab, bis, von ... bis",
+          "text": "ab \"...dan boshlab\", bis \"...gacha\", von ... bis \"...dan ...gacha\" degani. Bis morgen! \"ertagacha\" degani.",
+          "examples": [
+            {
+              "de": "Ab Montag arbeite ich in einem neuen Büro.",
+              "tr": "Dushanbadan boshlab yangi ofisda ishlayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "सोमवार से शुक्रवार तक",
+      "points": [
+        {
+          "title": "ab, bis, von ... bis",
+          "text": "ab मतलब \"से शुरू\", bis मतलब \"तक\", von ... bis मतलब \"से ... तक\"। Bis morgen! मतलब \"कल मिलते हैं\"।",
+          "examples": [
+            {
+              "de": "Ab Montag arbeite ich in einem neuen Büro.",
+              "tr": "सोमवार से मैं नए दफ़्तर में काम करूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "من الاثنين إلى الجمعة",
+      "points": [
+        {
+          "title": "ab, bis, von ... bis",
+          "text": "ab تعني \"ابتداءً من\"، وbis \"حتى\"، وvon ... bis \"من ... إلى\". وBis morgen! تعني \"إلى الغد\".",
+          "examples": [
+            {
+              "de": "Ab Montag arbeite ich in einem neuen Büro.",
+              "tr": "ابتداءً من الاثنين أعمل في مكتب جديد."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-road-six": {
+    "ru": {
+      "title": "Сначала, потом, в конце",
+      "points": [
+        {
+          "title": "zuerst, dann, danach",
+          "text": "zuerst (сначала), dann (потом), danach (после этого), zum Schluss (в конце). Если такое слово первым, глагол сразу за ним, а подлежащее после глагола.",
+          "examples": [
+            {
+              "de": "Zuerst frühstücke ich, dann gehe ich zur Arbeit.",
+              "tr": "Сначала я завтракаю, потом иду на работу."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Спочатку, потім, наприкінці",
+      "points": [
+        {
+          "title": "zuerst, dann, danach",
+          "text": "zuerst (спочатку), dann (потім), danach (після цього), zum Schluss (наприкінці). Якщо таке слово першим, дієслово одразу за ним, а підмет після дієслова.",
+          "examples": [
+            {
+              "de": "Zuerst frühstücke ich, dann gehe ich zur Arbeit.",
+              "tr": "Спочатку я снідаю, потім іду на роботу."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "First, then, finally",
+      "points": [
+        {
+          "title": "zuerst, dann, danach",
+          "text": "zuerst (first), dann (then), danach (after that), zum Schluss (finally). If such a word comes first, the verb follows it and the subject comes after the verb.",
+          "examples": [
+            {
+              "de": "Zuerst frühstücke ich, dann gehe ich zur Arbeit.",
+              "tr": "First I have breakfast, then I go to work."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Najpierw, potem, na koniec",
+      "points": [
+        {
+          "title": "zuerst, dann, danach",
+          "text": "zuerst (najpierw), dann (potem), danach (następnie), zum Schluss (na koniec). Jeśli takie słowo jest pierwsze, czasownik idzie zaraz po nim, a podmiot po czasowniku.",
+          "examples": [
+            {
+              "de": "Zuerst frühstücke ich, dann gehe ich zur Arbeit.",
+              "tr": "Najpierw jem śniadanie, potem idę do pracy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Primero, luego, al final",
+      "points": [
+        {
+          "title": "zuerst, dann, danach",
+          "text": "zuerst (primero), dann (luego), danach (después), zum Schluss (al final). Si una de estas palabras va primero, el verbo va justo después y el sujeto detrás del verbo.",
+          "examples": [
+            {
+              "de": "Zuerst frühstücke ich, dann gehe ich zur Arbeit.",
+              "tr": "Primero desayuno, luego voy al trabajo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "D’abord, ensuite, à la fin",
+      "points": [
+        {
+          "title": "zuerst, dann, danach",
+          "text": "zuerst (d’abord), dann (ensuite), danach (après), zum Schluss (à la fin). Si un de ces mots est en premier, le verbe suit, puis le sujet.",
+          "examples": [
+            {
+              "de": "Zuerst frühstücke ich, dann gehe ich zur Arbeit.",
+              "tr": "D’abord je prends le petit déjeuner, ensuite je vais au travail."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Önce, sonra, en sonunda",
+      "points": [
+        {
+          "title": "zuerst, dann, danach",
+          "text": "zuerst (önce), dann (sonra), danach (ondan sonra), zum Schluss (en sonunda). Bu kelime başta olursa fiil hemen ardından, özne fiilden sonra gelir.",
+          "examples": [
+            {
+              "de": "Zuerst frühstücke ich, dann gehe ich zur Arbeit.",
+              "tr": "Önce kahvaltı yaparım, sonra işe giderim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Întâi, apoi, la final",
+      "points": [
+        {
+          "title": "zuerst, dann, danach",
+          "text": "zuerst (întâi), dann (apoi), danach (după aceea), zum Schluss (la final). Dacă un asemenea cuvânt e primul, verbul vine imediat, iar subiectul după verb.",
+          "examples": [
+            {
+              "de": "Zuerst frühstücke ich, dann gehe ich zur Arbeit.",
+              "tr": "Întâi iau micul dejun, apoi merg la muncă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Avval, keyin, oxirida",
+      "points": [
+        {
+          "title": "zuerst, dann, danach",
+          "text": "zuerst (avval), dann (keyin), danach (undan so'ng), zum Schluss (oxirida). Bunday so'z birinchi tursa, fe'l darhol keyin, ega esa fe'ldan keyin keladi.",
+          "examples": [
+            {
+              "de": "Zuerst frühstücke ich, dann gehe ich zur Arbeit.",
+              "tr": "Avval nonushta qilaman, keyin ishga boraman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "पहले, फिर, आखिर में",
+      "points": [
+        {
+          "title": "zuerst, dann, danach",
+          "text": "zuerst (पहले), dann (फिर), danach (उसके बाद), zum Schluss (आखिर में)। अगर ऐसा शब्द पहले आए, तो क्रिया तुरंत बाद और कर्ता क्रिया के बाद।",
+          "examples": [
+            {
+              "de": "Zuerst frühstücke ich, dann gehe ich zur Arbeit.",
+              "tr": "पहले मैं नाश्ता करता हूँ, फिर काम पर जाता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "أولاً، ثم، في النهاية",
+      "points": [
+        {
+          "title": "zuerst وdann وdanach",
+          "text": "zuerst (أولاً)، dann (ثم)، danach (بعد ذلك)، zum Schluss (في النهاية). وإذا جاءت إحداها أولاً يليها الفعل ثم الفاعل.",
+          "examples": [
+            {
+              "de": "Zuerst frühstücke ich, dann gehe ich zur Arbeit.",
+              "tr": "أولاً أفطر ثم أذهب إلى العمل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-road-seven": {
+    "ru": {
+      "title": "Практика: новая работа",
+      "points": [
+        {
+          "title": "seit: уже",
+          "text": "seit + Dativ значит «уже ..., с ...». Действие ещё идёт, поэтому глагол в настоящем времени: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Мы знакомы уже десять лет."
+            }
+          ]
+        },
+        {
+          "title": "ab, bis, von ... bis",
+          "text": "ab значит «начиная с», bis значит «до», von ... bis значит «с ... до». Bis morgen! значит «до завтра».",
+          "examples": [
+            {
+              "de": "Ab Montag arbeite ich in einem neuen Büro.",
+              "tr": "С понедельника я работаю в новом офисе."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: нова робота",
+      "points": [
+        {
+          "title": "seit: уже",
+          "text": "seit + Dativ означає «уже ..., з ...». Дія ще триває, тому дієслово в теперішньому часі: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Ми знайомі вже десять років."
+            }
+          ]
+        },
+        {
+          "title": "ab, bis, von ... bis",
+          "text": "ab означає «починаючи з», bis означає «до», von ... bis означає «з ... до». Bis morgen! означає «до завтра».",
+          "examples": [
+            {
+              "de": "Ab Montag arbeite ich in einem neuen Büro.",
+              "tr": "З понеділка я працюю в новому офісі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: a new job",
+      "points": [
+        {
+          "title": "seit: for, since",
+          "text": "seit + dative means \"for ..., since ...\". The action is still going on, so German uses the present tense: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "We’ve known each other for ten years."
+            }
+          ]
+        },
+        {
+          "title": "ab, bis, von ... bis",
+          "text": "ab means \"from (onwards)\", bis means \"until\", von ... bis means \"from ... to\". Bis morgen! means \"see you tomorrow\".",
+          "examples": [
+            {
+              "de": "Ab Montag arbeite ich in einem neuen Büro.",
+              "tr": "From Monday I’m working in a new office."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: nowa praca",
+      "points": [
+        {
+          "title": "seit: od",
+          "text": "seit + Dativ znaczy „od ...”. Czynność trwa, więc czasownik w czasie teraźniejszym: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Znamy się od dziesięciu lat."
+            }
+          ]
+        },
+        {
+          "title": "ab, bis, von ... bis",
+          "text": "ab znaczy „od (począwszy)”, bis „do”, von ... bis „od ... do”. Bis morgen! znaczy „do jutra”.",
+          "examples": [
+            {
+              "de": "Ab Montag arbeite ich in einem neuen Büro.",
+              "tr": "Od poniedziałku pracuję w nowym biurze."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: un trabajo nuevo",
+      "points": [
+        {
+          "title": "seit: desde hace",
+          "text": "seit + dativo significa \"desde hace ...\". La acción sigue, por eso el verbo va en presente: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Nos conocemos desde hace diez años."
+            }
+          ]
+        },
+        {
+          "title": "ab, bis, von ... bis",
+          "text": "ab significa \"a partir de\", bis \"hasta\", von ... bis \"de ... a\". Bis morgen! significa \"hasta mañana\".",
+          "examples": [
+            {
+              "de": "Ab Montag arbeite ich in einem neuen Büro.",
+              "tr": "A partir del lunes trabajo en una oficina nueva."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : un nouveau travail",
+      "points": [
+        {
+          "title": "seit : depuis",
+          "text": "seit + datif veut dire « depuis ... ». L’action continue, donc le verbe est au présent : Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Nous nous connaissons depuis dix ans."
+            }
+          ]
+        },
+        {
+          "title": "ab, bis, von ... bis",
+          "text": "ab veut dire « à partir de », bis « jusqu’à », von ... bis « de ... à ». Bis morgen ! veut dire « à demain ».",
+          "examples": [
+            {
+              "de": "Ab Montag arbeite ich in einem neuen Büro.",
+              "tr": "À partir de lundi, je travaille dans un nouveau bureau."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: yeni iş",
+      "points": [
+        {
+          "title": "seit: -den beri",
+          "text": "seit + Dativ \"...dir, -den beri\" demektir. Eylem sürüyor, bu yüzden fiil şimdiki zamanda: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "On yıldır tanışıyoruz."
+            }
+          ]
+        },
+        {
+          "title": "ab, bis, von ... bis",
+          "text": "ab \"-den itibaren\", bis \"-e kadar\", von ... bis \"-den -e kadar\" demektir. Bis morgen! \"yarın görüşürüz\" demektir.",
+          "examples": [
+            {
+              "de": "Ab Montag arbeite ich in einem neuen Büro.",
+              "tr": "Pazartesiden itibaren yeni bir ofiste çalışıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: un loc de muncă nou",
+      "points": [
+        {
+          "title": "seit: de",
+          "text": "seit + dativ înseamnă „de ...”. Acțiunea continuă, deci verbul e la prezent: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Ne cunoaștem de zece ani."
+            }
+          ]
+        },
+        {
+          "title": "ab, bis, von ... bis",
+          "text": "ab înseamnă „începând cu”, bis „până la”, von ... bis „de la ... până la”. Bis morgen! înseamnă „pe mâine”.",
+          "examples": [
+            {
+              "de": "Ab Montag arbeite ich in einem neuen Büro.",
+              "tr": "De luni lucrez într-un birou nou."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: yangi ish",
+      "points": [
+        {
+          "title": "seit: ... dan beri",
+          "text": "seit + Dativ \"...dan beri\" degani. Harakat hali davom etyapti, shuning uchun fe'l hozirgi zamonda: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Biz o'n yildan beri tanishmiz."
+            }
+          ]
+        },
+        {
+          "title": "ab, bis, von ... bis",
+          "text": "ab \"...dan boshlab\", bis \"...gacha\", von ... bis \"...dan ...gacha\" degani. Bis morgen! \"ertagacha\" degani.",
+          "examples": [
+            {
+              "de": "Ab Montag arbeite ich in einem neuen Büro.",
+              "tr": "Dushanbadan boshlab yangi ofisda ishlayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: नई नौकरी",
+      "points": [
+        {
+          "title": "seit: से",
+          "text": "seit + Dativ मतलब \"... से\"। काम अभी भी चल रहा है, इसलिए क्रिया वर्तमान में: Ich wohne seit drei Jahren hier।",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "हम दस साल से एक-दूसरे को जानते हैं।"
+            }
+          ]
+        },
+        {
+          "title": "ab, bis, von ... bis",
+          "text": "ab मतलब \"से शुरू\", bis मतलब \"तक\", von ... bis मतलब \"से ... तक\"। Bis morgen! मतलब \"कल मिलते हैं\"।",
+          "examples": [
+            {
+              "de": "Ab Montag arbeite ich in einem neuen Büro.",
+              "tr": "सोमवार से मैं नए दफ़्तर में काम करूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: عمل جديد",
+      "points": [
+        {
+          "title": "seit: منذ",
+          "text": "seit + الجر تعني \"منذ ...\". والفعل ما زال مستمراً، لذلك يأتي بالمضارع: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "نعرف بعضنا منذ عشر سنوات."
+            }
+          ]
+        },
+        {
+          "title": "ab, bis, von ... bis",
+          "text": "ab تعني \"ابتداءً من\"، وbis \"حتى\"، وvon ... bis \"من ... إلى\". وBis morgen! تعني \"إلى الغد\".",
+          "examples": [
+            {
+              "de": "Ab Montag arbeite ich in einem neuen Büro.",
+              "tr": "ابتداءً من الاثنين أعمل في مكتب جديد."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-road-eight": {
+    "ru": {
+      "title": "Практика: каникулы у моря",
+      "points": [
+        {
+          "title": "für: на срок, in: через",
+          "text": "für + Akkusativ значит «на какой срок»: für zwei Wochen. in + Dativ значит «через»: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Мы едем в Италию на две недели."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Я вернусь через час."
+            }
+          ]
+        },
+        {
+          "title": "vor: назад",
+          "text": "vor + Dativ значит «... назад»: vor einem Jahr. Во множественном Dativ + -n: vor zwei Jahren. Обычно с Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Я приехал в Германию два года назад."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: канікули біля моря",
+      "points": [
+        {
+          "title": "für: на строк, in: через",
+          "text": "für + Akkusativ означає «на який строк»: für zwei Wochen. in + Dativ означає «через»: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Ми їдемо до Італії на два тижні."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Я повернуся за годину."
+            }
+          ]
+        },
+        {
+          "title": "vor: тому",
+          "text": "vor + Dativ означає «... тому»: vor einem Jahr. У множині Dativ + -n: vor zwei Jahren. Зазвичай із Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Я приїхав до Німеччини два роки тому."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: holiday by the sea",
+      "points": [
+        {
+          "title": "für: for (a period), in: in (time)",
+          "text": "für + accusative means \"for (how long)\": für zwei Wochen. in + dative means \"in (from now)\": in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "We’re going to Italy for two weeks."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "I’ll be back in an hour."
+            }
+          ]
+        },
+        {
+          "title": "vor: ago",
+          "text": "vor + dative means \"... ago\": vor einem Jahr. In the plural the dative adds -n: vor zwei Jahren. Usually with Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "I came to Germany two years ago."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: wakacje nad morzem",
+      "points": [
+        {
+          "title": "für: na (okres), in: za",
+          "text": "für + Akkusativ znaczy „na jak długo”: für zwei Wochen. in + Dativ znaczy „za”: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Jedziemy do Włoch na dwa tygodnie."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Wrócę za godzinę."
+            }
+          ]
+        },
+        {
+          "title": "vor: temu",
+          "text": "vor + Dativ znaczy „... temu”: vor einem Jahr. W liczbie mnogiej Dativ + -n: vor zwei Jahren. Zwykle z Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Przyjechałem do Niemiec dwa lata temu."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: vacaciones en el mar",
+      "points": [
+        {
+          "title": "für: por (un periodo), in: dentro de",
+          "text": "für + acusativo significa \"por cuánto tiempo\": für zwei Wochen. in + dativo significa \"dentro de\": in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Nos vamos a Italia dos semanas."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Vuelvo dentro de una hora."
+            }
+          ]
+        },
+        {
+          "title": "vor: hace",
+          "text": "vor + dativo significa \"hace ...\": vor einem Jahr. En plural el dativo añade -n: vor zwei Jahren. Normalmente con Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Llegué a Alemania hace dos años."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : vacances à la mer",
+      "points": [
+        {
+          "title": "für : pour (une durée), in : dans",
+          "text": "für + accusatif veut dire « pour (une durée) » : für zwei Wochen. in + datif veut dire « dans » : in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Nous partons en Italie pour deux semaines."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Je reviens dans une heure."
+            }
+          ]
+        },
+        {
+          "title": "vor : il y a",
+          "text": "vor + datif veut dire « il y a ... » : vor einem Jahr. Au pluriel, le datif ajoute -n : vor zwei Jahren. En général avec le Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Je suis arrivé en Allemagne il y a deux ans."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: deniz tatili",
+      "points": [
+        {
+          "title": "für: süreliğine, in: sonra",
+          "text": "für + Akkusativ \"ne kadar süreliğine\" demektir: für zwei Wochen. in + Dativ \"sonra\" demektir: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "İki haftalığına İtalya’ya gidiyoruz."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Bir saat sonra dönerim."
+            }
+          ]
+        },
+        {
+          "title": "vor: önce",
+          "text": "vor + Dativ \"... önce\" demektir: vor einem Jahr. Çoğulda Dativ -n alır: vor zwei Jahren. Genelde Perfekt ile.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "İki yıl önce Almanya’ya geldim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: vacanță la mare",
+      "points": [
+        {
+          "title": "für: pentru (o perioadă), in: peste",
+          "text": "für + acuzativ înseamnă „pentru cât timp”: für zwei Wochen. in + dativ înseamnă „peste”: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Mergem în Italia pentru două săptămâni."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Mă întorc peste o oră."
+            }
+          ]
+        },
+        {
+          "title": "vor: acum (în urmă)",
+          "text": "vor + dativ înseamnă „acum ...”: vor einem Jahr. La plural dativul adaugă -n: vor zwei Jahren. De obicei cu Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Am venit în Germania acum doi ani."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: dengiz bo'yida ta'til",
+      "points": [
+        {
+          "title": "für: muddatga, in: ...dan keyin",
+          "text": "für + Akkusativ \"qancha muddatga\" degani: für zwei Wochen. in + Dativ \"...dan keyin\" degani: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Biz Italiyaga ikki haftaga boramiz."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Bir soatdan keyin qaytaman."
+            }
+          ]
+        },
+        {
+          "title": "vor: oldin",
+          "text": "vor + Dativ \"... oldin\" degani: vor einem Jahr. Ko'plikda Dativ -n oladi: vor zwei Jahren. Odatda Perfekt bilan.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Men Germaniyaga ikki yil oldin kelganman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: समुद्र किनारे छुट्टी",
+      "points": [
+        {
+          "title": "für: अवधि के लिए, in: बाद",
+          "text": "für + Akkusativ मतलब \"कितने समय के लिए\": für zwei Wochen। in + Dativ मतलब \"बाद\": in zwei Tagen, in einer Stunde।",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "हम दो हफ़्ते के लिए इटली जा रहे हैं।"
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "मैं एक घंटे में वापस आऊँगा।"
+            }
+          ]
+        },
+        {
+          "title": "vor: पहले",
+          "text": "vor + Dativ मतलब \"... पहले\": vor einem Jahr। बहुवचन में Dativ + -n: vor zwei Jahren। आमतौर पर Perfekt के साथ।",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "मैं दो साल पहले जर्मनी आया।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: عطلة على البحر",
+      "points": [
+        {
+          "title": "für: لمدة، in: بعد",
+          "text": "für + المفعول تعني \"لمدة\": für zwei Wochen. وin + الجر تعني \"بعد\": in zwei Tagen، in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "نسافر إلى إيطاليا لمدة أسبوعين."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "سأعود بعد ساعة."
+            }
+          ]
+        },
+        {
+          "title": "vor: قبل",
+          "text": "vor + الجر تعني \"قبل ...\": vor einem Jahr. وفي الجمع يضاف -n: vor zwei Jahren. وعادة مع Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "جئت إلى ألمانيا قبل سنتين."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-road-nine": {
+    "ru": {
+      "title": "Повторение: когда и как долго",
+      "points": [
+        {
+          "title": "vor: назад",
+          "text": "vor + Dativ значит «... назад»: vor einem Jahr. Во множественном Dativ + -n: vor zwei Jahren. Обычно с Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Я приехал в Германию два года назад."
+            }
+          ]
+        },
+        {
+          "title": "seit: уже",
+          "text": "seit + Dativ значит «уже ..., с ...». Действие ещё идёт, поэтому глагол в настоящем времени: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Мы знакомы уже десять лет."
+            }
+          ]
+        },
+        {
+          "title": "für: на срок, in: через",
+          "text": "für + Akkusativ значит «на какой срок»: für zwei Wochen. in + Dativ значит «через»: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Мы едем в Италию на две недели."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Я вернусь через час."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: коли і як довго",
+      "points": [
+        {
+          "title": "vor: тому",
+          "text": "vor + Dativ означає «... тому»: vor einem Jahr. У множині Dativ + -n: vor zwei Jahren. Зазвичай із Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Я приїхав до Німеччини два роки тому."
+            }
+          ]
+        },
+        {
+          "title": "seit: уже",
+          "text": "seit + Dativ означає «уже ..., з ...». Дія ще триває, тому дієслово в теперішньому часі: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Ми знайомі вже десять років."
+            }
+          ]
+        },
+        {
+          "title": "für: на строк, in: через",
+          "text": "für + Akkusativ означає «на який строк»: für zwei Wochen. in + Dativ означає «через»: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Ми їдемо до Італії на два тижні."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Я повернуся за годину."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: when and how long",
+      "points": [
+        {
+          "title": "vor: ago",
+          "text": "vor + dative means \"... ago\": vor einem Jahr. In the plural the dative adds -n: vor zwei Jahren. Usually with Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "I came to Germany two years ago."
+            }
+          ]
+        },
+        {
+          "title": "seit: for, since",
+          "text": "seit + dative means \"for ..., since ...\". The action is still going on, so German uses the present tense: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "We’ve known each other for ten years."
+            }
+          ]
+        },
+        {
+          "title": "für: for (a period), in: in (time)",
+          "text": "für + accusative means \"for (how long)\": für zwei Wochen. in + dative means \"in (from now)\": in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "We’re going to Italy for two weeks."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "I’ll be back in an hour."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: kiedy i jak długo",
+      "points": [
+        {
+          "title": "vor: temu",
+          "text": "vor + Dativ znaczy „... temu”: vor einem Jahr. W liczbie mnogiej Dativ + -n: vor zwei Jahren. Zwykle z Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Przyjechałem do Niemiec dwa lata temu."
+            }
+          ]
+        },
+        {
+          "title": "seit: od",
+          "text": "seit + Dativ znaczy „od ...”. Czynność trwa, więc czasownik w czasie teraźniejszym: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Znamy się od dziesięciu lat."
+            }
+          ]
+        },
+        {
+          "title": "für: na (okres), in: za",
+          "text": "für + Akkusativ znaczy „na jak długo”: für zwei Wochen. in + Dativ znaczy „za”: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Jedziemy do Włoch na dwa tygodnie."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Wrócę za godzinę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: cuándo y cuánto tiempo",
+      "points": [
+        {
+          "title": "vor: hace",
+          "text": "vor + dativo significa \"hace ...\": vor einem Jahr. En plural el dativo añade -n: vor zwei Jahren. Normalmente con Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Llegué a Alemania hace dos años."
+            }
+          ]
+        },
+        {
+          "title": "seit: desde hace",
+          "text": "seit + dativo significa \"desde hace ...\". La acción sigue, por eso el verbo va en presente: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Nos conocemos desde hace diez años."
+            }
+          ]
+        },
+        {
+          "title": "für: por (un periodo), in: dentro de",
+          "text": "für + acusativo significa \"por cuánto tiempo\": für zwei Wochen. in + dativo significa \"dentro de\": in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Nos vamos a Italia dos semanas."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Vuelvo dentro de una hora."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : quand et combien de temps",
+      "points": [
+        {
+          "title": "vor : il y a",
+          "text": "vor + datif veut dire « il y a ... » : vor einem Jahr. Au pluriel, le datif ajoute -n : vor zwei Jahren. En général avec le Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Je suis arrivé en Allemagne il y a deux ans."
+            }
+          ]
+        },
+        {
+          "title": "seit : depuis",
+          "text": "seit + datif veut dire « depuis ... ». L’action continue, donc le verbe est au présent : Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Nous nous connaissons depuis dix ans."
+            }
+          ]
+        },
+        {
+          "title": "für : pour (une durée), in : dans",
+          "text": "für + accusatif veut dire « pour (une durée) » : für zwei Wochen. in + datif veut dire « dans » : in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Nous partons en Italie pour deux semaines."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Je reviens dans une heure."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: ne zaman ve ne kadar",
+      "points": [
+        {
+          "title": "vor: önce",
+          "text": "vor + Dativ \"... önce\" demektir: vor einem Jahr. Çoğulda Dativ -n alır: vor zwei Jahren. Genelde Perfekt ile.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "İki yıl önce Almanya’ya geldim."
+            }
+          ]
+        },
+        {
+          "title": "seit: -den beri",
+          "text": "seit + Dativ \"...dir, -den beri\" demektir. Eylem sürüyor, bu yüzden fiil şimdiki zamanda: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "On yıldır tanışıyoruz."
+            }
+          ]
+        },
+        {
+          "title": "für: süreliğine, in: sonra",
+          "text": "für + Akkusativ \"ne kadar süreliğine\" demektir: für zwei Wochen. in + Dativ \"sonra\" demektir: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "İki haftalığına İtalya’ya gidiyoruz."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Bir saat sonra dönerim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: când și cât timp",
+      "points": [
+        {
+          "title": "vor: acum (în urmă)",
+          "text": "vor + dativ înseamnă „acum ...”: vor einem Jahr. La plural dativul adaugă -n: vor zwei Jahren. De obicei cu Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Am venit în Germania acum doi ani."
+            }
+          ]
+        },
+        {
+          "title": "seit: de",
+          "text": "seit + dativ înseamnă „de ...”. Acțiunea continuă, deci verbul e la prezent: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Ne cunoaștem de zece ani."
+            }
+          ]
+        },
+        {
+          "title": "für: pentru (o perioadă), in: peste",
+          "text": "für + acuzativ înseamnă „pentru cât timp”: für zwei Wochen. in + dativ înseamnă „peste”: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Mergem în Italia pentru două săptămâni."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Mă întorc peste o oră."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: qachon va qancha",
+      "points": [
+        {
+          "title": "vor: oldin",
+          "text": "vor + Dativ \"... oldin\" degani: vor einem Jahr. Ko'plikda Dativ -n oladi: vor zwei Jahren. Odatda Perfekt bilan.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Men Germaniyaga ikki yil oldin kelganman."
+            }
+          ]
+        },
+        {
+          "title": "seit: ... dan beri",
+          "text": "seit + Dativ \"...dan beri\" degani. Harakat hali davom etyapti, shuning uchun fe'l hozirgi zamonda: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Biz o'n yildan beri tanishmiz."
+            }
+          ]
+        },
+        {
+          "title": "für: muddatga, in: ...dan keyin",
+          "text": "für + Akkusativ \"qancha muddatga\" degani: für zwei Wochen. in + Dativ \"...dan keyin\" degani: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Biz Italiyaga ikki haftaga boramiz."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Bir soatdan keyin qaytaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: कब और कितनी देर",
+      "points": [
+        {
+          "title": "vor: पहले",
+          "text": "vor + Dativ मतलब \"... पहले\": vor einem Jahr। बहुवचन में Dativ + -n: vor zwei Jahren। आमतौर पर Perfekt के साथ।",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "मैं दो साल पहले जर्मनी आया।"
+            }
+          ]
+        },
+        {
+          "title": "seit: से",
+          "text": "seit + Dativ मतलब \"... से\"। काम अभी भी चल रहा है, इसलिए क्रिया वर्तमान में: Ich wohne seit drei Jahren hier।",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "हम दस साल से एक-दूसरे को जानते हैं।"
+            }
+          ]
+        },
+        {
+          "title": "für: अवधि के लिए, in: बाद",
+          "text": "für + Akkusativ मतलब \"कितने समय के लिए\": für zwei Wochen। in + Dativ मतलब \"बाद\": in zwei Tagen, in einer Stunde।",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "हम दो हफ़्ते के लिए इटली जा रहे हैं।"
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "मैं एक घंटे में वापस आऊँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: متى وكم من الوقت",
+      "points": [
+        {
+          "title": "vor: قبل",
+          "text": "vor + الجر تعني \"قبل ...\": vor einem Jahr. وفي الجمع يضاف -n: vor zwei Jahren. وعادة مع Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "جئت إلى ألمانيا قبل سنتين."
+            }
+          ]
+        },
+        {
+          "title": "seit: منذ",
+          "text": "seit + الجر تعني \"منذ ...\". والفعل ما زال مستمراً، لذلك يأتي بالمضارع: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "نعرف بعضنا منذ عشر سنوات."
+            }
+          ]
+        },
+        {
+          "title": "für: لمدة، in: بعد",
+          "text": "für + المفعول تعني \"لمدة\": für zwei Wochen. وin + الجر تعني \"بعد\": in zwei Tagen، in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "نسافر إلى إيطاليا لمدة أسبوعين."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "سأعود بعد ساعة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-road-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "vor: назад",
+          "text": "vor + Dativ значит «... назад»: vor einem Jahr. Во множественном Dativ + -n: vor zwei Jahren. Обычно с Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Я приехал в Германию два года назад."
+            }
+          ]
+        },
+        {
+          "title": "seit: уже",
+          "text": "seit + Dativ значит «уже ..., с ...». Действие ещё идёт, поэтому глагол в настоящем времени: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Мы знакомы уже десять лет."
+            }
+          ]
+        },
+        {
+          "title": "für: на срок, in: через",
+          "text": "für + Akkusativ значит «на какой срок»: für zwei Wochen. in + Dativ значит «через»: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Мы едем в Италию на две недели."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Я вернусь через час."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "vor: тому",
+          "text": "vor + Dativ означає «... тому»: vor einem Jahr. У множині Dativ + -n: vor zwei Jahren. Зазвичай із Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Я приїхав до Німеччини два роки тому."
+            }
+          ]
+        },
+        {
+          "title": "seit: уже",
+          "text": "seit + Dativ означає «уже ..., з ...». Дія ще триває, тому дієслово в теперішньому часі: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Ми знайомі вже десять років."
+            }
+          ]
+        },
+        {
+          "title": "für: на строк, in: через",
+          "text": "für + Akkusativ означає «на який строк»: für zwei Wochen. in + Dativ означає «через»: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Ми їдемо до Італії на два тижні."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Я повернуся за годину."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "vor: ago",
+          "text": "vor + dative means \"... ago\": vor einem Jahr. In the plural the dative adds -n: vor zwei Jahren. Usually with Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "I came to Germany two years ago."
+            }
+          ]
+        },
+        {
+          "title": "seit: for, since",
+          "text": "seit + dative means \"for ..., since ...\". The action is still going on, so German uses the present tense: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "We’ve known each other for ten years."
+            }
+          ]
+        },
+        {
+          "title": "für: for (a period), in: in (time)",
+          "text": "für + accusative means \"for (how long)\": für zwei Wochen. in + dative means \"in (from now)\": in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "We’re going to Italy for two weeks."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "I’ll be back in an hour."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "vor: temu",
+          "text": "vor + Dativ znaczy „... temu”: vor einem Jahr. W liczbie mnogiej Dativ + -n: vor zwei Jahren. Zwykle z Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Przyjechałem do Niemiec dwa lata temu."
+            }
+          ]
+        },
+        {
+          "title": "seit: od",
+          "text": "seit + Dativ znaczy „od ...”. Czynność trwa, więc czasownik w czasie teraźniejszym: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Znamy się od dziesięciu lat."
+            }
+          ]
+        },
+        {
+          "title": "für: na (okres), in: za",
+          "text": "für + Akkusativ znaczy „na jak długo”: für zwei Wochen. in + Dativ znaczy „za”: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Jedziemy do Włoch na dwa tygodnie."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Wrócę za godzinę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "vor: hace",
+          "text": "vor + dativo significa \"hace ...\": vor einem Jahr. En plural el dativo añade -n: vor zwei Jahren. Normalmente con Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Llegué a Alemania hace dos años."
+            }
+          ]
+        },
+        {
+          "title": "seit: desde hace",
+          "text": "seit + dativo significa \"desde hace ...\". La acción sigue, por eso el verbo va en presente: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Nos conocemos desde hace diez años."
+            }
+          ]
+        },
+        {
+          "title": "für: por (un periodo), in: dentro de",
+          "text": "für + acusativo significa \"por cuánto tiempo\": für zwei Wochen. in + dativo significa \"dentro de\": in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Nos vamos a Italia dos semanas."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Vuelvo dentro de una hora."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "vor : il y a",
+          "text": "vor + datif veut dire « il y a ... » : vor einem Jahr. Au pluriel, le datif ajoute -n : vor zwei Jahren. En général avec le Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Je suis arrivé en Allemagne il y a deux ans."
+            }
+          ]
+        },
+        {
+          "title": "seit : depuis",
+          "text": "seit + datif veut dire « depuis ... ». L’action continue, donc le verbe est au présent : Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Nous nous connaissons depuis dix ans."
+            }
+          ]
+        },
+        {
+          "title": "für : pour (une durée), in : dans",
+          "text": "für + accusatif veut dire « pour (une durée) » : für zwei Wochen. in + datif veut dire « dans » : in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Nous partons en Italie pour deux semaines."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Je reviens dans une heure."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "vor: önce",
+          "text": "vor + Dativ \"... önce\" demektir: vor einem Jahr. Çoğulda Dativ -n alır: vor zwei Jahren. Genelde Perfekt ile.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "İki yıl önce Almanya’ya geldim."
+            }
+          ]
+        },
+        {
+          "title": "seit: -den beri",
+          "text": "seit + Dativ \"...dir, -den beri\" demektir. Eylem sürüyor, bu yüzden fiil şimdiki zamanda: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "On yıldır tanışıyoruz."
+            }
+          ]
+        },
+        {
+          "title": "für: süreliğine, in: sonra",
+          "text": "für + Akkusativ \"ne kadar süreliğine\" demektir: für zwei Wochen. in + Dativ \"sonra\" demektir: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "İki haftalığına İtalya’ya gidiyoruz."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Bir saat sonra dönerim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "vor: acum (în urmă)",
+          "text": "vor + dativ înseamnă „acum ...”: vor einem Jahr. La plural dativul adaugă -n: vor zwei Jahren. De obicei cu Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Am venit în Germania acum doi ani."
+            }
+          ]
+        },
+        {
+          "title": "seit: de",
+          "text": "seit + dativ înseamnă „de ...”. Acțiunea continuă, deci verbul e la prezent: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Ne cunoaștem de zece ani."
+            }
+          ]
+        },
+        {
+          "title": "für: pentru (o perioadă), in: peste",
+          "text": "für + acuzativ înseamnă „pentru cât timp”: für zwei Wochen. in + dativ înseamnă „peste”: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Mergem în Italia pentru două săptămâni."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Mă întorc peste o oră."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "vor: oldin",
+          "text": "vor + Dativ \"... oldin\" degani: vor einem Jahr. Ko'plikda Dativ -n oladi: vor zwei Jahren. Odatda Perfekt bilan.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "Men Germaniyaga ikki yil oldin kelganman."
+            }
+          ]
+        },
+        {
+          "title": "seit: ... dan beri",
+          "text": "seit + Dativ \"...dan beri\" degani. Harakat hali davom etyapti, shuning uchun fe'l hozirgi zamonda: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "Biz o'n yildan beri tanishmiz."
+            }
+          ]
+        },
+        {
+          "title": "für: muddatga, in: ...dan keyin",
+          "text": "für + Akkusativ \"qancha muddatga\" degani: für zwei Wochen. in + Dativ \"...dan keyin\" degani: in zwei Tagen, in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "Biz Italiyaga ikki haftaga boramiz."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "Bir soatdan keyin qaytaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "vor: पहले",
+          "text": "vor + Dativ मतलब \"... पहले\": vor einem Jahr। बहुवचन में Dativ + -n: vor zwei Jahren। आमतौर पर Perfekt के साथ।",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "मैं दो साल पहले जर्मनी आया।"
+            }
+          ]
+        },
+        {
+          "title": "seit: से",
+          "text": "seit + Dativ मतलब \"... से\"। काम अभी भी चल रहा है, इसलिए क्रिया वर्तमान में: Ich wohne seit drei Jahren hier।",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "हम दस साल से एक-दूसरे को जानते हैं।"
+            }
+          ]
+        },
+        {
+          "title": "für: अवधि के लिए, in: बाद",
+          "text": "für + Akkusativ मतलब \"कितने समय के लिए\": für zwei Wochen। in + Dativ मतलब \"बाद\": in zwei Tagen, in einer Stunde।",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "हम दो हफ़्ते के लिए इटली जा रहे हैं।"
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "मैं एक घंटे में वापस आऊँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "vor: قبل",
+          "text": "vor + الجر تعني \"قبل ...\": vor einem Jahr. وفي الجمع يضاف -n: vor zwei Jahren. وعادة مع Perfekt.",
+          "examples": [
+            {
+              "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+              "tr": "جئت إلى ألمانيا قبل سنتين."
+            }
+          ]
+        },
+        {
+          "title": "seit: منذ",
+          "text": "seit + الجر تعني \"منذ ...\". والفعل ما زال مستمراً، لذلك يأتي بالمضارع: Ich wohne seit drei Jahren hier.",
+          "examples": [
+            {
+              "de": "Wir kennen uns seit zehn Jahren.",
+              "tr": "نعرف بعضنا منذ عشر سنوات."
+            }
+          ]
+        },
+        {
+          "title": "für: لمدة، in: بعد",
+          "text": "für + المفعول تعني \"لمدة\": für zwei Wochen. وin + الجر تعني \"بعد\": in zwei Tagen، in einer Stunde.",
+          "examples": [
+            {
+              "de": "Wir fahren für zwei Wochen nach Italien.",
+              "tr": "نسافر إلى إيطاليا لمدة أسبوعين."
+            },
+            {
+              "de": "Ich komme in einer Stunde zurück.",
+              "tr": "سأعود بعد ساعة."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

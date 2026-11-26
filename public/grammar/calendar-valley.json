@@ -1,0 +1,2244 @@
+{
+  "calendar-valley-one": {
+    "ru": {
+      "title": "Первый, второй, третий",
+      "points": [
+        {
+          "title": "До 19: -te, с 20: -ste",
+          "text": "Порядковые: vier → vierte, zwanzig → zwanzigste. Особые: erste, dritte, siebte, achte. Окончание как у прилагательного: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Мы живём на третьем этаже."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "Это его двадцатый день рождения."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Перший, другий, третій",
+      "points": [
+        {
+          "title": "До 19: -te, з 20: -ste",
+          "text": "Порядкові: vier → vierte, zwanzig → zwanzigste. Особливі: erste, dritte, siebte, achte. Закінчення як у прикметника: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Ми живемо на третьому поверсі."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "Це його двадцятий день народження."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "First, second, third",
+      "points": [
+        {
+          "title": "Up to 19: -te, from 20: -ste",
+          "text": "Ordinals: vier → vierte, zwanzig → zwanzigste. Special: erste, dritte, siebte, achte. Endings like an adjective: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "We live on the third floor."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "It’s his twentieth birthday."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Pierwszy, drugi, trzeci",
+      "points": [
+        {
+          "title": "Do 19: -te, od 20: -ste",
+          "text": "Liczebniki porządkowe: vier → vierte, zwanzig → zwanzigste. Szczególne: erste, dritte, siebte, achte. Końcówka jak w przymiotniku: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Mieszkamy na trzecim piętrze."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "To jego dwudzieste urodziny."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Primero, segundo, tercero",
+      "points": [
+        {
+          "title": "Hasta 19: -te, desde 20: -ste",
+          "text": "Ordinales: vier → vierte, zwanzig → zwanzigste. Especiales: erste, dritte, siebte, achte. Terminación como un adjetivo: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Vivimos en el tercer piso."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "Es su vigésimo cumpleaños."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Premier, deuxième, troisième",
+      "points": [
+        {
+          "title": "Jusqu’à 19 : -te, à partir de 20 : -ste",
+          "text": "Ordinaux : vier → vierte, zwanzig → zwanzigste. Particuliers : erste, dritte, siebte, achte. Terminaison comme un adjectif : der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Nous habitons au troisième étage."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "C’est son vingtième anniversaire."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Birinci, ikinci, üçüncü",
+      "points": [
+        {
+          "title": "19’a kadar -te, 20’den itibaren -ste",
+          "text": "Sıra sayıları: vier → vierte, zwanzig → zwanzigste. Özel: erste, dritte, siebte, achte. Sıfat gibi ek alır: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Üçüncü katta oturuyoruz."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "Bu onun yirminci doğum günü."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Primul, al doilea, al treilea",
+      "points": [
+        {
+          "title": "Până la 19: -te, de la 20: -ste",
+          "text": "Ordinale: vier → vierte, zwanzig → zwanzigste. Speciale: erste, dritte, siebte, achte. Terminația ca la adjectiv: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Locuim la etajul trei."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "E a douăzecea lui aniversare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Birinchi, ikkinchi, uchinchi",
+      "points": [
+        {
+          "title": "19 gacha -te, 20 dan -ste",
+          "text": "Tartib sonlar: vier → vierte, zwanzig → zwanzigste. Alohida: erste, dritte, siebte, achte. Sifat kabi qo'shimcha oladi: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Biz uchinchi qavatda yashaymiz."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "Bu uning yigirmanchi tug'ilgan kuni."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "पहला, दूसरा, तीसरा",
+      "points": [
+        {
+          "title": "19 तक -te, 20 से -ste",
+          "text": "क्रमसूचक: vier → vierte, zwanzig → zwanzigste। खास: erste, dritte, siebte, achte। अंत विशेषण जैसा: der erste Tag, im dritten Stock।",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "हम तीसरी मंज़िल पर रहते हैं।"
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "यह उसका बीसवाँ जन्मदिन है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الأول والثاني والثالث",
+      "points": [
+        {
+          "title": "حتى 19: -te، ومن 20: -ste",
+          "text": "الأعداد الترتيبية: vier → vierte، zwanzig → zwanzigste. وخاصة: erste، dritte، siebte، achte. ونهايتها كالصفة: der erste Tag، im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "نسكن في الطابق الثالث."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "هذا عيد ميلاده العشرون."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "calendar-valley-two": {
+    "ru": {
+      "title": "Двадцатый и дальше",
+      "points": [
+        {
+          "title": "До 19: -te, с 20: -ste",
+          "text": "Порядковые: vier → vierte, zwanzig → zwanzigste. Особые: erste, dritte, siebte, achte. Окончание как у прилагательного: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Мы живём на третьем этаже."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "Это его двадцатый день рождения."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Двадцятий і далі",
+      "points": [
+        {
+          "title": "До 19: -te, з 20: -ste",
+          "text": "Порядкові: vier → vierte, zwanzig → zwanzigste. Особливі: erste, dritte, siebte, achte. Закінчення як у прикметника: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Ми живемо на третьому поверсі."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "Це його двадцятий день народження."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Twentieth and beyond",
+      "points": [
+        {
+          "title": "Up to 19: -te, from 20: -ste",
+          "text": "Ordinals: vier → vierte, zwanzig → zwanzigste. Special: erste, dritte, siebte, achte. Endings like an adjective: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "We live on the third floor."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "It’s his twentieth birthday."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Dwudziesty i dalej",
+      "points": [
+        {
+          "title": "Do 19: -te, od 20: -ste",
+          "text": "Liczebniki porządkowe: vier → vierte, zwanzig → zwanzigste. Szczególne: erste, dritte, siebte, achte. Końcówka jak w przymiotniku: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Mieszkamy na trzecim piętrze."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "To jego dwudzieste urodziny."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Vigésimo y más",
+      "points": [
+        {
+          "title": "Hasta 19: -te, desde 20: -ste",
+          "text": "Ordinales: vier → vierte, zwanzig → zwanzigste. Especiales: erste, dritte, siebte, achte. Terminación como un adjetivo: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Vivimos en el tercer piso."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "Es su vigésimo cumpleaños."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Vingtième et au-delà",
+      "points": [
+        {
+          "title": "Jusqu’à 19 : -te, à partir de 20 : -ste",
+          "text": "Ordinaux : vier → vierte, zwanzig → zwanzigste. Particuliers : erste, dritte, siebte, achte. Terminaison comme un adjectif : der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Nous habitons au troisième étage."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "C’est son vingtième anniversaire."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yirminci ve sonrası",
+      "points": [
+        {
+          "title": "19’a kadar -te, 20’den itibaren -ste",
+          "text": "Sıra sayıları: vier → vierte, zwanzig → zwanzigste. Özel: erste, dritte, siebte, achte. Sıfat gibi ek alır: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Üçüncü katta oturuyoruz."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "Bu onun yirminci doğum günü."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Al douăzecilea și mai departe",
+      "points": [
+        {
+          "title": "Până la 19: -te, de la 20: -ste",
+          "text": "Ordinale: vier → vierte, zwanzig → zwanzigste. Speciale: erste, dritte, siebte, achte. Terminația ca la adjectiv: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Locuim la etajul trei."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "E a douăzecea lui aniversare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Yigirmanchi va undan keyin",
+      "points": [
+        {
+          "title": "19 gacha -te, 20 dan -ste",
+          "text": "Tartib sonlar: vier → vierte, zwanzig → zwanzigste. Alohida: erste, dritte, siebte, achte. Sifat kabi qo'shimcha oladi: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Biz uchinchi qavatda yashaymiz."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "Bu uning yigirmanchi tug'ilgan kuni."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "बीसवाँ और आगे",
+      "points": [
+        {
+          "title": "19 तक -te, 20 से -ste",
+          "text": "क्रमसूचक: vier → vierte, zwanzig → zwanzigste। खास: erste, dritte, siebte, achte। अंत विशेषण जैसा: der erste Tag, im dritten Stock।",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "हम तीसरी मंज़िल पर रहते हैं।"
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "यह उसका बीसवाँ जन्मदिन है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "العشرون وما بعده",
+      "points": [
+        {
+          "title": "حتى 19: -te، ومن 20: -ste",
+          "text": "الأعداد الترتيبية: vier → vierte، zwanzig → zwanzigste. وخاصة: erste، dritte، siebte، achte. ونهايتها كالصفة: der erste Tag، im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "نسكن في الطابق الثالث."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "هذا عيد ميلاده العشرون."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "calendar-valley-three": {
+    "ru": {
+      "title": "Какое сегодня число?",
+      "points": [
+        {
+          "title": "der dritte Mai, но am dritten Mai",
+          "text": "Какое число: Heute ist der dritte Mai (-te). Когда: am dritten Mai (-ten). На письме: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "У меня день рождения четвёртого апреля."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Яке сьогодні число?",
+      "points": [
+        {
+          "title": "der dritte Mai, але am dritten Mai",
+          "text": "Яке число: Heute ist der dritte Mai (-te). Коли: am dritten Mai (-ten). На письмі: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "У мене день народження четвертого квітня."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "What’s the date today?",
+      "points": [
+        {
+          "title": "der dritte Mai, but am dritten Mai",
+          "text": "What date: Heute ist der dritte Mai (-te). When: am dritten Mai (-ten). Written: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "My birthday is on the fourth of April."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Którego dziś mamy?",
+      "points": [
+        {
+          "title": "der dritte Mai, ale am dritten Mai",
+          "text": "Jaka data: Heute ist der dritte Mai (-te). Kiedy: am dritten Mai (-ten). Na piśmie: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Mam urodziny czwartego kwietnia."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿Qué fecha es hoy?",
+      "points": [
+        {
+          "title": "der dritte Mai, pero am dritten Mai",
+          "text": "Qué fecha: Heute ist der dritte Mai (-te). Cuándo: am dritten Mai (-ten). Por escrito: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Mi cumpleaños es el cuatro de abril."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Quelle est la date aujourd’hui ?",
+      "points": [
+        {
+          "title": "der dritte Mai, mais am dritten Mai",
+          "text": "Quelle date : Heute ist der dritte Mai (-te). Quand : am dritten Mai (-ten). À l’écrit : der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Mon anniversaire est le quatre avril."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Bugün ayın kaçı?",
+      "points": [
+        {
+          "title": "der dritte Mai, ama am dritten Mai",
+          "text": "Hangi tarih: Heute ist der dritte Mai (-te). Ne zaman: am dritten Mai (-ten). Yazıda: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Doğum günüm 4 Nisan’da."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Ce dată e azi?",
+      "points": [
+        {
+          "title": "der dritte Mai, dar am dritten Mai",
+          "text": "Ce dată: Heute ist der dritte Mai (-te). Când: am dritten Mai (-ten). În scris: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Ziua mea e pe patru aprilie."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Bugun nechanchi sana?",
+      "points": [
+        {
+          "title": "der dritte Mai, lekin am dritten Mai",
+          "text": "Qaysi sana: Heute ist der dritte Mai (-te). Qachon: am dritten Mai (-ten). Yozuvda: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Tug'ilgan kunim 4-aprelda."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "आज कौन-सी तारीख है?",
+      "points": [
+        {
+          "title": "der dritte Mai, लेकिन am dritten Mai",
+          "text": "कौन-सी तारीख: Heute ist der dritte Mai (-te)। कब: am dritten Mai (-ten)। लिखने में: der 3. Mai।",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "मेरा जन्मदिन चार अप्रैल को है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ما تاريخ اليوم؟",
+      "points": [
+        {
+          "title": "der dritte Mai لكن am dritten Mai",
+          "text": "أي تاريخ: Heute ist der dritte Mai (-te). ومتى: am dritten Mai (-ten). وكتابةً: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "عيد ميلادي في الرابع من أبريل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "calendar-valley-four": {
+    "ru": {
+      "title": "Когда? am ersten Mai",
+      "points": [
+        {
+          "title": "der dritte Mai, но am dritten Mai",
+          "text": "Какое число: Heute ist der dritte Mai (-te). Когда: am dritten Mai (-ten). На письме: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "У меня день рождения четвёртого апреля."
+            }
+          ]
+        },
+        {
+          "title": "vom ... bis zum",
+          "text": "Срок: vom ersten bis zum fünften Mai (с первого по пятое мая).",
+          "examples": [
+            {
+              "de": "Der Urlaub ist vom ersten bis zum fünfzehnten August.",
+              "tr": "Отпуск с первого по пятнадцатое августа."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Коли? am ersten Mai",
+      "points": [
+        {
+          "title": "der dritte Mai, але am dritten Mai",
+          "text": "Яке число: Heute ist der dritte Mai (-te). Коли: am dritten Mai (-ten). На письмі: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "У мене день народження четвертого квітня."
+            }
+          ]
+        },
+        {
+          "title": "vom ... bis zum",
+          "text": "Строк: vom ersten bis zum fünften Mai (з першого по п’яте травня).",
+          "examples": [
+            {
+              "de": "Der Urlaub ist vom ersten bis zum fünfzehnten August.",
+              "tr": "Відпустка з першого по п’ятнадцяте серпня."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "When? am ersten Mai",
+      "points": [
+        {
+          "title": "der dritte Mai, but am dritten Mai",
+          "text": "What date: Heute ist der dritte Mai (-te). When: am dritten Mai (-ten). Written: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "My birthday is on the fourth of April."
+            }
+          ]
+        },
+        {
+          "title": "vom ... bis zum",
+          "text": "A period: vom ersten bis zum fünften Mai (from the 1st to the 5th of May).",
+          "examples": [
+            {
+              "de": "Der Urlaub ist vom ersten bis zum fünfzehnten August.",
+              "tr": "The holiday is from the 1st to the 15th of August."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Kiedy? am ersten Mai",
+      "points": [
+        {
+          "title": "der dritte Mai, ale am dritten Mai",
+          "text": "Jaka data: Heute ist der dritte Mai (-te). Kiedy: am dritten Mai (-ten). Na piśmie: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Mam urodziny czwartego kwietnia."
+            }
+          ]
+        },
+        {
+          "title": "vom ... bis zum",
+          "text": "Okres: vom ersten bis zum fünften Mai (od pierwszego do piątego maja).",
+          "examples": [
+            {
+              "de": "Der Urlaub ist vom ersten bis zum fünfzehnten August.",
+              "tr": "Urlop jest od pierwszego do piętnastego sierpnia."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿Cuándo? am ersten Mai",
+      "points": [
+        {
+          "title": "der dritte Mai, pero am dritten Mai",
+          "text": "Qué fecha: Heute ist der dritte Mai (-te). Cuándo: am dritten Mai (-ten). Por escrito: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Mi cumpleaños es el cuatro de abril."
+            }
+          ]
+        },
+        {
+          "title": "vom ... bis zum",
+          "text": "Un periodo: vom ersten bis zum fünften Mai (del uno al cinco de mayo).",
+          "examples": [
+            {
+              "de": "Der Urlaub ist vom ersten bis zum fünfzehnten August.",
+              "tr": "Las vacaciones son del uno al quince de agosto."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Quand ? am ersten Mai",
+      "points": [
+        {
+          "title": "der dritte Mai, mais am dritten Mai",
+          "text": "Quelle date : Heute ist der dritte Mai (-te). Quand : am dritten Mai (-ten). À l’écrit : der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Mon anniversaire est le quatre avril."
+            }
+          ]
+        },
+        {
+          "title": "vom ... bis zum",
+          "text": "Une période : vom ersten bis zum fünften Mai (du premier au cinq mai).",
+          "examples": [
+            {
+              "de": "Der Urlaub ist vom ersten bis zum fünfzehnten August.",
+              "tr": "Les vacances vont du premier au quinze août."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Ne zaman? am ersten Mai",
+      "points": [
+        {
+          "title": "der dritte Mai, ama am dritten Mai",
+          "text": "Hangi tarih: Heute ist der dritte Mai (-te). Ne zaman: am dritten Mai (-ten). Yazıda: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Doğum günüm 4 Nisan’da."
+            }
+          ]
+        },
+        {
+          "title": "vom ... bis zum",
+          "text": "Süre: vom ersten bis zum fünften Mai (1 Mayıs’tan 5 Mayıs’a kadar).",
+          "examples": [
+            {
+              "de": "Der Urlaub ist vom ersten bis zum fünfzehnten August.",
+              "tr": "Tatil 1 ile 15 Ağustos arasında."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Când? am ersten Mai",
+      "points": [
+        {
+          "title": "der dritte Mai, dar am dritten Mai",
+          "text": "Ce dată: Heute ist der dritte Mai (-te). Când: am dritten Mai (-ten). În scris: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Ziua mea e pe patru aprilie."
+            }
+          ]
+        },
+        {
+          "title": "vom ... bis zum",
+          "text": "Un interval: vom ersten bis zum fünften Mai (de la întâi până pe cinci mai).",
+          "examples": [
+            {
+              "de": "Der Urlaub ist vom ersten bis zum fünfzehnten August.",
+              "tr": "Concediul e de la întâi până pe cincisprezece august."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qachon? am ersten Mai",
+      "points": [
+        {
+          "title": "der dritte Mai, lekin am dritten Mai",
+          "text": "Qaysi sana: Heute ist der dritte Mai (-te). Qachon: am dritten Mai (-ten). Yozuvda: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Tug'ilgan kunim 4-aprelda."
+            }
+          ]
+        },
+        {
+          "title": "vom ... bis zum",
+          "text": "Muddat: vom ersten bis zum fünften Mai (1-maydan 5-maygacha).",
+          "examples": [
+            {
+              "de": "Der Urlaub ist vom ersten bis zum fünfzehnten August.",
+              "tr": "Ta'til 1-avgustdan 15-avgustgacha."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कब? am ersten Mai",
+      "points": [
+        {
+          "title": "der dritte Mai, लेकिन am dritten Mai",
+          "text": "कौन-सी तारीख: Heute ist der dritte Mai (-te)। कब: am dritten Mai (-ten)। लिखने में: der 3. Mai।",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "मेरा जन्मदिन चार अप्रैल को है।"
+            }
+          ]
+        },
+        {
+          "title": "vom ... bis zum",
+          "text": "अवधि: vom ersten bis zum fünften Mai (पहली से पाँच मई तक)।",
+          "examples": [
+            {
+              "de": "Der Urlaub ist vom ersten bis zum fünfzehnten August.",
+              "tr": "छुट्टी पहली से पंद्रह अगस्त तक है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "متى؟ am ersten Mai",
+      "points": [
+        {
+          "title": "der dritte Mai لكن am dritten Mai",
+          "text": "أي تاريخ: Heute ist der dritte Mai (-te). ومتى: am dritten Mai (-ten). وكتابةً: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "عيد ميلادي في الرابع من أبريل."
+            }
+          ]
+        },
+        {
+          "title": "vom ... bis zum",
+          "text": "المدة: vom ersten bis zum fünften Mai (من الأول حتى الخامس من مايو).",
+          "examples": [
+            {
+              "de": "Der Urlaub ist vom ersten bis zum fünfzehnten August.",
+              "tr": "الإجازة من الأول حتى الخامس عشر من أغسطس."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "calendar-valley-five": {
+    "ru": {
+      "title": "Который час: официально",
+      "points": [
+        {
+          "title": "um + время, без um для длительности",
+          "text": "Когда: um acht Uhr. Сколько длится, без um: zwei Stunden, fünf Minuten.",
+          "examples": [
+            {
+              "de": "Der Zug fährt um vierzehn Uhr zwanzig ab.",
+              "tr": "Поезд отправляется в 14:20."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Котра година: офіційно",
+      "points": [
+        {
+          "title": "um + час, без um для тривалості",
+          "text": "Коли: um acht Uhr. Скільки триває, без um: zwei Stunden, fünf Minuten.",
+          "examples": [
+            {
+              "de": "Der Zug fährt um vierzehn Uhr zwanzig ab.",
+              "tr": "Потяг вирушає о 14:20."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Telling the time: official",
+      "points": [
+        {
+          "title": "um + time, no um for duration",
+          "text": "When: um acht Uhr. How long, no um: zwei Stunden, fünf Minuten.",
+          "examples": [
+            {
+              "de": "Der Zug fährt um vierzehn Uhr zwanzig ab.",
+              "tr": "The train leaves at 14:20."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Która godzina: oficjalnie",
+      "points": [
+        {
+          "title": "um + godzina, bez um przy czasie trwania",
+          "text": "Kiedy: um acht Uhr. Jak długo, bez um: zwei Stunden, fünf Minuten.",
+          "examples": [
+            {
+              "de": "Der Zug fährt um vierzehn Uhr zwanzig ab.",
+              "tr": "Pociąg odjeżdża o 14:20."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "La hora: oficial",
+      "points": [
+        {
+          "title": "um + hora, sin um para la duración",
+          "text": "Cuándo: um acht Uhr. Cuánto dura, sin um: zwei Stunden, fünf Minuten.",
+          "examples": [
+            {
+              "de": "Der Zug fährt um vierzehn Uhr zwanzig ab.",
+              "tr": "El tren sale a las 14:20."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "L’heure : officielle",
+      "points": [
+        {
+          "title": "um + heure, sans um pour la durée",
+          "text": "Quand : um acht Uhr. Combien de temps, sans um : zwei Stunden, fünf Minuten.",
+          "examples": [
+            {
+              "de": "Der Zug fährt um vierzehn Uhr zwanzig ab.",
+              "tr": "Le train part à 14 h 20."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Saat: resmî",
+      "points": [
+        {
+          "title": "Saat için um, süre için um yok",
+          "text": "Ne zaman: um acht Uhr. Ne kadar sürer, um yok: zwei Stunden, fünf Minuten.",
+          "examples": [
+            {
+              "de": "Der Zug fährt um vierzehn Uhr zwanzig ab.",
+              "tr": "Tren 14.20’de kalkıyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Ora: oficial",
+      "points": [
+        {
+          "title": "um + oră, fără um pentru durată",
+          "text": "Când: um acht Uhr. Cât durează, fără um: zwei Stunden, fünf Minuten.",
+          "examples": [
+            {
+              "de": "Der Zug fährt um vierzehn Uhr zwanzig ab.",
+              "tr": "Trenul pleacă la 14:20."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Soat: rasmiy",
+      "points": [
+        {
+          "title": "um + vaqt, davomiylik uchun um yo'q",
+          "text": "Qachon: um acht Uhr. Qancha davom etadi, um siz: zwei Stunden, fünf Minuten.",
+          "examples": [
+            {
+              "de": "Der Zug fährt um vierzehn Uhr zwanzig ab.",
+              "tr": "Poyezd 14:20 da jo'naydi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "समय: औपचारिक",
+      "points": [
+        {
+          "title": "um + समय, अवधि के लिए um नहीं",
+          "text": "कब: um acht Uhr। कितनी देर, बिना um: zwei Stunden, fünf Minuten।",
+          "examples": [
+            {
+              "de": "Der Zug fährt um vierzehn Uhr zwanzig ab.",
+              "tr": "ट्रेन 14:20 पर चलती है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الوقت: رسمياً",
+      "points": [
+        {
+          "title": "um + الساعة، وبدون um للمدة",
+          "text": "متى: um acht Uhr. وكم يستغرق بدون um: zwei Stunden، fünf Minuten.",
+          "examples": [
+            {
+              "de": "Der Zug fährt um vierzehn Uhr zwanzig ab.",
+              "tr": "ينطلق القطار في 14:20."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "calendar-valley-six": {
+    "ru": {
+      "title": "Половина четвёртого: halb vier",
+      "points": [
+        {
+          "title": "halb vier = 3:30",
+          "text": "В разговоре: Viertel nach drei = 3:15, halb vier = 3:30 (половина четвёртого), Viertel vor vier = 3:45. Официально: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Будильник звонит в половине седьмого."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Пів на четверту: halb vier",
+      "points": [
+        {
+          "title": "halb vier = 3:30",
+          "text": "У розмові: Viertel nach drei = 3:15, halb vier = 3:30 (пів на четверту), Viertel vor vier = 3:45. Офіційно: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Будильник дзвонить о пів на сьому."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Half past three: halb vier",
+      "points": [
+        {
+          "title": "halb vier = 3:30",
+          "text": "Spoken: Viertel nach drei = 3:15, halb vier = 3:30 (literally \"half to four\"), Viertel vor vier = 3:45. Official: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "The alarm goes off at half past six."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Wpół do czwartej: halb vier",
+      "points": [
+        {
+          "title": "halb vier = 3:30",
+          "text": "W mowie: Viertel nach drei = 3:15, halb vier = 3:30 (wpół do czwartej), Viertel vor vier = 3:45. Oficjalnie: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Budzik dzwoni o wpół do siódmej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Las tres y media: halb vier",
+      "points": [
+        {
+          "title": "halb vier = 3:30",
+          "text": "Hablado: Viertel nach drei = 3:15, halb vier = 3:30 (literalmente \"media hacia las cuatro\"), Viertel vor vier = 3:45. Oficial: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "El despertador suena a las seis y media."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Trois heures et demie : halb vier",
+      "points": [
+        {
+          "title": "halb vier = 3:30",
+          "text": "À l’oral : Viertel nach drei = 3 h 15, halb vier = 3 h 30 (la demie avant quatre), Viertel vor vier = 3 h 45. Officiel : 14 h 20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Le réveil sonne à six heures et demie."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Üç buçuk: halb vier",
+      "points": [
+        {
+          "title": "halb vier = 3:30",
+          "text": "Konuşmada: Viertel nach drei = 3:15, halb vier = 3:30 (dörde yarım var), Viertel vor vier = 3:45. Resmî: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Çalar saat altı buçukta çalıyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Trei și jumătate: halb vier",
+      "points": [
+        {
+          "title": "halb vier = 3:30",
+          "text": "Vorbit: Viertel nach drei = 3:15, halb vier = 3:30 (jumătate spre patru), Viertel vor vier = 3:45. Oficial: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Ceasul sună la șase și jumătate."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Uch yarim: halb vier",
+      "points": [
+        {
+          "title": "halb vier = 3:30",
+          "text": "Og'zaki: Viertel nach drei = 3:15, halb vier = 3:30 (to'rtga yarim), Viertel vor vier = 3:45. Rasmiy: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Budilnik olti yarimda jiringlaydi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "साढ़े तीन: halb vier",
+      "points": [
+        {
+          "title": "halb vier = 3:30",
+          "text": "बोलचाल में: Viertel nach drei = 3:15, halb vier = 3:30 (साढ़े तीन), Viertel vor vier = 3:45। औपचारिक: 14:20 = vierzehn Uhr zwanzig।",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "अलार्म साढ़े छह बजे बजता है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الثالثة والنصف: halb vier",
+      "points": [
+        {
+          "title": "halb vier = 3:30",
+          "text": "في الكلام: Viertel nach drei = 3:15، halb vier = 3:30 (النصف قبل الرابعة)، Viertel vor vier = 3:45. ورسمياً: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "يرن المنبه في السادسة والنصف."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "calendar-valley-seven": {
+    "ru": {
+      "title": "Практика: запись к врачу",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Сначала когда, потом что: Am Mittwoch um zehn habe ich einen Termin. Глагол сразу после времени.",
+          "examples": [
+            {
+              "de": "Haben Sie am Mittwoch um halb zehn Zeit?",
+              "tr": "У вас есть время в среду в половине десятого?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: запис до лікаря",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Спочатку коли, потім що: Am Mittwoch um zehn habe ich einen Termin. Дієслово одразу після часу.",
+          "examples": [
+            {
+              "de": "Haben Sie am Mittwoch um halb zehn Zeit?",
+              "tr": "У вас є час у середу о пів на десяту?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: a doctor’s appointment",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "First when, then what: Am Mittwoch um zehn habe ich einen Termin. The verb comes right after the time.",
+          "examples": [
+            {
+              "de": "Haben Sie am Mittwoch um halb zehn Zeit?",
+              "tr": "Are you free on Wednesday at half past nine?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: wizyta u lekarza",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Najpierw kiedy, potem co: Am Mittwoch um zehn habe ich einen Termin. Czasownik zaraz po czasie.",
+          "examples": [
+            {
+              "de": "Haben Sie am Mittwoch um halb zehn Zeit?",
+              "tr": "Czy ma pan czas w środę o wpół do dziesiątej?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: cita médica",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Primero cuándo, luego qué: Am Mittwoch um zehn habe ich einen Termin. El verbo justo después del tiempo.",
+          "examples": [
+            {
+              "de": "Haben Sie am Mittwoch um halb zehn Zeit?",
+              "tr": "¿Tiene tiempo el miércoles a las nueve y media?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : rendez-vous chez le médecin",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "D’abord quand, puis quoi : Am Mittwoch um zehn habe ich einen Termin. Le verbe juste après le temps.",
+          "examples": [
+            {
+              "de": "Haben Sie am Mittwoch um halb zehn Zeit?",
+              "tr": "Vous êtes libre mercredi à neuf heures et demie ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: doktor randevusu",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Önce ne zaman, sonra ne: Am Mittwoch um zehn habe ich einen Termin. Fiil zamandan hemen sonra.",
+          "examples": [
+            {
+              "de": "Haben Sie am Mittwoch um halb zehn Zeit?",
+              "tr": "Çarşamba dokuz buçukta vaktiniz var mı?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: programare la medic",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Întâi când, apoi ce: Am Mittwoch um zehn habe ich einen Termin. Verbul imediat după timp.",
+          "examples": [
+            {
+              "de": "Haben Sie am Mittwoch um halb zehn Zeit?",
+              "tr": "Aveți timp miercuri la nouă și jumătate?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: shifokorga yozilish",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Avval qachon, keyin nima: Am Mittwoch um zehn habe ich einen Termin. Fe'l vaqtdan keyin darhol.",
+          "examples": [
+            {
+              "de": "Haben Sie am Mittwoch um halb zehn Zeit?",
+              "tr": "Chorshanba kuni to'qqiz yarimda vaqtingiz bormi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: डॉक्टर की अपॉइंटमेंट",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "पहले कब, फिर क्या: Am Mittwoch um zehn habe ich einen Termin। क्रिया समय के ठीक बाद।",
+          "examples": [
+            {
+              "de": "Haben Sie am Mittwoch um halb zehn Zeit?",
+              "tr": "क्या आपके पास बुधवार साढ़े नौ बजे समय है?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: موعد عند الطبيب",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "أولاً متى ثم ماذا: Am Mittwoch um zehn habe ich einen Termin. والفعل بعد الزمن مباشرة.",
+          "examples": [
+            {
+              "de": "Haben Sie am Mittwoch um halb zehn Zeit?",
+              "tr": "هل عندك وقت يوم الأربعاء في التاسعة والنصف؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "calendar-valley-eight": {
+    "ru": {
+      "title": "Практика: расписание поездов",
+      "points": [
+        {
+          "title": "halb vier = 3:30",
+          "text": "В разговоре: Viertel nach drei = 3:15, halb vier = 3:30 (половина четвёртого), Viertel vor vier = 3:45. Официально: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Будильник звонит в половине седьмого."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: розклад потягів",
+      "points": [
+        {
+          "title": "halb vier = 3:30",
+          "text": "У розмові: Viertel nach drei = 3:15, halb vier = 3:30 (пів на четверту), Viertel vor vier = 3:45. Офіційно: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Будильник дзвонить о пів на сьому."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: train timetable",
+      "points": [
+        {
+          "title": "halb vier = 3:30",
+          "text": "Spoken: Viertel nach drei = 3:15, halb vier = 3:30 (literally \"half to four\"), Viertel vor vier = 3:45. Official: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "The alarm goes off at half past six."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: rozkład pociągów",
+      "points": [
+        {
+          "title": "halb vier = 3:30",
+          "text": "W mowie: Viertel nach drei = 3:15, halb vier = 3:30 (wpół do czwartej), Viertel vor vier = 3:45. Oficjalnie: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Budzik dzwoni o wpół do siódmej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: horario de trenes",
+      "points": [
+        {
+          "title": "halb vier = 3:30",
+          "text": "Hablado: Viertel nach drei = 3:15, halb vier = 3:30 (literalmente \"media hacia las cuatro\"), Viertel vor vier = 3:45. Oficial: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "El despertador suena a las seis y media."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : horaires des trains",
+      "points": [
+        {
+          "title": "halb vier = 3:30",
+          "text": "À l’oral : Viertel nach drei = 3 h 15, halb vier = 3 h 30 (la demie avant quatre), Viertel vor vier = 3 h 45. Officiel : 14 h 20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Le réveil sonne à six heures et demie."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: tren tarifesi",
+      "points": [
+        {
+          "title": "halb vier = 3:30",
+          "text": "Konuşmada: Viertel nach drei = 3:15, halb vier = 3:30 (dörde yarım var), Viertel vor vier = 3:45. Resmî: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Çalar saat altı buçukta çalıyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: mersul trenurilor",
+      "points": [
+        {
+          "title": "halb vier = 3:30",
+          "text": "Vorbit: Viertel nach drei = 3:15, halb vier = 3:30 (jumătate spre patru), Viertel vor vier = 3:45. Oficial: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Ceasul sună la șase și jumătate."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: poyezdlar jadvali",
+      "points": [
+        {
+          "title": "halb vier = 3:30",
+          "text": "Og'zaki: Viertel nach drei = 3:15, halb vier = 3:30 (to'rtga yarim), Viertel vor vier = 3:45. Rasmiy: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Budilnik olti yarimda jiringlaydi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: ट्रेन समय-सारणी",
+      "points": [
+        {
+          "title": "halb vier = 3:30",
+          "text": "बोलचाल में: Viertel nach drei = 3:15, halb vier = 3:30 (साढ़े तीन), Viertel vor vier = 3:45। औपचारिक: 14:20 = vierzehn Uhr zwanzig।",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "अलार्म साढ़े छह बजे बजता है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: جدول القطارات",
+      "points": [
+        {
+          "title": "halb vier = 3:30",
+          "text": "في الكلام: Viertel nach drei = 3:15، halb vier = 3:30 (النصف قبل الرابعة)، Viertel vor vier = 3:45. ورسمياً: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "يرن المنبه في السادسة والنصف."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "calendar-valley-nine": {
+    "ru": {
+      "title": "Повторение: даты и время",
+      "points": [
+        {
+          "title": "До 19: -te, с 20: -ste",
+          "text": "Порядковые: vier → vierte, zwanzig → zwanzigste. Особые: erste, dritte, siebte, achte. Окончание как у прилагательного: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Мы живём на третьем этаже."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "Это его двадцатый день рождения."
+            }
+          ]
+        },
+        {
+          "title": "der dritte Mai, но am dritten Mai",
+          "text": "Какое число: Heute ist der dritte Mai (-te). Когда: am dritten Mai (-ten). На письме: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "У меня день рождения четвёртого апреля."
+            }
+          ]
+        },
+        {
+          "title": "halb vier = 3:30",
+          "text": "В разговоре: Viertel nach drei = 3:15, halb vier = 3:30 (половина четвёртого), Viertel vor vier = 3:45. Официально: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Будильник звонит в половине седьмого."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: дати й час",
+      "points": [
+        {
+          "title": "До 19: -te, з 20: -ste",
+          "text": "Порядкові: vier → vierte, zwanzig → zwanzigste. Особливі: erste, dritte, siebte, achte. Закінчення як у прикметника: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Ми живемо на третьому поверсі."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "Це його двадцятий день народження."
+            }
+          ]
+        },
+        {
+          "title": "der dritte Mai, але am dritten Mai",
+          "text": "Яке число: Heute ist der dritte Mai (-te). Коли: am dritten Mai (-ten). На письмі: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "У мене день народження четвертого квітня."
+            }
+          ]
+        },
+        {
+          "title": "halb vier = 3:30",
+          "text": "У розмові: Viertel nach drei = 3:15, halb vier = 3:30 (пів на четверту), Viertel vor vier = 3:45. Офіційно: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Будильник дзвонить о пів на сьому."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: dates and time",
+      "points": [
+        {
+          "title": "Up to 19: -te, from 20: -ste",
+          "text": "Ordinals: vier → vierte, zwanzig → zwanzigste. Special: erste, dritte, siebte, achte. Endings like an adjective: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "We live on the third floor."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "It’s his twentieth birthday."
+            }
+          ]
+        },
+        {
+          "title": "der dritte Mai, but am dritten Mai",
+          "text": "What date: Heute ist der dritte Mai (-te). When: am dritten Mai (-ten). Written: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "My birthday is on the fourth of April."
+            }
+          ]
+        },
+        {
+          "title": "halb vier = 3:30",
+          "text": "Spoken: Viertel nach drei = 3:15, halb vier = 3:30 (literally \"half to four\"), Viertel vor vier = 3:45. Official: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "The alarm goes off at half past six."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: daty i godziny",
+      "points": [
+        {
+          "title": "Do 19: -te, od 20: -ste",
+          "text": "Liczebniki porządkowe: vier → vierte, zwanzig → zwanzigste. Szczególne: erste, dritte, siebte, achte. Końcówka jak w przymiotniku: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Mieszkamy na trzecim piętrze."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "To jego dwudzieste urodziny."
+            }
+          ]
+        },
+        {
+          "title": "der dritte Mai, ale am dritten Mai",
+          "text": "Jaka data: Heute ist der dritte Mai (-te). Kiedy: am dritten Mai (-ten). Na piśmie: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Mam urodziny czwartego kwietnia."
+            }
+          ]
+        },
+        {
+          "title": "halb vier = 3:30",
+          "text": "W mowie: Viertel nach drei = 3:15, halb vier = 3:30 (wpół do czwartej), Viertel vor vier = 3:45. Oficjalnie: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Budzik dzwoni o wpół do siódmej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: fechas y horas",
+      "points": [
+        {
+          "title": "Hasta 19: -te, desde 20: -ste",
+          "text": "Ordinales: vier → vierte, zwanzig → zwanzigste. Especiales: erste, dritte, siebte, achte. Terminación como un adjetivo: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Vivimos en el tercer piso."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "Es su vigésimo cumpleaños."
+            }
+          ]
+        },
+        {
+          "title": "der dritte Mai, pero am dritten Mai",
+          "text": "Qué fecha: Heute ist der dritte Mai (-te). Cuándo: am dritten Mai (-ten). Por escrito: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Mi cumpleaños es el cuatro de abril."
+            }
+          ]
+        },
+        {
+          "title": "halb vier = 3:30",
+          "text": "Hablado: Viertel nach drei = 3:15, halb vier = 3:30 (literalmente \"media hacia las cuatro\"), Viertel vor vier = 3:45. Oficial: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "El despertador suena a las seis y media."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : dates et heures",
+      "points": [
+        {
+          "title": "Jusqu’à 19 : -te, à partir de 20 : -ste",
+          "text": "Ordinaux : vier → vierte, zwanzig → zwanzigste. Particuliers : erste, dritte, siebte, achte. Terminaison comme un adjectif : der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Nous habitons au troisième étage."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "C’est son vingtième anniversaire."
+            }
+          ]
+        },
+        {
+          "title": "der dritte Mai, mais am dritten Mai",
+          "text": "Quelle date : Heute ist der dritte Mai (-te). Quand : am dritten Mai (-ten). À l’écrit : der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Mon anniversaire est le quatre avril."
+            }
+          ]
+        },
+        {
+          "title": "halb vier = 3:30",
+          "text": "À l’oral : Viertel nach drei = 3 h 15, halb vier = 3 h 30 (la demie avant quatre), Viertel vor vier = 3 h 45. Officiel : 14 h 20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Le réveil sonne à six heures et demie."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: tarih ve saat",
+      "points": [
+        {
+          "title": "19’a kadar -te, 20’den itibaren -ste",
+          "text": "Sıra sayıları: vier → vierte, zwanzig → zwanzigste. Özel: erste, dritte, siebte, achte. Sıfat gibi ek alır: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Üçüncü katta oturuyoruz."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "Bu onun yirminci doğum günü."
+            }
+          ]
+        },
+        {
+          "title": "der dritte Mai, ama am dritten Mai",
+          "text": "Hangi tarih: Heute ist der dritte Mai (-te). Ne zaman: am dritten Mai (-ten). Yazıda: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Doğum günüm 4 Nisan’da."
+            }
+          ]
+        },
+        {
+          "title": "halb vier = 3:30",
+          "text": "Konuşmada: Viertel nach drei = 3:15, halb vier = 3:30 (dörde yarım var), Viertel vor vier = 3:45. Resmî: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Çalar saat altı buçukta çalıyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: date și ore",
+      "points": [
+        {
+          "title": "Până la 19: -te, de la 20: -ste",
+          "text": "Ordinale: vier → vierte, zwanzig → zwanzigste. Speciale: erste, dritte, siebte, achte. Terminația ca la adjectiv: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Locuim la etajul trei."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "E a douăzecea lui aniversare."
+            }
+          ]
+        },
+        {
+          "title": "der dritte Mai, dar am dritten Mai",
+          "text": "Ce dată: Heute ist der dritte Mai (-te). Când: am dritten Mai (-ten). În scris: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Ziua mea e pe patru aprilie."
+            }
+          ]
+        },
+        {
+          "title": "halb vier = 3:30",
+          "text": "Vorbit: Viertel nach drei = 3:15, halb vier = 3:30 (jumătate spre patru), Viertel vor vier = 3:45. Oficial: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Ceasul sună la șase și jumătate."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: sana va vaqt",
+      "points": [
+        {
+          "title": "19 gacha -te, 20 dan -ste",
+          "text": "Tartib sonlar: vier → vierte, zwanzig → zwanzigste. Alohida: erste, dritte, siebte, achte. Sifat kabi qo'shimcha oladi: der erste Tag, im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "Biz uchinchi qavatda yashaymiz."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "Bu uning yigirmanchi tug'ilgan kuni."
+            }
+          ]
+        },
+        {
+          "title": "der dritte Mai, lekin am dritten Mai",
+          "text": "Qaysi sana: Heute ist der dritte Mai (-te). Qachon: am dritten Mai (-ten). Yozuvda: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Tug'ilgan kunim 4-aprelda."
+            }
+          ]
+        },
+        {
+          "title": "halb vier = 3:30",
+          "text": "Og'zaki: Viertel nach drei = 3:15, halb vier = 3:30 (to'rtga yarim), Viertel vor vier = 3:45. Rasmiy: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Budilnik olti yarimda jiringlaydi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: तारीख और समय",
+      "points": [
+        {
+          "title": "19 तक -te, 20 से -ste",
+          "text": "क्रमसूचक: vier → vierte, zwanzig → zwanzigste। खास: erste, dritte, siebte, achte। अंत विशेषण जैसा: der erste Tag, im dritten Stock।",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "हम तीसरी मंज़िल पर रहते हैं।"
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "यह उसका बीसवाँ जन्मदिन है।"
+            }
+          ]
+        },
+        {
+          "title": "der dritte Mai, लेकिन am dritten Mai",
+          "text": "कौन-सी तारीख: Heute ist der dritte Mai (-te)। कब: am dritten Mai (-ten)। लिखने में: der 3. Mai।",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "मेरा जन्मदिन चार अप्रैल को है।"
+            }
+          ]
+        },
+        {
+          "title": "halb vier = 3:30",
+          "text": "बोलचाल में: Viertel nach drei = 3:15, halb vier = 3:30 (साढ़े तीन), Viertel vor vier = 3:45। औपचारिक: 14:20 = vierzehn Uhr zwanzig।",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "अलार्म साढ़े छह बजे बजता है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: التواريخ والوقت",
+      "points": [
+        {
+          "title": "حتى 19: -te، ومن 20: -ste",
+          "text": "الأعداد الترتيبية: vier → vierte، zwanzig → zwanzigste. وخاصة: erste، dritte، siebte، achte. ونهايتها كالصفة: der erste Tag، im dritten Stock.",
+          "examples": [
+            {
+              "de": "Wir wohnen im dritten Stock.",
+              "tr": "نسكن في الطابق الثالث."
+            },
+            {
+              "de": "Das ist sein zwanzigster Geburtstag.",
+              "tr": "هذا عيد ميلاده العشرون."
+            }
+          ]
+        },
+        {
+          "title": "der dritte Mai لكن am dritten Mai",
+          "text": "أي تاريخ: Heute ist der dritte Mai (-te). ومتى: am dritten Mai (-ten). وكتابةً: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "عيد ميلادي في الرابع من أبريل."
+            }
+          ]
+        },
+        {
+          "title": "halb vier = 3:30",
+          "text": "في الكلام: Viertel nach drei = 3:15، halb vier = 3:30 (النصف قبل الرابعة)، Viertel vor vier = 3:45. ورسمياً: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "يرن المنبه في السادسة والنصف."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "calendar-valley-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "der dritte Mai, но am dritten Mai",
+          "text": "Какое число: Heute ist der dritte Mai (-te). Когда: am dritten Mai (-ten). На письме: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "У меня день рождения четвёртого апреля."
+            }
+          ]
+        },
+        {
+          "title": "halb vier = 3:30",
+          "text": "В разговоре: Viertel nach drei = 3:15, halb vier = 3:30 (половина четвёртого), Viertel vor vier = 3:45. Официально: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Будильник звонит в половине седьмого."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "der dritte Mai, але am dritten Mai",
+          "text": "Яке число: Heute ist der dritte Mai (-te). Коли: am dritten Mai (-ten). На письмі: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "У мене день народження четвертого квітня."
+            }
+          ]
+        },
+        {
+          "title": "halb vier = 3:30",
+          "text": "У розмові: Viertel nach drei = 3:15, halb vier = 3:30 (пів на четверту), Viertel vor vier = 3:45. Офіційно: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Будильник дзвонить о пів на сьому."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "der dritte Mai, but am dritten Mai",
+          "text": "What date: Heute ist der dritte Mai (-te). When: am dritten Mai (-ten). Written: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "My birthday is on the fourth of April."
+            }
+          ]
+        },
+        {
+          "title": "halb vier = 3:30",
+          "text": "Spoken: Viertel nach drei = 3:15, halb vier = 3:30 (literally \"half to four\"), Viertel vor vier = 3:45. Official: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "The alarm goes off at half past six."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "der dritte Mai, ale am dritten Mai",
+          "text": "Jaka data: Heute ist der dritte Mai (-te). Kiedy: am dritten Mai (-ten). Na piśmie: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Mam urodziny czwartego kwietnia."
+            }
+          ]
+        },
+        {
+          "title": "halb vier = 3:30",
+          "text": "W mowie: Viertel nach drei = 3:15, halb vier = 3:30 (wpół do czwartej), Viertel vor vier = 3:45. Oficjalnie: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Budzik dzwoni o wpół do siódmej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "der dritte Mai, pero am dritten Mai",
+          "text": "Qué fecha: Heute ist der dritte Mai (-te). Cuándo: am dritten Mai (-ten). Por escrito: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Mi cumpleaños es el cuatro de abril."
+            }
+          ]
+        },
+        {
+          "title": "halb vier = 3:30",
+          "text": "Hablado: Viertel nach drei = 3:15, halb vier = 3:30 (literalmente \"media hacia las cuatro\"), Viertel vor vier = 3:45. Oficial: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "El despertador suena a las seis y media."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "der dritte Mai, mais am dritten Mai",
+          "text": "Quelle date : Heute ist der dritte Mai (-te). Quand : am dritten Mai (-ten). À l’écrit : der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Mon anniversaire est le quatre avril."
+            }
+          ]
+        },
+        {
+          "title": "halb vier = 3:30",
+          "text": "À l’oral : Viertel nach drei = 3 h 15, halb vier = 3 h 30 (la demie avant quatre), Viertel vor vier = 3 h 45. Officiel : 14 h 20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Le réveil sonne à six heures et demie."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "der dritte Mai, ama am dritten Mai",
+          "text": "Hangi tarih: Heute ist der dritte Mai (-te). Ne zaman: am dritten Mai (-ten). Yazıda: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Doğum günüm 4 Nisan’da."
+            }
+          ]
+        },
+        {
+          "title": "halb vier = 3:30",
+          "text": "Konuşmada: Viertel nach drei = 3:15, halb vier = 3:30 (dörde yarım var), Viertel vor vier = 3:45. Resmî: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Çalar saat altı buçukta çalıyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "der dritte Mai, dar am dritten Mai",
+          "text": "Ce dată: Heute ist der dritte Mai (-te). Când: am dritten Mai (-ten). În scris: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Ziua mea e pe patru aprilie."
+            }
+          ]
+        },
+        {
+          "title": "halb vier = 3:30",
+          "text": "Vorbit: Viertel nach drei = 3:15, halb vier = 3:30 (jumătate spre patru), Viertel vor vier = 3:45. Oficial: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Ceasul sună la șase și jumătate."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "der dritte Mai, lekin am dritten Mai",
+          "text": "Qaysi sana: Heute ist der dritte Mai (-te). Qachon: am dritten Mai (-ten). Yozuvda: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "Tug'ilgan kunim 4-aprelda."
+            }
+          ]
+        },
+        {
+          "title": "halb vier = 3:30",
+          "text": "Og'zaki: Viertel nach drei = 3:15, halb vier = 3:30 (to'rtga yarim), Viertel vor vier = 3:45. Rasmiy: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "Budilnik olti yarimda jiringlaydi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "der dritte Mai, लेकिन am dritten Mai",
+          "text": "कौन-सी तारीख: Heute ist der dritte Mai (-te)। कब: am dritten Mai (-ten)। लिखने में: der 3. Mai।",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "मेरा जन्मदिन चार अप्रैल को है।"
+            }
+          ]
+        },
+        {
+          "title": "halb vier = 3:30",
+          "text": "बोलचाल में: Viertel nach drei = 3:15, halb vier = 3:30 (साढ़े तीन), Viertel vor vier = 3:45। औपचारिक: 14:20 = vierzehn Uhr zwanzig।",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "अलार्म साढ़े छह बजे बजता है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "der dritte Mai لكن am dritten Mai",
+          "text": "أي تاريخ: Heute ist der dritte Mai (-te). ومتى: am dritten Mai (-ten). وكتابةً: der 3. Mai.",
+          "examples": [
+            {
+              "de": "Ich habe am vierten April Geburtstag.",
+              "tr": "عيد ميلادي في الرابع من أبريل."
+            }
+          ]
+        },
+        {
+          "title": "halb vier = 3:30",
+          "text": "في الكلام: Viertel nach drei = 3:15، halb vier = 3:30 (النصف قبل الرابعة)، Viertel vor vier = 3:45. ورسمياً: 14:20 = vierzehn Uhr zwanzig.",
+          "examples": [
+            {
+              "de": "Der Wecker klingelt um halb sieben.",
+              "tr": "يرن المنبه في السادسة والنصف."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

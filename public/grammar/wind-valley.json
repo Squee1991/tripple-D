@@ -1,0 +1,2503 @@
+{
+  "city-1": {
+    "ru": {
+      "title": "Город: учим слова с артиклем",
+      "points": [
+        {
+          "title": "Род не угадать",
+          "text": "Род у мест не совпадает с русским: der Platz (площадь), die Brücke (мост). Учи слово сразу с артиклем.",
+          "examples": [
+            {
+              "de": "die Straße, der Park, der Platz",
+              "tr": "улица, парк, площадь"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Місто: вчимо слова з артиклем",
+      "points": [
+        {
+          "title": "Рід не вгадати",
+          "text": "Рід місць не збігається з українським: der Platz (площа), die Brücke (міст). Вчи слово одразу з артиклем.",
+          "examples": [
+            {
+              "de": "die Straße, der Park, der Platz",
+              "tr": "вулиця, парк, площа"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The city: learn words with the article",
+      "points": [
+        {
+          "title": "You can’t guess the gender",
+          "text": "Place words have their own gender: der Platz (square), die Brücke (bridge). Learn each word with its article.",
+          "examples": [
+            {
+              "de": "die Straße, der Park, der Platz",
+              "tr": "the street, the park, the square"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Miasto: słowa z rodzajnikiem",
+      "points": [
+        {
+          "title": "Rodzaju nie zgadniesz",
+          "text": "Rodzaj miejsc nie zgadza się z polskim: der Platz (plac), die Brücke (most). Ucz się słowa od razu z rodzajnikiem.",
+          "examples": [
+            {
+              "de": "die Straße, der Park, der Platz",
+              "tr": "ulica, park, plac"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "La ciudad: palabras con artículo",
+      "points": [
+        {
+          "title": "El género no se adivina",
+          "text": "Los lugares tienen su género: der Platz (la plaza), die Brücke (el puente). Aprende cada palabra con su artículo.",
+          "examples": [
+            {
+              "de": "die Straße, der Park, der Platz",
+              "tr": "la calle, el parque, la plaza"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "La ville : les mots avec l’article",
+      "points": [
+        {
+          "title": "Le genre ne se devine pas",
+          "text": "Les lieux ont leur genre : der Platz (la place), die Brücke (le pont). Apprends chaque mot avec son article.",
+          "examples": [
+            {
+              "de": "die Straße, der Park, der Platz",
+              "tr": "la rue, le parc, la place"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Şehir: kelimeleri artikeliyle öğren",
+      "points": [
+        {
+          "title": "Cinsiyet tahmin edilmez",
+          "text": "Yer adlarının kendi cinsiyeti var: der Platz (meydan), die Brücke (köprü). Kelimeyi artikeliyle öğren.",
+          "examples": [
+            {
+              "de": "die Straße, der Park, der Platz",
+              "tr": "cadde, park, meydan"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Orașul: cuvinte cu articol",
+      "points": [
+        {
+          "title": "Genul nu se ghicește",
+          "text": "Locurile au genul lor: der Platz (piața), die Brücke (podul). Învață cuvântul direct cu articolul.",
+          "examples": [
+            {
+              "de": "die Straße, der Park, der Platz",
+              "tr": "strada, parcul, piața"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Shahar: so'zlarni artikl bilan o'rganamiz",
+      "points": [
+        {
+          "title": "Rodni taxmin qilib bo‘lmaydi",
+          "text": "Joy nomlarining o'z rodi bor: der Platz (maydon), die Brücke (ko'prik). So'zni artikli bilan o'rgan.",
+          "examples": [
+            {
+              "de": "die Straße, der Park, der Platz",
+              "tr": "ko'cha, park, maydon"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "शहर: शब्द आर्टिकल के साथ",
+      "points": [
+        {
+          "title": "लिंग का अंदाज़ा नहीं लगता",
+          "text": "जगहों का अपना लिंग होता है: der Platz (चौक), die Brücke (पुल)। हर शब्द आर्टिकल के साथ सीखो।",
+          "examples": [
+            {
+              "de": "die Straße, der Park, der Platz",
+              "tr": "सड़क, पार्क, चौक"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المدينة: الكلمات مع الأداة",
+      "points": [
+        {
+          "title": "لا يمكن تخمين الجنس",
+          "text": "لأسماء الأماكن جنسها الخاص: der Platz (الساحة)، die Brücke (الجسر). احفظ كل كلمة مع أداتها.",
+          "examples": [
+            {
+              "de": "die Straße, der Park, der Platz",
+              "tr": "الشارع، الحديقة، الساحة"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "city-2": {
+    "ru": {
+      "title": "Транспорт",
+      "points": [
+        {
+          "title": "Билет в Akkusativ",
+          "text": "Новых правил нет. das Ticket не меняется: Ich kaufe ein Ticket.",
+          "examples": [
+            {
+              "de": "Ich kaufe ein Ticket.",
+              "tr": "Я покупаю билет."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Транспорт",
+      "points": [
+        {
+          "title": "Квиток в Akkusativ",
+          "text": "Нових правил немає. das Ticket не змінюється: Ich kaufe ein Ticket.",
+          "examples": [
+            {
+              "de": "Ich kaufe ein Ticket.",
+              "tr": "Я купую квиток."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Transport",
+      "points": [
+        {
+          "title": "The ticket in the accusative",
+          "text": "No new rules. das Ticket doesn’t change: Ich kaufe ein Ticket.",
+          "examples": [
+            {
+              "de": "Ich kaufe ein Ticket.",
+              "tr": "I’m buying a ticket."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Transport",
+      "points": [
+        {
+          "title": "Bilet w Akkusativ",
+          "text": "Bez nowych reguł. das Ticket się nie zmienia: Ich kaufe ein Ticket.",
+          "examples": [
+            {
+              "de": "Ich kaufe ein Ticket.",
+              "tr": "Kupuję bilet."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "El transporte",
+      "points": [
+        {
+          "title": "El billete en acusativo",
+          "text": "Sin reglas nuevas. das Ticket no cambia: Ich kaufe ein Ticket.",
+          "examples": [
+            {
+              "de": "Ich kaufe ein Ticket.",
+              "tr": "Compro un billete."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les transports",
+      "points": [
+        {
+          "title": "Le billet à l’accusatif",
+          "text": "Pas de nouvelle règle. das Ticket ne change pas : Ich kaufe ein Ticket.",
+          "examples": [
+            {
+              "de": "Ich kaufe ein Ticket.",
+              "tr": "J’achète un billet."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Ulaşım",
+      "points": [
+        {
+          "title": "Akkusativ’de bilet",
+          "text": "Yeni kural yok. das Ticket değişmez: Ich kaufe ein Ticket.",
+          "examples": [
+            {
+              "de": "Ich kaufe ein Ticket.",
+              "tr": "Bilet alıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Transportul",
+      "points": [
+        {
+          "title": "Biletul la acuzativ",
+          "text": "Fără reguli noi. das Ticket nu se schimbă: Ich kaufe ein Ticket.",
+          "examples": [
+            {
+              "de": "Ich kaufe ein Ticket.",
+              "tr": "Cumpăr un bilet."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Transport",
+      "points": [
+        {
+          "title": "Chipta Akkusativda",
+          "text": "Yangi qoida yo'q. das Ticket o'zgarmaydi: Ich kaufe ein Ticket.",
+          "examples": [
+            {
+              "de": "Ich kaufe ein Ticket.",
+              "tr": "Chipta sotib olaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "परिवहन",
+      "points": [
+        {
+          "title": "Akkusativ में टिकट",
+          "text": "कोई नया नियम नहीं। das Ticket नहीं बदलता: Ich kaufe ein Ticket।",
+          "examples": [
+            {
+              "de": "Ich kaufe ein Ticket.",
+              "tr": "मैं टिकट खरीद रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المواصلات",
+      "points": [
+        {
+          "title": "التذكرة في حالة المفعول",
+          "text": "لا قواعد جديدة. das Ticket لا تتغير: Ich kaufe ein Ticket.",
+          "examples": [
+            {
+              "de": "Ich kaufe ein Ticket.",
+              "tr": "أشتري تذكرة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "city-3": {
+    "ru": {
+      "title": "Магазины: слова на -ei и -e",
+      "points": [
+        {
+          "title": "Подсказка для рода",
+          "text": "Слова на -ei всегда die: die Bäckerei. Слова на -e чаще всего тоже die: die Apotheke.",
+          "examples": [
+            {
+              "de": "die Bäckerei, die Apotheke, die Bank, der Supermarkt",
+              "tr": "пекарня, аптека, банк, супермаркет"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Магазини: слова на -ei та -e",
+      "points": [
+        {
+          "title": "Підказка для роду",
+          "text": "Слова на -ei завжди die: die Bäckerei. Слова на -e найчастіше теж die: die Apotheke.",
+          "examples": [
+            {
+              "de": "die Bäckerei, die Apotheke, die Bank, der Supermarkt",
+              "tr": "пекарня, аптека, банк, супермаркет"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Shops: words ending in -ei and -e",
+      "points": [
+        {
+          "title": "A gender tip",
+          "text": "Words ending in -ei are always die: die Bäckerei. Words ending in -e are usually die too: die Apotheke.",
+          "examples": [
+            {
+              "de": "die Bäckerei, die Apotheke, die Bank, der Supermarkt",
+              "tr": "bakery, pharmacy, bank, supermarket"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sklepy: słowa na -ei i -e",
+      "points": [
+        {
+          "title": "Podpowiedź do rodzaju",
+          "text": "Słowa na -ei są zawsze die: die Bäckerei. Słowa na -e najczęściej też die: die Apotheke.",
+          "examples": [
+            {
+              "de": "die Bäckerei, die Apotheke, die Bank, der Supermarkt",
+              "tr": "piekarnia, apteka, bank, supermarket"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Tiendas: palabras en -ei y -e",
+      "points": [
+        {
+          "title": "Truco para el género",
+          "text": "Las palabras en -ei siempre son die: die Bäckerei. Las palabras en -e suelen ser die: die Apotheke.",
+          "examples": [
+            {
+              "de": "die Bäckerei, die Apotheke, die Bank, der Supermarkt",
+              "tr": "panadería, farmacia, banco, supermercado"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les magasins : mots en -ei et -e",
+      "points": [
+        {
+          "title": "Astuce pour le genre",
+          "text": "Les mots en -ei sont toujours die : die Bäckerei. Les mots en -e sont le plus souvent die : die Apotheke.",
+          "examples": [
+            {
+              "de": "die Bäckerei, die Apotheke, die Bank, der Supermarkt",
+              "tr": "boulangerie, pharmacie, banque, supermarché"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Dükkânlar: -ei ve -e ile biten kelimeler",
+      "points": [
+        {
+          "title": "Cinsiyet ipucu",
+          "text": "-ei ile biten kelimeler her zaman die: die Bäckerei. -e ile bitenler de çoğunlukla die: die Apotheke.",
+          "examples": [
+            {
+              "de": "die Bäckerei, die Apotheke, die Bank, der Supermarkt",
+              "tr": "fırın, eczane, banka, süpermarket"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Magazine: cuvinte în -ei și -e",
+      "points": [
+        {
+          "title": "Truc pentru gen",
+          "text": "Cuvintele în -ei sunt mereu die: die Bäckerei. Cele în -e sunt de obicei tot die: die Apotheke.",
+          "examples": [
+            {
+              "de": "die Bäckerei, die Apotheke, die Bank, der Supermarkt",
+              "tr": "brutărie, farmacie, bancă, supermarket"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Do'konlar: -ei va -e bilan tugaydigan so'zlar",
+      "points": [
+        {
+          "title": "Rod uchun maslahat",
+          "text": "-ei bilan tugagan so'zlar doim die: die Bäckerei. -e bilan tugaganlar ham ko'pincha die: die Apotheke.",
+          "examples": [
+            {
+              "de": "die Bäckerei, die Apotheke, die Bank, der Supermarkt",
+              "tr": "novvoyxona, dorixona, bank, supermarket"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दुकानें: -ei और -e वाले शब्द",
+      "points": [
+        {
+          "title": "लिंग का संकेत",
+          "text": "-ei वाले शब्द हमेशा die: die Bäckerei। -e वाले शब्द भी ज़्यादातर die: die Apotheke।",
+          "examples": [
+            {
+              "de": "die Bäckerei, die Apotheke, die Bank, der Supermarkt",
+              "tr": "बेकरी, दवाखाना, बैंक, सुपरमार्केट"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المتاجر: الكلمات المنتهية بـ -ei و-e",
+      "points": [
+        {
+          "title": "تلميح للجنس",
+          "text": "الكلمات المنتهية بـ -ei دائماً die: die Bäckerei. والمنتهية بـ -e غالباً die أيضاً: die Apotheke.",
+          "examples": [
+            {
+              "de": "die Bäckerei, die Apotheke, die Bank, der Supermarkt",
+              "tr": "المخبز، الصيدلية، البنك، السوبرماركت"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "city-4": {
+    "ru": {
+      "title": "На улице: слова на -ung",
+      "points": [
+        {
+          "title": "-ung всегда die",
+          "text": "Слова на -ung всегда женского рода: die Kreuzung, die Wohnung, die Zeitung.",
+          "examples": [
+            {
+              "de": "die Haltestelle, die Kreuzung, die Ampel",
+              "tr": "остановка, перекрёсток, светофор"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "На вулиці: слова на -ung",
+      "points": [
+        {
+          "title": "-ung завжди die",
+          "text": "Слова на -ung завжди жіночого роду: die Kreuzung, die Wohnung, die Zeitung.",
+          "examples": [
+            {
+              "de": "die Haltestelle, die Kreuzung, die Ampel",
+              "tr": "зупинка, перехрестя, світлофор"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "In the street: words ending in -ung",
+      "points": [
+        {
+          "title": "-ung is always die",
+          "text": "Words ending in -ung are always feminine: die Kreuzung, die Wohnung, die Zeitung.",
+          "examples": [
+            {
+              "de": "die Haltestelle, die Kreuzung, die Ampel",
+              "tr": "the stop, the crossroads, the traffic light"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Na ulicy: słowa na -ung",
+      "points": [
+        {
+          "title": "-ung zawsze die",
+          "text": "Słowa na -ung są zawsze rodzaju żeńskiego: die Kreuzung, die Wohnung, die Zeitung.",
+          "examples": [
+            {
+              "de": "die Haltestelle, die Kreuzung, die Ampel",
+              "tr": "przystanek, skrzyżowanie, sygnalizacja"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "En la calle: palabras en -ung",
+      "points": [
+        {
+          "title": "-ung siempre die",
+          "text": "Las palabras en -ung siempre son femeninas: die Kreuzung, die Wohnung, die Zeitung.",
+          "examples": [
+            {
+              "de": "die Haltestelle, die Kreuzung, die Ampel",
+              "tr": "la parada, el cruce, el semáforo"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Dans la rue : mots en -ung",
+      "points": [
+        {
+          "title": "-ung toujours die",
+          "text": "Les mots en -ung sont toujours féminins : die Kreuzung, die Wohnung, die Zeitung.",
+          "examples": [
+            {
+              "de": "die Haltestelle, die Kreuzung, die Ampel",
+              "tr": "l’arrêt, le carrefour, le feu"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sokakta: -ung ile biten kelimeler",
+      "points": [
+        {
+          "title": "-ung her zaman die",
+          "text": "-ung ile biten kelimeler her zaman dişildir: die Kreuzung, die Wohnung, die Zeitung.",
+          "examples": [
+            {
+              "de": "die Haltestelle, die Kreuzung, die Ampel",
+              "tr": "durak, kavşak, trafik lambası"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Pe stradă: cuvinte în -ung",
+      "points": [
+        {
+          "title": "-ung mereu die",
+          "text": "Cuvintele în -ung sunt mereu feminine: die Kreuzung, die Wohnung, die Zeitung.",
+          "examples": [
+            {
+              "de": "die Haltestelle, die Kreuzung, die Ampel",
+              "tr": "stația, intersecția, semaforul"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ko'chada: -ung bilan tugaydigan so'zlar",
+      "points": [
+        {
+          "title": "-ung doim die",
+          "text": "-ung bilan tugagan so'zlar doim ayol rodida: die Kreuzung, die Wohnung, die Zeitung.",
+          "examples": [
+            {
+              "de": "die Haltestelle, die Kreuzung, die Ampel",
+              "tr": "bekat, chorraha, svetofor"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "सड़क पर: -ung वाले शब्द",
+      "points": [
+        {
+          "title": "-ung हमेशा die",
+          "text": "-ung वाले शब्द हमेशा स्त्रीलिंग: die Kreuzung, die Wohnung, die Zeitung।",
+          "examples": [
+            {
+              "de": "die Haltestelle, die Kreuzung, die Ampel",
+              "tr": "स्टॉप, चौराहा, ट्रैफ़िक लाइट"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "في الشارع: الكلمات المنتهية بـ -ung",
+      "points": [
+        {
+          "title": "-ung دائماً die",
+          "text": "الكلمات المنتهية بـ -ung مؤنثة دائماً: die Kreuzung، die Wohnung، die Zeitung.",
+          "examples": [
+            {
+              "de": "die Haltestelle, die Kreuzung, die Ampel",
+              "tr": "الموقف، التقاطع، إشارة المرور"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "city-5": {
+    "ru": {
+      "title": "Кафе и отдых: международные слова",
+      "points": [
+        {
+          "title": "Часто das",
+          "text": "Международные слова часто среднего рода: das Restaurant, das Café, das Hotel, das Museum.",
+          "examples": [
+            {
+              "de": "Hier ist das Café und dort ist das Museum.",
+              "tr": "Здесь кафе, а там музей."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Кафе й відпочинок: міжнародні слова",
+      "points": [
+        {
+          "title": "Часто das",
+          "text": "Міжнародні слова часто середнього роду: das Restaurant, das Café, das Hotel, das Museum.",
+          "examples": [
+            {
+              "de": "Hier ist das Café und dort ist das Museum.",
+              "tr": "Тут кафе, а там музей."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Cafés and leisure: international words",
+      "points": [
+        {
+          "title": "Often das",
+          "text": "International words are often neuter: das Restaurant, das Café, das Hotel, das Museum.",
+          "examples": [
+            {
+              "de": "Hier ist das Café und dort ist das Museum.",
+              "tr": "Here is the café and there is the museum."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Kawiarnia i odpoczynek: słowa międzynarodowe",
+      "points": [
+        {
+          "title": "Często das",
+          "text": "Słowa międzynarodowe są często rodzaju nijakiego: das Restaurant, das Café, das Hotel, das Museum.",
+          "examples": [
+            {
+              "de": "Hier ist das Café und dort ist das Museum.",
+              "tr": "Tu jest kawiarnia, a tam muzeum."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Café y ocio: palabras internacionales",
+      "points": [
+        {
+          "title": "A menudo das",
+          "text": "Las palabras internacionales suelen ser neutras: das Restaurant, das Café, das Hotel, das Museum.",
+          "examples": [
+            {
+              "de": "Hier ist das Café und dort ist das Museum.",
+              "tr": "Aquí está el café y allí el museo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Café et loisirs : mots internationaux",
+      "points": [
+        {
+          "title": "Souvent das",
+          "text": "Les mots internationaux sont souvent neutres : das Restaurant, das Café, das Hotel, das Museum.",
+          "examples": [
+            {
+              "de": "Hier ist das Café und dort ist das Museum.",
+              "tr": "Ici, c’est le café et là-bas, le musée."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kafe ve eğlence: uluslararası kelimeler",
+      "points": [
+        {
+          "title": "Çoğu zaman das",
+          "text": "Uluslararası kelimeler çoğunlukla nötrdür: das Restaurant, das Café, das Hotel, das Museum.",
+          "examples": [
+            {
+              "de": "Hier ist das Café und dort ist das Museum.",
+              "tr": "Burada kafe, orada müze var."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cafenea și timp liber: cuvinte internaționale",
+      "points": [
+        {
+          "title": "Des das",
+          "text": "Cuvintele internaționale sunt des neutre: das Restaurant, das Café, das Hotel, das Museum.",
+          "examples": [
+            {
+              "de": "Hier ist das Café und dort ist das Museum.",
+              "tr": "Aici e cafeneaua, iar acolo muzeul."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kafe va dam olish: xalqaro so'zlar",
+      "points": [
+        {
+          "title": "Ko'pincha das",
+          "text": "Xalqaro so'zlar ko'pincha o'rta rodda: das Restaurant, das Café, das Hotel, das Museum.",
+          "examples": [
+            {
+              "de": "Hier ist das Café und dort ist das Museum.",
+              "tr": "Bu yerda kafe, u yerda muzey."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कैफ़े और आराम: अंतरराष्ट्रीय शब्द",
+      "points": [
+        {
+          "title": "अक्सर das",
+          "text": "अंतरराष्ट्रीय शब्द अक्सर नपुंसकलिंग होते हैं: das Restaurant, das Café, das Hotel, das Museum।",
+          "examples": [
+            {
+              "de": "Hier ist das Café und dort ist das Museum.",
+              "tr": "यहाँ कैफ़े है और वहाँ संग्रहालय।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المقهى والترفيه: كلمات عالمية",
+      "points": [
+        {
+          "title": "غالباً das",
+          "text": "الكلمات العالمية غالباً محايدة: das Restaurant، das Café، das Hotel، das Museum.",
+          "examples": [
+            {
+              "de": "Hier ist das Café und dort ist das Museum.",
+              "tr": "هنا المقهى وهناك المتحف."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "city-6": {
+    "ru": {
+      "title": "Соединяем места: und и sind",
+      "points": [
+        {
+          "title": "Два места: sind",
+          "text": "Если мест два и больше, глагол sind, а не ist.",
+          "examples": [
+            {
+              "de": "Der Bahnhof und die U-Bahn sind hier.",
+              "tr": "Вокзал и метро здесь."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Поєднуємо місця: und і sind",
+      "points": [
+        {
+          "title": "Два місця: sind",
+          "text": "Якщо місць два й більше, дієслово sind, а не ist.",
+          "examples": [
+            {
+              "de": "Der Bahnhof und die U-Bahn sind hier.",
+              "tr": "Вокзал і метро тут."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Joining places: und and sind",
+      "points": [
+        {
+          "title": "Two places: sind",
+          "text": "With two or more places, the verb is sind, not ist.",
+          "examples": [
+            {
+              "de": "Der Bahnhof und die U-Bahn sind hier.",
+              "tr": "The station and the underground are here."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Łączymy miejsca: und i sind",
+      "points": [
+        {
+          "title": "Dwa miejsca: sind",
+          "text": "Gdy miejsc jest dwa lub więcej, czasownik to sind, a nie ist.",
+          "examples": [
+            {
+              "de": "Der Bahnhof und die U-Bahn sind hier.",
+              "tr": "Dworzec i metro są tutaj."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Unimos lugares: und y sind",
+      "points": [
+        {
+          "title": "Dos lugares: sind",
+          "text": "Con dos o más lugares, el verbo es sind, no ist.",
+          "examples": [
+            {
+              "de": "Der Bahnhof und die U-Bahn sind hier.",
+              "tr": "La estación y el metro están aquí."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Relier les lieux : und et sind",
+      "points": [
+        {
+          "title": "Deux lieux : sind",
+          "text": "Avec deux lieux ou plus, le verbe est sind, pas ist.",
+          "examples": [
+            {
+              "de": "Der Bahnhof und die U-Bahn sind hier.",
+              "tr": "La gare et le métro sont ici."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yerleri birleştirmek: und ve sind",
+      "points": [
+        {
+          "title": "İki yer: sind",
+          "text": "İki ya da daha fazla yer varsa fiil ist değil sind olur.",
+          "examples": [
+            {
+              "de": "Der Bahnhof und die U-Bahn sind hier.",
+              "tr": "İstasyon ve metro burada."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Legăm locurile: und și sind",
+      "points": [
+        {
+          "title": "Două locuri: sind",
+          "text": "Cu două sau mai multe locuri, verbul e sind, nu ist.",
+          "examples": [
+            {
+              "de": "Der Bahnhof und die U-Bahn sind hier.",
+              "tr": "Gara și metroul sunt aici."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Joylarni bog‘laymiz: und va sind",
+      "points": [
+        {
+          "title": "Ikki joy: sind",
+          "text": "Ikki va undan ko'p joy bo'lsa, fe'l ist emas, sind.",
+          "examples": [
+            {
+              "de": "Der Bahnhof und die U-Bahn sind hier.",
+              "tr": "Vokzal va metro shu yerda."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "जगहों को जोड़ना: und और sind",
+      "points": [
+        {
+          "title": "दो जगहें: sind",
+          "text": "दो या ज़्यादा जगहें हों तो क्रिया ist नहीं, sind होती है।",
+          "examples": [
+            {
+              "de": "Der Bahnhof und die U-Bahn sind hier.",
+              "tr": "स्टेशन और मेट्रो यहाँ हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ربط الأماكن: und وsind",
+      "points": [
+        {
+          "title": "مكانان: sind",
+          "text": "إذا كان هناك مكانان أو أكثر يكون الفعل sind وليس ist.",
+          "examples": [
+            {
+              "de": "Der Bahnhof und die U-Bahn sind hier.",
+              "tr": "المحطة والمترو هنا."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "city-7": {
+    "ru": {
+      "title": "Направления: links, rechts, geradeaus",
+      "points": [
+        {
+          "title": "Слова не меняются",
+          "text": "links (слева), rechts (справа), geradeaus (прямо), gegenüber (напротив) стоят после ist и не меняются.",
+          "examples": [
+            {
+              "de": "Die Bank ist links.",
+              "tr": "Банк слева."
+            },
+            {
+              "de": "Das Hotel ist gegenüber dem Museum.",
+              "tr": "Отель напротив музея."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Напрямки: links, rechts, geradeaus",
+      "points": [
+        {
+          "title": "Слова не змінюються",
+          "text": "links (ліворуч), rechts (праворуч), geradeaus (прямо), gegenüber (навпроти) стоять після ist і не змінюються.",
+          "examples": [
+            {
+              "de": "Die Bank ist links.",
+              "tr": "Банк ліворуч."
+            },
+            {
+              "de": "Das Hotel ist gegenüber dem Museum.",
+              "tr": "Готель навпроти музею."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Directions: links, rechts, geradeaus",
+      "points": [
+        {
+          "title": "These words don’t change",
+          "text": "links (left), rechts (right), geradeaus (straight on), gegenüber (opposite) come after ist and don’t change.",
+          "examples": [
+            {
+              "de": "Die Bank ist links.",
+              "tr": "The bank is on the left."
+            },
+            {
+              "de": "Das Hotel ist gegenüber dem Museum.",
+              "tr": "The hotel is opposite the museum."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Kierunki: links, rechts, geradeaus",
+      "points": [
+        {
+          "title": "Te słowa się nie zmieniają",
+          "text": "links (po lewej), rechts (po prawej), geradeaus (prosto), gegenüber (naprzeciwko) stoją po ist i się nie zmieniają.",
+          "examples": [
+            {
+              "de": "Die Bank ist links.",
+              "tr": "Bank jest po lewej."
+            },
+            {
+              "de": "Das Hotel ist gegenüber dem Museum.",
+              "tr": "Hotel jest naprzeciwko muzeum."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Direcciones: links, rechts, geradeaus",
+      "points": [
+        {
+          "title": "No cambian",
+          "text": "links (a la izquierda), rechts (a la derecha), geradeaus (recto), gegenüber (enfrente) van tras ist y no cambian.",
+          "examples": [
+            {
+              "de": "Die Bank ist links.",
+              "tr": "El banco está a la izquierda."
+            },
+            {
+              "de": "Das Hotel ist gegenüber dem Museum.",
+              "tr": "El hotel está enfrente del museo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Directions : links, rechts, geradeaus",
+      "points": [
+        {
+          "title": "Ces mots ne changent pas",
+          "text": "links (à gauche), rechts (à droite), geradeaus (tout droit), gegenüber (en face) viennent après ist et ne changent pas.",
+          "examples": [
+            {
+              "de": "Die Bank ist links.",
+              "tr": "La banque est à gauche."
+            },
+            {
+              "de": "Das Hotel ist gegenüber dem Museum.",
+              "tr": "L’hôtel est en face du musée."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yönler: links, rechts, geradeaus",
+      "points": [
+        {
+          "title": "Değişmezler",
+          "text": "links (solda), rechts (sağda), geradeaus (düz), gegenüber (karşıda) ist’ten sonra gelir ve değişmez.",
+          "examples": [
+            {
+              "de": "Die Bank ist links.",
+              "tr": "Banka solda."
+            },
+            {
+              "de": "Das Hotel ist gegenüber dem Museum.",
+              "tr": "Otel müzenin karşısında."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Direcții: links, rechts, geradeaus",
+      "points": [
+        {
+          "title": "Nu se schimbă",
+          "text": "links (în stânga), rechts (în dreapta), geradeaus (înainte), gegenüber (vizavi) vin după ist și nu se schimbă.",
+          "examples": [
+            {
+              "de": "Die Bank ist links.",
+              "tr": "Banca e în stânga."
+            },
+            {
+              "de": "Das Hotel ist gegenüber dem Museum.",
+              "tr": "Hotelul e vizavi de muzeu."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Yo'nalishlar: links, rechts, geradeaus",
+      "points": [
+        {
+          "title": "O'zgarmaydi",
+          "text": "links (chapda), rechts (o'ngda), geradeaus (to'g'riga), gegenüber (qarshisida) ist dan keyin keladi va o'zgarmaydi.",
+          "examples": [
+            {
+              "de": "Die Bank ist links.",
+              "tr": "Bank chapda."
+            },
+            {
+              "de": "Das Hotel ist gegenüber dem Museum.",
+              "tr": "Mehmonxona muzey qarshisida."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दिशाएँ: links, rechts, geradeaus",
+      "points": [
+        {
+          "title": "ये शब्द नहीं बदलते",
+          "text": "links (बाएँ), rechts (दाएँ), geradeaus (सीधे), gegenüber (सामने) ist के बाद आते हैं और नहीं बदलते।",
+          "examples": [
+            {
+              "de": "Die Bank ist links.",
+              "tr": "बैंक बाईं ओर है।"
+            },
+            {
+              "de": "Das Hotel ist gegenüber dem Museum.",
+              "tr": "होटल संग्रहालय के सामने है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاتجاهات: links وrechts وgeradeaus",
+      "points": [
+        {
+          "title": "لا تتغير",
+          "text": "links (يساراً)، rechts (يميناً)، geradeaus (إلى الأمام)، gegenüber (مقابل) تأتي بعد ist ولا تتغير.",
+          "examples": [
+            {
+              "de": "Die Bank ist links.",
+              "tr": "البنك على اليسار."
+            },
+            {
+              "de": "Das Hotel ist gegenüber dem Museum.",
+              "tr": "الفندق مقابل المتحف."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "city-8": {
+    "ru": {
+      "title": "Где находится: neben, vor, hinter, zwischen",
+      "points": [
+        {
+          "title": "Что значат предлоги",
+          "text": "neben (рядом с), vor (перед), hinter (за), zwischen (между).",
+          "examples": [
+            {
+              "de": "Das Café ist vor dem Museum.",
+              "tr": "Кафе перед музеем."
+            },
+            {
+              "de": "Die U-Bahn ist hinter dem Bahnhof.",
+              "tr": "Метро за вокзалом."
+            }
+          ]
+        },
+        {
+          "title": "dem и der после предлога",
+          "text": "После neben, vor, hinter, zwischen, gegenüber отвечаем на вопрос Wo? (где?): der и das становятся dem, die становится der.",
+          "examples": [
+            {
+              "de": "Die Bank ist neben dem Park.",
+              "tr": "Банк рядом с парком."
+            },
+            {
+              "de": "Die Apotheke ist zwischen der Bank und der Bäckerei.",
+              "tr": "Аптека между банком и пекарней."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Де знаходиться: neben, vor, hinter, zwischen",
+      "points": [
+        {
+          "title": "Що означають прийменники",
+          "text": "neben (поруч із), vor (перед), hinter (за), zwischen (між).",
+          "examples": [
+            {
+              "de": "Das Café ist vor dem Museum.",
+              "tr": "Кафе перед музеєм."
+            },
+            {
+              "de": "Die U-Bahn ist hinter dem Bahnhof.",
+              "tr": "Метро за вокзалом."
+            }
+          ]
+        },
+        {
+          "title": "dem і der після прийменника",
+          "text": "Після neben, vor, hinter, zwischen, gegenüber відповідаємо на питання Wo? (де?): der і das стають dem, die стає der.",
+          "examples": [
+            {
+              "de": "Die Bank ist neben dem Park.",
+              "tr": "Банк поруч із парком."
+            },
+            {
+              "de": "Die Apotheke ist zwischen der Bank und der Bäckerei.",
+              "tr": "Аптека між банком і пекарнею."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Where is it: neben, vor, hinter, zwischen",
+      "points": [
+        {
+          "title": "What the prepositions mean",
+          "text": "neben (next to), vor (in front of), hinter (behind), zwischen (between).",
+          "examples": [
+            {
+              "de": "Das Café ist vor dem Museum.",
+              "tr": "The café is in front of the museum."
+            },
+            {
+              "de": "Die U-Bahn ist hinter dem Bahnhof.",
+              "tr": "The underground is behind the station."
+            }
+          ]
+        },
+        {
+          "title": "dem and der after a preposition",
+          "text": "After neben, vor, hinter, zwischen, gegenüber (answering Wo?, where?): der and das become dem, die becomes der.",
+          "examples": [
+            {
+              "de": "Die Bank ist neben dem Park.",
+              "tr": "The bank is next to the park."
+            },
+            {
+              "de": "Die Apotheke ist zwischen der Bank und der Bäckerei.",
+              "tr": "The pharmacy is between the bank and the bakery."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Gdzie jest: neben, vor, hinter, zwischen",
+      "points": [
+        {
+          "title": "Co znaczą przyimki",
+          "text": "neben (obok), vor (przed), hinter (za), zwischen (między).",
+          "examples": [
+            {
+              "de": "Das Café ist vor dem Museum.",
+              "tr": "Kawiarnia jest przed muzeum."
+            },
+            {
+              "de": "Die U-Bahn ist hinter dem Bahnhof.",
+              "tr": "Metro jest za dworcem."
+            }
+          ]
+        },
+        {
+          "title": "dem i der po przyimku",
+          "text": "Po neben, vor, hinter, zwischen, gegenüber odpowiadamy na pytanie Wo? (gdzie?): der i das zmieniają się w dem, die w der.",
+          "examples": [
+            {
+              "de": "Die Bank ist neben dem Park.",
+              "tr": "Bank jest obok parku."
+            },
+            {
+              "de": "Die Apotheke ist zwischen der Bank und der Bäckerei.",
+              "tr": "Apteka jest między bankiem a piekarnią."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Dónde está: neben, vor, hinter, zwischen",
+      "points": [
+        {
+          "title": "Qué significan",
+          "text": "neben (al lado de), vor (delante de), hinter (detrás de), zwischen (entre).",
+          "examples": [
+            {
+              "de": "Das Café ist vor dem Museum.",
+              "tr": "El café está delante del museo."
+            },
+            {
+              "de": "Die U-Bahn ist hinter dem Bahnhof.",
+              "tr": "El metro está detrás de la estación."
+            }
+          ]
+        },
+        {
+          "title": "dem y der tras la preposición",
+          "text": "Después de neben, vor, hinter, zwischen, gegenüber (respondiendo a Wo?, ¿dónde?): der y das pasan a dem, die pasa a der.",
+          "examples": [
+            {
+              "de": "Die Bank ist neben dem Park.",
+              "tr": "El banco está al lado del parque."
+            },
+            {
+              "de": "Die Apotheke ist zwischen der Bank und der Bäckerei.",
+              "tr": "La farmacia está entre el banco y la panadería."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Où est-ce : neben, vor, hinter, zwischen",
+      "points": [
+        {
+          "title": "Ce que veulent dire les prépositions",
+          "text": "neben (à côté de), vor (devant), hinter (derrière), zwischen (entre).",
+          "examples": [
+            {
+              "de": "Das Café ist vor dem Museum.",
+              "tr": "Le café est devant le musée."
+            },
+            {
+              "de": "Die U-Bahn ist hinter dem Bahnhof.",
+              "tr": "Le métro est derrière la gare."
+            }
+          ]
+        },
+        {
+          "title": "dem et der après la préposition",
+          "text": "Après neben, vor, hinter, zwischen, gegenüber (réponse à Wo ?, où ?) : der et das deviennent dem, die devient der.",
+          "examples": [
+            {
+              "de": "Die Bank ist neben dem Park.",
+              "tr": "La banque est à côté du parc."
+            },
+            {
+              "de": "Die Apotheke ist zwischen der Bank und der Bäckerei.",
+              "tr": "La pharmacie est entre la banque et la boulangerie."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Nerede: neben, vor, hinter, zwischen",
+      "points": [
+        {
+          "title": "Edatların anlamı",
+          "text": "neben (yanında), vor (önünde), hinter (arkasında), zwischen (arasında).",
+          "examples": [
+            {
+              "de": "Das Café ist vor dem Museum.",
+              "tr": "Kafe müzenin önünde."
+            },
+            {
+              "de": "Die U-Bahn ist hinter dem Bahnhof.",
+              "tr": "Metro istasyonun arkasında."
+            }
+          ]
+        },
+        {
+          "title": "Edattan sonra dem ve der",
+          "text": "neben, vor, hinter, zwischen, gegenüber’den sonra (Wo?, nerede? sorusu): der ve das dem olur, die der olur.",
+          "examples": [
+            {
+              "de": "Die Bank ist neben dem Park.",
+              "tr": "Banka parkın yanında."
+            },
+            {
+              "de": "Die Apotheke ist zwischen der Bank und der Bäckerei.",
+              "tr": "Eczane banka ile fırının arasında."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Unde se află: neben, vor, hinter, zwischen",
+      "points": [
+        {
+          "title": "Ce înseamnă prepozițiile",
+          "text": "neben (lângă), vor (în fața), hinter (în spatele), zwischen (între).",
+          "examples": [
+            {
+              "de": "Das Café ist vor dem Museum.",
+              "tr": "Cafeneaua e în fața muzeului."
+            },
+            {
+              "de": "Die U-Bahn ist hinter dem Bahnhof.",
+              "tr": "Metroul e în spatele gării."
+            }
+          ]
+        },
+        {
+          "title": "dem și der după prepoziție",
+          "text": "După neben, vor, hinter, zwischen, gegenüber (răspuns la Wo?, unde?): der și das devin dem, die devine der.",
+          "examples": [
+            {
+              "de": "Die Bank ist neben dem Park.",
+              "tr": "Banca e lângă parc."
+            },
+            {
+              "de": "Die Apotheke ist zwischen der Bank und der Bäckerei.",
+              "tr": "Farmacia e între bancă și brutărie."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qayerda: neben, vor, hinter, zwischen",
+      "points": [
+        {
+          "title": "Ko'makchilar ma'nosi",
+          "text": "neben (yonida), vor (oldida), hinter (orqasida), zwischen (orasida).",
+          "examples": [
+            {
+              "de": "Das Café ist vor dem Museum.",
+              "tr": "Kafe muzey oldida."
+            },
+            {
+              "de": "Die U-Bahn ist hinter dem Bahnhof.",
+              "tr": "Metro vokzal orqasida."
+            }
+          ]
+        },
+        {
+          "title": "Ko'makchidan keyin dem va der",
+          "text": "neben, vor, hinter, zwischen, gegenüber dan keyin (Wo?, qayerda? savoli): der va das dem ga, die der ga aylanadi.",
+          "examples": [
+            {
+              "de": "Die Bank ist neben dem Park.",
+              "tr": "Bank park yonida."
+            },
+            {
+              "de": "Die Apotheke ist zwischen der Bank und der Bäckerei.",
+              "tr": "Dorixona bank va novvoyxona orasida."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कहाँ है: neben, vor, hinter, zwischen",
+      "points": [
+        {
+          "title": "संबंधसूचकों का अर्थ",
+          "text": "neben (बगल में), vor (सामने), hinter (पीछे), zwischen (बीच में)।",
+          "examples": [
+            {
+              "de": "Das Café ist vor dem Museum.",
+              "tr": "कैफ़े संग्रहालय के सामने है।"
+            },
+            {
+              "de": "Die U-Bahn ist hinter dem Bahnhof.",
+              "tr": "मेट्रो स्टेशन के पीछे है।"
+            }
+          ]
+        },
+        {
+          "title": "संबंधसूचक के बाद dem और der",
+          "text": "neben, vor, hinter, zwischen, gegenüber के बाद (Wo?, कहाँ? का जवाब): der और das बनते हैं dem, die बनता है der।",
+          "examples": [
+            {
+              "de": "Die Bank ist neben dem Park.",
+              "tr": "बैंक पार्क के बगल में है।"
+            },
+            {
+              "de": "Die Apotheke ist zwischen der Bank und der Bäckerei.",
+              "tr": "दवाखाना बैंक और बेकरी के बीच है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "أين يقع: neben وvor وhinter وzwischen",
+      "points": [
+        {
+          "title": "معاني الحروف",
+          "text": "neben (بجانب)، vor (أمام)، hinter (خلف)، zwischen (بين).",
+          "examples": [
+            {
+              "de": "Das Café ist vor dem Museum.",
+              "tr": "المقهى أمام المتحف."
+            },
+            {
+              "de": "Die U-Bahn ist hinter dem Bahnhof.",
+              "tr": "المترو خلف المحطة."
+            }
+          ]
+        },
+        {
+          "title": "dem وder بعد حرف الجر",
+          "text": "بعد neben وvor وhinter وzwischen وgegenüber (جواباً عن Wo؟، أين؟): تصبح der وdas ‏dem، وتصبح die ‏der.",
+          "examples": [
+            {
+              "de": "Die Bank ist neben dem Park.",
+              "tr": "البنك بجانب الحديقة."
+            },
+            {
+              "de": "Die Apotheke ist zwischen der Bank und der Bäckerei.",
+              "tr": "الصيدلية بين البنك والمخبز."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "city-9": {
+    "ru": {
+      "title": "Службы в городе",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Krankenhaus = krank (больной) + Haus (дом). Род от последней части: das Haus, значит das Krankenhaus.",
+          "examples": [
+            {
+              "de": "die Post, die Polizei, das Krankenhaus, die Schule",
+              "tr": "почта, полиция, больница, школа"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Служби в місті",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Krankenhaus = krank (хворий) + Haus (будинок). Рід від останньої частини: das Haus, отже das Krankenhaus.",
+          "examples": [
+            {
+              "de": "die Post, die Polizei, das Krankenhaus, die Schule",
+              "tr": "пошта, поліція, лікарня, школа"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "City services",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "Krankenhaus = krank (ill) + Haus (house). The gender comes from the last part: das Haus, so das Krankenhaus.",
+          "examples": [
+            {
+              "de": "die Post, die Polizei, das Krankenhaus, die Schule",
+              "tr": "post office, police, hospital, school"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Usługi w mieście",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Krankenhaus = krank (chory) + Haus (dom). Rodzaj od ostatniej części: das Haus, więc das Krankenhaus.",
+          "examples": [
+            {
+              "de": "die Post, die Polizei, das Krankenhaus, die Schule",
+              "tr": "poczta, policja, szpital, szkoła"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Servicios de la ciudad",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Krankenhaus = krank (enfermo) + Haus (casa). El género viene de la última parte: das Haus, entonces das Krankenhaus.",
+          "examples": [
+            {
+              "de": "die Post, die Polizei, das Krankenhaus, die Schule",
+              "tr": "correos, policía, hospital, escuela"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les services de la ville",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "Krankenhaus = krank (malade) + Haus (maison). Le genre vient de la dernière partie : das Haus, donc das Krankenhaus.",
+          "examples": [
+            {
+              "de": "die Post, die Polizei, das Krankenhaus, die Schule",
+              "tr": "la poste, la police, l’hôpital, l’école"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Şehirdeki hizmetler",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Krankenhaus = krank (hasta) + Haus (ev). Cinsiyet son parçadan gelir: das Haus, yani das Krankenhaus.",
+          "examples": [
+            {
+              "de": "die Post, die Polizei, das Krankenhaus, die Schule",
+              "tr": "postane, polis, hastane, okul"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Servicii în oraș",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Krankenhaus = krank (bolnav) + Haus (casă). Genul vine de la ultima parte: das Haus, deci das Krankenhaus.",
+          "examples": [
+            {
+              "de": "die Post, die Polizei, das Krankenhaus, die Schule",
+              "tr": "poșta, poliția, spitalul, școala"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Shahar xizmatlari",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Krankenhaus = krank (kasal) + Haus (uy). Rod oxirgi qismdan: das Haus, demak das Krankenhaus.",
+          "examples": [
+            {
+              "de": "die Post, die Polizei, das Krankenhaus, die Schule",
+              "tr": "pochta, politsiya, kasalxona, maktab"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "शहर की सेवाएँ",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "Krankenhaus = krank (बीमार) + Haus (घर)। लिंग आखिरी हिस्से से: das Haus, इसलिए das Krankenhaus।",
+          "examples": [
+            {
+              "de": "die Post, die Polizei, das Krankenhaus, die Schule",
+              "tr": "डाकघर, पुलिस, अस्पताल, स्कूल"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "خدمات المدينة",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "Krankenhaus = krank (مريض) + Haus (بيت). الجنس من الجزء الأخير: das Haus، إذن das Krankenhaus.",
+          "examples": [
+            {
+              "de": "die Post, die Polizei, das Krankenhaus, die Schule",
+              "tr": "البريد، الشرطة، المستشفى، المدرسة"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "city-10": {
+    "ru": {
+      "title": "Маршрут по городу",
+      "points": [
+        {
+          "title": "dem и der после предлога",
+          "text": "После neben, vor, hinter, zwischen, gegenüber отвечаем на вопрос Wo? (где?): der и das становятся dem, die становится der.",
+          "examples": [
+            {
+              "de": "Die Bank ist neben dem Park.",
+              "tr": "Банк рядом с парком."
+            },
+            {
+              "de": "Die Apotheke ist zwischen der Bank und der Bäckerei.",
+              "tr": "Аптека между банком и пекарней."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Маршрут містом",
+      "points": [
+        {
+          "title": "dem і der після прийменника",
+          "text": "Після neben, vor, hinter, zwischen, gegenüber відповідаємо на питання Wo? (де?): der і das стають dem, die стає der.",
+          "examples": [
+            {
+              "de": "Die Bank ist neben dem Park.",
+              "tr": "Банк поруч із парком."
+            },
+            {
+              "de": "Die Apotheke ist zwischen der Bank und der Bäckerei.",
+              "tr": "Аптека між банком і пекарнею."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "A route through the city",
+      "points": [
+        {
+          "title": "dem and der after a preposition",
+          "text": "After neben, vor, hinter, zwischen, gegenüber (answering Wo?, where?): der and das become dem, die becomes der.",
+          "examples": [
+            {
+              "de": "Die Bank ist neben dem Park.",
+              "tr": "The bank is next to the park."
+            },
+            {
+              "de": "Die Apotheke ist zwischen der Bank und der Bäckerei.",
+              "tr": "The pharmacy is between the bank and the bakery."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Trasa po mieście",
+      "points": [
+        {
+          "title": "dem i der po przyimku",
+          "text": "Po neben, vor, hinter, zwischen, gegenüber odpowiadamy na pytanie Wo? (gdzie?): der i das zmieniają się w dem, die w der.",
+          "examples": [
+            {
+              "de": "Die Bank ist neben dem Park.",
+              "tr": "Bank jest obok parku."
+            },
+            {
+              "de": "Die Apotheke ist zwischen der Bank und der Bäckerei.",
+              "tr": "Apteka jest między bankiem a piekarnią."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Una ruta por la ciudad",
+      "points": [
+        {
+          "title": "dem y der tras la preposición",
+          "text": "Después de neben, vor, hinter, zwischen, gegenüber (respondiendo a Wo?, ¿dónde?): der y das pasan a dem, die pasa a der.",
+          "examples": [
+            {
+              "de": "Die Bank ist neben dem Park.",
+              "tr": "El banco está al lado del parque."
+            },
+            {
+              "de": "Die Apotheke ist zwischen der Bank und der Bäckerei.",
+              "tr": "La farmacia está entre el banco y la panadería."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Un itinéraire en ville",
+      "points": [
+        {
+          "title": "dem et der après la préposition",
+          "text": "Après neben, vor, hinter, zwischen, gegenüber (réponse à Wo ?, où ?) : der et das deviennent dem, die devient der.",
+          "examples": [
+            {
+              "de": "Die Bank ist neben dem Park.",
+              "tr": "La banque est à côté du parc."
+            },
+            {
+              "de": "Die Apotheke ist zwischen der Bank und der Bäckerei.",
+              "tr": "La pharmacie est entre la banque et la boulangerie."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Şehirde bir rota",
+      "points": [
+        {
+          "title": "Edattan sonra dem ve der",
+          "text": "neben, vor, hinter, zwischen, gegenüber’den sonra (Wo?, nerede? sorusu): der ve das dem olur, die der olur.",
+          "examples": [
+            {
+              "de": "Die Bank ist neben dem Park.",
+              "tr": "Banka parkın yanında."
+            },
+            {
+              "de": "Die Apotheke ist zwischen der Bank und der Bäckerei.",
+              "tr": "Eczane banka ile fırının arasında."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Un traseu prin oraș",
+      "points": [
+        {
+          "title": "dem și der după prepoziție",
+          "text": "După neben, vor, hinter, zwischen, gegenüber (răspuns la Wo?, unde?): der și das devin dem, die devine der.",
+          "examples": [
+            {
+              "de": "Die Bank ist neben dem Park.",
+              "tr": "Banca e lângă parc."
+            },
+            {
+              "de": "Die Apotheke ist zwischen der Bank und der Bäckerei.",
+              "tr": "Farmacia e între bancă și brutărie."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Shahar bo'ylab yo'nalish",
+      "points": [
+        {
+          "title": "Ko'makchidan keyin dem va der",
+          "text": "neben, vor, hinter, zwischen, gegenüber dan keyin (Wo?, qayerda? savoli): der va das dem ga, die der ga aylanadi.",
+          "examples": [
+            {
+              "de": "Die Bank ist neben dem Park.",
+              "tr": "Bank park yonida."
+            },
+            {
+              "de": "Die Apotheke ist zwischen der Bank und der Bäckerei.",
+              "tr": "Dorixona bank va novvoyxona orasida."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "शहर में रास्ता",
+      "points": [
+        {
+          "title": "संबंधसूचक के बाद dem और der",
+          "text": "neben, vor, hinter, zwischen, gegenüber के बाद (Wo?, कहाँ? का जवाब): der और das बनते हैं dem, die बनता है der।",
+          "examples": [
+            {
+              "de": "Die Bank ist neben dem Park.",
+              "tr": "बैंक पार्क के बगल में है।"
+            },
+            {
+              "de": "Die Apotheke ist zwischen der Bank und der Bäckerei.",
+              "tr": "दवाखाना बैंक और बेकरी के बीच है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مسار في المدينة",
+      "points": [
+        {
+          "title": "dem وder بعد حرف الجر",
+          "text": "بعد neben وvor وhinter وzwischen وgegenüber (جواباً عن Wo؟، أين؟): تصبح der وdas ‏dem، وتصبح die ‏der.",
+          "examples": [
+            {
+              "de": "Die Bank ist neben dem Park.",
+              "tr": "البنك بجانب الحديقة."
+            },
+            {
+              "de": "Die Apotheke ist zwischen der Bank und der Bäckerei.",
+              "tr": "الصيدلية بين البنك والمخبز."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "city-11": {
+    "ru": {
+      "title": "Спросить дорогу",
+      "points": [
+        {
+          "title": "Вежливое начало",
+          "text": "Начинаем с Entschuldigung!, потом Wo ist...? Глагол сразу после wo.",
+          "examples": [
+            {
+              "de": "Entschuldigung, wo ist der Park?",
+              "tr": "Извините, где парк?"
+            },
+            {
+              "de": "Das Hotel ist neben der Bank.",
+              "tr": "Отель рядом с банком."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Запитати дорогу",
+      "points": [
+        {
+          "title": "Ввічливий початок",
+          "text": "Починаємо з Entschuldigung!, потім Wo ist...? Дієслово одразу після wo.",
+          "examples": [
+            {
+              "de": "Entschuldigung, wo ist der Park?",
+              "tr": "Перепрошую, де парк?"
+            },
+            {
+              "de": "Das Hotel ist neben der Bank.",
+              "tr": "Готель поруч із банком."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Asking the way",
+      "points": [
+        {
+          "title": "A polite start",
+          "text": "Start with Entschuldigung!, then Wo ist...? The verb comes right after wo.",
+          "examples": [
+            {
+              "de": "Entschuldigung, wo ist der Park?",
+              "tr": "Excuse me, where is the park?"
+            },
+            {
+              "de": "Das Hotel ist neben der Bank.",
+              "tr": "The hotel is next to the bank."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Zapytać o drogę",
+      "points": [
+        {
+          "title": "Grzeczny początek",
+          "text": "Zaczynamy od Entschuldigung!, potem Wo ist...? Czasownik zaraz po wo.",
+          "examples": [
+            {
+              "de": "Entschuldigung, wo ist der Park?",
+              "tr": "Przepraszam, gdzie jest park?"
+            },
+            {
+              "de": "Das Hotel ist neben der Bank.",
+              "tr": "Hotel jest obok banku."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Preguntar el camino",
+      "points": [
+        {
+          "title": "Un comienzo educado",
+          "text": "Empezamos con Entschuldigung!, luego Wo ist...? El verbo va justo después de wo.",
+          "examples": [
+            {
+              "de": "Entschuldigung, wo ist der Park?",
+              "tr": "Perdone, ¿dónde está el parque?"
+            },
+            {
+              "de": "Das Hotel ist neben der Bank.",
+              "tr": "El hotel está al lado del banco."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Demander son chemin",
+      "points": [
+        {
+          "title": "Un début poli",
+          "text": "On commence par Entschuldigung !, puis Wo ist... ? Le verbe vient juste après wo.",
+          "examples": [
+            {
+              "de": "Entschuldigung, wo ist der Park?",
+              "tr": "Excusez-moi, où est le parc ?"
+            },
+            {
+              "de": "Das Hotel ist neben der Bank.",
+              "tr": "L’hôtel est à côté de la banque."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yol sormak",
+      "points": [
+        {
+          "title": "Kibar başlangıç",
+          "text": "Entschuldigung! ile başlarız, sonra Wo ist...? Fiil wo’dan hemen sonra.",
+          "examples": [
+            {
+              "de": "Entschuldigung, wo ist der Park?",
+              "tr": "Affedersiniz, park nerede?"
+            },
+            {
+              "de": "Das Hotel ist neben der Bank.",
+              "tr": "Otel bankanın yanında."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Să întrebi de drum",
+      "points": [
+        {
+          "title": "Un început politicos",
+          "text": "Începem cu Entschuldigung!, apoi Wo ist...? Verbul vine imediat după wo.",
+          "examples": [
+            {
+              "de": "Entschuldigung, wo ist der Park?",
+              "tr": "Scuzați-mă, unde e parcul?"
+            },
+            {
+              "de": "Das Hotel ist neben der Bank.",
+              "tr": "Hotelul e lângă bancă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Yo'l so'rash",
+      "points": [
+        {
+          "title": "Muloyim boshlanish",
+          "text": "Entschuldigung! bilan boshlaymiz, keyin Wo ist...? Fe'l wo dan keyin darhol.",
+          "examples": [
+            {
+              "de": "Entschuldigung, wo ist der Park?",
+              "tr": "Kechirasiz, park qayerda?"
+            },
+            {
+              "de": "Das Hotel ist neben der Bank.",
+              "tr": "Mehmonxona bank yonida."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "रास्ता पूछना",
+      "points": [
+        {
+          "title": "विनम्र शुरुआत",
+          "text": "Entschuldigung! से शुरू करो, फिर Wo ist...? क्रिया wo के ठीक बाद।",
+          "examples": [
+            {
+              "de": "Entschuldigung, wo ist der Park?",
+              "tr": "माफ़ कीजिए, पार्क कहाँ है?"
+            },
+            {
+              "de": "Das Hotel ist neben der Bank.",
+              "tr": "होटल बैंक के बगल में है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "السؤال عن الطريق",
+      "points": [
+        {
+          "title": "بداية مهذبة",
+          "text": "نبدأ بـ Entschuldigung! ثم Wo ist...؟ والفعل مباشرة بعد wo.",
+          "examples": [
+            {
+              "de": "Entschuldigung, wo ist der Park?",
+              "tr": "عذراً، أين الحديقة؟"
+            },
+            {
+              "de": "Das Hotel ist neben der Bank.",
+              "tr": "الفندق بجانب البنك."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "city-12": {
+    "ru": {
+      "title": "Вход и выход",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "der Eingang (вход) и der Ausgang (выход): ein = в, aus = из.",
+          "examples": [
+            {
+              "de": "Wo ist der Ausgang?",
+              "tr": "Где выход?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Вхід і вихід",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "der Eingang (вхід) і der Ausgang (вихід): ein = у, aus = з.",
+          "examples": [
+            {
+              "de": "Wo ist der Ausgang?",
+              "tr": "Де вихід?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Entrance and exit",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "der Eingang (entrance) and der Ausgang (exit): ein = in, aus = out.",
+          "examples": [
+            {
+              "de": "Wo ist der Ausgang?",
+              "tr": "Where is the exit?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Wejście i wyjście",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "der Eingang (wejście) i der Ausgang (wyjście): ein = do, aus = z.",
+          "examples": [
+            {
+              "de": "Wo ist der Ausgang?",
+              "tr": "Gdzie jest wyjście?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Entrada y salida",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "der Eingang (entrada) y der Ausgang (salida): ein = dentro, aus = fuera.",
+          "examples": [
+            {
+              "de": "Wo ist der Ausgang?",
+              "tr": "¿Dónde está la salida?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Entrée et sortie",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "der Eingang (entrée) et der Ausgang (sortie) : ein = dedans, aus = dehors.",
+          "examples": [
+            {
+              "de": "Wo ist der Ausgang?",
+              "tr": "Où est la sortie ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Giriş ve çıkış",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "der Eingang (giriş) ve der Ausgang (çıkış): ein = içeri, aus = dışarı.",
+          "examples": [
+            {
+              "de": "Wo ist der Ausgang?",
+              "tr": "Çıkış nerede?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Intrare și ieșire",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "der Eingang (intrarea) și der Ausgang (ieșirea): ein = în, aus = din.",
+          "examples": [
+            {
+              "de": "Wo ist der Ausgang?",
+              "tr": "Unde e ieșirea?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kirish va chiqish",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "der Eingang (kirish) va der Ausgang (chiqish): ein = ichkariga, aus = tashqariga.",
+          "examples": [
+            {
+              "de": "Wo ist der Ausgang?",
+              "tr": "Chiqish qayerda?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "प्रवेश और निकास",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "der Eingang (प्रवेश) और der Ausgang (निकास): ein = अंदर, aus = बाहर।",
+          "examples": [
+            {
+              "de": "Wo ist der Ausgang?",
+              "tr": "निकास कहाँ है?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المدخل والمخرج",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "der Eingang (المدخل) وder Ausgang (المخرج): ein = إلى الداخل، aus = إلى الخارج.",
+          "examples": [
+            {
+              "de": "Wo ist der Ausgang?",
+              "tr": "أين المخرج؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "city-13": {
+    "ru": {
+      "title": "Достопримечательности",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Rathaus = Rat (совет) + Haus. Снова род от последней части: das Rathaus.",
+          "examples": [
+            {
+              "de": "die Kirche, das Rathaus, der Markt, der Turm",
+              "tr": "церковь, ратуша, рынок, башня"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Пам’ятки",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Rathaus = Rat (рада) + Haus. Знову рід від останньої частини: das Rathaus.",
+          "examples": [
+            {
+              "de": "die Kirche, das Rathaus, der Markt, der Turm",
+              "tr": "церква, ратуша, ринок, вежа"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Sights",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "Rathaus = Rat (council) + Haus. Again the gender comes from the last part: das Rathaus.",
+          "examples": [
+            {
+              "de": "die Kirche, das Rathaus, der Markt, der Turm",
+              "tr": "church, town hall, market, tower"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Zabytki",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Rathaus = Rat (rada) + Haus. Znów rodzaj od ostatniej części: das Rathaus.",
+          "examples": [
+            {
+              "de": "die Kirche, das Rathaus, der Markt, der Turm",
+              "tr": "kościół, ratusz, rynek, wieża"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Lugares de interés",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Rathaus = Rat (consejo) + Haus. De nuevo el género viene de la última parte: das Rathaus.",
+          "examples": [
+            {
+              "de": "die Kirche, das Rathaus, der Markt, der Turm",
+              "tr": "iglesia, ayuntamiento, mercado, torre"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les monuments",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "Rathaus = Rat (conseil) + Haus. Encore une fois, le genre vient de la dernière partie : das Rathaus.",
+          "examples": [
+            {
+              "de": "die Kirche, das Rathaus, der Markt, der Turm",
+              "tr": "église, mairie, marché, tour"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Görülecek yerler",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Rathaus = Rat (meclis) + Haus. Yine cinsiyet son parçadan: das Rathaus.",
+          "examples": [
+            {
+              "de": "die Kirche, das Rathaus, der Markt, der Turm",
+              "tr": "kilise, belediye binası, pazar, kule"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Obiective turistice",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Rathaus = Rat (consiliu) + Haus. Din nou genul vine de la ultima parte: das Rathaus.",
+          "examples": [
+            {
+              "de": "die Kirche, das Rathaus, der Markt, der Turm",
+              "tr": "biserica, primăria, piața, turnul"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Diqqatga sazovor joylar",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Rathaus = Rat (kengash) + Haus. Yana rod oxirgi qismdan: das Rathaus.",
+          "examples": [
+            {
+              "de": "die Kirche, das Rathaus, der Markt, der Turm",
+              "tr": "cherkov, ratusha, bozor, minora"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दर्शनीय स्थल",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "Rathaus = Rat (परिषद) + Haus। फिर से लिंग आखिरी हिस्से से: das Rathaus।",
+          "examples": [
+            {
+              "de": "die Kirche, das Rathaus, der Markt, der Turm",
+              "tr": "चर्च, टाउन हॉल, बाज़ार, मीनार"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المعالم",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "Rathaus = Rat (مجلس) + Haus. ومرة أخرى الجنس من الجزء الأخير: das Rathaus.",
+          "examples": [
+            {
+              "de": "die Kirche, das Rathaus, der Markt, der Turm",
+              "tr": "الكنيسة، دار البلدية، السوق، البرج"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

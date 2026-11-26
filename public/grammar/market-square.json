@@ -1,0 +1,3003 @@
+{
+  "market-square-one": {
+    "ru": {
+      "title": "Akkusativ: den и einen",
+      "points": [
+        {
+          "title": "Что? Кого?",
+          "text": "После kaufen, brauchen, suchen, haben предмет отвечает на вопрос Was? (что?) или Wen? (кого?). Это падеж Akkusativ.",
+          "examples": []
+        },
+        {
+          "title": "Меняется только мужской род",
+          "text": "der становится den, ein становится einen.",
+          "examples": [
+            {
+              "de": "Ich kaufe den Stuhl.",
+              "tr": "Я покупаю (этот) стул."
+            },
+            {
+              "de": "Ich brauche einen Stuhl.",
+              "tr": "Мне нужен стул."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Akkusativ: den і einen",
+      "points": [
+        {
+          "title": "Що? Кого?",
+          "text": "Після kaufen, brauchen, suchen, haben предмет відповідає на питання Was? (що?) або Wen? (кого?). Це відмінок Akkusativ.",
+          "examples": []
+        },
+        {
+          "title": "Змінюється лише чоловічий рід",
+          "text": "der стає den, ein стає einen.",
+          "examples": [
+            {
+              "de": "Ich kaufe den Stuhl.",
+              "tr": "Я купую (цей) стілець."
+            },
+            {
+              "de": "Ich brauche einen Stuhl.",
+              "tr": "Мені потрібен стілець."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Accusative: den and einen",
+      "points": [
+        {
+          "title": "What? Whom?",
+          "text": "After kaufen, brauchen, suchen, haben the object answers Was? (what?) or Wen? (whom?). This is the accusative case.",
+          "examples": []
+        },
+        {
+          "title": "Only masculine changes",
+          "text": "der becomes den, ein becomes einen.",
+          "examples": [
+            {
+              "de": "Ich kaufe den Stuhl.",
+              "tr": "I’m buying the chair."
+            },
+            {
+              "de": "Ich brauche einen Stuhl.",
+              "tr": "I need a chair."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Akkusativ: den i einen",
+      "points": [
+        {
+          "title": "Co? Kogo?",
+          "text": "Po kaufen, brauchen, suchen, haben przedmiot odpowiada na pytanie Was? (co?) albo Wen? (kogo?). To przypadek Akkusativ.",
+          "examples": []
+        },
+        {
+          "title": "Zmienia się tylko rodzaj męski",
+          "text": "der zmienia się w den, ein w einen.",
+          "examples": [
+            {
+              "de": "Ich kaufe den Stuhl.",
+              "tr": "Kupuję (to) krzesło."
+            },
+            {
+              "de": "Ich brauche einen Stuhl.",
+              "tr": "Potrzebuję krzesła."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Acusativo: den y einen",
+      "points": [
+        {
+          "title": "¿Qué? ¿A quién?",
+          "text": "Después de kaufen, brauchen, suchen, haben el objeto responde a Was? (¿qué?) o Wen? (¿a quién?). Es el acusativo.",
+          "examples": []
+        },
+        {
+          "title": "Solo cambia el masculino",
+          "text": "der pasa a den, ein pasa a einen.",
+          "examples": [
+            {
+              "de": "Ich kaufe den Stuhl.",
+              "tr": "Compro la silla."
+            },
+            {
+              "de": "Ich brauche einen Stuhl.",
+              "tr": "Necesito una silla."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Accusatif : den et einen",
+      "points": [
+        {
+          "title": "Quoi ? Qui ?",
+          "text": "Après kaufen, brauchen, suchen, haben, le complément répond à Was ? (quoi ?) ou Wen ? (qui ?). C’est l’accusatif.",
+          "examples": []
+        },
+        {
+          "title": "Seul le masculin change",
+          "text": "der devient den, ein devient einen.",
+          "examples": [
+            {
+              "de": "Ich kaufe den Stuhl.",
+              "tr": "J’achète la chaise."
+            },
+            {
+              "de": "Ich brauche einen Stuhl.",
+              "tr": "J’ai besoin d’une chaise."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Akkusativ: den ve einen",
+      "points": [
+        {
+          "title": "Neyi? Kimi?",
+          "text": "kaufen, brauchen, suchen, haben’den sonra nesne Was? (neyi?) ya da Wen? (kimi?) sorusuna cevap verir. Bu Akkusativ halidir.",
+          "examples": []
+        },
+        {
+          "title": "Sadece eril değişir",
+          "text": "der den olur, ein einen olur.",
+          "examples": [
+            {
+              "de": "Ich kaufe den Stuhl.",
+              "tr": "Sandalyeyi alıyorum."
+            },
+            {
+              "de": "Ich brauche einen Stuhl.",
+              "tr": "Bir sandalyeye ihtiyacım var."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Acuzativul: den și einen",
+      "points": [
+        {
+          "title": "Ce? Pe cine?",
+          "text": "După kaufen, brauchen, suchen, haben obiectul răspunde la Was? (ce?) sau Wen? (pe cine?). Acesta e acuzativul.",
+          "examples": []
+        },
+        {
+          "title": "Se schimbă doar masculinul",
+          "text": "der devine den, ein devine einen.",
+          "examples": [
+            {
+              "de": "Ich kaufe den Stuhl.",
+              "tr": "Cumpăr scaunul."
+            },
+            {
+              "de": "Ich brauche einen Stuhl.",
+              "tr": "Am nevoie de un scaun."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Akkusativ: den va einen",
+      "points": [
+        {
+          "title": "Nimani? Kimni?",
+          "text": "kaufen, brauchen, suchen, haben dan keyin narsa Was? (nimani?) yoki Wen? (kimni?) savoliga javob beradi. Bu Akkusativ kelishigi.",
+          "examples": []
+        },
+        {
+          "title": "Faqat erkak rodi o'zgaradi",
+          "text": "der den ga, ein einen ga aylanadi.",
+          "examples": [
+            {
+              "de": "Ich kaufe den Stuhl.",
+              "tr": "Men (shu) stulni sotib olaman."
+            },
+            {
+              "de": "Ich brauche einen Stuhl.",
+              "tr": "Menga stul kerak."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "Akkusativ: den और einen",
+      "points": [
+        {
+          "title": "क्या? किसे?",
+          "text": "kaufen, brauchen, suchen, haben के बाद कर्म Was? (क्या?) या Wen? (किसे?) का जवाब देता है। यह Akkusativ कारक है।",
+          "examples": []
+        },
+        {
+          "title": "सिर्फ़ पुल्लिंग बदलता है",
+          "text": "der बनता है den, ein बनता है einen।",
+          "examples": [
+            {
+              "de": "Ich kaufe den Stuhl.",
+              "tr": "मैं वह कुर्सी खरीद रहा हूँ।"
+            },
+            {
+              "de": "Ich brauche einen Stuhl.",
+              "tr": "मुझे एक कुर्सी चाहिए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "حالة المفعول: den وeinen",
+      "points": [
+        {
+          "title": "ماذا؟ من؟",
+          "text": "بعد kaufen وbrauchen وsuchen وhaben يجيب المفعول عن Was? (ماذا؟) أو Wen? (من؟). هذه حالة Akkusativ.",
+          "examples": []
+        },
+        {
+          "title": "يتغير المذكر فقط",
+          "text": "der تصبح den، وein تصبح einen.",
+          "examples": [
+            {
+              "de": "Ich kaufe den Stuhl.",
+              "tr": "أشتري الكرسي."
+            },
+            {
+              "de": "Ich brauche einen Stuhl.",
+              "tr": "أحتاج كرسياً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "market-square-two": {
+    "ru": {
+      "title": "die, das и множественное: без изменений",
+      "points": [
+        {
+          "title": "Остаётся как было",
+          "text": "В Akkusativ женский род, средний род и множественное число не меняются.",
+          "examples": [
+            {
+              "de": "Ich kaufe eine Banane.",
+              "tr": "Я покупаю банан."
+            },
+            {
+              "de": "Wir kaufen das Brot.",
+              "tr": "Мы берём хлеб."
+            }
+          ]
+        },
+        {
+          "title": "Много штук без артикля",
+          "text": "Когда говорим о нескольких вещах вообще, артикль не нужен.",
+          "examples": [
+            {
+              "de": "Ich kaufe Äpfel und Eier.",
+              "tr": "Я покупаю яблоки и яйца."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "die, das і множина: без змін",
+      "points": [
+        {
+          "title": "Лишається як було",
+          "text": "В Akkusativ жіночий рід, середній рід і множина не змінюються.",
+          "examples": [
+            {
+              "de": "Ich kaufe eine Banane.",
+              "tr": "Я купую банан."
+            },
+            {
+              "de": "Wir kaufen das Brot.",
+              "tr": "Ми беремо хліб."
+            }
+          ]
+        },
+        {
+          "title": "Багато штук без артикля",
+          "text": "Коли кажемо про кілька речей загалом, артикль не потрібен.",
+          "examples": [
+            {
+              "de": "Ich kaufe Äpfel und Eier.",
+              "tr": "Я купую яблука і яйця."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "die, das and plural: no change",
+      "points": [
+        {
+          "title": "Stays the same",
+          "text": "In the accusative, feminine, neuter and plural don’t change.",
+          "examples": [
+            {
+              "de": "Ich kaufe eine Banane.",
+              "tr": "I’m buying a banana."
+            },
+            {
+              "de": "Wir kaufen das Brot.",
+              "tr": "We’re buying the bread."
+            }
+          ]
+        },
+        {
+          "title": "Several things: no article",
+          "text": "When talking about several things in general, no article is needed.",
+          "examples": [
+            {
+              "de": "Ich kaufe Äpfel und Eier.",
+              "tr": "I’m buying apples and eggs."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "die, das i liczba mnoga: bez zmian",
+      "points": [
+        {
+          "title": "Zostaje bez zmian",
+          "text": "W Akkusativ rodzaj żeński, nijaki i liczba mnoga się nie zmieniają.",
+          "examples": [
+            {
+              "de": "Ich kaufe eine Banane.",
+              "tr": "Kupuję banana."
+            },
+            {
+              "de": "Wir kaufen das Brot.",
+              "tr": "Kupujemy chleb."
+            }
+          ]
+        },
+        {
+          "title": "Wiele sztuk bez rodzajnika",
+          "text": "Gdy mówimy ogólnie o kilku rzeczach, rodzajnik nie jest potrzebny.",
+          "examples": [
+            {
+              "de": "Ich kaufe Äpfel und Eier.",
+              "tr": "Kupuję jabłka i jajka."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "die, das y plural: sin cambios",
+      "points": [
+        {
+          "title": "Queda igual",
+          "text": "En acusativo, el femenino, el neutro y el plural no cambian.",
+          "examples": [
+            {
+              "de": "Ich kaufe eine Banane.",
+              "tr": "Compro un plátano."
+            },
+            {
+              "de": "Wir kaufen das Brot.",
+              "tr": "Compramos el pan."
+            }
+          ]
+        },
+        {
+          "title": "Varias cosas sin artículo",
+          "text": "Cuando hablamos de varias cosas en general, no hace falta artículo.",
+          "examples": [
+            {
+              "de": "Ich kaufe Äpfel und Eier.",
+              "tr": "Compro manzanas y huevos."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "die, das et pluriel : pas de changement",
+      "points": [
+        {
+          "title": "Ça ne change pas",
+          "text": "À l’accusatif, le féminin, le neutre et le pluriel ne changent pas.",
+          "examples": [
+            {
+              "de": "Ich kaufe eine Banane.",
+              "tr": "J’achète une banane."
+            },
+            {
+              "de": "Wir kaufen das Brot.",
+              "tr": "Nous achetons le pain."
+            }
+          ]
+        },
+        {
+          "title": "Plusieurs choses sans article",
+          "text": "Quand on parle de plusieurs choses en général, pas besoin d’article.",
+          "examples": [
+            {
+              "de": "Ich kaufe Äpfel und Eier.",
+              "tr": "J’achète des pommes et des œufs."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "die, das ve çoğul: değişmez",
+      "points": [
+        {
+          "title": "Aynı kalır",
+          "text": "Akkusativ’de dişil, nötr ve çoğul değişmez.",
+          "examples": [
+            {
+              "de": "Ich kaufe eine Banane.",
+              "tr": "Bir muz alıyorum."
+            },
+            {
+              "de": "Wir kaufen das Brot.",
+              "tr": "Ekmeği alıyoruz."
+            }
+          ]
+        },
+        {
+          "title": "Birden çok şey artikelsiz",
+          "text": "Genel olarak birkaç şeyden bahsederken artikel gerekmez.",
+          "examples": [
+            {
+              "de": "Ich kaufe Äpfel und Eier.",
+              "tr": "Elma ve yumurta alıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "die, das și pluralul: fără schimbări",
+      "points": [
+        {
+          "title": "Rămâne la fel",
+          "text": "La acuzativ femininul, neutrul și pluralul nu se schimbă.",
+          "examples": [
+            {
+              "de": "Ich kaufe eine Banane.",
+              "tr": "Cumpăr o banană."
+            },
+            {
+              "de": "Wir kaufen das Brot.",
+              "tr": "Cumpărăm pâinea."
+            }
+          ]
+        },
+        {
+          "title": "Mai multe lucruri fără articol",
+          "text": "Când vorbim în general despre mai multe lucruri, nu e nevoie de articol.",
+          "examples": [
+            {
+              "de": "Ich kaufe Äpfel und Eier.",
+              "tr": "Cumpăr mere și ouă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "die, das va ko'plik: o'zgarmaydi",
+      "points": [
+        {
+          "title": "O'zgarmaydi",
+          "text": "Akkusativda ayol rodi, o'rta rod va ko'plik o'zgarmaydi.",
+          "examples": [
+            {
+              "de": "Ich kaufe eine Banane.",
+              "tr": "Men banan sotib olaman."
+            },
+            {
+              "de": "Wir kaufen das Brot.",
+              "tr": "Biz nonni sotib olamiz."
+            }
+          ]
+        },
+        {
+          "title": "Bir nechta narsa artiklsiz",
+          "text": "Umuman bir nechta narsa haqida gapirganda artikl kerak emas.",
+          "examples": [
+            {
+              "de": "Ich kaufe Äpfel und Eier.",
+              "tr": "Men olma va tuxum sotib olaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "die, das और बहुवचन: कोई बदलाव नहीं",
+      "points": [
+        {
+          "title": "वैसा ही रहता है",
+          "text": "Akkusativ में स्त्रीलिंग, नपुंसकलिंग और बहुवचन नहीं बदलते।",
+          "examples": [
+            {
+              "de": "Ich kaufe eine Banane.",
+              "tr": "मैं एक केला खरीद रहा हूँ।"
+            },
+            {
+              "de": "Wir kaufen das Brot.",
+              "tr": "हम रोटी खरीद रहे हैं।"
+            }
+          ]
+        },
+        {
+          "title": "कई चीज़ें बिना आर्टिकल",
+          "text": "जब आम तौर पर कई चीज़ों की बात हो, आर्टिकल नहीं चाहिए।",
+          "examples": [
+            {
+              "de": "Ich kaufe Äpfel und Eier.",
+              "tr": "मैं सेब और अंडे खरीद रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "die وdas والجمع: بدون تغيير",
+      "points": [
+        {
+          "title": "يبقى كما هو",
+          "text": "في حالة Akkusativ لا يتغير المؤنث والمحايد والجمع.",
+          "examples": [
+            {
+              "de": "Ich kaufe eine Banane.",
+              "tr": "أشتري موزة."
+            },
+            {
+              "de": "Wir kaufen das Brot.",
+              "tr": "نشتري الخبز."
+            }
+          ]
+        },
+        {
+          "title": "عدة أشياء بدون أداة",
+          "text": "عندما نتحدث عن عدة أشياء بشكل عام لا نحتاج أداة.",
+          "examples": [
+            {
+              "de": "Ich kaufe Äpfel und Eier.",
+              "tr": "أشتري تفاحاً وبيضاً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "market-square-three": {
+    "ru": {
+      "title": "keinen и Wen? (кого?)",
+      "points": [
+        {
+          "title": "kein как ein",
+          "text": "kein меняется так же, как ein: мужской род получает keinen.",
+          "examples": [
+            {
+              "de": "Ich habe keinen Stift.",
+              "tr": "У меня нет ручки."
+            }
+          ]
+        },
+        {
+          "title": "Wen? для людей",
+          "text": "Про вещь спрашиваем Was?, про человека Wen? (кого?). Мужской род так же меняется: den Opa.",
+          "examples": [
+            {
+              "de": "Wen besuchst du? Ich besuche den Opa.",
+              "tr": "Кого ты навещаешь? Я навещаю дедушку."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "keinen і Wen? (кого?)",
+      "points": [
+        {
+          "title": "kein як ein",
+          "text": "kein змінюється так само, як ein: чоловічий рід отримує keinen.",
+          "examples": [
+            {
+              "de": "Ich habe keinen Stift.",
+              "tr": "У мене немає ручки."
+            }
+          ]
+        },
+        {
+          "title": "Wen? для людей",
+          "text": "Про річ питаємо Was?, про людину Wen? (кого?). Чоловічий рід так само змінюється: den Opa.",
+          "examples": [
+            {
+              "de": "Wen besuchst du? Ich besuche den Opa.",
+              "tr": "Кого ти відвідуєш? Я відвідую дідуся."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "keinen and Wen? (whom?)",
+      "points": [
+        {
+          "title": "kein works like ein",
+          "text": "kein changes just like ein: masculine becomes keinen.",
+          "examples": [
+            {
+              "de": "Ich habe keinen Stift.",
+              "tr": "I don’t have a pen."
+            }
+          ]
+        },
+        {
+          "title": "Wen? for people",
+          "text": "Ask Was? about a thing and Wen? (whom?) about a person. Masculine changes the same way: den Opa.",
+          "examples": [
+            {
+              "de": "Wen besuchst du? Ich besuche den Opa.",
+              "tr": "Who are you visiting? I’m visiting grandpa."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "keinen i Wen? (kogo?)",
+      "points": [
+        {
+          "title": "kein jak ein",
+          "text": "kein zmienia się tak samo jak ein: rodzaj męski dostaje keinen.",
+          "examples": [
+            {
+              "de": "Ich habe keinen Stift.",
+              "tr": "Nie mam długopisu."
+            }
+          ]
+        },
+        {
+          "title": "Wen? dla ludzi",
+          "text": "O rzecz pytamy Was?, o człowieka Wen? (kogo?). Rodzaj męski zmienia się tak samo: den Opa.",
+          "examples": [
+            {
+              "de": "Wen besuchst du? Ich besuche den Opa.",
+              "tr": "Kogo odwiedzasz? Odwiedzam dziadka."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "keinen y Wen? (¿a quién?)",
+      "points": [
+        {
+          "title": "kein como ein",
+          "text": "kein cambia igual que ein: el masculino pasa a keinen.",
+          "examples": [
+            {
+              "de": "Ich habe keinen Stift.",
+              "tr": "No tengo bolígrafo."
+            }
+          ]
+        },
+        {
+          "title": "Wen? para personas",
+          "text": "Por una cosa se pregunta Was?, por una persona Wen? (¿a quién?). El masculino cambia igual: den Opa.",
+          "examples": [
+            {
+              "de": "Wen besuchst du? Ich besuche den Opa.",
+              "tr": "¿A quién visitas? Visito al abuelo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "keinen et Wen ? (qui ?)",
+      "points": [
+        {
+          "title": "kein comme ein",
+          "text": "kein change comme ein : le masculin devient keinen.",
+          "examples": [
+            {
+              "de": "Ich habe keinen Stift.",
+              "tr": "Je n’ai pas de stylo."
+            }
+          ]
+        },
+        {
+          "title": "Wen ? pour les personnes",
+          "text": "Pour un objet on demande Was ?, pour une personne Wen ? (qui ?). Le masculin change pareil : den Opa.",
+          "examples": [
+            {
+              "de": "Wen besuchst du? Ich besuche den Opa.",
+              "tr": "Qui vas-tu voir ? Je vais voir papi."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "keinen ve Wen? (kimi?)",
+      "points": [
+        {
+          "title": "kein, ein gibi",
+          "text": "kein de ein gibi değişir: eril keinen olur.",
+          "examples": [
+            {
+              "de": "Ich habe keinen Stift.",
+              "tr": "Kalemim yok."
+            }
+          ]
+        },
+        {
+          "title": "İnsanlar için Wen?",
+          "text": "Eşya için Was?, insan için Wen? (kimi?) sorulur. Eril yine değişir: den Opa.",
+          "examples": [
+            {
+              "de": "Wen besuchst du? Ich besuche den Opa.",
+              "tr": "Kimi ziyaret ediyorsun? Dedemi ziyaret ediyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "keinen și Wen? (pe cine?)",
+      "points": [
+        {
+          "title": "kein ca ein",
+          "text": "kein se schimbă la fel ca ein: masculinul devine keinen.",
+          "examples": [
+            {
+              "de": "Ich habe keinen Stift.",
+              "tr": "Nu am pix."
+            }
+          ]
+        },
+        {
+          "title": "Wen? pentru oameni",
+          "text": "Despre un lucru întrebi Was?, despre un om Wen? (pe cine?). Masculinul se schimbă la fel: den Opa.",
+          "examples": [
+            {
+              "de": "Wen besuchst du? Ich besuche den Opa.",
+              "tr": "Pe cine vizitezi? Îl vizitez pe bunicul."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "keinen va Wen? (kimni?)",
+      "points": [
+        {
+          "title": "kein ein kabi",
+          "text": "kein ham ein kabi o'zgaradi: erkak rodi keinen bo'ladi.",
+          "examples": [
+            {
+              "de": "Ich habe keinen Stift.",
+              "tr": "Mening ruchkam yo'q."
+            }
+          ]
+        },
+        {
+          "title": "Odamlar uchun Wen?",
+          "text": "Narsa haqida Was?, odam haqida Wen? (kimni?) deb so'raladi. Erkak rodi xuddi shunday o'zgaradi: den Opa.",
+          "examples": [
+            {
+              "de": "Wen besuchst du? Ich besuche den Opa.",
+              "tr": "Kimni ko'rgani borasan? Bobomni ko'rgani boraman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "keinen और Wen? (किसे?)",
+      "points": [
+        {
+          "title": "kein, ein की तरह",
+          "text": "kein भी ein की तरह बदलता है: पुल्लिंग keinen बनता है।",
+          "examples": [
+            {
+              "de": "Ich habe keinen Stift.",
+              "tr": "मेरे पास पेन नहीं है।"
+            }
+          ]
+        },
+        {
+          "title": "लोगों के लिए Wen?",
+          "text": "चीज़ के बारे में Was?, इंसान के बारे में Wen? (किसे?) पूछते हैं। पुल्लिंग वैसे ही बदलता है: den Opa।",
+          "examples": [
+            {
+              "de": "Wen besuchst du? Ich besuche den Opa.",
+              "tr": "तुम किससे मिलने जा रहे हो? मैं दादाजी से मिलने जा रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "keinen وWen؟ (من؟)",
+      "points": [
+        {
+          "title": "kein مثل ein",
+          "text": "تتغير kein مثل ein تماماً: المذكر يصبح keinen.",
+          "examples": [
+            {
+              "de": "Ich habe keinen Stift.",
+              "tr": "ليس عندي قلم."
+            }
+          ]
+        },
+        {
+          "title": "Wen؟ للأشخاص",
+          "text": "عن الشيء نسأل Was؟، وعن الشخص Wen؟ (من؟). والمذكر يتغير بالطريقة نفسها: den Opa.",
+          "examples": [
+            {
+              "de": "Wen besuchst du? Ich besuche den Opa.",
+              "tr": "من تزور؟ أزور جدي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "market-square-four": {
+    "ru": {
+      "title": "Количество: ein Kilo Äpfel",
+      "points": [
+        {
+          "title": "После количества без артикля",
+          "text": "После ein Kilo, 500 Gramm и т.п. слово идёт без артикля и без «из».",
+          "examples": [
+            {
+              "de": "Ein Kilo Äpfel, bitte.",
+              "tr": "Килограмм яблок, пожалуйста."
+            },
+            {
+              "de": "500 Gramm Käse",
+              "tr": "500 грамм сыра"
+            }
+          ]
+        },
+        {
+          "title": "Цена и выбор",
+          "text": "Спросить цену: Was kostet...? Сказать, что берёшь: Ich nehme...",
+          "examples": [
+            {
+              "de": "Was kostet ein Kilo Kartoffeln?",
+              "tr": "Сколько стоит килограмм картошки?"
+            },
+            {
+              "de": "Ich nehme ein Kilo Tomaten.",
+              "tr": "Я беру килограмм помидоров."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Кількість: ein Kilo Äpfel",
+      "points": [
+        {
+          "title": "Після кількості без артикля",
+          "text": "Після ein Kilo, 500 Gramm тощо слово йде без артикля.",
+          "examples": [
+            {
+              "de": "Ein Kilo Äpfel, bitte.",
+              "tr": "Кілограм яблук, будь ласка."
+            },
+            {
+              "de": "500 Gramm Käse",
+              "tr": "500 грамів сиру"
+            }
+          ]
+        },
+        {
+          "title": "Ціна і вибір",
+          "text": "Запитати ціну: Was kostet...? Сказати, що береш: Ich nehme...",
+          "examples": [
+            {
+              "de": "Was kostet ein Kilo Kartoffeln?",
+              "tr": "Скільки коштує кілограм картоплі?"
+            },
+            {
+              "de": "Ich nehme ein Kilo Tomaten.",
+              "tr": "Я беру кілограм помідорів."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Quantities: ein Kilo Äpfel",
+      "points": [
+        {
+          "title": "No article after a quantity",
+          "text": "After ein Kilo, 500 Gramm and so on, the noun has no article and no \"of\".",
+          "examples": [
+            {
+              "de": "Ein Kilo Äpfel, bitte.",
+              "tr": "A kilo of apples, please."
+            },
+            {
+              "de": "500 Gramm Käse",
+              "tr": "500 grams of cheese"
+            }
+          ]
+        },
+        {
+          "title": "Price and choice",
+          "text": "Ask the price: Was kostet...? Say what you take: Ich nehme...",
+          "examples": [
+            {
+              "de": "Was kostet ein Kilo Kartoffeln?",
+              "tr": "How much is a kilo of potatoes?"
+            },
+            {
+              "de": "Ich nehme ein Kilo Tomaten.",
+              "tr": "I’ll take a kilo of tomatoes."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Ilość: ein Kilo Äpfel",
+      "points": [
+        {
+          "title": "Po ilości bez rodzajnika",
+          "text": "Po ein Kilo, 500 Gramm itp. słowo idzie bez rodzajnika.",
+          "examples": [
+            {
+              "de": "Ein Kilo Äpfel, bitte.",
+              "tr": "Kilogram jabłek, proszę."
+            },
+            {
+              "de": "500 Gramm Käse",
+              "tr": "500 gramów sera"
+            }
+          ]
+        },
+        {
+          "title": "Cena i wybór",
+          "text": "Zapytać o cenę: Was kostet...? Powiedzieć, co bierzesz: Ich nehme...",
+          "examples": [
+            {
+              "de": "Was kostet ein Kilo Kartoffeln?",
+              "tr": "Ile kosztuje kilogram ziemniaków?"
+            },
+            {
+              "de": "Ich nehme ein Kilo Tomaten.",
+              "tr": "Biorę kilogram pomidorów."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Cantidades: ein Kilo Äpfel",
+      "points": [
+        {
+          "title": "Sin artículo tras la cantidad",
+          "text": "Después de ein Kilo, 500 Gramm, etc., la palabra va sin artículo y sin \"de\".",
+          "examples": [
+            {
+              "de": "Ein Kilo Äpfel, bitte.",
+              "tr": "Un kilo de manzanas, por favor."
+            },
+            {
+              "de": "500 Gramm Käse",
+              "tr": "500 gramos de queso"
+            }
+          ]
+        },
+        {
+          "title": "Precio y elección",
+          "text": "Preguntar el precio: Was kostet...? Decir qué te llevas: Ich nehme...",
+          "examples": [
+            {
+              "de": "Was kostet ein Kilo Kartoffeln?",
+              "tr": "¿Cuánto cuesta un kilo de patatas?"
+            },
+            {
+              "de": "Ich nehme ein Kilo Tomaten.",
+              "tr": "Me llevo un kilo de tomates."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les quantités : ein Kilo Äpfel",
+      "points": [
+        {
+          "title": "Pas d’article après une quantité",
+          "text": "Après ein Kilo, 500 Gramm, etc., le nom n’a ni article ni « de ».",
+          "examples": [
+            {
+              "de": "Ein Kilo Äpfel, bitte.",
+              "tr": "Un kilo de pommes, s’il vous plaît."
+            },
+            {
+              "de": "500 Gramm Käse",
+              "tr": "500 grammes de fromage"
+            }
+          ]
+        },
+        {
+          "title": "Prix et choix",
+          "text": "Demander le prix : Was kostet... ? Dire ce qu’on prend : Ich nehme...",
+          "examples": [
+            {
+              "de": "Was kostet ein Kilo Kartoffeln?",
+              "tr": "Combien coûte un kilo de pommes de terre ?"
+            },
+            {
+              "de": "Ich nehme ein Kilo Tomaten.",
+              "tr": "Je prends un kilo de tomates."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Miktar: ein Kilo Äpfel",
+      "points": [
+        {
+          "title": "Miktardan sonra artikel yok",
+          "text": "ein Kilo, 500 Gramm gibi miktarlardan sonra isim artikelsiz gelir.",
+          "examples": [
+            {
+              "de": "Ein Kilo Äpfel, bitte.",
+              "tr": "Bir kilo elma, lütfen."
+            },
+            {
+              "de": "500 Gramm Käse",
+              "tr": "500 gram peynir"
+            }
+          ]
+        },
+        {
+          "title": "Fiyat ve seçim",
+          "text": "Fiyat sormak: Was kostet...? Ne aldığını söylemek: Ich nehme...",
+          "examples": [
+            {
+              "de": "Was kostet ein Kilo Kartoffeln?",
+              "tr": "Bir kilo patates ne kadar?"
+            },
+            {
+              "de": "Ich nehme ein Kilo Tomaten.",
+              "tr": "Bir kilo domates alıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cantitatea: ein Kilo Äpfel",
+      "points": [
+        {
+          "title": "Fără articol după cantitate",
+          "text": "După ein Kilo, 500 Gramm etc. cuvântul vine fără articol și fără „de”.",
+          "examples": [
+            {
+              "de": "Ein Kilo Äpfel, bitte.",
+              "tr": "Un kilogram de mere, vă rog."
+            },
+            {
+              "de": "500 Gramm Käse",
+              "tr": "500 de grame de brânză"
+            }
+          ]
+        },
+        {
+          "title": "Preț și alegere",
+          "text": "Întrebi prețul: Was kostet...? Spui ce iei: Ich nehme...",
+          "examples": [
+            {
+              "de": "Was kostet ein Kilo Kartoffeln?",
+              "tr": "Cât costă un kilogram de cartofi?"
+            },
+            {
+              "de": "Ich nehme ein Kilo Tomaten.",
+              "tr": "Iau un kilogram de roșii."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Miqdor: ein Kilo Äpfel",
+      "points": [
+        {
+          "title": "Miqdordan keyin artiklsiz",
+          "text": "ein Kilo, 500 Gramm kabi miqdordan keyin so'z artiklsiz keladi.",
+          "examples": [
+            {
+              "de": "Ein Kilo Äpfel, bitte.",
+              "tr": "Bir kilo olma, iltimos."
+            },
+            {
+              "de": "500 Gramm Käse",
+              "tr": "500 gramm pishloq"
+            }
+          ]
+        },
+        {
+          "title": "Narx va tanlov",
+          "text": "Narx so'rash: Was kostet...? Nima olayotganingni aytish: Ich nehme...",
+          "examples": [
+            {
+              "de": "Was kostet ein Kilo Kartoffeln?",
+              "tr": "Bir kilo kartoshka qancha turadi?"
+            },
+            {
+              "de": "Ich nehme ein Kilo Tomaten.",
+              "tr": "Men bir kilo pomidor olaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "मात्रा: ein Kilo Äpfel",
+      "points": [
+        {
+          "title": "मात्रा के बाद आर्टिकल नहीं",
+          "text": "ein Kilo, 500 Gramm आदि के बाद संज्ञा बिना आर्टिकल के आती है।",
+          "examples": [
+            {
+              "de": "Ein Kilo Äpfel, bitte.",
+              "tr": "एक किलो सेब, कृपया।"
+            },
+            {
+              "de": "500 Gramm Käse",
+              "tr": "500 ग्राम पनीर"
+            }
+          ]
+        },
+        {
+          "title": "कीमत और चुनाव",
+          "text": "कीमत पूछना: Was kostet...? क्या ले रहे हो बताना: Ich nehme...",
+          "examples": [
+            {
+              "de": "Was kostet ein Kilo Kartoffeln?",
+              "tr": "एक किलो आलू कितने का है?"
+            },
+            {
+              "de": "Ich nehme ein Kilo Tomaten.",
+              "tr": "मैं एक किलो टमाटर लूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الكمية: ein Kilo Äpfel",
+      "points": [
+        {
+          "title": "لا أداة بعد الكمية",
+          "text": "بعد ein Kilo و500 Gramm ونحوها يأتي الاسم بدون أداة.",
+          "examples": [
+            {
+              "de": "Ein Kilo Äpfel, bitte.",
+              "tr": "كيلو تفاح من فضلك."
+            },
+            {
+              "de": "500 Gramm Käse",
+              "tr": "500 غرام جبن"
+            }
+          ]
+        },
+        {
+          "title": "السعر والاختيار",
+          "text": "لتسأل عن السعر: Was kostet...؟ ولتقول ماذا تأخذ: Ich nehme...",
+          "examples": [
+            {
+              "de": "Was kostet ein Kilo Kartoffeln?",
+              "tr": "كم سعر كيلو البطاطا؟"
+            },
+            {
+              "de": "Ich nehme ein Kilo Tomaten.",
+              "tr": "آخذ كيلو طماطم."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "market-square-five": {
+    "ru": {
+      "title": "Список покупок",
+      "points": [
+        {
+          "title": "Мера тоже в Akkusativ",
+          "text": "Слово меры тоже меняется, если оно мужского рода: der Liter → einen Liter Milch. die Flasche и das Paket не меняются.",
+          "examples": [
+            {
+              "de": "Wir brauchen einen Liter Milch.",
+              "tr": "Нам нужен литр молока."
+            },
+            {
+              "de": "Eine Flasche Wasser, bitte.",
+              "tr": "Бутылку воды, пожалуйста."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Список покупок",
+      "points": [
+        {
+          "title": "Міра теж в Akkusativ",
+          "text": "Слово міри теж змінюється, якщо воно чоловічого роду: der Liter → einen Liter Milch. die Flasche і das Paket не змінюються.",
+          "examples": [
+            {
+              "de": "Wir brauchen einen Liter Milch.",
+              "tr": "Нам потрібен літр молока."
+            },
+            {
+              "de": "Eine Flasche Wasser, bitte.",
+              "tr": "Пляшку води, будь ласка."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The shopping list",
+      "points": [
+        {
+          "title": "The measure word changes too",
+          "text": "A masculine measure word changes too: der Liter → einen Liter Milch. die Flasche and das Paket stay the same.",
+          "examples": [
+            {
+              "de": "Wir brauchen einen Liter Milch.",
+              "tr": "We need a litre of milk."
+            },
+            {
+              "de": "Eine Flasche Wasser, bitte.",
+              "tr": "A bottle of water, please."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Lista zakupów",
+      "points": [
+        {
+          "title": "Miara też w Akkusativ",
+          "text": "Słowo miary też się zmienia, jeśli jest rodzaju męskiego: der Liter → einen Liter Milch. die Flasche i das Paket się nie zmieniają.",
+          "examples": [
+            {
+              "de": "Wir brauchen einen Liter Milch.",
+              "tr": "Potrzebujemy litra mleka."
+            },
+            {
+              "de": "Eine Flasche Wasser, bitte.",
+              "tr": "Butelkę wody, proszę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "La lista de la compra",
+      "points": [
+        {
+          "title": "La medida también cambia",
+          "text": "La palabra de medida masculina también cambia: der Liter → einen Liter Milch. die Flasche y das Paket no cambian.",
+          "examples": [
+            {
+              "de": "Wir brauchen einen Liter Milch.",
+              "tr": "Necesitamos un litro de leche."
+            },
+            {
+              "de": "Eine Flasche Wasser, bitte.",
+              "tr": "Una botella de agua, por favor."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "La liste de courses",
+      "points": [
+        {
+          "title": "Le mot de mesure change aussi",
+          "text": "Un mot de mesure masculin change aussi : der Liter → einen Liter Milch. die Flasche et das Paket ne changent pas.",
+          "examples": [
+            {
+              "de": "Wir brauchen einen Liter Milch.",
+              "tr": "Nous avons besoin d’un litre de lait."
+            },
+            {
+              "de": "Eine Flasche Wasser, bitte.",
+              "tr": "Une bouteille d’eau, s’il vous plaît."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Alışveriş listesi",
+      "points": [
+        {
+          "title": "Ölçü kelimesi de değişir",
+          "text": "Eril ölçü kelimesi de değişir: der Liter → einen Liter Milch. die Flasche ve das Paket değişmez.",
+          "examples": [
+            {
+              "de": "Wir brauchen einen Liter Milch.",
+              "tr": "Bir litre süte ihtiyacımız var."
+            },
+            {
+              "de": "Eine Flasche Wasser, bitte.",
+              "tr": "Bir şişe su, lütfen."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Lista de cumpărături",
+      "points": [
+        {
+          "title": "Și măsura se schimbă",
+          "text": "Cuvântul de măsură masculin se schimbă și el: der Liter → einen Liter Milch. die Flasche și das Paket nu se schimbă.",
+          "examples": [
+            {
+              "de": "Wir brauchen einen Liter Milch.",
+              "tr": "Avem nevoie de un litru de lapte."
+            },
+            {
+              "de": "Eine Flasche Wasser, bitte.",
+              "tr": "O sticlă de apă, vă rog."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Xaridlar ro'yxati",
+      "points": [
+        {
+          "title": "O'lchov so'zi ham o'zgaradi",
+          "text": "Erkak rodidagi o'lchov so'zi ham o'zgaradi: der Liter → einen Liter Milch. die Flasche va das Paket o'zgarmaydi.",
+          "examples": [
+            {
+              "de": "Wir brauchen einen Liter Milch.",
+              "tr": "Bizga bir litr sut kerak."
+            },
+            {
+              "de": "Eine Flasche Wasser, bitte.",
+              "tr": "Bir shisha suv, iltimos."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "खरीदारी की सूची",
+      "points": [
+        {
+          "title": "माप का शब्द भी बदलता है",
+          "text": "पुल्लिंग माप शब्द भी बदलता है: der Liter → einen Liter Milch। die Flasche और das Paket नहीं बदलते।",
+          "examples": [
+            {
+              "de": "Wir brauchen einen Liter Milch.",
+              "tr": "हमें एक लीटर दूध चाहिए।"
+            },
+            {
+              "de": "Eine Flasche Wasser, bitte.",
+              "tr": "एक बोतल पानी, कृपया।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "قائمة المشتريات",
+      "points": [
+        {
+          "title": "كلمة المقدار تتغير أيضاً",
+          "text": "كلمة المقدار المذكرة تتغير أيضاً: der Liter → einen Liter Milch. أما die Flasche وdas Paket فلا يتغيران.",
+          "examples": [
+            {
+              "de": "Wir brauchen einen Liter Milch.",
+              "tr": "نحتاج لتر حليب."
+            },
+            {
+              "de": "Eine Flasche Wasser, bitte.",
+              "tr": "زجاجة ماء من فضلك."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "market-square-six": {
+    "ru": {
+      "title": "На кассе",
+      "points": [
+        {
+          "title": "Фразы на кассе",
+          "text": "Das macht... значит «с вас...». Платим: Ich bezahle bar (наличными) или mit Karte (картой).",
+          "examples": [
+            {
+              "de": "Das macht zwölf Euro.",
+              "tr": "С вас двенадцать евро."
+            },
+            {
+              "de": "Ich bezahle mit Karte.",
+              "tr": "Я плачу картой."
+            }
+          ]
+        },
+        {
+          "title": "Цена с центами",
+          "text": "Сначала евро, потом центы, слово «цент» не говорят.",
+          "examples": [
+            {
+              "de": "3,50 € = drei Euro fünfzig",
+              "tr": "три евро пятьдесят"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "На касі",
+      "points": [
+        {
+          "title": "Фрази на касі",
+          "text": "Das macht... означає «з вас...». Платимо: Ich bezahle bar (готівкою) або mit Karte (карткою).",
+          "examples": [
+            {
+              "de": "Das macht zwölf Euro.",
+              "tr": "З вас дванадцять євро."
+            },
+            {
+              "de": "Ich bezahle mit Karte.",
+              "tr": "Я плачу карткою."
+            }
+          ]
+        },
+        {
+          "title": "Ціна з центами",
+          "text": "Спочатку євро, потім центи, слово «цент» не кажуть.",
+          "examples": [
+            {
+              "de": "3,50 € = drei Euro fünfzig",
+              "tr": "три євро п’ятдесят"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "At the checkout",
+      "points": [
+        {
+          "title": "Checkout phrases",
+          "text": "Das macht... means \"that comes to...\". Pay: Ich bezahle bar (cash) or mit Karte (by card).",
+          "examples": [
+            {
+              "de": "Das macht zwölf Euro.",
+              "tr": "That’s twelve euros."
+            },
+            {
+              "de": "Ich bezahle mit Karte.",
+              "tr": "I’ll pay by card."
+            }
+          ]
+        },
+        {
+          "title": "Prices with cents",
+          "text": "Euros first, then cents, without saying \"cent\".",
+          "examples": [
+            {
+              "de": "3,50 € = drei Euro fünfzig",
+              "tr": "three euros fifty"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Przy kasie",
+      "points": [
+        {
+          "title": "Zwroty przy kasie",
+          "text": "Das macht... znaczy „razem...”. Płacimy: Ich bezahle bar (gotówką) albo mit Karte (kartą).",
+          "examples": [
+            {
+              "de": "Das macht zwölf Euro.",
+              "tr": "Razem dwanaście euro."
+            },
+            {
+              "de": "Ich bezahle mit Karte.",
+              "tr": "Płacę kartą."
+            }
+          ]
+        },
+        {
+          "title": "Cena z centami",
+          "text": "Najpierw euro, potem centy, słowa „cent” się nie mówi.",
+          "examples": [
+            {
+              "de": "3,50 € = drei Euro fünfzig",
+              "tr": "trzy euro pięćdziesiąt"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "En la caja",
+      "points": [
+        {
+          "title": "Frases en la caja",
+          "text": "Das macht... significa \"son...\". Pagamos: Ich bezahle bar (en efectivo) o mit Karte (con tarjeta).",
+          "examples": [
+            {
+              "de": "Das macht zwölf Euro.",
+              "tr": "Son doce euros."
+            },
+            {
+              "de": "Ich bezahle mit Karte.",
+              "tr": "Pago con tarjeta."
+            }
+          ]
+        },
+        {
+          "title": "Precio con céntimos",
+          "text": "Primero los euros, luego los céntimos, sin decir \"céntimo\".",
+          "examples": [
+            {
+              "de": "3,50 € = drei Euro fünfzig",
+              "tr": "tres euros cincuenta"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "À la caisse",
+      "points": [
+        {
+          "title": "Phrases à la caisse",
+          "text": "Das macht... veut dire « ça fait... ». On paie : Ich bezahle bar (en liquide) ou mit Karte (par carte).",
+          "examples": [
+            {
+              "de": "Das macht zwölf Euro.",
+              "tr": "Ça fait douze euros."
+            },
+            {
+              "de": "Ich bezahle mit Karte.",
+              "tr": "Je paie par carte."
+            }
+          ]
+        },
+        {
+          "title": "Prix avec centimes",
+          "text": "D’abord les euros, puis les centimes, sans dire « centime ».",
+          "examples": [
+            {
+              "de": "3,50 € = drei Euro fünfzig",
+              "tr": "trois euros cinquante"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kasada",
+      "points": [
+        {
+          "title": "Kasa ifadeleri",
+          "text": "Das macht... \"tutarı...\" demektir. Ödeme: Ich bezahle bar (nakit) ya da mit Karte (kartla).",
+          "examples": [
+            {
+              "de": "Das macht zwölf Euro.",
+              "tr": "On iki euro tutuyor."
+            },
+            {
+              "de": "Ich bezahle mit Karte.",
+              "tr": "Kartla ödüyorum."
+            }
+          ]
+        },
+        {
+          "title": "Kuruşlu fiyat",
+          "text": "Önce euro, sonra sent; \"sent\" kelimesi söylenmez.",
+          "examples": [
+            {
+              "de": "3,50 € = drei Euro fünfzig",
+              "tr": "üç euro elli"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "La casă",
+      "points": [
+        {
+          "title": "Fraze la casă",
+          "text": "Das macht... înseamnă „face...”. Plătim: Ich bezahle bar (cash) sau mit Karte (cu cardul).",
+          "examples": [
+            {
+              "de": "Das macht zwölf Euro.",
+              "tr": "Face doisprezece euro."
+            },
+            {
+              "de": "Ich bezahle mit Karte.",
+              "tr": "Plătesc cu cardul."
+            }
+          ]
+        },
+        {
+          "title": "Preț cu cenți",
+          "text": "Întâi euro, apoi cenții, fără să spui „cent”.",
+          "examples": [
+            {
+              "de": "3,50 € = drei Euro fünfzig",
+              "tr": "trei euro cincizeci"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kassada",
+      "points": [
+        {
+          "title": "Kassadagi iboralar",
+          "text": "Das macht... \"jami ...\" degani. To'lash: Ich bezahle bar (naqd) yoki mit Karte (karta bilan).",
+          "examples": [
+            {
+              "de": "Das macht zwölf Euro.",
+              "tr": "Jami o'n ikki yevro."
+            },
+            {
+              "de": "Ich bezahle mit Karte.",
+              "tr": "Karta bilan to'layman."
+            }
+          ]
+        },
+        {
+          "title": "Sentli narx",
+          "text": "Avval yevro, keyin sent, \"sent\" so'zi aytilmaydi.",
+          "examples": [
+            {
+              "de": "3,50 € = drei Euro fünfzig",
+              "tr": "uch yevro ellik"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "काउंटर पर",
+      "points": [
+        {
+          "title": "काउंटर पर वाक्य",
+          "text": "Das macht... का मतलब \"कुल ... हुए\"। भुगतान: Ich bezahle bar (नकद) या mit Karte (कार्ड से)।",
+          "examples": [
+            {
+              "de": "Das macht zwölf Euro.",
+              "tr": "कुल बारह यूरो हुए।"
+            },
+            {
+              "de": "Ich bezahle mit Karte.",
+              "tr": "मैं कार्ड से भुगतान करूँगा।"
+            }
+          ]
+        },
+        {
+          "title": "सेंट के साथ कीमत",
+          "text": "पहले यूरो, फिर सेंट, \"सेंट\" शब्द नहीं बोलते।",
+          "examples": [
+            {
+              "de": "3,50 € = drei Euro fünfzig",
+              "tr": "तीन यूरो पचास"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "عند الصندوق",
+      "points": [
+        {
+          "title": "عبارات عند الصندوق",
+          "text": "Das macht... تعني \"المجموع...\". وللدفع: Ich bezahle bar (نقداً) أو mit Karte (بالبطاقة).",
+          "examples": [
+            {
+              "de": "Das macht zwölf Euro.",
+              "tr": "المجموع اثنا عشر يورو."
+            },
+            {
+              "de": "Ich bezahle mit Karte.",
+              "tr": "أدفع بالبطاقة."
+            }
+          ]
+        },
+        {
+          "title": "السعر مع السنتات",
+          "text": "اليورو أولاً ثم السنتات، دون قول كلمة \"سنت\".",
+          "examples": [
+            {
+              "de": "3,50 € = drei Euro fünfzig",
+              "tr": "ثلاثة يورو وخمسون"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "market-square-seven": {
+    "ru": {
+      "title": "Практика: в пекарне",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Мужской род после глагола получает einen: der Kuchen → Ich nehme einen Kuchen.",
+          "examples": [
+            {
+              "de": "Ich möchte zwei Brötchen, bitte.",
+              "tr": "Две булочки, пожалуйста."
+            },
+            {
+              "de": "Ich nehme einen Kuchen.",
+              "tr": "Я беру пирог."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: у пекарні",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Чоловічий рід після дієслова отримує einen: der Kuchen → Ich nehme einen Kuchen.",
+          "examples": [
+            {
+              "de": "Ich möchte zwei Brötchen, bitte.",
+              "tr": "Дві булочки, будь ласка."
+            },
+            {
+              "de": "Ich nehme einen Kuchen.",
+              "tr": "Я беру пиріг."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: at the bakery",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "A masculine noun after the verb takes einen: der Kuchen → Ich nehme einen Kuchen.",
+          "examples": [
+            {
+              "de": "Ich möchte zwei Brötchen, bitte.",
+              "tr": "Two rolls, please."
+            },
+            {
+              "de": "Ich nehme einen Kuchen.",
+              "tr": "I’ll take a cake."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: w piekarni",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Rodzaj męski po czasowniku dostaje einen: der Kuchen → Ich nehme einen Kuchen.",
+          "examples": [
+            {
+              "de": "Ich möchte zwei Brötchen, bitte.",
+              "tr": "Poproszę dwie bułki."
+            },
+            {
+              "de": "Ich nehme einen Kuchen.",
+              "tr": "Biorę ciasto."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: en la panadería",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "El masculino después del verbo lleva einen: der Kuchen → Ich nehme einen Kuchen.",
+          "examples": [
+            {
+              "de": "Ich möchte zwei Brötchen, bitte.",
+              "tr": "Dos panecillos, por favor."
+            },
+            {
+              "de": "Ich nehme einen Kuchen.",
+              "tr": "Me llevo un pastel."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : à la boulangerie",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "Un nom masculin après le verbe prend einen : der Kuchen → Ich nehme einen Kuchen.",
+          "examples": [
+            {
+              "de": "Ich möchte zwei Brötchen, bitte.",
+              "tr": "Deux petits pains, s’il vous plaît."
+            },
+            {
+              "de": "Ich nehme einen Kuchen.",
+              "tr": "Je prends un gâteau."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: fırında",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Fiilden sonra eril isim einen alır: der Kuchen → Ich nehme einen Kuchen.",
+          "examples": [
+            {
+              "de": "Ich möchte zwei Brötchen, bitte.",
+              "tr": "İki küçük ekmek, lütfen."
+            },
+            {
+              "de": "Ich nehme einen Kuchen.",
+              "tr": "Bir kek alıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: la brutărie",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Masculinul după verb primește einen: der Kuchen → Ich nehme einen Kuchen.",
+          "examples": [
+            {
+              "de": "Ich möchte zwei Brötchen, bitte.",
+              "tr": "Două chifle, vă rog."
+            },
+            {
+              "de": "Ich nehme einen Kuchen.",
+              "tr": "Iau o prăjitură."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: novvoyxonada",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Fe'ldan keyin erkak rodi einen oladi: der Kuchen → Ich nehme einen Kuchen.",
+          "examples": [
+            {
+              "de": "Ich möchte zwei Brötchen, bitte.",
+              "tr": "Ikkita bulochka, iltimos."
+            },
+            {
+              "de": "Ich nehme einen Kuchen.",
+              "tr": "Men pirog olaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: बेकरी में",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "क्रिया के बाद पुल्लिंग einen लेता है: der Kuchen → Ich nehme einen Kuchen।",
+          "examples": [
+            {
+              "de": "Ich möchte zwei Brötchen, bitte.",
+              "tr": "दो बन, कृपया।"
+            },
+            {
+              "de": "Ich nehme einen Kuchen.",
+              "tr": "मैं एक केक लूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: في المخبز",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "الاسم المذكر بعد الفعل يأخذ einen: der Kuchen → Ich nehme einen Kuchen.",
+          "examples": [
+            {
+              "de": "Ich möchte zwei Brötchen, bitte.",
+              "tr": "خبزتان صغيرتان من فضلك."
+            },
+            {
+              "de": "Ich nehme einen Kuchen.",
+              "tr": "آخذ كعكة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "market-square-eight": {
+    "ru": {
+      "title": "Практика: покупки к празднику",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Повторяем: der → den, ein → einen, kein → keinen. Остальное без изменений.",
+          "examples": [
+            {
+              "de": "Wir haben keinen Saft.",
+              "tr": "У нас нет сока."
+            },
+            {
+              "de": "Wir kaufen ein Geschenk.",
+              "tr": "Мы покупаем подарок."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: покупки до свята",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Повторюємо: der → den, ein → einen, kein → keinen. Решта без змін.",
+          "examples": [
+            {
+              "de": "Wir haben keinen Saft.",
+              "tr": "У нас немає соку."
+            },
+            {
+              "de": "Wir kaufen ein Geschenk.",
+              "tr": "Ми купуємо подарунок."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: party shopping",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "Review: der → den, ein → einen, kein → keinen. Everything else stays the same.",
+          "examples": [
+            {
+              "de": "Wir haben keinen Saft.",
+              "tr": "We have no juice."
+            },
+            {
+              "de": "Wir kaufen ein Geschenk.",
+              "tr": "We’re buying a present."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: zakupy na przyjęcie",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Powtarzamy: der → den, ein → einen, kein → keinen. Reszta bez zmian.",
+          "examples": [
+            {
+              "de": "Wir haben keinen Saft.",
+              "tr": "Nie mamy soku."
+            },
+            {
+              "de": "Wir kaufen ein Geschenk.",
+              "tr": "Kupujemy prezent."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: compras para la fiesta",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Repaso: der → den, ein → einen, kein → keinen. Lo demás no cambia.",
+          "examples": [
+            {
+              "de": "Wir haben keinen Saft.",
+              "tr": "No tenemos zumo."
+            },
+            {
+              "de": "Wir kaufen ein Geschenk.",
+              "tr": "Compramos un regalo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : courses pour la fête",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "Révision : der → den, ein → einen, kein → keinen. Le reste ne change pas.",
+          "examples": [
+            {
+              "de": "Wir haben keinen Saft.",
+              "tr": "Nous n’avons pas de jus."
+            },
+            {
+              "de": "Wir kaufen ein Geschenk.",
+              "tr": "Nous achetons un cadeau."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: parti alışverişi",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Tekrar: der → den, ein → einen, kein → keinen. Gerisi değişmez.",
+          "examples": [
+            {
+              "de": "Wir haben keinen Saft.",
+              "tr": "Meyve suyumuz yok."
+            },
+            {
+              "de": "Wir kaufen ein Geschenk.",
+              "tr": "Bir hediye alıyoruz."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: cumpărături pentru petrecere",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Recapitulăm: der → den, ein → einen, kein → keinen. Restul rămâne la fel.",
+          "examples": [
+            {
+              "de": "Wir haben keinen Saft.",
+              "tr": "Nu avem suc."
+            },
+            {
+              "de": "Wir kaufen ein Geschenk.",
+              "tr": "Cumpărăm un cadou."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: bayram xaridlari",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Takrorlaymiz: der → den, ein → einen, kein → keinen. Qolgani o'zgarmaydi.",
+          "examples": [
+            {
+              "de": "Wir haben keinen Saft.",
+              "tr": "Bizda sharbat yo'q."
+            },
+            {
+              "de": "Wir kaufen ein Geschenk.",
+              "tr": "Biz sovg'a sotib olamiz."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: पार्टी की खरीदारी",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "दोहराव: der → den, ein → einen, kein → keinen। बाकी नहीं बदलता।",
+          "examples": [
+            {
+              "de": "Wir haben keinen Saft.",
+              "tr": "हमारे पास जूस नहीं है।"
+            },
+            {
+              "de": "Wir kaufen ein Geschenk.",
+              "tr": "हम एक तोहफ़ा खरीद रहे हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: مشتريات الحفلة",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "مراجعة: der → den، ein → einen، kein → keinen. والباقي لا يتغير.",
+          "examples": [
+            {
+              "de": "Wir haben keinen Saft.",
+              "tr": "ليس عندنا عصير."
+            },
+            {
+              "de": "Wir kaufen ein Geschenk.",
+              "tr": "نشتري هدية."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "market-square-nine": {
+    "ru": {
+      "title": "Повторение: Akkusativ",
+      "points": [
+        {
+          "title": "Мужской род меняется",
+          "text": "После kaufen, brauchen, nehmen и других: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "Мне нужен йогурт."
+            }
+          ]
+        },
+        {
+          "title": "Остальное не меняется",
+          "text": "die, das и множественное остаются как были.",
+          "examples": [
+            {
+              "de": "Kaufst du eine Orange?",
+              "tr": "Ты покупаешь апельсин?"
+            }
+          ]
+        },
+        {
+          "title": "Количество без артикля",
+          "text": "После ein Kilo, eine Flasche, ein Liter слово без артикля.",
+          "examples": [
+            {
+              "de": "ein Kilo Orangen",
+              "tr": "килограмм апельсинов"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: Akkusativ",
+      "points": [
+        {
+          "title": "Чоловічий рід змінюється",
+          "text": "Після kaufen, brauchen, nehmen та інших: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "Мені потрібен йогурт."
+            }
+          ]
+        },
+        {
+          "title": "Решта не змінюється",
+          "text": "die, das і множина лишаються як були.",
+          "examples": [
+            {
+              "de": "Kaufst du eine Orange?",
+              "tr": "Ти купуєш апельсин?"
+            }
+          ]
+        },
+        {
+          "title": "Кількість без артикля",
+          "text": "Після ein Kilo, eine Flasche, ein Liter слово без артикля.",
+          "examples": [
+            {
+              "de": "ein Kilo Orangen",
+              "tr": "кілограм апельсинів"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: the accusative",
+      "points": [
+        {
+          "title": "Masculine changes",
+          "text": "After kaufen, brauchen, nehmen and others: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "I need a yogurt."
+            }
+          ]
+        },
+        {
+          "title": "The rest stays the same",
+          "text": "die, das and plural stay as they are.",
+          "examples": [
+            {
+              "de": "Kaufst du eine Orange?",
+              "tr": "Are you buying an orange?"
+            }
+          ]
+        },
+        {
+          "title": "Quantity: no article",
+          "text": "After ein Kilo, eine Flasche, ein Liter the noun has no article.",
+          "examples": [
+            {
+              "de": "ein Kilo Orangen",
+              "tr": "a kilo of oranges"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: Akkusativ",
+      "points": [
+        {
+          "title": "Rodzaj męski się zmienia",
+          "text": "Po kaufen, brauchen, nehmen i innych: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "Potrzebuję jogurtu."
+            }
+          ]
+        },
+        {
+          "title": "Reszta się nie zmienia",
+          "text": "die, das i liczba mnoga zostają bez zmian.",
+          "examples": [
+            {
+              "de": "Kaufst du eine Orange?",
+              "tr": "Kupujesz pomarańczę?"
+            }
+          ]
+        },
+        {
+          "title": "Ilość bez rodzajnika",
+          "text": "Po ein Kilo, eine Flasche, ein Liter słowo bez rodzajnika.",
+          "examples": [
+            {
+              "de": "ein Kilo Orangen",
+              "tr": "kilogram pomarańczy"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: el acusativo",
+      "points": [
+        {
+          "title": "El masculino cambia",
+          "text": "Después de kaufen, brauchen, nehmen y otros: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "Necesito un yogur."
+            }
+          ]
+        },
+        {
+          "title": "Lo demás no cambia",
+          "text": "die, das y el plural quedan igual.",
+          "examples": [
+            {
+              "de": "Kaufst du eine Orange?",
+              "tr": "¿Compras una naranja?"
+            }
+          ]
+        },
+        {
+          "title": "Cantidad sin artículo",
+          "text": "Después de ein Kilo, eine Flasche, ein Liter la palabra va sin artículo.",
+          "examples": [
+            {
+              "de": "ein Kilo Orangen",
+              "tr": "un kilo de naranjas"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : l’accusatif",
+      "points": [
+        {
+          "title": "Le masculin change",
+          "text": "Après kaufen, brauchen, nehmen et d’autres : der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "J’ai besoin d’un yaourt."
+            }
+          ]
+        },
+        {
+          "title": "Le reste ne change pas",
+          "text": "die, das et le pluriel restent tels quels.",
+          "examples": [
+            {
+              "de": "Kaufst du eine Orange?",
+              "tr": "Tu achètes une orange ?"
+            }
+          ]
+        },
+        {
+          "title": "Quantité sans article",
+          "text": "Après ein Kilo, eine Flasche, ein Liter, le nom est sans article.",
+          "examples": [
+            {
+              "de": "ein Kilo Orangen",
+              "tr": "un kilo d’oranges"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: Akkusativ",
+      "points": [
+        {
+          "title": "Eril değişir",
+          "text": "kaufen, brauchen, nehmen ve diğerlerinden sonra: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "Bir yoğurda ihtiyacım var."
+            }
+          ]
+        },
+        {
+          "title": "Gerisi değişmez",
+          "text": "die, das ve çoğul aynı kalır.",
+          "examples": [
+            {
+              "de": "Kaufst du eine Orange?",
+              "tr": "Bir portakal mı alıyorsun?"
+            }
+          ]
+        },
+        {
+          "title": "Miktar artikelsiz",
+          "text": "ein Kilo, eine Flasche, ein Liter’den sonra isim artikelsiz.",
+          "examples": [
+            {
+              "de": "ein Kilo Orangen",
+              "tr": "bir kilo portakal"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: acuzativul",
+      "points": [
+        {
+          "title": "Masculinul se schimbă",
+          "text": "După kaufen, brauchen, nehmen și altele: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "Am nevoie de un iaurt."
+            }
+          ]
+        },
+        {
+          "title": "Restul nu se schimbă",
+          "text": "die, das și pluralul rămân la fel.",
+          "examples": [
+            {
+              "de": "Kaufst du eine Orange?",
+              "tr": "Cumperi o portocală?"
+            }
+          ]
+        },
+        {
+          "title": "Cantitate fără articol",
+          "text": "După ein Kilo, eine Flasche, ein Liter cuvântul e fără articol.",
+          "examples": [
+            {
+              "de": "ein Kilo Orangen",
+              "tr": "un kilogram de portocale"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: Akkusativ",
+      "points": [
+        {
+          "title": "Erkak rodi o'zgaradi",
+          "text": "kaufen, brauchen, nehmen va boshqalardan keyin: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "Menga yogurt kerak."
+            }
+          ]
+        },
+        {
+          "title": "Qolgani o'zgarmaydi",
+          "text": "die, das va ko'plik o'zgarmaydi.",
+          "examples": [
+            {
+              "de": "Kaufst du eine Orange?",
+              "tr": "Apelsin sotib olasanmi?"
+            }
+          ]
+        },
+        {
+          "title": "Miqdor artiklsiz",
+          "text": "ein Kilo, eine Flasche, ein Liter dan keyin so'z artiklsiz.",
+          "examples": [
+            {
+              "de": "ein Kilo Orangen",
+              "tr": "bir kilo apelsin"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: Akkusativ",
+      "points": [
+        {
+          "title": "पुल्लिंग बदलता है",
+          "text": "kaufen, brauchen, nehmen आदि के बाद: der → den, ein → einen, kein → keinen।",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "मुझे एक दही चाहिए।"
+            }
+          ]
+        },
+        {
+          "title": "बाकी नहीं बदलता",
+          "text": "die, das और बहुवचन वैसे ही रहते हैं।",
+          "examples": [
+            {
+              "de": "Kaufst du eine Orange?",
+              "tr": "क्या तुम एक संतरा खरीद रहे हो?"
+            }
+          ]
+        },
+        {
+          "title": "मात्रा बिना आर्टिकल",
+          "text": "ein Kilo, eine Flasche, ein Liter के बाद संज्ञा बिना आर्टिकल।",
+          "examples": [
+            {
+              "de": "ein Kilo Orangen",
+              "tr": "एक किलो संतरे"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: حالة المفعول",
+      "points": [
+        {
+          "title": "المذكر يتغير",
+          "text": "بعد kaufen وbrauchen وnehmen وغيرها: der → den، ein → einen، kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "أحتاج زبادي."
+            }
+          ]
+        },
+        {
+          "title": "الباقي لا يتغير",
+          "text": "die وdas والجمع تبقى كما هي.",
+          "examples": [
+            {
+              "de": "Kaufst du eine Orange?",
+              "tr": "هل تشتري برتقالة؟"
+            }
+          ]
+        },
+        {
+          "title": "الكمية بدون أداة",
+          "text": "بعد ein Kilo وeine Flasche وein Liter يأتي الاسم بدون أداة.",
+          "examples": [
+            {
+              "de": "ein Kilo Orangen",
+              "tr": "كيلو برتقال"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "market-square-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "den, einen, keinen",
+          "text": "Мужской род после глагола меняется, остальные нет.",
+          "examples": [
+            {
+              "de": "Wir suchen den Markt.",
+              "tr": "Мы ищем рынок."
+            },
+            {
+              "de": "Wir haben keine Wurst.",
+              "tr": "У нас нет колбасы."
+            }
+          ]
+        },
+        {
+          "title": "Wen? или Was?",
+          "text": "Wen? про людей, Was? про вещи.",
+          "examples": [
+            {
+              "de": "Wen besuchst du heute? Einen Freund.",
+              "tr": "Кого ты навещаешь сегодня? Друга."
+            }
+          ]
+        },
+        {
+          "title": "Количество и цена",
+          "text": "После количества без артикля. На кассе: Das macht...",
+          "examples": [
+            {
+              "de": "Ein Kilo Reis, bitte. Was macht das?",
+              "tr": "Килограмм риса, пожалуйста. Сколько с меня?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "den, einen, keinen",
+          "text": "Чоловічий рід після дієслова змінюється, решта ні.",
+          "examples": [
+            {
+              "de": "Wir suchen den Markt.",
+              "tr": "Ми шукаємо ринок."
+            },
+            {
+              "de": "Wir haben keine Wurst.",
+              "tr": "У нас немає ковбаси."
+            }
+          ]
+        },
+        {
+          "title": "Wen? чи Was?",
+          "text": "Wen? про людей, Was? про речі.",
+          "examples": [
+            {
+              "de": "Wen besuchst du heute? Einen Freund.",
+              "tr": "Кого ти відвідуєш сьогодні? Друга."
+            }
+          ]
+        },
+        {
+          "title": "Кількість і ціна",
+          "text": "Після кількості без артикля. На касі: Das macht...",
+          "examples": [
+            {
+              "de": "Ein Kilo Reis, bitte. Was macht das?",
+              "tr": "Кілограм рису, будь ласка. Скільки з мене?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "den, einen, keinen",
+          "text": "Masculine changes after the verb, the others don’t.",
+          "examples": [
+            {
+              "de": "Wir suchen den Markt.",
+              "tr": "We’re looking for the market."
+            },
+            {
+              "de": "Wir haben keine Wurst.",
+              "tr": "We have no sausage."
+            }
+          ]
+        },
+        {
+          "title": "Wen? or Was?",
+          "text": "Wen? for people, Was? for things.",
+          "examples": [
+            {
+              "de": "Wen besuchst du heute? Einen Freund.",
+              "tr": "Who are you visiting today? A friend."
+            }
+          ]
+        },
+        {
+          "title": "Quantity and price",
+          "text": "No article after a quantity. At the checkout: Das macht...",
+          "examples": [
+            {
+              "de": "Ein Kilo Reis, bitte. Was macht das?",
+              "tr": "A kilo of rice, please. How much is that?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "den, einen, keinen",
+          "text": "Rodzaj męski po czasowniku się zmienia, reszta nie.",
+          "examples": [
+            {
+              "de": "Wir suchen den Markt.",
+              "tr": "Szukamy targu."
+            },
+            {
+              "de": "Wir haben keine Wurst.",
+              "tr": "Nie mamy kiełbasy."
+            }
+          ]
+        },
+        {
+          "title": "Wen? czy Was?",
+          "text": "Wen? o ludzi, Was? o rzeczy.",
+          "examples": [
+            {
+              "de": "Wen besuchst du heute? Einen Freund.",
+              "tr": "Kogo dziś odwiedzasz? Przyjaciela."
+            }
+          ]
+        },
+        {
+          "title": "Ilość i cena",
+          "text": "Po ilości bez rodzajnika. Przy kasie: Das macht...",
+          "examples": [
+            {
+              "de": "Ein Kilo Reis, bitte. Was macht das?",
+              "tr": "Kilogram ryżu, proszę. Ile płacę?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "den, einen, keinen",
+          "text": "El masculino cambia después del verbo, los demás no.",
+          "examples": [
+            {
+              "de": "Wir suchen den Markt.",
+              "tr": "Buscamos el mercado."
+            },
+            {
+              "de": "Wir haben keine Wurst.",
+              "tr": "No tenemos embutido."
+            }
+          ]
+        },
+        {
+          "title": "¿Wen? o Was?",
+          "text": "Wen? para personas, Was? para cosas.",
+          "examples": [
+            {
+              "de": "Wen besuchst du heute? Einen Freund.",
+              "tr": "¿A quién visitas hoy? A un amigo."
+            }
+          ]
+        },
+        {
+          "title": "Cantidad y precio",
+          "text": "Sin artículo tras la cantidad. En la caja: Das macht...",
+          "examples": [
+            {
+              "de": "Ein Kilo Reis, bitte. Was macht das?",
+              "tr": "Un kilo de arroz, por favor. ¿Cuánto es?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "den, einen, keinen",
+          "text": "Le masculin change après le verbe, les autres non.",
+          "examples": [
+            {
+              "de": "Wir suchen den Markt.",
+              "tr": "Nous cherchons le marché."
+            },
+            {
+              "de": "Wir haben keine Wurst.",
+              "tr": "Nous n’avons pas de saucisse."
+            }
+          ]
+        },
+        {
+          "title": "Wen ? ou Was ?",
+          "text": "Wen ? pour les personnes, Was ? pour les objets.",
+          "examples": [
+            {
+              "de": "Wen besuchst du heute? Einen Freund.",
+              "tr": "Qui vas-tu voir aujourd’hui ? Un ami."
+            }
+          ]
+        },
+        {
+          "title": "Quantité et prix",
+          "text": "Pas d’article après une quantité. À la caisse : Das macht...",
+          "examples": [
+            {
+              "de": "Ein Kilo Reis, bitte. Was macht das?",
+              "tr": "Un kilo de riz, s’il vous plaît. Ça fait combien ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "den, einen, keinen",
+          "text": "Fiilden sonra eril değişir, diğerleri değişmez.",
+          "examples": [
+            {
+              "de": "Wir suchen den Markt.",
+              "tr": "Pazarı arıyoruz."
+            },
+            {
+              "de": "Wir haben keine Wurst.",
+              "tr": "Sucuğumuz yok."
+            }
+          ]
+        },
+        {
+          "title": "Wen? mi, Was? mı",
+          "text": "Wen? insanlar için, Was? eşyalar için.",
+          "examples": [
+            {
+              "de": "Wen besuchst du heute? Einen Freund.",
+              "tr": "Bugün kimi ziyaret ediyorsun? Bir arkadaşı."
+            }
+          ]
+        },
+        {
+          "title": "Miktar ve fiyat",
+          "text": "Miktardan sonra artikel yok. Kasada: Das macht...",
+          "examples": [
+            {
+              "de": "Ein Kilo Reis, bitte. Was macht das?",
+              "tr": "Bir kilo pirinç, lütfen. Ne kadar tuttu?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "den, einen, keinen",
+          "text": "Masculinul se schimbă după verb, celelalte nu.",
+          "examples": [
+            {
+              "de": "Wir suchen den Markt.",
+              "tr": "Căutăm piața."
+            },
+            {
+              "de": "Wir haben keine Wurst.",
+              "tr": "Nu avem cârnați."
+            }
+          ]
+        },
+        {
+          "title": "Wen? sau Was?",
+          "text": "Wen? pentru oameni, Was? pentru lucruri.",
+          "examples": [
+            {
+              "de": "Wen besuchst du heute? Einen Freund.",
+              "tr": "Pe cine vizitezi azi? Un prieten."
+            }
+          ]
+        },
+        {
+          "title": "Cantitate și preț",
+          "text": "După cantitate fără articol. La casă: Das macht...",
+          "examples": [
+            {
+              "de": "Ein Kilo Reis, bitte. Was macht das?",
+              "tr": "Un kilogram de orez, vă rog. Cât face?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "den, einen, keinen",
+          "text": "Fe'ldan keyin erkak rodi o'zgaradi, qolganlari yo'q.",
+          "examples": [
+            {
+              "de": "Wir suchen den Markt.",
+              "tr": "Biz bozorni qidiryapmiz."
+            },
+            {
+              "de": "Wir haben keine Wurst.",
+              "tr": "Bizda kolbasa yo'q."
+            }
+          ]
+        },
+        {
+          "title": "Wen? yoki Was?",
+          "text": "Wen? odamlar uchun, Was? narsalar uchun.",
+          "examples": [
+            {
+              "de": "Wen besuchst du heute? Einen Freund.",
+              "tr": "Bugun kimni ko'rgani borasan? Bir do'stimni."
+            }
+          ]
+        },
+        {
+          "title": "Miqdor va narx",
+          "text": "Miqdordan keyin artiklsiz. Kassada: Das macht...",
+          "examples": [
+            {
+              "de": "Ein Kilo Reis, bitte. Was macht das?",
+              "tr": "Bir kilo guruch, iltimos. Qancha bo‘ldi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "den, einen, keinen",
+          "text": "क्रिया के बाद पुल्लिंग बदलता है, बाकी नहीं।",
+          "examples": [
+            {
+              "de": "Wir suchen den Markt.",
+              "tr": "हम बाज़ार ढूँढ रहे हैं।"
+            },
+            {
+              "de": "Wir haben keine Wurst.",
+              "tr": "हमारे पास सॉसेज नहीं है।"
+            }
+          ]
+        },
+        {
+          "title": "Wen? या Was?",
+          "text": "Wen? लोगों के लिए, Was? चीज़ों के लिए।",
+          "examples": [
+            {
+              "de": "Wen besuchst du heute? Einen Freund.",
+              "tr": "आज तुम किससे मिलने जा रहे हो? एक दोस्त से।"
+            }
+          ]
+        },
+        {
+          "title": "मात्रा और कीमत",
+          "text": "मात्रा के बाद आर्टिकल नहीं। काउंटर पर: Das macht...",
+          "examples": [
+            {
+              "de": "Ein Kilo Reis, bitte. Was macht das?",
+              "tr": "एक किलो चावल, कृपया। कितने हुए?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "den وeinen وkeinen",
+          "text": "المذكر يتغير بعد الفعل، والبقية لا.",
+          "examples": [
+            {
+              "de": "Wir suchen den Markt.",
+              "tr": "نبحث عن السوق."
+            },
+            {
+              "de": "Wir haben keine Wurst.",
+              "tr": "ليس عندنا نقانق."
+            }
+          ]
+        },
+        {
+          "title": "Wen؟ أم Was؟",
+          "text": "Wen؟ للأشخاص، وWas؟ للأشياء.",
+          "examples": [
+            {
+              "de": "Wen besuchst du heute? Einen Freund.",
+              "tr": "من تزور اليوم؟ صديقاً."
+            }
+          ]
+        },
+        {
+          "title": "الكمية والسعر",
+          "text": "لا أداة بعد الكمية. وعند الصندوق: Das macht...",
+          "examples": [
+            {
+              "de": "Ein Kilo Reis, bitte. Was macht das?",
+              "tr": "كيلو أرز من فضلك. كم المجموع؟"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

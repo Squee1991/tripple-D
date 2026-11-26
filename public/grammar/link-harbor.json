@@ -1,0 +1,2508 @@
+{
+  "link-harbor-one": {
+    "ru": {
+      "title": "Не только..., но и...",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch значит «не только..., но и». nicht ..., sondern значит «не..., а». Перед sondern всегда запятая.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Он говорит не только по-немецки, но и по-английски."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Не тільки..., а й...",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch означає «не тільки..., а й». nicht ..., sondern означає «не..., а». Перед sondern завжди кома.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Він говорить не тільки німецькою, а й англійською."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Not only ... but also",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch means \"not only ... but also\". nicht ..., sondern means \"not ... but\". Always a comma before sondern.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "He speaks not only German but also English."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Nie tylko..., ale i...",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch znaczy „nie tylko..., ale i”. nicht ..., sondern znaczy „nie..., lecz”. Przed sondern zawsze przecinek.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Mówi nie tylko po niemiecku, ale i po angielsku."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "No solo..., sino también",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch significa \"no solo..., sino también\". nicht ..., sondern significa \"no..., sino\". Siempre coma antes de sondern.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "No solo habla alemán, sino también inglés."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Non seulement..., mais aussi",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch veut dire « non seulement..., mais aussi ». nicht ..., sondern veut dire « pas..., mais ». Toujours une virgule avant sondern.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Il parle non seulement allemand, mais aussi anglais."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sadece değil, aynı zamanda",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch \"sadece ... değil, aynı zamanda\" demektir. nicht ..., sondern \"... değil, ...\". sondern’dan önce hep virgül.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Sadece Almanca değil, İngilizce de konuşuyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Nu doar..., ci și",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch înseamnă „nu doar..., ci și”. nicht ..., sondern înseamnă „nu..., ci”. Înainte de sondern mereu virgulă.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Vorbește nu doar germana, ci și engleza."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nafaqat..., balki",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch \"nafaqat..., balki\" degani. nicht ..., sondern \"... emas, balki\". sondern oldidan doim vergul.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "U nafaqat nemischa, balki inglizcha ham gapiradi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "न सिर्फ़..., बल्कि",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch मतलब \"न सिर्फ़..., बल्कि\"। nicht ..., sondern मतलब \"... नहीं, बल्कि\"। sondern से पहले हमेशा कॉमा।",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "वह न सिर्फ़ जर्मन, बल्कि अंग्रेज़ी भी बोलता है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ليس فقط...، بل",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch تعني \"ليس فقط...، بل أيضاً\". وnicht ..., sondern تعني \"ليس...، بل\". وقبل sondern فاصلة دائماً.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "يتكلم ليس الألمانية فقط بل الإنجليزية أيضاً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "link-harbor-two": {
+    "ru": {
+      "title": "Или..., или...",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: одно из двух. weder ... noch: ни то, ни другое, nicht и kein уже не нужны.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Мы поедем или на поезде, или на машине."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Я не пью ни кофе, ни чай."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Або..., або...",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: одне з двох. weder ... noch: ні те, ні інше, nicht і kein уже не потрібні.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Ми поїдемо або потягом, або машиною."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Я не п’ю ні кави, ні чаю."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Either ... or",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: one of the two. weder ... noch: neither one, no nicht or kein needed.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "We’ll go either by train or by car."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "I drink neither coffee nor tea."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Albo..., albo...",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: jedno z dwóch. weder ... noch: ani jedno, ani drugie, nicht i kein już niepotrzebne.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Pojedziemy albo pociągiem, albo samochodem."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Nie piję ani kawy, ani herbaty."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "O..., o...",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: una de las dos. weder ... noch: ninguna, ya no hace falta nicht ni kein.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Iremos o en tren o en coche."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "No bebo ni café ni té."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Soit..., soit...",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder : l’un ou l’autre. weder ... noch : ni l’un ni l’autre, plus besoin de nicht ni kein.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Nous irons soit en train, soit en voiture."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Je ne bois ni café ni thé."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Ya ... ya da",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: ikisinden biri. weder ... noch: hiçbiri, nicht ve kein gerekmez.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Ya trenle ya da arabayla gideceğiz."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Ne kahve ne çay içerim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Fie..., fie...",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: una din două. weder ... noch: niciuna, nu mai trebuie nicht sau kein.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Mergem fie cu trenul, fie cu mașina."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Nu beau nici cafea, nici ceai."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Yo..., yo...",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: ikkisidan biri. weder ... noch: hech biri, nicht va kein kerak emas.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Yo poyezdda, yo mashinada boramiz."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Na qahva, na choy ichaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "या तो..., या",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: दोनों में से एक। weder ... noch: कोई भी नहीं, nicht और kein की ज़रूरत नहीं।",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "हम या तो ट्रेन से जाएँगे या गाड़ी से।"
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "मैं न कॉफ़ी पीता हूँ, न चाय।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "إما...، أو",
+      "points": [
+        {
+          "title": "entweder ... oder وweder ... noch",
+          "text": "entweder ... oder: أحد الاثنين. وweder ... noch: لا هذا ولا ذاك، ولا حاجة إلى nicht أو kein.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "سنسافر إما بالقطار أو بالسيارة."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "لا أشرب القهوة ولا الشاي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "link-harbor-three": {
+    "ru": {
+      "title": "Ни..., ни...",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: одно из двух. weder ... noch: ни то, ни другое, nicht и kein уже не нужны.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Мы поедем или на поезде, или на машине."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Я не пью ни кофе, ни чай."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Ні..., ні...",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: одне з двох. weder ... noch: ні те, ні інше, nicht і kein уже не потрібні.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Ми поїдемо або потягом, або машиною."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Я не п’ю ні кави, ні чаю."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Neither ... nor",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: one of the two. weder ... noch: neither one, no nicht or kein needed.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "We’ll go either by train or by car."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "I drink neither coffee nor tea."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Ani..., ani...",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: jedno z dwóch. weder ... noch: ani jedno, ani drugie, nicht i kein już niepotrzebne.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Pojedziemy albo pociągiem, albo samochodem."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Nie piję ani kawy, ani herbaty."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Ni..., ni...",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: una de las dos. weder ... noch: ninguna, ya no hace falta nicht ni kein.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Iremos o en tren o en coche."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "No bebo ni café ni té."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Ni..., ni...",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder : l’un ou l’autre. weder ... noch : ni l’un ni l’autre, plus besoin de nicht ni kein.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Nous irons soit en train, soit en voiture."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Je ne bois ni café ni thé."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Ne ... ne",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: ikisinden biri. weder ... noch: hiçbiri, nicht ve kein gerekmez.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Ya trenle ya da arabayla gideceğiz."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Ne kahve ne çay içerim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Nici..., nici...",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: una din două. weder ... noch: niciuna, nu mai trebuie nicht sau kein.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Mergem fie cu trenul, fie cu mașina."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Nu beau nici cafea, nici ceai."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Na..., na...",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: ikkisidan biri. weder ... noch: hech biri, nicht va kein kerak emas.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Yo poyezdda, yo mashinada boramiz."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Na qahva, na choy ichaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "न..., न",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: दोनों में से एक। weder ... noch: कोई भी नहीं, nicht और kein की ज़रूरत नहीं।",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "हम या तो ट्रेन से जाएँगे या गाड़ी से।"
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "मैं न कॉफ़ी पीता हूँ, न चाय।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "لا...، ولا",
+      "points": [
+        {
+          "title": "entweder ... oder وweder ... noch",
+          "text": "entweder ... oder: أحد الاثنين. وweder ... noch: لا هذا ولا ذاك، ولا حاجة إلى nicht أو kein.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "سنسافر إما بالقطار أو بالسيارة."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "لا أشرب القهوة ولا الشاي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "link-harbor-four": {
+    "ru": {
+      "title": "Чем..., тем...",
+      "points": [
+        {
+          "title": "je ..., desto ...",
+          "text": "je + сравнительная степень..., desto + сравнительная степень значит «чем..., тем». После je глагол в конце, после desto сразу глагол.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Чем больше я учусь, тем лучше говорю."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Чим..., тим...",
+      "points": [
+        {
+          "title": "je ..., desto ...",
+          "text": "je + вищий ступінь..., desto + вищий ступінь означає «чим..., тим». Після je дієслово в кінці, після desto одразу дієслово.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Чим більше я вчуся, тим краще говорю."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The more ..., the more",
+      "points": [
+        {
+          "title": "je ..., desto ...",
+          "text": "je + comparative..., desto + comparative means \"the more ..., the more\". After je the verb goes last, after desto the verb comes right away.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "The more I study, the better I speak."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Im..., tym...",
+      "points": [
+        {
+          "title": "je ..., desto ...",
+          "text": "je + stopień wyższy..., desto + stopień wyższy znaczy „im..., tym”. Po je czasownik na końcu, po desto od razu czasownik.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Im więcej się uczę, tym lepiej mówię."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Cuanto más..., más",
+      "points": [
+        {
+          "title": "je ..., desto ...",
+          "text": "je + comparativo..., desto + comparativo significa \"cuanto más..., más\". Tras je, verbo al final; tras desto, verbo enseguida.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Cuanto más estudio, mejor hablo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Plus..., plus",
+      "points": [
+        {
+          "title": "je ..., desto ...",
+          "text": "je + comparatif..., desto + comparatif veut dire « plus..., plus ». Après je, verbe à la fin ; après desto, verbe tout de suite.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Plus j’apprends, mieux je parle."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Ne kadar ..., o kadar",
+      "points": [
+        {
+          "title": "je ..., desto ...",
+          "text": "je + üstünlük..., desto + üstünlük \"ne kadar ..., o kadar\". je’den sonra fiil sonda, desto’dan sonra fiil hemen.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Ne kadar çok çalışırsam o kadar iyi konuşurum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cu cât..., cu atât",
+      "points": [
+        {
+          "title": "je ..., desto ...",
+          "text": "je + comparativ..., desto + comparativ înseamnă „cu cât..., cu atât”. După je verbul la final, după desto verbul imediat.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Cu cât învăț mai mult, cu atât vorbesc mai bine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qancha..., shuncha",
+      "points": [
+        {
+          "title": "je ..., desto ...",
+          "text": "je + qiyosiy daraja..., desto + qiyosiy daraja \"qancha..., shuncha\". je dan keyin fe'l oxirida, desto dan keyin fe'l darhol.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Qancha ko'p o'qisam, shuncha yaxshi gapiraman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "जितना..., उतना",
+      "points": [
+        {
+          "title": "je ..., desto ...",
+          "text": "je + तुलनात्मक..., desto + तुलनात्मक मतलब \"जितना..., उतना\"। je के बाद क्रिया अंत में, desto के बाद क्रिया तुरंत।",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "जितना ज़्यादा सीखता हूँ, उतना बेहतर बोलता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "كلما...، كلما",
+      "points": [
+        {
+          "title": "je ..., desto ...",
+          "text": "je + صيغة المقارنة...، desto + صيغة المقارنة تعني \"كلما...، كلما\". بعد je الفعل في الآخر، وبعد desto الفعل فوراً.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "كلما تعلمت أكثر تكلمت أفضل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "link-harbor-five": {
+    "ru": {
+      "title": "Вместо того чтобы",
+      "points": [
+        {
+          "title": "statt ... zu: вместо того чтобы",
+          "text": "statt ... zu + инфинитив значит «вместо того чтобы». Устроено как ohne ... zu: zu и глагол в конце.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "Он играет вместо того, чтобы учиться."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Замість того щоб",
+      "points": [
+        {
+          "title": "statt ... zu: замість того щоб",
+          "text": "statt ... zu + інфінітив означає «замість того щоб». Побудовано як ohne ... zu: zu і дієслово в кінці.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "Він грає замість того, щоб учитися."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Instead of",
+      "points": [
+        {
+          "title": "statt ... zu: instead of",
+          "text": "statt ... zu + infinitive means \"instead of doing\". It works like ohne ... zu: zu and the verb at the end.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "He plays instead of studying."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Zamiast",
+      "points": [
+        {
+          "title": "statt ... zu: zamiast",
+          "text": "statt ... zu + bezokolicznik znaczy „zamiast”. Działa jak ohne ... zu: zu i czasownik na końcu.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "Bawi się zamiast się uczyć."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "En lugar de",
+      "points": [
+        {
+          "title": "statt ... zu: en lugar de",
+          "text": "statt ... zu + infinitivo significa \"en lugar de\". Funciona como ohne ... zu: zu y el verbo al final.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "Juega en lugar de estudiar."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Au lieu de",
+      "points": [
+        {
+          "title": "statt ... zu : au lieu de",
+          "text": "statt ... zu + infinitif veut dire « au lieu de ». Ça marche comme ohne ... zu : zu et le verbe à la fin.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "Il joue au lieu d’étudier."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yerine",
+      "points": [
+        {
+          "title": "statt ... zu: -mek yerine",
+          "text": "statt ... zu + mastar \"-mek yerine\" demektir. ohne ... zu gibi kurulur: zu ve fiil sonda.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "Ders çalışmak yerine oynuyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "În loc să",
+      "points": [
+        {
+          "title": "statt ... zu: în loc să",
+          "text": "statt ... zu + infinitiv înseamnă „în loc să”. Funcționează ca ohne ... zu: zu și verbul la final.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "Se joacă în loc să învețe."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "O'rniga",
+      "points": [
+        {
+          "title": "statt ... zu: ... o'rniga",
+          "text": "statt ... zu + infinitiv \"... qilish o'rniga\" degani. ohne ... zu kabi tuziladi: zu va fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "U o'qish o'rniga o'ynayapti."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "के बजाय",
+      "points": [
+        {
+          "title": "statt ... zu: के बजाय",
+          "text": "statt ... zu + इन्फ़िनिटिव मतलब \"करने के बजाय\"। ohne ... zu की तरह: zu और क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "वह पढ़ने के बजाय खेल रहा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "بدلاً من",
+      "points": [
+        {
+          "title": "statt ... zu: بدلاً من",
+          "text": "statt ... zu + المصدر تعني \"بدلاً من\". وتُبنى مثل ohne ... zu: zu والفعل في الآخر.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "يلعب بدلاً من أن يدرس."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "link-harbor-six": {
+    "ru": {
+      "title": "С тех пор как, пока не, как только",
+      "points": [
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: с тех пор как. bis: пока не. sobald: как только. Глагол в конце, как после wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "С тех пор как я живу в Берлине, я много говорю по-немецки."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Відтоді як, доки не, щойно",
+      "points": [
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: відтоді як. bis: доки не. sobald: щойно. Дієслово в кінці, як після wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "Відтоді як я живу в Берліні, я багато говорю німецькою."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Since, until, as soon as",
+      "points": [
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: since. bis: until. sobald: as soon as. The verb goes last, as after wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "Since I’ve been living in Berlin, I speak a lot of German."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Odkąd, dopóki nie, gdy tylko",
+      "points": [
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: odkąd. bis: dopóki nie. sobald: gdy tylko. Czasownik na końcu, jak po wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "Odkąd mieszkam w Berlinie, dużo mówię po niemiecku."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Desde que, hasta que, en cuanto",
+      "points": [
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: desde que. bis: hasta que. sobald: en cuanto. Verbo al final, como tras wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "Desde que vivo en Berlín, hablo mucho alemán."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Depuis que, jusqu’à ce que, dès que",
+      "points": [
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem : depuis que. bis : jusqu’à ce que. sobald : dès que. Verbe à la fin, comme après wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "Depuis que j’habite à Berlin, je parle beaucoup allemand."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Beri, kadar, -ir -mez",
+      "points": [
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: -dığından beri. bis: -ene kadar. sobald: -ir -mez. Fiil sonda, wenn’den sonraki gibi.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "Berlin’de yaşadığımdan beri çok Almanca konuşuyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "De când, până când, imediat ce",
+      "points": [
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: de când. bis: până când. sobald: imediat ce. Verbul la final, ca după wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "De când locuiesc în Berlin, vorbesc mult germana."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Beri, guncha, bilan",
+      "points": [
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: ...dan beri. bis: ...guncha. sobald: ...ishi bilan. Fe'l oxirida, wenn dan keyingidek.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "Berlinda yashaganimdan beri ko'p nemischa gapiraman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "जब से, जब तक, जैसे ही",
+      "points": [
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: जब से। bis: जब तक नहीं। sobald: जैसे ही। क्रिया अंत में, wenn की तरह।",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "जब से मैं बर्लिन में रहता हूँ, बहुत जर्मन बोलता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "منذ أن، حتى، بمجرد أن",
+      "points": [
+        {
+          "title": "seitdem وbis وsobald",
+          "text": "seitdem: منذ أن. وbis: حتى. وsobald: بمجرد أن. والفعل في الآخر كما بعد wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "منذ أن أسكن في برلين أتكلم الألمانية كثيراً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "link-harbor-seven": {
+    "ru": {
+      "title": "Практика: выбор профессии",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: одно из двух. weder ... noch: ни то, ни другое, nicht и kein уже не нужны.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Мы поедем или на поезде, или на машине."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Я не пью ни кофе, ни чай."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + сравнительная степень..., desto + сравнительная степень значит «чем..., тем». После je глагол в конце, после desto сразу глагол.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Чем больше я учусь, тем лучше говорю."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: вибір професії",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: одне з двох. weder ... noch: ні те, ні інше, nicht і kein уже не потрібні.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Ми поїдемо або потягом, або машиною."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Я не п’ю ні кави, ні чаю."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + вищий ступінь..., desto + вищий ступінь означає «чим..., тим». Після je дієслово в кінці, після desto одразу дієслово.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Чим більше я вчуся, тим краще говорю."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: choosing a career",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: one of the two. weder ... noch: neither one, no nicht or kein needed.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "We’ll go either by train or by car."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "I drink neither coffee nor tea."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + comparative..., desto + comparative means \"the more ..., the more\". After je the verb goes last, after desto the verb comes right away.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "The more I study, the better I speak."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: wybór zawodu",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: jedno z dwóch. weder ... noch: ani jedno, ani drugie, nicht i kein już niepotrzebne.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Pojedziemy albo pociągiem, albo samochodem."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Nie piję ani kawy, ani herbaty."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + stopień wyższy..., desto + stopień wyższy znaczy „im..., tym”. Po je czasownik na końcu, po desto od razu czasownik.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Im więcej się uczę, tym lepiej mówię."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: elegir profesión",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: una de las dos. weder ... noch: ninguna, ya no hace falta nicht ni kein.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Iremos o en tren o en coche."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "No bebo ni café ni té."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + comparativo..., desto + comparativo significa \"cuanto más..., más\". Tras je, verbo al final; tras desto, verbo enseguida.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Cuanto más estudio, mejor hablo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : choisir un métier",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder : l’un ou l’autre. weder ... noch : ni l’un ni l’autre, plus besoin de nicht ni kein.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Nous irons soit en train, soit en voiture."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Je ne bois ni café ni thé."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + comparatif..., desto + comparatif veut dire « plus..., plus ». Après je, verbe à la fin ; après desto, verbe tout de suite.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Plus j’apprends, mieux je parle."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: meslek seçimi",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: ikisinden biri. weder ... noch: hiçbiri, nicht ve kein gerekmez.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Ya trenle ya da arabayla gideceğiz."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Ne kahve ne çay içerim."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + üstünlük..., desto + üstünlük \"ne kadar ..., o kadar\". je’den sonra fiil sonda, desto’dan sonra fiil hemen.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Ne kadar çok çalışırsam o kadar iyi konuşurum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: alegerea profesiei",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: una din două. weder ... noch: niciuna, nu mai trebuie nicht sau kein.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Mergem fie cu trenul, fie cu mașina."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Nu beau nici cafea, nici ceai."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + comparativ..., desto + comparativ înseamnă „cu cât..., cu atât”. După je verbul la final, după desto verbul imediat.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Cu cât învăț mai mult, cu atât vorbesc mai bine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: kasb tanlash",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: ikkisidan biri. weder ... noch: hech biri, nicht va kein kerak emas.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Yo poyezdda, yo mashinada boramiz."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Na qahva, na choy ichaman."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + qiyosiy daraja..., desto + qiyosiy daraja \"qancha..., shuncha\". je dan keyin fe'l oxirida, desto dan keyin fe'l darhol.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Qancha ko'p o'qisam, shuncha yaxshi gapiraman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: पेशा चुनना",
+      "points": [
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: दोनों में से एक। weder ... noch: कोई भी नहीं, nicht और kein की ज़रूरत नहीं।",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "हम या तो ट्रेन से जाएँगे या गाड़ी से।"
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "मैं न कॉफ़ी पीता हूँ, न चाय।"
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + तुलनात्मक..., desto + तुलनात्मक मतलब \"जितना..., उतना\"। je के बाद क्रिया अंत में, desto के बाद क्रिया तुरंत।",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "जितना ज़्यादा सीखता हूँ, उतना बेहतर बोलता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: اختيار المهنة",
+      "points": [
+        {
+          "title": "entweder ... oder وweder ... noch",
+          "text": "entweder ... oder: أحد الاثنين. وweder ... noch: لا هذا ولا ذاك، ولا حاجة إلى nicht أو kein.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "سنسافر إما بالقطار أو بالسيارة."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "لا أشرب القهوة ولا الشاي."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + صيغة المقارنة...، desto + صيغة المقارنة تعني \"كلما...، كلما\". بعد je الفعل في الآخر، وبعد desto الفعل فوراً.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "كلما تعلمت أكثر تكلمت أفضل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "link-harbor-eight": {
+    "ru": {
+      "title": "Практика: жизнь в новом городе",
+      "points": [
+        {
+          "title": "statt ... zu: вместо того чтобы",
+          "text": "statt ... zu + инфинитив значит «вместо того чтобы». Устроено как ohne ... zu: zu и глагол в конце.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "Он играет вместо того, чтобы учиться."
+            }
+          ]
+        },
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: с тех пор как. bis: пока не. sobald: как только. Глагол в конце, как после wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "С тех пор как я живу в Берлине, я много говорю по-немецки."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: життя в новому місті",
+      "points": [
+        {
+          "title": "statt ... zu: замість того щоб",
+          "text": "statt ... zu + інфінітив означає «замість того щоб». Побудовано як ohne ... zu: zu і дієслово в кінці.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "Він грає замість того, щоб учитися."
+            }
+          ]
+        },
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: відтоді як. bis: доки не. sobald: щойно. Дієслово в кінці, як після wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "Відтоді як я живу в Берліні, я багато говорю німецькою."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: life in a new city",
+      "points": [
+        {
+          "title": "statt ... zu: instead of",
+          "text": "statt ... zu + infinitive means \"instead of doing\". It works like ohne ... zu: zu and the verb at the end.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "He plays instead of studying."
+            }
+          ]
+        },
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: since. bis: until. sobald: as soon as. The verb goes last, as after wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "Since I’ve been living in Berlin, I speak a lot of German."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: życie w nowym mieście",
+      "points": [
+        {
+          "title": "statt ... zu: zamiast",
+          "text": "statt ... zu + bezokolicznik znaczy „zamiast”. Działa jak ohne ... zu: zu i czasownik na końcu.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "Bawi się zamiast się uczyć."
+            }
+          ]
+        },
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: odkąd. bis: dopóki nie. sobald: gdy tylko. Czasownik na końcu, jak po wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "Odkąd mieszkam w Berlinie, dużo mówię po niemiecku."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: vida en una ciudad nueva",
+      "points": [
+        {
+          "title": "statt ... zu: en lugar de",
+          "text": "statt ... zu + infinitivo significa \"en lugar de\". Funciona como ohne ... zu: zu y el verbo al final.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "Juega en lugar de estudiar."
+            }
+          ]
+        },
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: desde que. bis: hasta que. sobald: en cuanto. Verbo al final, como tras wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "Desde que vivo en Berlín, hablo mucho alemán."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : la vie dans une nouvelle ville",
+      "points": [
+        {
+          "title": "statt ... zu : au lieu de",
+          "text": "statt ... zu + infinitif veut dire « au lieu de ». Ça marche comme ohne ... zu : zu et le verbe à la fin.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "Il joue au lieu d’étudier."
+            }
+          ]
+        },
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem : depuis que. bis : jusqu’à ce que. sobald : dès que. Verbe à la fin, comme après wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "Depuis que j’habite à Berlin, je parle beaucoup allemand."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: yeni şehirde hayat",
+      "points": [
+        {
+          "title": "statt ... zu: -mek yerine",
+          "text": "statt ... zu + mastar \"-mek yerine\" demektir. ohne ... zu gibi kurulur: zu ve fiil sonda.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "Ders çalışmak yerine oynuyor."
+            }
+          ]
+        },
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: -dığından beri. bis: -ene kadar. sobald: -ir -mez. Fiil sonda, wenn’den sonraki gibi.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "Berlin’de yaşadığımdan beri çok Almanca konuşuyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: viața într-un oraș nou",
+      "points": [
+        {
+          "title": "statt ... zu: în loc să",
+          "text": "statt ... zu + infinitiv înseamnă „în loc să”. Funcționează ca ohne ... zu: zu și verbul la final.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "Se joacă în loc să învețe."
+            }
+          ]
+        },
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: de când. bis: până când. sobald: imediat ce. Verbul la final, ca după wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "De când locuiesc în Berlin, vorbesc mult germana."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: yangi shahardagi hayot",
+      "points": [
+        {
+          "title": "statt ... zu: ... o'rniga",
+          "text": "statt ... zu + infinitiv \"... qilish o'rniga\" degani. ohne ... zu kabi tuziladi: zu va fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "U o'qish o'rniga o'ynayapti."
+            }
+          ]
+        },
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: ...dan beri. bis: ...guncha. sobald: ...ishi bilan. Fe'l oxirida, wenn dan keyingidek.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "Berlinda yashaganimdan beri ko'p nemischa gapiraman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: नए शहर में ज़िंदगी",
+      "points": [
+        {
+          "title": "statt ... zu: के बजाय",
+          "text": "statt ... zu + इन्फ़िनिटिव मतलब \"करने के बजाय\"। ohne ... zu की तरह: zu और क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "वह पढ़ने के बजाय खेल रहा है।"
+            }
+          ]
+        },
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: जब से। bis: जब तक नहीं। sobald: जैसे ही। क्रिया अंत में, wenn की तरह।",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "जब से मैं बर्लिन में रहता हूँ, बहुत जर्मन बोलता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: الحياة في مدينة جديدة",
+      "points": [
+        {
+          "title": "statt ... zu: بدلاً من",
+          "text": "statt ... zu + المصدر تعني \"بدلاً من\". وتُبنى مثل ohne ... zu: zu والفعل في الآخر.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "يلعب بدلاً من أن يدرس."
+            }
+          ]
+        },
+        {
+          "title": "seitdem وbis وsobald",
+          "text": "seitdem: منذ أن. وbis: حتى. وsobald: بمجرد أن. والفعل في الآخر كما بعد wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "منذ أن أسكن في برلين أتكلم الألمانية كثيراً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "link-harbor-nine": {
+    "ru": {
+      "title": "Повторение: связки",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch значит «не только..., но и». nicht ..., sondern значит «не..., а». Перед sondern всегда запятая.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Он говорит не только по-немецки, но и по-английски."
+            }
+          ]
+        },
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: одно из двух. weder ... noch: ни то, ни другое, nicht и kein уже не нужны.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Мы поедем или на поезде, или на машине."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Я не пью ни кофе, ни чай."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + сравнительная степень..., desto + сравнительная степень значит «чем..., тем». После je глагол в конце, после desto сразу глагол.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Чем больше я учусь, тем лучше говорю."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: сполучники",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch означає «не тільки..., а й». nicht ..., sondern означає «не..., а». Перед sondern завжди кома.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Він говорить не тільки німецькою, а й англійською."
+            }
+          ]
+        },
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: одне з двох. weder ... noch: ні те, ні інше, nicht і kein уже не потрібні.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Ми поїдемо або потягом, або машиною."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Я не п’ю ні кави, ні чаю."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + вищий ступінь..., desto + вищий ступінь означає «чим..., тим». Після je дієслово в кінці, після desto одразу дієслово.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Чим більше я вчуся, тим краще говорю."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: connectors",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch means \"not only ... but also\". nicht ..., sondern means \"not ... but\". Always a comma before sondern.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "He speaks not only German but also English."
+            }
+          ]
+        },
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: one of the two. weder ... noch: neither one, no nicht or kein needed.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "We’ll go either by train or by car."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "I drink neither coffee nor tea."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + comparative..., desto + comparative means \"the more ..., the more\". After je the verb goes last, after desto the verb comes right away.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "The more I study, the better I speak."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: spójniki",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch znaczy „nie tylko..., ale i”. nicht ..., sondern znaczy „nie..., lecz”. Przed sondern zawsze przecinek.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Mówi nie tylko po niemiecku, ale i po angielsku."
+            }
+          ]
+        },
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: jedno z dwóch. weder ... noch: ani jedno, ani drugie, nicht i kein już niepotrzebne.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Pojedziemy albo pociągiem, albo samochodem."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Nie piję ani kawy, ani herbaty."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + stopień wyższy..., desto + stopień wyższy znaczy „im..., tym”. Po je czasownik na końcu, po desto od razu czasownik.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Im więcej się uczę, tym lepiej mówię."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: conectores",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch significa \"no solo..., sino también\". nicht ..., sondern significa \"no..., sino\". Siempre coma antes de sondern.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "No solo habla alemán, sino también inglés."
+            }
+          ]
+        },
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: una de las dos. weder ... noch: ninguna, ya no hace falta nicht ni kein.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Iremos o en tren o en coche."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "No bebo ni café ni té."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + comparativo..., desto + comparativo significa \"cuanto más..., más\". Tras je, verbo al final; tras desto, verbo enseguida.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Cuanto más estudio, mejor hablo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : connecteurs",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch veut dire « non seulement..., mais aussi ». nicht ..., sondern veut dire « pas..., mais ». Toujours une virgule avant sondern.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Il parle non seulement allemand, mais aussi anglais."
+            }
+          ]
+        },
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder : l’un ou l’autre. weder ... noch : ni l’un ni l’autre, plus besoin de nicht ni kein.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Nous irons soit en train, soit en voiture."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Je ne bois ni café ni thé."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + comparatif..., desto + comparatif veut dire « plus..., plus ». Après je, verbe à la fin ; après desto, verbe tout de suite.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Plus j’apprends, mieux je parle."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: bağlaçlar",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch \"sadece ... değil, aynı zamanda\" demektir. nicht ..., sondern \"... değil, ...\". sondern’dan önce hep virgül.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Sadece Almanca değil, İngilizce de konuşuyor."
+            }
+          ]
+        },
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: ikisinden biri. weder ... noch: hiçbiri, nicht ve kein gerekmez.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Ya trenle ya da arabayla gideceğiz."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Ne kahve ne çay içerim."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + üstünlük..., desto + üstünlük \"ne kadar ..., o kadar\". je’den sonra fiil sonda, desto’dan sonra fiil hemen.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Ne kadar çok çalışırsam o kadar iyi konuşurum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: conectori",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch înseamnă „nu doar..., ci și”. nicht ..., sondern înseamnă „nu..., ci”. Înainte de sondern mereu virgulă.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Vorbește nu doar germana, ci și engleza."
+            }
+          ]
+        },
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: una din două. weder ... noch: niciuna, nu mai trebuie nicht sau kein.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Mergem fie cu trenul, fie cu mașina."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Nu beau nici cafea, nici ceai."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + comparativ..., desto + comparativ înseamnă „cu cât..., cu atât”. După je verbul la final, după desto verbul imediat.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Cu cât învăț mai mult, cu atât vorbesc mai bine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: bog'lovchilar",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch \"nafaqat..., balki\" degani. nicht ..., sondern \"... emas, balki\". sondern oldidan doim vergul.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "U nafaqat nemischa, balki inglizcha ham gapiradi."
+            }
+          ]
+        },
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: ikkisidan biri. weder ... noch: hech biri, nicht va kein kerak emas.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "Yo poyezdda, yo mashinada boramiz."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Na qahva, na choy ichaman."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + qiyosiy daraja..., desto + qiyosiy daraja \"qancha..., shuncha\". je dan keyin fe'l oxirida, desto dan keyin fe'l darhol.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Qancha ko'p o'qisam, shuncha yaxshi gapiraman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: योजक",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch मतलब \"न सिर्फ़..., बल्कि\"। nicht ..., sondern मतलब \"... नहीं, बल्कि\"। sondern से पहले हमेशा कॉमा।",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "वह न सिर्फ़ जर्मन, बल्कि अंग्रेज़ी भी बोलता है।"
+            }
+          ]
+        },
+        {
+          "title": "entweder ... oder, weder ... noch",
+          "text": "entweder ... oder: दोनों में से एक। weder ... noch: कोई भी नहीं, nicht और kein की ज़रूरत नहीं।",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "हम या तो ट्रेन से जाएँगे या गाड़ी से।"
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "मैं न कॉफ़ी पीता हूँ, न चाय।"
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + तुलनात्मक..., desto + तुलनात्मक मतलब \"जितना..., उतना\"। je के बाद क्रिया अंत में, desto के बाद क्रिया तुरंत।",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "जितना ज़्यादा सीखता हूँ, उतना बेहतर बोलता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: أدوات الربط",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch تعني \"ليس فقط...، بل أيضاً\". وnicht ..., sondern تعني \"ليس...، بل\". وقبل sondern فاصلة دائماً.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "يتكلم ليس الألمانية فقط بل الإنجليزية أيضاً."
+            }
+          ]
+        },
+        {
+          "title": "entweder ... oder وweder ... noch",
+          "text": "entweder ... oder: أحد الاثنين. وweder ... noch: لا هذا ولا ذاك، ولا حاجة إلى nicht أو kein.",
+          "examples": [
+            {
+              "de": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+              "tr": "سنسافر إما بالقطار أو بالسيارة."
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "لا أشرب القهوة ولا الشاي."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + صيغة المقارنة...، desto + صيغة المقارنة تعني \"كلما...، كلما\". بعد je الفعل في الآخر، وبعد desto الفعل فوراً.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "كلما تعلمت أكثر تكلمت أفضل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "link-harbor-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch значит «не только..., но и». nicht ..., sondern значит «не..., а». Перед sondern всегда запятая.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Он говорит не только по-немецки, но и по-английски."
+            }
+          ]
+        },
+        {
+          "title": "statt ... zu: вместо того чтобы",
+          "text": "statt ... zu + инфинитив значит «вместо того чтобы». Устроено как ohne ... zu: zu и глагол в конце.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "Он играет вместо того, чтобы учиться."
+            }
+          ]
+        },
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: с тех пор как. bis: пока не. sobald: как только. Глагол в конце, как после wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "С тех пор как я живу в Берлине, я много говорю по-немецки."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch означає «не тільки..., а й». nicht ..., sondern означає «не..., а». Перед sondern завжди кома.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Він говорить не тільки німецькою, а й англійською."
+            }
+          ]
+        },
+        {
+          "title": "statt ... zu: замість того щоб",
+          "text": "statt ... zu + інфінітив означає «замість того щоб». Побудовано як ohne ... zu: zu і дієслово в кінці.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "Він грає замість того, щоб учитися."
+            }
+          ]
+        },
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: відтоді як. bis: доки не. sobald: щойно. Дієслово в кінці, як після wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "Відтоді як я живу в Берліні, я багато говорю німецькою."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch means \"not only ... but also\". nicht ..., sondern means \"not ... but\". Always a comma before sondern.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "He speaks not only German but also English."
+            }
+          ]
+        },
+        {
+          "title": "statt ... zu: instead of",
+          "text": "statt ... zu + infinitive means \"instead of doing\". It works like ohne ... zu: zu and the verb at the end.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "He plays instead of studying."
+            }
+          ]
+        },
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: since. bis: until. sobald: as soon as. The verb goes last, as after wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "Since I’ve been living in Berlin, I speak a lot of German."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch znaczy „nie tylko..., ale i”. nicht ..., sondern znaczy „nie..., lecz”. Przed sondern zawsze przecinek.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Mówi nie tylko po niemiecku, ale i po angielsku."
+            }
+          ]
+        },
+        {
+          "title": "statt ... zu: zamiast",
+          "text": "statt ... zu + bezokolicznik znaczy „zamiast”. Działa jak ohne ... zu: zu i czasownik na końcu.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "Bawi się zamiast się uczyć."
+            }
+          ]
+        },
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: odkąd. bis: dopóki nie. sobald: gdy tylko. Czasownik na końcu, jak po wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "Odkąd mieszkam w Berlinie, dużo mówię po niemiecku."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch significa \"no solo..., sino también\". nicht ..., sondern significa \"no..., sino\". Siempre coma antes de sondern.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "No solo habla alemán, sino también inglés."
+            }
+          ]
+        },
+        {
+          "title": "statt ... zu: en lugar de",
+          "text": "statt ... zu + infinitivo significa \"en lugar de\". Funciona como ohne ... zu: zu y el verbo al final.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "Juega en lugar de estudiar."
+            }
+          ]
+        },
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: desde que. bis: hasta que. sobald: en cuanto. Verbo al final, como tras wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "Desde que vivo en Berlín, hablo mucho alemán."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch veut dire « non seulement..., mais aussi ». nicht ..., sondern veut dire « pas..., mais ». Toujours une virgule avant sondern.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Il parle non seulement allemand, mais aussi anglais."
+            }
+          ]
+        },
+        {
+          "title": "statt ... zu : au lieu de",
+          "text": "statt ... zu + infinitif veut dire « au lieu de ». Ça marche comme ohne ... zu : zu et le verbe à la fin.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "Il joue au lieu d’étudier."
+            }
+          ]
+        },
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem : depuis que. bis : jusqu’à ce que. sobald : dès que. Verbe à la fin, comme après wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "Depuis que j’habite à Berlin, je parle beaucoup allemand."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch \"sadece ... değil, aynı zamanda\" demektir. nicht ..., sondern \"... değil, ...\". sondern’dan önce hep virgül.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Sadece Almanca değil, İngilizce de konuşuyor."
+            }
+          ]
+        },
+        {
+          "title": "statt ... zu: -mek yerine",
+          "text": "statt ... zu + mastar \"-mek yerine\" demektir. ohne ... zu gibi kurulur: zu ve fiil sonda.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "Ders çalışmak yerine oynuyor."
+            }
+          ]
+        },
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: -dığından beri. bis: -ene kadar. sobald: -ir -mez. Fiil sonda, wenn’den sonraki gibi.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "Berlin’de yaşadığımdan beri çok Almanca konuşuyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch înseamnă „nu doar..., ci și”. nicht ..., sondern înseamnă „nu..., ci”. Înainte de sondern mereu virgulă.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Vorbește nu doar germana, ci și engleza."
+            }
+          ]
+        },
+        {
+          "title": "statt ... zu: în loc să",
+          "text": "statt ... zu + infinitiv înseamnă „în loc să”. Funcționează ca ohne ... zu: zu și verbul la final.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "Se joacă în loc să învețe."
+            }
+          ]
+        },
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: de când. bis: până când. sobald: imediat ce. Verbul la final, ca după wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "De când locuiesc în Berlin, vorbesc mult germana."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch \"nafaqat..., balki\" degani. nicht ..., sondern \"... emas, balki\". sondern oldidan doim vergul.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "U nafaqat nemischa, balki inglizcha ham gapiradi."
+            }
+          ]
+        },
+        {
+          "title": "statt ... zu: ... o'rniga",
+          "text": "statt ... zu + infinitiv \"... qilish o'rniga\" degani. ohne ... zu kabi tuziladi: zu va fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "U o'qish o'rniga o'ynayapti."
+            }
+          ]
+        },
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: ...dan beri. bis: ...guncha. sobald: ...ishi bilan. Fe'l oxirida, wenn dan keyingidek.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "Berlinda yashaganimdan beri ko'p nemischa gapiraman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch मतलब \"न सिर्फ़..., बल्कि\"। nicht ..., sondern मतलब \"... नहीं, बल्कि\"। sondern से पहले हमेशा कॉमा।",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "वह न सिर्फ़ जर्मन, बल्कि अंग्रेज़ी भी बोलता है।"
+            }
+          ]
+        },
+        {
+          "title": "statt ... zu: के बजाय",
+          "text": "statt ... zu + इन्फ़िनिटिव मतलब \"करने के बजाय\"। ohne ... zu की तरह: zu और क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "वह पढ़ने के बजाय खेल रहा है।"
+            }
+          ]
+        },
+        {
+          "title": "seitdem, bis, sobald",
+          "text": "seitdem: जब से। bis: जब तक नहीं। sobald: जैसे ही। क्रिया अंत में, wenn की तरह।",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "जब से मैं बर्लिन में रहता हूँ, बहुत जर्मन बोलता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch تعني \"ليس فقط...، بل أيضاً\". وnicht ..., sondern تعني \"ليس...، بل\". وقبل sondern فاصلة دائماً.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "يتكلم ليس الألمانية فقط بل الإنجليزية أيضاً."
+            }
+          ]
+        },
+        {
+          "title": "statt ... zu: بدلاً من",
+          "text": "statt ... zu + المصدر تعني \"بدلاً من\". وتُبنى مثل ohne ... zu: zu والفعل في الآخر.",
+          "examples": [
+            {
+              "de": "Er spielt, statt zu lernen.",
+              "tr": "يلعب بدلاً من أن يدرس."
+            }
+          ]
+        },
+        {
+          "title": "seitdem وbis وsobald",
+          "text": "seitdem: منذ أن. وbis: حتى. وsobald: بمجرد أن. والفعل في الآخر كما بعد wenn.",
+          "examples": [
+            {
+              "de": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+              "tr": "منذ أن أسكن في برلين أتكلم الألمانية كثيراً."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

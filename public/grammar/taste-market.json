@@ -1,0 +1,2442 @@
+{
+  "taste-market-one": {
+    "ru": {
+      "title": "Свежий хлеб",
+      "points": [
+        {
+          "title": "Без артикля: guter Kaffee",
+          "text": "Если артикля нет, его окончание берёт прилагательное: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (мн. ч.).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Горячий кофе вкусный."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Свіжий хліб",
+      "points": [
+        {
+          "title": "Без артикля: guter Kaffee",
+          "text": "Якщо артикля немає, його закінчення бере прикметник: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (множина).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Гаряча кава смачна."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Fresh bread",
+      "points": [
+        {
+          "title": "No article: guter Kaffee",
+          "text": "With no article, the adjective takes the article’s ending: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (plural).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Hot coffee tastes good."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Świeży chleb",
+      "points": [
+        {
+          "title": "Bez rodzajnika: guter Kaffee",
+          "text": "Gdy nie ma rodzajnika, jego końcówkę bierze przymiotnik: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (mnoga).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Gorąca kawa dobrze smakuje."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Pan fresco",
+      "points": [
+        {
+          "title": "Sin artículo: guter Kaffee",
+          "text": "Sin artículo, el adjetivo toma la terminación del artículo: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (plural).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "El café caliente está rico."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pain frais",
+      "points": [
+        {
+          "title": "Sans article : guter Kaffee",
+          "text": "Sans article, l’adjectif prend la terminaison de l’article : guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (pluriel).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Le café chaud est bon."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Taze ekmek",
+      "points": [
+        {
+          "title": "Artikelsiz: guter Kaffee",
+          "text": "Artikel yoksa onun ekini sıfat alır: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (çoğul).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Sıcak kahve güzel olur."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Pâine proaspătă",
+      "points": [
+        {
+          "title": "Fără articol: guter Kaffee",
+          "text": "Fără articol, adjectivul ia terminația articolului: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (plural).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Cafeaua fierbinte e bună."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Yangi non",
+      "points": [
+        {
+          "title": "Artiklsiz: guter Kaffee",
+          "text": "Artikl bo'lmasa, uning qo'shimchasini sifat oladi: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (ko'plik).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Issiq qahva mazali."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "ताज़ी रोटी",
+      "points": [
+        {
+          "title": "बिना आर्टिकल: guter Kaffee",
+          "text": "आर्टिकल न हो तो उसका अंत विशेषण लेता है: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (बहुवचन)।",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "गरम कॉफ़ी अच्छी लगती है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "خبز طازج",
+      "points": [
+        {
+          "title": "بدون أداة: guter Kaffee",
+          "text": "إذا لم توجد أداة تأخذ الصفة نهايتها: guter Kaffee (der)، frische Milch (die)، kaltes Wasser (das)، frische Brötchen (جمع).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "القهوة الساخنة لذيذة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "taste-market-two": {
+    "ru": {
+      "title": "Пью горячий чай",
+      "points": [
+        {
+          "title": "Akkusativ: heißen Tee",
+          "text": "В Akkusativ меняется только мужской род: -en, как den. Остальные как в Nominativ.",
+          "examples": [
+            {
+              "de": "Ich trinke heißen Tee.",
+              "tr": "Я пью горячий чай."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "П’ю гарячий чай",
+      "points": [
+        {
+          "title": "Akkusativ: heißen Tee",
+          "text": "В Akkusativ змінюється лише чоловічий рід: -en, як den. Решта як у Nominativ.",
+          "examples": [
+            {
+              "de": "Ich trinke heißen Tee.",
+              "tr": "Я п’ю гарячий чай."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "I drink hot tea",
+      "points": [
+        {
+          "title": "Accusative: heißen Tee",
+          "text": "In the accusative only masculine changes: -en, like den. The rest stay as in the nominative.",
+          "examples": [
+            {
+              "de": "Ich trinke heißen Tee.",
+              "tr": "I drink hot tea."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Piję gorącą herbatę",
+      "points": [
+        {
+          "title": "Akkusativ: heißen Tee",
+          "text": "W Akkusativ zmienia się tylko rodzaj męski: -en, jak den. Reszta jak w Nominativ.",
+          "examples": [
+            {
+              "de": "Ich trinke heißen Tee.",
+              "tr": "Piję gorącą herbatę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Bebo té caliente",
+      "points": [
+        {
+          "title": "Acusativo: heißen Tee",
+          "text": "En acusativo solo cambia el masculino: -en, como den. Lo demás, igual que en nominativo.",
+          "examples": [
+            {
+              "de": "Ich trinke heißen Tee.",
+              "tr": "Bebo té caliente."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Je bois du thé chaud",
+      "points": [
+        {
+          "title": "Accusatif : heißen Tee",
+          "text": "À l’accusatif, seul le masculin change : -en, comme den. Le reste comme au nominatif.",
+          "examples": [
+            {
+              "de": "Ich trinke heißen Tee.",
+              "tr": "Je bois du thé chaud."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sıcak çay içiyorum",
+      "points": [
+        {
+          "title": "Akkusativ: heißen Tee",
+          "text": "Akkusativ’de sadece eril değişir: den gibi -en. Diğerleri Nominativ’deki gibi.",
+          "examples": [
+            {
+              "de": "Ich trinke heißen Tee.",
+              "tr": "Sıcak çay içiyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Beau ceai fierbinte",
+      "points": [
+        {
+          "title": "Acuzativ: heißen Tee",
+          "text": "La acuzativ se schimbă doar masculinul: -en, ca den. Restul ca la nominativ.",
+          "examples": [
+            {
+              "de": "Ich trinke heißen Tee.",
+              "tr": "Beau ceai fierbinte."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Issiq choy ichaman",
+      "points": [
+        {
+          "title": "Akkusativ: heißen Tee",
+          "text": "Akkusativda faqat erkak rodi o'zgaradi: den kabi -en. Qolganlari Nominativdagidek.",
+          "examples": [
+            {
+              "de": "Ich trinke heißen Tee.",
+              "tr": "Issiq choy ichaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "गरम चाय पीता हूँ",
+      "points": [
+        {
+          "title": "Akkusativ: heißen Tee",
+          "text": "Akkusativ में सिर्फ़ पुल्लिंग बदलता है: den की तरह -en। बाकी Nominativ जैसे।",
+          "examples": [
+            {
+              "de": "Ich trinke heißen Tee.",
+              "tr": "मैं गरम चाय पीता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "أشرب شاياً ساخناً",
+      "points": [
+        {
+          "title": "المفعول: heißen Tee",
+          "text": "في حالة المفعول يتغير المذكر فقط: -en مثل den. والباقي كما في الرفع.",
+          "examples": [
+            {
+              "de": "Ich trinke heißen Tee.",
+              "tr": "أشرب شاياً ساخناً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "taste-market-three": {
+    "ru": {
+      "title": "С горячим молоком",
+      "points": [
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "В Dativ: -em (мужской и средний), -er (женский), -en (множественное), как dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Я пью кофе с горячим молоком."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "З гарячим молоком",
+      "points": [
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "У Dativ: -em (чоловічий і середній), -er (жіночий), -en (множина), як dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Я п’ю каву з гарячим молоком."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "With hot milk",
+      "points": [
+        {
+          "title": "Dative: mit heißem Wasser",
+          "text": "In the dative: -em (masculine and neuter), -er (feminine), -en (plural), like dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "I drink coffee with hot milk."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Z gorącym mlekiem",
+      "points": [
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "W Dativ: -em (męski i nijaki), -er (żeński), -en (mnoga), jak dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Piję kawę z gorącym mlekiem."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Con leche caliente",
+      "points": [
+        {
+          "title": "Dativo: mit heißem Wasser",
+          "text": "En dativo: -em (masculino y neutro), -er (femenino), -en (plural), como dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Tomo café con leche caliente."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Avec du lait chaud",
+      "points": [
+        {
+          "title": "Datif : mit heißem Wasser",
+          "text": "Au datif : -em (masculin et neutre), -er (féminin), -en (pluriel), comme dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Je bois du café avec du lait chaud."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sıcak sütle",
+      "points": [
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "Dativ’de: -em (eril ve nötr), -er (dişil), -en (çoğul), dem, der, den gibi.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Kahveyi sıcak sütle içerim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cu lapte fierbinte",
+      "points": [
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "La dativ: -em (masculin și neutru), -er (feminin), -en (plural), ca dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Beau cafea cu lapte fierbinte."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Issiq sut bilan",
+      "points": [
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "Dativda: -em (erkak va o'rta), -er (ayol), -en (ko'plik), dem, der, den kabi.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Qahvani issiq sut bilan ichaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "गरम दूध के साथ",
+      "points": [
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "Dativ में: -em (पुल्लिंग और नपुंसकलिंग), -er (स्त्रीलिंग), -en (बहुवचन), dem, der, den की तरह।",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "मैं गरम दूध के साथ कॉफ़ी पीता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "بالحليب الساخن",
+      "points": [
+        {
+          "title": "الجر: mit heißem Wasser",
+          "text": "في الجر: -em (المذكر والمحايد)، -er (المؤنث)، -en (الجمع)، مثل dem وder وden.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "أشرب القهوة بالحليب الساخن."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "taste-market-four": {
+    "ru": {
+      "title": "Много молодых людей",
+      "points": [
+        {
+          "title": "viele, zwei + -e",
+          "text": "После чисел, viele, einige, wenige артикля нет, окончание даёт прилагательное: viele junge Leute. В Dativ -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "В городе много молодых людей."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Багато молодих людей",
+      "points": [
+        {
+          "title": "viele, zwei + -e",
+          "text": "Після чисел, viele, einige, wenige артикля немає, закінчення дає прикметник: viele junge Leute. У Dativ -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "У місті багато молодих людей."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Many young people",
+      "points": [
+        {
+          "title": "viele, zwei + -e",
+          "text": "After numbers, viele, einige, wenige there’s no article, so the adjective shows the ending: viele junge Leute. Dative -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "There are many young people in the city."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Wielu młodych ludzi",
+      "points": [
+        {
+          "title": "viele, zwei + -e",
+          "text": "Po liczebnikach, viele, einige, wenige nie ma rodzajnika, końcówkę daje przymiotnik: viele junge Leute. W Dativ -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "W mieście jest wielu młodych ludzi."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Mucha gente joven",
+      "points": [
+        {
+          "title": "viele, zwei + -e",
+          "text": "Tras números, viele, einige, wenige no hay artículo y la terminación la da el adjetivo: viele junge Leute. En dativo -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "En la ciudad hay mucha gente joven."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Beaucoup de jeunes",
+      "points": [
+        {
+          "title": "viele, zwei + -e",
+          "text": "Après les nombres, viele, einige, wenige, pas d’article : l’adjectif porte la terminaison : viele junge Leute. Au datif -en : mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "En ville, il y a beaucoup de jeunes."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Çok genç insan",
+      "points": [
+        {
+          "title": "viele, zwei + -e",
+          "text": "Sayılar, viele, einige, wenige’den sonra artikel yok, eki sıfat taşır: viele junge Leute. Dativ’de -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "Şehirde çok genç insan var."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Mulți tineri",
+      "points": [
+        {
+          "title": "viele, zwei + -e",
+          "text": "După numerale, viele, einige, wenige nu e articol, terminația o dă adjectivul: viele junge Leute. La dativ -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "În oraș sunt mulți tineri."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ko'p yoshlar",
+      "points": [
+        {
+          "title": "viele, zwei + -e",
+          "text": "Sonlar, viele, einige, wenige dan keyin artikl yo'q, qo'shimchani sifat beradi: viele junge Leute. Dativda -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "Shaharda yoshlar ko'p."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "बहुत युवा लोग",
+      "points": [
+        {
+          "title": "viele, zwei + -e",
+          "text": "संख्याओं, viele, einige, wenige के बाद आर्टिकल नहीं, अंत विशेषण देता है: viele junge Leute। Dativ में -en: mit vielen jungen Gästen।",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "शहर में बहुत युवा लोग हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "شباب كثيرون",
+      "points": [
+        {
+          "title": "viele وzwei + -e",
+          "text": "بعد الأعداد وviele وeinige وwenige لا توجد أداة فتأخذ الصفة النهاية: viele junge Leute. وفي الجر -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "في المدينة شباب كثيرون."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "taste-market-five": {
+    "ru": {
+      "title": "Из-за плохой погоды",
+      "points": [
+        {
+          "title": "Genitiv и объявления",
+          "text": "Genitiv без артикля: -en у прилагательного и -s у слова: wegen schlechten Wetters. В объявлениях и меню артикль опускают: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Из-за плохой погоды поезд опоздал."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Через погану погоду",
+      "points": [
+        {
+          "title": "Genitiv і оголошення",
+          "text": "Genitiv без артикля: -en у прикметника і -s у слова: wegen schlechten Wetters. В оголошеннях і меню артикль опускають: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Через погану погоду потяг запізнився."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Because of bad weather",
+      "points": [
+        {
+          "title": "Genitive and ads",
+          "text": "Genitive with no article: -en on the adjective and -s on the noun: wegen schlechten Wetters. Ads and menus drop the article: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Because of bad weather the train was late."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Z powodu złej pogody",
+      "points": [
+        {
+          "title": "Genitiv i ogłoszenia",
+          "text": "Genitiv bez rodzajnika: -en w przymiotniku i -s w słowie: wegen schlechten Wetters. W ogłoszeniach i menu rodzajnik się pomija: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Z powodu złej pogody pociąg się spóźnił."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Por el mal tiempo",
+      "points": [
+        {
+          "title": "Genitivo y anuncios",
+          "text": "Genitivo sin artículo: -en en el adjetivo y -s en el sustantivo: wegen schlechten Wetters. En anuncios y menús se omite el artículo: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Por el mal tiempo el tren llegó tarde."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "À cause du mauvais temps",
+      "points": [
+        {
+          "title": "Génitif et annonces",
+          "text": "Génitif sans article : -en sur l’adjectif et -s sur le nom : wegen schlechten Wetters. Dans les annonces et menus, on omet l’article : Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "À cause du mauvais temps, le train était en retard."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kötü hava yüzünden",
+      "points": [
+        {
+          "title": "Genitiv ve ilanlar",
+          "text": "Artikelsiz Genitiv: sıfatta -en, isimde -s: wegen schlechten Wetters. İlan ve menülerde artikel atılır: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Kötü hava yüzünden tren geç kaldı."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Din cauza vremii proaste",
+      "points": [
+        {
+          "title": "Genitiv și anunțuri",
+          "text": "Genitiv fără articol: -en la adjectiv și -s la substantiv: wegen schlechten Wetters. În anunțuri și meniuri articolul lipsește: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Din cauza vremii proaste trenul a întârziat."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Yomon ob-havo sababli",
+      "points": [
+        {
+          "title": "Genitiv va e'lonlar",
+          "text": "Artiklsiz Genitiv: sifatda -en, otda -s: wegen schlechten Wetters. E'lon va menyularda artikl tushib qoladi: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Yomon ob-havo sababli poyezd kechikdi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "खराब मौसम की वजह से",
+      "points": [
+        {
+          "title": "Genitiv और विज्ञापन",
+          "text": "बिना आर्टिकल Genitiv: विशेषण में -en और संज्ञा में -s: wegen schlechten Wetters। विज्ञापनों और मेन्यू में आर्टिकल हटाते हैं: Verkaufe altes Fahrrad।",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "खराब मौसम की वजह से ट्रेन देर से आई।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "بسبب الطقس السيئ",
+      "points": [
+        {
+          "title": "الإضافة والإعلانات",
+          "text": "الإضافة بدون أداة: -en على الصفة و-s على الاسم: wegen schlechten Wetters. وفي الإعلانات والقوائم تُحذف الأداة: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "بسبب الطقس السيئ تأخر القطار."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "taste-market-six": {
+    "ru": {
+      "title": "Объявления и меню",
+      "points": [
+        {
+          "title": "Genitiv и объявления",
+          "text": "Genitiv без артикля: -en у прилагательного и -s у слова: wegen schlechten Wetters. В объявлениях и меню артикль опускают: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Из-за плохой погоды поезд опоздал."
+            }
+          ]
+        },
+        {
+          "title": "Без артикля: guter Kaffee",
+          "text": "Если артикля нет, его окончание берёт прилагательное: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (мн. ч.).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Горячий кофе вкусный."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Оголошення і меню",
+      "points": [
+        {
+          "title": "Genitiv і оголошення",
+          "text": "Genitiv без артикля: -en у прикметника і -s у слова: wegen schlechten Wetters. В оголошеннях і меню артикль опускають: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Через погану погоду потяг запізнився."
+            }
+          ]
+        },
+        {
+          "title": "Без артикля: guter Kaffee",
+          "text": "Якщо артикля немає, його закінчення бере прикметник: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (множина).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Гаряча кава смачна."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Ads and menus",
+      "points": [
+        {
+          "title": "Genitive and ads",
+          "text": "Genitive with no article: -en on the adjective and -s on the noun: wegen schlechten Wetters. Ads and menus drop the article: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Because of bad weather the train was late."
+            }
+          ]
+        },
+        {
+          "title": "No article: guter Kaffee",
+          "text": "With no article, the adjective takes the article’s ending: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (plural).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Hot coffee tastes good."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Ogłoszenia i menu",
+      "points": [
+        {
+          "title": "Genitiv i ogłoszenia",
+          "text": "Genitiv bez rodzajnika: -en w przymiotniku i -s w słowie: wegen schlechten Wetters. W ogłoszeniach i menu rodzajnik się pomija: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Z powodu złej pogody pociąg się spóźnił."
+            }
+          ]
+        },
+        {
+          "title": "Bez rodzajnika: guter Kaffee",
+          "text": "Gdy nie ma rodzajnika, jego końcówkę bierze przymiotnik: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (mnoga).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Gorąca kawa dobrze smakuje."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Anuncios y menús",
+      "points": [
+        {
+          "title": "Genitivo y anuncios",
+          "text": "Genitivo sin artículo: -en en el adjetivo y -s en el sustantivo: wegen schlechten Wetters. En anuncios y menús se omite el artículo: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Por el mal tiempo el tren llegó tarde."
+            }
+          ]
+        },
+        {
+          "title": "Sin artículo: guter Kaffee",
+          "text": "Sin artículo, el adjetivo toma la terminación del artículo: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (plural).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "El café caliente está rico."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Annonces et menus",
+      "points": [
+        {
+          "title": "Génitif et annonces",
+          "text": "Génitif sans article : -en sur l’adjectif et -s sur le nom : wegen schlechten Wetters. Dans les annonces et menus, on omet l’article : Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "À cause du mauvais temps, le train était en retard."
+            }
+          ]
+        },
+        {
+          "title": "Sans article : guter Kaffee",
+          "text": "Sans article, l’adjectif prend la terminaison de l’article : guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (pluriel).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Le café chaud est bon."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "İlanlar ve menüler",
+      "points": [
+        {
+          "title": "Genitiv ve ilanlar",
+          "text": "Artikelsiz Genitiv: sıfatta -en, isimde -s: wegen schlechten Wetters. İlan ve menülerde artikel atılır: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Kötü hava yüzünden tren geç kaldı."
+            }
+          ]
+        },
+        {
+          "title": "Artikelsiz: guter Kaffee",
+          "text": "Artikel yoksa onun ekini sıfat alır: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (çoğul).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Sıcak kahve güzel olur."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Anunțuri și meniuri",
+      "points": [
+        {
+          "title": "Genitiv și anunțuri",
+          "text": "Genitiv fără articol: -en la adjectiv și -s la substantiv: wegen schlechten Wetters. În anunțuri și meniuri articolul lipsește: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Din cauza vremii proaste trenul a întârziat."
+            }
+          ]
+        },
+        {
+          "title": "Fără articol: guter Kaffee",
+          "text": "Fără articol, adjectivul ia terminația articolului: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (plural).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Cafeaua fierbinte e bună."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "E'lonlar va menyular",
+      "points": [
+        {
+          "title": "Genitiv va e'lonlar",
+          "text": "Artiklsiz Genitiv: sifatda -en, otda -s: wegen schlechten Wetters. E'lon va menyularda artikl tushib qoladi: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Yomon ob-havo sababli poyezd kechikdi."
+            }
+          ]
+        },
+        {
+          "title": "Artiklsiz: guter Kaffee",
+          "text": "Artikl bo'lmasa, uning qo'shimchasini sifat oladi: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (ko'plik).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Issiq qahva mazali."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "विज्ञापन और मेन्यू",
+      "points": [
+        {
+          "title": "Genitiv और विज्ञापन",
+          "text": "बिना आर्टिकल Genitiv: विशेषण में -en और संज्ञा में -s: wegen schlechten Wetters। विज्ञापनों और मेन्यू में आर्टिकल हटाते हैं: Verkaufe altes Fahrrad।",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "खराब मौसम की वजह से ट्रेन देर से आई।"
+            }
+          ]
+        },
+        {
+          "title": "बिना आर्टिकल: guter Kaffee",
+          "text": "आर्टिकल न हो तो उसका अंत विशेषण लेता है: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (बहुवचन)।",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "गरम कॉफ़ी अच्छी लगती है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الإعلانات والقوائم",
+      "points": [
+        {
+          "title": "الإضافة والإعلانات",
+          "text": "الإضافة بدون أداة: -en على الصفة و-s على الاسم: wegen schlechten Wetters. وفي الإعلانات والقوائم تُحذف الأداة: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "بسبب الطقس السيئ تأخر القطار."
+            }
+          ]
+        },
+        {
+          "title": "بدون أداة: guter Kaffee",
+          "text": "إذا لم توجد أداة تأخذ الصفة نهايتها: guter Kaffee (der)، frische Milch (die)، kaltes Wasser (das)، frische Brötchen (جمع).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "القهوة الساخنة لذيذة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "taste-market-seven": {
+    "ru": {
+      "title": "Практика: рецепт",
+      "points": [
+        {
+          "title": "Без артикля: guter Kaffee",
+          "text": "Если артикля нет, его окончание берёт прилагательное: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (мн. ч.).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Горячий кофе вкусный."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "В Dativ: -em (мужской и средний), -er (женский), -en (множественное), как dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Я пью кофе с горячим молоком."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: рецепт",
+      "points": [
+        {
+          "title": "Без артикля: guter Kaffee",
+          "text": "Якщо артикля немає, його закінчення бере прикметник: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (множина).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Гаряча кава смачна."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "У Dativ: -em (чоловічий і середній), -er (жіночий), -en (множина), як dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Я п’ю каву з гарячим молоком."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: a recipe",
+      "points": [
+        {
+          "title": "No article: guter Kaffee",
+          "text": "With no article, the adjective takes the article’s ending: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (plural).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Hot coffee tastes good."
+            }
+          ]
+        },
+        {
+          "title": "Dative: mit heißem Wasser",
+          "text": "In the dative: -em (masculine and neuter), -er (feminine), -en (plural), like dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "I drink coffee with hot milk."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: przepis",
+      "points": [
+        {
+          "title": "Bez rodzajnika: guter Kaffee",
+          "text": "Gdy nie ma rodzajnika, jego końcówkę bierze przymiotnik: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (mnoga).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Gorąca kawa dobrze smakuje."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "W Dativ: -em (męski i nijaki), -er (żeński), -en (mnoga), jak dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Piję kawę z gorącym mlekiem."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: una receta",
+      "points": [
+        {
+          "title": "Sin artículo: guter Kaffee",
+          "text": "Sin artículo, el adjetivo toma la terminación del artículo: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (plural).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "El café caliente está rico."
+            }
+          ]
+        },
+        {
+          "title": "Dativo: mit heißem Wasser",
+          "text": "En dativo: -em (masculino y neutro), -er (femenino), -en (plural), como dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Tomo café con leche caliente."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : une recette",
+      "points": [
+        {
+          "title": "Sans article : guter Kaffee",
+          "text": "Sans article, l’adjectif prend la terminaison de l’article : guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (pluriel).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Le café chaud est bon."
+            }
+          ]
+        },
+        {
+          "title": "Datif : mit heißem Wasser",
+          "text": "Au datif : -em (masculin et neutre), -er (féminin), -en (pluriel), comme dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Je bois du café avec du lait chaud."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: tarif",
+      "points": [
+        {
+          "title": "Artikelsiz: guter Kaffee",
+          "text": "Artikel yoksa onun ekini sıfat alır: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (çoğul).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Sıcak kahve güzel olur."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "Dativ’de: -em (eril ve nötr), -er (dişil), -en (çoğul), dem, der, den gibi.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Kahveyi sıcak sütle içerim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: o rețetă",
+      "points": [
+        {
+          "title": "Fără articol: guter Kaffee",
+          "text": "Fără articol, adjectivul ia terminația articolului: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (plural).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Cafeaua fierbinte e bună."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "La dativ: -em (masculin și neutru), -er (feminin), -en (plural), ca dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Beau cafea cu lapte fierbinte."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: retsept",
+      "points": [
+        {
+          "title": "Artiklsiz: guter Kaffee",
+          "text": "Artikl bo'lmasa, uning qo'shimchasini sifat oladi: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (ko'plik).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Issiq qahva mazali."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "Dativda: -em (erkak va o'rta), -er (ayol), -en (ko'plik), dem, der, den kabi.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Qahvani issiq sut bilan ichaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: रेसिपी",
+      "points": [
+        {
+          "title": "बिना आर्टिकल: guter Kaffee",
+          "text": "आर्टिकल न हो तो उसका अंत विशेषण लेता है: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (बहुवचन)।",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "गरम कॉफ़ी अच्छी लगती है।"
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "Dativ में: -em (पुल्लिंग और नपुंसकलिंग), -er (स्त्रीलिंग), -en (बहुवचन), dem, der, den की तरह।",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "मैं गरम दूध के साथ कॉफ़ी पीता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: وصفة",
+      "points": [
+        {
+          "title": "بدون أداة: guter Kaffee",
+          "text": "إذا لم توجد أداة تأخذ الصفة نهايتها: guter Kaffee (der)، frische Milch (die)، kaltes Wasser (das)، frische Brötchen (جمع).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "القهوة الساخنة لذيذة."
+            }
+          ]
+        },
+        {
+          "title": "الجر: mit heißem Wasser",
+          "text": "في الجر: -em (المذكر والمحايد)، -er (المؤنث)، -en (الجمع)، مثل dem وder وden.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "أشرب القهوة بالحليب الساخن."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "taste-market-eight": {
+    "ru": {
+      "title": "Практика: отзывы о кафе",
+      "points": [
+        {
+          "title": "viele, zwei + -e",
+          "text": "После чисел, viele, einige, wenige артикля нет, окончание даёт прилагательное: viele junge Leute. В Dativ -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "В городе много молодых людей."
+            }
+          ]
+        },
+        {
+          "title": "Genitiv и объявления",
+          "text": "Genitiv без артикля: -en у прилагательного и -s у слова: wegen schlechten Wetters. В объявлениях и меню артикль опускают: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Из-за плохой погоды поезд опоздал."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: відгуки про кафе",
+      "points": [
+        {
+          "title": "viele, zwei + -e",
+          "text": "Після чисел, viele, einige, wenige артикля немає, закінчення дає прикметник: viele junge Leute. У Dativ -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "У місті багато молодих людей."
+            }
+          ]
+        },
+        {
+          "title": "Genitiv і оголошення",
+          "text": "Genitiv без артикля: -en у прикметника і -s у слова: wegen schlechten Wetters. В оголошеннях і меню артикль опускають: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Через погану погоду потяг запізнився."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: café reviews",
+      "points": [
+        {
+          "title": "viele, zwei + -e",
+          "text": "After numbers, viele, einige, wenige there’s no article, so the adjective shows the ending: viele junge Leute. Dative -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "There are many young people in the city."
+            }
+          ]
+        },
+        {
+          "title": "Genitive and ads",
+          "text": "Genitive with no article: -en on the adjective and -s on the noun: wegen schlechten Wetters. Ads and menus drop the article: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Because of bad weather the train was late."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: opinie o kawiarni",
+      "points": [
+        {
+          "title": "viele, zwei + -e",
+          "text": "Po liczebnikach, viele, einige, wenige nie ma rodzajnika, końcówkę daje przymiotnik: viele junge Leute. W Dativ -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "W mieście jest wielu młodych ludzi."
+            }
+          ]
+        },
+        {
+          "title": "Genitiv i ogłoszenia",
+          "text": "Genitiv bez rodzajnika: -en w przymiotniku i -s w słowie: wegen schlechten Wetters. W ogłoszeniach i menu rodzajnik się pomija: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Z powodu złej pogody pociąg się spóźnił."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: reseñas del café",
+      "points": [
+        {
+          "title": "viele, zwei + -e",
+          "text": "Tras números, viele, einige, wenige no hay artículo y la terminación la da el adjetivo: viele junge Leute. En dativo -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "En la ciudad hay mucha gente joven."
+            }
+          ]
+        },
+        {
+          "title": "Genitivo y anuncios",
+          "text": "Genitivo sin artículo: -en en el adjetivo y -s en el sustantivo: wegen schlechten Wetters. En anuncios y menús se omite el artículo: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Por el mal tiempo el tren llegó tarde."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : avis sur un café",
+      "points": [
+        {
+          "title": "viele, zwei + -e",
+          "text": "Après les nombres, viele, einige, wenige, pas d’article : l’adjectif porte la terminaison : viele junge Leute. Au datif -en : mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "En ville, il y a beaucoup de jeunes."
+            }
+          ]
+        },
+        {
+          "title": "Génitif et annonces",
+          "text": "Génitif sans article : -en sur l’adjectif et -s sur le nom : wegen schlechten Wetters. Dans les annonces et menus, on omet l’article : Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "À cause du mauvais temps, le train était en retard."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: kafe yorumları",
+      "points": [
+        {
+          "title": "viele, zwei + -e",
+          "text": "Sayılar, viele, einige, wenige’den sonra artikel yok, eki sıfat taşır: viele junge Leute. Dativ’de -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "Şehirde çok genç insan var."
+            }
+          ]
+        },
+        {
+          "title": "Genitiv ve ilanlar",
+          "text": "Artikelsiz Genitiv: sıfatta -en, isimde -s: wegen schlechten Wetters. İlan ve menülerde artikel atılır: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Kötü hava yüzünden tren geç kaldı."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: recenzii la cafenea",
+      "points": [
+        {
+          "title": "viele, zwei + -e",
+          "text": "După numerale, viele, einige, wenige nu e articol, terminația o dă adjectivul: viele junge Leute. La dativ -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "În oraș sunt mulți tineri."
+            }
+          ]
+        },
+        {
+          "title": "Genitiv și anunțuri",
+          "text": "Genitiv fără articol: -en la adjectiv și -s la substantiv: wegen schlechten Wetters. În anunțuri și meniuri articolul lipsește: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Din cauza vremii proaste trenul a întârziat."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: kafe haqida fikrlar",
+      "points": [
+        {
+          "title": "viele, zwei + -e",
+          "text": "Sonlar, viele, einige, wenige dan keyin artikl yo'q, qo'shimchani sifat beradi: viele junge Leute. Dativda -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "Shaharda yoshlar ko'p."
+            }
+          ]
+        },
+        {
+          "title": "Genitiv va e'lonlar",
+          "text": "Artiklsiz Genitiv: sifatda -en, otda -s: wegen schlechten Wetters. E'lon va menyularda artikl tushib qoladi: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "Yomon ob-havo sababli poyezd kechikdi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: कैफ़े की समीक्षाएँ",
+      "points": [
+        {
+          "title": "viele, zwei + -e",
+          "text": "संख्याओं, viele, einige, wenige के बाद आर्टिकल नहीं, अंत विशेषण देता है: viele junge Leute। Dativ में -en: mit vielen jungen Gästen।",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "शहर में बहुत युवा लोग हैं।"
+            }
+          ]
+        },
+        {
+          "title": "Genitiv और विज्ञापन",
+          "text": "बिना आर्टिकल Genitiv: विशेषण में -en और संज्ञा में -s: wegen schlechten Wetters। विज्ञापनों और मेन्यू में आर्टिकल हटाते हैं: Verkaufe altes Fahrrad।",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "खराब मौसम की वजह से ट्रेन देर से आई।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: آراء عن المقهى",
+      "points": [
+        {
+          "title": "viele وzwei + -e",
+          "text": "بعد الأعداد وviele وeinige وwenige لا توجد أداة فتأخذ الصفة النهاية: viele junge Leute. وفي الجر -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "في المدينة شباب كثيرون."
+            }
+          ]
+        },
+        {
+          "title": "الإضافة والإعلانات",
+          "text": "الإضافة بدون أداة: -en على الصفة و-s على الاسم: wegen schlechten Wetters. وفي الإعلانات والقوائم تُحذف الأداة: Verkaufe altes Fahrrad.",
+          "examples": [
+            {
+              "de": "Wegen schlechten Wetters kam der Zug zu spät.",
+              "tr": "بسبب الطقس السيئ تأخر القطار."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "taste-market-nine": {
+    "ru": {
+      "title": "Повторение: без артикля",
+      "points": [
+        {
+          "title": "Без артикля: guter Kaffee",
+          "text": "Если артикля нет, его окончание берёт прилагательное: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (мн. ч.).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Горячий кофе вкусный."
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ: heißen Tee",
+          "text": "В Akkusativ меняется только мужской род: -en, как den. Остальные как в Nominativ.",
+          "examples": [
+            {
+              "de": "Ich trinke heißen Tee.",
+              "tr": "Я пью горячий чай."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "В Dativ: -em (мужской и средний), -er (женский), -en (множественное), как dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Я пью кофе с горячим молоком."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: без артикля",
+      "points": [
+        {
+          "title": "Без артикля: guter Kaffee",
+          "text": "Якщо артикля немає, його закінчення бере прикметник: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (множина).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Гаряча кава смачна."
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ: heißen Tee",
+          "text": "В Akkusativ змінюється лише чоловічий рід: -en, як den. Решта як у Nominativ.",
+          "examples": [
+            {
+              "de": "Ich trinke heißen Tee.",
+              "tr": "Я п’ю гарячий чай."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "У Dativ: -em (чоловічий і середній), -er (жіночий), -en (множина), як dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Я п’ю каву з гарячим молоком."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: no article",
+      "points": [
+        {
+          "title": "No article: guter Kaffee",
+          "text": "With no article, the adjective takes the article’s ending: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (plural).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Hot coffee tastes good."
+            }
+          ]
+        },
+        {
+          "title": "Accusative: heißen Tee",
+          "text": "In the accusative only masculine changes: -en, like den. The rest stay as in the nominative.",
+          "examples": [
+            {
+              "de": "Ich trinke heißen Tee.",
+              "tr": "I drink hot tea."
+            }
+          ]
+        },
+        {
+          "title": "Dative: mit heißem Wasser",
+          "text": "In the dative: -em (masculine and neuter), -er (feminine), -en (plural), like dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "I drink coffee with hot milk."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: bez rodzajnika",
+      "points": [
+        {
+          "title": "Bez rodzajnika: guter Kaffee",
+          "text": "Gdy nie ma rodzajnika, jego końcówkę bierze przymiotnik: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (mnoga).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Gorąca kawa dobrze smakuje."
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ: heißen Tee",
+          "text": "W Akkusativ zmienia się tylko rodzaj męski: -en, jak den. Reszta jak w Nominativ.",
+          "examples": [
+            {
+              "de": "Ich trinke heißen Tee.",
+              "tr": "Piję gorącą herbatę."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "W Dativ: -em (męski i nijaki), -er (żeński), -en (mnoga), jak dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Piję kawę z gorącym mlekiem."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: sin artículo",
+      "points": [
+        {
+          "title": "Sin artículo: guter Kaffee",
+          "text": "Sin artículo, el adjetivo toma la terminación del artículo: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (plural).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "El café caliente está rico."
+            }
+          ]
+        },
+        {
+          "title": "Acusativo: heißen Tee",
+          "text": "En acusativo solo cambia el masculino: -en, como den. Lo demás, igual que en nominativo.",
+          "examples": [
+            {
+              "de": "Ich trinke heißen Tee.",
+              "tr": "Bebo té caliente."
+            }
+          ]
+        },
+        {
+          "title": "Dativo: mit heißem Wasser",
+          "text": "En dativo: -em (masculino y neutro), -er (femenino), -en (plural), como dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Tomo café con leche caliente."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : sans article",
+      "points": [
+        {
+          "title": "Sans article : guter Kaffee",
+          "text": "Sans article, l’adjectif prend la terminaison de l’article : guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (pluriel).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Le café chaud est bon."
+            }
+          ]
+        },
+        {
+          "title": "Accusatif : heißen Tee",
+          "text": "À l’accusatif, seul le masculin change : -en, comme den. Le reste comme au nominatif.",
+          "examples": [
+            {
+              "de": "Ich trinke heißen Tee.",
+              "tr": "Je bois du thé chaud."
+            }
+          ]
+        },
+        {
+          "title": "Datif : mit heißem Wasser",
+          "text": "Au datif : -em (masculin et neutre), -er (féminin), -en (pluriel), comme dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Je bois du café avec du lait chaud."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: artikelsiz",
+      "points": [
+        {
+          "title": "Artikelsiz: guter Kaffee",
+          "text": "Artikel yoksa onun ekini sıfat alır: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (çoğul).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Sıcak kahve güzel olur."
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ: heißen Tee",
+          "text": "Akkusativ’de sadece eril değişir: den gibi -en. Diğerleri Nominativ’deki gibi.",
+          "examples": [
+            {
+              "de": "Ich trinke heißen Tee.",
+              "tr": "Sıcak çay içiyorum."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "Dativ’de: -em (eril ve nötr), -er (dişil), -en (çoğul), dem, der, den gibi.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Kahveyi sıcak sütle içerim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: fără articol",
+      "points": [
+        {
+          "title": "Fără articol: guter Kaffee",
+          "text": "Fără articol, adjectivul ia terminația articolului: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (plural).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Cafeaua fierbinte e bună."
+            }
+          ]
+        },
+        {
+          "title": "Acuzativ: heißen Tee",
+          "text": "La acuzativ se schimbă doar masculinul: -en, ca den. Restul ca la nominativ.",
+          "examples": [
+            {
+              "de": "Ich trinke heißen Tee.",
+              "tr": "Beau ceai fierbinte."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "La dativ: -em (masculin și neutru), -er (feminin), -en (plural), ca dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Beau cafea cu lapte fierbinte."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: artiklsiz",
+      "points": [
+        {
+          "title": "Artiklsiz: guter Kaffee",
+          "text": "Artikl bo'lmasa, uning qo'shimchasini sifat oladi: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (ko'plik).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Issiq qahva mazali."
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ: heißen Tee",
+          "text": "Akkusativda faqat erkak rodi o'zgaradi: den kabi -en. Qolganlari Nominativdagidek.",
+          "examples": [
+            {
+              "de": "Ich trinke heißen Tee.",
+              "tr": "Issiq choy ichaman."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "Dativda: -em (erkak va o'rta), -er (ayol), -en (ko'plik), dem, der, den kabi.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Qahvani issiq sut bilan ichaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: बिना आर्टिकल",
+      "points": [
+        {
+          "title": "बिना आर्टिकल: guter Kaffee",
+          "text": "आर्टिकल न हो तो उसका अंत विशेषण लेता है: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (बहुवचन)।",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "गरम कॉफ़ी अच्छी लगती है।"
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ: heißen Tee",
+          "text": "Akkusativ में सिर्फ़ पुल्लिंग बदलता है: den की तरह -en। बाकी Nominativ जैसे।",
+          "examples": [
+            {
+              "de": "Ich trinke heißen Tee.",
+              "tr": "मैं गरम चाय पीता हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "Dativ में: -em (पुल्लिंग और नपुंसकलिंग), -er (स्त्रीलिंग), -en (बहुवचन), dem, der, den की तरह।",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "मैं गरम दूध के साथ कॉफ़ी पीता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: بدون أداة",
+      "points": [
+        {
+          "title": "بدون أداة: guter Kaffee",
+          "text": "إذا لم توجد أداة تأخذ الصفة نهايتها: guter Kaffee (der)، frische Milch (die)، kaltes Wasser (das)، frische Brötchen (جمع).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "القهوة الساخنة لذيذة."
+            }
+          ]
+        },
+        {
+          "title": "المفعول: heißen Tee",
+          "text": "في حالة المفعول يتغير المذكر فقط: -en مثل den. والباقي كما في الرفع.",
+          "examples": [
+            {
+              "de": "Ich trinke heißen Tee.",
+              "tr": "أشرب شاياً ساخناً."
+            }
+          ]
+        },
+        {
+          "title": "الجر: mit heißem Wasser",
+          "text": "في الجر: -em (المذكر والمحايد)، -er (المؤنث)، -en (الجمع)، مثل dem وder وden.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "أشرب القهوة بالحليب الساخن."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "taste-market-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "Без артикля: guter Kaffee",
+          "text": "Если артикля нет, его окончание берёт прилагательное: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (мн. ч.).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Горячий кофе вкусный."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "В Dativ: -em (мужской и средний), -er (женский), -en (множественное), как dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Я пью кофе с горячим молоком."
+            }
+          ]
+        },
+        {
+          "title": "viele, zwei + -e",
+          "text": "После чисел, viele, einige, wenige артикля нет, окончание даёт прилагательное: viele junge Leute. В Dativ -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "В городе много молодых людей."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "Без артикля: guter Kaffee",
+          "text": "Якщо артикля немає, його закінчення бере прикметник: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (множина).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Гаряча кава смачна."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "У Dativ: -em (чоловічий і середній), -er (жіночий), -en (множина), як dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Я п’ю каву з гарячим молоком."
+            }
+          ]
+        },
+        {
+          "title": "viele, zwei + -e",
+          "text": "Після чисел, viele, einige, wenige артикля немає, закінчення дає прикметник: viele junge Leute. У Dativ -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "У місті багато молодих людей."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "No article: guter Kaffee",
+          "text": "With no article, the adjective takes the article’s ending: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (plural).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Hot coffee tastes good."
+            }
+          ]
+        },
+        {
+          "title": "Dative: mit heißem Wasser",
+          "text": "In the dative: -em (masculine and neuter), -er (feminine), -en (plural), like dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "I drink coffee with hot milk."
+            }
+          ]
+        },
+        {
+          "title": "viele, zwei + -e",
+          "text": "After numbers, viele, einige, wenige there’s no article, so the adjective shows the ending: viele junge Leute. Dative -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "There are many young people in the city."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "Bez rodzajnika: guter Kaffee",
+          "text": "Gdy nie ma rodzajnika, jego końcówkę bierze przymiotnik: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (mnoga).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Gorąca kawa dobrze smakuje."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "W Dativ: -em (męski i nijaki), -er (żeński), -en (mnoga), jak dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Piję kawę z gorącym mlekiem."
+            }
+          ]
+        },
+        {
+          "title": "viele, zwei + -e",
+          "text": "Po liczebnikach, viele, einige, wenige nie ma rodzajnika, końcówkę daje przymiotnik: viele junge Leute. W Dativ -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "W mieście jest wielu młodych ludzi."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "Sin artículo: guter Kaffee",
+          "text": "Sin artículo, el adjetivo toma la terminación del artículo: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (plural).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "El café caliente está rico."
+            }
+          ]
+        },
+        {
+          "title": "Dativo: mit heißem Wasser",
+          "text": "En dativo: -em (masculino y neutro), -er (femenino), -en (plural), como dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Tomo café con leche caliente."
+            }
+          ]
+        },
+        {
+          "title": "viele, zwei + -e",
+          "text": "Tras números, viele, einige, wenige no hay artículo y la terminación la da el adjetivo: viele junge Leute. En dativo -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "En la ciudad hay mucha gente joven."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "Sans article : guter Kaffee",
+          "text": "Sans article, l’adjectif prend la terminaison de l’article : guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (pluriel).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Le café chaud est bon."
+            }
+          ]
+        },
+        {
+          "title": "Datif : mit heißem Wasser",
+          "text": "Au datif : -em (masculin et neutre), -er (féminin), -en (pluriel), comme dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Je bois du café avec du lait chaud."
+            }
+          ]
+        },
+        {
+          "title": "viele, zwei + -e",
+          "text": "Après les nombres, viele, einige, wenige, pas d’article : l’adjectif porte la terminaison : viele junge Leute. Au datif -en : mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "En ville, il y a beaucoup de jeunes."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "Artikelsiz: guter Kaffee",
+          "text": "Artikel yoksa onun ekini sıfat alır: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (çoğul).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Sıcak kahve güzel olur."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "Dativ’de: -em (eril ve nötr), -er (dişil), -en (çoğul), dem, der, den gibi.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Kahveyi sıcak sütle içerim."
+            }
+          ]
+        },
+        {
+          "title": "viele, zwei + -e",
+          "text": "Sayılar, viele, einige, wenige’den sonra artikel yok, eki sıfat taşır: viele junge Leute. Dativ’de -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "Şehirde çok genç insan var."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "Fără articol: guter Kaffee",
+          "text": "Fără articol, adjectivul ia terminația articolului: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (plural).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Cafeaua fierbinte e bună."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "La dativ: -em (masculin și neutru), -er (feminin), -en (plural), ca dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Beau cafea cu lapte fierbinte."
+            }
+          ]
+        },
+        {
+          "title": "viele, zwei + -e",
+          "text": "După numerale, viele, einige, wenige nu e articol, terminația o dă adjectivul: viele junge Leute. La dativ -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "În oraș sunt mulți tineri."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "Artiklsiz: guter Kaffee",
+          "text": "Artikl bo'lmasa, uning qo'shimchasini sifat oladi: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (ko'plik).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Issiq qahva mazali."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "Dativda: -em (erkak va o'rta), -er (ayol), -en (ko'plik), dem, der, den kabi.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Qahvani issiq sut bilan ichaman."
+            }
+          ]
+        },
+        {
+          "title": "viele, zwei + -e",
+          "text": "Sonlar, viele, einige, wenige dan keyin artikl yo'q, qo'shimchani sifat beradi: viele junge Leute. Dativda -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "Shaharda yoshlar ko'p."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "बिना आर्टिकल: guter Kaffee",
+          "text": "आर्टिकल न हो तो उसका अंत विशेषण लेता है: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (बहुवचन)।",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "गरम कॉफ़ी अच्छी लगती है।"
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "Dativ में: -em (पुल्लिंग और नपुंसकलिंग), -er (स्त्रीलिंग), -en (बहुवचन), dem, der, den की तरह।",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "मैं गरम दूध के साथ कॉफ़ी पीता हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "viele, zwei + -e",
+          "text": "संख्याओं, viele, einige, wenige के बाद आर्टिकल नहीं, अंत विशेषण देता है: viele junge Leute। Dativ में -en: mit vielen jungen Gästen।",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "शहर में बहुत युवा लोग हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "بدون أداة: guter Kaffee",
+          "text": "إذا لم توجد أداة تأخذ الصفة نهايتها: guter Kaffee (der)، frische Milch (die)، kaltes Wasser (das)، frische Brötchen (جمع).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "القهوة الساخنة لذيذة."
+            }
+          ]
+        },
+        {
+          "title": "الجر: mit heißem Wasser",
+          "text": "في الجر: -em (المذكر والمحايد)، -er (المؤنث)، -en (الجمع)، مثل dem وder وden.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "أشرب القهوة بالحليب الساخن."
+            }
+          ]
+        },
+        {
+          "title": "viele وzwei + -e",
+          "text": "بعد الأعداد وviele وeinige وwenige لا توجد أداة فتأخذ الصفة النهاية: viele junge Leute. وفي الجر -en: mit vielen jungen Gästen.",
+          "examples": [
+            {
+              "de": "In der Stadt gibt es viele junge Leute.",
+              "tr": "في المدينة شباب كثيرون."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

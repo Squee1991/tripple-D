@@ -1,0 +1,2860 @@
+{
+  "routine-mill-one": {
+    "ru": {
+      "title": "Отделяемая приставка: aufstehen",
+      "points": [
+        {
+          "title": "Приставка уходит в конец",
+          "text": "У таких глаголов приставка в предложении уходит в самый конец: aufstehen → Ich stehe ... auf.",
+          "examples": [
+            {
+              "de": "Ich stehe um sieben Uhr auf.",
+              "tr": "Я встаю в семь часов."
+            },
+            {
+              "de": "Er wacht früh auf.",
+              "tr": "Он просыпается рано."
+            }
+          ]
+        },
+        {
+          "title": "Глагол меняется как обычно",
+          "text": "Основная часть стоит на втором месте и меняется как обычно: ich stehe, du stehst. Приставка всегда одна и та же.",
+          "examples": [
+            {
+              "de": "Wann stehst du auf?",
+              "tr": "Во сколько ты встаёшь?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Відокремлюваний префікс: aufstehen",
+      "points": [
+        {
+          "title": "Префікс іде в кінець",
+          "text": "У таких дієсловах префікс у реченні йде в самий кінець: aufstehen → Ich stehe ... auf.",
+          "examples": [
+            {
+              "de": "Ich stehe um sieben Uhr auf.",
+              "tr": "Я встаю о сьомій."
+            },
+            {
+              "de": "Er wacht früh auf.",
+              "tr": "Він прокидається рано."
+            }
+          ]
+        },
+        {
+          "title": "Дієслово змінюється як зазвичай",
+          "text": "Основна частина стоїть на другому місці й змінюється як зазвичай: ich stehe, du stehst. Префікс завжди той самий.",
+          "examples": [
+            {
+              "de": "Wann stehst du auf?",
+              "tr": "О котрій ти встаєш?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Separable prefix: aufstehen",
+      "points": [
+        {
+          "title": "The prefix goes to the end",
+          "text": "With these verbs the prefix goes to the very end of the sentence: aufstehen → Ich stehe ... auf.",
+          "examples": [
+            {
+              "de": "Ich stehe um sieben Uhr auf.",
+              "tr": "I get up at seven."
+            },
+            {
+              "de": "Er wacht früh auf.",
+              "tr": "He wakes up early."
+            }
+          ]
+        },
+        {
+          "title": "The verb changes as usual",
+          "text": "The main part is in second place and changes as usual: ich stehe, du stehst. The prefix never changes.",
+          "examples": [
+            {
+              "de": "Wann stehst du auf?",
+              "tr": "When do you get up?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Przedrostek rozdzielny: aufstehen",
+      "points": [
+        {
+          "title": "Przedrostek idzie na koniec",
+          "text": "W takich czasownikach przedrostek idzie na sam koniec zdania: aufstehen → Ich stehe ... auf.",
+          "examples": [
+            {
+              "de": "Ich stehe um sieben Uhr auf.",
+              "tr": "Wstaję o siódmej."
+            },
+            {
+              "de": "Er wacht früh auf.",
+              "tr": "On budzi się wcześnie."
+            }
+          ]
+        },
+        {
+          "title": "Czasownik odmienia się normalnie",
+          "text": "Główna część stoi na drugim miejscu i odmienia się normalnie: ich stehe, du stehst. Przedrostek się nie zmienia.",
+          "examples": [
+            {
+              "de": "Wann stehst du auf?",
+              "tr": "O której wstajesz?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prefijo separable: aufstehen",
+      "points": [
+        {
+          "title": "El prefijo va al final",
+          "text": "En estos verbos el prefijo va al final de la frase: aufstehen → Ich stehe ... auf.",
+          "examples": [
+            {
+              "de": "Ich stehe um sieben Uhr auf.",
+              "tr": "Me levanto a las siete."
+            },
+            {
+              "de": "Er wacht früh auf.",
+              "tr": "Él se despierta temprano."
+            }
+          ]
+        },
+        {
+          "title": "El verbo cambia como siempre",
+          "text": "La parte principal va en segundo lugar y cambia como siempre: ich stehe, du stehst. El prefijo no cambia.",
+          "examples": [
+            {
+              "de": "Wann stehst du auf?",
+              "tr": "¿A qué hora te levantas?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Préfixe séparable : aufstehen",
+      "points": [
+        {
+          "title": "Le préfixe va à la fin",
+          "text": "Avec ces verbes, le préfixe va tout à la fin de la phrase : aufstehen → Ich stehe ... auf.",
+          "examples": [
+            {
+              "de": "Ich stehe um sieben Uhr auf.",
+              "tr": "Je me lève à sept heures."
+            },
+            {
+              "de": "Er wacht früh auf.",
+              "tr": "Il se réveille tôt."
+            }
+          ]
+        },
+        {
+          "title": "Le verbe change normalement",
+          "text": "La partie principale est en deuxième position et change normalement : ich stehe, du stehst. Le préfixe ne change jamais.",
+          "examples": [
+            {
+              "de": "Wann stehst du auf?",
+              "tr": "À quelle heure te lèves-tu ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Ayrılabilen ön ek: aufstehen",
+      "points": [
+        {
+          "title": "Ön ek sona gider",
+          "text": "Bu fiillerde ön ek cümlenin en sonuna gider: aufstehen → Ich stehe ... auf.",
+          "examples": [
+            {
+              "de": "Ich stehe um sieben Uhr auf.",
+              "tr": "Saat yedide kalkarım."
+            },
+            {
+              "de": "Er wacht früh auf.",
+              "tr": "O erken uyanır."
+            }
+          ]
+        },
+        {
+          "title": "Fiil normal değişir",
+          "text": "Ana kısım ikinci sıradadır ve normal değişir: ich stehe, du stehst. Ön ek hiç değişmez.",
+          "examples": [
+            {
+              "de": "Wann stehst du auf?",
+              "tr": "Ne zaman kalkarsın?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Prefix separabil: aufstehen",
+      "points": [
+        {
+          "title": "Prefixul merge la final",
+          "text": "La aceste verbe prefixul merge la sfârșitul propoziției: aufstehen → Ich stehe ... auf.",
+          "examples": [
+            {
+              "de": "Ich stehe um sieben Uhr auf.",
+              "tr": "Mă trezesc la șapte."
+            },
+            {
+              "de": "Er wacht früh auf.",
+              "tr": "El se trezește devreme."
+            }
+          ]
+        },
+        {
+          "title": "Verbul se schimbă normal",
+          "text": "Partea principală stă pe locul doi și se schimbă normal: ich stehe, du stehst. Prefixul nu se schimbă.",
+          "examples": [
+            {
+              "de": "Wann stehst du auf?",
+              "tr": "Când te trezești?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ajraladigan old qo‘shimcha: aufstehen",
+      "points": [
+        {
+          "title": "Old qo'shimcha oxiriga o'tadi",
+          "text": "Bunday fe'llarda old qo'shimcha gapning eng oxiriga o'tadi: aufstehen → Ich stehe ... auf.",
+          "examples": [
+            {
+              "de": "Ich stehe um sieben Uhr auf.",
+              "tr": "Men soat yettida turaman."
+            },
+            {
+              "de": "Er wacht früh auf.",
+              "tr": "U erta uyg‘onadi."
+            }
+          ]
+        },
+        {
+          "title": "Fe'l odatdagidek o'zgaradi",
+          "text": "Asosiy qism ikkinchi o'rinda turadi va odatdagidek o'zgaradi: ich stehe, du stehst. Old qo'shimcha o'zgarmaydi.",
+          "examples": [
+            {
+              "de": "Wann stehst du auf?",
+              "tr": "Soat nechada turasan?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अलग होने वाला उपसर्ग: aufstehen",
+      "points": [
+        {
+          "title": "उपसर्ग अंत में जाता है",
+          "text": "ऐसी क्रियाओं में उपसर्ग वाक्य के बिल्कुल अंत में जाता है: aufstehen → Ich stehe ... auf।",
+          "examples": [
+            {
+              "de": "Ich stehe um sieben Uhr auf.",
+              "tr": "मैं सात बजे उठता हूँ।"
+            },
+            {
+              "de": "Er wacht früh auf.",
+              "tr": "वह जल्दी जागता है।"
+            }
+          ]
+        },
+        {
+          "title": "क्रिया सामान्य रूप से बदलती है",
+          "text": "मुख्य हिस्सा दूसरे स्थान पर रहता है और सामान्य रूप से बदलता है: ich stehe, du stehst। उपसर्ग नहीं बदलता।",
+          "examples": [
+            {
+              "de": "Wann stehst du auf?",
+              "tr": "तुम कब उठते हो?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "السابقة المنفصلة: aufstehen",
+      "points": [
+        {
+          "title": "السابقة تذهب إلى الآخر",
+          "text": "في هذه الأفعال تذهب السابقة إلى آخر الجملة: aufstehen → Ich stehe ... auf.",
+          "examples": [
+            {
+              "de": "Ich stehe um sieben Uhr auf.",
+              "tr": "أستيقظ في السابعة."
+            },
+            {
+              "de": "Er wacht früh auf.",
+              "tr": "هو يستيقظ مبكراً."
+            }
+          ]
+        },
+        {
+          "title": "الفعل يتغير كالعادة",
+          "text": "الجزء الأساسي في المكان الثاني ويتغير كالعادة: ich stehe، du stehst. والسابقة لا تتغير.",
+          "examples": [
+            {
+              "de": "Wann stehst du auf?",
+              "tr": "متى تستيقظ؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "routine-mill-two": {
+    "ru": {
+      "title": "einkaufen, aufräumen",
+      "points": [
+        {
+          "title": "Предмет посередине",
+          "text": "Если есть предмет, он стоит между глаголом и приставкой. Приставка всё равно в конце.",
+          "examples": [
+            {
+              "de": "Er räumt sein Zimmer auf.",
+              "tr": "Он убирает свою комнату."
+            }
+          ]
+        },
+        {
+          "title": "kaufen или einkaufen",
+          "text": "kaufen значит купить что-то конкретное. einkaufen значит ходить за покупками.",
+          "examples": [
+            {
+              "de": "Am Samstag kaufe ich ein.",
+              "tr": "В субботу я хожу за покупками."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "einkaufen, aufräumen",
+      "points": [
+        {
+          "title": "Предмет посередині",
+          "text": "Якщо є предмет, він стоїть між дієсловом і префіксом. Префікс однаково в кінці.",
+          "examples": [
+            {
+              "de": "Er räumt sein Zimmer auf.",
+              "tr": "Він прибирає свою кімнату."
+            }
+          ]
+        },
+        {
+          "title": "kaufen чи einkaufen",
+          "text": "kaufen означає купити щось конкретне. einkaufen означає ходити по покупки.",
+          "examples": [
+            {
+              "de": "Am Samstag kaufe ich ein.",
+              "tr": "У суботу я ходжу по покупки."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "einkaufen, aufräumen",
+      "points": [
+        {
+          "title": "The object goes in the middle",
+          "text": "If there is an object, it sits between the verb and the prefix. The prefix is still at the end.",
+          "examples": [
+            {
+              "de": "Er räumt sein Zimmer auf.",
+              "tr": "He tidies his room."
+            }
+          ]
+        },
+        {
+          "title": "kaufen or einkaufen",
+          "text": "kaufen means to buy something specific. einkaufen means to go shopping.",
+          "examples": [
+            {
+              "de": "Am Samstag kaufe ich ein.",
+              "tr": "On Saturday I go shopping."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "einkaufen, aufräumen",
+      "points": [
+        {
+          "title": "Przedmiot w środku",
+          "text": "Jeśli jest dopełnienie, stoi między czasownikiem a przedrostkiem. Przedrostek i tak na końcu.",
+          "examples": [
+            {
+              "de": "Er räumt sein Zimmer auf.",
+              "tr": "On sprząta swój pokój."
+            }
+          ]
+        },
+        {
+          "title": "kaufen czy einkaufen",
+          "text": "kaufen to kupić coś konkretnego. einkaufen to robić zakupy.",
+          "examples": [
+            {
+              "de": "Am Samstag kaufe ich ein.",
+              "tr": "W sobotę robię zakupy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "einkaufen, aufräumen",
+      "points": [
+        {
+          "title": "El objeto en medio",
+          "text": "Si hay un objeto, va entre el verbo y el prefijo. El prefijo sigue al final.",
+          "examples": [
+            {
+              "de": "Er räumt sein Zimmer auf.",
+              "tr": "Él ordena su habitación."
+            }
+          ]
+        },
+        {
+          "title": "kaufen o einkaufen",
+          "text": "kaufen es comprar algo concreto. einkaufen es hacer la compra.",
+          "examples": [
+            {
+              "de": "Am Samstag kaufe ich ein.",
+              "tr": "El sábado hago la compra."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "einkaufen, aufräumen",
+      "points": [
+        {
+          "title": "Le complément au milieu",
+          "text": "S’il y a un complément, il se place entre le verbe et le préfixe. Le préfixe reste à la fin.",
+          "examples": [
+            {
+              "de": "Er räumt sein Zimmer auf.",
+              "tr": "Il range sa chambre."
+            }
+          ]
+        },
+        {
+          "title": "kaufen ou einkaufen",
+          "text": "kaufen, c’est acheter quelque chose de précis. einkaufen, c’est faire les courses.",
+          "examples": [
+            {
+              "de": "Am Samstag kaufe ich ein.",
+              "tr": "Samedi, je fais les courses."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "einkaufen, aufräumen",
+      "points": [
+        {
+          "title": "Nesne ortada",
+          "text": "Nesne varsa fiil ile ön ek arasına girer. Ön ek yine sondadır.",
+          "examples": [
+            {
+              "de": "Er räumt sein Zimmer auf.",
+              "tr": "O odasını topluyor."
+            }
+          ]
+        },
+        {
+          "title": "kaufen mi, einkaufen mi",
+          "text": "kaufen belli bir şey satın almaktır. einkaufen alışverişe gitmektir.",
+          "examples": [
+            {
+              "de": "Am Samstag kaufe ich ein.",
+              "tr": "Cumartesi alışveriş yaparım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "einkaufen, aufräumen",
+      "points": [
+        {
+          "title": "Obiectul la mijloc",
+          "text": "Dacă există un obiect, stă între verb și prefix. Prefixul rămâne la final.",
+          "examples": [
+            {
+              "de": "Er räumt sein Zimmer auf.",
+              "tr": "El își face ordine în cameră."
+            }
+          ]
+        },
+        {
+          "title": "kaufen sau einkaufen",
+          "text": "kaufen înseamnă a cumpăra ceva anume. einkaufen înseamnă a merge la cumpărături.",
+          "examples": [
+            {
+              "de": "Am Samstag kaufe ich ein.",
+              "tr": "Sâmbătă fac cumpărături."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "einkaufen, aufräumen",
+      "points": [
+        {
+          "title": "Narsa o'rtada",
+          "text": "Narsa bo'lsa, u fe'l va old qo'shimcha orasida turadi. Old qo'shimcha baribir oxirida.",
+          "examples": [
+            {
+              "de": "Er räumt sein Zimmer auf.",
+              "tr": "U xonasini yig‘ishtiradi."
+            }
+          ]
+        },
+        {
+          "title": "kaufen yoki einkaufen",
+          "text": "kaufen aniq bir narsani sotib olish. einkaufen xarid qilishga borish.",
+          "examples": [
+            {
+              "de": "Am Samstag kaufe ich ein.",
+              "tr": "Shanba kuni xarid qilaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "einkaufen, aufräumen",
+      "points": [
+        {
+          "title": "कर्म बीच में",
+          "text": "अगर कर्म है, तो वह क्रिया और उपसर्ग के बीच आता है। उपसर्ग फिर भी अंत में।",
+          "examples": [
+            {
+              "de": "Er räumt sein Zimmer auf.",
+              "tr": "वह अपना कमरा साफ़ करता है।"
+            }
+          ]
+        },
+        {
+          "title": "kaufen या einkaufen",
+          "text": "kaufen मतलब कोई खास चीज़ खरीदना। einkaufen मतलब खरीदारी करने जाना।",
+          "examples": [
+            {
+              "de": "Am Samstag kaufe ich ein.",
+              "tr": "शनिवार को मैं खरीदारी करता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "einkaufen وaufräumen",
+      "points": [
+        {
+          "title": "المفعول في الوسط",
+          "text": "إذا وُجد مفعول يقع بين الفعل والسابقة، وتبقى السابقة في الآخر.",
+          "examples": [
+            {
+              "de": "Er räumt sein Zimmer auf.",
+              "tr": "هو يرتب غرفته."
+            }
+          ]
+        },
+        {
+          "title": "kaufen أم einkaufen",
+          "text": "kaufen تعني شراء شيء محدد. وeinkaufen تعني التسوق.",
+          "examples": [
+            {
+              "de": "Am Samstag kaufe ich ein.",
+              "tr": "يوم السبت أتسوق."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "routine-mill-three": {
+    "ru": {
+      "title": "anrufen, fernsehen",
+      "points": [
+        {
+          "title": "anrufen + кого",
+          "text": "После anrufen человек в Akkusativ: Ich rufe meinen Vater an. По-русски «кому», по-немецки «кого».",
+          "examples": [
+            {
+              "de": "Ich rufe meine Mutter an.",
+              "tr": "Я звоню своей маме."
+            }
+          ]
+        },
+        {
+          "title": "В вопросе тоже в конце",
+          "text": "В вопросе глагол первым, а приставка всё равно в конце. fernsehen меняет гласную: er sieht fern.",
+          "examples": [
+            {
+              "de": "Rufst du Anna an?",
+              "tr": "Ты звонишь Анне?"
+            },
+            {
+              "de": "Er sieht oft fern.",
+              "tr": "Он часто смотрит телевизор."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "anrufen, fernsehen",
+      "points": [
+        {
+          "title": "anrufen + кого",
+          "text": "Після anrufen людина в Akkusativ: Ich rufe meinen Vater an. Українською «кому», німецькою «кого».",
+          "examples": [
+            {
+              "de": "Ich rufe meine Mutter an.",
+              "tr": "Я телефоную своїй мамі."
+            }
+          ]
+        },
+        {
+          "title": "У питанні теж у кінці",
+          "text": "У питанні дієслово першим, а префікс однаково в кінці. fernsehen змінює голосну: er sieht fern.",
+          "examples": [
+            {
+              "de": "Rufst du Anna an?",
+              "tr": "Ти телефонуєш Анні?"
+            },
+            {
+              "de": "Er sieht oft fern.",
+              "tr": "Він часто дивиться телевізор."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "anrufen, fernsehen",
+      "points": [
+        {
+          "title": "anrufen + whom",
+          "text": "After anrufen the person is in the accusative: Ich rufe meinen Vater an.",
+          "examples": [
+            {
+              "de": "Ich rufe meine Mutter an.",
+              "tr": "I call my mother."
+            }
+          ]
+        },
+        {
+          "title": "At the end in questions too",
+          "text": "In a question the verb comes first, the prefix is still at the end. fernsehen changes its vowel: er sieht fern.",
+          "examples": [
+            {
+              "de": "Rufst du Anna an?",
+              "tr": "Are you calling Anna?"
+            },
+            {
+              "de": "Er sieht oft fern.",
+              "tr": "He often watches TV."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "anrufen, fernsehen",
+      "points": [
+        {
+          "title": "anrufen + kogo",
+          "text": "Po anrufen osoba jest w Akkusativ: Ich rufe meinen Vater an. Po polsku „do kogo”, po niemiecku „kogo”.",
+          "examples": [
+            {
+              "de": "Ich rufe meine Mutter an.",
+              "tr": "Dzwonię do mojej mamy."
+            }
+          ]
+        },
+        {
+          "title": "W pytaniu też na końcu",
+          "text": "W pytaniu czasownik pierwszy, a przedrostek i tak na końcu. fernsehen zmienia samogłoskę: er sieht fern.",
+          "examples": [
+            {
+              "de": "Rufst du Anna an?",
+              "tr": "Dzwonisz do Anny?"
+            },
+            {
+              "de": "Er sieht oft fern.",
+              "tr": "On często ogląda telewizję."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "anrufen, fernsehen",
+      "points": [
+        {
+          "title": "anrufen + a quién",
+          "text": "Después de anrufen la persona va en acusativo: Ich rufe meinen Vater an.",
+          "examples": [
+            {
+              "de": "Ich rufe meine Mutter an.",
+              "tr": "Llamo a mi madre."
+            }
+          ]
+        },
+        {
+          "title": "También al final en preguntas",
+          "text": "En la pregunta el verbo va primero y el prefijo sigue al final. fernsehen cambia la vocal: er sieht fern.",
+          "examples": [
+            {
+              "de": "Rufst du Anna an?",
+              "tr": "¿Llamas a Anna?"
+            },
+            {
+              "de": "Er sieht oft fern.",
+              "tr": "Él ve mucho la tele."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "anrufen, fernsehen",
+      "points": [
+        {
+          "title": "anrufen + qui",
+          "text": "Après anrufen, la personne est à l’accusatif : Ich rufe meinen Vater an. En français « à qui », en allemand « qui ».",
+          "examples": [
+            {
+              "de": "Ich rufe meine Mutter an.",
+              "tr": "J’appelle ma mère."
+            }
+          ]
+        },
+        {
+          "title": "À la fin aussi dans les questions",
+          "text": "Dans une question, le verbe est en premier, le préfixe reste à la fin. fernsehen change de voyelle : er sieht fern.",
+          "examples": [
+            {
+              "de": "Rufst du Anna an?",
+              "tr": "Tu appelles Anna ?"
+            },
+            {
+              "de": "Er sieht oft fern.",
+              "tr": "Il regarde souvent la télé."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "anrufen, fernsehen",
+      "points": [
+        {
+          "title": "anrufen + kimi",
+          "text": "anrufen’den sonra kişi Akkusativ’dedir: Ich rufe meinen Vater an.",
+          "examples": [
+            {
+              "de": "Ich rufe meine Mutter an.",
+              "tr": "Annemi arıyorum."
+            }
+          ]
+        },
+        {
+          "title": "Soruda da sonda",
+          "text": "Soruda fiil başta, ön ek yine sonda. fernsehen ünlüyü değiştirir: er sieht fern.",
+          "examples": [
+            {
+              "de": "Rufst du Anna an?",
+              "tr": "Anna’yı arıyor musun?"
+            },
+            {
+              "de": "Er sieht oft fern.",
+              "tr": "O sık sık televizyon izler."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "anrufen, fernsehen",
+      "points": [
+        {
+          "title": "anrufen + pe cine",
+          "text": "După anrufen persoana e la acuzativ: Ich rufe meinen Vater an.",
+          "examples": [
+            {
+              "de": "Ich rufe meine Mutter an.",
+              "tr": "O sun pe mama."
+            }
+          ]
+        },
+        {
+          "title": "Și în întrebare la final",
+          "text": "În întrebare verbul e primul, iar prefixul tot la final. fernsehen își schimbă vocala: er sieht fern.",
+          "examples": [
+            {
+              "de": "Rufst du Anna an?",
+              "tr": "O suni pe Anna?"
+            },
+            {
+              "de": "Er sieht oft fern.",
+              "tr": "El se uită des la televizor."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "anrufen, fernsehen",
+      "points": [
+        {
+          "title": "anrufen + kimni",
+          "text": "anrufen dan keyin odam Akkusativda: Ich rufe meinen Vater an. O'zbekchada \"kimga\", nemischada \"kimni\".",
+          "examples": [
+            {
+              "de": "Ich rufe meine Mutter an.",
+              "tr": "Onamga qo'ng'iroq qilaman."
+            }
+          ]
+        },
+        {
+          "title": "Savolda ham oxirida",
+          "text": "Savolda fe'l birinchi, old qo'shimcha baribir oxirida. fernsehen unlini o'zgartiradi: er sieht fern.",
+          "examples": [
+            {
+              "de": "Rufst du Anna an?",
+              "tr": "Annaga qo'ng'iroq qilyapsanmi?"
+            },
+            {
+              "de": "Er sieht oft fern.",
+              "tr": "U tez-tez televizor ko'radi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "anrufen, fernsehen",
+      "points": [
+        {
+          "title": "anrufen + किसे",
+          "text": "anrufen के बाद व्यक्ति Akkusativ में: Ich rufe meinen Vater an।",
+          "examples": [
+            {
+              "de": "Ich rufe meine Mutter an.",
+              "tr": "मैं अपनी माँ को फ़ोन करता हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "सवाल में भी अंत में",
+          "text": "सवाल में क्रिया पहले, उपसर्ग फिर भी अंत में। fernsehen का स्वर बदलता है: er sieht fern।",
+          "examples": [
+            {
+              "de": "Rufst du Anna an?",
+              "tr": "क्या तुम अन्ना को फ़ोन कर रहे हो?"
+            },
+            {
+              "de": "Er sieht oft fern.",
+              "tr": "वह अक्सर टीवी देखता है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "anrufen وfernsehen",
+      "points": [
+        {
+          "title": "anrufen + من",
+          "text": "بعد anrufen يكون الشخص في حالة المفعول: Ich rufe meinen Vater an.",
+          "examples": [
+            {
+              "de": "Ich rufe meine Mutter an.",
+              "tr": "أتصل بأمي."
+            }
+          ]
+        },
+        {
+          "title": "في السؤال أيضاً في الآخر",
+          "text": "في السؤال يأتي الفعل أولاً وتبقى السابقة في الآخر. وfernsehen يتغير حرفه: er sieht fern.",
+          "examples": [
+            {
+              "de": "Rufst du Anna an?",
+              "tr": "هل تتصل بآنا؟"
+            },
+            {
+              "de": "Er sieht oft fern.",
+              "tr": "هو يشاهد التلفاز كثيراً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "routine-mill-four": {
+    "ru": {
+      "title": "abfahren, ankommen, mitkommen",
+      "points": [
+        {
+          "title": "Гласная меняется, как без приставки",
+          "text": "abfahren меняется как fahren: der Zug fährt ab. Приставка не мешает.",
+          "examples": [
+            {
+              "de": "Der Zug fährt um acht Uhr ab.",
+              "tr": "Поезд отправляется в восемь."
+            },
+            {
+              "de": "Kommst du mit? Ja, ich komme mit!",
+              "tr": "Ты идёшь с нами? Да, иду!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "abfahren, ankommen, mitkommen",
+      "points": [
+        {
+          "title": "Голосна змінюється, як без префікса",
+          "text": "abfahren змінюється як fahren: der Zug fährt ab. Префікс не заважає.",
+          "examples": [
+            {
+              "de": "Der Zug fährt um acht Uhr ab.",
+              "tr": "Потяг вирушає о восьмій."
+            },
+            {
+              "de": "Kommst du mit? Ja, ich komme mit!",
+              "tr": "Ти йдеш з нами? Так, іду!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "abfahren, ankommen, mitkommen",
+      "points": [
+        {
+          "title": "The vowel changes as without the prefix",
+          "text": "abfahren changes like fahren: der Zug fährt ab. The prefix doesn’t matter.",
+          "examples": [
+            {
+              "de": "Der Zug fährt um acht Uhr ab.",
+              "tr": "The train leaves at eight."
+            },
+            {
+              "de": "Kommst du mit? Ja, ich komme mit!",
+              "tr": "Are you coming along? Yes, I’m coming!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "abfahren, ankommen, mitkommen",
+      "points": [
+        {
+          "title": "Samogłoska zmienia się jak bez przedrostka",
+          "text": "abfahren odmienia się jak fahren: der Zug fährt ab. Przedrostek nie przeszkadza.",
+          "examples": [
+            {
+              "de": "Der Zug fährt um acht Uhr ab.",
+              "tr": "Pociąg odjeżdża o ósmej."
+            },
+            {
+              "de": "Kommst du mit? Ja, ich komme mit!",
+              "tr": "Idziesz z nami? Tak, idę!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "abfahren, ankommen, mitkommen",
+      "points": [
+        {
+          "title": "La vocal cambia como sin prefijo",
+          "text": "abfahren cambia como fahren: der Zug fährt ab. El prefijo no influye.",
+          "examples": [
+            {
+              "de": "Der Zug fährt um acht Uhr ab.",
+              "tr": "El tren sale a las ocho."
+            },
+            {
+              "de": "Kommst du mit? Ja, ich komme mit!",
+              "tr": "¿Vienes con nosotros? ¡Sí, voy!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "abfahren, ankommen, mitkommen",
+      "points": [
+        {
+          "title": "La voyelle change comme sans préfixe",
+          "text": "abfahren change comme fahren : der Zug fährt ab. Le préfixe ne change rien.",
+          "examples": [
+            {
+              "de": "Der Zug fährt um acht Uhr ab.",
+              "tr": "Le train part à huit heures."
+            },
+            {
+              "de": "Kommst du mit? Ja, ich komme mit!",
+              "tr": "Tu viens avec nous ? Oui, je viens !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "abfahren, ankommen, mitkommen",
+      "points": [
+        {
+          "title": "Ünlü ön eksiz hâldeki gibi değişir",
+          "text": "abfahren, fahren gibi değişir: der Zug fährt ab. Ön ek bir şey değiştirmez.",
+          "examples": [
+            {
+              "de": "Der Zug fährt um acht Uhr ab.",
+              "tr": "Tren saat sekizde kalkıyor."
+            },
+            {
+              "de": "Kommst du mit? Ja, ich komme mit!",
+              "tr": "Bizimle geliyor musun? Evet, geliyorum!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "abfahren, ankommen, mitkommen",
+      "points": [
+        {
+          "title": "Vocala se schimbă ca fără prefix",
+          "text": "abfahren se schimbă ca fahren: der Zug fährt ab. Prefixul nu contează.",
+          "examples": [
+            {
+              "de": "Der Zug fährt um acht Uhr ab.",
+              "tr": "Trenul pleacă la opt."
+            },
+            {
+              "de": "Kommst du mit? Ja, ich komme mit!",
+              "tr": "Vii cu noi? Da, vin!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "abfahren, ankommen, mitkommen",
+      "points": [
+        {
+          "title": "Unli old qo'shimchasizdagidek o'zgaradi",
+          "text": "abfahren fahren kabi o'zgaradi: der Zug fährt ab. Old qo'shimcha xalal bermaydi.",
+          "examples": [
+            {
+              "de": "Der Zug fährt um acht Uhr ab.",
+              "tr": "Poyezd soat sakkizda jo‘naydi."
+            },
+            {
+              "de": "Kommst du mit? Ja, ich komme mit!",
+              "tr": "Biz bilan borasanmi? Ha, boraman!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "abfahren, ankommen, mitkommen",
+      "points": [
+        {
+          "title": "स्वर बिना उपसर्ग की तरह बदलता है",
+          "text": "abfahren, fahren की तरह बदलता है: der Zug fährt ab। उपसर्ग से फ़र्क नहीं पड़ता।",
+          "examples": [
+            {
+              "de": "Der Zug fährt um acht Uhr ab.",
+              "tr": "ट्रेन आठ बजे चलती है।"
+            },
+            {
+              "de": "Kommst du mit? Ja, ich komme mit!",
+              "tr": "क्या तुम साथ चलोगे? हाँ, चलूँगा!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "abfahren وankommen وmitkommen",
+      "points": [
+        {
+          "title": "يتغير الحرف كما بدون سابقة",
+          "text": "يتغير abfahren مثل fahren: der Zug fährt ab. والسابقة لا تؤثر.",
+          "examples": [
+            {
+              "de": "Der Zug fährt um acht Uhr ab.",
+              "tr": "ينطلق القطار في الثامنة."
+            },
+            {
+              "de": "Kommst du mit? Ja, ich komme mit!",
+              "tr": "هل ستأتي معنا؟ نعم، سآتي!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "routine-mill-five": {
+    "ru": {
+      "title": "anfangen, aufmachen, zumachen",
+      "points": [
+        {
+          "title": "anfangen меняет гласную",
+          "text": "anfangen: du fängst an, er fängt an.",
+          "examples": [
+            {
+              "de": "Der Film fängt um acht Uhr an.",
+              "tr": "Фильм начинается в восемь."
+            }
+          ]
+        },
+        {
+          "title": "auf и zu",
+          "text": "aufmachen значит открывать, zumachen закрывать. Приставка показывает направление.",
+          "examples": [
+            {
+              "de": "Machst du das Fenster auf?",
+              "tr": "Ты откроешь окно?"
+            },
+            {
+              "de": "Der Laden macht um zehn Uhr zu.",
+              "tr": "Магазин закрывается в десять."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "anfangen, aufmachen, zumachen",
+      "points": [
+        {
+          "title": "anfangen змінює голосну",
+          "text": "anfangen: du fängst an, er fängt an.",
+          "examples": [
+            {
+              "de": "Der Film fängt um acht Uhr an.",
+              "tr": "Фільм починається о восьмій."
+            }
+          ]
+        },
+        {
+          "title": "auf і zu",
+          "text": "aufmachen означає відчиняти, zumachen зачиняти. Префікс показує напрямок.",
+          "examples": [
+            {
+              "de": "Machst du das Fenster auf?",
+              "tr": "Ти відчиниш вікно?"
+            },
+            {
+              "de": "Der Laden macht um zehn Uhr zu.",
+              "tr": "Магазин зачиняється о десятій."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "anfangen, aufmachen, zumachen",
+      "points": [
+        {
+          "title": "anfangen changes its vowel",
+          "text": "anfangen: du fängst an, er fängt an.",
+          "examples": [
+            {
+              "de": "Der Film fängt um acht Uhr an.",
+              "tr": "The film starts at eight."
+            }
+          ]
+        },
+        {
+          "title": "auf and zu",
+          "text": "aufmachen means to open, zumachen means to close. The prefix shows the direction.",
+          "examples": [
+            {
+              "de": "Machst du das Fenster auf?",
+              "tr": "Will you open the window?"
+            },
+            {
+              "de": "Der Laden macht um zehn Uhr zu.",
+              "tr": "The shop closes at ten."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "anfangen, aufmachen, zumachen",
+      "points": [
+        {
+          "title": "anfangen zmienia samogłoskę",
+          "text": "anfangen: du fängst an, er fängt an.",
+          "examples": [
+            {
+              "de": "Der Film fängt um acht Uhr an.",
+              "tr": "Film zaczyna się o ósmej."
+            }
+          ]
+        },
+        {
+          "title": "auf i zu",
+          "text": "aufmachen znaczy otwierać, zumachen zamykać. Przedrostek pokazuje kierunek.",
+          "examples": [
+            {
+              "de": "Machst du das Fenster auf?",
+              "tr": "Otworzysz okno?"
+            },
+            {
+              "de": "Der Laden macht um zehn Uhr zu.",
+              "tr": "Sklep zamyka się o dziesiątej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "anfangen, aufmachen, zumachen",
+      "points": [
+        {
+          "title": "anfangen cambia la vocal",
+          "text": "anfangen: du fängst an, er fängt an.",
+          "examples": [
+            {
+              "de": "Der Film fängt um acht Uhr an.",
+              "tr": "La película empieza a las ocho."
+            }
+          ]
+        },
+        {
+          "title": "auf y zu",
+          "text": "aufmachen es abrir, zumachen es cerrar. El prefijo indica la dirección.",
+          "examples": [
+            {
+              "de": "Machst du das Fenster auf?",
+              "tr": "¿Abres la ventana?"
+            },
+            {
+              "de": "Der Laden macht um zehn Uhr zu.",
+              "tr": "La tienda cierra a las diez."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "anfangen, aufmachen, zumachen",
+      "points": [
+        {
+          "title": "anfangen change de voyelle",
+          "text": "anfangen : du fängst an, er fängt an.",
+          "examples": [
+            {
+              "de": "Der Film fängt um acht Uhr an.",
+              "tr": "Le film commence à huit heures."
+            }
+          ]
+        },
+        {
+          "title": "auf et zu",
+          "text": "aufmachen veut dire ouvrir, zumachen fermer. Le préfixe indique le sens.",
+          "examples": [
+            {
+              "de": "Machst du das Fenster auf?",
+              "tr": "Tu ouvres la fenêtre ?"
+            },
+            {
+              "de": "Der Laden macht um zehn Uhr zu.",
+              "tr": "Le magasin ferme à dix heures."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "anfangen, aufmachen, zumachen",
+      "points": [
+        {
+          "title": "anfangen ünlüyü değiştirir",
+          "text": "anfangen: du fängst an, er fängt an.",
+          "examples": [
+            {
+              "de": "Der Film fängt um acht Uhr an.",
+              "tr": "Film saat sekizde başlıyor."
+            }
+          ]
+        },
+        {
+          "title": "auf ve zu",
+          "text": "aufmachen açmak, zumachen kapatmak demektir. Ön ek yönü gösterir.",
+          "examples": [
+            {
+              "de": "Machst du das Fenster auf?",
+              "tr": "Pencereyi açar mısın?"
+            },
+            {
+              "de": "Der Laden macht um zehn Uhr zu.",
+              "tr": "Dükkân saat onda kapanıyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "anfangen, aufmachen, zumachen",
+      "points": [
+        {
+          "title": "anfangen își schimbă vocala",
+          "text": "anfangen: du fängst an, er fängt an.",
+          "examples": [
+            {
+              "de": "Der Film fängt um acht Uhr an.",
+              "tr": "Filmul începe la opt."
+            }
+          ]
+        },
+        {
+          "title": "auf și zu",
+          "text": "aufmachen înseamnă a deschide, zumachen a închide. Prefixul arată direcția.",
+          "examples": [
+            {
+              "de": "Machst du das Fenster auf?",
+              "tr": "Deschizi fereastra?"
+            },
+            {
+              "de": "Der Laden macht um zehn Uhr zu.",
+              "tr": "Magazinul se închide la zece."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "anfangen, aufmachen, zumachen",
+      "points": [
+        {
+          "title": "anfangen unlini o'zgartiradi",
+          "text": "anfangen: du fängst an, er fängt an.",
+          "examples": [
+            {
+              "de": "Der Film fängt um acht Uhr an.",
+              "tr": "Film soat sakkizda boshlanadi."
+            }
+          ]
+        },
+        {
+          "title": "auf va zu",
+          "text": "aufmachen ochish, zumachen yopish. Old qo'shimcha yo'nalishni ko'rsatadi.",
+          "examples": [
+            {
+              "de": "Machst du das Fenster auf?",
+              "tr": "Derazani ochasanmi?"
+            },
+            {
+              "de": "Der Laden macht um zehn Uhr zu.",
+              "tr": "Do'kon soat o'nda yopiladi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "anfangen, aufmachen, zumachen",
+      "points": [
+        {
+          "title": "anfangen का स्वर बदलता है",
+          "text": "anfangen: du fängst an, er fängt an।",
+          "examples": [
+            {
+              "de": "Der Film fängt um acht Uhr an.",
+              "tr": "फ़िल्म आठ बजे शुरू होती है।"
+            }
+          ]
+        },
+        {
+          "title": "auf और zu",
+          "text": "aufmachen मतलब खोलना, zumachen मतलब बंद करना। उपसर्ग दिशा बताता है।",
+          "examples": [
+            {
+              "de": "Machst du das Fenster auf?",
+              "tr": "क्या तुम खिड़की खोलोगे?"
+            },
+            {
+              "de": "Der Laden macht um zehn Uhr zu.",
+              "tr": "दुकान दस बजे बंद होती है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "anfangen وaufmachen وzumachen",
+      "points": [
+        {
+          "title": "anfangen يتغير حرفه",
+          "text": "anfangen: du fängst an، er fängt an.",
+          "examples": [
+            {
+              "de": "Der Film fängt um acht Uhr an.",
+              "tr": "يبدأ الفيلم في الثامنة."
+            }
+          ]
+        },
+        {
+          "title": "auf وzu",
+          "text": "aufmachen تعني يفتح، وzumachen تعني يغلق. والسابقة تدل على الاتجاه.",
+          "examples": [
+            {
+              "de": "Machst du das Fenster auf?",
+              "tr": "هل تفتح النافذة؟"
+            },
+            {
+              "de": "Der Laden macht um zehn Uhr zu.",
+              "tr": "يغلق المتجر في العاشرة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "routine-mill-six": {
+    "ru": {
+      "title": "Вопросы и nicht с приставкой",
+      "points": [
+        {
+          "title": "nicht перед приставкой",
+          "text": "Приставка всегда в самом конце, а nicht стоит прямо перед ней.",
+          "examples": [
+            {
+              "de": "Ich kaufe heute nicht ein.",
+              "tr": "Сегодня я не хожу за покупками."
+            },
+            {
+              "de": "Wann kommt der Bus an?",
+              "tr": "Когда прибывает автобус?"
+            }
+          ]
+        },
+        {
+          "title": "Doch! и здесь",
+          "text": "На вопрос с отрицанием «да» говорим Doch!",
+          "examples": [
+            {
+              "de": "Kommst du nicht mit? Doch, ich komme mit!",
+              "tr": "Ты не идёшь с нами? Да нет, иду!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Питання і nicht з префіксом",
+      "points": [
+        {
+          "title": "nicht перед префіксом",
+          "text": "Префікс завжди в самому кінці, а nicht стоїть просто перед ним.",
+          "examples": [
+            {
+              "de": "Ich kaufe heute nicht ein.",
+              "tr": "Сьогодні я не ходжу по покупки."
+            },
+            {
+              "de": "Wann kommt der Bus an?",
+              "tr": "Коли прибуває автобус?"
+            }
+          ]
+        },
+        {
+          "title": "Doch! і тут",
+          "text": "На питання із запереченням «так» кажемо Doch!",
+          "examples": [
+            {
+              "de": "Kommst du nicht mit? Doch, ich komme mit!",
+              "tr": "Ти не йдеш з нами? Та ні, іду!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Questions and nicht with a prefix",
+      "points": [
+        {
+          "title": "nicht before the prefix",
+          "text": "The prefix is always at the very end, and nicht goes right before it.",
+          "examples": [
+            {
+              "de": "Ich kaufe heute nicht ein.",
+              "tr": "I’m not going shopping today."
+            },
+            {
+              "de": "Wann kommt der Bus an?",
+              "tr": "When does the bus arrive?"
+            }
+          ]
+        },
+        {
+          "title": "Doch! here too",
+          "text": "Answer \"yes\" to a negative question with Doch!",
+          "examples": [
+            {
+              "de": "Kommst du nicht mit? Doch, ich komme mit!",
+              "tr": "Aren’t you coming? Yes, I am!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Pytania i nicht z przedrostkiem",
+      "points": [
+        {
+          "title": "nicht przed przedrostkiem",
+          "text": "Przedrostek jest zawsze na samym końcu, a nicht stoi tuż przed nim.",
+          "examples": [
+            {
+              "de": "Ich kaufe heute nicht ein.",
+              "tr": "Dziś nie robię zakupów."
+            },
+            {
+              "de": "Wann kommt der Bus an?",
+              "tr": "Kiedy przyjeżdża autobus?"
+            }
+          ]
+        },
+        {
+          "title": "Doch! też tutaj",
+          "text": "Na pytanie z przeczeniem „tak” mówimy Doch!",
+          "examples": [
+            {
+              "de": "Kommst du nicht mit? Doch, ich komme mit!",
+              "tr": "Nie idziesz z nami? Ależ idę!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Preguntas y nicht con prefijo",
+      "points": [
+        {
+          "title": "nicht antes del prefijo",
+          "text": "El prefijo siempre va al final y nicht va justo delante.",
+          "examples": [
+            {
+              "de": "Ich kaufe heute nicht ein.",
+              "tr": "Hoy no hago la compra."
+            },
+            {
+              "de": "Wann kommt der Bus an?",
+              "tr": "¿Cuándo llega el autobús?"
+            }
+          ]
+        },
+        {
+          "title": "Doch! también aquí",
+          "text": "A una pregunta negativa se responde \"sí\" con Doch!",
+          "examples": [
+            {
+              "de": "Kommst du nicht mit? Doch, ich komme mit!",
+              "tr": "¿No vienes? ¡Que sí, voy!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Questions et nicht avec préfixe",
+      "points": [
+        {
+          "title": "nicht avant le préfixe",
+          "text": "Le préfixe est toujours tout à la fin, et nicht se met juste avant.",
+          "examples": [
+            {
+              "de": "Ich kaufe heute nicht ein.",
+              "tr": "Aujourd’hui, je ne fais pas les courses."
+            },
+            {
+              "de": "Wann kommt der Bus an?",
+              "tr": "Quand le bus arrive-t-il ?"
+            }
+          ]
+        },
+        {
+          "title": "Doch ! ici aussi",
+          "text": "À une question négative, on répond « si » avec Doch !",
+          "examples": [
+            {
+              "de": "Kommst du nicht mit? Doch, ich komme mit!",
+              "tr": "Tu ne viens pas ? Si, je viens !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Ön ekli fiille soru ve nicht",
+      "points": [
+        {
+          "title": "nicht ön ekten önce",
+          "text": "Ön ek hep en sondadır, nicht hemen önüne gelir.",
+          "examples": [
+            {
+              "de": "Ich kaufe heute nicht ein.",
+              "tr": "Bugün alışveriş yapmıyorum."
+            },
+            {
+              "de": "Wann kommt der Bus an?",
+              "tr": "Otobüs ne zaman geliyor?"
+            }
+          ]
+        },
+        {
+          "title": "Burada da Doch!",
+          "text": "Olumsuz soruya \"evet\" cevabı Doch! ile verilir.",
+          "examples": [
+            {
+              "de": "Kommst du nicht mit? Doch, ich komme mit!",
+              "tr": "Gelmiyor musun? Geliyorum tabii!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Întrebări și nicht cu prefix",
+      "points": [
+        {
+          "title": "nicht înaintea prefixului",
+          "text": "Prefixul e mereu la final, iar nicht stă chiar înaintea lui.",
+          "examples": [
+            {
+              "de": "Ich kaufe heute nicht ein.",
+              "tr": "Azi nu fac cumpărături."
+            },
+            {
+              "de": "Wann kommt der Bus an?",
+              "tr": "Când sosește autobuzul?"
+            }
+          ]
+        },
+        {
+          "title": "Doch! și aici",
+          "text": "La o întrebare negativă răspunzi „ba da” cu Doch!",
+          "examples": [
+            {
+              "de": "Kommst du nicht mit? Doch, ich komme mit!",
+              "tr": "Nu vii cu noi? Ba da, vin!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Old qo'shimchali savol va nicht",
+      "points": [
+        {
+          "title": "nicht old qo'shimchadan oldin",
+          "text": "Old qo'shimcha doim eng oxirida, nicht esa uning oldida turadi.",
+          "examples": [
+            {
+              "de": "Ich kaufe heute nicht ein.",
+              "tr": "Bugun xarid qilmayman."
+            },
+            {
+              "de": "Wann kommt der Bus an?",
+              "tr": "Avtobus qachon keladi?"
+            }
+          ]
+        },
+        {
+          "title": "Bu yerda ham Doch!",
+          "text": "Inkor savolga \"ha\" javobi Doch! bilan.",
+          "examples": [
+            {
+              "de": "Kommst du nicht mit? Doch, ich komme mit!",
+              "tr": "Biz bilan bormaysanmi? Boraman, albatta!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "उपसर्ग के साथ सवाल और nicht",
+      "points": [
+        {
+          "title": "nicht उपसर्ग से पहले",
+          "text": "उपसर्ग हमेशा बिल्कुल अंत में होता है, और nicht उसके ठीक पहले।",
+          "examples": [
+            {
+              "de": "Ich kaufe heute nicht ein.",
+              "tr": "आज मैं खरीदारी नहीं कर रहा।"
+            },
+            {
+              "de": "Wann kommt der Bus an?",
+              "tr": "बस कब पहुँचती है?"
+            }
+          ]
+        },
+        {
+          "title": "यहाँ भी Doch!",
+          "text": "नकारात्मक सवाल का \"हाँ\" वाला जवाब Doch!।",
+          "examples": [
+            {
+              "de": "Kommst du nicht mit? Doch, ich komme mit!",
+              "tr": "तुम साथ नहीं चल रहे? चल रहा हूँ न!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الأسئلة وnicht مع السابقة",
+      "points": [
+        {
+          "title": "nicht قبل السابقة",
+          "text": "السابقة دائماً في آخر الجملة، وnicht قبلها مباشرة.",
+          "examples": [
+            {
+              "de": "Ich kaufe heute nicht ein.",
+              "tr": "لا أتسوق اليوم."
+            },
+            {
+              "de": "Wann kommt der Bus an?",
+              "tr": "متى تصل الحافلة؟"
+            }
+          ]
+        },
+        {
+          "title": "Doch! هنا أيضاً",
+          "text": "نجيب بـ \"بلى\" عن السؤال المنفي بكلمة Doch!",
+          "examples": [
+            {
+              "de": "Kommst du nicht mit? Doch, ich komme mit!",
+              "tr": "ألن تأتي معنا؟ بلى، سآتي!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "routine-mill-seven": {
+    "ru": {
+      "title": "Практика: мой обычный день",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Время первым, глагол вторым, приставка в конце.",
+          "examples": [
+            {
+              "de": "Um elf Uhr schlafe ich ein.",
+              "tr": "В одиннадцать я засыпаю."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: мій звичайний день",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Час першим, дієслово другим, префікс у кінці.",
+          "examples": [
+            {
+              "de": "Um elf Uhr schlafe ich ein.",
+              "tr": "Об одинадцятій я засинаю."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: my usual day",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "Time first, verb second, prefix at the end.",
+          "examples": [
+            {
+              "de": "Um elf Uhr schlafe ich ein.",
+              "tr": "At eleven I fall asleep."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: mój zwykły dzień",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Czas pierwszy, czasownik drugi, przedrostek na końcu.",
+          "examples": [
+            {
+              "de": "Um elf Uhr schlafe ich ein.",
+              "tr": "O jedenastej zasypiam."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: mi día normal",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Tiempo primero, verbo segundo, prefijo al final.",
+          "examples": [
+            {
+              "de": "Um elf Uhr schlafe ich ein.",
+              "tr": "A las once me duermo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : ma journée habituelle",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "Le temps d’abord, le verbe en deuxième, le préfixe à la fin.",
+          "examples": [
+            {
+              "de": "Um elf Uhr schlafe ich ein.",
+              "tr": "À onze heures, je m’endors."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: sıradan bir günüm",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Önce zaman, fiil ikinci, ön ek sonda.",
+          "examples": [
+            {
+              "de": "Um elf Uhr schlafe ich ein.",
+              "tr": "Saat on birde uykuya dalarım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: ziua mea obișnuită",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Timpul primul, verbul al doilea, prefixul la final.",
+          "examples": [
+            {
+              "de": "Um elf Uhr schlafe ich ein.",
+              "tr": "La unsprezece adorm."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: oddiy kunim",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Avval vaqt, fe'l ikkinchi, old qo'shimcha oxirida.",
+          "examples": [
+            {
+              "de": "Um elf Uhr schlafe ich ein.",
+              "tr": "Soat o'n birda uxlab qolaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: मेरा सामान्य दिन",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "पहले समय, फिर क्रिया, उपसर्ग अंत में।",
+          "examples": [
+            {
+              "de": "Um elf Uhr schlafe ich ein.",
+              "tr": "ग्यारह बजे मैं सो जाता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: يومي العادي",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "الزمن أولاً، الفعل ثانياً، السابقة في الآخر.",
+          "examples": [
+            {
+              "de": "Um elf Uhr schlafe ich ein.",
+              "tr": "في الحادية عشرة أنام."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "routine-mill-eight": {
+    "ru": {
+      "title": "Практика: vorhaben, einladen, abholen",
+      "points": [
+        {
+          "title": "Ещё три глагола для планов",
+          "text": "vorhaben (планировать), einladen (приглашать, меняет гласную: er lädt ein), abholen (забирать). Приставка в конце.",
+          "examples": [
+            {
+              "de": "Was hast du am Samstag vor?",
+              "tr": "Что ты планируешь в субботу?"
+            },
+            {
+              "de": "Ich hole meinen Sohn um vier Uhr ab.",
+              "tr": "Я забираю сына в четыре."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: vorhaben, einladen, abholen",
+      "points": [
+        {
+          "title": "Ще три дієслова для планів",
+          "text": "vorhaben (планувати), einladen (запрошувати, змінює голосну: er lädt ein), abholen (забирати). Префікс у кінці.",
+          "examples": [
+            {
+              "de": "Was hast du am Samstag vor?",
+              "tr": "Що ти плануєш у суботу?"
+            },
+            {
+              "de": "Ich hole meinen Sohn um vier Uhr ab.",
+              "tr": "Я забираю сина о четвертій."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: vorhaben, einladen, abholen",
+      "points": [
+        {
+          "title": "Three more verbs for plans",
+          "text": "vorhaben (to plan), einladen (to invite, vowel changes: er lädt ein), abholen (to pick up). Prefix at the end.",
+          "examples": [
+            {
+              "de": "Was hast du am Samstag vor?",
+              "tr": "What are you doing on Saturday?"
+            },
+            {
+              "de": "Ich hole meinen Sohn um vier Uhr ab.",
+              "tr": "I pick up my son at four."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: vorhaben, einladen, abholen",
+      "points": [
+        {
+          "title": "Jeszcze trzy czasowniki do planów",
+          "text": "vorhaben (planować), einladen (zapraszać, zmienia samogłoskę: er lädt ein), abholen (odbierać). Przedrostek na końcu.",
+          "examples": [
+            {
+              "de": "Was hast du am Samstag vor?",
+              "tr": "Co planujesz w sobotę?"
+            },
+            {
+              "de": "Ich hole meinen Sohn um vier Uhr ab.",
+              "tr": "Odbieram syna o czwartej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: vorhaben, einladen, abholen",
+      "points": [
+        {
+          "title": "Tres verbos más para planes",
+          "text": "vorhaben (planear), einladen (invitar, cambia la vocal: er lädt ein), abholen (recoger). Prefijo al final.",
+          "examples": [
+            {
+              "de": "Was hast du am Samstag vor?",
+              "tr": "¿Qué planes tienes el sábado?"
+            },
+            {
+              "de": "Ich hole meinen Sohn um vier Uhr ab.",
+              "tr": "Recojo a mi hijo a las cuatro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : vorhaben, einladen, abholen",
+      "points": [
+        {
+          "title": "Trois verbes de plus pour les projets",
+          "text": "vorhaben (prévoir), einladen (inviter, la voyelle change : er lädt ein), abholen (aller chercher). Préfixe à la fin.",
+          "examples": [
+            {
+              "de": "Was hast du am Samstag vor?",
+              "tr": "Qu’est-ce que tu fais samedi ?"
+            },
+            {
+              "de": "Ich hole meinen Sohn um vier Uhr ab.",
+              "tr": "Je vais chercher mon fils à quatre heures."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: vorhaben, einladen, abholen",
+      "points": [
+        {
+          "title": "Planlar için üç fiil daha",
+          "text": "vorhaben (planlamak), einladen (davet etmek, ünlü değişir: er lädt ein), abholen (alıp getirmek). Ön ek sonda.",
+          "examples": [
+            {
+              "de": "Was hast du am Samstag vor?",
+              "tr": "Cumartesi ne yapmayı planlıyorsun?"
+            },
+            {
+              "de": "Ich hole meinen Sohn um vier Uhr ab.",
+              "tr": "Oğlumu saat dörtte alıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: vorhaben, einladen, abholen",
+      "points": [
+        {
+          "title": "Încă trei verbe pentru planuri",
+          "text": "vorhaben (a plănui), einladen (a invita, vocala se schimbă: er lädt ein), abholen (a lua pe cineva). Prefixul la final.",
+          "examples": [
+            {
+              "de": "Was hast du am Samstag vor?",
+              "tr": "Ce ai de gând sâmbătă?"
+            },
+            {
+              "de": "Ich hole meinen Sohn um vier Uhr ab.",
+              "tr": "Îl iau pe fiul meu la patru."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: vorhaben, einladen, abholen",
+      "points": [
+        {
+          "title": "Rejalar uchun yana uch fe'l",
+          "text": "vorhaben (rejalashtirmoq), einladen (taklif qilmoq, unli o'zgaradi: er lädt ein), abholen (olib ketmoq). Old qo'shimcha oxirida.",
+          "examples": [
+            {
+              "de": "Was hast du am Samstag vor?",
+              "tr": "Shanba kuni nima rejang bor?"
+            },
+            {
+              "de": "Ich hole meinen Sohn um vier Uhr ab.",
+              "tr": "O'g'limni soat to'rtda olib ketaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: vorhaben, einladen, abholen",
+      "points": [
+        {
+          "title": "योजनाओं के लिए तीन और क्रियाएँ",
+          "text": "vorhaben (योजना बनाना), einladen (बुलाना, स्वर बदलता है: er lädt ein), abholen (लेने जाना)। उपसर्ग अंत में।",
+          "examples": [
+            {
+              "de": "Was hast du am Samstag vor?",
+              "tr": "शनिवार को तुम्हारा क्या प्लान है?"
+            },
+            {
+              "de": "Ich hole meinen Sohn um vier Uhr ab.",
+              "tr": "मैं चार बजे अपने बेटे को लेने जाता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: vorhaben وeinladen وabholen",
+      "points": [
+        {
+          "title": "ثلاثة أفعال أخرى للخطط",
+          "text": "vorhaben (يخطط)، einladen (يدعو، ويتغير حرفه: er lädt ein)، abholen (يصطحب). والسابقة في الآخر.",
+          "examples": [
+            {
+              "de": "Was hast du am Samstag vor?",
+              "tr": "ماذا تخطط يوم السبت؟"
+            },
+            {
+              "de": "Ich hole meinen Sohn um vier Uhr ab.",
+              "tr": "أصطحب ابني في الرابعة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "routine-mill-nine": {
+    "ru": {
+      "title": "Повторение: где стоит приставка",
+      "points": [
+        {
+          "title": "В утверждении",
+          "text": "Глагол на втором месте, приставка в конце.",
+          "examples": [
+            {
+              "de": "Jetzt räume ich die Küche auf.",
+              "tr": "Сейчас я убираю кухню."
+            }
+          ]
+        },
+        {
+          "title": "В вопросе",
+          "text": "Глагол первым или после вопросительного слова, приставка в конце.",
+          "examples": [
+            {
+              "de": "Wann fängt das Konzert an?",
+              "tr": "Когда начинается концерт?"
+            }
+          ]
+        },
+        {
+          "title": "С nicht",
+          "text": "nicht прямо перед приставкой.",
+          "examples": [
+            {
+              "de": "Er ruft nicht an.",
+              "tr": "Он не звонит."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: де стоїть префікс",
+      "points": [
+        {
+          "title": "У ствердженні",
+          "text": "Дієслово на другому місці, префікс у кінці.",
+          "examples": [
+            {
+              "de": "Jetzt räume ich die Küche auf.",
+              "tr": "Зараз я прибираю кухню."
+            }
+          ]
+        },
+        {
+          "title": "У питанні",
+          "text": "Дієслово першим або після питального слова, префікс у кінці.",
+          "examples": [
+            {
+              "de": "Wann fängt das Konzert an?",
+              "tr": "Коли починається концерт?"
+            }
+          ]
+        },
+        {
+          "title": "З nicht",
+          "text": "nicht просто перед префіксом.",
+          "examples": [
+            {
+              "de": "Er ruft nicht an.",
+              "tr": "Він не телефонує."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: where the prefix goes",
+      "points": [
+        {
+          "title": "In a statement",
+          "text": "Verb in second place, prefix at the end.",
+          "examples": [
+            {
+              "de": "Jetzt räume ich die Küche auf.",
+              "tr": "Now I’m tidying the kitchen."
+            }
+          ]
+        },
+        {
+          "title": "In a question",
+          "text": "Verb first or after the question word, prefix at the end.",
+          "examples": [
+            {
+              "de": "Wann fängt das Konzert an?",
+              "tr": "When does the concert start?"
+            }
+          ]
+        },
+        {
+          "title": "With nicht",
+          "text": "nicht right before the prefix.",
+          "examples": [
+            {
+              "de": "Er ruft nicht an.",
+              "tr": "He doesn’t call."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: gdzie stoi przedrostek",
+      "points": [
+        {
+          "title": "W zdaniu oznajmującym",
+          "text": "Czasownik na drugim miejscu, przedrostek na końcu.",
+          "examples": [
+            {
+              "de": "Jetzt räume ich die Küche auf.",
+              "tr": "Teraz sprzątam kuchnię."
+            }
+          ]
+        },
+        {
+          "title": "W pytaniu",
+          "text": "Czasownik pierwszy albo po słowie pytającym, przedrostek na końcu.",
+          "examples": [
+            {
+              "de": "Wann fängt das Konzert an?",
+              "tr": "Kiedy zaczyna się koncert?"
+            }
+          ]
+        },
+        {
+          "title": "Z nicht",
+          "text": "nicht tuż przed przedrostkiem.",
+          "examples": [
+            {
+              "de": "Er ruft nicht an.",
+              "tr": "On nie dzwoni."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: dónde va el prefijo",
+      "points": [
+        {
+          "title": "En una afirmación",
+          "text": "Verbo en segundo lugar, prefijo al final.",
+          "examples": [
+            {
+              "de": "Jetzt räume ich die Küche auf.",
+              "tr": "Ahora ordeno la cocina."
+            }
+          ]
+        },
+        {
+          "title": "En una pregunta",
+          "text": "Verbo primero o tras la palabra interrogativa, prefijo al final.",
+          "examples": [
+            {
+              "de": "Wann fängt das Konzert an?",
+              "tr": "¿Cuándo empieza el concierto?"
+            }
+          ]
+        },
+        {
+          "title": "Con nicht",
+          "text": "nicht justo antes del prefijo.",
+          "examples": [
+            {
+              "de": "Er ruft nicht an.",
+              "tr": "Él no llama."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : où va le préfixe",
+      "points": [
+        {
+          "title": "Dans une affirmation",
+          "text": "Verbe en deuxième position, préfixe à la fin.",
+          "examples": [
+            {
+              "de": "Jetzt räume ich die Küche auf.",
+              "tr": "Maintenant, je range la cuisine."
+            }
+          ]
+        },
+        {
+          "title": "Dans une question",
+          "text": "Verbe en premier ou après le mot interrogatif, préfixe à la fin.",
+          "examples": [
+            {
+              "de": "Wann fängt das Konzert an?",
+              "tr": "Quand commence le concert ?"
+            }
+          ]
+        },
+        {
+          "title": "Avec nicht",
+          "text": "nicht juste avant le préfixe.",
+          "examples": [
+            {
+              "de": "Er ruft nicht an.",
+              "tr": "Il n’appelle pas."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: ön ek nereye gelir",
+      "points": [
+        {
+          "title": "Olumlu cümlede",
+          "text": "Fiil ikinci sırada, ön ek sonda.",
+          "examples": [
+            {
+              "de": "Jetzt räume ich die Küche auf.",
+              "tr": "Şimdi mutfağı topluyorum."
+            }
+          ]
+        },
+        {
+          "title": "Soruda",
+          "text": "Fiil başta ya da soru kelimesinden sonra, ön ek sonda.",
+          "examples": [
+            {
+              "de": "Wann fängt das Konzert an?",
+              "tr": "Konser ne zaman başlıyor?"
+            }
+          ]
+        },
+        {
+          "title": "nicht ile",
+          "text": "nicht ön ekten hemen önce.",
+          "examples": [
+            {
+              "de": "Er ruft nicht an.",
+              "tr": "O aramıyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: unde stă prefixul",
+      "points": [
+        {
+          "title": "În afirmație",
+          "text": "Verbul pe locul doi, prefixul la final.",
+          "examples": [
+            {
+              "de": "Jetzt räume ich die Küche auf.",
+              "tr": "Acum fac ordine în bucătărie."
+            }
+          ]
+        },
+        {
+          "title": "În întrebare",
+          "text": "Verbul primul sau după cuvântul interogativ, prefixul la final.",
+          "examples": [
+            {
+              "de": "Wann fängt das Konzert an?",
+              "tr": "Când începe concertul?"
+            }
+          ]
+        },
+        {
+          "title": "Cu nicht",
+          "text": "nicht chiar înaintea prefixului.",
+          "examples": [
+            {
+              "de": "Er ruft nicht an.",
+              "tr": "El nu sună."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: old qo'shimcha qayerda",
+      "points": [
+        {
+          "title": "Darak gapda",
+          "text": "Fe'l ikkinchi o'rinda, old qo'shimcha oxirida.",
+          "examples": [
+            {
+              "de": "Jetzt räume ich die Küche auf.",
+              "tr": "Hozir oshxonani yig‘ishtiryapman."
+            }
+          ]
+        },
+        {
+          "title": "Savolda",
+          "text": "Fe'l birinchi yoki savol so'zidan keyin, old qo'shimcha oxirida.",
+          "examples": [
+            {
+              "de": "Wann fängt das Konzert an?",
+              "tr": "Konsert qachon boshlanadi?"
+            }
+          ]
+        },
+        {
+          "title": "nicht bilan",
+          "text": "nicht old qo'shimchaning oldida.",
+          "examples": [
+            {
+              "de": "Er ruft nicht an.",
+              "tr": "U qo'ng'iroq qilmayapti."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: उपसर्ग कहाँ आता है",
+      "points": [
+        {
+          "title": "सामान्य वाक्य में",
+          "text": "क्रिया दूसरे स्थान पर, उपसर्ग अंत में।",
+          "examples": [
+            {
+              "de": "Jetzt räume ich die Küche auf.",
+              "tr": "अभी मैं रसोई साफ़ कर रहा हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "सवाल में",
+          "text": "क्रिया पहले या प्रश्नवाचक शब्द के बाद, उपसर्ग अंत में।",
+          "examples": [
+            {
+              "de": "Wann fängt das Konzert an?",
+              "tr": "कॉन्सर्ट कब शुरू होता है?"
+            }
+          ]
+        },
+        {
+          "title": "nicht के साथ",
+          "text": "nicht उपसर्ग के ठीक पहले।",
+          "examples": [
+            {
+              "de": "Er ruft nicht an.",
+              "tr": "वह फ़ोन नहीं करता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: أين تقع السابقة",
+      "points": [
+        {
+          "title": "في الجملة الخبرية",
+          "text": "الفعل في المكان الثاني، والسابقة في الآخر.",
+          "examples": [
+            {
+              "de": "Jetzt räume ich die Küche auf.",
+              "tr": "الآن أرتب المطبخ."
+            }
+          ]
+        },
+        {
+          "title": "في السؤال",
+          "text": "الفعل أولاً أو بعد أداة الاستفهام، والسابقة في الآخر.",
+          "examples": [
+            {
+              "de": "Wann fängt das Konzert an?",
+              "tr": "متى تبدأ الحفلة؟"
+            }
+          ]
+        },
+        {
+          "title": "مع nicht",
+          "text": "nicht قبل السابقة مباشرة.",
+          "examples": [
+            {
+              "de": "Er ruft nicht an.",
+              "tr": "هو لا يتصل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "routine-mill-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "Приставка всегда в конце",
+          "text": "В утверждении, в вопросе и с nicht.",
+          "examples": [
+            {
+              "de": "Am Samstag stehe ich spät auf.",
+              "tr": "В субботу я встаю поздно."
+            },
+            {
+              "de": "Kaufst du früh ein?",
+              "tr": "Ты рано ходишь за покупками?"
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ после глагола",
+          "text": "anrufen, einladen, abholen + кого: meinen Vater, seine Freunde.",
+          "examples": [
+            {
+              "de": "Er lädt seine Freunde ein.",
+              "tr": "Он приглашает своих друзей."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "Префікс завжди в кінці",
+          "text": "У ствердженні, у питанні та з nicht.",
+          "examples": [
+            {
+              "de": "Am Samstag stehe ich spät auf.",
+              "tr": "У суботу я встаю пізно."
+            },
+            {
+              "de": "Kaufst du früh ein?",
+              "tr": "Ти рано ходиш по покупки?"
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ після дієслова",
+          "text": "anrufen, einladen, abholen + кого: meinen Vater, seine Freunde.",
+          "examples": [
+            {
+              "de": "Er lädt seine Freunde ein.",
+              "tr": "Він запрошує своїх друзів."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "The prefix is always at the end",
+          "text": "In statements, questions and with nicht.",
+          "examples": [
+            {
+              "de": "Am Samstag stehe ich spät auf.",
+              "tr": "On Saturday I get up late."
+            },
+            {
+              "de": "Kaufst du früh ein?",
+              "tr": "Do you go shopping early?"
+            }
+          ]
+        },
+        {
+          "title": "Accusative after the verb",
+          "text": "anrufen, einladen, abholen + whom: meinen Vater, seine Freunde.",
+          "examples": [
+            {
+              "de": "Er lädt seine Freunde ein.",
+              "tr": "He invites his friends."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "Przedrostek zawsze na końcu",
+          "text": "W zdaniu oznajmującym, w pytaniu i z nicht.",
+          "examples": [
+            {
+              "de": "Am Samstag stehe ich spät auf.",
+              "tr": "W sobotę wstaję późno."
+            },
+            {
+              "de": "Kaufst du früh ein?",
+              "tr": "Robisz zakupy wcześnie?"
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ po czasowniku",
+          "text": "anrufen, einladen, abholen + kogo: meinen Vater, seine Freunde.",
+          "examples": [
+            {
+              "de": "Er lädt seine Freunde ein.",
+              "tr": "On zaprasza swoich przyjaciół."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "El prefijo siempre al final",
+          "text": "En afirmaciones, preguntas y con nicht.",
+          "examples": [
+            {
+              "de": "Am Samstag stehe ich spät auf.",
+              "tr": "El sábado me levanto tarde."
+            },
+            {
+              "de": "Kaufst du früh ein?",
+              "tr": "¿Haces la compra temprano?"
+            }
+          ]
+        },
+        {
+          "title": "Acusativo tras el verbo",
+          "text": "anrufen, einladen, abholen + a quién: meinen Vater, seine Freunde.",
+          "examples": [
+            {
+              "de": "Er lädt seine Freunde ein.",
+              "tr": "Él invita a sus amigos."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "Le préfixe toujours à la fin",
+          "text": "Dans les affirmations, les questions et avec nicht.",
+          "examples": [
+            {
+              "de": "Am Samstag stehe ich spät auf.",
+              "tr": "Samedi, je me lève tard."
+            },
+            {
+              "de": "Kaufst du früh ein?",
+              "tr": "Tu fais les courses tôt ?"
+            }
+          ]
+        },
+        {
+          "title": "Accusatif après le verbe",
+          "text": "anrufen, einladen, abholen + qui : meinen Vater, seine Freunde.",
+          "examples": [
+            {
+              "de": "Er lädt seine Freunde ein.",
+              "tr": "Il invite ses amis."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "Ön ek hep sonda",
+          "text": "Olumlu cümlede, soruda ve nicht ile.",
+          "examples": [
+            {
+              "de": "Am Samstag stehe ich spät auf.",
+              "tr": "Cumartesi geç kalkarım."
+            },
+            {
+              "de": "Kaufst du früh ein?",
+              "tr": "Erken mi alışveriş yaparsın?"
+            }
+          ]
+        },
+        {
+          "title": "Fiilden sonra Akkusativ",
+          "text": "anrufen, einladen, abholen + kimi: meinen Vater, seine Freunde.",
+          "examples": [
+            {
+              "de": "Er lädt seine Freunde ein.",
+              "tr": "O arkadaşlarını davet ediyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "Prefixul mereu la final",
+          "text": "În afirmații, întrebări și cu nicht.",
+          "examples": [
+            {
+              "de": "Am Samstag stehe ich spät auf.",
+              "tr": "Sâmbătă mă trezesc târziu."
+            },
+            {
+              "de": "Kaufst du früh ein?",
+              "tr": "Faci cumpărături devreme?"
+            }
+          ]
+        },
+        {
+          "title": "Acuzativ după verb",
+          "text": "anrufen, einladen, abholen + pe cine: meinen Vater, seine Freunde.",
+          "examples": [
+            {
+              "de": "Er lädt seine Freunde ein.",
+              "tr": "El își invită prietenii."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "Old qo'shimcha doim oxirida",
+          "text": "Darak gapda, savolda va nicht bilan.",
+          "examples": [
+            {
+              "de": "Am Samstag stehe ich spät auf.",
+              "tr": "Shanba kuni kech turaman."
+            },
+            {
+              "de": "Kaufst du früh ein?",
+              "tr": "Erta xarid qilasanmi?"
+            }
+          ]
+        },
+        {
+          "title": "Fe'ldan keyin Akkusativ",
+          "text": "anrufen, einladen, abholen + kimni: meinen Vater, seine Freunde.",
+          "examples": [
+            {
+              "de": "Er lädt seine Freunde ein.",
+              "tr": "U do'stlarini taklif qiladi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "उपसर्ग हमेशा अंत में",
+          "text": "सामान्य वाक्य, सवाल और nicht के साथ।",
+          "examples": [
+            {
+              "de": "Am Samstag stehe ich spät auf.",
+              "tr": "शनिवार को मैं देर से उठता हूँ।"
+            },
+            {
+              "de": "Kaufst du früh ein?",
+              "tr": "क्या तुम जल्दी खरीदारी करते हो?"
+            }
+          ]
+        },
+        {
+          "title": "क्रिया के बाद Akkusativ",
+          "text": "anrufen, einladen, abholen + किसे: meinen Vater, seine Freunde।",
+          "examples": [
+            {
+              "de": "Er lädt seine Freunde ein.",
+              "tr": "वह अपने दोस्तों को बुलाता है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "السابقة دائماً في الآخر",
+          "text": "في الجملة الخبرية والسؤال ومع nicht.",
+          "examples": [
+            {
+              "de": "Am Samstag stehe ich spät auf.",
+              "tr": "يوم السبت أستيقظ متأخراً."
+            },
+            {
+              "de": "Kaufst du früh ein?",
+              "tr": "هل تتسوق مبكراً؟"
+            }
+          ]
+        },
+        {
+          "title": "حالة المفعول بعد الفعل",
+          "text": "anrufen وeinladen وabholen + من: meinen Vater، seine Freunde.",
+          "examples": [
+            {
+              "de": "Er lädt seine Freunde ein.",
+              "tr": "هو يدعو أصدقاءه."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

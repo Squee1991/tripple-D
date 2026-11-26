@@ -1,0 +1,5313 @@
+{
+  "one": {
+    "ru": {
+      "title": "Приветствия: Guten или Gute?",
+      "points": [
+        {
+          "title": "Здороваемся по времени суток",
+          "text": "Утром говорят Guten Morgen, днём Guten Tag, вечером Guten Abend. Gute Nacht говорят только перед сном: это пожелание, а не приветствие.",
+          "examples": [
+            {
+              "de": "Guten Morgen!",
+              "tr": "Доброе утро!"
+            },
+            {
+              "de": "Guten Tag!",
+              "tr": "Добрый день!"
+            },
+            {
+              "de": "Guten Abend!",
+              "tr": "Добрый вечер!"
+            },
+            {
+              "de": "Gute Nacht!",
+              "tr": "Спокойной ночи!"
+            }
+          ]
+        },
+        {
+          "title": "Guten или Gute",
+          "text": "Слово «добрый» меняет окончание по роду. der Morgen, der Tag и der Abend мужского рода, поэтому Guten. die Nacht женского рода, поэтому Gute, без -n.",
+          "examples": [
+            {
+              "de": "der Tag → Guten Tag!",
+              "tr": "мужской род: Guten"
+            },
+            {
+              "de": "die Nacht → Gute Nacht!",
+              "tr": "женский род: Gute"
+            }
+          ]
+        },
+        {
+          "title": "С друзьями и официально",
+          "text": "Hallo и Tschüss говорят друзьям и знакомым. Guten Tag и Auf Wiedersehen подходят всегда: в магазине, у врача, с незнакомыми людьми.",
+          "examples": [
+            {
+              "de": "Hallo, Anna! Tschüss!",
+              "tr": "Привет, Анна! Пока!"
+            },
+            {
+              "de": "Guten Tag! Auf Wiedersehen!",
+              "tr": "Добрый день! До свидания!"
+            }
+          ]
+        },
+        {
+          "title": "Существительные с большой буквы",
+          "text": "В немецком все существительные пишутся с заглавной буквы, даже в середине фразы: der Morgen, der Tag, die Nacht.",
+          "examples": []
+        }
+      ]
+    },
+    "uk": {
+      "title": "Привітання: Guten чи Gute?",
+      "points": [
+        {
+          "title": "Вітаємося за часом доби",
+          "text": "Зранку кажуть Guten Morgen, удень Guten Tag, увечері Guten Abend. Gute Nacht кажуть лише перед сном: це побажання, а не привітання.",
+          "examples": [
+            {
+              "de": "Guten Morgen!",
+              "tr": "Доброго ранку!"
+            },
+            {
+              "de": "Guten Tag!",
+              "tr": "Добрий день!"
+            },
+            {
+              "de": "Guten Abend!",
+              "tr": "Добрий вечір!"
+            },
+            {
+              "de": "Gute Nacht!",
+              "tr": "На добраніч!"
+            }
+          ]
+        },
+        {
+          "title": "Guten чи Gute",
+          "text": "Слово «добрий» змінює закінчення за родом. der Morgen, der Tag і der Abend чоловічого роду, тому Guten. die Nacht жіночого роду, тому Gute, без -n.",
+          "examples": [
+            {
+              "de": "der Tag → Guten Tag!",
+              "tr": "чоловічий рід: Guten"
+            },
+            {
+              "de": "die Nacht → Gute Nacht!",
+              "tr": "жіночий рід: Gute"
+            }
+          ]
+        },
+        {
+          "title": "З друзями та офіційно",
+          "text": "Hallo і Tschüss кажуть друзям і знайомим. Guten Tag і Auf Wiedersehen доречні завжди: у магазині, у лікаря, з незнайомими людьми.",
+          "examples": [
+            {
+              "de": "Hallo, Anna! Tschüss!",
+              "tr": "Привіт, Анно! Бувай!"
+            },
+            {
+              "de": "Guten Tag! Auf Wiedersehen!",
+              "tr": "Добрий день! До побачення!"
+            }
+          ]
+        },
+        {
+          "title": "Іменники з великої літери",
+          "text": "У німецькій усі іменники пишуться з великої літери, навіть посеред речення: der Morgen, der Tag, die Nacht.",
+          "examples": []
+        }
+      ]
+    },
+    "en": {
+      "title": "Greetings: Guten or Gute?",
+      "points": [
+        {
+          "title": "Greet by the time of day",
+          "text": "In the morning say Guten Morgen, during the day Guten Tag, in the evening Guten Abend. Gute Nacht is only said before bed: it is a wish, not a greeting.",
+          "examples": [
+            {
+              "de": "Guten Morgen!",
+              "tr": "Good morning!"
+            },
+            {
+              "de": "Guten Tag!",
+              "tr": "Good day!"
+            },
+            {
+              "de": "Guten Abend!",
+              "tr": "Good evening!"
+            },
+            {
+              "de": "Gute Nacht!",
+              "tr": "Good night!"
+            }
+          ]
+        },
+        {
+          "title": "Guten or Gute",
+          "text": "The word for \"good\" changes its ending with the gender of the noun. der Morgen, der Tag and der Abend are masculine, so Guten. die Nacht is feminine, so Gute, without -n.",
+          "examples": [
+            {
+              "de": "der Tag → Guten Tag!",
+              "tr": "masculine: Guten"
+            },
+            {
+              "de": "die Nacht → Gute Nacht!",
+              "tr": "feminine: Gute"
+            }
+          ]
+        },
+        {
+          "title": "Friends or formal",
+          "text": "Say Hallo and Tschüss to friends and people you know. Guten Tag and Auf Wiedersehen always work: in a shop, at the doctor’s, with strangers.",
+          "examples": [
+            {
+              "de": "Hallo, Anna! Tschüss!",
+              "tr": "Hi, Anna! Bye!"
+            },
+            {
+              "de": "Guten Tag! Auf Wiedersehen!",
+              "tr": "Good day! Goodbye!"
+            }
+          ]
+        },
+        {
+          "title": "Nouns start with a capital letter",
+          "text": "In German every noun is written with a capital letter, even in the middle of a sentence: der Morgen, der Tag, die Nacht.",
+          "examples": []
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powitania: Guten czy Gute?",
+      "points": [
+        {
+          "title": "Witamy się według pory dnia",
+          "text": "Rano mówimy Guten Morgen, w dzień Guten Tag, wieczorem Guten Abend. Gute Nacht mówimy tylko przed snem: to życzenie, a nie powitanie.",
+          "examples": [
+            {
+              "de": "Guten Morgen!",
+              "tr": "Dzień dobry! (rano)"
+            },
+            {
+              "de": "Guten Tag!",
+              "tr": "Dzień dobry!"
+            },
+            {
+              "de": "Guten Abend!",
+              "tr": "Dobry wieczór!"
+            },
+            {
+              "de": "Gute Nacht!",
+              "tr": "Dobranoc!"
+            }
+          ]
+        },
+        {
+          "title": "Guten czy Gute",
+          "text": "Słowo „dobry” zmienia końcówkę zależnie od rodzaju. der Morgen, der Tag i der Abend są rodzaju męskiego, więc Guten. die Nacht jest rodzaju żeńskiego, więc Gute, bez -n.",
+          "examples": [
+            {
+              "de": "der Tag → Guten Tag!",
+              "tr": "rodzaj męski: Guten"
+            },
+            {
+              "de": "die Nacht → Gute Nacht!",
+              "tr": "rodzaj żeński: Gute"
+            }
+          ]
+        },
+        {
+          "title": "Z przyjaciółmi i oficjalnie",
+          "text": "Hallo i Tschüss mówimy do przyjaciół i znajomych. Guten Tag i Auf Wiedersehen pasują zawsze: w sklepie, u lekarza, z nieznajomymi.",
+          "examples": [
+            {
+              "de": "Hallo, Anna! Tschüss!",
+              "tr": "Cześć, Anno! Pa!"
+            },
+            {
+              "de": "Guten Tag! Auf Wiedersehen!",
+              "tr": "Dzień dobry! Do widzenia!"
+            }
+          ]
+        },
+        {
+          "title": "Rzeczowniki wielką literą",
+          "text": "W niemieckim wszystkie rzeczowniki piszemy wielką literą, nawet w środku zdania: der Morgen, der Tag, die Nacht.",
+          "examples": []
+        }
+      ]
+    },
+    "es": {
+      "title": "Saludos: ¿Guten o Gute?",
+      "points": [
+        {
+          "title": "Saludamos según la hora del día",
+          "text": "Por la mañana se dice Guten Morgen, durante el día Guten Tag, por la tarde y noche Guten Abend. Gute Nacht solo se dice antes de dormir: es un deseo, no un saludo.",
+          "examples": [
+            {
+              "de": "Guten Morgen!",
+              "tr": "¡Buenos días!"
+            },
+            {
+              "de": "Guten Tag!",
+              "tr": "¡Buenos días! (de día)"
+            },
+            {
+              "de": "Guten Abend!",
+              "tr": "¡Buenas tardes!"
+            },
+            {
+              "de": "Gute Nacht!",
+              "tr": "¡Buenas noches!"
+            }
+          ]
+        },
+        {
+          "title": "Guten o Gute",
+          "text": "La palabra \"bueno\" cambia su terminación según el género. der Morgen, der Tag y der Abend son masculinos, por eso Guten. die Nacht es femenino, por eso Gute, sin -n.",
+          "examples": [
+            {
+              "de": "der Tag → Guten Tag!",
+              "tr": "masculino: Guten"
+            },
+            {
+              "de": "die Nacht → Gute Nacht!",
+              "tr": "femenino: Gute"
+            }
+          ]
+        },
+        {
+          "title": "Con amigos o formal",
+          "text": "Hallo y Tschüss se dicen a amigos y conocidos. Guten Tag y Auf Wiedersehen sirven siempre: en una tienda, en el médico, con desconocidos.",
+          "examples": [
+            {
+              "de": "Hallo, Anna! Tschüss!",
+              "tr": "¡Hola, Anna! ¡Chao!"
+            },
+            {
+              "de": "Guten Tag! Auf Wiedersehen!",
+              "tr": "¡Buenos días! ¡Adiós!"
+            }
+          ]
+        },
+        {
+          "title": "Sustantivos con mayúscula",
+          "text": "En alemán todos los sustantivos se escriben con mayúscula, incluso en medio de la frase: der Morgen, der Tag, die Nacht.",
+          "examples": []
+        }
+      ]
+    },
+    "fr": {
+      "title": "Salutations : Guten ou Gute ?",
+      "points": [
+        {
+          "title": "On salue selon le moment de la journée",
+          "text": "Le matin on dit Guten Morgen, la journée Guten Tag, le soir Guten Abend. Gute Nacht se dit seulement avant de dormir : c’est un souhait, pas une salutation.",
+          "examples": [
+            {
+              "de": "Guten Morgen!",
+              "tr": "Bonjour ! (le matin)"
+            },
+            {
+              "de": "Guten Tag!",
+              "tr": "Bonjour !"
+            },
+            {
+              "de": "Guten Abend!",
+              "tr": "Bonsoir !"
+            },
+            {
+              "de": "Gute Nacht!",
+              "tr": "Bonne nuit !"
+            }
+          ]
+        },
+        {
+          "title": "Guten ou Gute",
+          "text": "Le mot « bon » change de terminaison selon le genre. der Morgen, der Tag et der Abend sont masculins, donc Guten. die Nacht est féminin, donc Gute, sans -n.",
+          "examples": [
+            {
+              "de": "der Tag → Guten Tag!",
+              "tr": "masculin : Guten"
+            },
+            {
+              "de": "die Nacht → Gute Nacht!",
+              "tr": "féminin : Gute"
+            }
+          ]
+        },
+        {
+          "title": "Entre amis ou poliment",
+          "text": "Hallo et Tschüss se disent aux amis et aux proches. Guten Tag et Auf Wiedersehen conviennent toujours : au magasin, chez le médecin, avec des inconnus.",
+          "examples": [
+            {
+              "de": "Hallo, Anna! Tschüss!",
+              "tr": "Salut, Anna ! Salut !"
+            },
+            {
+              "de": "Guten Tag! Auf Wiedersehen!",
+              "tr": "Bonjour ! Au revoir !"
+            }
+          ]
+        },
+        {
+          "title": "Les noms prennent une majuscule",
+          "text": "En allemand, tous les noms s’écrivent avec une majuscule, même au milieu d’une phrase : der Morgen, der Tag, die Nacht.",
+          "examples": []
+        }
+      ]
+    },
+    "tr": {
+      "title": "Selamlaşma: Guten mi, Gute mi?",
+      "points": [
+        {
+          "title": "Günün saatine göre selamlaşırız",
+          "text": "Sabah Guten Morgen, gündüz Guten Tag, akşam Guten Abend denir. Gute Nacht sadece yatmadan önce söylenir: selam değil, bir dilektir.",
+          "examples": [
+            {
+              "de": "Guten Morgen!",
+              "tr": "Günaydın!"
+            },
+            {
+              "de": "Guten Tag!",
+              "tr": "İyi günler!"
+            },
+            {
+              "de": "Guten Abend!",
+              "tr": "İyi akşamlar!"
+            },
+            {
+              "de": "Gute Nacht!",
+              "tr": "İyi geceler!"
+            }
+          ]
+        },
+        {
+          "title": "Guten mi, Gute mi",
+          "text": "\"İyi\" kelimesinin sonu ismin cinsiyetine göre değişir. der Morgen, der Tag ve der Abend eril, bu yüzden Guten. die Nacht dişil, bu yüzden -n olmadan Gute.",
+          "examples": [
+            {
+              "de": "der Tag → Guten Tag!",
+              "tr": "eril: Guten"
+            },
+            {
+              "de": "die Nacht → Gute Nacht!",
+              "tr": "dişil: Gute"
+            }
+          ]
+        },
+        {
+          "title": "Arkadaşla ve resmî",
+          "text": "Hallo ve Tschüss arkadaşlara ve tanıdıklara söylenir. Guten Tag ve Auf Wiedersehen her zaman uygundur: mağazada, doktorda, yabancılarla.",
+          "examples": [
+            {
+              "de": "Hallo, Anna! Tschüss!",
+              "tr": "Merhaba Anna! Hoşça kal!"
+            },
+            {
+              "de": "Guten Tag! Auf Wiedersehen!",
+              "tr": "İyi günler! Güle güle!"
+            }
+          ]
+        },
+        {
+          "title": "İsimler büyük harfle",
+          "text": "Almancada tüm isimler cümlenin ortasında bile büyük harfle yazılır: der Morgen, der Tag, die Nacht.",
+          "examples": []
+        }
+      ]
+    },
+    "ro": {
+      "title": "Salutul: Guten sau Gute?",
+      "points": [
+        {
+          "title": "Salutăm după momentul zilei",
+          "text": "Dimineața spunem Guten Morgen, ziua Guten Tag, seara Guten Abend. Gute Nacht se spune doar înainte de culcare: este o urare, nu un salut.",
+          "examples": [
+            {
+              "de": "Guten Morgen!",
+              "tr": "Bună dimineața!"
+            },
+            {
+              "de": "Guten Tag!",
+              "tr": "Bună ziua!"
+            },
+            {
+              "de": "Guten Abend!",
+              "tr": "Bună seara!"
+            },
+            {
+              "de": "Gute Nacht!",
+              "tr": "Noapte bună!"
+            }
+          ]
+        },
+        {
+          "title": "Guten sau Gute",
+          "text": "Cuvântul „bun” își schimbă terminația după gen. der Morgen, der Tag și der Abend sunt masculine, deci Guten. die Nacht este feminin, deci Gute, fără -n.",
+          "examples": [
+            {
+              "de": "der Tag → Guten Tag!",
+              "tr": "masculin: Guten"
+            },
+            {
+              "de": "die Nacht → Gute Nacht!",
+              "tr": "feminin: Gute"
+            }
+          ]
+        },
+        {
+          "title": "Cu prietenii și oficial",
+          "text": "Hallo și Tschüss se spun prietenilor și cunoscuților. Guten Tag și Auf Wiedersehen merg mereu: în magazin, la doctor, cu necunoscuți.",
+          "examples": [
+            {
+              "de": "Hallo, Anna! Tschüss!",
+              "tr": "Salut, Anna! Pa!"
+            },
+            {
+              "de": "Guten Tag! Auf Wiedersehen!",
+              "tr": "Bună ziua! La revedere!"
+            }
+          ]
+        },
+        {
+          "title": "Substantivele cu majusculă",
+          "text": "În germană toate substantivele se scriu cu majusculă, chiar și în mijlocul propoziției: der Morgen, der Tag, die Nacht.",
+          "examples": []
+        }
+      ]
+    },
+    "uz": {
+      "title": "Salomlashish: Guten yoki Gute?",
+      "points": [
+        {
+          "title": "Kun vaqtiga qarab salomlashamiz",
+          "text": "Ertalab Guten Morgen, kunduzi Guten Tag, kechqurun Guten Abend deyiladi. Gute Nacht faqat uxlashdan oldin aytiladi: bu salom emas, tilak.",
+          "examples": [
+            {
+              "de": "Guten Morgen!",
+              "tr": "Xayrli tong!"
+            },
+            {
+              "de": "Guten Tag!",
+              "tr": "Xayrli kun!"
+            },
+            {
+              "de": "Guten Abend!",
+              "tr": "Xayrli kech!"
+            },
+            {
+              "de": "Gute Nacht!",
+              "tr": "Xayrli tun!"
+            }
+          ]
+        },
+        {
+          "title": "Guten yoki Gute",
+          "text": "\"Yaxshi\" so'zining oxiri otning rodiga qarab o'zgaradi. der Morgen, der Tag va der Abend erkak rodida, shuning uchun Guten. die Nacht ayol rodida, shuning uchun -n siz Gute.",
+          "examples": [
+            {
+              "de": "der Tag → Guten Tag!",
+              "tr": "erkak rodi: Guten"
+            },
+            {
+              "de": "die Nacht → Gute Nacht!",
+              "tr": "ayol rodi: Gute"
+            }
+          ]
+        },
+        {
+          "title": "Do'stlar bilan va rasmiy",
+          "text": "Hallo va Tschüss do'stlar va tanishlarga aytiladi. Guten Tag va Auf Wiedersehen har doim mos: do'konda, shifokorda, notanish odamlar bilan.",
+          "examples": [
+            {
+              "de": "Hallo, Anna! Tschüss!",
+              "tr": "Salom, Anna! Xayr!"
+            },
+            {
+              "de": "Guten Tag! Auf Wiedersehen!",
+              "tr": "Xayrli kun! Ko'rishguncha!"
+            }
+          ]
+        },
+        {
+          "title": "Otlar bosh harf bilan",
+          "text": "Nemis tilida barcha otlar gap o'rtasida ham bosh harf bilan yoziladi: der Morgen, der Tag, die Nacht.",
+          "examples": []
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभिवादन: Guten या Gute?",
+      "points": [
+        {
+          "title": "दिन के समय के अनुसार अभिवादन",
+          "text": "सुबह Guten Morgen, दिन में Guten Tag, शाम को Guten Abend कहते हैं। Gute Nacht सिर्फ़ सोने से पहले कहते हैं: यह अभिवादन नहीं, शुभकामना है।",
+          "examples": [
+            {
+              "de": "Guten Morgen!",
+              "tr": "सुप्रभात!"
+            },
+            {
+              "de": "Guten Tag!",
+              "tr": "नमस्ते! (दिन में)"
+            },
+            {
+              "de": "Guten Abend!",
+              "tr": "शुभ संध्या!"
+            },
+            {
+              "de": "Gute Nacht!",
+              "tr": "शुभ रात्रि!"
+            }
+          ]
+        },
+        {
+          "title": "Guten या Gute",
+          "text": "\"अच्छा\" शब्द का अंत संज्ञा के लिंग के अनुसार बदलता है। der Morgen, der Tag और der Abend पुल्लिंग हैं, इसलिए Guten। die Nacht स्त्रीलिंग है, इसलिए -n के बिना Gute।",
+          "examples": [
+            {
+              "de": "der Tag → Guten Tag!",
+              "tr": "पुल्लिंग: Guten"
+            },
+            {
+              "de": "die Nacht → Gute Nacht!",
+              "tr": "स्त्रीलिंग: Gute"
+            }
+          ]
+        },
+        {
+          "title": "दोस्तों के साथ और औपचारिक",
+          "text": "Hallo और Tschüss दोस्तों और जान-पहचान वालों से कहते हैं। Guten Tag और Auf Wiedersehen हमेशा ठीक हैं: दुकान में, डॉक्टर के पास, अनजान लोगों से।",
+          "examples": [
+            {
+              "de": "Hallo, Anna! Tschüss!",
+              "tr": "हाय, अन्ना! बाय!"
+            },
+            {
+              "de": "Guten Tag! Auf Wiedersehen!",
+              "tr": "नमस्ते! फिर मिलेंगे!"
+            }
+          ]
+        },
+        {
+          "title": "संज्ञा बड़े अक्षर से",
+          "text": "जर्मन में हर संज्ञा बड़े अक्षर से लिखी जाती है, वाक्य के बीच में भी: der Morgen, der Tag, die Nacht।",
+          "examples": []
+        }
+      ]
+    },
+    "ar": {
+      "title": "التحية: Guten أم Gute؟",
+      "points": [
+        {
+          "title": "نحيّي حسب وقت اليوم",
+          "text": "في الصباح نقول Guten Morgen، وفي النهار Guten Tag، وفي المساء Guten Abend. أما Gute Nacht فتُقال قبل النوم فقط: إنها أمنية وليست تحية.",
+          "examples": [
+            {
+              "de": "Guten Morgen!",
+              "tr": "صباح الخير!"
+            },
+            {
+              "de": "Guten Tag!",
+              "tr": "نهارك سعيد!"
+            },
+            {
+              "de": "Guten Abend!",
+              "tr": "مساء الخير!"
+            },
+            {
+              "de": "Gute Nacht!",
+              "tr": "تصبح على خير!"
+            }
+          ]
+        },
+        {
+          "title": "Guten أم Gute",
+          "text": "تتغير نهاية كلمة \"جيد\" حسب جنس الاسم. der Morgen وder Tag وder Abend مذكرة، لذلك Guten. أما die Nacht فمؤنثة، لذلك Gute بدون -n.",
+          "examples": [
+            {
+              "de": "der Tag → Guten Tag!",
+              "tr": "مذكر: Guten"
+            },
+            {
+              "de": "die Nacht → Gute Nacht!",
+              "tr": "مؤنث: Gute"
+            }
+          ]
+        },
+        {
+          "title": "مع الأصدقاء وبشكل رسمي",
+          "text": "نقول Hallo وTschüss للأصدقاء والمعارف. أما Guten Tag وAuf Wiedersehen فمناسبتان دائماً: في المتجر، عند الطبيب، مع الغرباء.",
+          "examples": [
+            {
+              "de": "Hallo, Anna! Tschüss!",
+              "tr": "مرحباً يا آنا! إلى اللقاء!"
+            },
+            {
+              "de": "Guten Tag! Auf Wiedersehen!",
+              "tr": "نهارك سعيد! مع السلامة!"
+            }
+          ]
+        },
+        {
+          "title": "الأسماء بحرف كبير",
+          "text": "في الألمانية تُكتب كل الأسماء بحرف كبير، حتى في وسط الجملة: der Morgen، der Tag، die Nacht.",
+          "examples": []
+        }
+      ]
+    }
+  },
+  "two": {
+    "ru": {
+      "title": "Как дела? Вопрос и ответ",
+      "points": [
+        {
+          "title": "Другу и вежливо",
+          "text": "Друга спрашивают Wie geht’s? А взрослого незнакомца, учителя или врача вежливо: Wie geht es Ihnen?",
+          "examples": [
+            {
+              "de": "Wie geht’s?",
+              "tr": "Как дела?"
+            },
+            {
+              "de": "Wie geht es Ihnen?",
+              "tr": "Как Ваши дела?"
+            }
+          ]
+        },
+        {
+          "title": "Как ответить",
+          "text": "От лучшего к худшему: Sehr gut! Gut. Es geht. Schlecht. К ответу часто добавляют danke.",
+          "examples": [
+            {
+              "de": "Sehr gut, danke!",
+              "tr": "Очень хорошо, спасибо!"
+            },
+            {
+              "de": "Es geht.",
+              "tr": "Так себе."
+            },
+            {
+              "de": "Schlecht.",
+              "tr": "Плохо."
+            }
+          ]
+        },
+        {
+          "title": "Спросить в ответ",
+          "text": "Другу говорят Und dir? Вежливо: Und Ihnen?",
+          "examples": [
+            {
+              "de": "Gut, danke. Und dir?",
+              "tr": "Хорошо, спасибо. А у тебя?"
+            },
+            {
+              "de": "Gut, danke. Und Ihnen?",
+              "tr": "Хорошо, спасибо. А у Вас?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Як справи? Питання і відповідь",
+      "points": [
+        {
+          "title": "Другові та ввічливо",
+          "text": "Друга питають Wie geht’s? А дорослого незнайомця, вчителя чи лікаря ввічливо: Wie geht es Ihnen?",
+          "examples": [
+            {
+              "de": "Wie geht’s?",
+              "tr": "Як справи?"
+            },
+            {
+              "de": "Wie geht es Ihnen?",
+              "tr": "Як Ваші справи?"
+            }
+          ]
+        },
+        {
+          "title": "Як відповісти",
+          "text": "Від кращого до гіршого: Sehr gut! Gut. Es geht. Schlecht. До відповіді часто додають danke.",
+          "examples": [
+            {
+              "de": "Sehr gut, danke!",
+              "tr": "Дуже добре, дякую!"
+            },
+            {
+              "de": "Es geht.",
+              "tr": "Так собі."
+            },
+            {
+              "de": "Schlecht.",
+              "tr": "Погано."
+            }
+          ]
+        },
+        {
+          "title": "Запитати у відповідь",
+          "text": "Другові кажуть Und dir? Ввічливо: Und Ihnen?",
+          "examples": [
+            {
+              "de": "Gut, danke. Und dir?",
+              "tr": "Добре, дякую. А в тебе?"
+            },
+            {
+              "de": "Gut, danke. Und Ihnen?",
+              "tr": "Добре, дякую. А у Вас?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "How are you? Question and answer",
+      "points": [
+        {
+          "title": "To a friend and politely",
+          "text": "Ask a friend Wie geht’s? Ask an adult stranger, a teacher or a doctor politely: Wie geht es Ihnen?",
+          "examples": [
+            {
+              "de": "Wie geht’s?",
+              "tr": "How are you?"
+            },
+            {
+              "de": "Wie geht es Ihnen?",
+              "tr": "How are you? (polite)"
+            }
+          ]
+        },
+        {
+          "title": "How to answer",
+          "text": "From best to worst: Sehr gut! Gut. Es geht. Schlecht. People often add danke.",
+          "examples": [
+            {
+              "de": "Sehr gut, danke!",
+              "tr": "Very good, thanks!"
+            },
+            {
+              "de": "Es geht.",
+              "tr": "So-so."
+            },
+            {
+              "de": "Schlecht.",
+              "tr": "Bad."
+            }
+          ]
+        },
+        {
+          "title": "Ask back",
+          "text": "To a friend: Und dir? Politely: Und Ihnen?",
+          "examples": [
+            {
+              "de": "Gut, danke. Und dir?",
+              "tr": "Good, thanks. And you?"
+            },
+            {
+              "de": "Gut, danke. Und Ihnen?",
+              "tr": "Good, thanks. And you? (polite)"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Jak się masz? Pytanie i odpowiedź",
+      "points": [
+        {
+          "title": "Do przyjaciela i grzecznie",
+          "text": "Przyjaciela pytamy Wie geht’s? Dorosłego nieznajomego, nauczyciela czy lekarza grzecznie: Wie geht es Ihnen?",
+          "examples": [
+            {
+              "de": "Wie geht’s?",
+              "tr": "Jak się masz?"
+            },
+            {
+              "de": "Wie geht es Ihnen?",
+              "tr": "Jak się Pan/Pani miewa?"
+            }
+          ]
+        },
+        {
+          "title": "Jak odpowiedzieć",
+          "text": "Od najlepszego do najgorszego: Sehr gut! Gut. Es geht. Schlecht. Często dodaje się danke.",
+          "examples": [
+            {
+              "de": "Sehr gut, danke!",
+              "tr": "Bardzo dobrze, dziękuję!"
+            },
+            {
+              "de": "Es geht.",
+              "tr": "Tak sobie."
+            },
+            {
+              "de": "Schlecht.",
+              "tr": "Źle."
+            }
+          ]
+        },
+        {
+          "title": "Zapytać w odpowiedzi",
+          "text": "Do przyjaciela: Und dir? Grzecznie: Und Ihnen?",
+          "examples": [
+            {
+              "de": "Gut, danke. Und dir?",
+              "tr": "Dobrze, dziękuję. A ty?"
+            },
+            {
+              "de": "Gut, danke. Und Ihnen?",
+              "tr": "Dobrze, dziękuję. A Pan/Pani?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿Qué tal? Pregunta y respuesta",
+      "points": [
+        {
+          "title": "A un amigo y con cortesía",
+          "text": "A un amigo se le pregunta Wie geht’s? A un adulto desconocido, a un profesor o a un médico, con cortesía: Wie geht es Ihnen?",
+          "examples": [
+            {
+              "de": "Wie geht’s?",
+              "tr": "¿Qué tal?"
+            },
+            {
+              "de": "Wie geht es Ihnen?",
+              "tr": "¿Cómo está usted?"
+            }
+          ]
+        },
+        {
+          "title": "Cómo responder",
+          "text": "De mejor a peor: Sehr gut! Gut. Es geht. Schlecht. A menudo se añade danke.",
+          "examples": [
+            {
+              "de": "Sehr gut, danke!",
+              "tr": "¡Muy bien, gracias!"
+            },
+            {
+              "de": "Es geht.",
+              "tr": "Más o menos."
+            },
+            {
+              "de": "Schlecht.",
+              "tr": "Mal."
+            }
+          ]
+        },
+        {
+          "title": "Preguntar de vuelta",
+          "text": "A un amigo: Und dir? Con cortesía: Und Ihnen?",
+          "examples": [
+            {
+              "de": "Gut, danke. Und dir?",
+              "tr": "Bien, gracias. ¿Y tú?"
+            },
+            {
+              "de": "Gut, danke. Und Ihnen?",
+              "tr": "Bien, gracias. ¿Y usted?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Ça va ? Question et réponse",
+      "points": [
+        {
+          "title": "À un ami et poliment",
+          "text": "À un ami on demande Wie geht’s ? À un adulte inconnu, un professeur ou un médecin, poliment : Wie geht es Ihnen ?",
+          "examples": [
+            {
+              "de": "Wie geht’s?",
+              "tr": "Ça va ?"
+            },
+            {
+              "de": "Wie geht es Ihnen?",
+              "tr": "Comment allez-vous ?"
+            }
+          ]
+        },
+        {
+          "title": "Comment répondre",
+          "text": "Du mieux au pire : Sehr gut! Gut. Es geht. Schlecht. On ajoute souvent danke.",
+          "examples": [
+            {
+              "de": "Sehr gut, danke!",
+              "tr": "Très bien, merci !"
+            },
+            {
+              "de": "Es geht.",
+              "tr": "Comme ci, comme ça."
+            },
+            {
+              "de": "Schlecht.",
+              "tr": "Mal."
+            }
+          ]
+        },
+        {
+          "title": "Retourner la question",
+          "text": "À un ami : Und dir? Poliment : Und Ihnen?",
+          "examples": [
+            {
+              "de": "Gut, danke. Und dir?",
+              "tr": "Bien, merci. Et toi ?"
+            },
+            {
+              "de": "Gut, danke. Und Ihnen?",
+              "tr": "Bien, merci. Et vous ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Nasılsın? Soru ve cevap",
+      "points": [
+        {
+          "title": "Arkadaşa ve kibarca",
+          "text": "Arkadaşa Wie geht’s? diye sorulur. Tanımadığın bir yetişkine, öğretmene ya da doktora kibarca: Wie geht es Ihnen?",
+          "examples": [
+            {
+              "de": "Wie geht’s?",
+              "tr": "Nasılsın?"
+            },
+            {
+              "de": "Wie geht es Ihnen?",
+              "tr": "Nasılsınız?"
+            }
+          ]
+        },
+        {
+          "title": "Nasıl cevap verilir",
+          "text": "En iyiden en kötüye: Sehr gut! Gut. Es geht. Schlecht. Cevaba çoğu zaman danke eklenir.",
+          "examples": [
+            {
+              "de": "Sehr gut, danke!",
+              "tr": "Çok iyiyim, teşekkürler!"
+            },
+            {
+              "de": "Es geht.",
+              "tr": "İdare eder."
+            },
+            {
+              "de": "Schlecht.",
+              "tr": "Kötü."
+            }
+          ]
+        },
+        {
+          "title": "Karşılık sormak",
+          "text": "Arkadaşa: Und dir? Kibarca: Und Ihnen?",
+          "examples": [
+            {
+              "de": "Gut, danke. Und dir?",
+              "tr": "İyiyim, teşekkürler. Ya sen?"
+            },
+            {
+              "de": "Gut, danke. Und Ihnen?",
+              "tr": "İyiyim, teşekkürler. Ya siz?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Ce faci? Întrebare și răspuns",
+      "points": [
+        {
+          "title": "Unui prieten și politicos",
+          "text": "Un prieten îl întrebi Wie geht’s? Un adult necunoscut, un profesor sau un medic, politicos: Wie geht es Ihnen?",
+          "examples": [
+            {
+              "de": "Wie geht’s?",
+              "tr": "Ce faci?"
+            },
+            {
+              "de": "Wie geht es Ihnen?",
+              "tr": "Ce mai faceți?"
+            }
+          ]
+        },
+        {
+          "title": "Cum răspunzi",
+          "text": "De la cel mai bine la cel mai rău: Sehr gut! Gut. Es geht. Schlecht. Des se adaugă danke.",
+          "examples": [
+            {
+              "de": "Sehr gut, danke!",
+              "tr": "Foarte bine, mulțumesc!"
+            },
+            {
+              "de": "Es geht.",
+              "tr": "Așa și așa."
+            },
+            {
+              "de": "Schlecht.",
+              "tr": "Rău."
+            }
+          ]
+        },
+        {
+          "title": "Întrebi înapoi",
+          "text": "Unui prieten: Und dir? Politicos: Und Ihnen?",
+          "examples": [
+            {
+              "de": "Gut, danke. Und dir?",
+              "tr": "Bine, mulțumesc. Și tu?"
+            },
+            {
+              "de": "Gut, danke. Und Ihnen?",
+              "tr": "Bine, mulțumesc. Și dumneavoastră?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qalaysiz? Savol va javob",
+      "points": [
+        {
+          "title": "Do'stga va hurmat bilan",
+          "text": "Do'stdan Wie geht’s? deb so'raladi. Notanish kattadan, o'qituvchi yoki shifokordan hurmat bilan: Wie geht es Ihnen?",
+          "examples": [
+            {
+              "de": "Wie geht’s?",
+              "tr": "Qalaysan?"
+            },
+            {
+              "de": "Wie geht es Ihnen?",
+              "tr": "Qalaysiz?"
+            }
+          ]
+        },
+        {
+          "title": "Qanday javob berish",
+          "text": "Eng yaxshidan eng yomonga: Sehr gut! Gut. Es geht. Schlecht. Javobga ko'pincha danke qo'shiladi.",
+          "examples": [
+            {
+              "de": "Sehr gut, danke!",
+              "tr": "Juda yaxshi, rahmat!"
+            },
+            {
+              "de": "Es geht.",
+              "tr": "Yomon emas, o'rtacha."
+            },
+            {
+              "de": "Schlecht.",
+              "tr": "Yomon."
+            }
+          ]
+        },
+        {
+          "title": "Javoban so'rash",
+          "text": "Do'stga: Und dir? Hurmat bilan: Und Ihnen?",
+          "examples": [
+            {
+              "de": "Gut, danke. Und dir?",
+              "tr": "Yaxshi, rahmat. Senchi?"
+            },
+            {
+              "de": "Gut, danke. Und Ihnen?",
+              "tr": "Yaxshi, rahmat. Sizchi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कैसे हो? सवाल और जवाब",
+      "points": [
+        {
+          "title": "दोस्त से और विनम्रता से",
+          "text": "दोस्त से पूछते हैं Wie geht’s? अनजान बड़े व्यक्ति, शिक्षक या डॉक्टर से विनम्रता से: Wie geht es Ihnen?",
+          "examples": [
+            {
+              "de": "Wie geht’s?",
+              "tr": "कैसे हो?"
+            },
+            {
+              "de": "Wie geht es Ihnen?",
+              "tr": "आप कैसे हैं?"
+            }
+          ]
+        },
+        {
+          "title": "कैसे जवाब दें",
+          "text": "सबसे अच्छे से सबसे बुरे तक: Sehr gut! Gut. Es geht. Schlecht. जवाब के साथ अक्सर danke कहते हैं।",
+          "examples": [
+            {
+              "de": "Sehr gut, danke!",
+              "tr": "बहुत अच्छा, धन्यवाद!"
+            },
+            {
+              "de": "Es geht.",
+              "tr": "ठीक-ठाक।"
+            },
+            {
+              "de": "Schlecht.",
+              "tr": "बुरा।"
+            }
+          ]
+        },
+        {
+          "title": "वापस पूछना",
+          "text": "दोस्त से: Und dir? विनम्रता से: Und Ihnen?",
+          "examples": [
+            {
+              "de": "Gut, danke. Und dir?",
+              "tr": "अच्छा, धन्यवाद। और तुम?"
+            },
+            {
+              "de": "Gut, danke. Und Ihnen?",
+              "tr": "अच्छा, धन्यवाद। और आप?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "كيف حالك؟ السؤال والجواب",
+      "points": [
+        {
+          "title": "للصديق وبأدب",
+          "text": "نسأل الصديق Wie geht’s? أما الشخص البالغ الغريب أو المعلم أو الطبيب فنسأله بأدب: Wie geht es Ihnen?",
+          "examples": [
+            {
+              "de": "Wie geht’s?",
+              "tr": "كيف حالك؟"
+            },
+            {
+              "de": "Wie geht es Ihnen?",
+              "tr": "كيف حالك؟ (بأدب)"
+            }
+          ]
+        },
+        {
+          "title": "كيف تجيب",
+          "text": "من الأفضل إلى الأسوأ: Sehr gut! Gut. Es geht. Schlecht. وغالباً نضيف danke.",
+          "examples": [
+            {
+              "de": "Sehr gut, danke!",
+              "tr": "بخير جداً، شكراً!"
+            },
+            {
+              "de": "Es geht.",
+              "tr": "لا بأس."
+            },
+            {
+              "de": "Schlecht.",
+              "tr": "سيئ."
+            }
+          ]
+        },
+        {
+          "title": "أن تسأل بدورك",
+          "text": "للصديق: Und dir? وبأدب: Und Ihnen?",
+          "examples": [
+            {
+              "de": "Gut, danke. Und dir?",
+              "tr": "بخير، شكراً. وأنت؟"
+            },
+            {
+              "de": "Gut, danke. Und Ihnen?",
+              "tr": "بخير، شكراً. وحضرتك؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "three": {
+    "ru": {
+      "title": "Знакомство: du и Sie",
+      "points": [
+        {
+          "title": "du и Sie",
+          "text": "du говорят другу, ребёнку, ровеснику. Sie говорят взрослому незнакомцу, и пишут всегда с большой буквы. От этого меняется глагол: du heißt, Sie heißen.",
+          "examples": [
+            {
+              "de": "Wie heißt du?",
+              "tr": "Как тебя зовут?"
+            },
+            {
+              "de": "Wie heißen Sie?",
+              "tr": "Как Вас зовут?"
+            }
+          ]
+        },
+        {
+          "title": "Три способа назвать себя",
+          "text": "Ich heiße Anna. Ich bin Anna. Mein Name ist Anna. Глагол меняет окончание: ich heiße, du heißt, Sie heißen.",
+          "examples": [
+            {
+              "de": "Ich heiße Anna.",
+              "tr": "Меня зовут Анна."
+            },
+            {
+              "de": "Mein Name ist Paul Weber.",
+              "tr": "Моё имя Пауль Вебер."
+            }
+          ]
+        },
+        {
+          "title": "Herr и Frau",
+          "text": "Herr (господин) и Frau (госпожа) ставят перед фамилией, а не перед именем. При знакомстве говорят Freut mich!",
+          "examples": [
+            {
+              "de": "Guten Tag, Herr Weber!",
+              "tr": "Добрый день, господин Вебер!"
+            },
+            {
+              "de": "Freut mich, Frau Klein!",
+              "tr": "Очень приятно, госпожа Кляйн!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Знайомство: du і Sie",
+      "points": [
+        {
+          "title": "du і Sie",
+          "text": "du кажуть другові, дитині, ровесникові. Sie кажуть дорослому незнайомцю і завжди пишуть з великої літери. Від цього змінюється дієслово: du heißt, Sie heißen.",
+          "examples": [
+            {
+              "de": "Wie heißt du?",
+              "tr": "Як тебе звати?"
+            },
+            {
+              "de": "Wie heißen Sie?",
+              "tr": "Як Вас звати?"
+            }
+          ]
+        },
+        {
+          "title": "Три способи назвати себе",
+          "text": "Ich heiße Anna. Ich bin Anna. Mein Name ist Anna. Дієслово змінює закінчення: ich heiße, du heißt, Sie heißen.",
+          "examples": [
+            {
+              "de": "Ich heiße Anna.",
+              "tr": "Мене звати Анна."
+            },
+            {
+              "de": "Mein Name ist Paul Weber.",
+              "tr": "Моє ім’я Пауль Вебер."
+            }
+          ]
+        },
+        {
+          "title": "Herr і Frau",
+          "text": "Herr (пан) і Frau (пані) ставлять перед прізвищем, а не перед ім’ям. При знайомстві кажуть Freut mich!",
+          "examples": [
+            {
+              "de": "Guten Tag, Herr Weber!",
+              "tr": "Добрий день, пане Вебер!"
+            },
+            {
+              "de": "Freut mich, Frau Klein!",
+              "tr": "Дуже приємно, пані Кляйн!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Introductions: du and Sie",
+      "points": [
+        {
+          "title": "du and Sie",
+          "text": "Use du with a friend, a child or someone your age. Use Sie with an adult stranger, always with a capital S. The verb changes too: du heißt, Sie heißen.",
+          "examples": [
+            {
+              "de": "Wie heißt du?",
+              "tr": "What’s your name?"
+            },
+            {
+              "de": "Wie heißen Sie?",
+              "tr": "What’s your name? (polite)"
+            }
+          ]
+        },
+        {
+          "title": "Three ways to say your name",
+          "text": "Ich heiße Anna. Ich bin Anna. Mein Name ist Anna. The verb ending changes: ich heiße, du heißt, Sie heißen.",
+          "examples": [
+            {
+              "de": "Ich heiße Anna.",
+              "tr": "My name is Anna."
+            },
+            {
+              "de": "Mein Name ist Paul Weber.",
+              "tr": "My name is Paul Weber."
+            }
+          ]
+        },
+        {
+          "title": "Herr and Frau",
+          "text": "Herr (Mr) and Frau (Mrs, Ms) go before the surname, not the first name. When you meet someone, say Freut mich!",
+          "examples": [
+            {
+              "de": "Guten Tag, Herr Weber!",
+              "tr": "Good day, Mr Weber!"
+            },
+            {
+              "de": "Freut mich, Frau Klein!",
+              "tr": "Nice to meet you, Ms Klein!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Poznajemy się: du i Sie",
+      "points": [
+        {
+          "title": "du i Sie",
+          "text": "du mówimy do przyjaciela, dziecka, rówieśnika. Sie do dorosłego nieznajomego, zawsze wielką literą. Zmienia się też czasownik: du heißt, Sie heißen.",
+          "examples": [
+            {
+              "de": "Wie heißt du?",
+              "tr": "Jak masz na imię?"
+            },
+            {
+              "de": "Wie heißen Sie?",
+              "tr": "Jak się Pan/Pani nazywa?"
+            }
+          ]
+        },
+        {
+          "title": "Trzy sposoby, by się przedstawić",
+          "text": "Ich heiße Anna. Ich bin Anna. Mein Name ist Anna. Czasownik zmienia końcówkę: ich heiße, du heißt, Sie heißen.",
+          "examples": [
+            {
+              "de": "Ich heiße Anna.",
+              "tr": "Mam na imię Anna."
+            },
+            {
+              "de": "Mein Name ist Paul Weber.",
+              "tr": "Nazywam się Paul Weber."
+            }
+          ]
+        },
+        {
+          "title": "Herr i Frau",
+          "text": "Herr (pan) i Frau (pani) stawiamy przed nazwiskiem, a nie przed imieniem. Przy poznaniu mówimy Freut mich!",
+          "examples": [
+            {
+              "de": "Guten Tag, Herr Weber!",
+              "tr": "Dzień dobry, panie Weber!"
+            },
+            {
+              "de": "Freut mich, Frau Klein!",
+              "tr": "Miło mi, pani Klein!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Presentarse: du y Sie",
+      "points": [
+        {
+          "title": "du y Sie",
+          "text": "du se usa con un amigo, un niño o alguien de tu edad. Sie con un adulto desconocido, siempre con mayúscula. También cambia el verbo: du heißt, Sie heißen.",
+          "examples": [
+            {
+              "de": "Wie heißt du?",
+              "tr": "¿Cómo te llamas?"
+            },
+            {
+              "de": "Wie heißen Sie?",
+              "tr": "¿Cómo se llama usted?"
+            }
+          ]
+        },
+        {
+          "title": "Tres formas de decir tu nombre",
+          "text": "Ich heiße Anna. Ich bin Anna. Mein Name ist Anna. El verbo cambia la terminación: ich heiße, du heißt, Sie heißen.",
+          "examples": [
+            {
+              "de": "Ich heiße Anna.",
+              "tr": "Me llamo Anna."
+            },
+            {
+              "de": "Mein Name ist Paul Weber.",
+              "tr": "Mi nombre es Paul Weber."
+            }
+          ]
+        },
+        {
+          "title": "Herr y Frau",
+          "text": "Herr (señor) y Frau (señora) van delante del apellido, no del nombre. Al conocer a alguien se dice Freut mich!",
+          "examples": [
+            {
+              "de": "Guten Tag, Herr Weber!",
+              "tr": "¡Buenos días, señor Weber!"
+            },
+            {
+              "de": "Freut mich, Frau Klein!",
+              "tr": "¡Encantado, señora Klein!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Se présenter : du et Sie",
+      "points": [
+        {
+          "title": "du et Sie",
+          "text": "du s’emploie avec un ami, un enfant, quelqu’un de ton âge. Sie avec un adulte inconnu, toujours avec une majuscule. Le verbe change aussi : du heißt, Sie heißen.",
+          "examples": [
+            {
+              "de": "Wie heißt du?",
+              "tr": "Comment tu t’appelles ?"
+            },
+            {
+              "de": "Wie heißen Sie?",
+              "tr": "Comment vous appelez-vous ?"
+            }
+          ]
+        },
+        {
+          "title": "Trois façons de dire son nom",
+          "text": "Ich heiße Anna. Ich bin Anna. Mein Name ist Anna. La terminaison du verbe change : ich heiße, du heißt, Sie heißen.",
+          "examples": [
+            {
+              "de": "Ich heiße Anna.",
+              "tr": "Je m’appelle Anna."
+            },
+            {
+              "de": "Mein Name ist Paul Weber.",
+              "tr": "Mon nom est Paul Weber."
+            }
+          ]
+        },
+        {
+          "title": "Herr et Frau",
+          "text": "Herr (Monsieur) et Frau (Madame) se placent devant le nom de famille, pas devant le prénom. Quand on fait connaissance, on dit Freut mich!",
+          "examples": [
+            {
+              "de": "Guten Tag, Herr Weber!",
+              "tr": "Bonjour, Monsieur Weber !"
+            },
+            {
+              "de": "Freut mich, Frau Klein!",
+              "tr": "Enchanté, Madame Klein !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tanışma: du ve Sie",
+      "points": [
+        {
+          "title": "du ve Sie",
+          "text": "du arkadaşa, çocuğa, yaşıta söylenir. Sie tanımadığın bir yetişkine söylenir ve her zaman büyük harfle yazılır. Fiil de değişir: du heißt, Sie heißen.",
+          "examples": [
+            {
+              "de": "Wie heißt du?",
+              "tr": "Adın ne?"
+            },
+            {
+              "de": "Wie heißen Sie?",
+              "tr": "Adınız ne?"
+            }
+          ]
+        },
+        {
+          "title": "Adını söylemenin üç yolu",
+          "text": "Ich heiße Anna. Ich bin Anna. Mein Name ist Anna. Fiilin sonu değişir: ich heiße, du heißt, Sie heißen.",
+          "examples": [
+            {
+              "de": "Ich heiße Anna.",
+              "tr": "Benim adım Anna."
+            },
+            {
+              "de": "Mein Name ist Paul Weber.",
+              "tr": "Adım Paul Weber."
+            }
+          ]
+        },
+        {
+          "title": "Herr ve Frau",
+          "text": "Herr (Bay) ve Frau (Bayan) soyadından önce gelir, addan önce değil. Tanışırken Freut mich! denir.",
+          "examples": [
+            {
+              "de": "Guten Tag, Herr Weber!",
+              "tr": "İyi günler, Bay Weber!"
+            },
+            {
+              "de": "Freut mich, Frau Klein!",
+              "tr": "Memnun oldum, Bayan Klein!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cunoștința: du și Sie",
+      "points": [
+        {
+          "title": "du și Sie",
+          "text": "du se spune unui prieten, unui copil, cuiva de vârsta ta. Sie unui adult necunoscut, mereu cu majusculă. Se schimbă și verbul: du heißt, Sie heißen.",
+          "examples": [
+            {
+              "de": "Wie heißt du?",
+              "tr": "Cum te cheamă?"
+            },
+            {
+              "de": "Wie heißen Sie?",
+              "tr": "Cum vă numiți?"
+            }
+          ]
+        },
+        {
+          "title": "Trei feluri de a-ți spune numele",
+          "text": "Ich heiße Anna. Ich bin Anna. Mein Name ist Anna. Terminația verbului se schimbă: ich heiße, du heißt, Sie heißen.",
+          "examples": [
+            {
+              "de": "Ich heiße Anna.",
+              "tr": "Mă numesc Anna."
+            },
+            {
+              "de": "Mein Name ist Paul Weber.",
+              "tr": "Numele meu este Paul Weber."
+            }
+          ]
+        },
+        {
+          "title": "Herr și Frau",
+          "text": "Herr (domnul) și Frau (doamna) se pun înaintea numelui de familie, nu a prenumelui. Când faci cunoștință, spui Freut mich!",
+          "examples": [
+            {
+              "de": "Guten Tag, Herr Weber!",
+              "tr": "Bună ziua, domnule Weber!"
+            },
+            {
+              "de": "Freut mich, Frau Klein!",
+              "tr": "Încântat, doamnă Klein!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Tanishuv: du va Sie",
+      "points": [
+        {
+          "title": "du va Sie",
+          "text": "du do'stga, bolaga, tengdoshga aytiladi. Sie notanish kattaga aytiladi va doim bosh harf bilan yoziladi. Fe'l ham o'zgaradi: du heißt, Sie heißen.",
+          "examples": [
+            {
+              "de": "Wie heißt du?",
+              "tr": "Isming nima?"
+            },
+            {
+              "de": "Wie heißen Sie?",
+              "tr": "Ismingiz nima?"
+            }
+          ]
+        },
+        {
+          "title": "O'zingni tanishtirishning uch yo'li",
+          "text": "Ich heiße Anna. Ich bin Anna. Mein Name ist Anna. Fe'l qo'shimchasi o'zgaradi: ich heiße, du heißt, Sie heißen.",
+          "examples": [
+            {
+              "de": "Ich heiße Anna.",
+              "tr": "Mening ismim Anna."
+            },
+            {
+              "de": "Mein Name ist Paul Weber.",
+              "tr": "Mening ismim Paul Weber."
+            }
+          ]
+        },
+        {
+          "title": "Herr va Frau",
+          "text": "Herr (janob) va Frau (xonim) ismdan emas, familiyadan oldin qo'yiladi. Tanishganda Freut mich! deyiladi.",
+          "examples": [
+            {
+              "de": "Guten Tag, Herr Weber!",
+              "tr": "Xayrli kun, janob Weber!"
+            },
+            {
+              "de": "Freut mich, Frau Klein!",
+              "tr": "Tanishganimdan xursandman, Klein xonim!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "परिचय: du और Sie",
+      "points": [
+        {
+          "title": "du और Sie",
+          "text": "du दोस्त, बच्चे या हमउम्र से कहते हैं। Sie अनजान बड़े व्यक्ति से कहते हैं और हमेशा बड़े S से लिखते हैं। क्रिया भी बदलती है: du heißt, Sie heißen।",
+          "examples": [
+            {
+              "de": "Wie heißt du?",
+              "tr": "तुम्हारा नाम क्या है?"
+            },
+            {
+              "de": "Wie heißen Sie?",
+              "tr": "आपका नाम क्या है?"
+            }
+          ]
+        },
+        {
+          "title": "अपना नाम बताने के तीन तरीके",
+          "text": "Ich heiße Anna. Ich bin Anna. Mein Name ist Anna. क्रिया का अंत बदलता है: ich heiße, du heißt, Sie heißen।",
+          "examples": [
+            {
+              "de": "Ich heiße Anna.",
+              "tr": "मेरा नाम अन्ना है।"
+            },
+            {
+              "de": "Mein Name ist Paul Weber.",
+              "tr": "मेरा नाम पॉल वेबर है।"
+            }
+          ]
+        },
+        {
+          "title": "Herr और Frau",
+          "text": "Herr (श्रीमान) और Frau (श्रीमती) उपनाम से पहले लगते हैं, पहले नाम से पहले नहीं। मिलने पर कहते हैं Freut mich!",
+          "examples": [
+            {
+              "de": "Guten Tag, Herr Weber!",
+              "tr": "नमस्ते, श्रीमान वेबर!"
+            },
+            {
+              "de": "Freut mich, Frau Klein!",
+              "tr": "आपसे मिलकर खुशी हुई, श्रीमती क्लाइन!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "التعارف: du وSie",
+      "points": [
+        {
+          "title": "du وSie",
+          "text": "نقول du للصديق أو الطفل أو من هو في عمرك. ونقول Sie للشخص البالغ الغريب، وتُكتب دائماً بحرف كبير. ويتغير الفعل أيضاً: du heißt، Sie heißen.",
+          "examples": [
+            {
+              "de": "Wie heißt du?",
+              "tr": "ما اسمك؟"
+            },
+            {
+              "de": "Wie heißen Sie?",
+              "tr": "ما اسم حضرتك؟"
+            }
+          ]
+        },
+        {
+          "title": "ثلاث طرق لتقول اسمك",
+          "text": "Ich heiße Anna. Ich bin Anna. Mein Name ist Anna. تتغير نهاية الفعل: ich heiße، du heißt، Sie heißen.",
+          "examples": [
+            {
+              "de": "Ich heiße Anna.",
+              "tr": "اسمي آنا."
+            },
+            {
+              "de": "Mein Name ist Paul Weber.",
+              "tr": "اسمي باول فيبر."
+            }
+          ]
+        },
+        {
+          "title": "Herr وFrau",
+          "text": "نضع Herr (السيد) وFrau (السيدة) قبل اسم العائلة، لا قبل الاسم الأول. وعند التعارف نقول Freut mich!",
+          "examples": [
+            {
+              "de": "Guten Tag, Herr Weber!",
+              "tr": "نهارك سعيد يا سيد فيبر!"
+            },
+            {
+              "de": "Freut mich, Frau Klein!",
+              "tr": "تشرفت بمعرفتك يا سيدة كلاين!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "four": {
+    "ru": {
+      "title": "Откуда ты: aus и in",
+      "points": [
+        {
+          "title": "aus и in",
+          "text": "aus отвечает на вопрос «откуда?»: Ich komme aus Polen. in отвечает на вопрос «где?»: Ich wohne in Berlin.",
+          "examples": [
+            {
+              "de": "Ich komme aus Polen.",
+              "tr": "Я из Польши."
+            },
+            {
+              "de": "Ich wohne in Berlin.",
+              "tr": "Я живу в Берлине."
+            }
+          ]
+        },
+        {
+          "title": "Страны с артиклем",
+          "text": "Большинство стран без артикля. Но некоторые с артиклем die: die Schweiz, die Türkei, die Ukraine. Тогда говорят aus der и in der.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Ukraine.",
+              "tr": "Я из Украины."
+            },
+            {
+              "de": "Ich wohne in der Schweiz.",
+              "tr": "Я живу в Швейцарии."
+            }
+          ]
+        },
+        {
+          "title": "Глагол сразу после вопроса",
+          "text": "В вопросе с Woher или Wo глагол стоит сразу после вопросительного слова.",
+          "examples": [
+            {
+              "de": "Woher kommen Sie?",
+              "tr": "Откуда Вы?"
+            },
+            {
+              "de": "Wo wohnst du?",
+              "tr": "Где ты живёшь?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Звідки ти: aus і in",
+      "points": [
+        {
+          "title": "aus і in",
+          "text": "aus відповідає на питання «звідки?»: Ich komme aus Polen. in відповідає на питання «де?»: Ich wohne in Berlin.",
+          "examples": [
+            {
+              "de": "Ich komme aus Polen.",
+              "tr": "Я з Польщі."
+            },
+            {
+              "de": "Ich wohne in Berlin.",
+              "tr": "Я живу в Берліні."
+            }
+          ]
+        },
+        {
+          "title": "Країни з артиклем",
+          "text": "Більшість країн без артикля. Але деякі з артиклем die: die Schweiz, die Türkei, die Ukraine. Тоді кажуть aus der та in der.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Ukraine.",
+              "tr": "Я з України."
+            },
+            {
+              "de": "Ich wohne in der Schweiz.",
+              "tr": "Я живу у Швейцарії."
+            }
+          ]
+        },
+        {
+          "title": "Дієслово одразу після питання",
+          "text": "У питанні з Woher чи Wo дієслово стоїть одразу після питального слова.",
+          "examples": [
+            {
+              "de": "Woher kommen Sie?",
+              "tr": "Звідки Ви?"
+            },
+            {
+              "de": "Wo wohnst du?",
+              "tr": "Де ти живеш?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Where are you from: aus and in",
+      "points": [
+        {
+          "title": "aus and in",
+          "text": "aus answers \"where from?\": Ich komme aus Polen. in answers \"where?\": Ich wohne in Berlin.",
+          "examples": [
+            {
+              "de": "Ich komme aus Polen.",
+              "tr": "I’m from Poland."
+            },
+            {
+              "de": "Ich wohne in Berlin.",
+              "tr": "I live in Berlin."
+            }
+          ]
+        },
+        {
+          "title": "Countries with an article",
+          "text": "Most countries have no article. Some do: die Schweiz, die Türkei, die Ukraine. Then you say aus der and in der.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Ukraine.",
+              "tr": "I’m from Ukraine."
+            },
+            {
+              "de": "Ich wohne in der Schweiz.",
+              "tr": "I live in Switzerland."
+            }
+          ]
+        },
+        {
+          "title": "The verb comes right after",
+          "text": "In a question with Woher or Wo, the verb comes right after the question word.",
+          "examples": [
+            {
+              "de": "Woher kommen Sie?",
+              "tr": "Where are you from? (polite)"
+            },
+            {
+              "de": "Wo wohnst du?",
+              "tr": "Where do you live?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Skąd jesteś: aus i in",
+      "points": [
+        {
+          "title": "aus i in",
+          "text": "aus odpowiada na pytanie „skąd?”: Ich komme aus Polen. in odpowiada na pytanie „gdzie?”: Ich wohne in Berlin.",
+          "examples": [
+            {
+              "de": "Ich komme aus Polen.",
+              "tr": "Jestem z Polski."
+            },
+            {
+              "de": "Ich wohne in Berlin.",
+              "tr": "Mieszkam w Berlinie."
+            }
+          ]
+        },
+        {
+          "title": "Kraje z rodzajnikiem",
+          "text": "Większość krajów jest bez rodzajnika. Niektóre go mają: die Schweiz, die Türkei, die Ukraine. Wtedy mówimy aus der i in der.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Ukraine.",
+              "tr": "Jestem z Ukrainy."
+            },
+            {
+              "de": "Ich wohne in der Schweiz.",
+              "tr": "Mieszkam w Szwajcarii."
+            }
+          ]
+        },
+        {
+          "title": "Czasownik od razu po pytaniu",
+          "text": "W pytaniu z Woher lub Wo czasownik stoi zaraz po słowie pytającym.",
+          "examples": [
+            {
+              "de": "Woher kommen Sie?",
+              "tr": "Skąd Pan/Pani pochodzi?"
+            },
+            {
+              "de": "Wo wohnst du?",
+              "tr": "Gdzie mieszkasz?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿De dónde eres?: aus e in",
+      "points": [
+        {
+          "title": "aus e in",
+          "text": "aus responde a \"¿de dónde?\": Ich komme aus Polen. in responde a \"¿dónde?\": Ich wohne in Berlin.",
+          "examples": [
+            {
+              "de": "Ich komme aus Polen.",
+              "tr": "Soy de Polonia."
+            },
+            {
+              "de": "Ich wohne in Berlin.",
+              "tr": "Vivo en Berlín."
+            }
+          ]
+        },
+        {
+          "title": "Países con artículo",
+          "text": "La mayoría de los países no llevan artículo. Algunos sí: die Schweiz, die Türkei, die Ukraine. Entonces se dice aus der e in der.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Ukraine.",
+              "tr": "Soy de Ucrania."
+            },
+            {
+              "de": "Ich wohne in der Schweiz.",
+              "tr": "Vivo en Suiza."
+            }
+          ]
+        },
+        {
+          "title": "El verbo va justo después",
+          "text": "En una pregunta con Woher o Wo, el verbo va justo después de la palabra interrogativa.",
+          "examples": [
+            {
+              "de": "Woher kommen Sie?",
+              "tr": "¿De dónde es usted?"
+            },
+            {
+              "de": "Wo wohnst du?",
+              "tr": "¿Dónde vives?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "D’où viens-tu : aus et in",
+      "points": [
+        {
+          "title": "aus et in",
+          "text": "aus répond à « d’où ? » : Ich komme aus Polen. in répond à « où ? » : Ich wohne in Berlin.",
+          "examples": [
+            {
+              "de": "Ich komme aus Polen.",
+              "tr": "Je viens de Pologne."
+            },
+            {
+              "de": "Ich wohne in Berlin.",
+              "tr": "J’habite à Berlin."
+            }
+          ]
+        },
+        {
+          "title": "Pays avec article",
+          "text": "La plupart des pays n’ont pas d’article. Certains en ont un : die Schweiz, die Türkei, die Ukraine. On dit alors aus der et in der.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Ukraine.",
+              "tr": "Je viens d’Ukraine."
+            },
+            {
+              "de": "Ich wohne in der Schweiz.",
+              "tr": "J’habite en Suisse."
+            }
+          ]
+        },
+        {
+          "title": "Le verbe vient juste après",
+          "text": "Dans une question avec Woher ou Wo, le verbe vient juste après le mot interrogatif.",
+          "examples": [
+            {
+              "de": "Woher kommen Sie?",
+              "tr": "D’où venez-vous ?"
+            },
+            {
+              "de": "Wo wohnst du?",
+              "tr": "Où habites-tu ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Nerelisin: aus ve in",
+      "points": [
+        {
+          "title": "aus ve in",
+          "text": "aus \"nereden?\" sorusunu cevaplar: Ich komme aus Polen. in \"nerede?\" sorusunu cevaplar: Ich wohne in Berlin.",
+          "examples": [
+            {
+              "de": "Ich komme aus Polen.",
+              "tr": "Polonyalıyım."
+            },
+            {
+              "de": "Ich wohne in Berlin.",
+              "tr": "Berlin’de yaşıyorum."
+            }
+          ]
+        },
+        {
+          "title": "Artikelli ülkeler",
+          "text": "Çoğu ülke artikelsizdir. Bazılarında artikel var: die Schweiz, die Türkei, die Ukraine. O zaman aus der ve in der denir.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Ukraine.",
+              "tr": "Ukraynalıyım."
+            },
+            {
+              "de": "Ich wohne in der Schweiz.",
+              "tr": "İsviçre’de yaşıyorum."
+            }
+          ]
+        },
+        {
+          "title": "Fiil soru kelimesinden hemen sonra",
+          "text": "Woher veya Wo ile sorulan soruda fiil soru kelimesinden hemen sonra gelir.",
+          "examples": [
+            {
+              "de": "Woher kommen Sie?",
+              "tr": "Nerelisiniz?"
+            },
+            {
+              "de": "Wo wohnst du?",
+              "tr": "Nerede yaşıyorsun?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "De unde ești: aus și in",
+      "points": [
+        {
+          "title": "aus și in",
+          "text": "aus răspunde la „de unde?”: Ich komme aus Polen. in răspunde la „unde?”: Ich wohne in Berlin.",
+          "examples": [
+            {
+              "de": "Ich komme aus Polen.",
+              "tr": "Sunt din Polonia."
+            },
+            {
+              "de": "Ich wohne in Berlin.",
+              "tr": "Locuiesc în Berlin."
+            }
+          ]
+        },
+        {
+          "title": "Țări cu articol",
+          "text": "Majoritatea țărilor nu au articol. Unele au: die Schweiz, die Türkei, die Ukraine. Atunci spui aus der și in der.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Ukraine.",
+              "tr": "Sunt din Ucraina."
+            },
+            {
+              "de": "Ich wohne in der Schweiz.",
+              "tr": "Locuiesc în Elveția."
+            }
+          ]
+        },
+        {
+          "title": "Verbul vine imediat după",
+          "text": "Într-o întrebare cu Woher sau Wo, verbul vine imediat după cuvântul interogativ.",
+          "examples": [
+            {
+              "de": "Woher kommen Sie?",
+              "tr": "De unde sunteți?"
+            },
+            {
+              "de": "Wo wohnst du?",
+              "tr": "Unde locuiești?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qayerdansan: aus va in",
+      "points": [
+        {
+          "title": "aus va in",
+          "text": "aus \"qayerdan?\" savoliga javob: Ich komme aus Polen. in \"qayerda?\" savoliga javob: Ich wohne in Berlin.",
+          "examples": [
+            {
+              "de": "Ich komme aus Polen.",
+              "tr": "Men Polshadanman."
+            },
+            {
+              "de": "Ich wohne in Berlin.",
+              "tr": "Men Berlinda yashayman."
+            }
+          ]
+        },
+        {
+          "title": "Artiklli davlatlar",
+          "text": "Ko'p davlatlar artiklsiz. Ba'zilari artikl bilan: die Schweiz, die Türkei, die Ukraine. Unda aus der va in der deyiladi.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Ukraine.",
+              "tr": "Men Ukrainadanman."
+            },
+            {
+              "de": "Ich wohne in der Schweiz.",
+              "tr": "Men Shveytsariyada yashayman."
+            }
+          ]
+        },
+        {
+          "title": "Fe'l savol so'zidan keyin",
+          "text": "Woher yoki Wo bilan savolda fe'l savol so'zidan keyin darhol keladi.",
+          "examples": [
+            {
+              "de": "Woher kommen Sie?",
+              "tr": "Qayerdansiz?"
+            },
+            {
+              "de": "Wo wohnst du?",
+              "tr": "Qayerda yashaysan?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "तुम कहाँ से हो: aus और in",
+      "points": [
+        {
+          "title": "aus और in",
+          "text": "aus \"कहाँ से?\" का जवाब है: Ich komme aus Polen. in \"कहाँ?\" का जवाब है: Ich wohne in Berlin.",
+          "examples": [
+            {
+              "de": "Ich komme aus Polen.",
+              "tr": "मैं पोलैंड से हूँ।"
+            },
+            {
+              "de": "Ich wohne in Berlin.",
+              "tr": "मैं बर्लिन में रहता हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "आर्टिकल वाले देश",
+          "text": "ज़्यादातर देशों के साथ आर्टिकल नहीं होता। कुछ के साथ होता है: die Schweiz, die Türkei, die Ukraine। तब aus der और in der कहते हैं।",
+          "examples": [
+            {
+              "de": "Ich komme aus der Ukraine.",
+              "tr": "मैं यूक्रेन से हूँ।"
+            },
+            {
+              "de": "Ich wohne in der Schweiz.",
+              "tr": "मैं स्विट्ज़रलैंड में रहता हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "क्रिया तुरंत बाद आती है",
+          "text": "Woher या Wo वाले सवाल में क्रिया प्रश्नवाचक शब्द के ठीक बाद आती है।",
+          "examples": [
+            {
+              "de": "Woher kommen Sie?",
+              "tr": "आप कहाँ से हैं?"
+            },
+            {
+              "de": "Wo wohnst du?",
+              "tr": "तुम कहाँ रहते हो?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "من أين أنت: aus وin",
+      "points": [
+        {
+          "title": "aus وin",
+          "text": "aus تجيب عن \"من أين؟\": Ich komme aus Polen. وin تجيب عن \"أين؟\": Ich wohne in Berlin.",
+          "examples": [
+            {
+              "de": "Ich komme aus Polen.",
+              "tr": "أنا من بولندا."
+            },
+            {
+              "de": "Ich wohne in Berlin.",
+              "tr": "أسكن في برلين."
+            }
+          ]
+        },
+        {
+          "title": "دول مع أداة تعريف",
+          "text": "معظم الدول بدون أداة تعريف. وبعضها معها: die Schweiz، die Türkei، die Ukraine. عندها نقول aus der وin der.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Ukraine.",
+              "tr": "أنا من أوكرانيا."
+            },
+            {
+              "de": "Ich wohne in der Schweiz.",
+              "tr": "أسكن في سويسرا."
+            }
+          ]
+        },
+        {
+          "title": "الفعل يأتي مباشرة بعده",
+          "text": "في السؤال بـ Woher أو Wo يأتي الفعل مباشرة بعد أداة الاستفهام.",
+          "examples": [
+            {
+              "de": "Woher kommen Sie?",
+              "tr": "من أين حضرتك؟"
+            },
+            {
+              "de": "Wo wohnst du?",
+              "tr": "أين تسكن؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "five": {
+    "ru": {
+      "title": "Числа от 0 до 12",
+      "points": [
+        {
+          "title": "Просто запомни",
+          "text": "Правила здесь нет, эти числа нужно выучить.",
+          "examples": [
+            {
+              "de": "null, eins, zwei, drei",
+              "tr": "0, 1, 2, 3"
+            },
+            {
+              "de": "vier, fünf, sechs",
+              "tr": "4, 5, 6"
+            },
+            {
+              "de": "sieben, acht, neun",
+              "tr": "7, 8, 9"
+            },
+            {
+              "de": "zehn, elf, zwölf",
+              "tr": "10, 11, 12"
+            }
+          ]
+        },
+        {
+          "title": "Номер телефона",
+          "text": "Номер читают по одной цифре.",
+          "examples": [
+            {
+              "de": "Wie ist deine Telefonnummer?",
+              "tr": "Какой у тебя номер телефона?"
+            },
+            {
+              "de": "null, eins, sieben, vier",
+              "tr": "0174"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Числа від 0 до 12",
+      "points": [
+        {
+          "title": "Просто запам’ятай",
+          "text": "Правила тут немає, ці числа треба вивчити.",
+          "examples": [
+            {
+              "de": "null, eins, zwei, drei",
+              "tr": "0, 1, 2, 3"
+            },
+            {
+              "de": "vier, fünf, sechs",
+              "tr": "4, 5, 6"
+            },
+            {
+              "de": "sieben, acht, neun",
+              "tr": "7, 8, 9"
+            },
+            {
+              "de": "zehn, elf, zwölf",
+              "tr": "10, 11, 12"
+            }
+          ]
+        },
+        {
+          "title": "Номер телефону",
+          "text": "Номер читають по одній цифрі.",
+          "examples": [
+            {
+              "de": "Wie ist deine Telefonnummer?",
+              "tr": "Який у тебе номер телефону?"
+            },
+            {
+              "de": "null, eins, sieben, vier",
+              "tr": "0174"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Numbers from 0 to 12",
+      "points": [
+        {
+          "title": "Just remember them",
+          "text": "There is no rule here, you simply learn these numbers.",
+          "examples": [
+            {
+              "de": "null, eins, zwei, drei",
+              "tr": "0, 1, 2, 3"
+            },
+            {
+              "de": "vier, fünf, sechs",
+              "tr": "4, 5, 6"
+            },
+            {
+              "de": "sieben, acht, neun",
+              "tr": "7, 8, 9"
+            },
+            {
+              "de": "zehn, elf, zwölf",
+              "tr": "10, 11, 12"
+            }
+          ]
+        },
+        {
+          "title": "Phone numbers",
+          "text": "A phone number is read one digit at a time.",
+          "examples": [
+            {
+              "de": "Wie ist deine Telefonnummer?",
+              "tr": "What’s your phone number?"
+            },
+            {
+              "de": "null, eins, sieben, vier",
+              "tr": "0174"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Liczby od 0 do 12",
+      "points": [
+        {
+          "title": "Po prostu zapamiętaj",
+          "text": "Tu nie ma reguły, te liczby trzeba się nauczyć.",
+          "examples": [
+            {
+              "de": "null, eins, zwei, drei",
+              "tr": "0, 1, 2, 3"
+            },
+            {
+              "de": "vier, fünf, sechs",
+              "tr": "4, 5, 6"
+            },
+            {
+              "de": "sieben, acht, neun",
+              "tr": "7, 8, 9"
+            },
+            {
+              "de": "zehn, elf, zwölf",
+              "tr": "10, 11, 12"
+            }
+          ]
+        },
+        {
+          "title": "Numer telefonu",
+          "text": "Numer czyta się cyfra po cyfrze.",
+          "examples": [
+            {
+              "de": "Wie ist deine Telefonnummer?",
+              "tr": "Jaki masz numer telefonu?"
+            },
+            {
+              "de": "null, eins, sieben, vier",
+              "tr": "0174"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Números del 0 al 12",
+      "points": [
+        {
+          "title": "Solo memorízalos",
+          "text": "Aquí no hay regla, estos números hay que aprenderlos.",
+          "examples": [
+            {
+              "de": "null, eins, zwei, drei",
+              "tr": "0, 1, 2, 3"
+            },
+            {
+              "de": "vier, fünf, sechs",
+              "tr": "4, 5, 6"
+            },
+            {
+              "de": "sieben, acht, neun",
+              "tr": "7, 8, 9"
+            },
+            {
+              "de": "zehn, elf, zwölf",
+              "tr": "10, 11, 12"
+            }
+          ]
+        },
+        {
+          "title": "Número de teléfono",
+          "text": "El número se lee cifra por cifra.",
+          "examples": [
+            {
+              "de": "Wie ist deine Telefonnummer?",
+              "tr": "¿Cuál es tu número de teléfono?"
+            },
+            {
+              "de": "null, eins, sieben, vier",
+              "tr": "0174"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les nombres de 0 à 12",
+      "points": [
+        {
+          "title": "Retiens-les",
+          "text": "Il n’y a pas de règle ici, il faut apprendre ces nombres.",
+          "examples": [
+            {
+              "de": "null, eins, zwei, drei",
+              "tr": "0, 1, 2, 3"
+            },
+            {
+              "de": "vier, fünf, sechs",
+              "tr": "4, 5, 6"
+            },
+            {
+              "de": "sieben, acht, neun",
+              "tr": "7, 8, 9"
+            },
+            {
+              "de": "zehn, elf, zwölf",
+              "tr": "10, 11, 12"
+            }
+          ]
+        },
+        {
+          "title": "Numéro de téléphone",
+          "text": "Le numéro se lit chiffre par chiffre.",
+          "examples": [
+            {
+              "de": "Wie ist deine Telefonnummer?",
+              "tr": "Quel est ton numéro de téléphone ?"
+            },
+            {
+              "de": "null, eins, sieben, vier",
+              "tr": "0174"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "0’dan 12’ye sayılar",
+      "points": [
+        {
+          "title": "Sadece ezberle",
+          "text": "Burada kural yok, bu sayıları ezberlemek gerekir.",
+          "examples": [
+            {
+              "de": "null, eins, zwei, drei",
+              "tr": "0, 1, 2, 3"
+            },
+            {
+              "de": "vier, fünf, sechs",
+              "tr": "4, 5, 6"
+            },
+            {
+              "de": "sieben, acht, neun",
+              "tr": "7, 8, 9"
+            },
+            {
+              "de": "zehn, elf, zwölf",
+              "tr": "10, 11, 12"
+            }
+          ]
+        },
+        {
+          "title": "Telefon numarası",
+          "text": "Numara rakam rakam okunur.",
+          "examples": [
+            {
+              "de": "Wie ist deine Telefonnummer?",
+              "tr": "Telefon numaran ne?"
+            },
+            {
+              "de": "null, eins, sieben, vier",
+              "tr": "0174"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Numerele de la 0 la 12",
+      "points": [
+        {
+          "title": "Doar memorează",
+          "text": "Aici nu există regulă, aceste numere trebuie învățate.",
+          "examples": [
+            {
+              "de": "null, eins, zwei, drei",
+              "tr": "0, 1, 2, 3"
+            },
+            {
+              "de": "vier, fünf, sechs",
+              "tr": "4, 5, 6"
+            },
+            {
+              "de": "sieben, acht, neun",
+              "tr": "7, 8, 9"
+            },
+            {
+              "de": "zehn, elf, zwölf",
+              "tr": "10, 11, 12"
+            }
+          ]
+        },
+        {
+          "title": "Numărul de telefon",
+          "text": "Numărul se citește cifră cu cifră.",
+          "examples": [
+            {
+              "de": "Wie ist deine Telefonnummer?",
+              "tr": "Care e numărul tău de telefon?"
+            },
+            {
+              "de": "null, eins, sieben, vier",
+              "tr": "0174"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "0 dan 12 gacha sonlar",
+      "points": [
+        {
+          "title": "Shunchaki yodla",
+          "text": "Bu yerda qoida yo'q, bu sonlarni yodlash kerak.",
+          "examples": [
+            {
+              "de": "null, eins, zwei, drei",
+              "tr": "0, 1, 2, 3"
+            },
+            {
+              "de": "vier, fünf, sechs",
+              "tr": "4, 5, 6"
+            },
+            {
+              "de": "sieben, acht, neun",
+              "tr": "7, 8, 9"
+            },
+            {
+              "de": "zehn, elf, zwölf",
+              "tr": "10, 11, 12"
+            }
+          ]
+        },
+        {
+          "title": "Telefon raqami",
+          "text": "Raqam bittadan raqam qilib o'qiladi.",
+          "examples": [
+            {
+              "de": "Wie ist deine Telefonnummer?",
+              "tr": "Telefon raqaming qanday?"
+            },
+            {
+              "de": "null, eins, sieben, vier",
+              "tr": "0174"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "0 से 12 तक संख्याएँ",
+      "points": [
+        {
+          "title": "बस याद कर लो",
+          "text": "यहाँ कोई नियम नहीं है, ये संख्याएँ याद करनी होती हैं।",
+          "examples": [
+            {
+              "de": "null, eins, zwei, drei",
+              "tr": "0, 1, 2, 3"
+            },
+            {
+              "de": "vier, fünf, sechs",
+              "tr": "4, 5, 6"
+            },
+            {
+              "de": "sieben, acht, neun",
+              "tr": "7, 8, 9"
+            },
+            {
+              "de": "zehn, elf, zwölf",
+              "tr": "10, 11, 12"
+            }
+          ]
+        },
+        {
+          "title": "फ़ोन नंबर",
+          "text": "नंबर एक-एक अंक करके पढ़ा जाता है।",
+          "examples": [
+            {
+              "de": "Wie ist deine Telefonnummer?",
+              "tr": "तुम्हारा फ़ोन नंबर क्या है?"
+            },
+            {
+              "de": "null, eins, sieben, vier",
+              "tr": "0174"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الأعداد من 0 إلى 12",
+      "points": [
+        {
+          "title": "احفظها فقط",
+          "text": "لا توجد قاعدة هنا، يجب حفظ هذه الأعداد.",
+          "examples": [
+            {
+              "de": "null, eins, zwei, drei",
+              "tr": "0, 1, 2, 3"
+            },
+            {
+              "de": "vier, fünf, sechs",
+              "tr": "4, 5, 6"
+            },
+            {
+              "de": "sieben, acht, neun",
+              "tr": "7, 8, 9"
+            },
+            {
+              "de": "zehn, elf, zwölf",
+              "tr": "10, 11, 12"
+            }
+          ]
+        },
+        {
+          "title": "رقم الهاتف",
+          "text": "يُقرأ الرقم رقماً رقماً.",
+          "examples": [
+            {
+              "de": "Wie ist deine Telefonnummer?",
+              "tr": "ما رقم هاتفك؟"
+            },
+            {
+              "de": "null, eins, sieben, vier",
+              "tr": "0174"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "six": {
+    "ru": {
+      "title": "Числа до 100 и цены",
+      "points": [
+        {
+          "title": "Числа от 13 до 19",
+          "text": "Число плюс zehn: dreizehn, vierzehn. Особые: sechzehn (без s) и siebzehn (без en).",
+          "examples": [
+            {
+              "de": "dreizehn, vierzehn",
+              "tr": "13, 14"
+            },
+            {
+              "de": "sechzehn, siebzehn",
+              "tr": "16, 17"
+            }
+          ]
+        },
+        {
+          "title": "Десятки",
+          "text": "Почти все десятки на -zig: zwanzig, vierzig, fünfzig. Исключение: dreißig.",
+          "examples": [
+            {
+              "de": "zwanzig, dreißig, vierzig",
+              "tr": "20, 30, 40"
+            }
+          ]
+        },
+        {
+          "title": "Сначала единицы",
+          "text": "От 21 до 99 сначала говорят единицы, потом und и десятки, всё одним словом: «один и двадцать».",
+          "examples": [
+            {
+              "de": "einundzwanzig",
+              "tr": "21"
+            },
+            {
+              "de": "fünfundvierzig",
+              "tr": "45"
+            }
+          ]
+        },
+        {
+          "title": "Сколько стоит?",
+          "text": "Спросить цену: Was kostet das? Ответ: Das kostet ... Euro.",
+          "examples": [
+            {
+              "de": "Was kostet das?",
+              "tr": "Сколько это стоит?"
+            },
+            {
+              "de": "Das kostet zwanzig Euro.",
+              "tr": "Это стоит двадцать евро."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Числа до 100 і ціни",
+      "points": [
+        {
+          "title": "Числа від 13 до 19",
+          "text": "Число плюс zehn: dreizehn, vierzehn. Особливі: sechzehn (без s) і siebzehn (без en).",
+          "examples": [
+            {
+              "de": "dreizehn, vierzehn",
+              "tr": "13, 14"
+            },
+            {
+              "de": "sechzehn, siebzehn",
+              "tr": "16, 17"
+            }
+          ]
+        },
+        {
+          "title": "Десятки",
+          "text": "Майже всі десятки на -zig: zwanzig, vierzig, fünfzig. Виняток: dreißig.",
+          "examples": [
+            {
+              "de": "zwanzig, dreißig, vierzig",
+              "tr": "20, 30, 40"
+            }
+          ]
+        },
+        {
+          "title": "Спочатку одиниці",
+          "text": "Від 21 до 99 спочатку кажуть одиниці, потім und і десятки, усе одним словом: «один і двадцять».",
+          "examples": [
+            {
+              "de": "einundzwanzig",
+              "tr": "21"
+            },
+            {
+              "de": "fünfundvierzig",
+              "tr": "45"
+            }
+          ]
+        },
+        {
+          "title": "Скільки коштує?",
+          "text": "Запитати ціну: Was kostet das? Відповідь: Das kostet ... Euro.",
+          "examples": [
+            {
+              "de": "Was kostet das?",
+              "tr": "Скільки це коштує?"
+            },
+            {
+              "de": "Das kostet zwanzig Euro.",
+              "tr": "Це коштує двадцять євро."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Numbers up to 100 and prices",
+      "points": [
+        {
+          "title": "Numbers from 13 to 19",
+          "text": "A number plus zehn: dreizehn, vierzehn. Special ones: sechzehn (no s) and siebzehn (no en).",
+          "examples": [
+            {
+              "de": "dreizehn, vierzehn",
+              "tr": "13, 14"
+            },
+            {
+              "de": "sechzehn, siebzehn",
+              "tr": "16, 17"
+            }
+          ]
+        },
+        {
+          "title": "Tens",
+          "text": "Almost all tens end in -zig: zwanzig, vierzig, fünfzig. Exception: dreißig.",
+          "examples": [
+            {
+              "de": "zwanzig, dreißig, vierzig",
+              "tr": "20, 30, 40"
+            }
+          ]
+        },
+        {
+          "title": "Units come first",
+          "text": "From 21 to 99 you say the units first, then und and the tens, all in one word: \"one and twenty\".",
+          "examples": [
+            {
+              "de": "einundzwanzig",
+              "tr": "21"
+            },
+            {
+              "de": "fünfundvierzig",
+              "tr": "45"
+            }
+          ]
+        },
+        {
+          "title": "How much is it?",
+          "text": "Ask the price: Was kostet das? Answer: Das kostet ... Euro.",
+          "examples": [
+            {
+              "de": "Was kostet das?",
+              "tr": "How much is it?"
+            },
+            {
+              "de": "Das kostet zwanzig Euro.",
+              "tr": "It costs twenty euros."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Liczby do 100 i ceny",
+      "points": [
+        {
+          "title": "Liczby od 13 do 19",
+          "text": "Liczba plus zehn: dreizehn, vierzehn. Wyjątki: sechzehn (bez s) i siebzehn (bez en).",
+          "examples": [
+            {
+              "de": "dreizehn, vierzehn",
+              "tr": "13, 14"
+            },
+            {
+              "de": "sechzehn, siebzehn",
+              "tr": "16, 17"
+            }
+          ]
+        },
+        {
+          "title": "Dziesiątki",
+          "text": "Prawie wszystkie dziesiątki kończą się na -zig: zwanzig, vierzig, fünfzig. Wyjątek: dreißig.",
+          "examples": [
+            {
+              "de": "zwanzig, dreißig, vierzig",
+              "tr": "20, 30, 40"
+            }
+          ]
+        },
+        {
+          "title": "Najpierw jedności",
+          "text": "Od 21 do 99 najpierw mówimy jedności, potem und i dziesiątki, wszystko jednym słowem: „jeden i dwadzieścia”.",
+          "examples": [
+            {
+              "de": "einundzwanzig",
+              "tr": "21"
+            },
+            {
+              "de": "fünfundvierzig",
+              "tr": "45"
+            }
+          ]
+        },
+        {
+          "title": "Ile to kosztuje?",
+          "text": "Zapytać o cenę: Was kostet das? Odpowiedź: Das kostet ... Euro.",
+          "examples": [
+            {
+              "de": "Was kostet das?",
+              "tr": "Ile to kosztuje?"
+            },
+            {
+              "de": "Das kostet zwanzig Euro.",
+              "tr": "To kosztuje dwadzieścia euro."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Números hasta 100 y precios",
+      "points": [
+        {
+          "title": "Números del 13 al 19",
+          "text": "Número más zehn: dreizehn, vierzehn. Especiales: sechzehn (sin s) y siebzehn (sin en).",
+          "examples": [
+            {
+              "de": "dreizehn, vierzehn",
+              "tr": "13, 14"
+            },
+            {
+              "de": "sechzehn, siebzehn",
+              "tr": "16, 17"
+            }
+          ]
+        },
+        {
+          "title": "Decenas",
+          "text": "Casi todas las decenas terminan en -zig: zwanzig, vierzig, fünfzig. Excepción: dreißig.",
+          "examples": [
+            {
+              "de": "zwanzig, dreißig, vierzig",
+              "tr": "20, 30, 40"
+            }
+          ]
+        },
+        {
+          "title": "Primero las unidades",
+          "text": "Del 21 al 99 se dicen primero las unidades, luego und y las decenas, todo en una palabra: \"uno y veinte\".",
+          "examples": [
+            {
+              "de": "einundzwanzig",
+              "tr": "21"
+            },
+            {
+              "de": "fünfundvierzig",
+              "tr": "45"
+            }
+          ]
+        },
+        {
+          "title": "¿Cuánto cuesta?",
+          "text": "Preguntar el precio: Was kostet das? Respuesta: Das kostet ... Euro.",
+          "examples": [
+            {
+              "de": "Was kostet das?",
+              "tr": "¿Cuánto cuesta?"
+            },
+            {
+              "de": "Das kostet zwanzig Euro.",
+              "tr": "Cuesta veinte euros."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les nombres jusqu’à 100 et les prix",
+      "points": [
+        {
+          "title": "Les nombres de 13 à 19",
+          "text": "Un nombre plus zehn : dreizehn, vierzehn. Particuliers : sechzehn (sans s) et siebzehn (sans en).",
+          "examples": [
+            {
+              "de": "dreizehn, vierzehn",
+              "tr": "13, 14"
+            },
+            {
+              "de": "sechzehn, siebzehn",
+              "tr": "16, 17"
+            }
+          ]
+        },
+        {
+          "title": "Les dizaines",
+          "text": "Presque toutes les dizaines finissent en -zig : zwanzig, vierzig, fünfzig. Exception : dreißig.",
+          "examples": [
+            {
+              "de": "zwanzig, dreißig, vierzig",
+              "tr": "20, 30, 40"
+            }
+          ]
+        },
+        {
+          "title": "D’abord les unités",
+          "text": "De 21 à 99 on dit d’abord les unités, puis und et les dizaines, en un seul mot : « un et vingt ».",
+          "examples": [
+            {
+              "de": "einundzwanzig",
+              "tr": "21"
+            },
+            {
+              "de": "fünfundvierzig",
+              "tr": "45"
+            }
+          ]
+        },
+        {
+          "title": "Combien ça coûte ?",
+          "text": "Demander le prix : Was kostet das? Réponse : Das kostet ... Euro.",
+          "examples": [
+            {
+              "de": "Was kostet das?",
+              "tr": "Combien ça coûte ?"
+            },
+            {
+              "de": "Das kostet zwanzig Euro.",
+              "tr": "Ça coûte vingt euros."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "100’e kadar sayılar ve fiyatlar",
+      "points": [
+        {
+          "title": "13’ten 19’a sayılar",
+          "text": "Sayı artı zehn: dreizehn, vierzehn. İstisnalar: sechzehn (s yok) ve siebzehn (en yok).",
+          "examples": [
+            {
+              "de": "dreizehn, vierzehn",
+              "tr": "13, 14"
+            },
+            {
+              "de": "sechzehn, siebzehn",
+              "tr": "16, 17"
+            }
+          ]
+        },
+        {
+          "title": "Onluklar",
+          "text": "Neredeyse tüm onluklar -zig ile biter: zwanzig, vierzig, fünfzig. İstisna: dreißig.",
+          "examples": [
+            {
+              "de": "zwanzig, dreißig, vierzig",
+              "tr": "20, 30, 40"
+            }
+          ]
+        },
+        {
+          "title": "Önce birler",
+          "text": "21’den 99’a önce birler, sonra und ve onlar söylenir, hepsi tek kelime: \"bir ve yirmi\".",
+          "examples": [
+            {
+              "de": "einundzwanzig",
+              "tr": "21"
+            },
+            {
+              "de": "fünfundvierzig",
+              "tr": "45"
+            }
+          ]
+        },
+        {
+          "title": "Ne kadar?",
+          "text": "Fiyat sormak: Was kostet das? Cevap: Das kostet ... Euro.",
+          "examples": [
+            {
+              "de": "Was kostet das?",
+              "tr": "Bu ne kadar?"
+            },
+            {
+              "de": "Das kostet zwanzig Euro.",
+              "tr": "Yirmi euro."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Numerele până la 100 și prețurile",
+      "points": [
+        {
+          "title": "Numerele de la 13 la 19",
+          "text": "Numărul plus zehn: dreizehn, vierzehn. Speciale: sechzehn (fără s) și siebzehn (fără en).",
+          "examples": [
+            {
+              "de": "dreizehn, vierzehn",
+              "tr": "13, 14"
+            },
+            {
+              "de": "sechzehn, siebzehn",
+              "tr": "16, 17"
+            }
+          ]
+        },
+        {
+          "title": "Zecile",
+          "text": "Aproape toate zecile se termină în -zig: zwanzig, vierzig, fünfzig. Excepție: dreißig.",
+          "examples": [
+            {
+              "de": "zwanzig, dreißig, vierzig",
+              "tr": "20, 30, 40"
+            }
+          ]
+        },
+        {
+          "title": "Întâi unitățile",
+          "text": "De la 21 la 99 spui întâi unitățile, apoi und și zecile, totul într-un cuvânt: „unu și douăzeci”.",
+          "examples": [
+            {
+              "de": "einundzwanzig",
+              "tr": "21"
+            },
+            {
+              "de": "fünfundvierzig",
+              "tr": "45"
+            }
+          ]
+        },
+        {
+          "title": "Cât costă?",
+          "text": "Întrebi prețul: Was kostet das? Răspuns: Das kostet ... Euro.",
+          "examples": [
+            {
+              "de": "Was kostet das?",
+              "tr": "Cât costă?"
+            },
+            {
+              "de": "Das kostet zwanzig Euro.",
+              "tr": "Costă douăzeci de euro."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "100 gacha sonlar va narxlar",
+      "points": [
+        {
+          "title": "13 dan 19 gacha sonlar",
+          "text": "Son va zehn: dreizehn, vierzehn. Alohida: sechzehn (s siz) va siebzehn (en siz).",
+          "examples": [
+            {
+              "de": "dreizehn, vierzehn",
+              "tr": "13, 14"
+            },
+            {
+              "de": "sechzehn, siebzehn",
+              "tr": "16, 17"
+            }
+          ]
+        },
+        {
+          "title": "O'nliklar",
+          "text": "Deyarli barcha o'nliklar -zig bilan tugaydi: zwanzig, vierzig, fünfzig. Istisno: dreißig.",
+          "examples": [
+            {
+              "de": "zwanzig, dreißig, vierzig",
+              "tr": "20, 30, 40"
+            }
+          ]
+        },
+        {
+          "title": "Avval birliklar",
+          "text": "21 dan 99 gacha avval birlik, keyin und va o'nlik aytiladi, hammasi bitta so'z: \"bir va yigirma\".",
+          "examples": [
+            {
+              "de": "einundzwanzig",
+              "tr": "21"
+            },
+            {
+              "de": "fünfundvierzig",
+              "tr": "45"
+            }
+          ]
+        },
+        {
+          "title": "Qancha turadi?",
+          "text": "Narx so'rash: Was kostet das? Javob: Das kostet ... Euro.",
+          "examples": [
+            {
+              "de": "Was kostet das?",
+              "tr": "Bu qancha turadi?"
+            },
+            {
+              "de": "Das kostet zwanzig Euro.",
+              "tr": "Bu yigirma yevro turadi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "100 तक संख्याएँ और कीमतें",
+      "points": [
+        {
+          "title": "13 से 19 तक संख्याएँ",
+          "text": "संख्या + zehn: dreizehn, vierzehn। खास: sechzehn (बिना s) और siebzehn (बिना en)।",
+          "examples": [
+            {
+              "de": "dreizehn, vierzehn",
+              "tr": "13, 14"
+            },
+            {
+              "de": "sechzehn, siebzehn",
+              "tr": "16, 17"
+            }
+          ]
+        },
+        {
+          "title": "दहाइयाँ",
+          "text": "लगभग सभी दहाइयाँ -zig पर खत्म होती हैं: zwanzig, vierzig, fünfzig। अपवाद: dreißig।",
+          "examples": [
+            {
+              "de": "zwanzig, dreißig, vierzig",
+              "tr": "20, 30, 40"
+            }
+          ]
+        },
+        {
+          "title": "पहले इकाई",
+          "text": "21 से 99 तक पहले इकाई, फिर und और दहाई बोलते हैं, सब एक शब्द में: \"एक और बीस\"।",
+          "examples": [
+            {
+              "de": "einundzwanzig",
+              "tr": "21"
+            },
+            {
+              "de": "fünfundvierzig",
+              "tr": "45"
+            }
+          ]
+        },
+        {
+          "title": "कितने का है?",
+          "text": "कीमत पूछना: Was kostet das? जवाब: Das kostet ... Euro.",
+          "examples": [
+            {
+              "de": "Was kostet das?",
+              "tr": "यह कितने का है?"
+            },
+            {
+              "de": "Das kostet zwanzig Euro.",
+              "tr": "यह बीस यूरो का है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الأعداد حتى 100 والأسعار",
+      "points": [
+        {
+          "title": "الأعداد من 13 إلى 19",
+          "text": "العدد مع zehn: dreizehn، vierzehn. وحالات خاصة: sechzehn (بدون s) وsiebzehn (بدون en).",
+          "examples": [
+            {
+              "de": "dreizehn, vierzehn",
+              "tr": "13, 14"
+            },
+            {
+              "de": "sechzehn, siebzehn",
+              "tr": "16, 17"
+            }
+          ]
+        },
+        {
+          "title": "العشرات",
+          "text": "تنتهي معظم العشرات بـ -zig: zwanzig، vierzig، fünfzig. والاستثناء: dreißig.",
+          "examples": [
+            {
+              "de": "zwanzig, dreißig, vierzig",
+              "tr": "20, 30, 40"
+            }
+          ]
+        },
+        {
+          "title": "الآحاد أولاً",
+          "text": "من 21 إلى 99 نقول الآحاد أولاً، ثم und والعشرات، وكلها كلمة واحدة: \"واحد وعشرون\".",
+          "examples": [
+            {
+              "de": "einundzwanzig",
+              "tr": "21"
+            },
+            {
+              "de": "fünfundvierzig",
+              "tr": "45"
+            }
+          ]
+        },
+        {
+          "title": "كم السعر؟",
+          "text": "لتسأل عن السعر: Was kostet das? والجواب: Das kostet ... Euro.",
+          "examples": [
+            {
+              "de": "Was kostet das?",
+              "tr": "كم سعر هذا؟"
+            },
+            {
+              "de": "Das kostet zwanzig Euro.",
+              "tr": "سعره عشرون يورو."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "seven": {
+    "ru": {
+      "title": "В кафе: ich möchte",
+      "points": [
+        {
+          "title": "Вежливо заказать",
+          "text": "Ich möchte значит «я бы хотел(а)». Это вежливее, чем «я хочу». Можно и коротко: Ein Wasser, bitte.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Kaffee, bitte.",
+              "tr": "Я бы хотел кофе, пожалуйста."
+            },
+            {
+              "de": "Ein Wasser, bitte.",
+              "tr": "Воду, пожалуйста."
+            }
+          ]
+        },
+        {
+          "title": "einen или ein",
+          "text": "После möchte слово мужского рода получает einen: der Kaffee → einen Kaffee. Слово среднего рода остаётся ein: das Wasser → ein Wasser.",
+          "examples": [
+            {
+              "de": "der Tee → einen Tee mit Milch",
+              "tr": "чай с молоком"
+            },
+            {
+              "de": "das Wasser → ein Wasser",
+              "tr": "вода"
+            }
+          ]
+        },
+        {
+          "title": "bitte и danke",
+          "text": "bitte значит и «пожалуйста», и «не за что» в ответ на danke.",
+          "examples": [
+            {
+              "de": "Danke! Bitte!",
+              "tr": "Спасибо! Пожалуйста!"
+            },
+            {
+              "de": "Die Rechnung, bitte!",
+              "tr": "Счёт, пожалуйста!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "У кафе: ich möchte",
+      "points": [
+        {
+          "title": "Ввічливо замовити",
+          "text": "Ich möchte означає «я б хотів (хотіла)». Це ввічливіше, ніж «я хочу». Можна й коротко: Ein Wasser, bitte.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Kaffee, bitte.",
+              "tr": "Я б хотів каву, будь ласка."
+            },
+            {
+              "de": "Ein Wasser, bitte.",
+              "tr": "Воду, будь ласка."
+            }
+          ]
+        },
+        {
+          "title": "einen чи ein",
+          "text": "Після möchte слово чоловічого роду отримує einen: der Kaffee → einen Kaffee. Слово середнього роду лишається ein: das Wasser → ein Wasser.",
+          "examples": [
+            {
+              "de": "der Tee → einen Tee mit Milch",
+              "tr": "чай з молоком"
+            },
+            {
+              "de": "das Wasser → ein Wasser",
+              "tr": "вода"
+            }
+          ]
+        },
+        {
+          "title": "bitte і danke",
+          "text": "bitte означає і «будь ласка», і «нема за що» у відповідь на danke.",
+          "examples": [
+            {
+              "de": "Danke! Bitte!",
+              "tr": "Дякую! Будь ласка!"
+            },
+            {
+              "de": "Die Rechnung, bitte!",
+              "tr": "Рахунок, будь ласка!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "At the café: ich möchte",
+      "points": [
+        {
+          "title": "Order politely",
+          "text": "Ich möchte means \"I would like\". It is more polite than \"I want\". You can also say it short: Ein Wasser, bitte.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Kaffee, bitte.",
+              "tr": "I’d like a coffee, please."
+            },
+            {
+              "de": "Ein Wasser, bitte.",
+              "tr": "A water, please."
+            }
+          ]
+        },
+        {
+          "title": "einen or ein",
+          "text": "After möchte a masculine noun takes einen: der Kaffee → einen Kaffee. A neuter noun keeps ein: das Wasser → ein Wasser.",
+          "examples": [
+            {
+              "de": "der Tee → einen Tee mit Milch",
+              "tr": "tea with milk"
+            },
+            {
+              "de": "das Wasser → ein Wasser",
+              "tr": "water"
+            }
+          ]
+        },
+        {
+          "title": "bitte and danke",
+          "text": "bitte means both \"please\" and \"you’re welcome\" as a reply to danke.",
+          "examples": [
+            {
+              "de": "Danke! Bitte!",
+              "tr": "Thanks! You’re welcome!"
+            },
+            {
+              "de": "Die Rechnung, bitte!",
+              "tr": "The bill, please!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "W kawiarni: ich möchte",
+      "points": [
+        {
+          "title": "Grzecznie zamówić",
+          "text": "Ich möchte znaczy „chciałbym/chciałabym”. To grzeczniejsze niż „chcę”. Można też krótko: Ein Wasser, bitte.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Kaffee, bitte.",
+              "tr": "Poproszę kawę."
+            },
+            {
+              "de": "Ein Wasser, bitte.",
+              "tr": "Wodę, proszę."
+            }
+          ]
+        },
+        {
+          "title": "einen czy ein",
+          "text": "Po möchte rzeczownik rodzaju męskiego dostaje einen: der Kaffee → einen Kaffee. Rodzaj nijaki zostaje ein: das Wasser → ein Wasser.",
+          "examples": [
+            {
+              "de": "der Tee → einen Tee mit Milch",
+              "tr": "herbata z mlekiem"
+            },
+            {
+              "de": "das Wasser → ein Wasser",
+              "tr": "woda"
+            }
+          ]
+        },
+        {
+          "title": "bitte i danke",
+          "text": "bitte znaczy i „proszę”, i „nie ma za co” w odpowiedzi na danke.",
+          "examples": [
+            {
+              "de": "Danke! Bitte!",
+              "tr": "Dziękuję! Proszę!"
+            },
+            {
+              "de": "Die Rechnung, bitte!",
+              "tr": "Rachunek, proszę!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "En el café: ich möchte",
+      "points": [
+        {
+          "title": "Pedir con cortesía",
+          "text": "Ich möchte significa \"me gustaría\". Es más cortés que \"quiero\". También se puede decir corto: Ein Wasser, bitte.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Kaffee, bitte.",
+              "tr": "Quisiera un café, por favor."
+            },
+            {
+              "de": "Ein Wasser, bitte.",
+              "tr": "Un agua, por favor."
+            }
+          ]
+        },
+        {
+          "title": "einen o ein",
+          "text": "Después de möchte un sustantivo masculino lleva einen: der Kaffee → einen Kaffee. Uno neutro mantiene ein: das Wasser → ein Wasser.",
+          "examples": [
+            {
+              "de": "der Tee → einen Tee mit Milch",
+              "tr": "té con leche"
+            },
+            {
+              "de": "das Wasser → ein Wasser",
+              "tr": "agua"
+            }
+          ]
+        },
+        {
+          "title": "bitte y danke",
+          "text": "bitte significa \"por favor\" y también \"de nada\" como respuesta a danke.",
+          "examples": [
+            {
+              "de": "Danke! Bitte!",
+              "tr": "¡Gracias! ¡De nada!"
+            },
+            {
+              "de": "Die Rechnung, bitte!",
+              "tr": "¡La cuenta, por favor!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Au café : ich möchte",
+      "points": [
+        {
+          "title": "Commander poliment",
+          "text": "Ich möchte veut dire « je voudrais ». C’est plus poli que « je veux ». On peut aussi dire court : Ein Wasser, bitte.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Kaffee, bitte.",
+              "tr": "Je voudrais un café, s’il vous plaît."
+            },
+            {
+              "de": "Ein Wasser, bitte.",
+              "tr": "Une eau, s’il vous plaît."
+            }
+          ]
+        },
+        {
+          "title": "einen ou ein",
+          "text": "Après möchte, un nom masculin prend einen : der Kaffee → einen Kaffee. Un nom neutre garde ein : das Wasser → ein Wasser.",
+          "examples": [
+            {
+              "de": "der Tee → einen Tee mit Milch",
+              "tr": "thé au lait"
+            },
+            {
+              "de": "das Wasser → ein Wasser",
+              "tr": "eau"
+            }
+          ]
+        },
+        {
+          "title": "bitte et danke",
+          "text": "bitte veut dire « s’il te plaît » et aussi « de rien » en réponse à danke.",
+          "examples": [
+            {
+              "de": "Danke! Bitte!",
+              "tr": "Merci ! De rien !"
+            },
+            {
+              "de": "Die Rechnung, bitte!",
+              "tr": "L’addition, s’il vous plaît !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kafede: ich möchte",
+      "points": [
+        {
+          "title": "Kibarca sipariş",
+          "text": "Ich möchte \"isterdim\" demektir. \"İstiyorum\"dan daha kibardır. Kısaca da olur: Ein Wasser, bitte.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Kaffee, bitte.",
+              "tr": "Bir kahve rica ediyorum."
+            },
+            {
+              "de": "Ein Wasser, bitte.",
+              "tr": "Bir su, lütfen."
+            }
+          ]
+        },
+        {
+          "title": "einen mi, ein mi",
+          "text": "möchte’den sonra eril isim einen alır: der Kaffee → einen Kaffee. Nötr isim ein olarak kalır: das Wasser → ein Wasser.",
+          "examples": [
+            {
+              "de": "der Tee → einen Tee mit Milch",
+              "tr": "sütlü çay"
+            },
+            {
+              "de": "das Wasser → ein Wasser",
+              "tr": "su"
+            }
+          ]
+        },
+        {
+          "title": "bitte ve danke",
+          "text": "bitte hem \"lütfen\" hem de danke’ye cevap olarak \"rica ederim\" demektir.",
+          "examples": [
+            {
+              "de": "Danke! Bitte!",
+              "tr": "Teşekkürler! Rica ederim!"
+            },
+            {
+              "de": "Die Rechnung, bitte!",
+              "tr": "Hesap, lütfen!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "La cafenea: ich möchte",
+      "points": [
+        {
+          "title": "Comanzi politicos",
+          "text": "Ich möchte înseamnă „aș dori”. E mai politicos decât „vreau”. Se poate și scurt: Ein Wasser, bitte.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Kaffee, bitte.",
+              "tr": "Aș dori o cafea, vă rog."
+            },
+            {
+              "de": "Ein Wasser, bitte.",
+              "tr": "O apă, vă rog."
+            }
+          ]
+        },
+        {
+          "title": "einen sau ein",
+          "text": "După möchte, un substantiv masculin primește einen: der Kaffee → einen Kaffee. Unul neutru rămâne ein: das Wasser → ein Wasser.",
+          "examples": [
+            {
+              "de": "der Tee → einen Tee mit Milch",
+              "tr": "ceai cu lapte"
+            },
+            {
+              "de": "das Wasser → ein Wasser",
+              "tr": "apă"
+            }
+          ]
+        },
+        {
+          "title": "bitte și danke",
+          "text": "bitte înseamnă și „te rog”, și „cu plăcere” ca răspuns la danke.",
+          "examples": [
+            {
+              "de": "Danke! Bitte!",
+              "tr": "Mulțumesc! Cu plăcere!"
+            },
+            {
+              "de": "Die Rechnung, bitte!",
+              "tr": "Nota, vă rog!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kafeda: ich möchte",
+      "points": [
+        {
+          "title": "Hurmat bilan buyurtma",
+          "text": "Ich möchte \"men ... istardim\" degani. Bu \"men xohlayman\"dan muloyimroq. Qisqa ham bo'ladi: Ein Wasser, bitte.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Kaffee, bitte.",
+              "tr": "Menga bitta qahva, iltimos."
+            },
+            {
+              "de": "Ein Wasser, bitte.",
+              "tr": "Suv, iltimos."
+            }
+          ]
+        },
+        {
+          "title": "einen yoki ein",
+          "text": "möchte dan keyin erkak rodidagi so'z einen oladi: der Kaffee → einen Kaffee. O'rta rod ein bo'lib qoladi: das Wasser → ein Wasser.",
+          "examples": [
+            {
+              "de": "der Tee → einen Tee mit Milch",
+              "tr": "sutli choy"
+            },
+            {
+              "de": "das Wasser → ein Wasser",
+              "tr": "suv"
+            }
+          ]
+        },
+        {
+          "title": "bitte va danke",
+          "text": "bitte ham \"iltimos\", ham danke ga javoban \"arzimaydi\" degani.",
+          "examples": [
+            {
+              "de": "Danke! Bitte!",
+              "tr": "Rahmat! Arzimaydi!"
+            },
+            {
+              "de": "Die Rechnung, bitte!",
+              "tr": "Hisob, iltimos!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कैफ़े में: ich möchte",
+      "points": [
+        {
+          "title": "विनम्रता से ऑर्डर करना",
+          "text": "Ich möchte का मतलब है \"मैं ... चाहूँगा\"। यह \"मुझे चाहिए\" से ज़्यादा विनम्र है। छोटा भी कह सकते हैं: Ein Wasser, bitte.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Kaffee, bitte.",
+              "tr": "मुझे एक कॉफ़ी चाहिए, कृपया।"
+            },
+            {
+              "de": "Ein Wasser, bitte.",
+              "tr": "एक पानी, कृपया।"
+            }
+          ]
+        },
+        {
+          "title": "einen या ein",
+          "text": "möchte के बाद पुल्लिंग संज्ञा einen लेती है: der Kaffee → einen Kaffee। नपुंसकलिंग ein ही रहती है: das Wasser → ein Wasser।",
+          "examples": [
+            {
+              "de": "der Tee → einen Tee mit Milch",
+              "tr": "दूध वाली चाय"
+            },
+            {
+              "de": "das Wasser → ein Wasser",
+              "tr": "पानी"
+            }
+          ]
+        },
+        {
+          "title": "bitte और danke",
+          "text": "bitte का मतलब \"कृपया\" भी है और danke के जवाब में \"कोई बात नहीं\" भी।",
+          "examples": [
+            {
+              "de": "Danke! Bitte!",
+              "tr": "धन्यवाद! कोई बात नहीं!"
+            },
+            {
+              "de": "Die Rechnung, bitte!",
+              "tr": "बिल, कृपया!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "في المقهى: ich möchte",
+      "points": [
+        {
+          "title": "اطلب بأدب",
+          "text": "Ich möchte تعني \"أودّ\". وهي أكثر أدباً من \"أريد\". ويمكن قولها باختصار: Ein Wasser, bitte.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Kaffee, bitte.",
+              "tr": "أودّ قهوة من فضلك."
+            },
+            {
+              "de": "Ein Wasser, bitte.",
+              "tr": "ماء من فضلك."
+            }
+          ]
+        },
+        {
+          "title": "einen أم ein",
+          "text": "بعد möchte يأخذ الاسم المذكر einen: der Kaffee → einen Kaffee. أما المحايد فيبقى ein: das Wasser → ein Wasser.",
+          "examples": [
+            {
+              "de": "der Tee → einen Tee mit Milch",
+              "tr": "شاي بالحليب"
+            },
+            {
+              "de": "das Wasser → ein Wasser",
+              "tr": "ماء"
+            }
+          ]
+        },
+        {
+          "title": "bitte وdanke",
+          "text": "bitte تعني \"من فضلك\" وتعني أيضاً \"عفواً\" رداً على danke.",
+          "examples": [
+            {
+              "de": "Danke! Bitte!",
+              "tr": "شكراً! عفواً!"
+            },
+            {
+              "de": "Die Rechnung, bitte!",
+              "tr": "الحساب من فضلك!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "eight": {
+    "ru": {
+      "title": "Семья и профессии: mein и meine",
+      "points": [
+        {
+          "title": "mein или meine",
+          "text": "Перед словом с der говорят mein: mein Vater, mein Bruder. Перед словом с die: meine: meine Mutter, meine Schwester.",
+          "examples": [
+            {
+              "de": "Das ist mein Vater.",
+              "tr": "Это мой папа."
+            },
+            {
+              "de": "Das ist meine Schwester.",
+              "tr": "Это моя сестра."
+            }
+          ]
+        },
+        {
+          "title": "Профессия без артикля",
+          "text": "Перед профессией артикль не нужен: Er ist Arzt. Ich bin Student.",
+          "examples": [
+            {
+              "de": "Er ist Arzt.",
+              "tr": "Он врач."
+            },
+            {
+              "de": "Ich bin Student.",
+              "tr": "Я студент."
+            }
+          ]
+        },
+        {
+          "title": "Женская форма на -in",
+          "text": "Женщину называют с -in на конце: Lehrer → Lehrerin, Student → Studentin. Иногда появляется умлаут: Arzt → Ärztin.",
+          "examples": [
+            {
+              "de": "Lehrer → Lehrerin",
+              "tr": "учитель → учительница"
+            },
+            {
+              "de": "Arzt → Ärztin",
+              "tr": "врач (м) → врач (ж)"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Сім’я і професії: mein і meine",
+      "points": [
+        {
+          "title": "mein чи meine",
+          "text": "Перед словом з der кажуть mein: mein Vater, mein Bruder. Перед словом з die: meine: meine Mutter, meine Schwester.",
+          "examples": [
+            {
+              "de": "Das ist mein Vater.",
+              "tr": "Це мій тато."
+            },
+            {
+              "de": "Das ist meine Schwester.",
+              "tr": "Це моя сестра."
+            }
+          ]
+        },
+        {
+          "title": "Професія без артикля",
+          "text": "Перед професією артикль не потрібен: Er ist Arzt. Ich bin Student.",
+          "examples": [
+            {
+              "de": "Er ist Arzt.",
+              "tr": "Він лікар."
+            },
+            {
+              "de": "Ich bin Student.",
+              "tr": "Я студент."
+            }
+          ]
+        },
+        {
+          "title": "Жіноча форма на -in",
+          "text": "Жінку називають з -in наприкінці: Lehrer → Lehrerin, Student → Studentin. Іноді з’являється умлаут: Arzt → Ärztin.",
+          "examples": [
+            {
+              "de": "Lehrer → Lehrerin",
+              "tr": "учитель → учителька"
+            },
+            {
+              "de": "Arzt → Ärztin",
+              "tr": "лікар → лікарка"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Family and jobs: mein and meine",
+      "points": [
+        {
+          "title": "mein or meine",
+          "text": "Before a der word say mein: mein Vater, mein Bruder. Before a die word say meine: meine Mutter, meine Schwester.",
+          "examples": [
+            {
+              "de": "Das ist mein Vater.",
+              "tr": "This is my father."
+            },
+            {
+              "de": "Das ist meine Schwester.",
+              "tr": "This is my sister."
+            }
+          ]
+        },
+        {
+          "title": "No article before a job",
+          "text": "You don’t need an article before a job: Er ist Arzt. Ich bin Student.",
+          "examples": [
+            {
+              "de": "Er ist Arzt.",
+              "tr": "He is a doctor."
+            },
+            {
+              "de": "Ich bin Student.",
+              "tr": "I am a student."
+            }
+          ]
+        },
+        {
+          "title": "Female form with -in",
+          "text": "For a woman add -in: Lehrer → Lehrerin, Student → Studentin. Sometimes an umlaut appears: Arzt → Ärztin.",
+          "examples": [
+            {
+              "de": "Lehrer → Lehrerin",
+              "tr": "teacher (m) → teacher (f)"
+            },
+            {
+              "de": "Arzt → Ärztin",
+              "tr": "doctor (m) → doctor (f)"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Rodzina i zawody: mein i meine",
+      "points": [
+        {
+          "title": "mein czy meine",
+          "text": "Przed słowem z der mówimy mein: mein Vater, mein Bruder. Przed słowem z die: meine: meine Mutter, meine Schwester.",
+          "examples": [
+            {
+              "de": "Das ist mein Vater.",
+              "tr": "To mój tata."
+            },
+            {
+              "de": "Das ist meine Schwester.",
+              "tr": "To moja siostra."
+            }
+          ]
+        },
+        {
+          "title": "Zawód bez rodzajnika",
+          "text": "Przed zawodem rodzajnik nie jest potrzebny: Er ist Arzt. Ich bin Student.",
+          "examples": [
+            {
+              "de": "Er ist Arzt.",
+              "tr": "On jest lekarzem."
+            },
+            {
+              "de": "Ich bin Student.",
+              "tr": "Jestem studentem."
+            }
+          ]
+        },
+        {
+          "title": "Forma żeńska na -in",
+          "text": "Dla kobiety dodajemy -in: Lehrer → Lehrerin, Student → Studentin. Czasem pojawia się umlaut: Arzt → Ärztin.",
+          "examples": [
+            {
+              "de": "Lehrer → Lehrerin",
+              "tr": "nauczyciel → nauczycielka"
+            },
+            {
+              "de": "Arzt → Ärztin",
+              "tr": "lekarz → lekarka"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Familia y profesiones: mein y meine",
+      "points": [
+        {
+          "title": "mein o meine",
+          "text": "Delante de una palabra con der se dice mein: mein Vater, mein Bruder. Delante de una con die, meine: meine Mutter, meine Schwester.",
+          "examples": [
+            {
+              "de": "Das ist mein Vater.",
+              "tr": "Este es mi padre."
+            },
+            {
+              "de": "Das ist meine Schwester.",
+              "tr": "Esta es mi hermana."
+            }
+          ]
+        },
+        {
+          "title": "Profesión sin artículo",
+          "text": "Delante de la profesión no hace falta artículo: Er ist Arzt. Ich bin Student.",
+          "examples": [
+            {
+              "de": "Er ist Arzt.",
+              "tr": "Él es médico."
+            },
+            {
+              "de": "Ich bin Student.",
+              "tr": "Soy estudiante."
+            }
+          ]
+        },
+        {
+          "title": "Forma femenina con -in",
+          "text": "Para una mujer se añade -in: Lehrer → Lehrerin, Student → Studentin. A veces aparece diéresis: Arzt → Ärztin.",
+          "examples": [
+            {
+              "de": "Lehrer → Lehrerin",
+              "tr": "profesor → profesora"
+            },
+            {
+              "de": "Arzt → Ärztin",
+              "tr": "médico → médica"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Famille et métiers : mein et meine",
+      "points": [
+        {
+          "title": "mein ou meine",
+          "text": "Devant un mot en der on dit mein : mein Vater, mein Bruder. Devant un mot en die, meine : meine Mutter, meine Schwester.",
+          "examples": [
+            {
+              "de": "Das ist mein Vater.",
+              "tr": "C’est mon père."
+            },
+            {
+              "de": "Das ist meine Schwester.",
+              "tr": "C’est ma sœur."
+            }
+          ]
+        },
+        {
+          "title": "Pas d’article devant le métier",
+          "text": "Devant un métier, pas d’article : Er ist Arzt. Ich bin Student.",
+          "examples": [
+            {
+              "de": "Er ist Arzt.",
+              "tr": "Il est médecin."
+            },
+            {
+              "de": "Ich bin Student.",
+              "tr": "Je suis étudiant."
+            }
+          ]
+        },
+        {
+          "title": "Forme féminine en -in",
+          "text": "Pour une femme on ajoute -in : Lehrer → Lehrerin, Student → Studentin. Parfois un umlaut apparaît : Arzt → Ärztin.",
+          "examples": [
+            {
+              "de": "Lehrer → Lehrerin",
+              "tr": "professeur → professeure"
+            },
+            {
+              "de": "Arzt → Ärztin",
+              "tr": "médecin (m) → médecin (f)"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Aile ve meslekler: mein ve meine",
+      "points": [
+        {
+          "title": "mein mi, meine mi",
+          "text": "der’li kelimeden önce mein denir: mein Vater, mein Bruder. die’li kelimeden önce meine: meine Mutter, meine Schwester.",
+          "examples": [
+            {
+              "de": "Das ist mein Vater.",
+              "tr": "Bu benim babam."
+            },
+            {
+              "de": "Das ist meine Schwester.",
+              "tr": "Bu benim kız kardeşim."
+            }
+          ]
+        },
+        {
+          "title": "Meslekten önce artikel yok",
+          "text": "Meslekten önce artikel gerekmez: Er ist Arzt. Ich bin Student.",
+          "examples": [
+            {
+              "de": "Er ist Arzt.",
+              "tr": "O doktor."
+            },
+            {
+              "de": "Ich bin Student.",
+              "tr": "Ben öğrenciyim."
+            }
+          ]
+        },
+        {
+          "title": "-in ile kadın hâli",
+          "text": "Kadın için -in eklenir: Lehrer → Lehrerin, Student → Studentin. Bazen umlaut gelir: Arzt → Ärztin.",
+          "examples": [
+            {
+              "de": "Lehrer → Lehrerin",
+              "tr": "öğretmen (e) → öğretmen (k)"
+            },
+            {
+              "de": "Arzt → Ärztin",
+              "tr": "doktor (e) → doktor (k)"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Familia și profesiile: mein și meine",
+      "points": [
+        {
+          "title": "mein sau meine",
+          "text": "Înaintea unui cuvânt cu der spui mein: mein Vater, mein Bruder. Înaintea unuia cu die, meine: meine Mutter, meine Schwester.",
+          "examples": [
+            {
+              "de": "Das ist mein Vater.",
+              "tr": "Acesta este tatăl meu."
+            },
+            {
+              "de": "Das ist meine Schwester.",
+              "tr": "Aceasta este sora mea."
+            }
+          ]
+        },
+        {
+          "title": "Profesia fără articol",
+          "text": "Înaintea profesiei nu e nevoie de articol: Er ist Arzt. Ich bin Student.",
+          "examples": [
+            {
+              "de": "Er ist Arzt.",
+              "tr": "El este medic."
+            },
+            {
+              "de": "Ich bin Student.",
+              "tr": "Sunt student."
+            }
+          ]
+        },
+        {
+          "title": "Forma feminină cu -in",
+          "text": "Pentru o femeie se adaugă -in: Lehrer → Lehrerin, Student → Studentin. Uneori apare umlaut: Arzt → Ärztin.",
+          "examples": [
+            {
+              "de": "Lehrer → Lehrerin",
+              "tr": "profesor → profesoară"
+            },
+            {
+              "de": "Arzt → Ärztin",
+              "tr": "medic → medică"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Oila va kasblar: mein va meine",
+      "points": [
+        {
+          "title": "mein yoki meine",
+          "text": "der li so'zdan oldin mein: mein Vater, mein Bruder. die li so'zdan oldin meine: meine Mutter, meine Schwester.",
+          "examples": [
+            {
+              "de": "Das ist mein Vater.",
+              "tr": "Bu mening otam."
+            },
+            {
+              "de": "Das ist meine Schwester.",
+              "tr": "Bu mening opam (singlim)."
+            }
+          ]
+        },
+        {
+          "title": "Kasbdan oldin artikl yo‘q",
+          "text": "Kasbdan oldin artikl kerak emas: Er ist Arzt. Ich bin Student.",
+          "examples": [
+            {
+              "de": "Er ist Arzt.",
+              "tr": "U shifokor."
+            },
+            {
+              "de": "Ich bin Student.",
+              "tr": "Men talabaman."
+            }
+          ]
+        },
+        {
+          "title": "-in bilan ayol shakli",
+          "text": "Ayol uchun -in qo'shiladi: Lehrer → Lehrerin, Student → Studentin. Ba'zan umlaut paydo bo'ladi: Arzt → Ärztin.",
+          "examples": [
+            {
+              "de": "Lehrer → Lehrerin",
+              "tr": "o'qituvchi (e) → o'qituvchi (a)"
+            },
+            {
+              "de": "Arzt → Ärztin",
+              "tr": "shifokor (e) → shifokor (a)"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "परिवार और पेशे: mein और meine",
+      "points": [
+        {
+          "title": "mein या meine",
+          "text": "der वाले शब्द से पहले mein: mein Vater, mein Bruder। die वाले शब्द से पहले meine: meine Mutter, meine Schwester।",
+          "examples": [
+            {
+              "de": "Das ist mein Vater.",
+              "tr": "ये मेरे पिता हैं।"
+            },
+            {
+              "de": "Das ist meine Schwester.",
+              "tr": "ये मेरी बहन है।"
+            }
+          ]
+        },
+        {
+          "title": "पेशे से पहले आर्टिकल नहीं",
+          "text": "पेशे से पहले आर्टिकल नहीं लगता: Er ist Arzt. Ich bin Student.",
+          "examples": [
+            {
+              "de": "Er ist Arzt.",
+              "tr": "वह डॉक्टर है।"
+            },
+            {
+              "de": "Ich bin Student.",
+              "tr": "मैं छात्र हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "-in से स्त्रीलिंग रूप",
+          "text": "महिला के लिए अंत में -in जोड़ते हैं: Lehrer → Lehrerin, Student → Studentin। कभी-कभी उमलाउट आता है: Arzt → Ärztin।",
+          "examples": [
+            {
+              "de": "Lehrer → Lehrerin",
+              "tr": "शिक्षक → शिक्षिका"
+            },
+            {
+              "de": "Arzt → Ärztin",
+              "tr": "डॉक्टर (पु) → डॉक्टर (स्त्री)"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "العائلة والمهن: mein وmeine",
+      "points": [
+        {
+          "title": "mein أم meine",
+          "text": "قبل الكلمة التي تأخذ der نقول mein: mein Vater، mein Bruder. وقبل التي تأخذ die نقول meine: meine Mutter، meine Schwester.",
+          "examples": [
+            {
+              "de": "Das ist mein Vater.",
+              "tr": "هذا أبي."
+            },
+            {
+              "de": "Das ist meine Schwester.",
+              "tr": "هذه أختي."
+            }
+          ]
+        },
+        {
+          "title": "لا أداة قبل المهنة",
+          "text": "لا نحتاج أداة قبل المهنة: Er ist Arzt. Ich bin Student.",
+          "examples": [
+            {
+              "de": "Er ist Arzt.",
+              "tr": "هو طبيب."
+            },
+            {
+              "de": "Ich bin Student.",
+              "tr": "أنا طالب."
+            }
+          ]
+        },
+        {
+          "title": "صيغة المؤنث بـ -in",
+          "text": "للمرأة نضيف -in: Lehrer → Lehrerin، Student → Studentin. وأحياناً يظهر الأوملاوت: Arzt → Ärztin.",
+          "examples": [
+            {
+              "de": "Lehrer → Lehrerin",
+              "tr": "معلم → معلمة"
+            },
+            {
+              "de": "Arzt → Ärztin",
+              "tr": "طبيب → طبيبة"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nine": {
+    "ru": {
+      "title": "Повторение: du или Sie",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Другу и ребёнку говорят du. Взрослому незнакомцу, в кафе, в магазине говорят Sie. Обратиться к незнакомому: Entschuldigung!",
+          "examples": [
+            {
+              "de": "Entschuldigung, sind Sie Herr Becker?",
+              "tr": "Извините, Вы господин Беккер?"
+            },
+            {
+              "de": "Tee? Nein, danke.",
+              "tr": "Чай? Нет, спасибо."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: du чи Sie",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Другові й дитині кажуть du. Дорослому незнайомцю, у кафе, у магазині кажуть Sie. Звернутися до незнайомого: Entschuldigung!",
+          "examples": [
+            {
+              "de": "Entschuldigung, sind Sie Herr Becker?",
+              "tr": "Перепрошую, Ви пан Беккер?"
+            },
+            {
+              "de": "Tee? Nein, danke.",
+              "tr": "Чай? Ні, дякую."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: du or Sie",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "Use du with a friend or a child. Use Sie with an adult stranger, in a café, in a shop. To get a stranger’s attention: Entschuldigung!",
+          "examples": [
+            {
+              "de": "Entschuldigung, sind Sie Herr Becker?",
+              "tr": "Excuse me, are you Mr Becker?"
+            },
+            {
+              "de": "Tee? Nein, danke.",
+              "tr": "Tea? No, thanks."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: du czy Sie",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Do przyjaciela i dziecka mówimy du. Do dorosłego nieznajomego, w kawiarni, w sklepie: Sie. Zaczepić nieznajomego: Entschuldigung!",
+          "examples": [
+            {
+              "de": "Entschuldigung, sind Sie Herr Becker?",
+              "tr": "Przepraszam, czy pan Becker?"
+            },
+            {
+              "de": "Tee? Nein, danke.",
+              "tr": "Herbata? Nie, dziękuję."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: du o Sie",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Con un amigo o un niño, du. Con un adulto desconocido, en un café, en una tienda, Sie. Para llamar a un desconocido: Entschuldigung!",
+          "examples": [
+            {
+              "de": "Entschuldigung, sind Sie Herr Becker?",
+              "tr": "Perdone, ¿es usted el señor Becker?"
+            },
+            {
+              "de": "Tee? Nein, danke.",
+              "tr": "¿Té? No, gracias."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : du ou Sie",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "Avec un ami ou un enfant, du. Avec un adulte inconnu, au café, au magasin, Sie. Pour interpeller un inconnu : Entschuldigung!",
+          "examples": [
+            {
+              "de": "Entschuldigung, sind Sie Herr Becker?",
+              "tr": "Excusez-moi, vous êtes Monsieur Becker ?"
+            },
+            {
+              "de": "Tee? Nein, danke.",
+              "tr": "Du thé ? Non, merci."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: du mu, Sie mi",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Arkadaşa ve çocuğa du. Tanımadığın yetişkine, kafede, mağazada Sie. Bir yabancıya seslenmek için: Entschuldigung!",
+          "examples": [
+            {
+              "de": "Entschuldigung, sind Sie Herr Becker?",
+              "tr": "Affedersiniz, Bay Becker siz misiniz?"
+            },
+            {
+              "de": "Tee? Nein, danke.",
+              "tr": "Çay? Hayır, teşekkürler."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: du sau Sie",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Unui prieten sau unui copil îi spui du. Unui adult necunoscut, la cafenea, în magazin, Sie. Ca să te adresezi unui necunoscut: Entschuldigung!",
+          "examples": [
+            {
+              "de": "Entschuldigung, sind Sie Herr Becker?",
+              "tr": "Scuzați-mă, sunteți domnul Becker?"
+            },
+            {
+              "de": "Tee? Nein, danke.",
+              "tr": "Ceai? Nu, mulțumesc."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: du yoki Sie",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Do'st va bolaga du. Notanish kattaga, kafeda, do'konda Sie. Notanishga murojaat qilish: Entschuldigung!",
+          "examples": [
+            {
+              "de": "Entschuldigung, sind Sie Herr Becker?",
+              "tr": "Kechirasiz, siz janob Beckermisiz?"
+            },
+            {
+              "de": "Tee? Nein, danke.",
+              "tr": "Choy? Yo'q, rahmat."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: du या Sie",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "दोस्त और बच्चे से du। अनजान बड़े व्यक्ति से, कैफ़े में, दुकान में Sie। किसी अनजान को बुलाना: Entschuldigung!",
+          "examples": [
+            {
+              "de": "Entschuldigung, sind Sie Herr Becker?",
+              "tr": "माफ़ कीजिए, क्या आप श्रीमान बेकर हैं?"
+            },
+            {
+              "de": "Tee? Nein, danke.",
+              "tr": "चाय? नहीं, धन्यवाद।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: du أم Sie",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "للصديق والطفل نقول du. وللبالغ الغريب وفي المقهى والمتجر نقول Sie. ولننادي شخصاً غريباً: Entschuldigung!",
+          "examples": [
+            {
+              "de": "Entschuldigung, sind Sie Herr Becker?",
+              "tr": "عذراً، هل أنت السيد بيكر؟"
+            },
+            {
+              "de": "Tee? Nein, danke.",
+              "tr": "شاي؟ لا، شكراً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "Приветствие по времени суток",
+          "text": "Утром Guten Morgen, днём Guten Tag, вечером Guten Abend. Перед сном Gute Nacht, без -n.",
+          "examples": [
+            {
+              "de": "Guten Abend! Ich heiße Julia.",
+              "tr": "Добрый вечер! Меня зовут Юлия."
+            }
+          ]
+        },
+        {
+          "title": "du или Sie",
+          "text": "Другу и ребёнку говорим du. Взрослому незнакомцу говорим Sie.",
+          "examples": [
+            {
+              "de": "Wie geht es Ihnen, Frau Müller?",
+              "tr": "Как Ваши дела, госпожа Мюллер?"
+            }
+          ]
+        },
+        {
+          "title": "Откуда и где",
+          "text": "aus значит «откуда», in значит «где».",
+          "examples": [
+            {
+              "de": "Ich komme aus der Türkei und wohne in Köln.",
+              "tr": "Я из Турции и живу в Кёльне."
+            }
+          ]
+        },
+        {
+          "title": "Числа и цены",
+          "text": "От 21 до 99 сначала единицы, потом десятки: siebenundsechzig значит 67.",
+          "examples": [
+            {
+              "de": "Das kostet siebenundsechzig Euro.",
+              "tr": "Это стоит шестьдесят семь евро."
+            }
+          ]
+        },
+        {
+          "title": "Заказ в кафе",
+          "text": "Вежливо заказываем через Ich möchte: «я бы хотел».",
+          "examples": [
+            {
+              "de": "Ich möchte einen Tee mit Milch.",
+              "tr": "Я бы хотел чай с молоком."
+            }
+          ]
+        },
+        {
+          "title": "mein или meine",
+          "text": "mein перед словом с der, meine перед словом с die.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist Kellner.",
+              "tr": "Мой брат официант."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "Привітання за часом доби",
+          "text": "Зранку Guten Morgen, удень Guten Tag, увечері Guten Abend. Перед сном Gute Nacht, без -n.",
+          "examples": [
+            {
+              "de": "Guten Abend! Ich heiße Julia.",
+              "tr": "Добрий вечір! Мене звати Юлія."
+            }
+          ]
+        },
+        {
+          "title": "du чи Sie",
+          "text": "Другові й дитині кажемо du. Дорослому незнайомцю кажемо Sie.",
+          "examples": [
+            {
+              "de": "Wie geht es Ihnen, Frau Müller?",
+              "tr": "Як Ваші справи, пані Мюллер?"
+            }
+          ]
+        },
+        {
+          "title": "Звідки і де",
+          "text": "aus означає «звідки», in означає «де».",
+          "examples": [
+            {
+              "de": "Ich komme aus der Türkei und wohne in Köln.",
+              "tr": "Я з Туреччини і живу в Кельні."
+            }
+          ]
+        },
+        {
+          "title": "Числа і ціни",
+          "text": "Від 21 до 99 спочатку одиниці, потім десятки: siebenundsechzig означає 67.",
+          "examples": [
+            {
+              "de": "Das kostet siebenundsechzig Euro.",
+              "tr": "Це коштує шістдесят сім євро."
+            }
+          ]
+        },
+        {
+          "title": "Замовлення в кафе",
+          "text": "Ввічливо замовляємо через Ich möchte: «я б хотів».",
+          "examples": [
+            {
+              "de": "Ich möchte einen Tee mit Milch.",
+              "tr": "Я б хотів чай з молоком."
+            }
+          ]
+        },
+        {
+          "title": "mein чи meine",
+          "text": "mein перед словом з der, meine перед словом з die.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist Kellner.",
+              "tr": "Мій брат офіціант."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "Greeting by the time of day",
+          "text": "Morning: Guten Morgen, day: Guten Tag, evening: Guten Abend. Before bed: Gute Nacht, without -n.",
+          "examples": [
+            {
+              "de": "Guten Abend! Ich heiße Julia.",
+              "tr": "Good evening! My name is Julia."
+            }
+          ]
+        },
+        {
+          "title": "du or Sie",
+          "text": "Use du with a friend or a child. Use Sie with an adult stranger.",
+          "examples": [
+            {
+              "de": "Wie geht es Ihnen, Frau Müller?",
+              "tr": "How are you, Ms Müller?"
+            }
+          ]
+        },
+        {
+          "title": "From where and where",
+          "text": "aus means \"from\", in means \"in\".",
+          "examples": [
+            {
+              "de": "Ich komme aus der Türkei und wohne in Köln.",
+              "tr": "I’m from Turkey and live in Cologne."
+            }
+          ]
+        },
+        {
+          "title": "Numbers and prices",
+          "text": "From 21 to 99 the units come first, then the tens: siebenundsechzig means 67.",
+          "examples": [
+            {
+              "de": "Das kostet siebenundsechzig Euro.",
+              "tr": "It costs sixty-seven euros."
+            }
+          ]
+        },
+        {
+          "title": "Ordering at a café",
+          "text": "Order politely with Ich möchte: \"I would like\".",
+          "examples": [
+            {
+              "de": "Ich möchte einen Tee mit Milch.",
+              "tr": "I’d like a tea with milk."
+            }
+          ]
+        },
+        {
+          "title": "mein or meine",
+          "text": "mein before a der word, meine before a die word.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist Kellner.",
+              "tr": "My brother is a waiter."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "Powitanie według pory dnia",
+          "text": "Rano Guten Morgen, w dzień Guten Tag, wieczorem Guten Abend. Przed snem Gute Nacht, bez -n.",
+          "examples": [
+            {
+              "de": "Guten Abend! Ich heiße Julia.",
+              "tr": "Dobry wieczór! Mam na imię Julia."
+            }
+          ]
+        },
+        {
+          "title": "du czy Sie",
+          "text": "Do przyjaciela i dziecka mówimy du. Do dorosłego nieznajomego mówimy Sie.",
+          "examples": [
+            {
+              "de": "Wie geht es Ihnen, Frau Müller?",
+              "tr": "Jak się pani miewa, pani Müller?"
+            }
+          ]
+        },
+        {
+          "title": "Skąd i gdzie",
+          "text": "aus znaczy „skąd”, in znaczy „gdzie”.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Türkei und wohne in Köln.",
+              "tr": "Jestem z Turcji i mieszkam w Kolonii."
+            }
+          ]
+        },
+        {
+          "title": "Liczby i ceny",
+          "text": "Od 21 do 99 najpierw jedności, potem dziesiątki: siebenundsechzig to 67.",
+          "examples": [
+            {
+              "de": "Das kostet siebenundsechzig Euro.",
+              "tr": "To kosztuje sześćdziesiąt siedem euro."
+            }
+          ]
+        },
+        {
+          "title": "Zamówienie w kawiarni",
+          "text": "Grzecznie zamawiamy przez Ich möchte: „chciałbym”.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Tee mit Milch.",
+              "tr": "Poproszę herbatę z mlekiem."
+            }
+          ]
+        },
+        {
+          "title": "mein czy meine",
+          "text": "mein przed słowem z der, meine przed słowem z die.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist Kellner.",
+              "tr": "Mój brat jest kelnerem."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "Saludo según la hora",
+          "text": "Por la mañana Guten Morgen, de día Guten Tag, por la tarde Guten Abend. Antes de dormir Gute Nacht, sin -n.",
+          "examples": [
+            {
+              "de": "Guten Abend! Ich heiße Julia.",
+              "tr": "¡Buenas tardes! Me llamo Julia."
+            }
+          ]
+        },
+        {
+          "title": "du o Sie",
+          "text": "Con un amigo o un niño, du. Con un adulto desconocido, Sie.",
+          "examples": [
+            {
+              "de": "Wie geht es Ihnen, Frau Müller?",
+              "tr": "¿Cómo está, señora Müller?"
+            }
+          ]
+        },
+        {
+          "title": "De dónde y dónde",
+          "text": "aus significa \"de dónde\", in significa \"dónde\".",
+          "examples": [
+            {
+              "de": "Ich komme aus der Türkei und wohne in Köln.",
+              "tr": "Soy de Turquía y vivo en Colonia."
+            }
+          ]
+        },
+        {
+          "title": "Números y precios",
+          "text": "Del 21 al 99 primero las unidades, luego las decenas: siebenundsechzig es 67.",
+          "examples": [
+            {
+              "de": "Das kostet siebenundsechzig Euro.",
+              "tr": "Cuesta sesenta y siete euros."
+            }
+          ]
+        },
+        {
+          "title": "Pedir en el café",
+          "text": "Se pide con cortesía con Ich möchte: \"me gustaría\".",
+          "examples": [
+            {
+              "de": "Ich möchte einen Tee mit Milch.",
+              "tr": "Quisiera un té con leche."
+            }
+          ]
+        },
+        {
+          "title": "mein o meine",
+          "text": "mein delante de una palabra con der, meine delante de una con die.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist Kellner.",
+              "tr": "Mi hermano es camarero."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "Salutation selon le moment",
+          "text": "Le matin Guten Morgen, la journée Guten Tag, le soir Guten Abend. Avant de dormir Gute Nacht, sans -n.",
+          "examples": [
+            {
+              "de": "Guten Abend! Ich heiße Julia.",
+              "tr": "Bonsoir ! Je m’appelle Julia."
+            }
+          ]
+        },
+        {
+          "title": "du ou Sie",
+          "text": "Avec un ami ou un enfant, du. Avec un adulte inconnu, Sie.",
+          "examples": [
+            {
+              "de": "Wie geht es Ihnen, Frau Müller?",
+              "tr": "Comment allez-vous, Madame Müller ?"
+            }
+          ]
+        },
+        {
+          "title": "D’où et où",
+          "text": "aus veut dire « d’où », in veut dire « où ».",
+          "examples": [
+            {
+              "de": "Ich komme aus der Türkei und wohne in Köln.",
+              "tr": "Je viens de Turquie et j’habite à Cologne."
+            }
+          ]
+        },
+        {
+          "title": "Nombres et prix",
+          "text": "De 21 à 99, d’abord les unités, puis les dizaines : siebenundsechzig, c’est 67.",
+          "examples": [
+            {
+              "de": "Das kostet siebenundsechzig Euro.",
+              "tr": "Ça coûte soixante-sept euros."
+            }
+          ]
+        },
+        {
+          "title": "Commander au café",
+          "text": "On commande poliment avec Ich möchte : « je voudrais ».",
+          "examples": [
+            {
+              "de": "Ich möchte einen Tee mit Milch.",
+              "tr": "Je voudrais un thé au lait."
+            }
+          ]
+        },
+        {
+          "title": "mein ou meine",
+          "text": "mein devant un mot en der, meine devant un mot en die.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist Kellner.",
+              "tr": "Mon frère est serveur."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "Günün saatine göre selam",
+          "text": "Sabah Guten Morgen, gündüz Guten Tag, akşam Guten Abend. Yatmadan önce -n olmadan Gute Nacht.",
+          "examples": [
+            {
+              "de": "Guten Abend! Ich heiße Julia.",
+              "tr": "İyi akşamlar! Benim adım Julia."
+            }
+          ]
+        },
+        {
+          "title": "du mu, Sie mi",
+          "text": "Arkadaşa ve çocuğa du. Tanımadığın yetişkine Sie.",
+          "examples": [
+            {
+              "de": "Wie geht es Ihnen, Frau Müller?",
+              "tr": "Nasılsınız, Bayan Müller?"
+            }
+          ]
+        },
+        {
+          "title": "Nereden ve nerede",
+          "text": "aus \"nereden\", in \"nerede\" demektir.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Türkei und wohne in Köln.",
+              "tr": "Türkiyeliyim ve Köln’de yaşıyorum."
+            }
+          ]
+        },
+        {
+          "title": "Sayılar ve fiyatlar",
+          "text": "21’den 99’a önce birler, sonra onlar: siebenundsechzig 67 demektir.",
+          "examples": [
+            {
+              "de": "Das kostet siebenundsechzig Euro.",
+              "tr": "Altmış yedi euro."
+            }
+          ]
+        },
+        {
+          "title": "Kafede sipariş",
+          "text": "Kibarca Ich möchte ile sipariş verilir: \"isterdim\".",
+          "examples": [
+            {
+              "de": "Ich möchte einen Tee mit Milch.",
+              "tr": "Sütlü bir çay rica ediyorum."
+            }
+          ]
+        },
+        {
+          "title": "mein mi, meine mi",
+          "text": "der’li kelimeden önce mein, die’li kelimeden önce meine.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist Kellner.",
+              "tr": "Erkek kardeşim garson."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "Salutul după momentul zilei",
+          "text": "Dimineața Guten Morgen, ziua Guten Tag, seara Guten Abend. Înainte de culcare Gute Nacht, fără -n.",
+          "examples": [
+            {
+              "de": "Guten Abend! Ich heiße Julia.",
+              "tr": "Bună seara! Mă numesc Julia."
+            }
+          ]
+        },
+        {
+          "title": "du sau Sie",
+          "text": "Unui prieten sau copil îi spui du. Unui adult necunoscut îi spui Sie.",
+          "examples": [
+            {
+              "de": "Wie geht es Ihnen, Frau Müller?",
+              "tr": "Ce mai faceți, doamnă Müller?"
+            }
+          ]
+        },
+        {
+          "title": "De unde și unde",
+          "text": "aus înseamnă „de unde”, in înseamnă „unde”.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Türkei und wohne in Köln.",
+              "tr": "Sunt din Turcia și locuiesc în Köln."
+            }
+          ]
+        },
+        {
+          "title": "Numere și prețuri",
+          "text": "De la 21 la 99 întâi unitățile, apoi zecile: siebenundsechzig înseamnă 67.",
+          "examples": [
+            {
+              "de": "Das kostet siebenundsechzig Euro.",
+              "tr": "Costă șaizeci și șapte de euro."
+            }
+          ]
+        },
+        {
+          "title": "Comanda la cafenea",
+          "text": "Comandăm politicos cu Ich möchte: „aș dori”.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Tee mit Milch.",
+              "tr": "Aș dori un ceai cu lapte."
+            }
+          ]
+        },
+        {
+          "title": "mein sau meine",
+          "text": "mein înaintea unui cuvânt cu der, meine înaintea unuia cu die.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist Kellner.",
+              "tr": "Fratele meu este ospătar."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "Kun vaqtiga qarab salom",
+          "text": "Ertalab Guten Morgen, kunduzi Guten Tag, kechqurun Guten Abend. Uxlashdan oldin -n siz Gute Nacht.",
+          "examples": [
+            {
+              "de": "Guten Abend! Ich heiße Julia.",
+              "tr": "Xayrli kech! Mening ismim Yuliya."
+            }
+          ]
+        },
+        {
+          "title": "du yoki Sie",
+          "text": "Do'st va bolaga du. Notanish kattaga Sie.",
+          "examples": [
+            {
+              "de": "Wie geht es Ihnen, Frau Müller?",
+              "tr": "Qalaysiz, Müller xonim?"
+            }
+          ]
+        },
+        {
+          "title": "Qayerdan va qayerda",
+          "text": "aus \"qayerdan\", in \"qayerda\" degani.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Türkei und wohne in Köln.",
+              "tr": "Men Turkiyadanman va Kyolnda yashayman."
+            }
+          ]
+        },
+        {
+          "title": "Sonlar va narxlar",
+          "text": "21 dan 99 gacha avval birlik, keyin o'nlik: siebenundsechzig 67 degani.",
+          "examples": [
+            {
+              "de": "Das kostet siebenundsechzig Euro.",
+              "tr": "Bu oltmish yetti yevro turadi."
+            }
+          ]
+        },
+        {
+          "title": "Kafeda buyurtma",
+          "text": "Hurmat bilan Ich möchte orqali buyurtma beriladi: \"istardim\".",
+          "examples": [
+            {
+              "de": "Ich möchte einen Tee mit Milch.",
+              "tr": "Menga sutli choy, iltimos."
+            }
+          ]
+        },
+        {
+          "title": "mein yoki meine",
+          "text": "der li so'zdan oldin mein, die li so'zdan oldin meine.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist Kellner.",
+              "tr": "Akam ofitsiant."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "समय के अनुसार अभिवादन",
+          "text": "सुबह Guten Morgen, दिन में Guten Tag, शाम को Guten Abend। सोने से पहले Gute Nacht, बिना -n।",
+          "examples": [
+            {
+              "de": "Guten Abend! Ich heiße Julia.",
+              "tr": "शुभ संध्या! मेरा नाम यूलिया है।"
+            }
+          ]
+        },
+        {
+          "title": "du या Sie",
+          "text": "दोस्त और बच्चे से du। अनजान बड़े व्यक्ति से Sie।",
+          "examples": [
+            {
+              "de": "Wie geht es Ihnen, Frau Müller?",
+              "tr": "आप कैसी हैं, श्रीमती म्यूलर?"
+            }
+          ]
+        },
+        {
+          "title": "कहाँ से और कहाँ",
+          "text": "aus मतलब \"कहाँ से\", in मतलब \"कहाँ\"।",
+          "examples": [
+            {
+              "de": "Ich komme aus der Türkei und wohne in Köln.",
+              "tr": "मैं तुर्की से हूँ और कोलोन में रहता हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "संख्याएँ और कीमतें",
+          "text": "21 से 99 तक पहले इकाई, फिर दहाई: siebenundsechzig मतलब 67।",
+          "examples": [
+            {
+              "de": "Das kostet siebenundsechzig Euro.",
+              "tr": "यह सड़सठ यूरो का है।"
+            }
+          ]
+        },
+        {
+          "title": "कैफ़े में ऑर्डर",
+          "text": "विनम्रता से Ich möchte से ऑर्डर करते हैं: \"मैं चाहूँगा\"।",
+          "examples": [
+            {
+              "de": "Ich möchte einen Tee mit Milch.",
+              "tr": "मुझे दूध वाली चाय चाहिए।"
+            }
+          ]
+        },
+        {
+          "title": "mein या meine",
+          "text": "der वाले शब्द से पहले mein, die वाले शब्द से पहले meine।",
+          "examples": [
+            {
+              "de": "Mein Bruder ist Kellner.",
+              "tr": "मेरा भाई वेटर है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "التحية حسب الوقت",
+          "text": "صباحاً Guten Morgen، نهاراً Guten Tag، مساءً Guten Abend. وقبل النوم Gute Nacht بدون -n.",
+          "examples": [
+            {
+              "de": "Guten Abend! Ich heiße Julia.",
+              "tr": "مساء الخير! اسمي يوليا."
+            }
+          ]
+        },
+        {
+          "title": "du أم Sie",
+          "text": "للصديق والطفل نقول du. وللبالغ الغريب نقول Sie.",
+          "examples": [
+            {
+              "de": "Wie geht es Ihnen, Frau Müller?",
+              "tr": "كيف حالك يا سيدة مولر؟"
+            }
+          ]
+        },
+        {
+          "title": "من أين وأين",
+          "text": "aus تعني \"من أين\"، وin تعني \"أين\".",
+          "examples": [
+            {
+              "de": "Ich komme aus der Türkei und wohne in Köln.",
+              "tr": "أنا من تركيا وأسكن في كولونيا."
+            }
+          ]
+        },
+        {
+          "title": "الأعداد والأسعار",
+          "text": "من 21 إلى 99 الآحاد أولاً ثم العشرات: siebenundsechzig تعني 67.",
+          "examples": [
+            {
+              "de": "Das kostet siebenundsechzig Euro.",
+              "tr": "سعره سبعة وستون يورو."
+            }
+          ]
+        },
+        {
+          "title": "الطلب في المقهى",
+          "text": "نطلب بأدب بـ Ich möchte: \"أودّ\".",
+          "examples": [
+            {
+              "de": "Ich möchte einen Tee mit Milch.",
+              "tr": "أودّ شاياً بالحليب."
+            }
+          ]
+        },
+        {
+          "title": "mein أم meine",
+          "text": "mein قبل الكلمة مع der، وmeine قبل الكلمة مع die.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist Kellner.",
+              "tr": "أخي نادل."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

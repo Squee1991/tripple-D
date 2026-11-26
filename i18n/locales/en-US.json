@@ -19526,9 +19526,7 @@
     "descriptionThematic": "Explains cases and articles right during practice whenever you're in doubt."
   },
   "questModals": {
-    "fixMistakesTitle": "Let's fix your mistakes",
-    "fixMistakesText": "Redo the tasks you got wrong. Fix them and the lesson is complete.",
-    "fixMistakesBtn": "Fix mistakes ({count})",
+    "fixForReward": "Complete all tasks correctly to get the reward",
     "repeat": "Review mistakes",
     "next": "Next task ➔",
     "back": "To topics",
@@ -21091,6 +21089,7 @@
     "writing": "Writing",
     "new": "New",
     "writeLocked": "Complete the quest to unlock writing",
+    "questLocked": "Complete the previous task first",
     "writeAction": "Write the phrases by ear",
     "landDone": "Land completed!",
     "landGoal": "Finish every quest and writing",

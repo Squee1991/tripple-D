@@ -1,0 +1,2662 @@
+{
+  "power-pass-one": {
+    "ru": {
+      "title": "können: я умею",
+      "points": [
+        {
+          "title": "Формы können",
+          "text": "ich kann, du kannst, er kann, wir können, ihr könnt, sie können. У ich и er окончания нет.",
+          "examples": []
+        },
+        {
+          "title": "Второй глагол в конце",
+          "text": "Модальный глагол стоит на втором месте, а главный глагол уходит в конец и не меняется.",
+          "examples": [
+            {
+              "de": "Ich kann gut schwimmen.",
+              "tr": "Я хорошо плаваю."
+            },
+            {
+              "de": "Anna kann Gitarre spielen.",
+              "tr": "Анна умеет играть на гитаре."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "können: я вмію",
+      "points": [
+        {
+          "title": "Форми können",
+          "text": "ich kann, du kannst, er kann, wir können, ihr könnt, sie können. У ich та er закінчення немає.",
+          "examples": []
+        },
+        {
+          "title": "Друге дієслово в кінці",
+          "text": "Модальне дієслово стоїть на другому місці, а головне йде в кінець і не змінюється.",
+          "examples": [
+            {
+              "de": "Ich kann gut schwimmen.",
+              "tr": "Я добре плаваю."
+            },
+            {
+              "de": "Anna kann Gitarre spielen.",
+              "tr": "Анна вміє грати на гітарі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "können: I can",
+      "points": [
+        {
+          "title": "Forms of können",
+          "text": "ich kann, du kannst, er kann, wir können, ihr könnt, sie können. ich and er have no ending.",
+          "examples": []
+        },
+        {
+          "title": "The second verb goes to the end",
+          "text": "The modal verb is in second place, and the main verb goes to the end unchanged.",
+          "examples": [
+            {
+              "de": "Ich kann gut schwimmen.",
+              "tr": "I can swim well."
+            },
+            {
+              "de": "Anna kann Gitarre spielen.",
+              "tr": "Anna can play the guitar."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "können: umiem",
+      "points": [
+        {
+          "title": "Formy können",
+          "text": "ich kann, du kannst, er kann, wir können, ihr könnt, sie können. ich i er nie mają końcówki.",
+          "examples": []
+        },
+        {
+          "title": "Drugi czasownik na końcu",
+          "text": "Czasownik modalny stoi na drugim miejscu, a główny idzie na koniec i się nie zmienia.",
+          "examples": [
+            {
+              "de": "Ich kann gut schwimmen.",
+              "tr": "Umiem dobrze pływać."
+            },
+            {
+              "de": "Anna kann Gitarre spielen.",
+              "tr": "Anna umie grać na gitarze."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "können: sé, puedo",
+      "points": [
+        {
+          "title": "Formas de können",
+          "text": "ich kann, du kannst, er kann, wir können, ihr könnt, sie können. ich y er no tienen terminación.",
+          "examples": []
+        },
+        {
+          "title": "El segundo verbo al final",
+          "text": "El verbo modal va en segundo lugar y el principal va al final sin cambiar.",
+          "examples": [
+            {
+              "de": "Ich kann gut schwimmen.",
+              "tr": "Sé nadar bien."
+            },
+            {
+              "de": "Anna kann Gitarre spielen.",
+              "tr": "Anna sabe tocar la guitarra."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "können : je sais, je peux",
+      "points": [
+        {
+          "title": "Formes de können",
+          "text": "ich kann, du kannst, er kann, wir können, ihr könnt, sie können. ich et er n’ont pas de terminaison.",
+          "examples": []
+        },
+        {
+          "title": "Le deuxième verbe à la fin",
+          "text": "Le verbe de modalité est en deuxième position, le verbe principal va à la fin sans changer.",
+          "examples": [
+            {
+              "de": "Ich kann gut schwimmen.",
+              "tr": "Je sais bien nager."
+            },
+            {
+              "de": "Anna kann Gitarre spielen.",
+              "tr": "Anna sait jouer de la guitare."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "können: yapabilirim",
+      "points": [
+        {
+          "title": "können biçimleri",
+          "text": "ich kann, du kannst, er kann, wir können, ihr könnt, sie können. ich ve er ek almaz.",
+          "examples": []
+        },
+        {
+          "title": "İkinci fiil sonda",
+          "text": "Modal fiil ikinci sıradadır, asıl fiil değişmeden sona gider.",
+          "examples": [
+            {
+              "de": "Ich kann gut schwimmen.",
+              "tr": "İyi yüzebilirim."
+            },
+            {
+              "de": "Anna kann Gitarre spielen.",
+              "tr": "Anna gitar çalabilir."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "können: pot, știu",
+      "points": [
+        {
+          "title": "Formele lui können",
+          "text": "ich kann, du kannst, er kann, wir können, ihr könnt, sie können. ich și er nu au terminație.",
+          "examples": []
+        },
+        {
+          "title": "Al doilea verb la final",
+          "text": "Verbul modal stă pe locul doi, iar verbul principal merge la final neschimbat.",
+          "examples": [
+            {
+              "de": "Ich kann gut schwimmen.",
+              "tr": "Știu să înot bine."
+            },
+            {
+              "de": "Anna kann Gitarre spielen.",
+              "tr": "Anna știe să cânte la chitară."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "können: men qila olaman",
+      "points": [
+        {
+          "title": "können shakllari",
+          "text": "ich kann, du kannst, er kann, wir können, ihr könnt, sie können. ich va er da qo'shimcha yo'q.",
+          "examples": []
+        },
+        {
+          "title": "Ikkinchi fe'l oxirida",
+          "text": "Modal fe'l ikkinchi o'rinda, asosiy fe'l esa o'zgarmasdan oxiriga o'tadi.",
+          "examples": [
+            {
+              "de": "Ich kann gut schwimmen.",
+              "tr": "Men yaxshi suza olaman."
+            },
+            {
+              "de": "Anna kann Gitarre spielen.",
+              "tr": "Anna gitara chala oladi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "können: मैं कर सकता हूँ",
+      "points": [
+        {
+          "title": "können के रूप",
+          "text": "ich kann, du kannst, er kann, wir können, ihr könnt, sie können। ich और er में कोई अंत नहीं।",
+          "examples": []
+        },
+        {
+          "title": "दूसरी क्रिया अंत में",
+          "text": "मोडल क्रिया दूसरे स्थान पर, और मुख्य क्रिया बिना बदले अंत में जाती है।",
+          "examples": [
+            {
+              "de": "Ich kann gut schwimmen.",
+              "tr": "मैं अच्छा तैर सकता हूँ।"
+            },
+            {
+              "de": "Anna kann Gitarre spielen.",
+              "tr": "अन्ना गिटार बजा सकती है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "können: أستطيع",
+      "points": [
+        {
+          "title": "صيغ können",
+          "text": "ich kann، du kannst، er kann، wir können، ihr könnt، sie können. ولا نهاية مع ich وer.",
+          "examples": []
+        },
+        {
+          "title": "الفعل الثاني في الآخر",
+          "text": "الفعل المساعد في المكان الثاني، والفعل الأساسي يذهب إلى الآخر بدون تغيير.",
+          "examples": [
+            {
+              "de": "Ich kann gut schwimmen.",
+              "tr": "أستطيع السباحة جيداً."
+            },
+            {
+              "de": "Anna kann Gitarre spielen.",
+              "tr": "آنا تستطيع العزف على الغيتار."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "power-pass-two": {
+    "ru": {
+      "title": "können в вопросах и просьбах",
+      "points": [
+        {
+          "title": "Вежливая просьба",
+          "text": "В вопросе können идёт первым. Так же звучит вежливая просьба.",
+          "examples": [
+            {
+              "de": "Kannst du bitte langsam sprechen?",
+              "tr": "Можешь говорить медленнее, пожалуйста?"
+            },
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Вы можете это повторить?"
+            }
+          ]
+        },
+        {
+          "title": "nicht перед главным глаголом",
+          "text": "nicht стоит перед глаголом в конце.",
+          "examples": [
+            {
+              "de": "Ich kann heute nicht kommen.",
+              "tr": "Сегодня я не могу прийти."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "können у питаннях і проханнях",
+      "points": [
+        {
+          "title": "Ввічливе прохання",
+          "text": "У питанні können іде першим. Так само звучить ввічливе прохання.",
+          "examples": [
+            {
+              "de": "Kannst du bitte langsam sprechen?",
+              "tr": "Можеш говорити повільніше, будь ласка?"
+            },
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Ви можете це повторити?"
+            }
+          ]
+        },
+        {
+          "title": "nicht перед головним дієсловом",
+          "text": "nicht стоїть перед дієсловом у кінці.",
+          "examples": [
+            {
+              "de": "Ich kann heute nicht kommen.",
+              "tr": "Сьогодні я не можу прийти."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "können in questions and requests",
+      "points": [
+        {
+          "title": "A polite request",
+          "text": "In a question können comes first. That’s also how a polite request sounds.",
+          "examples": [
+            {
+              "de": "Kannst du bitte langsam sprechen?",
+              "tr": "Can you speak slowly, please?"
+            },
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Can you repeat that?"
+            }
+          ]
+        },
+        {
+          "title": "nicht before the main verb",
+          "text": "nicht goes before the verb at the end.",
+          "examples": [
+            {
+              "de": "Ich kann heute nicht kommen.",
+              "tr": "I can’t come today."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "können w pytaniach i prośbach",
+      "points": [
+        {
+          "title": "Grzeczna prośba",
+          "text": "W pytaniu können idzie pierwsze. Tak samo brzmi grzeczna prośba.",
+          "examples": [
+            {
+              "de": "Kannst du bitte langsam sprechen?",
+              "tr": "Możesz mówić wolniej, proszę?"
+            },
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Czy może pan to powtórzyć?"
+            }
+          ]
+        },
+        {
+          "title": "nicht przed głównym czasownikiem",
+          "text": "nicht stoi przed czasownikiem na końcu.",
+          "examples": [
+            {
+              "de": "Ich kann heute nicht kommen.",
+              "tr": "Dziś nie mogę przyjść."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "können en preguntas y peticiones",
+      "points": [
+        {
+          "title": "Una petición educada",
+          "text": "En la pregunta können va primero. Así se hace también una petición educada.",
+          "examples": [
+            {
+              "de": "Kannst du bitte langsam sprechen?",
+              "tr": "¿Puedes hablar despacio, por favor?"
+            },
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "¿Puede repetirlo?"
+            }
+          ]
+        },
+        {
+          "title": "nicht antes del verbo principal",
+          "text": "nicht va delante del verbo del final.",
+          "examples": [
+            {
+              "de": "Ich kann heute nicht kommen.",
+              "tr": "Hoy no puedo venir."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "können dans les questions et les demandes",
+      "points": [
+        {
+          "title": "Une demande polie",
+          "text": "Dans une question, können vient en premier. C’est aussi une demande polie.",
+          "examples": [
+            {
+              "de": "Kannst du bitte langsam sprechen?",
+              "tr": "Tu peux parler lentement, s’il te plaît ?"
+            },
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Vous pouvez répéter ?"
+            }
+          ]
+        },
+        {
+          "title": "nicht avant le verbe principal",
+          "text": "nicht se place devant le verbe à la fin.",
+          "examples": [
+            {
+              "de": "Ich kann heute nicht kommen.",
+              "tr": "Je ne peux pas venir aujourd’hui."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "können soru ve ricalarda",
+      "points": [
+        {
+          "title": "Kibar rica",
+          "text": "Soruda können başa gelir. Kibar rica da böyle yapılır.",
+          "examples": [
+            {
+              "de": "Kannst du bitte langsam sprechen?",
+              "tr": "Lütfen yavaş konuşur musun?"
+            },
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Tekrar edebilir misiniz?"
+            }
+          ]
+        },
+        {
+          "title": "nicht asıl fiilden önce",
+          "text": "nicht sondaki fiilden önce gelir.",
+          "examples": [
+            {
+              "de": "Ich kann heute nicht kommen.",
+              "tr": "Bugün gelemem."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "können în întrebări și rugăminți",
+      "points": [
+        {
+          "title": "O rugăminte politicoasă",
+          "text": "În întrebare können vine primul. Așa sună și o rugăminte politicoasă.",
+          "examples": [
+            {
+              "de": "Kannst du bitte langsam sprechen?",
+              "tr": "Poți vorbi mai rar, te rog?"
+            },
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Puteți repeta?"
+            }
+          ]
+        },
+        {
+          "title": "nicht înaintea verbului principal",
+          "text": "nicht stă înaintea verbului de la final.",
+          "examples": [
+            {
+              "de": "Ich kann heute nicht kommen.",
+              "tr": "Azi nu pot veni."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "können savol va iltimoslarda",
+      "points": [
+        {
+          "title": "Muloyim iltimos",
+          "text": "Savolda können birinchi keladi. Muloyim iltimos ham shunday aytiladi.",
+          "examples": [
+            {
+              "de": "Kannst du bitte langsam sprechen?",
+              "tr": "Iltimos, sekinroq gapira olasanmi?"
+            },
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Buni qaytara olasizmi?"
+            }
+          ]
+        },
+        {
+          "title": "nicht asosiy fe'ldan oldin",
+          "text": "nicht oxirdagi fe'ldan oldin turadi.",
+          "examples": [
+            {
+              "de": "Ich kann heute nicht kommen.",
+              "tr": "Bugun kela olmayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "सवालों और अनुरोधों में können",
+      "points": [
+        {
+          "title": "विनम्र अनुरोध",
+          "text": "सवाल में können पहले आता है। विनम्र अनुरोध भी ऐसे ही होता है।",
+          "examples": [
+            {
+              "de": "Kannst du bitte langsam sprechen?",
+              "tr": "क्या तुम धीरे बोल सकते हो, कृपया?"
+            },
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "क्या आप यह दोहरा सकते हैं?"
+            }
+          ]
+        },
+        {
+          "title": "nicht मुख्य क्रिया से पहले",
+          "text": "nicht अंत वाली क्रिया से पहले आता है।",
+          "examples": [
+            {
+              "de": "Ich kann heute nicht kommen.",
+              "tr": "आज मैं नहीं आ सकता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "können في الأسئلة والطلبات",
+      "points": [
+        {
+          "title": "الطلب المهذب",
+          "text": "في السؤال يأتي können أولاً. وهكذا أيضاً يكون الطلب المهذب.",
+          "examples": [
+            {
+              "de": "Kannst du bitte langsam sprechen?",
+              "tr": "هل يمكنك التكلم ببطء من فضلك؟"
+            },
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "هل يمكنك أن تعيد ذلك؟"
+            }
+          ]
+        },
+        {
+          "title": "nicht قبل الفعل الأساسي",
+          "text": "تأتي nicht قبل الفعل الذي في الآخر.",
+          "examples": [
+            {
+              "de": "Ich kann heute nicht kommen.",
+              "tr": "لا أستطيع المجيء اليوم."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "power-pass-three": {
+    "ru": {
+      "title": "müssen: я должен",
+      "points": [
+        {
+          "title": "Формы müssen",
+          "text": "ich muss, du musst, er muss, wir müssen, ihr müsst, sie müssen. Порядок слов как у können.",
+          "examples": [
+            {
+              "de": "Heute muss ich arbeiten.",
+              "tr": "Сегодня я должен работать."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht: не надо",
+          "text": "muss nicht значит «не надо», а не «нельзя».",
+          "examples": [
+            {
+              "de": "Du musst nicht kommen.",
+              "tr": "Можешь не приходить."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "müssen: я мушу",
+      "points": [
+        {
+          "title": "Форми müssen",
+          "text": "ich muss, du musst, er muss, wir müssen, ihr müsst, sie müssen. Порядок слів як у können.",
+          "examples": [
+            {
+              "de": "Heute muss ich arbeiten.",
+              "tr": "Сьогодні я мушу працювати."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht: не треба",
+          "text": "muss nicht означає «не треба», а не «не можна».",
+          "examples": [
+            {
+              "de": "Du musst nicht kommen.",
+              "tr": "Можеш не приходити."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "müssen: I must",
+      "points": [
+        {
+          "title": "Forms of müssen",
+          "text": "ich muss, du musst, er muss, wir müssen, ihr müsst, sie müssen. Word order as with können.",
+          "examples": [
+            {
+              "de": "Heute muss ich arbeiten.",
+              "tr": "Today I have to work."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht: don’t have to",
+          "text": "muss nicht means \"don’t have to\", not \"must not\".",
+          "examples": [
+            {
+              "de": "Du musst nicht kommen.",
+              "tr": "You don’t have to come."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "müssen: muszę",
+      "points": [
+        {
+          "title": "Formy müssen",
+          "text": "ich muss, du musst, er muss, wir müssen, ihr müsst, sie müssen. Szyk jak przy können.",
+          "examples": [
+            {
+              "de": "Heute muss ich arbeiten.",
+              "tr": "Dziś muszę pracować."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht: nie trzeba",
+          "text": "muss nicht znaczy „nie musisz”, a nie „nie wolno”.",
+          "examples": [
+            {
+              "de": "Du musst nicht kommen.",
+              "tr": "Nie musisz przychodzić."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "müssen: tengo que",
+      "points": [
+        {
+          "title": "Formas de müssen",
+          "text": "ich muss, du musst, er muss, wir müssen, ihr müsst, sie müssen. El orden es como con können.",
+          "examples": [
+            {
+              "de": "Heute muss ich arbeiten.",
+              "tr": "Hoy tengo que trabajar."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht: no hace falta",
+          "text": "muss nicht significa \"no hace falta\", no \"está prohibido\".",
+          "examples": [
+            {
+              "de": "Du musst nicht kommen.",
+              "tr": "No hace falta que vengas."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "müssen : je dois",
+      "points": [
+        {
+          "title": "Formes de müssen",
+          "text": "ich muss, du musst, er muss, wir müssen, ihr müsst, sie müssen. Même ordre que können.",
+          "examples": [
+            {
+              "de": "Heute muss ich arbeiten.",
+              "tr": "Aujourd’hui, je dois travailler."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht : pas besoin",
+          "text": "muss nicht veut dire « pas besoin de », pas « interdit ».",
+          "examples": [
+            {
+              "de": "Du musst nicht kommen.",
+              "tr": "Tu n’es pas obligé de venir."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "müssen: zorundayım",
+      "points": [
+        {
+          "title": "müssen biçimleri",
+          "text": "ich muss, du musst, er muss, wir müssen, ihr müsst, sie müssen. Sıra können gibi.",
+          "examples": [
+            {
+              "de": "Heute muss ich arbeiten.",
+              "tr": "Bugün çalışmak zorundayım."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht: gerek yok",
+          "text": "muss nicht \"gerek yok\" demektir, \"yasak\" değil.",
+          "examples": [
+            {
+              "de": "Du musst nicht kommen.",
+              "tr": "Gelmek zorunda değilsin."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "müssen: trebuie",
+      "points": [
+        {
+          "title": "Formele lui müssen",
+          "text": "ich muss, du musst, er muss, wir müssen, ihr müsst, sie müssen. Ordinea ca la können.",
+          "examples": [
+            {
+              "de": "Heute muss ich arbeiten.",
+              "tr": "Azi trebuie să lucrez."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht: nu e nevoie",
+          "text": "muss nicht înseamnă „nu e nevoie”, nu „nu ai voie”.",
+          "examples": [
+            {
+              "de": "Du musst nicht kommen.",
+              "tr": "Nu e nevoie să vii."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "müssen: men majburman",
+      "points": [
+        {
+          "title": "müssen shakllari",
+          "text": "ich muss, du musst, er muss, wir müssen, ihr müsst, sie müssen. So'z tartibi können dagi kabi.",
+          "examples": [
+            {
+              "de": "Heute muss ich arbeiten.",
+              "tr": "Bugun ishlashim kerak."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht: shart emas",
+          "text": "muss nicht \"shart emas\" degani, \"mumkin emas\" emas.",
+          "examples": [
+            {
+              "de": "Du musst nicht kommen.",
+              "tr": "Kelishing shart emas."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "müssen: मुझे करना होगा",
+      "points": [
+        {
+          "title": "müssen के रूप",
+          "text": "ich muss, du musst, er muss, wir müssen, ihr müsst, sie müssen। शब्द क्रम können जैसा।",
+          "examples": [
+            {
+              "de": "Heute muss ich arbeiten.",
+              "tr": "आज मुझे काम करना है।"
+            }
+          ]
+        },
+        {
+          "title": "muss nicht: ज़रूरत नहीं",
+          "text": "muss nicht का मतलब \"ज़रूरत नहीं\", \"मना है\" नहीं।",
+          "examples": [
+            {
+              "de": "Du musst nicht kommen.",
+              "tr": "तुम्हें आने की ज़रूरत नहीं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "müssen: يجب عليّ",
+      "points": [
+        {
+          "title": "صيغ müssen",
+          "text": "ich muss، du musst، er muss، wir müssen، ihr müsst، sie müssen. والترتيب مثل können.",
+          "examples": [
+            {
+              "de": "Heute muss ich arbeiten.",
+              "tr": "اليوم يجب أن أعمل."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht: لا داعي",
+          "text": "muss nicht تعني \"لا داعي\"، وليس \"ممنوع\".",
+          "examples": [
+            {
+              "de": "Du musst nicht kommen.",
+              "tr": "لا داعي لأن تأتي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "power-pass-four": {
+    "ru": {
+      "title": "wollen: я хочу",
+      "points": [
+        {
+          "title": "Формы wollen",
+          "text": "ich will, du willst, er will, wir wollen, ihr wollt, sie wollen.",
+          "examples": [
+            {
+              "de": "Ich will Deutsch lernen.",
+              "tr": "Я хочу учить немецкий."
+            }
+          ]
+        },
+        {
+          "title": "will или möchte",
+          "text": "Ich will звучит прямо и твёрдо. В кафе и магазине вежливее Ich möchte.",
+          "examples": [
+            {
+              "de": "Wollen wir eine Pause machen?",
+              "tr": "Давай сделаем перерыв?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "wollen: я хочу",
+      "points": [
+        {
+          "title": "Форми wollen",
+          "text": "ich will, du willst, er will, wir wollen, ihr wollt, sie wollen.",
+          "examples": [
+            {
+              "de": "Ich will Deutsch lernen.",
+              "tr": "Я хочу вчити німецьку."
+            }
+          ]
+        },
+        {
+          "title": "will чи möchte",
+          "text": "Ich will звучить прямо й твердо. У кафе та магазині ввічливіше Ich möchte.",
+          "examples": [
+            {
+              "de": "Wollen wir eine Pause machen?",
+              "tr": "Давай зробимо перерву?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "wollen: I want",
+      "points": [
+        {
+          "title": "Forms of wollen",
+          "text": "ich will, du willst, er will, wir wollen, ihr wollt, sie wollen.",
+          "examples": [
+            {
+              "de": "Ich will Deutsch lernen.",
+              "tr": "I want to learn German."
+            }
+          ]
+        },
+        {
+          "title": "will or möchte",
+          "text": "Ich will sounds direct and firm. In a café or shop Ich möchte is more polite.",
+          "examples": [
+            {
+              "de": "Wollen wir eine Pause machen?",
+              "tr": "Shall we take a break?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "wollen: chcę",
+      "points": [
+        {
+          "title": "Formy wollen",
+          "text": "ich will, du willst, er will, wir wollen, ihr wollt, sie wollen.",
+          "examples": [
+            {
+              "de": "Ich will Deutsch lernen.",
+              "tr": "Chcę uczyć się niemieckiego."
+            }
+          ]
+        },
+        {
+          "title": "will czy möchte",
+          "text": "Ich will brzmi bezpośrednio i twardo. W kawiarni i sklepie grzeczniej Ich möchte.",
+          "examples": [
+            {
+              "de": "Wollen wir eine Pause machen?",
+              "tr": "Zrobimy przerwę?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "wollen: quiero",
+      "points": [
+        {
+          "title": "Formas de wollen",
+          "text": "ich will, du willst, er will, wir wollen, ihr wollt, sie wollen.",
+          "examples": [
+            {
+              "de": "Ich will Deutsch lernen.",
+              "tr": "Quiero aprender alemán."
+            }
+          ]
+        },
+        {
+          "title": "will o möchte",
+          "text": "Ich will suena directo y firme. En el café o la tienda es más educado Ich möchte.",
+          "examples": [
+            {
+              "de": "Wollen wir eine Pause machen?",
+              "tr": "¿Hacemos una pausa?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "wollen : je veux",
+      "points": [
+        {
+          "title": "Formes de wollen",
+          "text": "ich will, du willst, er will, wir wollen, ihr wollt, sie wollen.",
+          "examples": [
+            {
+              "de": "Ich will Deutsch lernen.",
+              "tr": "Je veux apprendre l’allemand."
+            }
+          ]
+        },
+        {
+          "title": "will ou möchte",
+          "text": "Ich will est direct et ferme. Au café ou au magasin, Ich möchte est plus poli.",
+          "examples": [
+            {
+              "de": "Wollen wir eine Pause machen?",
+              "tr": "On fait une pause ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "wollen: istiyorum",
+      "points": [
+        {
+          "title": "wollen biçimleri",
+          "text": "ich will, du willst, er will, wir wollen, ihr wollt, sie wollen.",
+          "examples": [
+            {
+              "de": "Ich will Deutsch lernen.",
+              "tr": "Almanca öğrenmek istiyorum."
+            }
+          ]
+        },
+        {
+          "title": "will mi, möchte mi",
+          "text": "Ich will doğrudan ve sert duyulur. Kafede ve mağazada Ich möchte daha kibardır.",
+          "examples": [
+            {
+              "de": "Wollen wir eine Pause machen?",
+              "tr": "Mola verelim mi?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "wollen: vreau",
+      "points": [
+        {
+          "title": "Formele lui wollen",
+          "text": "ich will, du willst, er will, wir wollen, ihr wollt, sie wollen.",
+          "examples": [
+            {
+              "de": "Ich will Deutsch lernen.",
+              "tr": "Vreau să învăț germana."
+            }
+          ]
+        },
+        {
+          "title": "will sau möchte",
+          "text": "Ich will sună direct și ferm. La cafenea sau în magazin e mai politicos Ich möchte.",
+          "examples": [
+            {
+              "de": "Wollen wir eine Pause machen?",
+              "tr": "Facem o pauză?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "wollen: men xohlayman",
+      "points": [
+        {
+          "title": "wollen shakllari",
+          "text": "ich will, du willst, er will, wir wollen, ihr wollt, sie wollen.",
+          "examples": [
+            {
+              "de": "Ich will Deutsch lernen.",
+              "tr": "Men nemis tilini o'rganmoqchiman."
+            }
+          ]
+        },
+        {
+          "title": "will yoki möchte",
+          "text": "Ich will to'g'ridan-to'g'ri va qat'iy eshitiladi. Kafe va do'konda Ich möchte muloyimroq.",
+          "examples": [
+            {
+              "de": "Wollen wir eine Pause machen?",
+              "tr": "Tanaffus qilamizmi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "wollen: मैं चाहता हूँ",
+      "points": [
+        {
+          "title": "wollen के रूप",
+          "text": "ich will, du willst, er will, wir wollen, ihr wollt, sie wollen।",
+          "examples": [
+            {
+              "de": "Ich will Deutsch lernen.",
+              "tr": "मैं जर्मन सीखना चाहता हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "will या möchte",
+          "text": "Ich will सीधा और सख़्त लगता है। कैफ़े और दुकान में Ich möchte ज़्यादा विनम्र है।",
+          "examples": [
+            {
+              "de": "Wollen wir eine Pause machen?",
+              "tr": "क्या हम ब्रेक लें?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "wollen: أريد",
+      "points": [
+        {
+          "title": "صيغ wollen",
+          "text": "ich will، du willst، er will، wir wollen، ihr wollt، sie wollen.",
+          "examples": [
+            {
+              "de": "Ich will Deutsch lernen.",
+              "tr": "أريد أن أتعلم الألمانية."
+            }
+          ]
+        },
+        {
+          "title": "will أم möchte",
+          "text": "Ich will تبدو مباشرة وحازمة. وفي المقهى والمتجر Ich möchte أكثر أدباً.",
+          "examples": [
+            {
+              "de": "Wollen wir eine Pause machen?",
+              "tr": "هل نأخذ استراحة؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "power-pass-five": {
+    "ru": {
+      "title": "dürfen: можно и нельзя",
+      "points": [
+        {
+          "title": "Спросить разрешение",
+          "text": "ich darf, du darfst, er darf, wir dürfen. Darf ich...? значит «можно мне...?»",
+          "examples": [
+            {
+              "de": "Darf ich hier parken?",
+              "tr": "Можно мне здесь припарковаться?"
+            }
+          ]
+        },
+        {
+          "title": "darf nicht: нельзя",
+          "text": "С отрицанием это запрет. Сравни: muss nicht (не надо) и darf nicht (нельзя).",
+          "examples": [
+            {
+              "de": "Du darfst hier nicht rauchen.",
+              "tr": "Здесь тебе нельзя курить."
+            },
+            {
+              "de": "Kinder dürfen keinen Alkohol trinken.",
+              "tr": "Детям нельзя пить алкоголь."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "dürfen: можна і не можна",
+      "points": [
+        {
+          "title": "Запитати дозвіл",
+          "text": "ich darf, du darfst, er darf, wir dürfen. Darf ich...? означає «можна мені...?»",
+          "examples": [
+            {
+              "de": "Darf ich hier parken?",
+              "tr": "Можна мені тут припаркуватися?"
+            }
+          ]
+        },
+        {
+          "title": "darf nicht: не можна",
+          "text": "Із запереченням це заборона. Порівняй: muss nicht (не треба) і darf nicht (не можна).",
+          "examples": [
+            {
+              "de": "Du darfst hier nicht rauchen.",
+              "tr": "Тут тобі не можна курити."
+            },
+            {
+              "de": "Kinder dürfen keinen Alkohol trinken.",
+              "tr": "Дітям не можна пити алкоголь."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "dürfen: allowed and not allowed",
+      "points": [
+        {
+          "title": "Asking permission",
+          "text": "ich darf, du darfst, er darf, wir dürfen. Darf ich...? means \"May I...?\"",
+          "examples": [
+            {
+              "de": "Darf ich hier parken?",
+              "tr": "May I park here?"
+            }
+          ]
+        },
+        {
+          "title": "darf nicht: not allowed",
+          "text": "With a negation it’s a ban. Compare: muss nicht (don’t have to) and darf nicht (must not).",
+          "examples": [
+            {
+              "de": "Du darfst hier nicht rauchen.",
+              "tr": "You’re not allowed to smoke here."
+            },
+            {
+              "de": "Kinder dürfen keinen Alkohol trinken.",
+              "tr": "Children aren’t allowed to drink alcohol."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "dürfen: wolno i nie wolno",
+      "points": [
+        {
+          "title": "Zapytać o pozwolenie",
+          "text": "ich darf, du darfst, er darf, wir dürfen. Darf ich...? znaczy „czy mogę...?”",
+          "examples": [
+            {
+              "de": "Darf ich hier parken?",
+              "tr": "Czy mogę tu zaparkować?"
+            }
+          ]
+        },
+        {
+          "title": "darf nicht: nie wolno",
+          "text": "Z przeczeniem to zakaz. Porównaj: muss nicht (nie trzeba) i darf nicht (nie wolno).",
+          "examples": [
+            {
+              "de": "Du darfst hier nicht rauchen.",
+              "tr": "Tu nie wolno ci palić."
+            },
+            {
+              "de": "Kinder dürfen keinen Alkohol trinken.",
+              "tr": "Dzieciom nie wolno pić alkoholu."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "dürfen: se puede y no se puede",
+      "points": [
+        {
+          "title": "Pedir permiso",
+          "text": "ich darf, du darfst, er darf, wir dürfen. Darf ich...? significa \"¿puedo...?\"",
+          "examples": [
+            {
+              "de": "Darf ich hier parken?",
+              "tr": "¿Puedo aparcar aquí?"
+            }
+          ]
+        },
+        {
+          "title": "darf nicht: prohibido",
+          "text": "Con negación es una prohibición. Compara: muss nicht (no hace falta) y darf nicht (no se puede).",
+          "examples": [
+            {
+              "de": "Du darfst hier nicht rauchen.",
+              "tr": "Aquí no puedes fumar."
+            },
+            {
+              "de": "Kinder dürfen keinen Alkohol trinken.",
+              "tr": "Los niños no pueden beber alcohol."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "dürfen : permis et interdit",
+      "points": [
+        {
+          "title": "Demander la permission",
+          "text": "ich darf, du darfst, er darf, wir dürfen. Darf ich... ? veut dire « je peux... ? »",
+          "examples": [
+            {
+              "de": "Darf ich hier parken?",
+              "tr": "Je peux me garer ici ?"
+            }
+          ]
+        },
+        {
+          "title": "darf nicht : interdit",
+          "text": "Avec la négation, c’est une interdiction. Compare : muss nicht (pas besoin) et darf nicht (interdit).",
+          "examples": [
+            {
+              "de": "Du darfst hier nicht rauchen.",
+              "tr": "Tu n’as pas le droit de fumer ici."
+            },
+            {
+              "de": "Kinder dürfen keinen Alkohol trinken.",
+              "tr": "Les enfants n’ont pas le droit de boire d’alcool."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "dürfen: izinli ve yasak",
+      "points": [
+        {
+          "title": "İzin istemek",
+          "text": "ich darf, du darfst, er darf, wir dürfen. Darf ich...? \"... yapabilir miyim?\" demektir.",
+          "examples": [
+            {
+              "de": "Darf ich hier parken?",
+              "tr": "Buraya park edebilir miyim?"
+            }
+          ]
+        },
+        {
+          "title": "darf nicht: yasak",
+          "text": "Olumsuzla yasak olur. Karşılaştır: muss nicht (gerek yok) ve darf nicht (yasak).",
+          "examples": [
+            {
+              "de": "Du darfst hier nicht rauchen.",
+              "tr": "Burada sigara içemezsin."
+            },
+            {
+              "de": "Kinder dürfen keinen Alkohol trinken.",
+              "tr": "Çocuklar alkol içemez."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "dürfen: voie și interzis",
+      "points": [
+        {
+          "title": "Să ceri voie",
+          "text": "ich darf, du darfst, er darf, wir dürfen. Darf ich...? înseamnă „pot să...?”",
+          "examples": [
+            {
+              "de": "Darf ich hier parken?",
+              "tr": "Pot să parchez aici?"
+            }
+          ]
+        },
+        {
+          "title": "darf nicht: interzis",
+          "text": "Cu negație e o interdicție. Compară: muss nicht (nu e nevoie) și darf nicht (nu ai voie).",
+          "examples": [
+            {
+              "de": "Du darfst hier nicht rauchen.",
+              "tr": "Aici nu ai voie să fumezi."
+            },
+            {
+              "de": "Kinder dürfen keinen Alkohol trinken.",
+              "tr": "Copiii nu au voie să bea alcool."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "dürfen: mumkin va mumkin emas",
+      "points": [
+        {
+          "title": "Ruxsat so'rash",
+          "text": "ich darf, du darfst, er darf, wir dürfen. Darf ich...? \"mumkinmi...?\" degani.",
+          "examples": [
+            {
+              "de": "Darf ich hier parken?",
+              "tr": "Shu yerga mashina qo'ysam bo'ladimi?"
+            }
+          ]
+        },
+        {
+          "title": "darf nicht: mumkin emas",
+          "text": "Inkor bilan bu taqiq. Solishtir: muss nicht (shart emas) va darf nicht (mumkin emas).",
+          "examples": [
+            {
+              "de": "Du darfst hier nicht rauchen.",
+              "tr": "Bu yerda chekishing mumkin emas."
+            },
+            {
+              "de": "Kinder dürfen keinen Alkohol trinken.",
+              "tr": "Bolalarga spirtli ichimlik ichish mumkin emas."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "dürfen: अनुमति है और मना है",
+      "points": [
+        {
+          "title": "अनुमति माँगना",
+          "text": "ich darf, du darfst, er darf, wir dürfen। Darf ich...? मतलब \"क्या मैं ... सकता हूँ?\"",
+          "examples": [
+            {
+              "de": "Darf ich hier parken?",
+              "tr": "क्या मैं यहाँ पार्क कर सकता हूँ?"
+            }
+          ]
+        },
+        {
+          "title": "darf nicht: मना है",
+          "text": "नकार के साथ यह मनाही है। तुलना करो: muss nicht (ज़रूरत नहीं) और darf nicht (मना है)।",
+          "examples": [
+            {
+              "de": "Du darfst hier nicht rauchen.",
+              "tr": "तुम यहाँ धूम्रपान नहीं कर सकते।"
+            },
+            {
+              "de": "Kinder dürfen keinen Alkohol trinken.",
+              "tr": "बच्चे शराब नहीं पी सकते।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "dürfen: مسموح وممنوع",
+      "points": [
+        {
+          "title": "طلب الإذن",
+          "text": "ich darf، du darfst، er darf، wir dürfen. وDarf ich...؟ تعني \"هل يمكنني...؟\"",
+          "examples": [
+            {
+              "de": "Darf ich hier parken?",
+              "tr": "هل يمكنني الوقوف هنا؟"
+            }
+          ]
+        },
+        {
+          "title": "darf nicht: ممنوع",
+          "text": "مع النفي يصبح منعاً. قارن: muss nicht (لا داعي) وdarf nicht (ممنوع).",
+          "examples": [
+            {
+              "de": "Du darfst hier nicht rauchen.",
+              "tr": "ممنوع أن تدخن هنا."
+            },
+            {
+              "de": "Kinder dürfen keinen Alkohol trinken.",
+              "tr": "ممنوع على الأطفال شرب الكحول."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "power-pass-six": {
+    "ru": {
+      "title": "muss aufstehen: приставка не отделяется",
+      "points": [
+        {
+          "title": "Глагол в конце целиком",
+          "text": "С модальным глаголом отделяемый глагол стоит в конце целиком: Ich stehe früh auf, но Ich muss früh aufstehen.",
+          "examples": [
+            {
+              "de": "Wir müssen heute einkaufen.",
+              "tr": "Нам сегодня надо сходить за покупками."
+            },
+            {
+              "de": "Ich kann nicht mitkommen.",
+              "tr": "Я не могу пойти с вами."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "muss aufstehen: префікс не відокремлюється",
+      "points": [
+        {
+          "title": "Дієслово в кінці цілим",
+          "text": "З модальним дієсловом відокремлюване дієслово стоїть у кінці цілим: Ich stehe früh auf, але Ich muss früh aufstehen.",
+          "examples": [
+            {
+              "de": "Wir müssen heute einkaufen.",
+              "tr": "Нам сьогодні треба сходити по покупки."
+            },
+            {
+              "de": "Ich kann nicht mitkommen.",
+              "tr": "Я не можу піти з вами."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "muss aufstehen: the prefix stays on",
+      "points": [
+        {
+          "title": "The whole verb at the end",
+          "text": "With a modal verb the separable verb stays whole at the end: Ich stehe früh auf, but Ich muss früh aufstehen.",
+          "examples": [
+            {
+              "de": "Wir müssen heute einkaufen.",
+              "tr": "We have to go shopping today."
+            },
+            {
+              "de": "Ich kann nicht mitkommen.",
+              "tr": "I can’t come along."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "muss aufstehen: przedrostek się nie odrywa",
+      "points": [
+        {
+          "title": "Cały czasownik na końcu",
+          "text": "Z czasownikiem modalnym czasownik rozdzielny stoi na końcu w całości: Ich stehe früh auf, ale Ich muss früh aufstehen.",
+          "examples": [
+            {
+              "de": "Wir müssen heute einkaufen.",
+              "tr": "Musimy dziś zrobić zakupy."
+            },
+            {
+              "de": "Ich kann nicht mitkommen.",
+              "tr": "Nie mogę iść z wami."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "muss aufstehen: el prefijo no se separa",
+      "points": [
+        {
+          "title": "El verbo entero al final",
+          "text": "Con un modal, el verbo separable va entero al final: Ich stehe früh auf, pero Ich muss früh aufstehen.",
+          "examples": [
+            {
+              "de": "Wir müssen heute einkaufen.",
+              "tr": "Hoy tenemos que hacer la compra."
+            },
+            {
+              "de": "Ich kann nicht mitkommen.",
+              "tr": "No puedo ir con vosotros."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "muss aufstehen : le préfixe reste attaché",
+      "points": [
+        {
+          "title": "Le verbe entier à la fin",
+          "text": "Avec un verbe de modalité, le verbe séparable reste entier à la fin : Ich stehe früh auf, mais Ich muss früh aufstehen.",
+          "examples": [
+            {
+              "de": "Wir müssen heute einkaufen.",
+              "tr": "Nous devons faire les courses aujourd’hui."
+            },
+            {
+              "de": "Ich kann nicht mitkommen.",
+              "tr": "Je ne peux pas venir avec vous."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "muss aufstehen: ön ek ayrılmaz",
+      "points": [
+        {
+          "title": "Fiil bütün olarak sonda",
+          "text": "Modal fiille ayrılabilen fiil sonda bütün kalır: Ich stehe früh auf, ama Ich muss früh aufstehen.",
+          "examples": [
+            {
+              "de": "Wir müssen heute einkaufen.",
+              "tr": "Bugün alışveriş yapmalıyız."
+            },
+            {
+              "de": "Ich kann nicht mitkommen.",
+              "tr": "Sizinle gelemem."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "muss aufstehen: prefixul nu se desparte",
+      "points": [
+        {
+          "title": "Verbul întreg la final",
+          "text": "Cu un verb modal, verbul separabil stă întreg la final: Ich stehe früh auf, dar Ich muss früh aufstehen.",
+          "examples": [
+            {
+              "de": "Wir müssen heute einkaufen.",
+              "tr": "Azi trebuie să facem cumpărături."
+            },
+            {
+              "de": "Ich kann nicht mitkommen.",
+              "tr": "Nu pot veni cu voi."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "muss aufstehen: old qo'shimcha ajralmaydi",
+      "points": [
+        {
+          "title": "Fe'l oxirida butun holda",
+          "text": "Modal fe'l bilan ajraladigan fe'l oxirida butun turadi: Ich stehe früh auf, lekin Ich muss früh aufstehen.",
+          "examples": [
+            {
+              "de": "Wir müssen heute einkaufen.",
+              "tr": "Bugun xarid qilishimiz kerak."
+            },
+            {
+              "de": "Ich kann nicht mitkommen.",
+              "tr": "Siz bilan bora olmayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "muss aufstehen: उपसर्ग अलग नहीं होता",
+      "points": [
+        {
+          "title": "पूरी क्रिया अंत में",
+          "text": "मोडल क्रिया के साथ अलग होने वाली क्रिया अंत में पूरी रहती है: Ich stehe früh auf, लेकिन Ich muss früh aufstehen।",
+          "examples": [
+            {
+              "de": "Wir müssen heute einkaufen.",
+              "tr": "आज हमें खरीदारी करनी है।"
+            },
+            {
+              "de": "Ich kann nicht mitkommen.",
+              "tr": "मैं साथ नहीं आ सकता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "muss aufstehen: السابقة لا تنفصل",
+      "points": [
+        {
+          "title": "الفعل كاملاً في الآخر",
+          "text": "مع الفعل المساعد يبقى الفعل ذو السابقة كاملاً في الآخر: Ich stehe früh auf، لكن Ich muss früh aufstehen.",
+          "examples": [
+            {
+              "de": "Wir müssen heute einkaufen.",
+              "tr": "يجب أن نتسوق اليوم."
+            },
+            {
+              "de": "Ich kann nicht mitkommen.",
+              "tr": "لا أستطيع المجيء معكم."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "power-pass-seven": {
+    "ru": {
+      "title": "Практика: какой глагол выбрать",
+      "points": [
+        {
+          "title": "По смыслу",
+          "text": "kann: умею, могу. muss: надо. will: хочу. darf: разрешено.",
+          "examples": [
+            {
+              "de": "Ich bin krank. Ich muss zu Hause bleiben.",
+              "tr": "Я болен. Мне надо остаться дома."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: яке дієслово обрати",
+      "points": [
+        {
+          "title": "За змістом",
+          "text": "kann: вмію, можу. muss: треба. will: хочу. darf: дозволено.",
+          "examples": [
+            {
+              "de": "Ich bin krank. Ich muss zu Hause bleiben.",
+              "tr": "Я хворий. Мені треба залишитися вдома."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: which verb to choose",
+      "points": [
+        {
+          "title": "By meaning",
+          "text": "kann: can, able to. muss: have to. will: want. darf: allowed.",
+          "examples": [
+            {
+              "de": "Ich bin krank. Ich muss zu Hause bleiben.",
+              "tr": "I’m ill. I have to stay at home."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: który czasownik wybrać",
+      "points": [
+        {
+          "title": "Według znaczenia",
+          "text": "kann: umiem, mogę. muss: muszę. will: chcę. darf: wolno mi.",
+          "examples": [
+            {
+              "de": "Ich bin krank. Ich muss zu Hause bleiben.",
+              "tr": "Jestem chory. Muszę zostać w domu."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: qué verbo elegir",
+      "points": [
+        {
+          "title": "Según el sentido",
+          "text": "kann: sé, puedo. muss: tengo que. will: quiero. darf: tengo permiso.",
+          "examples": [
+            {
+              "de": "Ich bin krank. Ich muss zu Hause bleiben.",
+              "tr": "Estoy enfermo. Tengo que quedarme en casa."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : quel verbe choisir",
+      "points": [
+        {
+          "title": "Selon le sens",
+          "text": "kann : je sais, je peux. muss : je dois. will : je veux. darf : j’ai le droit.",
+          "examples": [
+            {
+              "de": "Ich bin krank. Ich muss zu Hause bleiben.",
+              "tr": "Je suis malade. Je dois rester à la maison."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: hangi fiili seçmeli",
+      "points": [
+        {
+          "title": "Anlama göre",
+          "text": "kann: yapabilirim. muss: zorundayım. will: istiyorum. darf: iznim var.",
+          "examples": [
+            {
+              "de": "Ich bin krank. Ich muss zu Hause bleiben.",
+              "tr": "Hastayım. Evde kalmalıyım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: ce verb alegi",
+      "points": [
+        {
+          "title": "După sens",
+          "text": "kann: pot, știu. muss: trebuie. will: vreau. darf: am voie.",
+          "examples": [
+            {
+              "de": "Ich bin krank. Ich muss zu Hause bleiben.",
+              "tr": "Sunt bolnav. Trebuie să stau acasă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: qaysi fe'lni tanlash",
+      "points": [
+        {
+          "title": "Ma'nosiga qarab",
+          "text": "kann: qila olaman. muss: kerak. will: xohlayman. darf: ruxsat bor.",
+          "examples": [
+            {
+              "de": "Ich bin krank. Ich muss zu Hause bleiben.",
+              "tr": "Men kasalman. Uyda qolishim kerak."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: कौन-सी क्रिया चुनें",
+      "points": [
+        {
+          "title": "अर्थ के अनुसार",
+          "text": "kann: कर सकता हूँ। muss: करना होगा। will: चाहता हूँ। darf: अनुमति है।",
+          "examples": [
+            {
+              "de": "Ich bin krank. Ich muss zu Hause bleiben.",
+              "tr": "मैं बीमार हूँ। मुझे घर पर रहना है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: أي فعل نختار",
+      "points": [
+        {
+          "title": "حسب المعنى",
+          "text": "kann: أستطيع. muss: يجب. will: أريد. darf: مسموح.",
+          "examples": [
+            {
+              "de": "Ich bin krank. Ich muss zu Hause bleiben.",
+              "tr": "أنا مريض. يجب أن أبقى في البيت."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "power-pass-eight": {
+    "ru": {
+      "title": "Практика: договариваемся",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Предложить: Wollen wir...? Отказать: Ich kann leider nicht. Ich muss arbeiten.",
+          "examples": [
+            {
+              "de": "Wollen wir einen Film sehen?",
+              "tr": "Посмотрим фильм?"
+            },
+            {
+              "de": "Darf ich meine Schwester mitbringen?",
+              "tr": "Можно мне привести сестру?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: домовляємося",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Запропонувати: Wollen wir...? Відмовити: Ich kann leider nicht. Ich muss arbeiten.",
+          "examples": [
+            {
+              "de": "Wollen wir einen Film sehen?",
+              "tr": "Подивимося фільм?"
+            },
+            {
+              "de": "Darf ich meine Schwester mitbringen?",
+              "tr": "Можна мені привести сестру?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: making arrangements",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "Suggest: Wollen wir...? Decline: Ich kann leider nicht. Ich muss arbeiten.",
+          "examples": [
+            {
+              "de": "Wollen wir einen Film sehen?",
+              "tr": "Shall we watch a film?"
+            },
+            {
+              "de": "Darf ich meine Schwester mitbringen?",
+              "tr": "May I bring my sister?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: umawiamy się",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Zaproponować: Wollen wir...? Odmówić: Ich kann leider nicht. Ich muss arbeiten.",
+          "examples": [
+            {
+              "de": "Wollen wir einen Film sehen?",
+              "tr": "Obejrzymy film?"
+            },
+            {
+              "de": "Darf ich meine Schwester mitbringen?",
+              "tr": "Mogę przyprowadzić siostrę?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: quedar",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Proponer: Wollen wir...? Rechazar: Ich kann leider nicht. Ich muss arbeiten.",
+          "examples": [
+            {
+              "de": "Wollen wir einen Film sehen?",
+              "tr": "¿Vemos una película?"
+            },
+            {
+              "de": "Darf ich meine Schwester mitbringen?",
+              "tr": "¿Puedo traer a mi hermana?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : s’organiser",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "Proposer : Wollen wir... ? Refuser : Ich kann leider nicht. Ich muss arbeiten.",
+          "examples": [
+            {
+              "de": "Wollen wir einen Film sehen?",
+              "tr": "On regarde un film ?"
+            },
+            {
+              "de": "Darf ich meine Schwester mitbringen?",
+              "tr": "Je peux amener ma sœur ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: anlaşmak",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Öneri: Wollen wir...? Reddetme: Ich kann leider nicht. Ich muss arbeiten.",
+          "examples": [
+            {
+              "de": "Wollen wir einen Film sehen?",
+              "tr": "Film izleyelim mi?"
+            },
+            {
+              "de": "Darf ich meine Schwester mitbringen?",
+              "tr": "Kız kardeşimi getirebilir miyim?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: ne înțelegem",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Propui: Wollen wir...? Refuzi: Ich kann leider nicht. Ich muss arbeiten.",
+          "examples": [
+            {
+              "de": "Wollen wir einen Film sehen?",
+              "tr": "Ne uităm la un film?"
+            },
+            {
+              "de": "Darf ich meine Schwester mitbringen?",
+              "tr": "Pot să-mi aduc sora?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: kelishamiz",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Taklif: Wollen wir...? Rad etish: Ich kann leider nicht. Ich muss arbeiten.",
+          "examples": [
+            {
+              "de": "Wollen wir einen Film sehen?",
+              "tr": "Film ko'ramizmi?"
+            },
+            {
+              "de": "Darf ich meine Schwester mitbringen?",
+              "tr": "Singlimni olib kelsam bo'ladimi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: तय करना",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "सुझाव: Wollen wir...? मना करना: Ich kann leider nicht. Ich muss arbeiten.",
+          "examples": [
+            {
+              "de": "Wollen wir einen Film sehen?",
+              "tr": "क्या हम फ़िल्म देखें?"
+            },
+            {
+              "de": "Darf ich meine Schwester mitbringen?",
+              "tr": "क्या मैं अपनी बहन को ला सकता हूँ?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: نتفق",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "للاقتراح: Wollen wir...؟ وللرفض: Ich kann leider nicht. Ich muss arbeiten.",
+          "examples": [
+            {
+              "de": "Wollen wir einen Film sehen?",
+              "tr": "هل نشاهد فيلماً؟"
+            },
+            {
+              "de": "Darf ich meine Schwester mitbringen?",
+              "tr": "هل يمكنني إحضار أختي؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "power-pass-nine": {
+    "ru": {
+      "title": "Повторение: модальные глаголы",
+      "points": [
+        {
+          "title": "ich и er без окончания",
+          "text": "ich kann, er muss, sie will, es darf.",
+          "examples": [
+            {
+              "de": "Lisa muss heute zu Hause bleiben.",
+              "tr": "Лиза сегодня должна остаться дома."
+            }
+          ]
+        },
+        {
+          "title": "Второй глагол в конце",
+          "text": "Модальный глагол стоит на втором месте, а главный глагол уходит в конец и не меняется.",
+          "examples": [
+            {
+              "de": "Ich will früh aufstehen.",
+              "tr": "Я хочу рано вставать."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht и darf nicht",
+          "text": "muss nicht значит «не надо», darf nicht значит «нельзя».",
+          "examples": []
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: модальні дієслова",
+      "points": [
+        {
+          "title": "ich та er без закінчення",
+          "text": "ich kann, er muss, sie will, es darf.",
+          "examples": [
+            {
+              "de": "Lisa muss heute zu Hause bleiben.",
+              "tr": "Ліза сьогодні мусить залишитися вдома."
+            }
+          ]
+        },
+        {
+          "title": "Друге дієслово в кінці",
+          "text": "Модальне дієслово стоїть на другому місці, а головне йде в кінець і не змінюється.",
+          "examples": [
+            {
+              "de": "Ich will früh aufstehen.",
+              "tr": "Я хочу рано вставати."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht і darf nicht",
+          "text": "muss nicht означає «не треба», darf nicht означає «не можна».",
+          "examples": []
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: modal verbs",
+      "points": [
+        {
+          "title": "ich and er with no ending",
+          "text": "ich kann, er muss, sie will, es darf.",
+          "examples": [
+            {
+              "de": "Lisa muss heute zu Hause bleiben.",
+              "tr": "Lisa has to stay at home today."
+            }
+          ]
+        },
+        {
+          "title": "The second verb goes to the end",
+          "text": "The modal verb is in second place, and the main verb goes to the end unchanged.",
+          "examples": [
+            {
+              "de": "Ich will früh aufstehen.",
+              "tr": "I want to get up early."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht and darf nicht",
+          "text": "muss nicht means \"don’t have to\", darf nicht means \"must not\".",
+          "examples": []
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: czasowniki modalne",
+      "points": [
+        {
+          "title": "ich i er bez końcówki",
+          "text": "ich kann, er muss, sie will, es darf.",
+          "examples": [
+            {
+              "de": "Lisa muss heute zu Hause bleiben.",
+              "tr": "Lisa musi dziś zostać w domu."
+            }
+          ]
+        },
+        {
+          "title": "Drugi czasownik na końcu",
+          "text": "Czasownik modalny stoi na drugim miejscu, a główny idzie na koniec i się nie zmienia.",
+          "examples": [
+            {
+              "de": "Ich will früh aufstehen.",
+              "tr": "Chcę wcześnie wstawać."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht i darf nicht",
+          "text": "muss nicht znaczy „nie trzeba”, darf nicht „nie wolno”.",
+          "examples": []
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: verbos modales",
+      "points": [
+        {
+          "title": "ich y er sin terminación",
+          "text": "ich kann, er muss, sie will, es darf.",
+          "examples": [
+            {
+              "de": "Lisa muss heute zu Hause bleiben.",
+              "tr": "Lisa tiene que quedarse hoy en casa."
+            }
+          ]
+        },
+        {
+          "title": "El segundo verbo al final",
+          "text": "El verbo modal va en segundo lugar y el principal va al final sin cambiar.",
+          "examples": [
+            {
+              "de": "Ich will früh aufstehen.",
+              "tr": "Quiero levantarme temprano."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht y darf nicht",
+          "text": "muss nicht es \"no hace falta\", darf nicht es \"está prohibido\".",
+          "examples": []
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : les verbes de modalité",
+      "points": [
+        {
+          "title": "ich et er sans terminaison",
+          "text": "ich kann, er muss, sie will, es darf.",
+          "examples": [
+            {
+              "de": "Lisa muss heute zu Hause bleiben.",
+              "tr": "Lisa doit rester à la maison aujourd’hui."
+            }
+          ]
+        },
+        {
+          "title": "Le deuxième verbe à la fin",
+          "text": "Le verbe de modalité est en deuxième position, le verbe principal va à la fin sans changer.",
+          "examples": [
+            {
+              "de": "Ich will früh aufstehen.",
+              "tr": "Je veux me lever tôt."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht et darf nicht",
+          "text": "muss nicht veut dire « pas besoin », darf nicht veut dire « interdit ».",
+          "examples": []
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: modal fiiller",
+      "points": [
+        {
+          "title": "ich ve er eksiz",
+          "text": "ich kann, er muss, sie will, es darf.",
+          "examples": [
+            {
+              "de": "Lisa muss heute zu Hause bleiben.",
+              "tr": "Lisa bugün evde kalmalı."
+            }
+          ]
+        },
+        {
+          "title": "İkinci fiil sonda",
+          "text": "Modal fiil ikinci sıradadır, asıl fiil değişmeden sona gider.",
+          "examples": [
+            {
+              "de": "Ich will früh aufstehen.",
+              "tr": "Erken kalkmak istiyorum."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht ve darf nicht",
+          "text": "muss nicht \"gerek yok\", darf nicht \"yasak\" demektir.",
+          "examples": []
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: verbele modale",
+      "points": [
+        {
+          "title": "ich și er fără terminație",
+          "text": "ich kann, er muss, sie will, es darf.",
+          "examples": [
+            {
+              "de": "Lisa muss heute zu Hause bleiben.",
+              "tr": "Lisa trebuie să stea azi acasă."
+            }
+          ]
+        },
+        {
+          "title": "Al doilea verb la final",
+          "text": "Verbul modal stă pe locul doi, iar verbul principal merge la final neschimbat.",
+          "examples": [
+            {
+              "de": "Ich will früh aufstehen.",
+              "tr": "Vreau să mă trezesc devreme."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht și darf nicht",
+          "text": "muss nicht înseamnă „nu e nevoie”, darf nicht „nu ai voie”.",
+          "examples": []
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: modal fe'llar",
+      "points": [
+        {
+          "title": "ich va er qo'shimchasiz",
+          "text": "ich kann, er muss, sie will, es darf.",
+          "examples": [
+            {
+              "de": "Lisa muss heute zu Hause bleiben.",
+              "tr": "Liza bugun uyda qolishi kerak."
+            }
+          ]
+        },
+        {
+          "title": "Ikkinchi fe'l oxirida",
+          "text": "Modal fe'l ikkinchi o'rinda, asosiy fe'l esa o'zgarmasdan oxiriga o'tadi.",
+          "examples": [
+            {
+              "de": "Ich will früh aufstehen.",
+              "tr": "Men erta turmoqchiman."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht va darf nicht",
+          "text": "muss nicht \"shart emas\", darf nicht \"mumkin emas\" degani.",
+          "examples": []
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: मोडल क्रियाएँ",
+      "points": [
+        {
+          "title": "ich और er बिना अंत के",
+          "text": "ich kann, er muss, sie will, es darf।",
+          "examples": [
+            {
+              "de": "Lisa muss heute zu Hause bleiben.",
+              "tr": "लिसा को आज घर पर रहना है।"
+            }
+          ]
+        },
+        {
+          "title": "दूसरी क्रिया अंत में",
+          "text": "मोडल क्रिया दूसरे स्थान पर, और मुख्य क्रिया बिना बदले अंत में जाती है।",
+          "examples": [
+            {
+              "de": "Ich will früh aufstehen.",
+              "tr": "मैं जल्दी उठना चाहता हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "muss nicht और darf nicht",
+          "text": "muss nicht मतलब \"ज़रूरत नहीं\", darf nicht मतलब \"मना है\"।",
+          "examples": []
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الأفعال المساعدة",
+      "points": [
+        {
+          "title": "ich وer بدون نهاية",
+          "text": "ich kann، er muss، sie will، es darf.",
+          "examples": [
+            {
+              "de": "Lisa muss heute zu Hause bleiben.",
+              "tr": "يجب أن تبقى ليزا في البيت اليوم."
+            }
+          ]
+        },
+        {
+          "title": "الفعل الثاني في الآخر",
+          "text": "الفعل المساعد في المكان الثاني، والفعل الأساسي يذهب إلى الآخر بدون تغيير.",
+          "examples": [
+            {
+              "de": "Ich will früh aufstehen.",
+              "tr": "أريد أن أستيقظ مبكراً."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht وdarf nicht",
+          "text": "muss nicht تعني \"لا داعي\"، وdarf nicht تعني \"ممنوع\".",
+          "examples": []
+        }
+      ]
+    }
+  },
+  "power-pass-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "Форма для ihr",
+          "text": "ihr könnt, ihr müsst, ihr wollt, ihr dürft: гласная такая же, как у wir.",
+          "examples": [
+            {
+              "de": "Könnt ihr Deutsch sprechen?",
+              "tr": "Вы умеете говорить по-немецки?"
+            }
+          ]
+        },
+        {
+          "title": "Второй глагол в конце",
+          "text": "Модальный глагол стоит на втором месте, а главный глагол уходит в конец и не меняется.",
+          "examples": [
+            {
+              "de": "Sie kann nicht mitkommen.",
+              "tr": "Она не может пойти с нами."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "Форма для ihr",
+          "text": "ihr könnt, ihr müsst, ihr wollt, ihr dürft: голосна така сама, як у wir.",
+          "examples": [
+            {
+              "de": "Könnt ihr Deutsch sprechen?",
+              "tr": "Ви вмієте говорити німецькою?"
+            }
+          ]
+        },
+        {
+          "title": "Друге дієслово в кінці",
+          "text": "Модальне дієслово стоїть на другому місці, а головне йде в кінець і не змінюється.",
+          "examples": [
+            {
+              "de": "Sie kann nicht mitkommen.",
+              "tr": "Вона не може піти з нами."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "The ihr form",
+          "text": "ihr könnt, ihr müsst, ihr wollt, ihr dürft: same vowel as wir.",
+          "examples": [
+            {
+              "de": "Könnt ihr Deutsch sprechen?",
+              "tr": "Can you (all) speak German?"
+            }
+          ]
+        },
+        {
+          "title": "The second verb goes to the end",
+          "text": "The modal verb is in second place, and the main verb goes to the end unchanged.",
+          "examples": [
+            {
+              "de": "Sie kann nicht mitkommen.",
+              "tr": "She can’t come along."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "Forma dla ihr",
+          "text": "ihr könnt, ihr müsst, ihr wollt, ihr dürft: samogłoska jak przy wir.",
+          "examples": [
+            {
+              "de": "Könnt ihr Deutsch sprechen?",
+              "tr": "Umiecie mówić po niemiecku?"
+            }
+          ]
+        },
+        {
+          "title": "Drugi czasownik na końcu",
+          "text": "Czasownik modalny stoi na drugim miejscu, a główny idzie na koniec i się nie zmienia.",
+          "examples": [
+            {
+              "de": "Sie kann nicht mitkommen.",
+              "tr": "Ona nie może iść z nami."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "La forma de ihr",
+          "text": "ihr könnt, ihr müsst, ihr wollt, ihr dürft: la misma vocal que con wir.",
+          "examples": [
+            {
+              "de": "Könnt ihr Deutsch sprechen?",
+              "tr": "¿Sabéis hablar alemán?"
+            }
+          ]
+        },
+        {
+          "title": "El segundo verbo al final",
+          "text": "El verbo modal va en segundo lugar y el principal va al final sin cambiar.",
+          "examples": [
+            {
+              "de": "Sie kann nicht mitkommen.",
+              "tr": "Ella no puede venir."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "La forme de ihr",
+          "text": "ihr könnt, ihr müsst, ihr wollt, ihr dürft : même voyelle qu’avec wir.",
+          "examples": [
+            {
+              "de": "Könnt ihr Deutsch sprechen?",
+              "tr": "Vous savez parler allemand ?"
+            }
+          ]
+        },
+        {
+          "title": "Le deuxième verbe à la fin",
+          "text": "Le verbe de modalité est en deuxième position, le verbe principal va à la fin sans changer.",
+          "examples": [
+            {
+              "de": "Sie kann nicht mitkommen.",
+              "tr": "Elle ne peut pas venir avec nous."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "ihr biçimi",
+          "text": "ihr könnt, ihr müsst, ihr wollt, ihr dürft: ünlü wir’deki gibi.",
+          "examples": [
+            {
+              "de": "Könnt ihr Deutsch sprechen?",
+              "tr": "Almanca konuşabiliyor musunuz?"
+            }
+          ]
+        },
+        {
+          "title": "İkinci fiil sonda",
+          "text": "Modal fiil ikinci sıradadır, asıl fiil değişmeden sona gider.",
+          "examples": [
+            {
+              "de": "Sie kann nicht mitkommen.",
+              "tr": "O bizimle gelemez."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "Forma pentru ihr",
+          "text": "ihr könnt, ihr müsst, ihr wollt, ihr dürft: aceeași vocală ca la wir.",
+          "examples": [
+            {
+              "de": "Könnt ihr Deutsch sprechen?",
+              "tr": "Știți să vorbiți germana?"
+            }
+          ]
+        },
+        {
+          "title": "Al doilea verb la final",
+          "text": "Verbul modal stă pe locul doi, iar verbul principal merge la final neschimbat.",
+          "examples": [
+            {
+              "de": "Sie kann nicht mitkommen.",
+              "tr": "Ea nu poate veni cu noi."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "ihr shakli",
+          "text": "ihr könnt, ihr müsst, ihr wollt, ihr dürft: unli wir dagi kabi.",
+          "examples": [
+            {
+              "de": "Könnt ihr Deutsch sprechen?",
+              "tr": "Sizlar nemischa gapira olasizlarmi?"
+            }
+          ]
+        },
+        {
+          "title": "Ikkinchi fe'l oxirida",
+          "text": "Modal fe'l ikkinchi o'rinda, asosiy fe'l esa o'zgarmasdan oxiriga o'tadi.",
+          "examples": [
+            {
+              "de": "Sie kann nicht mitkommen.",
+              "tr": "U biz bilan bora olmaydi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "ihr का रूप",
+          "text": "ihr könnt, ihr müsst, ihr wollt, ihr dürft: स्वर wir जैसा।",
+          "examples": [
+            {
+              "de": "Könnt ihr Deutsch sprechen?",
+              "tr": "क्या तुम सब जर्मन बोल सकते हो?"
+            }
+          ]
+        },
+        {
+          "title": "दूसरी क्रिया अंत में",
+          "text": "मोडल क्रिया दूसरे स्थान पर, और मुख्य क्रिया बिना बदले अंत में जाती है।",
+          "examples": [
+            {
+              "de": "Sie kann nicht mitkommen.",
+              "tr": "वह साथ नहीं आ सकती।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "صيغة ihr",
+          "text": "ihr könnt، ihr müsst، ihr wollt، ihr dürft: الحرف نفسه كما مع wir.",
+          "examples": [
+            {
+              "de": "Könnt ihr Deutsch sprechen?",
+              "tr": "هل تستطيعون التكلم بالألمانية؟"
+            }
+          ]
+        },
+        {
+          "title": "الفعل الثاني في الآخر",
+          "text": "الفعل المساعد في المكان الثاني، والفعل الأساسي يذهب إلى الآخر بدون تغيير.",
+          "examples": [
+            {
+              "de": "Sie kann nicht mitkommen.",
+              "tr": "هي لا تستطيع المجيء معنا."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

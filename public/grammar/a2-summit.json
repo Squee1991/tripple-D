@@ -1,0 +1,4532 @@
+{
+  "a2-summit-one": {
+    "ru": {
+      "title": "Повторение: прошлое",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Прошедшее в разговоре: haben на втором месте, а глагол в форме ge...t уходит в конец: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Я играл в футбол."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Мы учили немецкий."
+            }
+          ]
+        },
+        {
+          "title": "sein для движения",
+          "text": "Если человек перемещается (gehen, fahren, kommen) или меняет состояние (aufwachen), вместо haben ставим sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходил в кино."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Мы поехали в аэропорт."
+            }
+          ]
+        },
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. У ich и er одинаково, без окончания.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Вчера мы были в кино."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Где вы были?"
+            }
+          ]
+        },
+        {
+          "title": "Модальные в прошлом без умлаута",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Умлаут пропадает.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Вчера я не смог прийти."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: минуле",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Минуле в розмові: haben на другому місці, а дієслово у формі ge...t іде в кінець: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Я грав у футбол."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Ми вчили німецьку."
+            }
+          ]
+        },
+        {
+          "title": "sein для руху",
+          "text": "Якщо людина переміщується (gehen, fahren, kommen) або змінює стан (aufwachen), замість haben ставимо sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходив у кіно."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Ми поїхали в аеропорт."
+            }
+          ]
+        },
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. У ich та er однаково, без закінчення.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Учора ми були в кіно."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Де ви були?"
+            }
+          ]
+        },
+        {
+          "title": "Модальні в минулому без умлаута",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Умлаут зникає.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Учора я не зміг прийти."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: the past",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Spoken past: haben in second place, and the verb in its ge...t form at the end: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "I played football."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "We learned German."
+            }
+          ]
+        },
+        {
+          "title": "sein for movement",
+          "text": "If you move from place to place (gehen, fahren, kommen) or change state (aufwachen), use sein instead of haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "I went to the cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "We drove to the airport."
+            }
+          ]
+        },
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich and er are the same, with no ending.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Yesterday we were at the cinema."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Where were you (all)?"
+            }
+          ]
+        },
+        {
+          "title": "Past modals have no umlaut",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. The umlaut disappears.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Yesterday I couldn’t come."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: przeszłość",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Przeszłość w mowie: haben na drugim miejscu, a czasownik w formie ge...t na końcu: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Grałem w piłkę nożną."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Uczyliśmy się niemieckiego."
+            }
+          ]
+        },
+        {
+          "title": "sein przy ruchu",
+          "text": "Jeśli ktoś się przemieszcza (gehen, fahren, kommen) albo zmienia stan (aufwachen), zamiast haben stawiamy sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Poszedłem do kina."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Pojechaliśmy na lotnisko."
+            }
+          ]
+        },
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich i er tak samo, bez końcówki.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Wczoraj byliśmy w kinie."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Gdzie byliście?"
+            }
+          ]
+        },
+        {
+          "title": "Modalne w przeszłości bez umlautu",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlaut znika.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Wczoraj nie mogłem przyjść."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: el pasado",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "El pasado hablado: haben en segundo lugar y el verbo en forma ge...t al final: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Jugué al fútbol."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Aprendimos alemán."
+            }
+          ]
+        },
+        {
+          "title": "sein para el movimiento",
+          "text": "Si alguien se desplaza (gehen, fahren, kommen) o cambia de estado (aufwachen), se usa sein en lugar de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Fui al cine."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Fuimos al aeropuerto."
+            }
+          ]
+        },
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich y er son iguales, sin terminación.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Ayer estuvimos en el cine."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "¿Dónde estabais?"
+            }
+          ]
+        },
+        {
+          "title": "Modales en pasado sin diéresis",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. La diéresis desaparece.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Ayer no pude venir."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : le passé",
+      "points": [
+        {
+          "title": "Perfekt : haben + ge...t",
+          "text": "Le passé à l’oral : haben en deuxième position, et le verbe en ge...t à la fin : spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "J’ai joué au foot."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Nous avons appris l’allemand."
+            }
+          ]
+        },
+        {
+          "title": "sein pour le mouvement",
+          "text": "Si on se déplace (gehen, fahren, kommen) ou si on change d’état (aufwachen), on met sein au lieu de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Je suis allé au cinéma."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Nous sommes allés à l’aéroport."
+            }
+          ]
+        },
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich et er sont identiques, sans terminaison.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Hier, nous étions au cinéma."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Où étiez-vous ?"
+            }
+          ]
+        },
+        {
+          "title": "Modaux au passé sans umlaut",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. L’umlaut disparaît.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Hier, je n’ai pas pu venir."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: geçmiş",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Konuşmada geçmiş: haben ikinci sırada, fiil ge...t biçiminde sonda: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Futbol oynadım."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Almanca öğrendik."
+            }
+          ]
+        },
+        {
+          "title": "Hareket için sein",
+          "text": "Biri yer değiştiriyorsa (gehen, fahren, kommen) ya da durum değiştiriyorsa (aufwachen), haben yerine sein kullanılır.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Sinemaya gittim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Havalimanına gittik."
+            }
+          ]
+        },
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich ve er aynı, eksiz.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Dün sinemadaydık."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Neredeydiniz?"
+            }
+          ]
+        },
+        {
+          "title": "Geçmiş modal fiillerde umlaut yok",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlaut düşer.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Dün gelemedim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: trecutul",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Trecutul vorbit: haben pe locul doi, iar verbul în forma ge...t la final: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Am jucat fotbal."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Am învățat germana."
+            }
+          ]
+        },
+        {
+          "title": "sein pentru mișcare",
+          "text": "Dacă cineva se deplasează (gehen, fahren, kommen) sau își schimbă starea (aufwachen), în loc de haben punem sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Am mers la cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Am mers la aeroport."
+            }
+          ]
+        },
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich și er la fel, fără terminație.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Ieri am fost la cinema."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Unde ați fost?"
+            }
+          ]
+        },
+        {
+          "title": "Modale la trecut fără umlaut",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlautul dispare.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Ieri nu am putut veni."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: o'tgan zamon",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Og'zaki o'tgan zamon: haben ikkinchi o'rinda, fe'l ge...t shaklida oxirida: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Men futbol o'ynadim."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Biz nemis tilini o'rgandik."
+            }
+          ]
+        },
+        {
+          "title": "Harakat uchun sein",
+          "text": "Odam bir joydan boshqasiga o'tsa (gehen, fahren, kommen) yoki holatini o'zgartirsa (aufwachen), haben o'rniga sein qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Men kinoga bordim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Biz aeroportga bordik."
+            }
+          ]
+        },
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich va er bir xil, qo'shimchasiz.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Kecha biz kinoda edik."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Qayerda edinglar?"
+            }
+          ]
+        },
+        {
+          "title": "O'tgan zamon modallari umlautsiz",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlaut tushib qoladi.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Kecha kela olmadim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: भूतकाल",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "बोलचाल का भूतकाल: haben दूसरे स्थान पर, और क्रिया ge...t रूप में अंत में: spielen → gespielt।",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "मैंने फ़ुटबॉल खेला।"
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "हमने जर्मन सीखी।"
+            }
+          ]
+        },
+        {
+          "title": "गति के लिए sein",
+          "text": "अगर कोई जगह बदलता है (gehen, fahren, kommen) या उसकी हालत बदलती है (aufwachen), तो haben की जगह sein।",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "मैं सिनेमा गया।"
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "हम हवाई अड्डे गए।"
+            }
+          ]
+        },
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren। ich और er एक जैसे, बिना अंत के।",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "कल हम सिनेमा में थे।"
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "तुम सब कहाँ थे?"
+            }
+          ]
+        },
+        {
+          "title": "भूतकाल मोडल बिना उमलाउट",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte। उमलाउट हट जाता है।",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "कल मैं नहीं आ सका।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الماضي",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "الماضي في الكلام: haben في المكان الثاني، والفعل بصيغة ge...t في الآخر: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "لعبت كرة القدم."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "تعلمنا الألمانية."
+            }
+          ]
+        },
+        {
+          "title": "sein للحركة",
+          "text": "إذا تنقل الشخص من مكان إلى آخر (gehen، fahren، kommen) أو تغيرت حالته (aufwachen) نستعمل sein بدل haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "ذهبت إلى السينما."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "ذهبنا إلى المطار."
+            }
+          ]
+        },
+        {
+          "title": "sein → war",
+          "text": "ich war، du warst، er war، wir waren، ihr wart، sie waren. ich وer متشابهتان وبدون نهاية.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "أمس كنا في السينما."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "أين كنتم؟"
+            }
+          ]
+        },
+        {
+          "title": "الأفعال المساعدة في الماضي بدون أوملاوت",
+          "text": "können → konnte، müssen → musste، dürfen → durfte، wollen → wollte، sollen → sollte. يختفي الأوملاوت.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "أمس لم أستطع المجيء."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "a2-summit-two": {
+    "ru": {
+      "title": "Повторение: падежи",
+      "points": [
+        {
+          "title": "Wohin? или Wo?",
+          "text": "in, an, auf, hinter, neben и другие: если движение «куда?», то Akkusativ (auf den Tisch). Если место «где?», то Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Я ставлю вазу на стол."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Ваза стоит на столе."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, gegen, um",
+          "text": "После этих предлогов всегда Akkusativ: für dich, ohne den Hund, durch den Park. gegen значит «против».",
+          "examples": [
+            {
+              "de": "Ich komme ohne den Hund.",
+              "tr": "Я приду без собаки."
+            }
+          ]
+        },
+        {
+          "title": "Глагол + предлог",
+          "text": "Некоторые глаголы идут со своим предлогом, его учим вместе: warten auf, denken an, sprechen über. После них Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Я жду тебя."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Мы говорим о фильме."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: відмінки",
+      "points": [
+        {
+          "title": "Wohin? чи Wo?",
+          "text": "in, an, auf, hinter, neben та інші: якщо рух «куди?», то Akkusativ (auf den Tisch). Якщо місце «де?», то Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Я ставлю вазу на стіл."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Ваза стоїть на столі."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, gegen, um",
+          "text": "Після цих прийменників завжди Akkusativ: für dich, ohne den Hund, durch den Park. gegen означає «проти».",
+          "examples": [
+            {
+              "de": "Ich komme ohne den Hund.",
+              "tr": "Я прийду без собаки."
+            }
+          ]
+        },
+        {
+          "title": "Дієслово + прийменник",
+          "text": "Деякі дієслова йдуть зі своїм прийменником, його вчимо разом: warten auf, denken an, sprechen über. Після них Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Я чекаю на тебе."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Ми говоримо про фільм."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: cases",
+      "points": [
+        {
+          "title": "Wohin? or Wo?",
+          "text": "in, an, auf, hinter, neben and others: movement \"where to?\" takes the accusative (auf den Tisch). Location \"where?\" takes the dative (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "I put the vase on the table."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "The vase is on the table."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, gegen, um",
+          "text": "These prepositions always take the accusative: für dich, ohne den Hund, durch den Park. gegen means \"against\".",
+          "examples": [
+            {
+              "de": "Ich komme ohne den Hund.",
+              "tr": "I’ll come without the dog."
+            }
+          ]
+        },
+        {
+          "title": "Verb + preposition",
+          "text": "Some verbs come with their own preposition, learn them together: warten auf, denken an, sprechen über. They take the accusative.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "I’m waiting for you."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "We’re talking about the film."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: przypadki",
+      "points": [
+        {
+          "title": "Wohin? czy Wo?",
+          "text": "in, an, auf, hinter, neben i inne: ruch „dokąd?” to Akkusativ (auf den Tisch). Miejsce „gdzie?” to Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Stawiam wazon na stół."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Wazon stoi na stole."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, gegen, um",
+          "text": "Po tych przyimkach zawsze Akkusativ: für dich, ohne den Hund, durch den Park. gegen znaczy „przeciw”.",
+          "examples": [
+            {
+              "de": "Ich komme ohne den Hund.",
+              "tr": "Przyjdę bez psa."
+            }
+          ]
+        },
+        {
+          "title": "Czasownik + przyimek",
+          "text": "Niektóre czasowniki mają swój przyimek, uczymy się ich razem: warten auf, denken an, sprechen über. Po nich Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Czekam na ciebie."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Rozmawiamy o filmie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: casos",
+      "points": [
+        {
+          "title": "¿Wohin? o Wo?",
+          "text": "in, an, auf, hinter, neben y otras: movimiento \"¿adónde?\" lleva acusativo (auf den Tisch). Lugar \"¿dónde?\" lleva dativo (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Pongo el jarrón en la mesa."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "El jarrón está en la mesa."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, gegen, um",
+          "text": "Estas preposiciones siempre van con acusativo: für dich, ohne den Hund, durch den Park. gegen significa \"contra\".",
+          "examples": [
+            {
+              "de": "Ich komme ohne den Hund.",
+              "tr": "Vengo sin el perro."
+            }
+          ]
+        },
+        {
+          "title": "Verbo + preposición",
+          "text": "Algunos verbos llevan su preposición, se aprenden juntos: warten auf, denken an, sprechen über. Van con acusativo.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Te espero."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Hablamos de la película."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : les cas",
+      "points": [
+        {
+          "title": "Wohin ? ou Wo ?",
+          "text": "in, an, auf, hinter, neben et d’autres : un mouvement « vers où ? » prend l’accusatif (auf den Tisch). Un lieu « où ? » prend le datif (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Je pose le vase sur la table."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Le vase est sur la table."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, gegen, um",
+          "text": "Ces prépositions prennent toujours l’accusatif : für dich, ohne den Hund, durch den Park. gegen veut dire « contre ».",
+          "examples": [
+            {
+              "de": "Ich komme ohne den Hund.",
+              "tr": "Je viens sans le chien."
+            }
+          ]
+        },
+        {
+          "title": "Verbe + préposition",
+          "text": "Certains verbes ont leur préposition, on les apprend ensemble : warten auf, denken an, sprechen über. Suivis de l’accusatif.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Je t’attends."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Nous parlons du film."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: hâller",
+      "points": [
+        {
+          "title": "Wohin? mi, Wo? mu",
+          "text": "in, an, auf, hinter, neben ve diğerleri: \"nereye?\" hareketi Akkusativ (auf den Tisch), \"nerede?\" yeri Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Vazoyu masaya koyuyorum."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Vazo masada duruyor."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, gegen, um",
+          "text": "Bu edatlardan sonra her zaman Akkusativ: für dich, ohne den Hund, durch den Park. gegen \"karşı\" demektir.",
+          "examples": [
+            {
+              "de": "Ich komme ohne den Hund.",
+              "tr": "Köpeksiz geliyorum."
+            }
+          ]
+        },
+        {
+          "title": "Fiil + edat",
+          "text": "Bazı fiillerin kendi edatı var, birlikte öğrenilir: warten auf, denken an, sprechen über. Ardından Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Seni bekliyorum."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Film hakkında konuşuyoruz."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: cazurile",
+      "points": [
+        {
+          "title": "Wohin? sau Wo?",
+          "text": "in, an, auf, hinter, neben și altele: mișcarea „încotro?” cere acuzativ (auf den Tisch). Locul „unde?” cere dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Pun vaza pe masă."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Vaza stă pe masă."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, gegen, um",
+          "text": "Aceste prepoziții cer mereu acuzativ: für dich, ohne den Hund, durch den Park. gegen înseamnă „împotriva”.",
+          "examples": [
+            {
+              "de": "Ich komme ohne den Hund.",
+              "tr": "Vin fără câine."
+            }
+          ]
+        },
+        {
+          "title": "Verb + prepoziție",
+          "text": "Unele verbe au prepoziția lor, se învață împreună: warten auf, denken an, sprechen über. Sunt urmate de acuzativ.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Te aștept."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Vorbim despre film."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: kelishiklar",
+      "points": [
+        {
+          "title": "Wohin? yoki Wo?",
+          "text": "in, an, auf, hinter, neben va boshqalar: \"qayerga?\" harakat Akkusativ (auf den Tisch), \"qayerda?\" joy Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Vazani stolga qo'yaman."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Vaza stol ustida turibdi."
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, gegen, um",
+          "text": "Bu ko'makchilardan keyin doim Akkusativ: für dich, ohne den Hund, durch den Park. gegen \"qarshi\" degani.",
+          "examples": [
+            {
+              "de": "Ich komme ohne den Hund.",
+              "tr": "Itsiz kelaman."
+            }
+          ]
+        },
+        {
+          "title": "Fe'l + ko'makchi",
+          "text": "Ba'zi fe'llarning o'z ko'makchisi bor, birga o'rganiladi: warten auf, denken an, sprechen über. Ulardan keyin Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Seni kutyapman."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Biz film haqida gaplashyapmiz."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: कारक",
+      "points": [
+        {
+          "title": "Wohin? या Wo?",
+          "text": "in, an, auf, hinter, neben आदि: \"किधर?\" गति हो तो Akkusativ (auf den Tisch), \"कहाँ?\" जगह हो तो Dativ (auf dem Tisch)।",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "मैं फूलदान मेज़ पर रखता हूँ।"
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "फूलदान मेज़ पर रखा है।"
+            }
+          ]
+        },
+        {
+          "title": "für, ohne, durch, gegen, um",
+          "text": "इन संबंधसूचकों के बाद हमेशा Akkusativ: für dich, ohne den Hund, durch den Park। gegen मतलब \"के विरुद्ध\"।",
+          "examples": [
+            {
+              "de": "Ich komme ohne den Hund.",
+              "tr": "मैं कुत्ते के बिना आऊँगा।"
+            }
+          ]
+        },
+        {
+          "title": "क्रिया + संबंधसूचक",
+          "text": "कुछ क्रियाओं का अपना संबंधसूचक होता है, साथ में सीखो: warten auf, denken an, sprechen über। इनके बाद Akkusativ।",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "मैं तुम्हारा इंतज़ार कर रहा हूँ।"
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "हम फ़िल्म के बारे में बात कर रहे हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الحالات",
+      "points": [
+        {
+          "title": "Wohin؟ أم Wo؟",
+          "text": "in وan وauf وhinter وneben وغيرها: الحركة \"إلى أين؟\" تأخذ المفعول (auf den Tisch)، والمكان \"أين؟\" يأخذ الجر (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "أضع المزهرية على الطاولة."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "المزهرية على الطاولة."
+            }
+          ]
+        },
+        {
+          "title": "für وohne وdurch وgegen وum",
+          "text": "بعد هذه الحروف دائماً حالة المفعول: für dich، ohne den Hund، durch den Park. وgegen تعني \"ضد\".",
+          "examples": [
+            {
+              "de": "Ich komme ohne den Hund.",
+              "tr": "سآتي بدون الكلب."
+            }
+          ]
+        },
+        {
+          "title": "فعل + حرف جر",
+          "text": "بعض الأفعال لها حرف جر خاص يُحفظ معها: warten auf، denken an، sprechen über. وبعدها حالة المفعول.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "أنتظرك."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "نتحدث عن الفيلم."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "a2-summit-three": {
+    "ru": {
+      "title": "Повторение: предложения",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: глагол в конец",
+          "text": "После weil (потому что), dass (что), wenn (если, когда), ob (ли) глагол уходит в самый конец. Перед ними ставим запятую.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Я учу, потому что это важно."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Он говорит, что придёт."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt значит «есть, имеется». Сама фраза не меняется, а то, что после неё, в Akkusativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Здесь есть парк."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Здесь есть интернет?"
+            }
+          ]
+        },
+        {
+          "title": "mich или mir",
+          "text": "Возвратные: ich wasche mich, du wäschst dich, er wäscht sich. Если есть ещё предмет (руки, волосы), то mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "Он бреется."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Ты расчёсываешь волосы."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: речення",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: дієслово в кінець",
+          "text": "Після weil (бо), dass (що), wenn (якщо, коли), ob (чи) дієслово йде в самий кінець. Перед ними ставимо кому.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Я вчу, бо це важливо."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Він каже, що прийде."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt означає «є, існує». Сама фраза не змінюється, а те, що після неї, в Akkusativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Тут є парк."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Тут є інтернет?"
+            }
+          ]
+        },
+        {
+          "title": "mich чи mir",
+          "text": "Зворотні: ich wasche mich, du wäschst dich, er wäscht sich. Якщо є ще предмет (руки, волосся), то mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "Він голиться."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Ти розчісуєш волосся."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: sentences",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verb to the end",
+          "text": "After weil (because), dass (that), wenn (if, when), ob (whether) the verb goes to the very end. Put a comma before them.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "I study because it’s important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "He says that he’s coming."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + accusative",
+          "text": "es gibt means \"there is / there are\". The phrase never changes, and what follows is in the accusative: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "There’s a park here."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Is there internet here?"
+            }
+          ]
+        },
+        {
+          "title": "mich or mir",
+          "text": "Reflexive: ich wasche mich, du wäschst dich, er wäscht sich. If there’s another object (hands, hair), use mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "He’s shaving."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "You’re combing your hair."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: zdania",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: czasownik na koniec",
+          "text": "Po weil (bo), dass (że), wenn (jeśli, kiedy), ob (czy) czasownik idzie na sam koniec. Przed nimi stawiamy przecinek.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Uczę się, bo to ważne."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Mówi, że przyjdzie."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt znaczy „jest, istnieje”. Samo wyrażenie się nie zmienia, a to, co po nim, jest w Akkusativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Tu jest park."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Czy jest tu internet?"
+            }
+          ]
+        },
+        {
+          "title": "mich czy mir",
+          "text": "Zwrotne: ich wasche mich, du wäschst dich, er wäscht sich. Jeśli jest jeszcze przedmiot (ręce, włosy), to mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "On się goli."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Czeszesz włosy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: oraciones",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verbo al final",
+          "text": "Después de weil (porque), dass (que), wenn (si, cuando), ob (si) el verbo va al final. Antes va una coma.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Estudio porque es importante."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Dice que viene."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + acusativo",
+          "text": "es gibt significa \"hay\". La expresión no cambia y lo que sigue va en acusativo: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Aquí hay un parque."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "¿Hay internet aquí?"
+            }
+          ]
+        },
+        {
+          "title": "mich o mir",
+          "text": "Reflexivos: ich wasche mich, du wäschst dich, er wäscht sich. Si hay otro objeto (manos, pelo), mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "Él se afeita."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Te peinas el pelo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : les phrases",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob : verbe à la fin",
+          "text": "Après weil (parce que), dass (que), wenn (si, quand), ob (si) le verbe va tout à la fin. On met une virgule avant.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "J’apprends parce que c’est important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Il dit qu’il vient."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + accusatif",
+          "text": "es gibt veut dire « il y a ». L’expression ne change pas, et ce qui suit est à l’accusatif : einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Il y a un parc ici."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Il y a internet ici ?"
+            }
+          ]
+        },
+        {
+          "title": "mich ou mir",
+          "text": "Pronominaux : ich wasche mich, du wäschst dich, er wäscht sich. S’il y a un autre objet (mains, cheveux), mir, dir : Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "Il se rase."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Tu te coiffes les cheveux."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: cümleler",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: fiil sona",
+          "text": "weil (çünkü), dass (ki), wenn (eğer, -dığında), ob (-ip -mediği) sonrası fiil en sona gider. Öncesine virgül konur.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Öğreniyorum çünkü önemli."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Geleceğini söylüyor."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt \"var\" demektir. İfade değişmez, ardından gelen Akkusativ’dedir: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Burada bir park var."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Burada internet var mı?"
+            }
+          ]
+        },
+        {
+          "title": "mich mi, mir mi",
+          "text": "Dönüşlü: ich wasche mich, du wäschst dich, er wäscht sich. Başka nesne varsa (eller, saçlar) mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "O tıraş oluyor."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Saçlarını tarıyorsun."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: propoziții",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verbul la final",
+          "text": "După weil (pentru că), dass (că), wenn (dacă, când), ob (dacă) verbul merge la final. Înaintea lor se pune virgulă.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Învăț pentru că e important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Spune că vine."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + acuzativ",
+          "text": "es gibt înseamnă „există”. Expresia nu se schimbă, iar ce urmează e la acuzativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Aici e un parc."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Aici e internet?"
+            }
+          ]
+        },
+        {
+          "title": "mich sau mir",
+          "text": "Reflexive: ich wasche mich, du wäschst dich, er wäscht sich. Dacă mai e un obiect (mâini, păr), mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "El se bărbierește."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Îți piepteni părul."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: gaplar",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: fe'l oxiriga",
+          "text": "weil (chunki), dass (ki), wenn (agar, qachonki), ob (-mi yo'qmi) dan keyin fe'l eng oxiriga o'tadi. Ulardan oldin vergul qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "O'qiyman, chunki bu muhim."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "U kelishini aytyapti."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt \"bor\" degani. Iboraning o'zi o'zgarmaydi, undan keyingisi Akkusativda: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Bu yerda park bor."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Bu yerda internet bormi?"
+            }
+          ]
+        },
+        {
+          "title": "mich yoki mir",
+          "text": "O'zlik: ich wasche mich, du wäschst dich, er wäscht sich. Yana narsa bo'lsa (qo'l, soch), mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "U soqol olyapti."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Sen sochingni tarayapsan."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: वाक्य",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: क्रिया अंत में",
+          "text": "weil (क्योंकि), dass (कि), wenn (अगर, जब), ob (कि ... या नहीं) के बाद क्रिया बिल्कुल अंत में जाती है। इनसे पहले कॉमा।",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "मैं सीखता हूँ क्योंकि यह ज़रूरी है।"
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "वह कहता है कि वह आएगा।"
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt मतलब \"है, मौजूद है\"। वाक्यांश नहीं बदलता, इसके बाद वाला Akkusativ में: einen Park, keinen Eingang।",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "यहाँ एक पार्क है।"
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "क्या यहाँ इंटरनेट है?"
+            }
+          ]
+        },
+        {
+          "title": "mich या mir",
+          "text": "निजवाचक: ich wasche mich, du wäschst dich, er wäscht sich। अगर कोई और चीज़ हो (हाथ, बाल), तो mir, dir: Ich wasche mir die Hände।",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "वह दाढ़ी बना रहा है।"
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "तुम बाल सँवार रहे हो।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الجمل",
+      "points": [
+        {
+          "title": "weil وdass وwenn وob: الفعل في الآخر",
+          "text": "بعد weil (لأن) وdass (أنّ) وwenn (إذا، عندما) وob (هل) يذهب الفعل إلى آخر الجملة. ونضع قبلها فاصلة.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "أتعلم لأن ذلك مهم."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "يقول إنه سيأتي."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + المفعول",
+          "text": "es gibt تعني \"يوجد\". العبارة لا تتغير، وما بعدها في حالة المفعول: einen Park، keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "يوجد هنا حديقة."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "هل يوجد إنترنت هنا؟"
+            }
+          ]
+        },
+        {
+          "title": "mich أم mir",
+          "text": "الأفعال الانعكاسية: ich wasche mich، du wäschst dich، er wäscht sich. وإذا وُجد مفعول آخر (اليدان، الشعر) فـ mir وdir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "هو يحلق."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "أنت تمشط شعرك."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "a2-summit-four": {
+    "ru": {
+      "title": "Повторение: окончания",
+      "points": [
+        {
+          "title": "После der, die, das: -e",
+          "text": "Подлежащее в единственном числе получает -e: der alte Mann, die kleine Katze, das neue Haus. Так же die (Akkusativ) и das (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Новый дом большой."
+            }
+          ]
+        },
+        {
+          "title": "Во всех остальных случаях: -en",
+          "text": "den (Akkusativ мужского рода), dem и der (Dativ) и множественное получают -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Я вижу старую собаку."
+            }
+          ]
+        },
+        {
+          "title": "После ein прилагательное показывает род",
+          "text": "Подлежащее: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). Так как у ein нет окончания, его «берёт» прилагательное.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Пожилой мужчина ждал в парке."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: всегда -en",
+          "text": "После einem и einer прилагательное всегда с -en: in einem großen Haus, in einer kleinen Wohnung, mit einem guten Freund.",
+          "examples": [
+            {
+              "de": "Sie wohnen in einer kleinen Wohnung.",
+              "tr": "Они живут в маленькой квартире."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: закінчення",
+      "points": [
+        {
+          "title": "Після der, die, das: -e",
+          "text": "Підмет в однині отримує -e: der alte Mann, die kleine Katze, das neue Haus. Так само die і das в Akkusativ.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Новий будинок великий."
+            }
+          ]
+        },
+        {
+          "title": "В усіх інших випадках: -en",
+          "text": "den (Akkusativ чоловічого роду), dem і der (Dativ) та множина отримують -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Я бачу старого собаку."
+            }
+          ]
+        },
+        {
+          "title": "Після ein прикметник показує рід",
+          "text": "Підмет: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). Оскільки в ein немає закінчення, його «бере» прикметник.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Літній чоловік чекав у парку."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: завжди -en",
+          "text": "Після einem і einer прикметник завжди з -en: in einem großen Haus, in einer kleinen Wohnung, mit einem guten Freund.",
+          "examples": [
+            {
+              "de": "Sie wohnen in einer kleinen Wohnung.",
+              "tr": "Вони живуть у маленькій квартирі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: endings",
+      "points": [
+        {
+          "title": "After der, die, das: -e",
+          "text": "The singular subject takes -e: der alte Mann, die kleine Katze, das neue Haus. Same for die and das in the accusative.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "The new house is big."
+            }
+          ]
+        },
+        {
+          "title": "Everywhere else: -en",
+          "text": "den (masculine accusative), dem and der (dative) and all plurals take -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "I see the old dog."
+            }
+          ]
+        },
+        {
+          "title": "After ein the adjective shows the gender",
+          "text": "Subject: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). Since ein has no ending, the adjective takes it.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "An old man waited in the park."
+            }
+          ]
+        },
+        {
+          "title": "Dative: always -en",
+          "text": "After einem and einer the adjective always ends in -en: in einem großen Haus, in einer kleinen Wohnung, mit einem guten Freund.",
+          "examples": [
+            {
+              "de": "Sie wohnen in einer kleinen Wohnung.",
+              "tr": "They live in a small flat."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: końcówki",
+      "points": [
+        {
+          "title": "Po der, die, das: -e",
+          "text": "Podmiot w liczbie pojedynczej dostaje -e: der alte Mann, die kleine Katze, das neue Haus. Tak samo die i das w Akkusativ.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Nowy dom jest duży."
+            }
+          ]
+        },
+        {
+          "title": "W pozostałych przypadkach: -en",
+          "text": "den (Akkusativ rodzaju męskiego), dem i der (Dativ) oraz liczba mnoga dostają -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Widzę starego psa."
+            }
+          ]
+        },
+        {
+          "title": "Po ein przymiotnik pokazuje rodzaj",
+          "text": "Podmiot: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). Ponieważ ein nie ma końcówki, „bierze” ją przymiotnik.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Starszy pan czekał w parku."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: zawsze -en",
+          "text": "Po einem i einer przymiotnik zawsze z -en: in einem großen Haus, in einer kleinen Wohnung, mit einem guten Freund.",
+          "examples": [
+            {
+              "de": "Sie wohnen in einer kleinen Wohnung.",
+              "tr": "Mieszkają w małym mieszkaniu."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: terminaciones",
+      "points": [
+        {
+          "title": "Tras der, die, das: -e",
+          "text": "El sujeto en singular lleva -e: der alte Mann, die kleine Katze, das neue Haus. Igual die y das en acusativo.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "La casa nueva es grande."
+            }
+          ]
+        },
+        {
+          "title": "En los demás casos: -en",
+          "text": "den (acusativo masculino), dem y der (dativo) y el plural llevan -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Veo al perro viejo."
+            }
+          ]
+        },
+        {
+          "title": "Tras ein el adjetivo muestra el género",
+          "text": "Sujeto: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). Como ein no tiene terminación, la lleva el adjetivo.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Un hombre mayor esperó en el parque."
+            }
+          ]
+        },
+        {
+          "title": "Dativo: siempre -en",
+          "text": "Tras einem y einer el adjetivo siempre lleva -en: in einem großen Haus, in einer kleinen Wohnung, mit einem guten Freund.",
+          "examples": [
+            {
+              "de": "Sie wohnen in einer kleinen Wohnung.",
+              "tr": "Viven en un piso pequeño."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : les terminaisons",
+      "points": [
+        {
+          "title": "Après der, die, das : -e",
+          "text": "Le sujet au singulier prend -e : der alte Mann, die kleine Katze, das neue Haus. Pareil pour die et das à l’accusatif.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "La nouvelle maison est grande."
+            }
+          ]
+        },
+        {
+          "title": "Dans tous les autres cas : -en",
+          "text": "den (accusatif masculin), dem et der (datif) et le pluriel prennent -en : den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Je vois le vieux chien."
+            }
+          ]
+        },
+        {
+          "title": "Après ein, l’adjectif montre le genre",
+          "text": "Sujet : ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). Comme ein n’a pas de terminaison, c’est l’adjectif qui la prend.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Un vieil homme a attendu dans le parc."
+            }
+          ]
+        },
+        {
+          "title": "Datif : toujours -en",
+          "text": "Après einem et einer, l’adjectif prend toujours -en : in einem großen Haus, in einer kleinen Wohnung, mit einem guten Freund.",
+          "examples": [
+            {
+              "de": "Sie wohnen in einer kleinen Wohnung.",
+              "tr": "Ils habitent dans un petit appartement."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: ekler",
+      "points": [
+        {
+          "title": "der, die, das’tan sonra: -e",
+          "text": "Tekil özne -e alır: der alte Mann, die kleine Katze, das neue Haus. Akkusativ’de die ve das da böyle.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Yeni ev büyük."
+            }
+          ]
+        },
+        {
+          "title": "Diğer bütün durumlarda: -en",
+          "text": "den (eril Akkusativ), dem ve der (Dativ) ve çoğul -en alır: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Yaşlı köpeği görüyorum."
+            }
+          ]
+        },
+        {
+          "title": "ein’den sonra sıfat cinsiyeti gösterir",
+          "text": "Özne: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). ein ek almadığı için eki sıfat alır.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Yaşlı bir adam parkta bekledi."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: her zaman -en",
+          "text": "einem ve einer’den sonra sıfat her zaman -en alır: in einem großen Haus, in einer kleinen Wohnung, mit einem guten Freund.",
+          "examples": [
+            {
+              "de": "Sie wohnen in einer kleinen Wohnung.",
+              "tr": "Küçük bir dairede oturuyorlar."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: terminații",
+      "points": [
+        {
+          "title": "După der, die, das: -e",
+          "text": "Subiectul la singular primește -e: der alte Mann, die kleine Katze, das neue Haus. La fel die și das la acuzativ.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Casa nouă e mare."
+            }
+          ]
+        },
+        {
+          "title": "În toate celelalte cazuri: -en",
+          "text": "den (acuzativ masculin), dem și der (dativ) și pluralul primesc -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Văd câinele bătrân."
+            }
+          ]
+        },
+        {
+          "title": "După ein adjectivul arată genul",
+          "text": "Subiect: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). Pentru că ein nu are terminație, o preia adjectivul.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Un bătrân a așteptat în parc."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mereu -en",
+          "text": "După einem și einer adjectivul are mereu -en: in einem großen Haus, in einer kleinen Wohnung, mit einem guten Freund.",
+          "examples": [
+            {
+              "de": "Sie wohnen in einer kleinen Wohnung.",
+              "tr": "Locuiesc într-un apartament mic."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: qo'shimchalar",
+      "points": [
+        {
+          "title": "der, die, das dan keyin: -e",
+          "text": "Birlikdagi ega -e oladi: der alte Mann, die kleine Katze, das neue Haus. Akkusativda die va das ham shunday.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Yangi uy katta."
+            }
+          ]
+        },
+        {
+          "title": "Qolgan barcha holatlarda: -en",
+          "text": "den (erkak rodi Akkusativ), dem va der (Dativ) hamda ko'plik -en oladi: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Men qari itni ko'ryapman."
+            }
+          ]
+        },
+        {
+          "title": "ein dan keyin sifat rodni ko'rsatadi",
+          "text": "Ega: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). ein da qo'shimcha yo'qligi uchun uni sifat oladi.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Bir qariya parkda kutdi."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: doim -en",
+          "text": "einem va einer dan keyin sifat doim -en oladi: in einem großen Haus, in einer kleinen Wohnung, mit einem guten Freund.",
+          "examples": [
+            {
+              "de": "Sie wohnen in einer kleinen Wohnung.",
+              "tr": "Ular kichik kvartirada yashaydi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: अंत",
+      "points": [
+        {
+          "title": "der, die, das के बाद: -e",
+          "text": "एकवचन कर्ता -e लेता है: der alte Mann, die kleine Katze, das neue Haus। Akkusativ में die और das भी ऐसे ही।",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "नया घर बड़ा है।"
+            }
+          ]
+        },
+        {
+          "title": "बाकी सब जगह: -en",
+          "text": "den (पुल्लिंग Akkusativ), dem और der (Dativ) और बहुवचन -en लेते हैं: den alten Hund, mit dem netten Freund, die netten Kollegen।",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "मुझे बूढ़ा कुत्ता दिख रहा है।"
+            }
+          ]
+        },
+        {
+          "title": "ein के बाद विशेषण लिंग बताता है",
+          "text": "कर्ता: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es)। ein का कोई अंत नहीं, इसलिए अंत विशेषण लेता है।",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "एक बूढ़े आदमी ने पार्क में इंतज़ार किया।"
+            }
+          ]
+        },
+        {
+          "title": "Dativ: हमेशा -en",
+          "text": "einem और einer के बाद विशेषण हमेशा -en: in einem großen Haus, in einer kleinen Wohnung, mit einem guten Freund।",
+          "examples": [
+            {
+              "de": "Sie wohnen in einer kleinen Wohnung.",
+              "tr": "वे एक छोटे फ़्लैट में रहते हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: النهايات",
+      "points": [
+        {
+          "title": "بعد der وdie وdas: -e",
+          "text": "الفاعل المفرد يأخذ -e: der alte Mann، die kleine Katze، das neue Haus. وكذلك die وdas في المفعول.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "البيت الجديد كبير."
+            }
+          ]
+        },
+        {
+          "title": "في كل الحالات الأخرى: -en",
+          "text": "den (المذكر في المفعول) وdem وder (الجر) والجمع تأخذ -en: den alten Hund، mit dem netten Freund، die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "أرى الكلب العجوز."
+            }
+          ]
+        },
+        {
+          "title": "بعد ein تُظهر الصفة الجنس",
+          "text": "الفاعل: ein alter Mann (der, -er)، eine junge Frau (die, -e)، ein kleines Kind (das, -es). ولأن ein بلا نهاية تأخذها الصفة.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "انتظر رجل عجوز في الحديقة."
+            }
+          ]
+        },
+        {
+          "title": "الجر: دائماً -en",
+          "text": "بعد einem وeiner تأخذ الصفة دائماً -en: in einem großen Haus، in einer kleinen Wohnung، mit einem guten Freund.",
+          "examples": [
+            {
+              "de": "Sie wohnen in einer kleinen Wohnung.",
+              "tr": "يسكنون في شقة صغيرة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "a2-summit-five": {
+    "ru": {
+      "title": "Повторение: будущее",
+      "points": [
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я соберу чемодан."
+            }
+          ]
+        },
+        {
+          "title": "werden = становиться",
+          "text": "Без второго глагола werden значит «становиться»: Er wird Arzt. Es wird kalt. О будущем часто говорят просто в настоящем: Morgen fahre ich nach Hamburg.",
+          "examples": [
+            {
+              "de": "Er wird Arzt.",
+              "tr": "Он станет врачом."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: майбутнє",
+      "points": [
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я зберу валізу."
+            }
+          ]
+        },
+        {
+          "title": "werden = ставати",
+          "text": "Без другого дієслова werden означає «ставати»: Er wird Arzt. Es wird kalt. Про майбутнє часто кажуть просто в теперішньому: Morgen fahre ich nach Hamburg.",
+          "examples": [
+            {
+              "de": "Er wird Arzt.",
+              "tr": "Він стане лікарем."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: the future",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "I’ll pack a suitcase."
+            }
+          ]
+        },
+        {
+          "title": "werden = to become",
+          "text": "Without a second verb, werden means \"to become\": Er wird Arzt. Es wird kalt. The future is often just the present: Morgen fahre ich nach Hamburg.",
+          "examples": [
+            {
+              "de": "Er wird Arzt.",
+              "tr": "He’s going to be a doctor."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: przyszłość",
+      "points": [
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Spakuję walizkę."
+            }
+          ]
+        },
+        {
+          "title": "werden = stawać się",
+          "text": "Bez drugiego czasownika werden znaczy „stawać się”: Er wird Arzt. Es wird kalt. O przyszłości często mówi się w teraźniejszym: Morgen fahre ich nach Hamburg.",
+          "examples": [
+            {
+              "de": "Er wird Arzt.",
+              "tr": "On zostanie lekarzem."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: el futuro",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Haré la maleta."
+            }
+          ]
+        },
+        {
+          "title": "werden = volverse, hacerse",
+          "text": "Sin otro verbo, werden significa \"volverse, hacerse\": Er wird Arzt. Es wird kalt. Para el futuro se usa a menudo el presente: Morgen fahre ich nach Hamburg.",
+          "examples": [
+            {
+              "de": "Er wird Arzt.",
+              "tr": "Va a ser médico."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : le futur",
+      "points": [
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Je vais faire ma valise."
+            }
+          ]
+        },
+        {
+          "title": "werden = devenir",
+          "text": "Sans autre verbe, werden veut dire « devenir » : Er wird Arzt. Es wird kalt. Pour le futur, on utilise souvent le présent : Morgen fahre ich nach Hamburg.",
+          "examples": [
+            {
+              "de": "Er wird Arzt.",
+              "tr": "Il va devenir médecin."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: gelecek",
+      "points": [
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Bavul hazırlayacağım."
+            }
+          ]
+        },
+        {
+          "title": "werden = olmak",
+          "text": "İkinci fiil yoksa werden \"olmak\" demektir: Er wird Arzt. Es wird kalt. Gelecek için çoğu zaman şimdiki zaman kullanılır: Morgen fahre ich nach Hamburg.",
+          "examples": [
+            {
+              "de": "Er wird Arzt.",
+              "tr": "O doktor olacak."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: viitorul",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Îmi voi face bagajul."
+            }
+          ]
+        },
+        {
+          "title": "werden = a deveni",
+          "text": "Fără alt verb, werden înseamnă „a deveni”: Er wird Arzt. Es wird kalt. Despre viitor se vorbește des la prezent: Morgen fahre ich nach Hamburg.",
+          "examples": [
+            {
+              "de": "Er wird Arzt.",
+              "tr": "El va deveni medic."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: kelasi zamon",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Chamadon yig'aman."
+            }
+          ]
+        },
+        {
+          "title": "werden = bo'lmoq",
+          "text": "Ikkinchi fe'lsiz werden \"bo'lmoq\" degani: Er wird Arzt. Es wird kalt. Kelajak haqida ko'pincha hozirgi zamonda aytiladi: Morgen fahre ich nach Hamburg.",
+          "examples": [
+            {
+              "de": "Er wird Arzt.",
+              "tr": "U shifokor bo'ladi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: भविष्य",
+      "points": [
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "मैं सूटकेस पैक करूँगा।"
+            }
+          ]
+        },
+        {
+          "title": "werden = बनना",
+          "text": "दूसरी क्रिया के बिना werden का मतलब \"बनना\": Er wird Arzt। Es wird kalt। भविष्य के लिए अक्सर वर्तमान ही: Morgen fahre ich nach Hamburg।",
+          "examples": [
+            {
+              "de": "Er wird Arzt.",
+              "tr": "वह डॉक्टर बनेगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: المستقبل",
+      "points": [
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "سأحزم حقيبة."
+            }
+          ]
+        },
+        {
+          "title": "werden = يصبح",
+          "text": "بدون فعل ثانٍ تعني werden \"يصبح\": Er wird Arzt. Es wird kalt. وعن المستقبل يُستعمل المضارع غالباً: Morgen fahre ich nach Hamburg.",
+          "examples": [
+            {
+              "de": "Er wird Arzt.",
+              "tr": "سيصبح طبيباً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "a2-summit-six": {
+    "ru": {
+      "title": "Повторение: вежливость",
+      "points": [
+        {
+          "title": "Просьба вопросом",
+          "text": "Kannst du ...? Können Sie ...? Ещё вежливее: Könntest du ...? Könnten Sie ...? (не мог бы ты, не могли бы вы). Второй глагол в конце.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Вы можете это повторить?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Не могли бы вы открыть окно?"
+            }
+          ]
+        },
+        {
+          "title": "sollte: тебе следует",
+          "text": "Совет: sollte + инфинитив в конце. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Тебе стоит больше спать."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Вам не стоит так много работать."
+            }
+          ]
+        },
+        {
+          "title": "als и особые формы",
+          "text": "С чем сравниваем, ставим после als: älter als ich. Особые: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Чай лучше, чем кофе."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: ввічливість",
+      "points": [
+        {
+          "title": "Прохання питанням",
+          "text": "Kannst du ...? Können Sie ...? Ще ввічливіше: Könntest du ...? Könnten Sie ...? (чи не міг би ти, чи не могли б ви). Друге дієслово в кінці.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Ви можете це повторити?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Чи не могли б ви відчинити вікно?"
+            }
+          ]
+        },
+        {
+          "title": "sollte: тобі варто",
+          "text": "Порада: sollte + інфінітив у кінці. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Тобі варто більше спати."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Вам не варто так багато працювати."
+            }
+          ]
+        },
+        {
+          "title": "als і особливі форми",
+          "text": "З чим порівнюємо, ставимо після als: älter als ich. Особливі: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Чай кращий за каву."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: politeness",
+      "points": [
+        {
+          "title": "A request as a question",
+          "text": "Kannst du ...? Können Sie ...? Even more polite: Könntest du ...? Könnten Sie ...? (could you). The second verb goes to the end.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Can you repeat that?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Could you open the window?"
+            }
+          ]
+        },
+        {
+          "title": "sollte: you should",
+          "text": "Advice: sollte + infinitive at the end. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "You should sleep more."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "You shouldn’t work so much."
+            }
+          ]
+        },
+        {
+          "title": "als and irregular forms",
+          "text": "What you compare with goes after als: älter als ich. Irregular: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Tea is better than coffee."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: grzeczność",
+      "points": [
+        {
+          "title": "Prośba pytaniem",
+          "text": "Kannst du ...? Können Sie ...? Jeszcze grzeczniej: Könntest du ...? Könnten Sie ...? (czy mógłbyś, czy mógłby pan). Drugi czasownik na końcu.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Może pan to powtórzyć?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Czy mógłby pan otworzyć okno?"
+            }
+          ]
+        },
+        {
+          "title": "sollte: powinieneś",
+          "text": "Rada: sollte + bezokolicznik na końcu. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Powinieneś więcej spać."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Nie powinien pan tyle pracować."
+            }
+          ]
+        },
+        {
+          "title": "als i formy szczególne",
+          "text": "To, z czym porównujemy, stoi po als: älter als ich. Szczególne: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Herbata jest lepsza niż kawa."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: cortesía",
+      "points": [
+        {
+          "title": "Petición con pregunta",
+          "text": "Kannst du ...? Können Sie ...? Más educado: Könntest du ...? Könnten Sie ...? (¿podrías, podría usted?). El segundo verbo va al final.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "¿Puede repetirlo?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "¿Podría abrir la ventana?"
+            }
+          ]
+        },
+        {
+          "title": "sollte: deberías",
+          "text": "Consejo: sollte + infinitivo al final. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Deberías dormir más."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "No debería trabajar tanto."
+            }
+          ]
+        },
+        {
+          "title": "als y formas especiales",
+          "text": "Lo comparado va tras als: älter als ich. Especiales: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "El té es mejor que el café."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : la politesse",
+      "points": [
+        {
+          "title": "Demande sous forme de question",
+          "text": "Kannst du ... ? Können Sie ... ? Encore plus poli : Könntest du ... ? Könnten Sie ... ? (pourrais-tu, pourriez-vous). Le deuxième verbe va à la fin.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Vous pouvez répéter ?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Pourriez-vous ouvrir la fenêtre ?"
+            }
+          ]
+        },
+        {
+          "title": "sollte : tu devrais",
+          "text": "Conseil : sollte + infinitif à la fin. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Tu devrais dormir plus."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Vous ne devriez pas travailler autant."
+            }
+          ]
+        },
+        {
+          "title": "als et formes irrégulières",
+          "text": "Ce à quoi on compare vient après als : älter als ich. Irréguliers : gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Le thé est meilleur que le café."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: nezaket",
+      "points": [
+        {
+          "title": "Soru şeklinde rica",
+          "text": "Kannst du ...? Können Sie ...? Daha kibar: Könntest du ...? Könnten Sie ...? (... yapabilir misin/misiniz acaba). İkinci fiil sonda.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Tekrar edebilir misiniz?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Pencereyi açabilir misiniz acaba?"
+            }
+          ]
+        },
+        {
+          "title": "sollte: -meli",
+          "text": "Tavsiye: sollte + mastar sonda. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Daha çok uyumalısın."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Bu kadar çok çalışmamalısınız."
+            }
+          ]
+        },
+        {
+          "title": "als ve özel biçimler",
+          "text": "Karşılaştırılan als’tan sonra gelir: älter als ich. Özel: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Çay kahveden daha iyi."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: politețea",
+      "points": [
+        {
+          "title": "Rugăminte sub formă de întrebare",
+          "text": "Kannst du ...? Können Sie ...? Și mai politicos: Könntest du ...? Könnten Sie ...? (ai putea, ați putea). Al doilea verb la final.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Puteți repeta?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Ați putea deschide fereastra?"
+            }
+          ]
+        },
+        {
+          "title": "sollte: ar trebui",
+          "text": "Sfat: sollte + infinitiv la final. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Ar trebui să dormi mai mult."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "N-ar trebui să lucrați atât de mult."
+            }
+          ]
+        },
+        {
+          "title": "als și forme speciale",
+          "text": "Cu ce comparăm vine după als: älter als ich. Speciale: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Ceaiul e mai bun decât cafeaua."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: muloyimlik",
+      "points": [
+        {
+          "title": "Savol shaklida iltimos",
+          "text": "Kannst du ...? Können Sie ...? Yanada muloyim: Könntest du ...? Könnten Sie ...? (... qila olmaysizmi). Ikkinchi fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Buni qaytara olasizmi?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Derazani ocha olmaysizmi?"
+            }
+          ]
+        },
+        {
+          "title": "sollte: ... kerak",
+          "text": "Maslahat: sollte + infinitiv oxirida. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Ko'proq uxlashing kerak."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Siz bunchalik ko'p ishlamasligingiz kerak."
+            }
+          ]
+        },
+        {
+          "title": "als va alohida shakllar",
+          "text": "Nima bilan solishtirsak, als dan keyin: älter als ich. Alohida: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Choy qahvadan yaxshiroq."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: विनम्रता",
+      "points": [
+        {
+          "title": "सवाल के रूप में अनुरोध",
+          "text": "Kannst du ...? Können Sie ...? और विनम्र: Könntest du ...? Könnten Sie ...? (क्या तुम/आप ... सकेंगे)। दूसरी क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "क्या आप यह दोहरा सकते हैं?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "क्या आप खिड़की खोल सकेंगे?"
+            }
+          ]
+        },
+        {
+          "title": "sollte: तुम्हें चाहिए",
+          "text": "सलाह: sollte + इन्फ़िनिटिव अंत में। ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten।",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "तुम्हें ज़्यादा सोना चाहिए।"
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "आपको इतना ज़्यादा काम नहीं करना चाहिए।"
+            }
+          ]
+        },
+        {
+          "title": "als और खास रूप",
+          "text": "जिससे तुलना हो, वह als के बाद: älter als ich। खास: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer।",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "चाय कॉफ़ी से बेहतर है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الأدب",
+      "points": [
+        {
+          "title": "الطلب بصيغة سؤال",
+          "text": "Kannst du ...؟ Können Sie ...؟ وأكثر أدباً: Könntest du ...؟ Könnten Sie ...؟ (هل يمكنك من فضلك). والفعل الثاني في الآخر.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "هل يمكنك أن تعيد ذلك؟"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "هل يمكنك فتح النافذة من فضلك؟"
+            }
+          ]
+        },
+        {
+          "title": "sollte: ينبغي",
+          "text": "النصيحة: sollte + المصدر في الآخر. ich sollte، du solltest، er sollte، wir sollten، ihr solltet، sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "ينبغي أن تنام أكثر."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "لا ينبغي أن تعمل كثيراً هكذا."
+            }
+          ]
+        },
+        {
+          "title": "als والصيغ الخاصة",
+          "text": "ما نقارن به يأتي بعد als: älter als ich. والخاصة: gut → besser، viel → mehr، gern → lieber، hoch → höher، teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "الشاي أفضل من القهوة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "a2-summit-seven": {
+    "ru": {
+      "title": "Повторение: сравнение",
+      "points": [
+        {
+          "title": "als и особые формы",
+          "text": "С чем сравниваем, ставим после als: älter als ich. Особые: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Чай лучше, чем кофе."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Одинаково: so groß wie. Не одинаково: nicht so groß wie. После -er идёт als, после so идёт wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Я такого же роста, как папа."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: лучше всех",
+          "text": "Превосходная степень после глагола: am schnellsten, am ältesten. Особые: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Анна поёт лучше всех."
+            }
+          ]
+        },
+        {
+          "title": "der schnellste Zug",
+          "text": "Перед существительным: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "Это самая красивая улица."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: порівняння",
+      "points": [
+        {
+          "title": "als і особливі форми",
+          "text": "З чим порівнюємо, ставимо після als: älter als ich. Особливі: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Чай кращий за каву."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Однаково: so groß wie. Не однаково: nicht so groß wie. Після -er іде als, після so іде wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Я такого ж зросту, як тато."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: найкраще",
+          "text": "Найвищий ступінь після дієслова: am schnellsten, am ältesten. Особливі: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Анна співає найкраще."
+            }
+          ]
+        },
+        {
+          "title": "der schnellste Zug",
+          "text": "Перед іменником: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "Це найгарніша вулиця."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: comparison",
+      "points": [
+        {
+          "title": "als and irregular forms",
+          "text": "What you compare with goes after als: älter als ich. Irregular: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Tea is better than coffee."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Equal: so groß wie. Not equal: nicht so groß wie. After -er use als, after so use wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "I’m as tall as my father."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: the most",
+          "text": "Superlative after the verb: am schnellsten, am ältesten. Irregular: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna sings best."
+            }
+          ]
+        },
+        {
+          "title": "der schnellste Zug",
+          "text": "Before a noun: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "This is the most beautiful street."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: porównanie",
+      "points": [
+        {
+          "title": "als i formy szczególne",
+          "text": "To, z czym porównujemy, stoi po als: älter als ich. Szczególne: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Herbata jest lepsza niż kawa."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Tak samo: so groß wie. Nie tak samo: nicht so groß wie. Po -er idzie als, po so idzie wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Jestem tak wysoki jak tata."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: najbardziej",
+          "text": "Stopień najwyższy po czasowniku: am schnellsten, am ältesten. Szczególne: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna śpiewa najlepiej."
+            }
+          ]
+        },
+        {
+          "title": "der schnellste Zug",
+          "text": "Przed rzeczownikiem: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "To najpiękniejsza ulica."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: comparación",
+      "points": [
+        {
+          "title": "als y formas especiales",
+          "text": "Lo comparado va tras als: älter als ich. Especiales: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "El té es mejor que el café."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Igual: so groß wie. No igual: nicht so groß wie. Tras -er va als, tras so va wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Soy tan alto como mi padre."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: lo más",
+          "text": "Superlativo tras el verbo: am schnellsten, am ältesten. Especiales: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna canta mejor que nadie."
+            }
+          ]
+        },
+        {
+          "title": "der schnellste Zug",
+          "text": "Delante del sustantivo: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "Es la calle más bonita."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : la comparaison",
+      "points": [
+        {
+          "title": "als et formes irrégulières",
+          "text": "Ce à quoi on compare vient après als : älter als ich. Irréguliers : gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Le thé est meilleur que le café."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Égalité : so groß wie. Pas autant : nicht so groß wie. Après -er on met als, après so on met wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Je suis aussi grand que mon père."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten : le plus",
+          "text": "Superlatif après le verbe : am schnellsten, am ältesten. Irréguliers : am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "C’est Anna qui chante le mieux."
+            }
+          ]
+        },
+        {
+          "title": "der schnellste Zug",
+          "text": "Devant un nom : der/die/das + -ste : der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "C’est la plus belle rue."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: karşılaştırma",
+      "points": [
+        {
+          "title": "als ve özel biçimler",
+          "text": "Karşılaştırılan als’tan sonra gelir: älter als ich. Özel: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Çay kahveden daha iyi."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Eşit: so groß wie. Eşit değil: nicht so groß wie. -er’den sonra als, so’dan sonra wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Babam kadar uzunum."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: en çok",
+          "text": "Fiilden sonra en üstünlük: am schnellsten, am ältesten. Özel: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "En iyi Anna şarkı söylüyor."
+            }
+          ]
+        },
+        {
+          "title": "der schnellste Zug",
+          "text": "İsimden önce: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "Bu en güzel cadde."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: comparația",
+      "points": [
+        {
+          "title": "als și forme speciale",
+          "text": "Cu ce comparăm vine după als: älter als ich. Speciale: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Ceaiul e mai bun decât cafeaua."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "La fel: so groß wie. Nu la fel: nicht so groß wie. După -er vine als, după so vine wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Sunt la fel de înalt ca tata."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: cel mai",
+          "text": "Superlativul după verb: am schnellsten, am ältesten. Speciale: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna cântă cel mai bine."
+            }
+          ]
+        },
+        {
+          "title": "der schnellste Zug",
+          "text": "Înaintea substantivului: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "E cea mai frumoasă stradă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: qiyoslash",
+      "points": [
+        {
+          "title": "als va alohida shakllar",
+          "text": "Nima bilan solishtirsak, als dan keyin: älter als ich. Alohida: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Choy qahvadan yaxshiroq."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Bir xil: so groß wie. Bir xil emas: nicht so groß wie. -er dan keyin als, so dan keyin wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Men otamdek bo'yliman."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: eng",
+          "text": "Fe'ldan keyin orttirma daraja: am schnellsten, am ältesten. Alohida: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna hammadan yaxshi kuylaydi."
+            }
+          ]
+        },
+        {
+          "title": "der schnellste Zug",
+          "text": "Otdan oldin: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "Bu eng chiroyli ko'cha."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: तुलना",
+      "points": [
+        {
+          "title": "als और खास रूप",
+          "text": "जिससे तुलना हो, वह als के बाद: älter als ich। खास: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer।",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "चाय कॉफ़ी से बेहतर है।"
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "बराबर: so groß wie। बराबर नहीं: nicht so groß wie। -er के बाद als, so के बाद wie।",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "मैं अपने पिता जितना लंबा हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: सबसे",
+          "text": "क्रिया के बाद सर्वोत्तम रूप: am schnellsten, am ältesten। खास: am besten, am meisten, am liebsten।",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "अन्ना सबसे अच्छा गाती है।"
+            }
+          ]
+        },
+        {
+          "title": "der schnellste Zug",
+          "text": "संज्ञा से पहले: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant।",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "यह सबसे सुंदर सड़क है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: المقارنة",
+      "points": [
+        {
+          "title": "als والصيغ الخاصة",
+          "text": "ما نقارن به يأتي بعد als: älter als ich. والخاصة: gut → besser، viel → mehr، gern → lieber، hoch → höher، teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "الشاي أفضل من القهوة."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "التساوي: so groß wie. وعدم التساوي: nicht so groß wie. بعد -er نستعمل als، وبعد so نستعمل wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "أنا بطول أبي."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: الأكثر",
+          "text": "صيغة التفضيل بعد الفعل: am schnellsten، am ältesten. والخاصة: am besten، am meisten، am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "آنا تغني أفضل من الجميع."
+            }
+          ]
+        },
+        {
+          "title": "der schnellste Zug",
+          "text": "قبل الاسم: der/die/das + -ste: der schnellste Zug، die größte Stadt، das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "هذا أجمل شارع."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "a2-summit-eight": {
+    "ru": {
+      "title": "Повторение: советы и желания",
+      "points": [
+        {
+          "title": "sollte: тебе следует",
+          "text": "Совет: sollte + инфинитив в конце. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Тебе стоит больше спать."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Вам не стоит так много работать."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: я бы с удовольствием",
+          "text": "Желание: würde + gern + инфинитив в конце. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Я бы с удовольствием поехал на море."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Мечта: ich wäre gern ... (хотел бы быть), ich hätte gern ... (хотел бы иметь). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Я хотел бы быть богатым."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Мы хотели бы собаку."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: поради й бажання",
+      "points": [
+        {
+          "title": "sollte: тобі варто",
+          "text": "Порада: sollte + інфінітив у кінці. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Тобі варто більше спати."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Вам не варто так багато працювати."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: я б із задоволенням",
+          "text": "Бажання: würde + gern + інфінітив у кінці. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Я б залюбки поїхав на море."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Мрія: ich wäre gern ... (хотів би бути), ich hätte gern ... (хотів би мати). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Я хотів би бути багатим."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Ми хотіли б собаку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: advice and wishes",
+      "points": [
+        {
+          "title": "sollte: you should",
+          "text": "Advice: sollte + infinitive at the end. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "You should sleep more."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "You shouldn’t work so much."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: I’d like to",
+          "text": "A wish: würde + gern + infinitive at the end. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "I’d like to go to the seaside."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "A dream: ich wäre gern ... (I’d like to be), ich hätte gern ... (I’d like to have). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "I’d like to be rich."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "We’d like to have a dog."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: rady i życzenia",
+      "points": [
+        {
+          "title": "sollte: powinieneś",
+          "text": "Rada: sollte + bezokolicznik na końcu. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Powinieneś więcej spać."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Nie powinien pan tyle pracować."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: chętnie bym",
+          "text": "Życzenie: würde + gern + bezokolicznik na końcu. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Chętnie pojechałbym nad morze."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Marzenie: ich wäre gern ... (chciałbym być), ich hätte gern ... (chciałbym mieć). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Chciałbym być bogaty."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Chcielibyśmy mieć psa."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: consejos y deseos",
+      "points": [
+        {
+          "title": "sollte: deberías",
+          "text": "Consejo: sollte + infinitivo al final. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Deberías dormir más."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "No debería trabajar tanto."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: me gustaría",
+          "text": "Deseo: würde + gern + infinitivo al final. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Me gustaría ir al mar."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Un sueño: ich wäre gern ... (me gustaría ser), ich hätte gern ... (me gustaría tener). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Me gustaría ser rico."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Nos gustaría tener un perro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : conseils et souhaits",
+      "points": [
+        {
+          "title": "sollte : tu devrais",
+          "text": "Conseil : sollte + infinitif à la fin. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Tu devrais dormir plus."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Vous ne devriez pas travailler autant."
+            }
+          ]
+        },
+        {
+          "title": "würde gern : j’aimerais",
+          "text": "Souhait : würde + gern + infinitif à la fin. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "J’aimerais aller à la mer."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Un rêve : ich wäre gern ... (j’aimerais être), ich hätte gern ... (j’aimerais avoir). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "J’aimerais être riche."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Nous aimerions avoir un chien."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: tavsiyeler ve istekler",
+      "points": [
+        {
+          "title": "sollte: -meli",
+          "text": "Tavsiye: sollte + mastar sonda. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Daha çok uyumalısın."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Bu kadar çok çalışmamalısınız."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: isterdim",
+          "text": "İstek: würde + gern + mastar sonda. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Denize gitmek isterdim."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Hayal: ich wäre gern ... (olmak isterdim), ich hätte gern ... (sahip olmak isterdim). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Zengin olmak isterdim."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Bir köpeğimiz olsun isterdik."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: sfaturi și dorințe",
+      "points": [
+        {
+          "title": "sollte: ar trebui",
+          "text": "Sfat: sollte + infinitiv la final. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Ar trebui să dormi mai mult."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "N-ar trebui să lucrați atât de mult."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: aș vrea",
+          "text": "Dorință: würde + gern + infinitiv la final. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Aș vrea să merg la mare."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Un vis: ich wäre gern ... (aș vrea să fiu), ich hätte gern ... (aș vrea să am). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Aș vrea să fiu bogat."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Ne-ar plăcea să avem un câine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: maslahatlar va istaklar",
+      "points": [
+        {
+          "title": "sollte: ... kerak",
+          "text": "Maslahat: sollte + infinitiv oxirida. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Ko'proq uxlashing kerak."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Siz bunchalik ko'p ishlamasligingiz kerak."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: ... istardim",
+          "text": "Istak: würde + gern + infinitiv oxirida. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Dengizga borishni istardim."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Orzu: ich wäre gern ... (bo'lishni istardim), ich hätte gern ... (ega bo'lishni istardim). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Boy bo'lishni istardim."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "It bo'lishini istardik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: सलाह और इच्छाएँ",
+      "points": [
+        {
+          "title": "sollte: तुम्हें चाहिए",
+          "text": "सलाह: sollte + इन्फ़िनिटिव अंत में। ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten।",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "तुम्हें ज़्यादा सोना चाहिए।"
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "आपको इतना ज़्यादा काम नहीं करना चाहिए।"
+            }
+          ]
+        },
+        {
+          "title": "würde gern: मैं ... चाहूँगा",
+          "text": "इच्छा: würde + gern + इन्फ़िनिटिव अंत में। ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden।",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "मैं समुद्र किनारे जाना चाहूँगा।"
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "सपना: ich wäre gern ... (मैं ... होना चाहूँगा), ich hätte gern ... (मेरे पास ... हो)। du wärst, du hättest, wir wären, wir hätten।",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "काश मैं अमीर होता।"
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "हम एक कुत्ता रखना चाहेंगे।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: النصائح والرغبات",
+      "points": [
+        {
+          "title": "sollte: ينبغي",
+          "text": "النصيحة: sollte + المصدر في الآخر. ich sollte، du solltest، er sollte، wir sollten، ihr solltet، sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "ينبغي أن تنام أكثر."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "لا ينبغي أن تعمل كثيراً هكذا."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: أودّ",
+          "text": "الرغبة: würde + gern + المصدر في الآخر. ich würde، du würdest، er würde، wir würden، ihr würdet، sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "أودّ الذهاب إلى البحر."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern وhätte gern",
+          "text": "الحلم: ich wäre gern ... (أودّ أن أكون)، ich hätte gern ... (أودّ أن أملك). du wärst، du hättest، wir wären، wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "أودّ أن أكون غنياً."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "نودّ أن يكون عندنا كلب."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "a2-summit-nine": {
+    "ru": {
+      "title": "Большое повторение A2",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Прошедшее в разговоре: haben на втором месте, а глагол в форме ge...t уходит в конец: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Я играл в футбол."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Мы учили немецкий."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: глагол в конец",
+          "text": "После weil (потому что), dass (что), wenn (если, когда), ob (ли) глагол уходит в самый конец. Перед ними ставим запятую.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Я учу, потому что это важно."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Он говорит, что придёт."
+            }
+          ]
+        },
+        {
+          "title": "Во всех остальных случаях: -en",
+          "text": "den (Akkusativ мужского рода), dem и der (Dativ) и множественное получают -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Я вижу старую собаку."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Велике повторення A2",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Минуле в розмові: haben на другому місці, а дієслово у формі ge...t іде в кінець: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Я грав у футбол."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Ми вчили німецьку."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: дієслово в кінець",
+          "text": "Після weil (бо), dass (що), wenn (якщо, коли), ob (чи) дієслово йде в самий кінець. Перед ними ставимо кому.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Я вчу, бо це важливо."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Він каже, що прийде."
+            }
+          ]
+        },
+        {
+          "title": "В усіх інших випадках: -en",
+          "text": "den (Akkusativ чоловічого роду), dem і der (Dativ) та множина отримують -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Я бачу старого собаку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Big A2 review",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Spoken past: haben in second place, and the verb in its ge...t form at the end: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "I played football."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "We learned German."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: verb to the end",
+          "text": "After weil (because), dass (that), wenn (if, when), ob (whether) the verb goes to the very end. Put a comma before them.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "I study because it’s important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "He says that he’s coming."
+            }
+          ]
+        },
+        {
+          "title": "Everywhere else: -en",
+          "text": "den (masculine accusative), dem and der (dative) and all plurals take -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "I see the old dog."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Wielka powtórka A2",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Przeszłość w mowie: haben na drugim miejscu, a czasownik w formie ge...t na końcu: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Grałem w piłkę nożną."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Uczyliśmy się niemieckiego."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: czasownik na koniec",
+          "text": "Po weil (bo), dass (że), wenn (jeśli, kiedy), ob (czy) czasownik idzie na sam koniec. Przed nimi stawiamy przecinek.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Uczę się, bo to ważne."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Mówi, że przyjdzie."
+            }
+          ]
+        },
+        {
+          "title": "W pozostałych przypadkach: -en",
+          "text": "den (Akkusativ rodzaju męskiego), dem i der (Dativ) oraz liczba mnoga dostają -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Widzę starego psa."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Gran repaso A2",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "El pasado hablado: haben en segundo lugar y el verbo en forma ge...t al final: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Jugué al fútbol."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Aprendimos alemán."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: verbo al final",
+          "text": "Después de weil (porque), dass (que), wenn (si, cuando), ob (si) el verbo va al final. Antes va una coma.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Estudio porque es importante."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Dice que viene."
+            }
+          ]
+        },
+        {
+          "title": "En los demás casos: -en",
+          "text": "den (acusativo masculino), dem y der (dativo) y el plural llevan -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Veo al perro viejo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Grande révision A2",
+      "points": [
+        {
+          "title": "Perfekt : haben + ge...t",
+          "text": "Le passé à l’oral : haben en deuxième position, et le verbe en ge...t à la fin : spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "J’ai joué au foot."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Nous avons appris l’allemand."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob : verbe à la fin",
+          "text": "Après weil (parce que), dass (que), wenn (si, quand), ob (si) le verbe va tout à la fin. On met une virgule avant.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "J’apprends parce que c’est important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Il dit qu’il vient."
+            }
+          ]
+        },
+        {
+          "title": "Dans tous les autres cas : -en",
+          "text": "den (accusatif masculin), dem et der (datif) et le pluriel prennent -en : den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Je vois le vieux chien."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Büyük A2 tekrarı",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Konuşmada geçmiş: haben ikinci sırada, fiil ge...t biçiminde sonda: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Futbol oynadım."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Almanca öğrendik."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: fiil sona",
+          "text": "weil (çünkü), dass (ki), wenn (eğer, -dığında), ob (-ip -mediği) sonrası fiil en sona gider. Öncesine virgül konur.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Öğreniyorum çünkü önemli."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Geleceğini söylüyor."
+            }
+          ]
+        },
+        {
+          "title": "Diğer bütün durumlarda: -en",
+          "text": "den (eril Akkusativ), dem ve der (Dativ) ve çoğul -en alır: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Yaşlı köpeği görüyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Marea recapitulare A2",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Trecutul vorbit: haben pe locul doi, iar verbul în forma ge...t la final: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Am jucat fotbal."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Am învățat germana."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: verbul la final",
+          "text": "După weil (pentru că), dass (că), wenn (dacă, când), ob (dacă) verbul merge la final. Înaintea lor se pune virgulă.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Învăț pentru că e important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Spune că vine."
+            }
+          ]
+        },
+        {
+          "title": "În toate celelalte cazuri: -en",
+          "text": "den (acuzativ masculin), dem și der (dativ) și pluralul primesc -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Văd câinele bătrân."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Katta A2 takrorlash",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Og'zaki o'tgan zamon: haben ikkinchi o'rinda, fe'l ge...t shaklida oxirida: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Men futbol o'ynadim."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Biz nemis tilini o'rgandik."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: fe'l oxiriga",
+          "text": "weil (chunki), dass (ki), wenn (agar, qachonki), ob (-mi yo'qmi) dan keyin fe'l eng oxiriga o'tadi. Ulardan oldin vergul qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "O'qiyman, chunki bu muhim."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "U kelishini aytyapti."
+            }
+          ]
+        },
+        {
+          "title": "Qolgan barcha holatlarda: -en",
+          "text": "den (erkak rodi Akkusativ), dem va der (Dativ) hamda ko'plik -en oladi: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Men qari itni ko'ryapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "A2 का बड़ा दोहराव",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "बोलचाल का भूतकाल: haben दूसरे स्थान पर, और क्रिया ge...t रूप में अंत में: spielen → gespielt।",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "मैंने फ़ुटबॉल खेला।"
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "हमने जर्मन सीखी।"
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: क्रिया अंत में",
+          "text": "weil (क्योंकि), dass (कि), wenn (अगर, जब), ob (कि ... या नहीं) के बाद क्रिया बिल्कुल अंत में जाती है। इनसे पहले कॉमा।",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "मैं सीखता हूँ क्योंकि यह ज़रूरी है।"
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "वह कहता है कि वह आएगा।"
+            }
+          ]
+        },
+        {
+          "title": "बाकी सब जगह: -en",
+          "text": "den (पुल्लिंग Akkusativ), dem और der (Dativ) और बहुवचन -en लेते हैं: den alten Hund, mit dem netten Freund, die netten Kollegen।",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "मुझे बूढ़ा कुत्ता दिख रहा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المراجعة الكبرى لـ A2",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "الماضي في الكلام: haben في المكان الثاني، والفعل بصيغة ge...t في الآخر: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "لعبت كرة القدم."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "تعلمنا الألمانية."
+            }
+          ]
+        },
+        {
+          "title": "weil وdass وwenn وob: الفعل في الآخر",
+          "text": "بعد weil (لأن) وdass (أنّ) وwenn (إذا، عندما) وob (هل) يذهب الفعل إلى آخر الجملة. ونضع قبلها فاصلة.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "أتعلم لأن ذلك مهم."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "يقول إنه سيأتي."
+            }
+          ]
+        },
+        {
+          "title": "في كل الحالات الأخرى: -en",
+          "text": "den (المذكر في المفعول) وdem وder (الجر) والجمع تأخذ -en: den alten Hund، mit dem netten Freund، die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "أرى الكلب العجوز."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "a2-summit-ten": {
+    "ru": {
+      "title": "Экзамен A2: как решать",
+      "points": [
+        {
+          "title": "Как решать экзамен",
+          "text": "1. Найди время: Perfekt, Präteritum или Futur. 2. Посмотри на порядок: после weil, dass, ob глагол в конце. 3. Проверь падеж и окончание: где или куда, der или ein.",
+          "examples": [
+            {
+              "de": "Ich weiß nicht, ob er ein Auto hat.",
+              "tr": "Я не знаю, есть ли у него машина."
+            },
+            {
+              "de": "Ich würde gern am Meer wohnen.",
+              "tr": "Я бы с удовольствием жил у моря."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Іспит A2: як розв’язувати",
+      "points": [
+        {
+          "title": "Як розв’язувати іспит",
+          "text": "1. Знайди час: Perfekt, Präteritum чи Futur. 2. Подивися на порядок: після weil, dass, ob дієслово в кінці. 3. Перевір відмінок і закінчення: де чи куди, der чи ein.",
+          "examples": [
+            {
+              "de": "Ich weiß nicht, ob er ein Auto hat.",
+              "tr": "Я не знаю, чи є в нього машина."
+            },
+            {
+              "de": "Ich würde gern am Meer wohnen.",
+              "tr": "Я б залюбки жив біля моря."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "A2 exam: how to approach it",
+      "points": [
+        {
+          "title": "How to approach the exam",
+          "text": "1. Find the tense: Perfekt, Präteritum or Futur. 2. Check the word order: after weil, dass, ob the verb goes last. 3. Check the case and ending: where or where to, der or ein.",
+          "examples": [
+            {
+              "de": "Ich weiß nicht, ob er ein Auto hat.",
+              "tr": "I don’t know if he has a car."
+            },
+            {
+              "de": "Ich würde gern am Meer wohnen.",
+              "tr": "I’d love to live by the sea."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Egzamin A2: jak rozwiązywać",
+      "points": [
+        {
+          "title": "Jak rozwiązywać egzamin",
+          "text": "1. Znajdź czas: Perfekt, Präteritum czy Futur. 2. Sprawdź szyk: po weil, dass, ob czasownik na końcu. 3. Sprawdź przypadek i końcówkę: gdzie czy dokąd, der czy ein.",
+          "examples": [
+            {
+              "de": "Ich weiß nicht, ob er ein Auto hat.",
+              "tr": "Nie wiem, czy on ma samochód."
+            },
+            {
+              "de": "Ich würde gern am Meer wohnen.",
+              "tr": "Chętnie mieszkałbym nad morzem."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Examen A2: cómo resolverlo",
+      "points": [
+        {
+          "title": "Cómo hacer el examen",
+          "text": "1. Busca el tiempo: Perfekt, Präteritum o Futur. 2. Mira el orden: tras weil, dass, ob el verbo va al final. 3. Revisa caso y terminación: dónde o adónde, der o ein.",
+          "examples": [
+            {
+              "de": "Ich weiß nicht, ob er ein Auto hat.",
+              "tr": "No sé si tiene coche."
+            },
+            {
+              "de": "Ich würde gern am Meer wohnen.",
+              "tr": "Me gustaría vivir junto al mar."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Examen A2 : comment s’y prendre",
+      "points": [
+        {
+          "title": "Comment aborder l’examen",
+          "text": "1. Trouve le temps : Perfekt, Präteritum ou Futur. 2. Regarde l’ordre : après weil, dass, ob, le verbe va à la fin. 3. Vérifie le cas et la terminaison : où ou vers où, der ou ein.",
+          "examples": [
+            {
+              "de": "Ich weiß nicht, ob er ein Auto hat.",
+              "tr": "Je ne sais pas s’il a une voiture."
+            },
+            {
+              "de": "Ich würde gern am Meer wohnen.",
+              "tr": "J’aimerais vivre au bord de la mer."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "A2 sınavı: nasıl çözülür",
+      "points": [
+        {
+          "title": "Sınav nasıl çözülür",
+          "text": "1. Zamanı bul: Perfekt, Präteritum ya da Futur. 2. Sıraya bak: weil, dass, ob’dan sonra fiil sonda. 3. Hâl ve eki kontrol et: nerede mi nereye mi, der mi ein mi.",
+          "examples": [
+            {
+              "de": "Ich weiß nicht, ob er ein Auto hat.",
+              "tr": "Arabası olup olmadığını bilmiyorum."
+            },
+            {
+              "de": "Ich würde gern am Meer wohnen.",
+              "tr": "Deniz kenarında yaşamak isterdim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Examenul A2: cum rezolvi",
+      "points": [
+        {
+          "title": "Cum rezolvi examenul",
+          "text": "1. Găsește timpul: Perfekt, Präteritum sau Futur. 2. Uită-te la ordine: după weil, dass, ob verbul e la final. 3. Verifică cazul și terminația: unde sau încotro, der sau ein.",
+          "examples": [
+            {
+              "de": "Ich weiß nicht, ob er ein Auto hat.",
+              "tr": "Nu știu dacă are mașină."
+            },
+            {
+              "de": "Ich würde gern am Meer wohnen.",
+              "tr": "Mi-ar plăcea să locuiesc la mare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "A2 imtihoni: qanday yechish",
+      "points": [
+        {
+          "title": "Imtihonni qanday yechish",
+          "text": "1. Zamonni top: Perfekt, Präteritum yoki Futur. 2. Tartibga qara: weil, dass, ob dan keyin fe'l oxirida. 3. Kelishik va qo'shimchani tekshir: qayerda yoki qayerga, der yoki ein.",
+          "examples": [
+            {
+              "de": "Ich weiß nicht, ob er ein Auto hat.",
+              "tr": "Uning mashinasi bor-yo'qligini bilmayman."
+            },
+            {
+              "de": "Ich würde gern am Meer wohnen.",
+              "tr": "Dengiz bo'yida yashashni istardim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "A2 परीक्षा: कैसे हल करें",
+      "points": [
+        {
+          "title": "परीक्षा कैसे हल करें",
+          "text": "1. काल ढूँढो: Perfekt, Präteritum या Futur। 2. क्रम देखो: weil, dass, ob के बाद क्रिया अंत में। 3. कारक और अंत जाँचो: कहाँ या किधर, der या ein।",
+          "examples": [
+            {
+              "de": "Ich weiß nicht, ob er ein Auto hat.",
+              "tr": "मुझे नहीं पता कि उसके पास गाड़ी है या नहीं।"
+            },
+            {
+              "de": "Ich würde gern am Meer wohnen.",
+              "tr": "मैं समुद्र किनारे रहना चाहूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "امتحان A2: كيف تحل",
+      "points": [
+        {
+          "title": "كيف تحل الامتحان",
+          "text": "1. حدد الزمن: Perfekt أو Präteritum أو Futur. 2. انظر إلى الترتيب: بعد weil وdass وob يكون الفعل في الآخر. 3. تحقق من الحالة والنهاية: أين أم إلى أين، der أم ein.",
+          "examples": [
+            {
+              "de": "Ich weiß nicht, ob er ein Auto hat.",
+              "tr": "لا أعرف إن كانت عنده سيارة."
+            },
+            {
+              "de": "Ich würde gern am Meer wohnen.",
+              "tr": "أودّ أن أعيش على البحر."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

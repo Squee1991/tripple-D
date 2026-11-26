@@ -1,0 +1,3806 @@
+{
+  "experience-summit-one": {
+    "ru": {
+      "title": "Повторение: прошлое",
+      "points": [
+        {
+          "title": "Сильные глаголы: новый корень",
+          "text": "Корень меняется, а у ich и er нет окончания: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Во множественном: wir gingen, sie kamen. Эти формы учим.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Вдруг он увидел свет."
+            }
+          ]
+        },
+        {
+          "title": "als или wenn",
+          "text": "als: одно событие или один период в прошлом. wenn: то, что повторялось (immer wenn). Глагол в придаточном в конце.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Когда я был ребёнком, я жил в Гамбурге."
+            }
+          ]
+        },
+        {
+          "title": "Plusquamperfekt: ещё раньше",
+          "text": "Действие, которое было раньше другого: hatte или war + Partizip II. war для движения и изменения, как в Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Когда он пришёл, я уже поел."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Когда я позвонил, он уже ушёл."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: после того как",
+          "text": "После nachdem Plusquamperfekt, в главном Präteritum. Глагол в придаточном в конце, главное начинается с глагола.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "После того как я поел, я пошёл гулять."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: минуле",
+      "points": [
+        {
+          "title": "Сильні дієслова: новий корінь",
+          "text": "Корінь змінюється, а в ich та er немає закінчення: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. У множині: wir gingen, sie kamen. Ці форми вчимо.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Раптом він побачив світло."
+            }
+          ]
+        },
+        {
+          "title": "als чи wenn",
+          "text": "als: одна подія або один період у минулому. wenn: те, що повторювалося (immer wenn). Дієслово в підрядному в кінці.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Коли я був дитиною, я жив у Гамбурзі."
+            }
+          ]
+        },
+        {
+          "title": "Plusquamperfekt: ще раніше",
+          "text": "Дія, що була раніше за іншу: hatte або war + Partizip II. war для руху й зміни, як у Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Коли він прийшов, я вже поїв."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Коли я зателефонував, він уже пішов."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: після того як",
+          "text": "Після nachdem Plusquamperfekt, у головному Präteritum. Дієслово в підрядному в кінці, головне починається з дієслова.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Після того як я поїв, я пішов гуляти."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: the past",
+      "points": [
+        {
+          "title": "Strong verbs: a new stem",
+          "text": "The stem changes and ich and er have no ending: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Plural: wir gingen, sie kamen. Learn these forms.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Suddenly he saw a light."
+            }
+          ]
+        },
+        {
+          "title": "als or wenn",
+          "text": "als: one event or one period in the past. wenn: something that happened repeatedly (immer wenn). The verb goes to the end.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "When I was a child, I lived in Hamburg."
+            }
+          ]
+        },
+        {
+          "title": "Plusquamperfekt: even earlier",
+          "text": "An action that happened before another one: hatte or war + Partizip II. war for movement and change, as in Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "When he came, I had already eaten."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "When I called, he had already left."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: after",
+          "text": "After nachdem use Plusquamperfekt, in the main clause Präteritum. The verb goes last in the clause, and the main clause starts with the verb.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "After I had eaten, I went for a walk."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: przeszłość",
+      "points": [
+        {
+          "title": "Czasowniki mocne: nowy temat",
+          "text": "Temat się zmienia, a ich i er nie mają końcówki: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. W mnogiej: wir gingen, sie kamen. Tych form się uczymy.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Nagle zobaczył światło."
+            }
+          ]
+        },
+        {
+          "title": "als czy wenn",
+          "text": "als: jedno zdarzenie albo jeden okres w przeszłości. wenn: coś, co się powtarzało (immer wenn). Czasownik na końcu.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Kiedy byłem dzieckiem, mieszkałem w Hamburgu."
+            }
+          ]
+        },
+        {
+          "title": "Plusquamperfekt: jeszcze wcześniej",
+          "text": "Czynność wcześniejsza od innej: hatte albo war + Partizip II. war przy ruchu i zmianie, jak w Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Kiedy przyszedł, już zjadłem."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Kiedy zadzwoniłem, on już wyszedł."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: po tym jak",
+          "text": "Po nachdem Plusquamperfekt, w zdaniu głównym Präteritum. Czasownik w podrzędnym na końcu, główne zaczyna się od czasownika.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Po tym jak zjadłem, poszedłem na spacer."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: el pasado",
+      "points": [
+        {
+          "title": "Verbos fuertes: raíz nueva",
+          "text": "La raíz cambia y ich y er no tienen terminación: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Plural: wir gingen, sie kamen. Hay que aprenderlas.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "De repente vio una luz."
+            }
+          ]
+        },
+        {
+          "title": "als o wenn",
+          "text": "als: un hecho o un periodo en el pasado. wenn: algo que se repetía (immer wenn). El verbo va al final.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Cuando era niño, vivía en Hamburgo."
+            }
+          ]
+        },
+        {
+          "title": "Plusquamperfekt: aún antes",
+          "text": "Una acción anterior a otra: hatte o war + Partizip II. war para el movimiento y el cambio, como en el Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Cuando llegó, yo ya había comido."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Cuando llamé, él ya se había ido."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: después de que",
+          "text": "Tras nachdem, Plusquamperfekt; en la principal, Präteritum. El verbo va al final de la subordinada y la principal empieza por el verbo.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Después de comer, fui a pasear."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : le passé",
+      "points": [
+        {
+          "title": "Verbes forts : nouveau radical",
+          "text": "Le radical change et ich et er n’ont pas de terminaison : gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Pluriel : wir gingen, sie kamen. À apprendre.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Soudain, il vit une lumière."
+            }
+          ]
+        },
+        {
+          "title": "als ou wenn",
+          "text": "als : un seul événement ou une période du passé. wenn : ce qui se répétait (immer wenn). Le verbe va à la fin.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Quand j’étais enfant, j’habitais à Hambourg."
+            }
+          ]
+        },
+        {
+          "title": "Plusquamperfekt : encore avant",
+          "text": "Une action antérieure à une autre : hatte ou war + Partizip II. war pour le mouvement et le changement, comme au Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Quand il est arrivé, j’avais déjà mangé."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Quand j’ai appelé, il était déjà parti."
+            }
+          ]
+        },
+        {
+          "title": "nachdem : après que",
+          "text": "Après nachdem, Plusquamperfekt ; dans la principale, Präteritum. Le verbe va à la fin de la subordonnée, la principale commence par le verbe.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Après avoir mangé, je suis allé me promener."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: geçmiş",
+      "points": [
+        {
+          "title": "Güçlü fiiller: yeni kök",
+          "text": "Kök değişir, ich ve er ek almaz: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Çoğul: wir gingen, sie kamen. Bunlar ezberlenir.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Birden bir ışık gördü."
+            }
+          ]
+        },
+        {
+          "title": "als mı, wenn mi",
+          "text": "als: geçmişte tek olay ya da dönem. wenn: tekrarlanan şey (immer wenn). Fiil sonda.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Çocukken Hamburg’da yaşıyordum."
+            }
+          ]
+        },
+        {
+          "title": "Plusquamperfekt: daha önce",
+          "text": "Başka bir eylemden önce olan eylem: hatte ya da war + Partizip II. Hareket ve değişim için war, Perfekt’teki gibi.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "O geldiğinde ben çoktan yemiştim."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Aradığımda o çoktan gitmişti."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: -dikten sonra",
+          "text": "nachdem’den sonra Plusquamperfekt, ana cümlede Präteritum. Yan cümlede fiil sonda, ana cümle fiille başlar.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Yemek yedikten sonra yürüyüşe çıktım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: trecutul",
+      "points": [
+        {
+          "title": "Verbe tari: rădăcină nouă",
+          "text": "Rădăcina se schimbă, iar ich și er nu au terminație: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Plural: wir gingen, sie kamen. Se învață.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Deodată a văzut o lumină."
+            }
+          ]
+        },
+        {
+          "title": "als sau wenn",
+          "text": "als: un eveniment sau o perioadă în trecut. wenn: ceva ce se repeta (immer wenn). Verbul la final.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Când eram copil, locuiam în Hamburg."
+            }
+          ]
+        },
+        {
+          "title": "Plusquamperfekt: și mai înainte",
+          "text": "O acțiune petrecută înaintea alteia: hatte sau war + Partizip II. war pentru mișcare și schimbare, ca la Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Când a venit, mâncasem deja."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Când am sunat, el plecase deja."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: după ce",
+          "text": "După nachdem Plusquamperfekt, în principală Präteritum. Verbul la finalul subordonatei, principala începe cu verbul.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "După ce am mâncat, am ieșit la plimbare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: o'tgan zamon",
+      "points": [
+        {
+          "title": "Kuchli fe'llar: yangi o'zak",
+          "text": "O'zak o'zgaradi, ich va er da qo'shimcha yo'q: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Ko'plik: wir gingen, sie kamen. Ularni yodlaymiz.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "To'satdan u yorug'lik ko'rdi."
+            }
+          ]
+        },
+        {
+          "title": "als yoki wenn",
+          "text": "als: o'tmishdagi bitta voqea yoki davr. wenn: takrorlangan narsa (immer wenn). Fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Bolaligimda Gamburgda yashardim."
+            }
+          ]
+        },
+        {
+          "title": "Plusquamperfekt: yanada oldin",
+          "text": "Boshqasidan oldin bo'lgan harakat: hatte yoki war + Partizip II. Harakat va o'zgarish uchun war, Perfekt dagidek.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "U kelganda men allaqachon ovqatlanib bo‘lgan edim."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Men qo'ng'iroq qilganimda u allaqachon ketgan edi."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: ...gandan keyin",
+          "text": "nachdem dan keyin Plusquamperfekt, bosh gapda Präteritum. Ergash gapda fe'l oxirida, bosh gap fe'l bilan boshlanadi.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Ovqatlangandan keyin sayrga chiqdim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: भूतकाल",
+      "points": [
+        {
+          "title": "मज़बूत क्रियाएँ: नया मूल",
+          "text": "मूल बदलता है और ich व er में कोई अंत नहीं: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr। बहुवचन: wir gingen, sie kamen। इन्हें याद करो।",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "अचानक उसे एक रोशनी दिखी।"
+            }
+          ]
+        },
+        {
+          "title": "als या wenn",
+          "text": "als: भूतकाल की एक घटना या एक दौर। wenn: बार-बार होने वाली बात (immer wenn)। क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "जब मैं बच्चा था, मैं हैम्बर्ग में रहता था।"
+            }
+          ]
+        },
+        {
+          "title": "Plusquamperfekt: उससे भी पहले",
+          "text": "जो काम दूसरे से पहले हुआ: hatte या war + Partizip II। गति और बदलाव के लिए war, Perfekt की तरह।",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "जब वह आया, मैं खाना खा चुका था।"
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "जब मैंने फ़ोन किया, वह जा चुका था।"
+            }
+          ]
+        },
+        {
+          "title": "nachdem: के बाद",
+          "text": "nachdem के बाद Plusquamperfekt, मुख्य वाक्य में Präteritum। उपवाक्य में क्रिया अंत में, मुख्य वाक्य क्रिया से शुरू।",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "खाना खाने के बाद मैं टहलने गया।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الماضي",
+      "points": [
+        {
+          "title": "الأفعال القوية: جذر جديد",
+          "text": "يتغير الجذر ولا نهاية مع ich وer: gehen → ging، kommen → kam، sehen → sah، fahren → fuhr. والجمع: wir gingen، sie kamen. نحفظها.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "فجأة رأى ضوءاً."
+            }
+          ]
+        },
+        {
+          "title": "als أم wenn",
+          "text": "als: حدث واحد أو فترة واحدة في الماضي. wenn: ما كان يتكرر (immer wenn). والفعل في الآخر.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "عندما كنت طفلاً كنت أسكن في هامبورغ."
+            }
+          ]
+        },
+        {
+          "title": "Plusquamperfekt: قبل ذلك",
+          "text": "فعل حدث قبل فعل آخر: hatte أو war + Partizip II. وwar للحركة والتغير كما في Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "عندما جاء كنت قد أكلت."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "عندما اتصلت كان قد ذهب."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: بعد أن",
+          "text": "بعد nachdem يأتي Plusquamperfekt، وفي الجملة الرئيسية Präteritum. والفعل في آخر الفرعية، والرئيسية تبدأ بالفعل.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "بعد أن أكلت خرجت للتنزه."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "experience-summit-two": {
+    "ru": {
+      "title": "Повторение: причины",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: глагол в конце. denn: обычный порядок слов. deshalb: сначала причина, потом следствие, и глагол сразу после deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Я остаюсь дома, потому что болен."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Я остаюсь дома: я болен."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem и obwohl",
+          "text": "trotzdem (всё равно): глагол сразу после. obwohl (хотя): это придаточное, глагол в конце. Смысл один: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Хотя шёл дождь, мы пошли гулять."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Шёл дождь, но мы всё равно пошли гулять."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: причини",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: дієслово в кінці. denn: звичайний порядок слів. deshalb: спочатку причина, потім наслідок, і дієслово одразу після deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Я залишаюся вдома, бо хворий."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Я залишаюся вдома, адже я хворий."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem і obwohl",
+          "text": "trotzdem (все одно): дієслово одразу після. obwohl (хоча): це підрядне, дієслово в кінці. Зміст один: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Хоча йшов дощ, ми пішли гуляти."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Йшов дощ, але ми все одно пішли гуляти."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: reasons",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: verb at the end. denn: normal word order. deshalb: first the reason, then the result, with the verb right after deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "I’m staying at home because I’m ill."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "I’m staying at home, for I’m ill."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem and obwohl",
+          "text": "trotzdem (anyway, still): the verb right after. obwohl (although): a subordinate clause, verb at the end. Same meaning: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Although it was raining, we went for a walk."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "It was raining, but we still went for a walk."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: przyczyny",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: czasownik na końcu. denn: zwykły szyk. deshalb: najpierw przyczyna, potem skutek, czasownik zaraz po deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Zostaję w domu, bo jestem chory."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Zostaję w domu, bo jestem chory."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem i obwohl",
+          "text": "trotzdem (mimo to): czasownik zaraz po. obwohl (chociaż): zdanie podrzędne, czasownik na końcu. Znaczenie to samo: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Chociaż padało, poszliśmy na spacer."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Padało, mimo to poszliśmy na spacer."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: causas",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: verbo al final. denn: orden normal. deshalb: primero la causa, luego la consecuencia, con el verbo justo después de deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Me quedo en casa porque estoy enfermo."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Me quedo en casa, pues estoy enfermo."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem y obwohl",
+          "text": "trotzdem (aun así): el verbo justo después. obwohl (aunque): subordinada, verbo al final. Mismo sentido: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Aunque llovía, fuimos a pasear."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Llovía, aun así fuimos a pasear."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : causes",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil : verbe à la fin. denn : ordre normal. deshalb : d’abord la cause, puis la conséquence, avec le verbe juste après deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Je reste à la maison parce que je suis malade."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Je reste à la maison, car je suis malade."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem et obwohl",
+          "text": "trotzdem (quand même) : verbe juste après. obwohl (bien que) : subordonnée, verbe à la fin. Même sens : Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Bien qu’il pleuve, nous sommes allés nous promener."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Il pleuvait, nous sommes quand même allés nous promener."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: sebepler",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: fiil sonda. denn: normal sıra. deshalb: önce sebep, sonra sonuç; fiil deshalb’dan hemen sonra.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Evde kalıyorum çünkü hastayım."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Evde kalıyorum, zira hastayım."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem ve obwohl",
+          "text": "trotzdem (yine de): fiil hemen ardından. obwohl (-e rağmen): yan cümle, fiil sonda. Anlam aynı: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Yağmur yağmasına rağmen yürüyüşe çıktık."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Yağmur yağıyordu, yine de yürüyüşe çıktık."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: cauze",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: verbul la final. denn: ordine normală. deshalb: întâi cauza, apoi efectul, cu verbul imediat după deshalb.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Rămân acasă pentru că sunt bolnav."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Rămân acasă, căci sunt bolnav."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem și obwohl",
+          "text": "trotzdem (totuși): verbul imediat după. obwohl (deși): subordonată, verbul la final. Același sens: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Deși ploua, am ieșit la plimbare."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Ploua, totuși am ieșit la plimbare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: sabablar",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: fe'l oxirida. denn: oddiy tartib. deshalb: avval sabab, keyin natija, fe'l deshalb dan keyin darhol.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Uyda qolaman, chunki kasalman."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Uyda qolaman, axir kasalman."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem va obwohl",
+          "text": "trotzdem (baribir): fe'l darhol keyin. obwohl (garchi): ergash gap, fe'l oxirida. Ma'no bir: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Yomg'ir yog'ayotgan bo'lsa ham, sayrga chiqdik."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Yomg'ir yog'ardi, baribir sayrga chiqdik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: कारण",
+      "points": [
+        {
+          "title": "weil, denn, deshalb",
+          "text": "weil: क्रिया अंत में। denn: सामान्य क्रम। deshalb: पहले कारण, फिर नतीजा, और deshalb के तुरंत बाद क्रिया।",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "मैं घर पर रहूँगा क्योंकि मैं बीमार हूँ।"
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "मैं घर पर रहूँगा, क्योंकि मैं बीमार हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "trotzdem और obwohl",
+          "text": "trotzdem (फिर भी): क्रिया तुरंत बाद। obwohl (हालाँकि): उपवाक्य, क्रिया अंत में। मतलब एक: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir।",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "बारिश हो रही थी, फिर भी हम टहलने गए।"
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "बारिश हो रही थी, फिर भी हम टहलने गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الأسباب",
+      "points": [
+        {
+          "title": "weil وdenn وdeshalb",
+          "text": "weil: الفعل في الآخر. denn: ترتيب عادي. deshalb: السبب أولاً ثم النتيجة، والفعل بعد deshalb مباشرة.",
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "أبقى في البيت لأنني مريض."
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "أبقى في البيت، فأنا مريض."
+            }
+          ]
+        },
+        {
+          "title": "trotzdem وobwohl",
+          "text": "trotzdem (مع ذلك): الفعل بعدها مباشرة. obwohl (رغم أن): جملة فرعية والفعل في الآخر. والمعنى واحد: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "رغم أنها كانت تمطر خرجنا للتنزه."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "كانت تمطر، ومع ذلك خرجنا للتنزه."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "experience-summit-three": {
+    "ru": {
+      "title": "Повторение: цели",
+      "points": [
+        {
+          "title": "um ... zu: чтобы",
+          "text": "um ... zu, когда цель у того же человека. zu и инфинитив в самом конце.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "Я учу немецкий, чтобы работать в Германии."
+            }
+          ]
+        },
+        {
+          "title": "damit: чтобы ты...",
+          "text": "damit, когда действуют разные люди. Это придаточное: глагол в конце. Тот же человек: um ... zu. Другой человек: damit.",
+          "examples": [
+            {
+              "de": "Ich spreche langsam, damit du mich verstehst.",
+              "tr": "Я говорю медленно, чтобы ты меня понял."
+            }
+          ]
+        },
+        {
+          "title": "zu внутри: einzukaufen",
+          "text": "У отделяемых глаголов zu встаёт между приставкой и основой: einkaufen → einzukaufen, anrufen → anzurufen.",
+          "examples": [
+            {
+              "de": "Ich fahre in die Stadt, um einzukaufen.",
+              "tr": "Я еду в город, чтобы сделать покупки."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: цілі",
+      "points": [
+        {
+          "title": "um ... zu: щоб",
+          "text": "um ... zu, коли мета в тієї самої людини. zu та інфінітив у самому кінці.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "Я вчу німецьку, щоб працювати в Німеччині."
+            }
+          ]
+        },
+        {
+          "title": "damit: щоб ти...",
+          "text": "damit, коли діють різні люди. Це підрядне: дієслово в кінці. Та сама людина: um ... zu. Інша людина: damit.",
+          "examples": [
+            {
+              "de": "Ich spreche langsam, damit du mich verstehst.",
+              "tr": "Я говорю повільно, щоб ти мене зрозумів."
+            }
+          ]
+        },
+        {
+          "title": "zu всередині: einzukaufen",
+          "text": "У відокремлюваних дієслів zu стає між префіксом і основою: einkaufen → einzukaufen, anrufen → anzurufen.",
+          "examples": [
+            {
+              "de": "Ich fahre in die Stadt, um einzukaufen.",
+              "tr": "Я їду в місто, щоб зробити покупки."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: goals",
+      "points": [
+        {
+          "title": "um ... zu: in order to",
+          "text": "um ... zu when the same person has the goal. zu and the infinitive go at the very end.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "I’m learning German to work in Germany."
+            }
+          ]
+        },
+        {
+          "title": "damit: so that you...",
+          "text": "damit when different people act. It’s a subordinate clause: verb at the end. Same person: um ... zu. Another person: damit.",
+          "examples": [
+            {
+              "de": "Ich spreche langsam, damit du mich verstehst.",
+              "tr": "I speak slowly so that you understand me."
+            }
+          ]
+        },
+        {
+          "title": "zu inside: einzukaufen",
+          "text": "With separable verbs zu goes between the prefix and the stem: einkaufen → einzukaufen, anrufen → anzurufen.",
+          "examples": [
+            {
+              "de": "Ich fahre in die Stadt, um einzukaufen.",
+              "tr": "I’m going into town to do some shopping."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: cele",
+      "points": [
+        {
+          "title": "um ... zu: żeby",
+          "text": "um ... zu, gdy cel ma ta sama osoba. zu i bezokolicznik na samym końcu.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "Uczę się niemieckiego, żeby pracować w Niemczech."
+            }
+          ]
+        },
+        {
+          "title": "damit: żebyś...",
+          "text": "damit, gdy działają różne osoby. To zdanie podrzędne: czasownik na końcu. Ta sama osoba: um ... zu. Inna osoba: damit.",
+          "examples": [
+            {
+              "de": "Ich spreche langsam, damit du mich verstehst.",
+              "tr": "Mówię powoli, żebyś mnie zrozumiał."
+            }
+          ]
+        },
+        {
+          "title": "zu w środku: einzukaufen",
+          "text": "W czasownikach rozdzielnych zu stoi między przedrostkiem a tematem: einkaufen → einzukaufen, anrufen → anzurufen.",
+          "examples": [
+            {
+              "de": "Ich fahre in die Stadt, um einzukaufen.",
+              "tr": "Jadę do miasta, żeby zrobić zakupy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: metas",
+      "points": [
+        {
+          "title": "um ... zu: para",
+          "text": "um ... zu cuando el objetivo es de la misma persona. zu y el infinitivo van al final.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "Aprendo alemán para trabajar en Alemania."
+            }
+          ]
+        },
+        {
+          "title": "damit: para que tú...",
+          "text": "damit cuando actúan personas distintas. Es subordinada: verbo al final. Misma persona: um ... zu. Otra persona: damit.",
+          "examples": [
+            {
+              "de": "Ich spreche langsam, damit du mich verstehst.",
+              "tr": "Hablo despacio para que me entiendas."
+            }
+          ]
+        },
+        {
+          "title": "zu dentro: einzukaufen",
+          "text": "En los verbos separables zu va entre el prefijo y la raíz: einkaufen → einzukaufen, anrufen → anzurufen.",
+          "examples": [
+            {
+              "de": "Ich fahre in die Stadt, um einzukaufen.",
+              "tr": "Voy a la ciudad a hacer la compra."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : buts",
+      "points": [
+        {
+          "title": "um ... zu : pour",
+          "text": "um ... zu quand le but concerne la même personne. zu et l’infinitif vont tout à la fin.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "J’apprends l’allemand pour travailler en Allemagne."
+            }
+          ]
+        },
+        {
+          "title": "damit : pour que tu...",
+          "text": "damit quand ce sont des personnes différentes. C’est une subordonnée : verbe à la fin. Même personne : um ... zu. Autre personne : damit.",
+          "examples": [
+            {
+              "de": "Ich spreche langsam, damit du mich verstehst.",
+              "tr": "Je parle lentement pour que tu me comprennes."
+            }
+          ]
+        },
+        {
+          "title": "zu à l’intérieur : einzukaufen",
+          "text": "Avec les verbes séparables, zu se place entre le préfixe et le radical : einkaufen → einzukaufen, anrufen → anzurufen.",
+          "examples": [
+            {
+              "de": "Ich fahre in die Stadt, um einzukaufen.",
+              "tr": "Je vais en ville pour faire des courses."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: amaçlar",
+      "points": [
+        {
+          "title": "um ... zu: -mek için",
+          "text": "Amaç aynı kişiye aitse um ... zu. zu ve mastar en sonda.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "Almanya’da çalışmak için Almanca öğreniyorum."
+            }
+          ]
+        },
+        {
+          "title": "damit: senin ... için",
+          "text": "Farklı kişiler eylem yapıyorsa damit. Yan cümle: fiil sonda. Aynı kişi: um ... zu. Başka kişi: damit.",
+          "examples": [
+            {
+              "de": "Ich spreche langsam, damit du mich verstehst.",
+              "tr": "Beni anlaman için yavaş konuşuyorum."
+            }
+          ]
+        },
+        {
+          "title": "zu içeride: einzukaufen",
+          "text": "Ayrılabilen fiillerde zu ön ek ile kök arasına girer: einkaufen → einzukaufen, anrufen → anzurufen.",
+          "examples": [
+            {
+              "de": "Ich fahre in die Stadt, um einzukaufen.",
+              "tr": "Alışveriş yapmak için şehre gidiyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: scopuri",
+      "points": [
+        {
+          "title": "um ... zu: ca să",
+          "text": "um ... zu când scopul e al aceleiași persoane. zu și infinitivul la final.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "Învăț germana ca să lucrez în Germania."
+            }
+          ]
+        },
+        {
+          "title": "damit: ca tu să...",
+          "text": "damit când acționează persoane diferite. E subordonată: verbul la final. Aceeași persoană: um ... zu. Altă persoană: damit.",
+          "examples": [
+            {
+              "de": "Ich spreche langsam, damit du mich verstehst.",
+              "tr": "Vorbesc rar ca să mă înțelegi."
+            }
+          ]
+        },
+        {
+          "title": "zu în interior: einzukaufen",
+          "text": "La verbele separabile zu stă între prefix și rădăcină: einkaufen → einzukaufen, anrufen → anzurufen.",
+          "examples": [
+            {
+              "de": "Ich fahre in die Stadt, um einzukaufen.",
+              "tr": "Merg în oraș ca să fac cumpărături."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: maqsadlar",
+      "points": [
+        {
+          "title": "um ... zu: ... uchun",
+          "text": "Maqsad o'sha odamniki bo'lsa um ... zu. zu va infinitiv eng oxirida.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "Germaniyada ishlash uchun nemis tilini o'rganyapman."
+            }
+          ]
+        },
+        {
+          "title": "damit: sen ... uchun",
+          "text": "Har xil odamlar harakat qilsa damit. Bu ergash gap: fe'l oxirida. O'sha odam: um ... zu. Boshqa odam: damit.",
+          "examples": [
+            {
+              "de": "Ich spreche langsam, damit du mich verstehst.",
+              "tr": "Meni tushunishing uchun sekin gapiraman."
+            }
+          ]
+        },
+        {
+          "title": "zu ichida: einzukaufen",
+          "text": "Ajraladigan fe'llarda zu old qo'shimcha va o'zak orasiga kiradi: einkaufen → einzukaufen, anrufen → anzurufen.",
+          "examples": [
+            {
+              "de": "Ich fahre in die Stadt, um einzukaufen.",
+              "tr": "Xarid qilish uchun shaharga boraman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: लक्ष्य",
+      "points": [
+        {
+          "title": "um ... zu: ... के लिए",
+          "text": "जब लक्ष्य उसी व्यक्ति का हो, तब um ... zu। zu और इन्फ़िनिटिव बिल्कुल अंत में।",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "मैं जर्मनी में काम करने के लिए जर्मन सीख रहा हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "damit: ताकि तुम...",
+          "text": "जब अलग-अलग लोग काम करें, तब damit। यह उपवाक्य है: क्रिया अंत में। वही व्यक्ति: um ... zu। दूसरा व्यक्ति: damit।",
+          "examples": [
+            {
+              "de": "Ich spreche langsam, damit du mich verstehst.",
+              "tr": "मैं धीरे बोलता हूँ ताकि तुम मुझे समझो।"
+            }
+          ]
+        },
+        {
+          "title": "zu बीच में: einzukaufen",
+          "text": "अलग होने वाली क्रियाओं में zu उपसर्ग और मूल के बीच आता है: einkaufen → einzukaufen, anrufen → anzurufen।",
+          "examples": [
+            {
+              "de": "Ich fahre in die Stadt, um einzukaufen.",
+              "tr": "मैं खरीदारी करने शहर जा रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الأهداف",
+      "points": [
+        {
+          "title": "um ... zu: لكي",
+          "text": "um ... zu عندما يكون الهدف للشخص نفسه. وzu والمصدر في آخر الجملة.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "أتعلم الألمانية لكي أعمل في ألمانيا."
+            }
+          ]
+        },
+        {
+          "title": "damit: لكي تـ...",
+          "text": "damit عندما يقوم أشخاص مختلفون بالفعل. وهي جملة فرعية والفعل في الآخر. الشخص نفسه: um ... zu. وشخص آخر: damit.",
+          "examples": [
+            {
+              "de": "Ich spreche langsam, damit du mich verstehst.",
+              "tr": "أتكلم ببطء لكي تفهمني."
+            }
+          ]
+        },
+        {
+          "title": "zu في الداخل: einzukaufen",
+          "text": "في الأفعال المنفصلة تقع zu بين السابقة والجذر: einkaufen → einzukaufen، anrufen → anzurufen.",
+          "examples": [
+            {
+              "de": "Ich fahre in die Stadt, um einzukaufen.",
+              "tr": "أذهب إلى المدينة لكي أتسوق."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "experience-summit-four": {
+    "ru": {
+      "title": "Повторение: следствия",
+      "points": [
+        {
+          "title": "sodass: так что",
+          "text": "sodass говорит о результате. Это придаточное: глагол в конце, перед sodass запятая.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Шёл сильный дождь, так что мы остались дома."
+            }
+          ]
+        },
+        {
+          "title": "Цель или результат",
+          "text": "damit: цель, то, чего хотят добиться. sodass: результат, то, что получилось.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Мы пришли рано, так что нам достались хорошие места."
+            }
+          ]
+        },
+        {
+          "title": "falls: если вдруг",
+          "text": "falls значит «если вдруг, на случай если». Глагол в конце. Если falls первым, главное начинается с глагола.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Если вдруг пойдёт дождь, мы останемся дома."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: наслідки",
+      "points": [
+        {
+          "title": "sodass: тож",
+          "text": "sodass говорить про результат. Це підрядне: дієслово в кінці, перед sodass кома.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Ішов сильний дощ, тож ми залишилися вдома."
+            }
+          ]
+        },
+        {
+          "title": "Мета чи результат",
+          "text": "damit: мета, те, чого хочуть досягти. sodass: результат, те, що вийшло.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Ми прийшли рано, тож нам дісталися гарні місця."
+            }
+          ]
+        },
+        {
+          "title": "falls: якщо раптом",
+          "text": "falls означає «якщо раптом, на випадок якщо». Дієслово в кінці. Якщо falls першим, головне починається з дієслова.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Якщо раптом піде дощ, ми залишимося вдома."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: results",
+      "points": [
+        {
+          "title": "sodass: so that (result)",
+          "text": "sodass describes the result. It’s a subordinate clause: verb at the end, comma before sodass.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "It rained heavily, so we stayed at home."
+            }
+          ]
+        },
+        {
+          "title": "Goal or result",
+          "text": "damit: the goal, what you want to achieve. sodass: the result, what actually happened.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "We arrived early, so we got good seats."
+            }
+          ]
+        },
+        {
+          "title": "falls: in case",
+          "text": "falls means \"in case, if by any chance\". Verb at the end. If falls comes first, the main clause starts with the verb.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "In case it rains, we’ll stay at home."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: skutki",
+      "points": [
+        {
+          "title": "sodass: tak że",
+          "text": "sodass mówi o skutku. To zdanie podrzędne: czasownik na końcu, przed sodass przecinek.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Mocno padało, tak że zostaliśmy w domu."
+            }
+          ]
+        },
+        {
+          "title": "Cel czy skutek",
+          "text": "damit: cel, to, co chcemy osiągnąć. sodass: skutek, to, co wyszło.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Przyszliśmy wcześnie, tak że dostaliśmy dobre miejsca."
+            }
+          ]
+        },
+        {
+          "title": "falls: gdyby",
+          "text": "falls znaczy „gdyby, na wypadek gdyby”. Czasownik na końcu. Jeśli falls jest pierwsze, główne zaczyna się od czasownika.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Gdyby padało, zostaniemy w domu."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: consecuencias",
+      "points": [
+        {
+          "title": "sodass: de modo que",
+          "text": "sodass expresa el resultado. Es subordinada: verbo al final, coma antes de sodass.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Llovía mucho, de modo que nos quedamos en casa."
+            }
+          ]
+        },
+        {
+          "title": "Objetivo o resultado",
+          "text": "damit: el objetivo, lo que se quiere lograr. sodass: el resultado, lo que salió.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Llegamos pronto, así que conseguimos buenos sitios."
+            }
+          ]
+        },
+        {
+          "title": "falls: por si",
+          "text": "falls significa \"por si, en caso de que\". Verbo al final. Si falls va primero, la principal empieza por el verbo.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Por si llueve, nos quedamos en casa."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : conséquences",
+      "points": [
+        {
+          "title": "sodass : si bien que",
+          "text": "sodass exprime le résultat. C’est une subordonnée : verbe à la fin, virgule avant sodass.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Il pleuvait fort, si bien que nous sommes restés à la maison."
+            }
+          ]
+        },
+        {
+          "title": "But ou résultat",
+          "text": "damit : le but, ce qu’on veut obtenir. sodass : le résultat, ce qui s’est passé.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Nous sommes arrivés tôt, si bien que nous avons eu de bonnes places."
+            }
+          ]
+        },
+        {
+          "title": "falls : au cas où",
+          "text": "falls veut dire « au cas où ». Verbe à la fin. Si falls est en premier, la principale commence par le verbe.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Au cas où il pleuvrait, nous resterons à la maison."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: sonuçlar",
+      "points": [
+        {
+          "title": "sodass: öyle ki",
+          "text": "sodass sonucu anlatır. Yan cümle: fiil sonda, sodass’tan önce virgül.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Şiddetli yağmur yağdı, öyle ki evde kaldık."
+            }
+          ]
+        },
+        {
+          "title": "Amaç mı, sonuç mu",
+          "text": "damit: amaç, ulaşılmak istenen. sodass: sonuç, olan şey.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Erken geldik, öyle ki iyi yerler bulduk."
+            }
+          ]
+        },
+        {
+          "title": "falls: olur da",
+          "text": "falls \"olur da, şayet\" demektir. Fiil sonda. falls başta olursa ana cümle fiille başlar.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Olur da yağmur yağarsa evde kalırız."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: consecințe",
+      "points": [
+        {
+          "title": "sodass: astfel încât",
+          "text": "sodass arată rezultatul. E subordonată: verbul la final, virgulă înainte de sodass.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "A plouat tare, astfel încât am rămas acasă."
+            }
+          ]
+        },
+        {
+          "title": "Scop sau rezultat",
+          "text": "damit: scopul, ce vrei să obții. sodass: rezultatul, ce a ieșit.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Am venit devreme, astfel încât am prins locuri bune."
+            }
+          ]
+        },
+        {
+          "title": "falls: în caz că",
+          "text": "falls înseamnă „în caz că”. Verbul la final. Dacă falls e primul, principala începe cu verbul.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "În caz că plouă, rămânem acasă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: natijalar",
+      "points": [
+        {
+          "title": "sodass: shunday qilib",
+          "text": "sodass natijani bildiradi. Bu ergash gap: fe'l oxirida, sodass dan oldin vergul.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Kuchli yomg'ir yog'di, shuning uchun uyda qoldik."
+            }
+          ]
+        },
+        {
+          "title": "Maqsad yoki natija",
+          "text": "damit: maqsad, erishmoqchi bo'lgan narsa. sodass: natija, nima bo'lgani.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Erta keldik, shuning uchun yaxshi joylar oldik."
+            }
+          ]
+        },
+        {
+          "title": "falls: agar birdan",
+          "text": "falls \"agar birdan, mabodo\" degani. Fe'l oxirida. falls birinchi tursa, bosh gap fe'l bilan boshlanadi.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Mabodo yomg'ir yog'sa, uyda qolamiz."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: नतीजे",
+      "points": [
+        {
+          "title": "sodass: जिससे",
+          "text": "sodass नतीजा बताता है। यह उपवाक्य है: क्रिया अंत में, sodass से पहले कॉमा।",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "तेज़ बारिश हुई, इसलिए हम घर पर रहे।"
+            }
+          ]
+        },
+        {
+          "title": "लक्ष्य या नतीजा",
+          "text": "damit: लक्ष्य, जो पाना चाहते हैं। sodass: नतीजा, जो हुआ।",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "हम जल्दी आए, इसलिए हमें अच्छी जगह मिली।"
+            }
+          ]
+        },
+        {
+          "title": "falls: अगर कहीं",
+          "text": "falls मतलब \"अगर कहीं\"। क्रिया अंत में। अगर falls पहले आए, तो मुख्य वाक्य क्रिया से शुरू।",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "अगर कहीं बारिश हुई, तो हम घर पर रहेंगे।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: النتائج",
+      "points": [
+        {
+          "title": "sodass: بحيث",
+          "text": "sodass تعبر عن النتيجة. وهي جملة فرعية: الفعل في الآخر وقبلها فاصلة.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "أمطرت بغزارة، فبقينا في البيت."
+            }
+          ]
+        },
+        {
+          "title": "هدف أم نتيجة",
+          "text": "damit: الهدف، ما نريد تحقيقه. وsodass: النتيجة، ما حدث فعلاً.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "وصلنا مبكراً فحصلنا على مقاعد جيدة."
+            }
+          ]
+        },
+        {
+          "title": "falls: في حال",
+          "text": "falls تعني \"في حال\". والفعل في الآخر. وإذا جاءت falls أولاً تبدأ الرئيسية بالفعل.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "في حال أمطرت سنبقى في البيت."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "experience-summit-five": {
+    "ru": {
+      "title": "Повторение: который",
+      "points": [
+        {
+          "title": "der, die, das: который",
+          "text": "«Который» берём по роду слова: der, die, das, во множественном die. Глагол в придаточном в конце, вокруг запятые.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Мужчина, который там стоит, мой сосед."
+            }
+          ]
+        },
+        {
+          "title": "den: которого",
+          "text": "Если в придаточном «который» отвечает на вопрос кого? что?, это Akkusativ. Меняется только мужской род: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Фильм, который я вчера посмотрел, был отличный."
+            }
+          ]
+        },
+        {
+          "title": "Предлог перед который",
+          "text": "Предлог стоит перед der/den/dem, а падеж задаёт предлог: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Дом, в котором я живу, старый."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: який",
+      "points": [
+        {
+          "title": "der, die, das: який",
+          "text": "«Який» беремо за родом слова: der, die, das, у множині die. Дієслово в підрядному в кінці, навколо коми.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Чоловік, який там стоїть, мій сусід."
+            }
+          ]
+        },
+        {
+          "title": "den: якого",
+          "text": "Якщо в підрядному «який» відповідає на питання кого? що?, це Akkusativ. Змінюється лише чоловічий рід: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Фільм, який я вчора подивився, був чудовий."
+            }
+          ]
+        },
+        {
+          "title": "Прийменник перед який",
+          "text": "Прийменник стоїть перед der/den/dem, а відмінок задає прийменник: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Будинок, у якому я живу, старий."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: relative clauses",
+      "points": [
+        {
+          "title": "der, die, das: who, which",
+          "text": "\"Who, which\" follows the noun’s gender: der, die, das, plural die. The verb goes last, with commas around the clause.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "The man who is standing there is my neighbour."
+            }
+          ]
+        },
+        {
+          "title": "den: whom (masculine)",
+          "text": "If the relative pronoun is the object (whom? what?), it’s accusative. Only masculine changes: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "The film I saw yesterday was great."
+            }
+          ]
+        },
+        {
+          "title": "Preposition before the relative",
+          "text": "The preposition comes before der/den/dem, and it decides the case: in dem, mit dem (dative), für den (accusative).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "The house I live in is old."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: który",
+      "points": [
+        {
+          "title": "der, die, das: który",
+          "text": "„Który” bierzemy według rodzaju słowa: der, die, das, w mnogiej die. Czasownik na końcu, wokół przecinki.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Mężczyzna, który tam stoi, to mój sąsiad."
+            }
+          ]
+        },
+        {
+          "title": "den: którego",
+          "text": "Jeśli w zdaniu podrzędnym „który” odpowiada na pytanie kogo? co?, to Akkusativ. Zmienia się tylko rodzaj męski: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Film, który wczoraj obejrzałem, był świetny."
+            }
+          ]
+        },
+        {
+          "title": "Przyimek przed który",
+          "text": "Przyimek stoi przed der/den/dem, a przypadek wyznacza przyimek: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Dom, w którym mieszkam, jest stary."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: relativas",
+      "points": [
+        {
+          "title": "der, die, das: que",
+          "text": "El relativo sigue el género: der, die, das, en plural die. El verbo va al final y hay comas alrededor.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "El hombre que está allí es mi vecino."
+            }
+          ]
+        },
+        {
+          "title": "den: al que",
+          "text": "Si el relativo es el objeto (¿a quién? ¿qué?), va en acusativo. Solo cambia el masculino: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "La película que vi ayer era genial."
+            }
+          ]
+        },
+        {
+          "title": "Preposición antes del relativo",
+          "text": "La preposición va delante de der/den/dem y ella decide el caso: in dem, mit dem (dativo), für den (acusativo).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "La casa en la que vivo es vieja."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : relatives",
+      "points": [
+        {
+          "title": "der, die, das : qui",
+          "text": "Le relatif suit le genre du nom : der, die, das, au pluriel die. Le verbe va à la fin, avec des virgules autour.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "L’homme qui est là-bas est mon voisin."
+            }
+          ]
+        },
+        {
+          "title": "den : que (masculin)",
+          "text": "Si le relatif est complément (qui ? quoi ?), c’est l’accusatif. Seul le masculin change : der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Le film que j’ai vu hier était génial."
+            }
+          ]
+        },
+        {
+          "title": "La préposition avant le relatif",
+          "text": "La préposition se place avant der/den/dem et décide du cas : in dem, mit dem (datif), für den (accusatif).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "La maison dans laquelle j’habite est vieille."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: ilgi cümleleri",
+      "points": [
+        {
+          "title": "der, die, das: ki o",
+          "text": "\"ki o\" ismin cinsiyetine göre seçilir: der, die, das, çoğulda die. Fiil sonda, etrafında virgüller.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Orada duran adam benim komşum."
+            }
+          ]
+        },
+        {
+          "title": "den: -dığı (eril)",
+          "text": "Zamir nesne ise (kimi? neyi?) Akkusativ’dir. Sadece eril değişir: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Dün izlediğim film harikaydı."
+            }
+          ]
+        },
+        {
+          "title": "Edat zamirden önce",
+          "text": "Edat der/den/dem’den önce gelir ve hâli belirler: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Oturduğum ev eski."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: relative",
+      "points": [
+        {
+          "title": "der, die, das: care",
+          "text": "„Care” după genul cuvântului: der, die, das, la plural die. Verbul la final, cu virgule în jur.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Bărbatul care stă acolo e vecinul meu."
+            }
+          ]
+        },
+        {
+          "title": "den: pe care",
+          "text": "Dacă relativul e complement (pe cine? ce?), e acuzativ. Doar masculinul se schimbă: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Filmul pe care l-am văzut ieri a fost grozav."
+            }
+          ]
+        },
+        {
+          "title": "Prepoziția înaintea relativului",
+          "text": "Prepoziția stă înaintea lui der/den/dem și ea decide cazul: in dem, mit dem (dativ), für den (acuzativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Casa în care locuiesc e veche."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: nisbiy gaplar",
+      "points": [
+        {
+          "title": "der, die, das: qaysiki",
+          "text": "\"Qaysiki\" so'zning rodiga qarab: der, die, das, ko'plikda die. Fe'l oxirida, atrofida vergullar.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "U yerda turgan erkak mening qo'shnim."
+            }
+          ]
+        },
+        {
+          "title": "den: kimni",
+          "text": "Agar nisbiy olmosh to'ldiruvchi bo'lsa (kimni? nimani?), bu Akkusativ. Faqat erkak rodi o'zgaradi: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Kecha ko'rgan filmim ajoyib edi."
+            }
+          ]
+        },
+        {
+          "title": "Ko'makchi olmoshdan oldin",
+          "text": "Ko'makchi der/den/dem dan oldin turadi va kelishikni belgilaydi: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Men yashayotgan uy eski."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: संबंधवाचक",
+      "points": [
+        {
+          "title": "der, die, das: जो",
+          "text": "\"जो\" संज्ञा के लिंग के अनुसार: der, die, das, बहुवचन में die। क्रिया अंत में, चारों ओर कॉमा।",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "वहाँ खड़ा आदमी मेरा पड़ोसी है।"
+            }
+          ]
+        },
+        {
+          "title": "den: जिसे (पु)",
+          "text": "अगर \"जो\" कर्म है (किसे? क्या?), तो Akkusativ। सिर्फ़ पुल्लिंग बदलता है: der → den।",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "कल जो फ़िल्म मैंने देखी, वह शानदार थी।"
+            }
+          ]
+        },
+        {
+          "title": "संबंधसूचक \"जो\" से पहले",
+          "text": "संबंधसूचक der/den/dem से पहले आता है और वही कारक तय करता है: in dem, mit dem (Dativ), für den (Akkusativ)।",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "जिस घर में मैं रहता हूँ, वह पुराना है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: جمل الصلة",
+      "points": [
+        {
+          "title": "der وdie وdas: الذي",
+          "text": "\"الذي\" حسب جنس الاسم: der وdie وdas، وفي الجمع die. والفعل في الآخر وحولها فواصل.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "الرجل الذي يقف هناك جاري."
+            }
+          ]
+        },
+        {
+          "title": "den: الذي (مفعول مذكر)",
+          "text": "إذا كان الضمير مفعولاً به (من؟ ماذا؟) فهو في حالة المفعول. ويتغير المذكر فقط: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "الفيلم الذي شاهدته أمس كان رائعاً."
+            }
+          ]
+        },
+        {
+          "title": "حرف الجر قبل الضمير",
+          "text": "يأتي حرف الجر قبل der/den/dem وهو الذي يحدد الحالة: in dem، mit dem (جر)، für den (مفعول).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "البيت الذي أسكن فيه قديم."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "experience-summit-six": {
+    "ru": {
+      "title": "Повторение: Passiv",
+      "points": [
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "В Passiv важно не кто делает, а что происходит. wird на втором месте, Partizip II в конце. Много предметов: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Машину ремонтируют."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Окна моют."
+            }
+          ]
+        },
+        {
+          "title": "В прошлом: wurde",
+          "text": "Прошедшее время Passiv: wurde (один предмет), wurden (много) + Partizip II в конце.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Дом был построен в 1900 году."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "С модальным: модальный на втором месте, в конце Partizip II и werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Машину нужно отремонтировать."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: Passiv",
+      "points": [
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "У Passiv важливо не хто робить, а що відбувається. wird на другому місці, Partizip II у кінці. Багато предметів: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Машину ремонтують."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Вікна миють."
+            }
+          ]
+        },
+        {
+          "title": "У минулому: wurde",
+          "text": "Минулий час Passiv: wurde (один предмет), wurden (багато) + Partizip II у кінці.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Будинок збудували 1900 року."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "З модальним: модальне на другому місці, у кінці Partizip II і werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Машину треба відремонтувати."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: passive",
+      "points": [
+        {
+          "title": "Passive: wird + Partizip II",
+          "text": "In the passive what matters is what happens, not who does it. wird in second place, Partizip II at the end. Several things: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "The car is being repaired."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "The windows are being cleaned."
+            }
+          ]
+        },
+        {
+          "title": "In the past: wurde",
+          "text": "Past passive: wurde (one thing), wurden (several) + Partizip II at the end.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "The house was built in 1900."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "With a modal: the modal in second place, Partizip II and werden at the end.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "The car needs to be repaired."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: Passiv",
+      "points": [
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "W Passiv ważne jest nie to, kto robi, ale co się dzieje. wird na drugim miejscu, Partizip II na końcu. Wiele rzeczy: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Samochód jest naprawiany."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Okna są myte."
+            }
+          ]
+        },
+        {
+          "title": "W przeszłości: wurde",
+          "text": "Passiv w przeszłości: wurde (jedna rzecz), wurden (wiele) + Partizip II na końcu.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Dom zbudowano w 1900 roku."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "Z modalnym: modalny na drugim miejscu, na końcu Partizip II i werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Samochód trzeba naprawić."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: pasiva",
+      "points": [
+        {
+          "title": "Pasiva: wird + Partizip II",
+          "text": "En pasiva importa lo que pasa, no quién lo hace. wird en segundo lugar, Partizip II al final. Varias cosas: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "El coche se está reparando."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Se limpian las ventanas."
+            }
+          ]
+        },
+        {
+          "title": "En pasado: wurde",
+          "text": "Pasiva en pasado: wurde (una cosa), wurden (varias) + Partizip II al final.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "La casa se construyó en 1900."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "Con un modal: el modal en segundo lugar, Partizip II y werden al final.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Hay que reparar el coche."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : passif",
+      "points": [
+        {
+          "title": "Passif : wird + Partizip II",
+          "text": "Au passif, ce qui compte, c’est ce qui se passe, pas qui le fait. wird en deuxième position, Partizip II à la fin. Plusieurs choses : werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "La voiture est en réparation."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "On nettoie les fenêtres."
+            }
+          ]
+        },
+        {
+          "title": "Au passé : wurde",
+          "text": "Passif au passé : wurde (une chose), wurden (plusieurs) + Partizip II à la fin.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "La maison a été construite en 1900."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "Avec un modal : le modal en deuxième position, Partizip II et werden à la fin.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "La voiture doit être réparée."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: edilgen",
+      "points": [
+        {
+          "title": "Edilgen: wird + Partizip II",
+          "text": "Edilgende önemli olan kimin yaptığı değil, ne olduğudur. wird ikinci sırada, Partizip II sonda. Birden çok şey: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Araba tamir ediliyor."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Pencereler temizleniyor."
+            }
+          ]
+        },
+        {
+          "title": "Geçmişte: wurde",
+          "text": "Geçmiş edilgen: wurde (tek şey), wurden (birden çok) + Partizip II sonda.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Ev 1900’de inşa edildi."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "Modal fiille: modal ikinci sırada, sonda Partizip II ve werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Arabanın tamir edilmesi gerekiyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: pasivul",
+      "points": [
+        {
+          "title": "Pasiv: wird + Partizip II",
+          "text": "La pasiv contează ce se întâmplă, nu cine face. wird pe locul doi, Partizip II la final. Mai multe lucruri: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Mașina e reparată."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Ferestrele sunt spălate."
+            }
+          ]
+        },
+        {
+          "title": "La trecut: wurde",
+          "text": "Pasiv la trecut: wurde (un lucru), wurden (mai multe) + Partizip II la final.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Casa a fost construită în 1900."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "Cu un modal: modalul pe locul doi, la final Partizip II și werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Mașina trebuie reparată."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: majhul",
+      "points": [
+        {
+          "title": "Majhul: wird + Partizip II",
+          "text": "Majhul nisbatda kim qilgani emas, nima bo'layotgani muhim. wird ikkinchi o'rinda, Partizip II oxirida. Ko'p narsa: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Mashina ta'mirlanmoqda."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Derazalar yuvilmoqda."
+            }
+          ]
+        },
+        {
+          "title": "O'tgan zamonda: wurde",
+          "text": "O'tgan zamon majhul: wurde (bitta narsa), wurden (ko'p) + Partizip II oxirida.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Uy 1900-yilda qurilgan."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "Modal bilan: modal ikkinchi o'rinda, oxirida Partizip II va werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Mashinani ta'mirlash kerak."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: कर्मवाच्य",
+      "points": [
+        {
+          "title": "कर्मवाच्य: wird + Partizip II",
+          "text": "कर्मवाच्य में यह मायने रखता है कि क्या हो रहा है, कौन कर रहा है यह नहीं। wird दूसरे स्थान पर, Partizip II अंत में। कई चीज़ें: werden।",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "गाड़ी ठीक की जा रही है।"
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "खिड़कियाँ साफ़ की जा रही हैं।"
+            }
+          ]
+        },
+        {
+          "title": "भूतकाल में: wurde",
+          "text": "भूतकाल कर्मवाच्य: wurde (एक चीज़), wurden (कई) + Partizip II अंत में।",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "घर 1900 में बना था।"
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "मोडल के साथ: मोडल दूसरे स्थान पर, अंत में Partizip II और werden।",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "गाड़ी ठीक करवानी होगी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: المجهول",
+      "points": [
+        {
+          "title": "المبني للمجهول: wird + Partizip II",
+          "text": "في المبني للمجهول المهم ما يحدث لا من يفعله. wird في المكان الثاني وPartizip II في الآخر. ولعدة أشياء: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "السيارة تُصلَح."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "النوافذ تُنظَّف."
+            }
+          ]
+        },
+        {
+          "title": "في الماضي: wurde",
+          "text": "المجهول في الماضي: wurde (لشيء واحد)، wurden (لعدة أشياء) + Partizip II في الآخر.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "بُني البيت عام 1900."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "مع فعل مساعد: المساعد في المكان الثاني، وفي الآخر Partizip II وwerden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "يجب إصلاح السيارة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "experience-summit-seven": {
+    "ru": {
+      "title": "Повторение: zu и lassen",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "После versuchen, vergessen, anfangen, aufhören тоже zu + инфинитив. После модальных глаголов zu не нужно.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Я стараюсь пить меньше кофе."
+            }
+          ]
+        },
+        {
+          "title": "lassen: делаю не сам",
+          "text": "lassen + инфинитив без zu: делает кто-то другой. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Я отдаю машину в ремонт."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: zu і lassen",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "Після versuchen, vergessen, anfangen, aufhören теж zu + інфінітив. Після модальних дієслів zu не потрібне.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Я намагаюся пити менше кави."
+            }
+          ]
+        },
+        {
+          "title": "lassen: роблю не сам",
+          "text": "lassen + інфінітив без zu: робить хтось інший. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Я віддаю машину в ремонт."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: zu and lassen",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "After versuchen, vergessen, anfangen, aufhören also use zu + infinitive. After modal verbs there’s no zu.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "I’m trying to drink less coffee."
+            }
+          ]
+        },
+        {
+          "title": "lassen: having something done",
+          "text": "lassen + infinitive with no zu: someone else does it. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "I’m having my car repaired."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: zu i lassen",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "Po versuchen, vergessen, anfangen, aufhören też zu + bezokolicznik. Po czasownikach modalnych zu nie ma.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Staram się pić mniej kawy."
+            }
+          ]
+        },
+        {
+          "title": "lassen: zlecam komuś",
+          "text": "lassen + bezokolicznik bez zu: robi to ktoś inny. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Oddaję samochód do naprawy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: zu y lassen",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "Tras versuchen, vergessen, anfangen, aufhören también zu + infinitivo. Tras los modales no va zu.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Intento tomar menos café."
+            }
+          ]
+        },
+        {
+          "title": "lassen: hacer que otro lo haga",
+          "text": "lassen + infinitivo sin zu: lo hace otra persona. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Llevo el coche a reparar."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : zu et lassen",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "Après versuchen, vergessen, anfangen, aufhören aussi zu + infinitif. Après les modaux, pas de zu.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "J’essaie de boire moins de café."
+            }
+          ]
+        },
+        {
+          "title": "lassen : faire faire",
+          "text": "lassen + infinitif sans zu : quelqu’un d’autre le fait. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Je fais réparer ma voiture."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: zu ve lassen",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "versuchen, vergessen, anfangen, aufhören’dan sonra da zu + mastar. Modal fiillerden sonra zu yok.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Daha az kahve içmeye çalışıyorum."
+            }
+          ]
+        },
+        {
+          "title": "lassen: başkasına yaptırmak",
+          "text": "lassen + zu’suz mastar: başkası yapar. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Arabamı tamir ettiriyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: zu și lassen",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "După versuchen, vergessen, anfangen, aufhören tot zu + infinitiv. După modale nu e zu.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Încerc să beau mai puțină cafea."
+            }
+          ]
+        },
+        {
+          "title": "lassen: a pune pe altul să facă",
+          "text": "lassen + infinitiv fără zu: face altcineva. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Îmi duc mașina la reparat."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: zu va lassen",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "versuchen, vergessen, anfangen, aufhören dan keyin ham zu + infinitiv. Modal fe'llardan keyin zu yo'q.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Kamroq qahva ichishga harakat qilyapman."
+            }
+          ]
+        },
+        {
+          "title": "lassen: boshqaga qildirish",
+          "text": "lassen + zu siz infinitiv: boshqa birov qiladi. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Mashinamni ta'mirlatyapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: zu और lassen",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "versuchen, vergessen, anfangen, aufhören के बाद भी zu + इन्फ़िनिटिव। मोडल क्रियाओं के बाद zu नहीं।",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "मैं कम कॉफ़ी पीने की कोशिश कर रहा हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "lassen: किसी और से करवाना",
+          "text": "lassen + बिना zu इन्फ़िनिटिव: कोई और करता है। ich lasse, du lässt, er lässt।",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "मैं अपनी गाड़ी ठीक करवा रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: zu وlassen",
+      "points": [
+        {
+          "title": "versuchen وvergessen + zu",
+          "text": "بعد versuchen وvergessen وanfangen وaufhören أيضاً zu + المصدر. وبعد الأفعال المساعدة لا zu.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "أحاول أن أشرب قهوة أقل."
+            }
+          ]
+        },
+        {
+          "title": "lassen: أجعل غيري يفعل",
+          "text": "lassen + المصدر بدون zu: يفعله شخص آخر. ich lasse، du lässt، er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "أُصلح سيارتي عند الميكانيكي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "experience-summit-eight": {
+    "ru": {
+      "title": "Повторение: сочетания",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "«Принять решение» по-немецки eine Entscheidung treffen, глагол treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Я наконец принял решение."
+            }
+          ]
+        },
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Вопрос «ставят»: eine Frage stellen. Кому, в Dativ: Ich stelle dir eine Frage. Ответ «дают»: eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Можно задать вам вопрос?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben значит «дать знать», Bescheid wissen значит «быть в курсе». Bescheid всегда без артикля.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Дай мне знать, когда приедешь."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: сполучення",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "«Ухвалити рішення» німецькою eine Entscheidung treffen, дієслово treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Я нарешті ухвалив рішення."
+            }
+          ]
+        },
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Питання «ставлять»: eine Frage stellen. Кому, в Dativ: Ich stelle dir eine Frage. Відповідь «дають»: eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Можна поставити вам запитання?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben означає «дати знати», Bescheid wissen означає «бути в курсі». Bescheid завжди без артикля.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Дай мені знати, коли приїдеш."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: expressions",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"Make a decision\" in German is eine Entscheidung treffen, with the verb treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "I’ve finally made a decision."
+            }
+          ]
+        },
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "You \"put\" a question: eine Frage stellen. To whom, in the dative: Ich stelle dir eine Frage. You \"give\" an answer: eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "May I ask you a question?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben means \"let someone know\", Bescheid wissen means \"to know about it\". Bescheid never takes an article.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Let me know when you arrive."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: wyrażenia",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "„Podjąć decyzję” po niemiecku to eine Entscheidung treffen, czasownik treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "W końcu podjąłem decyzję."
+            }
+          ]
+        },
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Pytanie się „stawia”: eine Frage stellen. Komu, w Dativ: Ich stelle dir eine Frage. Odpowiedź się „daje”: eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Czy mogę zadać panu pytanie?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben znaczy „dać znać”, Bescheid wissen „wiedzieć, być na bieżąco”. Bescheid zawsze bez rodzajnika.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Daj mi znać, kiedy dojedziesz."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: expresiones",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"Tomar una decisión\" en alemán es eine Entscheidung treffen, con treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Por fin he tomado una decisión."
+            }
+          ]
+        },
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "La pregunta se \"pone\": eine Frage stellen. A quién, en dativo: Ich stelle dir eine Frage. La respuesta se \"da\": eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "¿Puedo hacerle una pregunta?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben significa \"avisar\", Bescheid wissen \"estar al tanto\". Bescheid nunca lleva artículo.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Avísame cuando llegues."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : expressions",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "« Prendre une décision » se dit eine Entscheidung treffen, avec treffen : traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "J’ai enfin pris une décision."
+            }
+          ]
+        },
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "On « pose » une question : eine Frage stellen. À qui, au datif : Ich stelle dir eine Frage. On « donne » une réponse : eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Puis-je vous poser une question ?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben veut dire « prévenir », Bescheid wissen « être au courant ». Bescheid n’a jamais d’article.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Préviens-moi quand tu arrives."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: kalıplar",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"Karar vermek\" Almancada eine Entscheidung treffen, fiil treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Sonunda bir karar verdim."
+            }
+          ]
+        },
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Soru \"konur\": eine Frage stellen. Kime, Dativ’de: Ich stelle dir eine Frage. Cevap \"verilir\": eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Size bir soru sorabilir miyim?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben \"haber vermek\", Bescheid wissen \"haberdar olmak\" demektir. Bescheid hiç artikel almaz.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Vardığında bana haber ver."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: expresii",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "„A lua o decizie” în germană e eine Entscheidung treffen, cu treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "În sfârșit am luat o decizie."
+            }
+          ]
+        },
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Întrebarea se „pune”: eine Frage stellen. Cui, la dativ: Ich stelle dir eine Frage. Răspunsul se „dă”: eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Vă pot pune o întrebare?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben înseamnă „a anunța”, Bescheid wissen „a fi la curent”. Bescheid nu are niciodată articol.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Anunță-mă când ajungi."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: birikmalar",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"Qaror qabul qilish\" nemischa eine Entscheidung treffen, fe'l treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Nihoyat qaror qabul qildim."
+            }
+          ]
+        },
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Savol \"qo'yiladi\": eine Frage stellen. Kimga, Dativda: Ich stelle dir eine Frage. Javob \"beriladi\": eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Sizga savol bersam bo'ladimi?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben \"xabar berish\", Bescheid wissen \"xabardor bo'lish\" degani. Bescheid doim artiklsiz.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Yetib kelganingda menga xabar ber."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: वाक्यांश",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"फ़ैसला लेना\" जर्मन में eine Entscheidung treffen, क्रिया treffen: traf, hat getroffen।",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "आख़िरकार मैंने फ़ैसला ले लिया।"
+            }
+          ]
+        },
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "सवाल \"रखा\" जाता है: eine Frage stellen। किसे, Dativ में: Ich stelle dir eine Frage। जवाब \"दिया\" जाता है: eine Antwort geben।",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "क्या मैं आपसे एक सवाल पूछ सकता हूँ?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben मतलब \"बता देना\", Bescheid wissen मतलब \"जानकारी होना\"। Bescheid के साथ कभी आर्टिकल नहीं।",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "जब पहुँचो तो मुझे बता देना।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: التعابير",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"اتخاذ قرار\" بالألمانية eine Entscheidung treffen، والفعل treffen: traf، hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "اتخذت قراراً أخيراً."
+            }
+          ]
+        },
+        {
+          "title": "eine Frage stellen وeine Antwort geben",
+          "text": "السؤال \"يُطرح\": eine Frage stellen. ولمن بحالة الجر: Ich stelle dir eine Frage. والجواب \"يُعطى\": eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "هل يمكنني أن أطرح عليك سؤالاً؟"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen وBescheid wissen",
+          "text": "Bescheid sagen/geben تعني \"يُعلِم\"، وBescheid wissen تعني \"يكون على علم\". وBescheid دائماً بدون أداة.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "أعلمني عندما تصل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "experience-summit-nine": {
+    "ru": {
+      "title": "Большое повторение",
+      "points": [
+        {
+          "title": "trotzdem и obwohl",
+          "text": "trotzdem (всё равно): глагол сразу после. obwohl (хотя): это придаточное, глагол в конце. Смысл один: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Хотя шёл дождь, мы пошли гулять."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Шёл дождь, но мы всё равно пошли гулять."
+            }
+          ]
+        },
+        {
+          "title": "um ... zu: чтобы",
+          "text": "um ... zu, когда цель у того же человека. zu и инфинитив в самом конце.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "Я учу немецкий, чтобы работать в Германии."
+            }
+          ]
+        },
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "В Passiv важно не кто делает, а что происходит. wird на втором месте, Partizip II в конце. Много предметов: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Машину ремонтируют."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Окна моют."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Велике повторення",
+      "points": [
+        {
+          "title": "trotzdem і obwohl",
+          "text": "trotzdem (все одно): дієслово одразу після. obwohl (хоча): це підрядне, дієслово в кінці. Зміст один: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Хоча йшов дощ, ми пішли гуляти."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Йшов дощ, але ми все одно пішли гуляти."
+            }
+          ]
+        },
+        {
+          "title": "um ... zu: щоб",
+          "text": "um ... zu, коли мета в тієї самої людини. zu та інфінітив у самому кінці.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "Я вчу німецьку, щоб працювати в Німеччині."
+            }
+          ]
+        },
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "У Passiv важливо не хто робить, а що відбувається. wird на другому місці, Partizip II у кінці. Багато предметів: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Машину ремонтують."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Вікна миють."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Big review",
+      "points": [
+        {
+          "title": "trotzdem and obwohl",
+          "text": "trotzdem (anyway, still): the verb right after. obwohl (although): a subordinate clause, verb at the end. Same meaning: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Although it was raining, we went for a walk."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "It was raining, but we still went for a walk."
+            }
+          ]
+        },
+        {
+          "title": "um ... zu: in order to",
+          "text": "um ... zu when the same person has the goal. zu and the infinitive go at the very end.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "I’m learning German to work in Germany."
+            }
+          ]
+        },
+        {
+          "title": "Passive: wird + Partizip II",
+          "text": "In the passive what matters is what happens, not who does it. wird in second place, Partizip II at the end. Several things: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "The car is being repaired."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "The windows are being cleaned."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Wielka powtórka",
+      "points": [
+        {
+          "title": "trotzdem i obwohl",
+          "text": "trotzdem (mimo to): czasownik zaraz po. obwohl (chociaż): zdanie podrzędne, czasownik na końcu. Znaczenie to samo: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Chociaż padało, poszliśmy na spacer."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Padało, mimo to poszliśmy na spacer."
+            }
+          ]
+        },
+        {
+          "title": "um ... zu: żeby",
+          "text": "um ... zu, gdy cel ma ta sama osoba. zu i bezokolicznik na samym końcu.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "Uczę się niemieckiego, żeby pracować w Niemczech."
+            }
+          ]
+        },
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "W Passiv ważne jest nie to, kto robi, ale co się dzieje. wird na drugim miejscu, Partizip II na końcu. Wiele rzeczy: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Samochód jest naprawiany."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Okna są myte."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Gran repaso",
+      "points": [
+        {
+          "title": "trotzdem y obwohl",
+          "text": "trotzdem (aun así): el verbo justo después. obwohl (aunque): subordinada, verbo al final. Mismo sentido: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Aunque llovía, fuimos a pasear."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Llovía, aun así fuimos a pasear."
+            }
+          ]
+        },
+        {
+          "title": "um ... zu: para",
+          "text": "um ... zu cuando el objetivo es de la misma persona. zu y el infinitivo van al final.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "Aprendo alemán para trabajar en Alemania."
+            }
+          ]
+        },
+        {
+          "title": "Pasiva: wird + Partizip II",
+          "text": "En pasiva importa lo que pasa, no quién lo hace. wird en segundo lugar, Partizip II al final. Varias cosas: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "El coche se está reparando."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Se limpian las ventanas."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Grande révision",
+      "points": [
+        {
+          "title": "trotzdem et obwohl",
+          "text": "trotzdem (quand même) : verbe juste après. obwohl (bien que) : subordonnée, verbe à la fin. Même sens : Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Bien qu’il pleuve, nous sommes allés nous promener."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Il pleuvait, nous sommes quand même allés nous promener."
+            }
+          ]
+        },
+        {
+          "title": "um ... zu : pour",
+          "text": "um ... zu quand le but concerne la même personne. zu et l’infinitif vont tout à la fin.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "J’apprends l’allemand pour travailler en Allemagne."
+            }
+          ]
+        },
+        {
+          "title": "Passif : wird + Partizip II",
+          "text": "Au passif, ce qui compte, c’est ce qui se passe, pas qui le fait. wird en deuxième position, Partizip II à la fin. Plusieurs choses : werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "La voiture est en réparation."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "On nettoie les fenêtres."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Büyük tekrar",
+      "points": [
+        {
+          "title": "trotzdem ve obwohl",
+          "text": "trotzdem (yine de): fiil hemen ardından. obwohl (-e rağmen): yan cümle, fiil sonda. Anlam aynı: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Yağmur yağmasına rağmen yürüyüşe çıktık."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Yağmur yağıyordu, yine de yürüyüşe çıktık."
+            }
+          ]
+        },
+        {
+          "title": "um ... zu: -mek için",
+          "text": "Amaç aynı kişiye aitse um ... zu. zu ve mastar en sonda.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "Almanya’da çalışmak için Almanca öğreniyorum."
+            }
+          ]
+        },
+        {
+          "title": "Edilgen: wird + Partizip II",
+          "text": "Edilgende önemli olan kimin yaptığı değil, ne olduğudur. wird ikinci sırada, Partizip II sonda. Birden çok şey: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Araba tamir ediliyor."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Pencereler temizleniyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Marea recapitulare",
+      "points": [
+        {
+          "title": "trotzdem și obwohl",
+          "text": "trotzdem (totuși): verbul imediat după. obwohl (deși): subordonată, verbul la final. Același sens: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Deși ploua, am ieșit la plimbare."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Ploua, totuși am ieșit la plimbare."
+            }
+          ]
+        },
+        {
+          "title": "um ... zu: ca să",
+          "text": "um ... zu când scopul e al aceleiași persoane. zu și infinitivul la final.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "Învăț germana ca să lucrez în Germania."
+            }
+          ]
+        },
+        {
+          "title": "Pasiv: wird + Partizip II",
+          "text": "La pasiv contează ce se întâmplă, nu cine face. wird pe locul doi, Partizip II la final. Mai multe lucruri: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Mașina e reparată."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Ferestrele sunt spălate."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Katta takrorlash",
+      "points": [
+        {
+          "title": "trotzdem va obwohl",
+          "text": "trotzdem (baribir): fe'l darhol keyin. obwohl (garchi): ergash gap, fe'l oxirida. Ma'no bir: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "Yomg'ir yog'ayotgan bo'lsa ham, sayrga chiqdik."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "Yomg'ir yog'ardi, baribir sayrga chiqdik."
+            }
+          ]
+        },
+        {
+          "title": "um ... zu: ... uchun",
+          "text": "Maqsad o'sha odamniki bo'lsa um ... zu. zu va infinitiv eng oxirida.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "Germaniyada ishlash uchun nemis tilini o'rganyapman."
+            }
+          ]
+        },
+        {
+          "title": "Majhul: wird + Partizip II",
+          "text": "Majhul nisbatda kim qilgani emas, nima bo'layotgani muhim. wird ikkinchi o'rinda, Partizip II oxirida. Ko'p narsa: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Mashina ta'mirlanmoqda."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Derazalar yuvilmoqda."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "बड़ा दोहराव",
+      "points": [
+        {
+          "title": "trotzdem और obwohl",
+          "text": "trotzdem (फिर भी): क्रिया तुरंत बाद। obwohl (हालाँकि): उपवाक्य, क्रिया अंत में। मतलब एक: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir।",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "बारिश हो रही थी, फिर भी हम टहलने गए।"
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "बारिश हो रही थी, फिर भी हम टहलने गए।"
+            }
+          ]
+        },
+        {
+          "title": "um ... zu: ... के लिए",
+          "text": "जब लक्ष्य उसी व्यक्ति का हो, तब um ... zu। zu और इन्फ़िनिटिव बिल्कुल अंत में।",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "मैं जर्मनी में काम करने के लिए जर्मन सीख रहा हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "कर्मवाच्य: wird + Partizip II",
+          "text": "कर्मवाच्य में यह मायने रखता है कि क्या हो रहा है, कौन कर रहा है यह नहीं। wird दूसरे स्थान पर, Partizip II अंत में। कई चीज़ें: werden।",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "गाड़ी ठीक की जा रही है।"
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "खिड़कियाँ साफ़ की जा रही हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المراجعة الكبرى",
+      "points": [
+        {
+          "title": "trotzdem وobwohl",
+          "text": "trotzdem (مع ذلك): الفعل بعدها مباشرة. obwohl (رغم أن): جملة فرعية والفعل في الآخر. والمعنى واحد: Obwohl es regnet, gehen wir = Es regnet, trotzdem gehen wir.",
+          "examples": [
+            {
+              "de": "Obwohl es regnete, gingen wir spazieren.",
+              "tr": "رغم أنها كانت تمطر خرجنا للتنزه."
+            },
+            {
+              "de": "Es regnete, trotzdem gingen wir spazieren.",
+              "tr": "كانت تمطر، ومع ذلك خرجنا للتنزه."
+            }
+          ]
+        },
+        {
+          "title": "um ... zu: لكي",
+          "text": "um ... zu عندما يكون الهدف للشخص نفسه. وzu والمصدر في آخر الجملة.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "أتعلم الألمانية لكي أعمل في ألمانيا."
+            }
+          ]
+        },
+        {
+          "title": "المبني للمجهول: wird + Partizip II",
+          "text": "في المبني للمجهول المهم ما يحدث لا من يفعله. wird في المكان الثاني وPartizip II في الآخر. ولعدة أشياء: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "السيارة تُصلَح."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "النوافذ تُنظَّف."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "experience-summit-ten": {
+    "ru": {
+      "title": "Экзамен: как решать",
+      "points": [
+        {
+          "title": "Как решать экзамен",
+          "text": "1. Найди связку: weil, obwohl, damit, sodass, der/die/das отправляют глагол в конец, deshalb и trotzdem нет. 2. Определи время: Präteritum, Plusquamperfekt, Passiv. 3. Проверь zu: после модальных и lassen его нет.",
+          "examples": [
+            {
+              "de": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+              "tr": "Хотя экзамен был трудным, я его сдал."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Іспит: як розв’язувати",
+      "points": [
+        {
+          "title": "Як розв’язувати іспит",
+          "text": "1. Знайди сполучник: weil, obwohl, damit, sodass, der/die/das відправляють дієслово в кінець, deshalb і trotzdem ні. 2. Визнач час: Präteritum, Plusquamperfekt, Passiv. 3. Перевір zu: після модальних і lassen його немає.",
+          "examples": [
+            {
+              "de": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+              "tr": "Хоча іспит був важким, я його склав."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Exam: how to approach it",
+      "points": [
+        {
+          "title": "How to approach the exam",
+          "text": "1. Find the connector: weil, obwohl, damit, sodass, der/die/das send the verb to the end, deshalb and trotzdem don’t. 2. Identify the tense: Präteritum, Plusquamperfekt, passive. 3. Check zu: none after modals and lassen.",
+          "examples": [
+            {
+              "de": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+              "tr": "Although the exam was hard, I passed it."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Egzamin: jak rozwiązywać",
+      "points": [
+        {
+          "title": "Jak rozwiązywać egzamin",
+          "text": "1. Znajdź spójnik: weil, obwohl, damit, sodass, der/die/das wysyłają czasownik na koniec, deshalb i trotzdem nie. 2. Określ czas: Präteritum, Plusquamperfekt, Passiv. 3. Sprawdź zu: po modalnych i lassen go nie ma.",
+          "examples": [
+            {
+              "de": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+              "tr": "Chociaż egzamin był trudny, zdałem go."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Examen: cómo resolverlo",
+      "points": [
+        {
+          "title": "Cómo hacer el examen",
+          "text": "1. Busca el conector: weil, obwohl, damit, sodass, der/die/das mandan el verbo al final, deshalb y trotzdem no. 2. Identifica el tiempo: Präteritum, Plusquamperfekt, pasiva. 3. Revisa zu: no va tras modales ni lassen.",
+          "examples": [
+            {
+              "de": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+              "tr": "Aunque el examen era difícil, lo aprobé."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Examen : comment s’y prendre",
+      "points": [
+        {
+          "title": "Comment aborder l’examen",
+          "text": "1. Trouve le connecteur : weil, obwohl, damit, sodass, der/die/das envoient le verbe à la fin, deshalb et trotzdem non. 2. Repère le temps : Präteritum, Plusquamperfekt, passif. 3. Vérifie zu : pas après les modaux ni lassen.",
+          "examples": [
+            {
+              "de": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+              "tr": "Bien que l’examen ait été difficile, je l’ai réussi."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: nasıl çözülür",
+      "points": [
+        {
+          "title": "Sınav nasıl çözülür",
+          "text": "1. Bağlacı bul: weil, obwohl, damit, sodass, der/die/das fiili sona gönderir, deshalb ve trotzdem göndermez. 2. Zamanı belirle: Präteritum, Plusquamperfekt, edilgen. 3. zu’yu kontrol et: modal ve lassen’den sonra yok.",
+          "examples": [
+            {
+              "de": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+              "tr": "Sınav zor olmasına rağmen geçtim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Examen: cum rezolvi",
+      "points": [
+        {
+          "title": "Cum rezolvi examenul",
+          "text": "1. Găsește conectorul: weil, obwohl, damit, sodass, der/die/das trimit verbul la final, deshalb și trotzdem nu. 2. Stabilește timpul: Präteritum, Plusquamperfekt, pasiv. 3. Verifică zu: după modale și lassen nu există.",
+          "examples": [
+            {
+              "de": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+              "tr": "Deși examenul a fost greu, l-am trecut."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Imtihon: qanday yechish",
+      "points": [
+        {
+          "title": "Imtihonni qanday yechish",
+          "text": "1. Bog'lovchini top: weil, obwohl, damit, sodass, der/die/das fe'lni oxiriga yuboradi, deshalb va trotzdem yo'q. 2. Zamonni aniqla: Präteritum, Plusquamperfekt, majhul. 3. zu ni tekshir: modallar va lassen dan keyin yo'q.",
+          "examples": [
+            {
+              "de": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+              "tr": "Imtihon qiyin bo'lsa ham, men undan o'tdim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "परीक्षा: कैसे हल करें",
+      "points": [
+        {
+          "title": "परीक्षा कैसे हल करें",
+          "text": "1. योजक ढूँढो: weil, obwohl, damit, sodass, der/die/das क्रिया को अंत में भेजते हैं, deshalb और trotzdem नहीं। 2. काल पहचानो: Präteritum, Plusquamperfekt, कर्मवाच्य। 3. zu जाँचो: मोडल और lassen के बाद नहीं।",
+          "examples": [
+            {
+              "de": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+              "tr": "परीक्षा मुश्किल थी, फिर भी मैंने पास कर ली।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الامتحان: كيف تحل",
+      "points": [
+        {
+          "title": "كيف تحل الامتحان",
+          "text": "1. ابحث عن أداة الربط: weil وobwohl وdamit وsodass وder/die/das ترسل الفعل إلى الآخر، وdeshalb وtrotzdem لا. 2. حدد الزمن: Präteritum أو Plusquamperfekt أو المجهول. 3. تحقق من zu: لا تأتي بعد الأفعال المساعدة ولا lassen.",
+          "examples": [
+            {
+              "de": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+              "tr": "رغم أن الامتحان كان صعباً نجحت فيه."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

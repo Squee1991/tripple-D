@@ -1,0 +1,2662 @@
+{
+  "owner-castle-one": {
+    "ru": {
+      "title": "Чей? des",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv отвечает на вопрос «чей?» и стоит после слова. Мужской и средний род: des + -s/-es у слова (des Vaters). Женский и множественное: der, без -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Машина отца новая."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Сумка женщины лежит на столе."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Чий? des",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv відповідає на питання «чий?» і стоїть після слова. Чоловічий і середній рід: des + -s/-es у слова (des Vaters). Жіночий і множина: der, без -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Машина батька нова."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Сумка жінки лежить на столі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Whose? des",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "The genitive answers \"whose?\" and comes after the noun. Masculine and neuter: des + -s/-es on the noun (des Vaters). Feminine and plural: der, no -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "The father’s car is new."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "The woman’s bag is on the table."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Czyj? des",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv odpowiada na pytanie „czyj?” i stoi po słowie. Rodzaj męski i nijaki: des + -s/-es (des Vaters). Żeński i mnoga: der, bez -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Samochód ojca jest nowy."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Torba kobiety leży na stole."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿De quién? des",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "El genitivo responde a \"¿de quién?\" y va después del sustantivo. Masculino y neutro: des + -s/-es (des Vaters). Femenino y plural: der, sin -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "El coche del padre es nuevo."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "El bolso de la mujer está en la mesa."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "À qui ? des",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Le génitif répond à « à qui ? » et vient après le nom. Masculin et neutre : des + -s/-es (des Vaters). Féminin et pluriel : der, sans -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "La voiture du père est neuve."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Le sac de la femme est sur la table."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kimin? des",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv \"kimin?\" sorusuna cevap verir ve isimden sonra gelir. Eril ve nötr: des + -s/-es (des Vaters). Dişil ve çoğul: der, -s yok (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Babanın arabası yeni."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Kadının çantası masada."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Al cui? des",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitivul răspunde la „al cui?” și vine după substantiv. Masculin și neutru: des + -s/-es (des Vaters). Feminin și plural: der, fără -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Mașina tatălui e nouă."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Geanta femeii e pe masă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kimning? des",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv \"kimning?\" savoliga javob beradi va otdan keyin turadi. Erkak va o'rta rod: des + -s/-es (des Vaters). Ayol va ko'plik: der, -s siz (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Otaning mashinasi yangi."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Ayolning sumkasi stol ustida."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "किसका? des",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv \"किसका?\" का जवाब है और संज्ञा के बाद आता है। पुल्लिंग और नपुंसकलिंग: des + -s/-es (des Vaters)। स्त्रीलिंग और बहुवचन: der, बिना -s (der Frau, der Kinder)।",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "पिता की गाड़ी नई है।"
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "महिला का थैला मेज़ पर है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "لمن؟ des",
+      "points": [
+        {
+          "title": "des + -s وder",
+          "text": "الإضافة (Genitiv) تجيب عن \"لمن؟\" وتأتي بعد الاسم. المذكر والمحايد: des + -s/-es (des Vaters). والمؤنث والجمع: der بدون -s (der Frau، der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "سيارة الأب جديدة."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "حقيبة المرأة على الطاولة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "owner-castle-two": {
+    "ru": {
+      "title": "Чей? der",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv отвечает на вопрос «чей?» и стоит после слова. Мужской и средний род: des + -s/-es у слова (des Vaters). Женский и множественное: der, без -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Машина отца новая."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Сумка женщины лежит на столе."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Чий? der",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv відповідає на питання «чий?» і стоїть після слова. Чоловічий і середній рід: des + -s/-es у слова (des Vaters). Жіночий і множина: der, без -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Машина батька нова."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Сумка жінки лежить на столі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Whose? der",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "The genitive answers \"whose?\" and comes after the noun. Masculine and neuter: des + -s/-es on the noun (des Vaters). Feminine and plural: der, no -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "The father’s car is new."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "The woman’s bag is on the table."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Czyj? der",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv odpowiada na pytanie „czyj?” i stoi po słowie. Rodzaj męski i nijaki: des + -s/-es (des Vaters). Żeński i mnoga: der, bez -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Samochód ojca jest nowy."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Torba kobiety leży na stole."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿De quién? der",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "El genitivo responde a \"¿de quién?\" y va después del sustantivo. Masculino y neutro: des + -s/-es (des Vaters). Femenino y plural: der, sin -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "El coche del padre es nuevo."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "El bolso de la mujer está en la mesa."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "À qui ? der",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Le génitif répond à « à qui ? » et vient après le nom. Masculin et neutre : des + -s/-es (des Vaters). Féminin et pluriel : der, sans -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "La voiture du père est neuve."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Le sac de la femme est sur la table."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kimin? der",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv \"kimin?\" sorusuna cevap verir ve isimden sonra gelir. Eril ve nötr: des + -s/-es (des Vaters). Dişil ve çoğul: der, -s yok (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Babanın arabası yeni."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Kadının çantası masada."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Al cui? der",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitivul răspunde la „al cui?” și vine după substantiv. Masculin și neutru: des + -s/-es (des Vaters). Feminin și plural: der, fără -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Mașina tatălui e nouă."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Geanta femeii e pe masă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kimning? der",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv \"kimning?\" savoliga javob beradi va otdan keyin turadi. Erkak va o'rta rod: des + -s/-es (des Vaters). Ayol va ko'plik: der, -s siz (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Otaning mashinasi yangi."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Ayolning sumkasi stol ustida."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "किसका? der",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv \"किसका?\" का जवाब है और संज्ञा के बाद आता है। पुल्लिंग और नपुंसकलिंग: des + -s/-es (des Vaters)। स्त्रीलिंग और बहुवचन: der, बिना -s (der Frau, der Kinder)।",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "पिता की गाड़ी नई है।"
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "महिला का थैला मेज़ पर है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "لمن؟ der",
+      "points": [
+        {
+          "title": "des + -s وder",
+          "text": "الإضافة (Genitiv) تجيب عن \"لمن؟\" وتأتي بعد الاسم. المذكر والمحايد: des + -s/-es (des Vaters). والمؤنث والجمع: der بدون -s (der Frau، der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "سيارة الأب جديدة."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "حقيبة المرأة على الطاولة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "owner-castle-three": {
+    "ru": {
+      "title": "Моего, моей: meines, meiner",
+      "points": [
+        {
+          "title": "meines, meiner",
+          "text": "С mein, ein так же: meines/eines + -s для мужского и среднего, meiner/einer для женского, meiner для множественного.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "Это машина моего брата."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Мого, моєї: meines, meiner",
+      "points": [
+        {
+          "title": "meines, meiner",
+          "text": "З mein, ein так само: meines/eines + -s для чоловічого й середнього, meiner/einer для жіночого, meiner для множини.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "Це машина мого брата."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "My: meines, meiner",
+      "points": [
+        {
+          "title": "meines, meiner",
+          "text": "Same with mein, ein: meines/eines + -s for masculine and neuter, meiner/einer for feminine, meiner for plural.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "This is my brother’s car."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Mojego, mojej: meines, meiner",
+      "points": [
+        {
+          "title": "meines, meiner",
+          "text": "Z mein, ein tak samo: meines/eines + -s dla męskiego i nijakiego, meiner/einer dla żeńskiego, meiner dla mnogiej.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "To samochód mojego brata."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "De mi: meines, meiner",
+      "points": [
+        {
+          "title": "meines, meiner",
+          "text": "Igual con mein, ein: meines/eines + -s para masculino y neutro, meiner/einer para femenino, meiner para plural.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "Este es el coche de mi hermano."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "De mon, de ma : meines, meiner",
+      "points": [
+        {
+          "title": "meines, meiner",
+          "text": "Pareil avec mein, ein : meines/eines + -s pour le masculin et le neutre, meiner/einer pour le féminin, meiner pour le pluriel.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "C’est la voiture de mon frère."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Benim: meines, meiner",
+      "points": [
+        {
+          "title": "meines, meiner",
+          "text": "mein, ein ile de aynı: eril ve nötr için meines/eines + -s, dişil için meiner/einer, çoğul için meiner.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "Bu erkek kardeşimin arabası."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Al meu: meines, meiner",
+      "points": [
+        {
+          "title": "meines, meiner",
+          "text": "La fel cu mein, ein: meines/eines + -s pentru masculin și neutru, meiner/einer pentru feminin, meiner pentru plural.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "Aceasta e mașina fratelui meu."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mening: meines, meiner",
+      "points": [
+        {
+          "title": "meines, meiner",
+          "text": "mein, ein bilan ham shunday: erkak va o'rta rod uchun meines/eines + -s, ayol uchun meiner/einer, ko'plik uchun meiner.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "Bu akamning mashinasi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "मेरा: meines, meiner",
+      "points": [
+        {
+          "title": "meines, meiner",
+          "text": "mein, ein के साथ भी: पुल्लिंग और नपुंसकलिंग के लिए meines/eines + -s, स्त्रीलिंग के लिए meiner/einer, बहुवचन के लिए meiner।",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "यह मेरे भाई की गाड़ी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "لي: meines وmeiner",
+      "points": [
+        {
+          "title": "meines وmeiner",
+          "text": "وكذلك مع mein وein: meines/eines + -s للمذكر والمحايد، وmeiner/einer للمؤنث، وmeiner للجمع.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "هذه سيارة أخي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "owner-castle-four": {
+    "ru": {
+      "title": "Annas Auto и von",
+      "points": [
+        {
+          "title": "Annas Auto и von + Dativ",
+          "text": "С именами -s без апострофа: Annas Auto. В разговоре вместо Genitiv часто von + Dativ: das Auto von meinem Vater.",
+          "examples": [
+            {
+              "de": "Annas Auto ist rot.",
+              "tr": "Машина Анны красная."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Annas Auto і von",
+      "points": [
+        {
+          "title": "Annas Auto і von + Dativ",
+          "text": "З іменами -s без апострофа: Annas Auto. У розмові замість Genitiv часто von + Dativ: das Auto von meinem Vater.",
+          "examples": [
+            {
+              "de": "Annas Auto ist rot.",
+              "tr": "Машина Анни червона."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Annas Auto and von",
+      "points": [
+        {
+          "title": "Annas Auto and von + dative",
+          "text": "With names, -s without an apostrophe: Annas Auto. In speech von + dative often replaces the genitive: das Auto von meinem Vater.",
+          "examples": [
+            {
+              "de": "Annas Auto ist rot.",
+              "tr": "Anna’s car is red."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Annas Auto i von",
+      "points": [
+        {
+          "title": "Annas Auto i von + Dativ",
+          "text": "Z imionami -s bez apostrofu: Annas Auto. W mowie zamiast Genitiv często von + Dativ: das Auto von meinem Vater.",
+          "examples": [
+            {
+              "de": "Annas Auto ist rot.",
+              "tr": "Samochód Anny jest czerwony."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Annas Auto y von",
+      "points": [
+        {
+          "title": "Annas Auto y von + dativo",
+          "text": "Con nombres, -s sin apóstrofo: Annas Auto. Al hablar se usa a menudo von + dativo: das Auto von meinem Vater.",
+          "examples": [
+            {
+              "de": "Annas Auto ist rot.",
+              "tr": "El coche de Anna es rojo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Annas Auto et von",
+      "points": [
+        {
+          "title": "Annas Auto et von + datif",
+          "text": "Avec les prénoms, -s sans apostrophe : Annas Auto. À l’oral, on dit souvent von + datif : das Auto von meinem Vater.",
+          "examples": [
+            {
+              "de": "Annas Auto ist rot.",
+              "tr": "La voiture d’Anna est rouge."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Annas Auto ve von",
+      "points": [
+        {
+          "title": "Annas Auto ve von + Dativ",
+          "text": "İsimlerle kesme işaretsiz -s: Annas Auto. Konuşmada Genitiv yerine çoğu zaman von + Dativ: das Auto von meinem Vater.",
+          "examples": [
+            {
+              "de": "Annas Auto ist rot.",
+              "tr": "Anna’nın arabası kırmızı."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Annas Auto și von",
+      "points": [
+        {
+          "title": "Annas Auto și von + dativ",
+          "text": "Cu nume, -s fără apostrof: Annas Auto. În vorbire se folosește des von + dativ: das Auto von meinem Vater.",
+          "examples": [
+            {
+              "de": "Annas Auto ist rot.",
+              "tr": "Mașina Annei e roșie."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Annas Auto va von",
+      "points": [
+        {
+          "title": "Annas Auto va von + Dativ",
+          "text": "Ismlar bilan apostrofsiz -s: Annas Auto. Suhbatda Genitiv o'rniga ko'pincha von + Dativ: das Auto von meinem Vater.",
+          "examples": [
+            {
+              "de": "Annas Auto ist rot.",
+              "tr": "Annaning mashinasi qizil."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "Annas Auto और von",
+      "points": [
+        {
+          "title": "Annas Auto और von + Dativ",
+          "text": "नामों के साथ बिना अपॉस्ट्रॉफ़ी -s: Annas Auto। बोलचाल में Genitiv की जगह अक्सर von + Dativ: das Auto von meinem Vater।",
+          "examples": [
+            {
+              "de": "Annas Auto ist rot.",
+              "tr": "अन्ना की गाड़ी लाल है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "Annas Auto وvon",
+      "points": [
+        {
+          "title": "Annas Auto وvon + الجر",
+          "text": "مع الأسماء -s بدون فاصلة علوية: Annas Auto. وفي الكلام يُستعمل غالباً von + الجر: das Auto von meinem Vater.",
+          "examples": [
+            {
+              "de": "Annas Auto ist rot.",
+              "tr": "سيارة آنا حمراء."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "owner-castle-five": {
+    "ru": {
+      "title": "Из-за: wegen",
+      "points": [
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (из-за), trotz (несмотря на), während (во время) + Genitiv. wegen des Regens короче, чем weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Из-за дождя мы остались дома."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Несмотря на дождь, мы пошли гулять."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Через: wegen",
+      "points": [
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (через), trotz (незважаючи на), während (під час) + Genitiv. wegen des Regens коротше, ніж weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Через дощ ми залишилися вдома."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Незважаючи на дощ, ми пішли гуляти."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Because of: wegen",
+      "points": [
+        {
+          "title": "wegen, trotz, während + genitive",
+          "text": "wegen (because of), trotz (despite), während (during) + genitive. wegen des Regens is shorter than weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Because of the rain we stayed at home."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Despite the rain we went for a walk."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Z powodu: wegen",
+      "points": [
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (z powodu), trotz (mimo), während (podczas) + Genitiv. wegen des Regens jest krótsze niż weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Z powodu deszczu zostaliśmy w domu."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Mimo deszczu poszliśmy na spacer."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Por: wegen",
+      "points": [
+        {
+          "title": "wegen, trotz, während + genitivo",
+          "text": "wegen (por), trotz (a pesar de), während (durante) + genitivo. wegen des Regens es más corto que weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Por la lluvia nos quedamos en casa."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "A pesar de la lluvia, fuimos a pasear."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "À cause de : wegen",
+      "points": [
+        {
+          "title": "wegen, trotz, während + génitif",
+          "text": "wegen (à cause de), trotz (malgré), während (pendant) + génitif. wegen des Regens est plus court que weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "À cause de la pluie, nous sommes restés à la maison."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Malgré la pluie, nous sommes allés nous promener."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yüzünden: wegen",
+      "points": [
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (yüzünden), trotz (rağmen), während (sırasında) + Genitiv. wegen des Regens, weil es regnet’ten daha kısadır.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Yağmur yüzünden evde kaldık."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Yağmura rağmen yürüyüşe çıktık."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Din cauza: wegen",
+      "points": [
+        {
+          "title": "wegen, trotz, während + genitiv",
+          "text": "wegen (din cauza), trotz (în ciuda), während (în timpul) + genitiv. wegen des Regens e mai scurt decât weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Din cauza ploii am rămas acasă."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "În ciuda ploii am ieșit la plimbare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Sababli: wegen",
+      "points": [
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (sababli), trotz (qaramay), während (davomida) + Genitiv. wegen des Regens weil es regnet dan qisqaroq.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Yomg'ir sababli uyda qoldik."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Yomg'irga qaramay sayrga chiqdik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "की वजह से: wegen",
+      "points": [
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (की वजह से), trotz (के बावजूद), während (के दौरान) + Genitiv। wegen des Regens, weil es regnet से छोटा है।",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "बारिश की वजह से हम घर पर रहे।"
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "बारिश के बावजूद हम टहलने गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "بسبب: wegen",
+      "points": [
+        {
+          "title": "wegen وtrotz وwährend + الإضافة",
+          "text": "wegen (بسبب)، trotz (رغم)، während (أثناء) + الإضافة. وwegen des Regens أقصر من weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "بسبب المطر بقينا في البيت."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "رغم المطر خرجنا للتنزه."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "owner-castle-six": {
+    "ru": {
+      "title": "Несмотря на, во время",
+      "points": [
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (из-за), trotz (несмотря на), während (во время) + Genitiv. wegen des Regens короче, чем weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Из-за дождя мы остались дома."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Несмотря на дождь, мы пошли гулять."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Незважаючи на, під час",
+      "points": [
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (через), trotz (незважаючи на), während (під час) + Genitiv. wegen des Regens коротше, ніж weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Через дощ ми залишилися вдома."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Незважаючи на дощ, ми пішли гуляти."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Despite, during",
+      "points": [
+        {
+          "title": "wegen, trotz, während + genitive",
+          "text": "wegen (because of), trotz (despite), während (during) + genitive. wegen des Regens is shorter than weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Because of the rain we stayed at home."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Despite the rain we went for a walk."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Mimo, podczas",
+      "points": [
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (z powodu), trotz (mimo), während (podczas) + Genitiv. wegen des Regens jest krótsze niż weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Z powodu deszczu zostaliśmy w domu."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Mimo deszczu poszliśmy na spacer."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "A pesar de, durante",
+      "points": [
+        {
+          "title": "wegen, trotz, während + genitivo",
+          "text": "wegen (por), trotz (a pesar de), während (durante) + genitivo. wegen des Regens es más corto que weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Por la lluvia nos quedamos en casa."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "A pesar de la lluvia, fuimos a pasear."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Malgré, pendant",
+      "points": [
+        {
+          "title": "wegen, trotz, während + génitif",
+          "text": "wegen (à cause de), trotz (malgré), während (pendant) + génitif. wegen des Regens est plus court que weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "À cause de la pluie, nous sommes restés à la maison."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Malgré la pluie, nous sommes allés nous promener."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Rağmen, sırasında",
+      "points": [
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (yüzünden), trotz (rağmen), während (sırasında) + Genitiv. wegen des Regens, weil es regnet’ten daha kısadır.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Yağmur yüzünden evde kaldık."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Yağmura rağmen yürüyüşe çıktık."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "În ciuda, în timpul",
+      "points": [
+        {
+          "title": "wegen, trotz, während + genitiv",
+          "text": "wegen (din cauza), trotz (în ciuda), während (în timpul) + genitiv. wegen des Regens e mai scurt decât weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Din cauza ploii am rămas acasă."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "În ciuda ploii am ieșit la plimbare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qaramay, davomida",
+      "points": [
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (sababli), trotz (qaramay), während (davomida) + Genitiv. wegen des Regens weil es regnet dan qisqaroq.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Yomg'ir sababli uyda qoldik."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Yomg'irga qaramay sayrga chiqdik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "के बावजूद, के दौरान",
+      "points": [
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (की वजह से), trotz (के बावजूद), während (के दौरान) + Genitiv। wegen des Regens, weil es regnet से छोटा है।",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "बारिश की वजह से हम घर पर रहे।"
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "बारिश के बावजूद हम टहलने गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "رغم، أثناء",
+      "points": [
+        {
+          "title": "wegen وtrotz وwährend + الإضافة",
+          "text": "wegen (بسبب)، trotz (رغم)، während (أثناء) + الإضافة. وwegen des Regens أقصر من weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "بسبب المطر بقينا في البيت."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "رغم المطر خرجنا للتنزه."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "owner-castle-seven": {
+    "ru": {
+      "title": "Практика: в музее",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv отвечает на вопрос «чей?» и стоит после слова. Мужской и средний род: des + -s/-es у слова (des Vaters). Женский и множественное: der, без -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Машина отца новая."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Сумка женщины лежит на столе."
+            }
+          ]
+        },
+        {
+          "title": "Annas Auto и von + Dativ",
+          "text": "С именами -s без апострофа: Annas Auto. В разговоре вместо Genitiv часто von + Dativ: das Auto von meinem Vater.",
+          "examples": [
+            {
+              "de": "Annas Auto ist rot.",
+              "tr": "Машина Анны красная."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: у музеї",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv відповідає на питання «чий?» і стоїть після слова. Чоловічий і середній рід: des + -s/-es у слова (des Vaters). Жіночий і множина: der, без -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Машина батька нова."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Сумка жінки лежить на столі."
+            }
+          ]
+        },
+        {
+          "title": "Annas Auto і von + Dativ",
+          "text": "З іменами -s без апострофа: Annas Auto. У розмові замість Genitiv часто von + Dativ: das Auto von meinem Vater.",
+          "examples": [
+            {
+              "de": "Annas Auto ist rot.",
+              "tr": "Машина Анни червона."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: at the museum",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "The genitive answers \"whose?\" and comes after the noun. Masculine and neuter: des + -s/-es on the noun (des Vaters). Feminine and plural: der, no -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "The father’s car is new."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "The woman’s bag is on the table."
+            }
+          ]
+        },
+        {
+          "title": "Annas Auto and von + dative",
+          "text": "With names, -s without an apostrophe: Annas Auto. In speech von + dative often replaces the genitive: das Auto von meinem Vater.",
+          "examples": [
+            {
+              "de": "Annas Auto ist rot.",
+              "tr": "Anna’s car is red."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: w muzeum",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv odpowiada na pytanie „czyj?” i stoi po słowie. Rodzaj męski i nijaki: des + -s/-es (des Vaters). Żeński i mnoga: der, bez -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Samochód ojca jest nowy."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Torba kobiety leży na stole."
+            }
+          ]
+        },
+        {
+          "title": "Annas Auto i von + Dativ",
+          "text": "Z imionami -s bez apostrofu: Annas Auto. W mowie zamiast Genitiv często von + Dativ: das Auto von meinem Vater.",
+          "examples": [
+            {
+              "de": "Annas Auto ist rot.",
+              "tr": "Samochód Anny jest czerwony."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: en el museo",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "El genitivo responde a \"¿de quién?\" y va después del sustantivo. Masculino y neutro: des + -s/-es (des Vaters). Femenino y plural: der, sin -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "El coche del padre es nuevo."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "El bolso de la mujer está en la mesa."
+            }
+          ]
+        },
+        {
+          "title": "Annas Auto y von + dativo",
+          "text": "Con nombres, -s sin apóstrofo: Annas Auto. Al hablar se usa a menudo von + dativo: das Auto von meinem Vater.",
+          "examples": [
+            {
+              "de": "Annas Auto ist rot.",
+              "tr": "El coche de Anna es rojo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : au musée",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Le génitif répond à « à qui ? » et vient après le nom. Masculin et neutre : des + -s/-es (des Vaters). Féminin et pluriel : der, sans -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "La voiture du père est neuve."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Le sac de la femme est sur la table."
+            }
+          ]
+        },
+        {
+          "title": "Annas Auto et von + datif",
+          "text": "Avec les prénoms, -s sans apostrophe : Annas Auto. À l’oral, on dit souvent von + datif : das Auto von meinem Vater.",
+          "examples": [
+            {
+              "de": "Annas Auto ist rot.",
+              "tr": "La voiture d’Anna est rouge."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: müzede",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv \"kimin?\" sorusuna cevap verir ve isimden sonra gelir. Eril ve nötr: des + -s/-es (des Vaters). Dişil ve çoğul: der, -s yok (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Babanın arabası yeni."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Kadının çantası masada."
+            }
+          ]
+        },
+        {
+          "title": "Annas Auto ve von + Dativ",
+          "text": "İsimlerle kesme işaretsiz -s: Annas Auto. Konuşmada Genitiv yerine çoğu zaman von + Dativ: das Auto von meinem Vater.",
+          "examples": [
+            {
+              "de": "Annas Auto ist rot.",
+              "tr": "Anna’nın arabası kırmızı."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: la muzeu",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitivul răspunde la „al cui?” și vine după substantiv. Masculin și neutru: des + -s/-es (des Vaters). Feminin și plural: der, fără -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Mașina tatălui e nouă."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Geanta femeii e pe masă."
+            }
+          ]
+        },
+        {
+          "title": "Annas Auto și von + dativ",
+          "text": "Cu nume, -s fără apostrof: Annas Auto. În vorbire se folosește des von + dativ: das Auto von meinem Vater.",
+          "examples": [
+            {
+              "de": "Annas Auto ist rot.",
+              "tr": "Mașina Annei e roșie."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: muzeyda",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv \"kimning?\" savoliga javob beradi va otdan keyin turadi. Erkak va o'rta rod: des + -s/-es (des Vaters). Ayol va ko'plik: der, -s siz (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Otaning mashinasi yangi."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Ayolning sumkasi stol ustida."
+            }
+          ]
+        },
+        {
+          "title": "Annas Auto va von + Dativ",
+          "text": "Ismlar bilan apostrofsiz -s: Annas Auto. Suhbatda Genitiv o'rniga ko'pincha von + Dativ: das Auto von meinem Vater.",
+          "examples": [
+            {
+              "de": "Annas Auto ist rot.",
+              "tr": "Annaning mashinasi qizil."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: संग्रहालय में",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv \"किसका?\" का जवाब है और संज्ञा के बाद आता है। पुल्लिंग और नपुंसकलिंग: des + -s/-es (des Vaters)। स्त्रीलिंग और बहुवचन: der, बिना -s (der Frau, der Kinder)।",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "पिता की गाड़ी नई है।"
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "महिला का थैला मेज़ पर है।"
+            }
+          ]
+        },
+        {
+          "title": "Annas Auto और von + Dativ",
+          "text": "नामों के साथ बिना अपॉस्ट्रॉफ़ी -s: Annas Auto। बोलचाल में Genitiv की जगह अक्सर von + Dativ: das Auto von meinem Vater।",
+          "examples": [
+            {
+              "de": "Annas Auto ist rot.",
+              "tr": "अन्ना की गाड़ी लाल है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: في المتحف",
+      "points": [
+        {
+          "title": "des + -s وder",
+          "text": "الإضافة (Genitiv) تجيب عن \"لمن؟\" وتأتي بعد الاسم. المذكر والمحايد: des + -s/-es (des Vaters). والمؤنث والجمع: der بدون -s (der Frau، der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "سيارة الأب جديدة."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "حقيبة المرأة على الطاولة."
+            }
+          ]
+        },
+        {
+          "title": "Annas Auto وvon + الجر",
+          "text": "مع الأسماء -s بدون فاصلة علوية: Annas Auto. وفي الكلام يُستعمل غالباً von + الجر: das Auto von meinem Vater.",
+          "examples": [
+            {
+              "de": "Annas Auto ist rot.",
+              "tr": "سيارة آنا حمراء."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "owner-castle-eight": {
+    "ru": {
+      "title": "Практика: поездка в замок",
+      "points": [
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (из-за), trotz (несмотря на), während (во время) + Genitiv. wegen des Regens короче, чем weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Из-за дождя мы остались дома."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Несмотря на дождь, мы пошли гулять."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: поїздка до замку",
+      "points": [
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (через), trotz (незважаючи на), während (під час) + Genitiv. wegen des Regens коротше, ніж weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Через дощ ми залишилися вдома."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Незважаючи на дощ, ми пішли гуляти."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: a trip to the castle",
+      "points": [
+        {
+          "title": "wegen, trotz, während + genitive",
+          "text": "wegen (because of), trotz (despite), während (during) + genitive. wegen des Regens is shorter than weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Because of the rain we stayed at home."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Despite the rain we went for a walk."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: wycieczka do zamku",
+      "points": [
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (z powodu), trotz (mimo), während (podczas) + Genitiv. wegen des Regens jest krótsze niż weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Z powodu deszczu zostaliśmy w domu."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Mimo deszczu poszliśmy na spacer."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: excursión al castillo",
+      "points": [
+        {
+          "title": "wegen, trotz, während + genitivo",
+          "text": "wegen (por), trotz (a pesar de), während (durante) + genitivo. wegen des Regens es más corto que weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Por la lluvia nos quedamos en casa."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "A pesar de la lluvia, fuimos a pasear."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : visite du château",
+      "points": [
+        {
+          "title": "wegen, trotz, während + génitif",
+          "text": "wegen (à cause de), trotz (malgré), während (pendant) + génitif. wegen des Regens est plus court que weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "À cause de la pluie, nous sommes restés à la maison."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Malgré la pluie, nous sommes allés nous promener."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: kale gezisi",
+      "points": [
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (yüzünden), trotz (rağmen), während (sırasında) + Genitiv. wegen des Regens, weil es regnet’ten daha kısadır.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Yağmur yüzünden evde kaldık."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Yağmura rağmen yürüyüşe çıktık."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: excursie la castel",
+      "points": [
+        {
+          "title": "wegen, trotz, während + genitiv",
+          "text": "wegen (din cauza), trotz (în ciuda), während (în timpul) + genitiv. wegen des Regens e mai scurt decât weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Din cauza ploii am rămas acasă."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "În ciuda ploii am ieșit la plimbare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: qal'aga sayohat",
+      "points": [
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (sababli), trotz (qaramay), während (davomida) + Genitiv. wegen des Regens weil es regnet dan qisqaroq.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Yomg'ir sababli uyda qoldik."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Yomg'irga qaramay sayrga chiqdik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: किले की सैर",
+      "points": [
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (की वजह से), trotz (के बावजूद), während (के दौरान) + Genitiv। wegen des Regens, weil es regnet से छोटा है।",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "बारिश की वजह से हम घर पर रहे।"
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "बारिश के बावजूद हम टहलने गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: رحلة إلى القلعة",
+      "points": [
+        {
+          "title": "wegen وtrotz وwährend + الإضافة",
+          "text": "wegen (بسبب)، trotz (رغم)، während (أثناء) + الإضافة. وwegen des Regens أقصر من weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "بسبب المطر بقينا في البيت."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "رغم المطر خرجنا للتنزه."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "owner-castle-nine": {
+    "ru": {
+      "title": "Повторение: Genitiv",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv отвечает на вопрос «чей?» и стоит после слова. Мужской и средний род: des + -s/-es у слова (des Vaters). Женский и множественное: der, без -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Машина отца новая."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Сумка женщины лежит на столе."
+            }
+          ]
+        },
+        {
+          "title": "meines, meiner",
+          "text": "С mein, ein так же: meines/eines + -s для мужского и среднего, meiner/einer для женского, meiner для множественного.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "Это машина моего брата."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (из-за), trotz (несмотря на), während (во время) + Genitiv. wegen des Regens короче, чем weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Из-за дождя мы остались дома."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Несмотря на дождь, мы пошли гулять."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: Genitiv",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv відповідає на питання «чий?» і стоїть після слова. Чоловічий і середній рід: des + -s/-es у слова (des Vaters). Жіночий і множина: der, без -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Машина батька нова."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Сумка жінки лежить на столі."
+            }
+          ]
+        },
+        {
+          "title": "meines, meiner",
+          "text": "З mein, ein так само: meines/eines + -s для чоловічого й середнього, meiner/einer для жіночого, meiner для множини.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "Це машина мого брата."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (через), trotz (незважаючи на), während (під час) + Genitiv. wegen des Regens коротше, ніж weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Через дощ ми залишилися вдома."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Незважаючи на дощ, ми пішли гуляти."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: genitive",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "The genitive answers \"whose?\" and comes after the noun. Masculine and neuter: des + -s/-es on the noun (des Vaters). Feminine and plural: der, no -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "The father’s car is new."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "The woman’s bag is on the table."
+            }
+          ]
+        },
+        {
+          "title": "meines, meiner",
+          "text": "Same with mein, ein: meines/eines + -s for masculine and neuter, meiner/einer for feminine, meiner for plural.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "This is my brother’s car."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + genitive",
+          "text": "wegen (because of), trotz (despite), während (during) + genitive. wegen des Regens is shorter than weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Because of the rain we stayed at home."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Despite the rain we went for a walk."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: Genitiv",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv odpowiada na pytanie „czyj?” i stoi po słowie. Rodzaj męski i nijaki: des + -s/-es (des Vaters). Żeński i mnoga: der, bez -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Samochód ojca jest nowy."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Torba kobiety leży na stole."
+            }
+          ]
+        },
+        {
+          "title": "meines, meiner",
+          "text": "Z mein, ein tak samo: meines/eines + -s dla męskiego i nijakiego, meiner/einer dla żeńskiego, meiner dla mnogiej.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "To samochód mojego brata."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (z powodu), trotz (mimo), während (podczas) + Genitiv. wegen des Regens jest krótsze niż weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Z powodu deszczu zostaliśmy w domu."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Mimo deszczu poszliśmy na spacer."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: genitivo",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "El genitivo responde a \"¿de quién?\" y va después del sustantivo. Masculino y neutro: des + -s/-es (des Vaters). Femenino y plural: der, sin -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "El coche del padre es nuevo."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "El bolso de la mujer está en la mesa."
+            }
+          ]
+        },
+        {
+          "title": "meines, meiner",
+          "text": "Igual con mein, ein: meines/eines + -s para masculino y neutro, meiner/einer para femenino, meiner para plural.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "Este es el coche de mi hermano."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + genitivo",
+          "text": "wegen (por), trotz (a pesar de), während (durante) + genitivo. wegen des Regens es más corto que weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Por la lluvia nos quedamos en casa."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "A pesar de la lluvia, fuimos a pasear."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : génitif",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Le génitif répond à « à qui ? » et vient après le nom. Masculin et neutre : des + -s/-es (des Vaters). Féminin et pluriel : der, sans -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "La voiture du père est neuve."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Le sac de la femme est sur la table."
+            }
+          ]
+        },
+        {
+          "title": "meines, meiner",
+          "text": "Pareil avec mein, ein : meines/eines + -s pour le masculin et le neutre, meiner/einer pour le féminin, meiner pour le pluriel.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "C’est la voiture de mon frère."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + génitif",
+          "text": "wegen (à cause de), trotz (malgré), während (pendant) + génitif. wegen des Regens est plus court que weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "À cause de la pluie, nous sommes restés à la maison."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Malgré la pluie, nous sommes allés nous promener."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: Genitiv",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv \"kimin?\" sorusuna cevap verir ve isimden sonra gelir. Eril ve nötr: des + -s/-es (des Vaters). Dişil ve çoğul: der, -s yok (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Babanın arabası yeni."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Kadının çantası masada."
+            }
+          ]
+        },
+        {
+          "title": "meines, meiner",
+          "text": "mein, ein ile de aynı: eril ve nötr için meines/eines + -s, dişil için meiner/einer, çoğul için meiner.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "Bu erkek kardeşimin arabası."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (yüzünden), trotz (rağmen), während (sırasında) + Genitiv. wegen des Regens, weil es regnet’ten daha kısadır.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Yağmur yüzünden evde kaldık."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Yağmura rağmen yürüyüşe çıktık."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: genitiv",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitivul răspunde la „al cui?” și vine după substantiv. Masculin și neutru: des + -s/-es (des Vaters). Feminin și plural: der, fără -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Mașina tatălui e nouă."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Geanta femeii e pe masă."
+            }
+          ]
+        },
+        {
+          "title": "meines, meiner",
+          "text": "La fel cu mein, ein: meines/eines + -s pentru masculin și neutru, meiner/einer pentru feminin, meiner pentru plural.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "Aceasta e mașina fratelui meu."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + genitiv",
+          "text": "wegen (din cauza), trotz (în ciuda), während (în timpul) + genitiv. wegen des Regens e mai scurt decât weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Din cauza ploii am rămas acasă."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "În ciuda ploii am ieșit la plimbare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: Genitiv",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv \"kimning?\" savoliga javob beradi va otdan keyin turadi. Erkak va o'rta rod: des + -s/-es (des Vaters). Ayol va ko'plik: der, -s siz (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Otaning mashinasi yangi."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Ayolning sumkasi stol ustida."
+            }
+          ]
+        },
+        {
+          "title": "meines, meiner",
+          "text": "mein, ein bilan ham shunday: erkak va o'rta rod uchun meines/eines + -s, ayol uchun meiner/einer, ko'plik uchun meiner.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "Bu akamning mashinasi."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (sababli), trotz (qaramay), während (davomida) + Genitiv. wegen des Regens weil es regnet dan qisqaroq.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Yomg'ir sababli uyda qoldik."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Yomg'irga qaramay sayrga chiqdik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: Genitiv",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv \"किसका?\" का जवाब है और संज्ञा के बाद आता है। पुल्लिंग और नपुंसकलिंग: des + -s/-es (des Vaters)। स्त्रीलिंग और बहुवचन: der, बिना -s (der Frau, der Kinder)।",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "पिता की गाड़ी नई है।"
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "महिला का थैला मेज़ पर है।"
+            }
+          ]
+        },
+        {
+          "title": "meines, meiner",
+          "text": "mein, ein के साथ भी: पुल्लिंग और नपुंसकलिंग के लिए meines/eines + -s, स्त्रीलिंग के लिए meiner/einer, बहुवचन के लिए meiner।",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "यह मेरे भाई की गाड़ी है।"
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (की वजह से), trotz (के बावजूद), während (के दौरान) + Genitiv। wegen des Regens, weil es regnet से छोटा है।",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "बारिश की वजह से हम घर पर रहे।"
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "बारिश के बावजूद हम टहलने गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الإضافة",
+      "points": [
+        {
+          "title": "des + -s وder",
+          "text": "الإضافة (Genitiv) تجيب عن \"لمن؟\" وتأتي بعد الاسم. المذكر والمحايد: des + -s/-es (des Vaters). والمؤنث والجمع: der بدون -s (der Frau، der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "سيارة الأب جديدة."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "حقيبة المرأة على الطاولة."
+            }
+          ]
+        },
+        {
+          "title": "meines وmeiner",
+          "text": "وكذلك مع mein وein: meines/eines + -s للمذكر والمحايد، وmeiner/einer للمؤنث، وmeiner للجمع.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "هذه سيارة أخي."
+            }
+          ]
+        },
+        {
+          "title": "wegen وtrotz وwährend + الإضافة",
+          "text": "wegen (بسبب)، trotz (رغم)، während (أثناء) + الإضافة. وwegen des Regens أقصر من weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "بسبب المطر بقينا في البيت."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "رغم المطر خرجنا للتنزه."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "owner-castle-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv отвечает на вопрос «чей?» и стоит после слова. Мужской и средний род: des + -s/-es у слова (des Vaters). Женский и множественное: der, без -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Машина отца новая."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Сумка женщины лежит на столе."
+            }
+          ]
+        },
+        {
+          "title": "meines, meiner",
+          "text": "С mein, ein так же: meines/eines + -s для мужского и среднего, meiner/einer для женского, meiner для множественного.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "Это машина моего брата."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (из-за), trotz (несмотря на), während (во время) + Genitiv. wegen des Regens короче, чем weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Из-за дождя мы остались дома."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Несмотря на дождь, мы пошли гулять."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv відповідає на питання «чий?» і стоїть після слова. Чоловічий і середній рід: des + -s/-es у слова (des Vaters). Жіночий і множина: der, без -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Машина батька нова."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Сумка жінки лежить на столі."
+            }
+          ]
+        },
+        {
+          "title": "meines, meiner",
+          "text": "З mein, ein так само: meines/eines + -s для чоловічого й середнього, meiner/einer для жіночого, meiner для множини.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "Це машина мого брата."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (через), trotz (незважаючи на), während (під час) + Genitiv. wegen des Regens коротше, ніж weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Через дощ ми залишилися вдома."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Незважаючи на дощ, ми пішли гуляти."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "The genitive answers \"whose?\" and comes after the noun. Masculine and neuter: des + -s/-es on the noun (des Vaters). Feminine and plural: der, no -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "The father’s car is new."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "The woman’s bag is on the table."
+            }
+          ]
+        },
+        {
+          "title": "meines, meiner",
+          "text": "Same with mein, ein: meines/eines + -s for masculine and neuter, meiner/einer for feminine, meiner for plural.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "This is my brother’s car."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + genitive",
+          "text": "wegen (because of), trotz (despite), während (during) + genitive. wegen des Regens is shorter than weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Because of the rain we stayed at home."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Despite the rain we went for a walk."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv odpowiada na pytanie „czyj?” i stoi po słowie. Rodzaj męski i nijaki: des + -s/-es (des Vaters). Żeński i mnoga: der, bez -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Samochód ojca jest nowy."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Torba kobiety leży na stole."
+            }
+          ]
+        },
+        {
+          "title": "meines, meiner",
+          "text": "Z mein, ein tak samo: meines/eines + -s dla męskiego i nijakiego, meiner/einer dla żeńskiego, meiner dla mnogiej.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "To samochód mojego brata."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (z powodu), trotz (mimo), während (podczas) + Genitiv. wegen des Regens jest krótsze niż weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Z powodu deszczu zostaliśmy w domu."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Mimo deszczu poszliśmy na spacer."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "El genitivo responde a \"¿de quién?\" y va después del sustantivo. Masculino y neutro: des + -s/-es (des Vaters). Femenino y plural: der, sin -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "El coche del padre es nuevo."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "El bolso de la mujer está en la mesa."
+            }
+          ]
+        },
+        {
+          "title": "meines, meiner",
+          "text": "Igual con mein, ein: meines/eines + -s para masculino y neutro, meiner/einer para femenino, meiner para plural.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "Este es el coche de mi hermano."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + genitivo",
+          "text": "wegen (por), trotz (a pesar de), während (durante) + genitivo. wegen des Regens es más corto que weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Por la lluvia nos quedamos en casa."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "A pesar de la lluvia, fuimos a pasear."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Le génitif répond à « à qui ? » et vient après le nom. Masculin et neutre : des + -s/-es (des Vaters). Féminin et pluriel : der, sans -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "La voiture du père est neuve."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Le sac de la femme est sur la table."
+            }
+          ]
+        },
+        {
+          "title": "meines, meiner",
+          "text": "Pareil avec mein, ein : meines/eines + -s pour le masculin et le neutre, meiner/einer pour le féminin, meiner pour le pluriel.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "C’est la voiture de mon frère."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + génitif",
+          "text": "wegen (à cause de), trotz (malgré), während (pendant) + génitif. wegen des Regens est plus court que weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "À cause de la pluie, nous sommes restés à la maison."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Malgré la pluie, nous sommes allés nous promener."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv \"kimin?\" sorusuna cevap verir ve isimden sonra gelir. Eril ve nötr: des + -s/-es (des Vaters). Dişil ve çoğul: der, -s yok (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Babanın arabası yeni."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Kadının çantası masada."
+            }
+          ]
+        },
+        {
+          "title": "meines, meiner",
+          "text": "mein, ein ile de aynı: eril ve nötr için meines/eines + -s, dişil için meiner/einer, çoğul için meiner.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "Bu erkek kardeşimin arabası."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (yüzünden), trotz (rağmen), während (sırasında) + Genitiv. wegen des Regens, weil es regnet’ten daha kısadır.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Yağmur yüzünden evde kaldık."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Yağmura rağmen yürüyüşe çıktık."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitivul răspunde la „al cui?” și vine după substantiv. Masculin și neutru: des + -s/-es (des Vaters). Feminin și plural: der, fără -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Mașina tatălui e nouă."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Geanta femeii e pe masă."
+            }
+          ]
+        },
+        {
+          "title": "meines, meiner",
+          "text": "La fel cu mein, ein: meines/eines + -s pentru masculin și neutru, meiner/einer pentru feminin, meiner pentru plural.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "Aceasta e mașina fratelui meu."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + genitiv",
+          "text": "wegen (din cauza), trotz (în ciuda), während (în timpul) + genitiv. wegen des Regens e mai scurt decât weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Din cauza ploii am rămas acasă."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "În ciuda ploii am ieșit la plimbare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv \"kimning?\" savoliga javob beradi va otdan keyin turadi. Erkak va o'rta rod: des + -s/-es (des Vaters). Ayol va ko'plik: der, -s siz (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Otaning mashinasi yangi."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Ayolning sumkasi stol ustida."
+            }
+          ]
+        },
+        {
+          "title": "meines, meiner",
+          "text": "mein, ein bilan ham shunday: erkak va o'rta rod uchun meines/eines + -s, ayol uchun meiner/einer, ko'plik uchun meiner.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "Bu akamning mashinasi."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (sababli), trotz (qaramay), während (davomida) + Genitiv. wegen des Regens weil es regnet dan qisqaroq.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Yomg'ir sababli uyda qoldik."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Yomg'irga qaramay sayrga chiqdik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv \"किसका?\" का जवाब है और संज्ञा के बाद आता है। पुल्लिंग और नपुंसकलिंग: des + -s/-es (des Vaters)। स्त्रीलिंग और बहुवचन: der, बिना -s (der Frau, der Kinder)।",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "पिता की गाड़ी नई है।"
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "महिला का थैला मेज़ पर है।"
+            }
+          ]
+        },
+        {
+          "title": "meines, meiner",
+          "text": "mein, ein के साथ भी: पुल्लिंग और नपुंसकलिंग के लिए meines/eines + -s, स्त्रीलिंग के लिए meiner/einer, बहुवचन के लिए meiner।",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "यह मेरे भाई की गाड़ी है।"
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (की वजह से), trotz (के बावजूद), während (के दौरान) + Genitiv। wegen des Regens, weil es regnet से छोटा है।",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "बारिश की वजह से हम घर पर रहे।"
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "बारिश के बावजूद हम टहलने गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "des + -s وder",
+          "text": "الإضافة (Genitiv) تجيب عن \"لمن؟\" وتأتي بعد الاسم. المذكر والمحايد: des + -s/-es (des Vaters). والمؤنث والجمع: der بدون -s (der Frau، der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "سيارة الأب جديدة."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "حقيبة المرأة على الطاولة."
+            }
+          ]
+        },
+        {
+          "title": "meines وmeiner",
+          "text": "وكذلك مع mein وein: meines/eines + -s للمذكر والمحايد، وmeiner/einer للمؤنث، وmeiner للجمع.",
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "هذه سيارة أخي."
+            }
+          ]
+        },
+        {
+          "title": "wegen وtrotz وwährend + الإضافة",
+          "text": "wegen (بسبب)، trotz (رغم)، während (أثناء) + الإضافة. وwegen des Regens أقصر من weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "بسبب المطر بقينا في البيت."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "رغم المطر خرجنا للتنزه."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

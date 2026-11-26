@@ -205,6 +205,10 @@ function proceedToQuest(quest) {
 
 function handleStartQuest(quest) {
   if (!quest?.questId) return;
+  // через задания не перескакиваем: можно только пройденные и первое непройденное
+  const index = processedQuests.value.findIndex(item => item.questId === quest.questId);
+  const firstOpen = processedQuests.value.findIndex(item => !item.isSuccess);
+  if (firstOpen !== -1 && index > firstOpen && !quest.isSuccess && !quest.hasMistakes) return;
   isApplication();
   if (!authStore.isPremium && chainStore.lives <= 0) {
     pendingQuest.value = quest;
@@ -217,6 +221,10 @@ function handleStartQuest(quest) {
 
 function handleLearnWords(quest) {
   if (!quest?.questId) return;
+  // материал закрытого задания не открываем, как и само задание
+  const index = processedQuests.value.findIndex(item => item.questId === quest.questId);
+  const firstOpen = processedQuests.value.findIndex(item => !item.isSuccess);
+  if (firstOpen !== -1 && index > firstOpen && !quest.isSuccess && !quest.hasMistakes) return;
   router.push({
     path: `/location/word-session`,
     query: { questId: quest.questId, region: currentRegionKey.value }

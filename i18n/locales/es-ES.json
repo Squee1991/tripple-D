@@ -19519,9 +19519,7 @@
     "descriptionThematic": "Explica los casos y artículos en plena práctica si tienes dudas."
   },
   "questModals": {
-    "fixMistakesTitle": "Corrijamos los errores",
-    "fixMistakesText": "Repite las tareas en las que fallaste. Corrígelas y la lección estará completa.",
-    "fixMistakesBtn": "Corregir errores ({count})",
+    "fixForReward": "Para recibir la recompensa, completa todas las tareas correctamente",
     "repeat": "Repasar errores",
     "next": "Siguiente tarea ➔",
     "back": "A los temas",
@@ -21082,6 +21080,7 @@
     "writing": "Escritura",
     "new": "Nuevo",
     "writeLocked": "Completa la misión para desbloquear la escritura",
+    "questLocked": "Primero completa la tarea anterior",
     "writeAction": "Escribe las frases de oído",
     "landDone": "¡Tierra completada!",
     "landGoal": "Completa todas las misiones y la escritura",

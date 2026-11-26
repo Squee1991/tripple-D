@@ -1,0 +1,2442 @@
+{
+  "consequence-fork-one": {
+    "ru": {
+      "title": "Так что: sodass",
+      "points": [
+        {
+          "title": "sodass: так что",
+          "text": "sodass говорит о результате. Это придаточное: глагол в конце, перед sodass запятая.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Шёл сильный дождь, так что мы остались дома."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Тож: sodass",
+      "points": [
+        {
+          "title": "sodass: тож",
+          "text": "sodass говорить про результат. Це підрядне: дієслово в кінці, перед sodass кома.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Ішов сильний дощ, тож ми залишилися вдома."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "So: sodass",
+      "points": [
+        {
+          "title": "sodass: so that (result)",
+          "text": "sodass describes the result. It’s a subordinate clause: verb at the end, comma before sodass.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "It rained heavily, so we stayed at home."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Tak że: sodass",
+      "points": [
+        {
+          "title": "sodass: tak że",
+          "text": "sodass mówi o skutku. To zdanie podrzędne: czasownik na końcu, przed sodass przecinek.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Mocno padało, tak że zostaliśmy w domu."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "De modo que: sodass",
+      "points": [
+        {
+          "title": "sodass: de modo que",
+          "text": "sodass expresa el resultado. Es subordinada: verbo al final, coma antes de sodass.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Llovía mucho, de modo que nos quedamos en casa."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Si bien que : sodass",
+      "points": [
+        {
+          "title": "sodass : si bien que",
+          "text": "sodass exprime le résultat. C’est une subordonnée : verbe à la fin, virgule avant sodass.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Il pleuvait fort, si bien que nous sommes restés à la maison."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Öyle ki: sodass",
+      "points": [
+        {
+          "title": "sodass: öyle ki",
+          "text": "sodass sonucu anlatır. Yan cümle: fiil sonda, sodass’tan önce virgül.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Şiddetli yağmur yağdı, öyle ki evde kaldık."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Astfel încât: sodass",
+      "points": [
+        {
+          "title": "sodass: astfel încât",
+          "text": "sodass arată rezultatul. E subordonată: verbul la final, virgulă înainte de sodass.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "A plouat tare, astfel încât am rămas acasă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Shunday qilib: sodass",
+      "points": [
+        {
+          "title": "sodass: shunday qilib",
+          "text": "sodass natijani bildiradi. Bu ergash gap: fe'l oxirida, sodass dan oldin vergul.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Kuchli yomg'ir yog'di, shuning uchun uyda qoldik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "जिससे: sodass",
+      "points": [
+        {
+          "title": "sodass: जिससे",
+          "text": "sodass नतीजा बताता है। यह उपवाक्य है: क्रिया अंत में, sodass से पहले कॉमा।",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "तेज़ बारिश हुई, इसलिए हम घर पर रहे।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "بحيث: sodass",
+      "points": [
+        {
+          "title": "sodass: بحيث",
+          "text": "sodass تعبر عن النتيجة. وهي جملة فرعية: الفعل في الآخر وقبلها فاصلة.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "أمطرت بغزارة، فبقينا في البيت."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "consequence-fork-two": {
+    "ru": {
+      "title": "Настолько, что: so ... dass",
+      "points": [
+        {
+          "title": "so ... dass: настолько, что",
+          "text": "so стоит перед прилагательным в первой части, dass начинает вторую, глагол в конце.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "Я так устал, что сразу уснул."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Настільки, що: so ... dass",
+      "points": [
+        {
+          "title": "so ... dass: настільки, що",
+          "text": "so стоїть перед прикметником у першій частині, dass починає другу, дієслово в кінці.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "Я так втомився, що одразу заснув."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "So ... that: so ... dass",
+      "points": [
+        {
+          "title": "so ... dass: so ... that",
+          "text": "so goes before the adjective in the first part, dass starts the second, verb at the end.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "I was so tired that I fell asleep straight away."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Tak ..., że: so ... dass",
+      "points": [
+        {
+          "title": "so ... dass: tak ..., że",
+          "text": "so stoi przed przymiotnikiem w pierwszej części, dass zaczyna drugą, czasownik na końcu.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "Byłem tak zmęczony, że od razu zasnąłem."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Tan ... que: so ... dass",
+      "points": [
+        {
+          "title": "so ... dass: tan ... que",
+          "text": "so va delante del adjetivo en la primera parte, dass empieza la segunda, verbo al final.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "Estaba tan cansado que me dormí enseguida."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Si ... que : so ... dass",
+      "points": [
+        {
+          "title": "so ... dass : si ... que",
+          "text": "so se place devant l’adjectif dans la première partie, dass commence la seconde, verbe à la fin.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "J’étais si fatigué que je me suis endormi tout de suite."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "O kadar ... ki: so ... dass",
+      "points": [
+        {
+          "title": "so ... dass: o kadar ... ki",
+          "text": "so ilk kısımda sıfattan önce gelir, dass ikinci kısmı başlatır, fiil sonda.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "O kadar yorgundum ki hemen uyudum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Atât de ... încât: so ... dass",
+      "points": [
+        {
+          "title": "so ... dass: atât de ... încât",
+          "text": "so stă înaintea adjectivului în prima parte, dass începe a doua, verbul la final.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "Eram atât de obosit încât am adormit imediat."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Shunchalik ... ki: so ... dass",
+      "points": [
+        {
+          "title": "so ... dass: shunchalik ... ki",
+          "text": "so birinchi qismda sifatdan oldin, dass ikkinchisini boshlaydi, fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "Shunchalik charchadimki, darhol uxlab qoldim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "इतना ... कि: so ... dass",
+      "points": [
+        {
+          "title": "so ... dass: इतना ... कि",
+          "text": "so पहले हिस्से में विशेषण से पहले, dass दूसरे हिस्से की शुरुआत, क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "मैं इतना थका था कि तुरंत सो गया।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "لدرجة أن: so ... dass",
+      "points": [
+        {
+          "title": "so ... dass: لدرجة أن",
+          "text": "so قبل الصفة في الجزء الأول، وdass تبدأ الجزء الثاني، والفعل في الآخر.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "كنت متعباً لدرجة أنني نمت فوراً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "consequence-fork-three": {
+    "ru": {
+      "title": "Цель или результат?",
+      "points": [
+        {
+          "title": "Цель или результат",
+          "text": "damit: цель, то, чего хотят добиться. sodass: результат, то, что получилось.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Мы пришли рано, так что нам достались хорошие места."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Мета чи результат?",
+      "points": [
+        {
+          "title": "Мета чи результат",
+          "text": "damit: мета, те, чого хочуть досягти. sodass: результат, те, що вийшло.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Ми прийшли рано, тож нам дісталися гарні місця."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Goal or result?",
+      "points": [
+        {
+          "title": "Goal or result",
+          "text": "damit: the goal, what you want to achieve. sodass: the result, what actually happened.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "We arrived early, so we got good seats."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Cel czy skutek?",
+      "points": [
+        {
+          "title": "Cel czy skutek",
+          "text": "damit: cel, to, co chcemy osiągnąć. sodass: skutek, to, co wyszło.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Przyszliśmy wcześnie, tak że dostaliśmy dobre miejsca."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿Objetivo o resultado?",
+      "points": [
+        {
+          "title": "Objetivo o resultado",
+          "text": "damit: el objetivo, lo que se quiere lograr. sodass: el resultado, lo que salió.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Llegamos pronto, así que conseguimos buenos sitios."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "But ou résultat ?",
+      "points": [
+        {
+          "title": "But ou résultat",
+          "text": "damit : le but, ce qu’on veut obtenir. sodass : le résultat, ce qui s’est passé.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Nous sommes arrivés tôt, si bien que nous avons eu de bonnes places."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Amaç mı, sonuç mu?",
+      "points": [
+        {
+          "title": "Amaç mı, sonuç mu",
+          "text": "damit: amaç, ulaşılmak istenen. sodass: sonuç, olan şey.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Erken geldik, öyle ki iyi yerler bulduk."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Scop sau rezultat?",
+      "points": [
+        {
+          "title": "Scop sau rezultat",
+          "text": "damit: scopul, ce vrei să obții. sodass: rezultatul, ce a ieșit.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Am venit devreme, astfel încât am prins locuri bune."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Maqsadmi yoki natija?",
+      "points": [
+        {
+          "title": "Maqsad yoki natija",
+          "text": "damit: maqsad, erishmoqchi bo'lgan narsa. sodass: natija, nima bo'lgani.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Erta keldik, shuning uchun yaxshi joylar oldik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "लक्ष्य या नतीजा?",
+      "points": [
+        {
+          "title": "लक्ष्य या नतीजा",
+          "text": "damit: लक्ष्य, जो पाना चाहते हैं। sodass: नतीजा, जो हुआ।",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "हम जल्दी आए, इसलिए हमें अच्छी जगह मिली।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "هدف أم نتيجة؟",
+      "points": [
+        {
+          "title": "هدف أم نتيجة",
+          "text": "damit: الهدف، ما نريد تحقيقه. وsodass: النتيجة، ما حدث فعلاً.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "وصلنا مبكراً فحصلنا على مقاعد جيدة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "consequence-fork-four": {
+    "ru": {
+      "title": "Если вдруг: falls",
+      "points": [
+        {
+          "title": "falls: если вдруг",
+          "text": "falls значит «если вдруг, на случай если». Глагол в конце. Если falls первым, главное начинается с глагола.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Если вдруг пойдёт дождь, мы останемся дома."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Якщо раптом: falls",
+      "points": [
+        {
+          "title": "falls: якщо раптом",
+          "text": "falls означає «якщо раптом, на випадок якщо». Дієслово в кінці. Якщо falls першим, головне починається з дієслова.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Якщо раптом піде дощ, ми залишимося вдома."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "In case: falls",
+      "points": [
+        {
+          "title": "falls: in case",
+          "text": "falls means \"in case, if by any chance\". Verb at the end. If falls comes first, the main clause starts with the verb.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "In case it rains, we’ll stay at home."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Gdyby: falls",
+      "points": [
+        {
+          "title": "falls: gdyby",
+          "text": "falls znaczy „gdyby, na wypadek gdyby”. Czasownik na końcu. Jeśli falls jest pierwsze, główne zaczyna się od czasownika.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Gdyby padało, zostaniemy w domu."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Por si: falls",
+      "points": [
+        {
+          "title": "falls: por si",
+          "text": "falls significa \"por si, en caso de que\". Verbo al final. Si falls va primero, la principal empieza por el verbo.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Por si llueve, nos quedamos en casa."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Au cas où : falls",
+      "points": [
+        {
+          "title": "falls : au cas où",
+          "text": "falls veut dire « au cas où ». Verbe à la fin. Si falls est en premier, la principale commence par le verbe.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Au cas où il pleuvrait, nous resterons à la maison."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Olur da: falls",
+      "points": [
+        {
+          "title": "falls: olur da",
+          "text": "falls \"olur da, şayet\" demektir. Fiil sonda. falls başta olursa ana cümle fiille başlar.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Olur da yağmur yağarsa evde kalırız."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "În caz că: falls",
+      "points": [
+        {
+          "title": "falls: în caz că",
+          "text": "falls înseamnă „în caz că”. Verbul la final. Dacă falls e primul, principala începe cu verbul.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "În caz că plouă, rămânem acasă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mabodo: falls",
+      "points": [
+        {
+          "title": "falls: agar birdan",
+          "text": "falls \"agar birdan, mabodo\" degani. Fe'l oxirida. falls birinchi tursa, bosh gap fe'l bilan boshlanadi.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Mabodo yomg'ir yog'sa, uyda qolamiz."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अगर कहीं: falls",
+      "points": [
+        {
+          "title": "falls: अगर कहीं",
+          "text": "falls मतलब \"अगर कहीं\"। क्रिया अंत में। अगर falls पहले आए, तो मुख्य वाक्य क्रिया से शुरू।",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "अगर कहीं बारिश हुई, तो हम घर पर रहेंगे।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "في حال: falls",
+      "points": [
+        {
+          "title": "falls: في حال",
+          "text": "falls تعني \"في حال\". والفعل في الآخر. وإذا جاءت falls أولاً تبدأ الرئيسية بالفعل.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "في حال أمطرت سنبقى في البيت."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "consequence-fork-five": {
+    "ru": {
+      "title": "Пока: solange",
+      "points": [
+        {
+          "title": "solange: пока",
+          "text": "solange значит «всё то время, пока»: одно длится столько же, сколько другое. Не путай с während (два действия одновременно).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Пока идёт дождь, мы сидим дома."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Поки: solange",
+      "points": [
+        {
+          "title": "solange: поки",
+          "text": "solange означає «увесь той час, поки»: одне триває стільки ж, скільки інше. Не плутай з während (дві дії одночасно).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Поки йде дощ, ми сидимо вдома."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "As long as: solange",
+      "points": [
+        {
+          "title": "solange: as long as",
+          "text": "solange means \"as long as\": one thing lasts as long as the other. Don’t confuse with während (two actions at once).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "As long as it’s raining, we’ll stay inside."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Dopóki: solange",
+      "points": [
+        {
+          "title": "solange: dopóki",
+          "text": "solange znaczy „dopóki, przez cały czas”: jedno trwa tyle co drugie. Nie myl z während (dwie czynności naraz).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Dopóki pada, zostajemy w środku."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Mientras: solange",
+      "points": [
+        {
+          "title": "solange: mientras",
+          "text": "solange significa \"mientras (todo el tiempo que)\": una cosa dura lo mismo que la otra. No confundir con während.",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Mientras llueva, nos quedamos dentro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Tant que : solange",
+      "points": [
+        {
+          "title": "solange : tant que",
+          "text": "solange veut dire « tant que » : une chose dure autant que l’autre. Ne confonds pas avec während (deux actions en même temps).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Tant qu’il pleut, nous restons à l’intérieur."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sürece: solange",
+      "points": [
+        {
+          "title": "solange: -dığı sürece",
+          "text": "solange \"-dığı sürece\": biri diğeri kadar sürer. während ile karıştırma (iki eylem aynı anda).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Yağmur yağdığı sürece içeride kalıyoruz."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Atâta timp cât: solange",
+      "points": [
+        {
+          "title": "solange: atâta timp cât",
+          "text": "solange înseamnă „atâta timp cât”: una durează cât cealaltă. Nu confunda cu während (două acțiuni simultane).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Atâta timp cât plouă, stăm înăuntru."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ekan: solange",
+      "points": [
+        {
+          "title": "solange: ...ar ekan",
+          "text": "solange \"...ar ekan, shu vaqt davomida\": biri ikkinchisi qancha davom etsa, shuncha. während bilan adashtirma.",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Yomg'ir yog'ar ekan, ichkarida qolamiz."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "जब तक: solange",
+      "points": [
+        {
+          "title": "solange: जब तक",
+          "text": "solange मतलब \"जब तक\": एक बात तब तक चलती है जब तक दूसरी। während से मत मिलाओ (दो काम एक साथ)।",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "जब तक बारिश हो रही है, हम अंदर रहेंगे।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "طالما: solange",
+      "points": [
+        {
+          "title": "solange: طالما",
+          "text": "solange تعني \"طالما\": يستمر الأمر ما دام الآخر مستمراً. لا تخلط مع während (فعلان في الوقت نفسه).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "طالما تمطر سنبقى في الداخل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "consequence-fork-six": {
+    "ru": {
+      "title": "Большой переезд",
+      "points": [
+        {
+          "title": "falls: если вдруг",
+          "text": "falls значит «если вдруг, на случай если». Глагол в конце. Если falls первым, главное начинается с глагола.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Если вдруг пойдёт дождь, мы останемся дома."
+            }
+          ]
+        },
+        {
+          "title": "so ... dass: настолько, что",
+          "text": "so стоит перед прилагательным в первой части, dass начинает вторую, глагол в конце.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "Я так устал, что сразу уснул."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Великий переїзд",
+      "points": [
+        {
+          "title": "falls: якщо раптом",
+          "text": "falls означає «якщо раптом, на випадок якщо». Дієслово в кінці. Якщо falls першим, головне починається з дієслова.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Якщо раптом піде дощ, ми залишимося вдома."
+            }
+          ]
+        },
+        {
+          "title": "so ... dass: настільки, що",
+          "text": "so стоїть перед прикметником у першій частині, dass починає другу, дієслово в кінці.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "Я так втомився, що одразу заснув."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The big move",
+      "points": [
+        {
+          "title": "falls: in case",
+          "text": "falls means \"in case, if by any chance\". Verb at the end. If falls comes first, the main clause starts with the verb.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "In case it rains, we’ll stay at home."
+            }
+          ]
+        },
+        {
+          "title": "so ... dass: so ... that",
+          "text": "so goes before the adjective in the first part, dass starts the second, verb at the end.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "I was so tired that I fell asleep straight away."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Wielka przeprowadzka",
+      "points": [
+        {
+          "title": "falls: gdyby",
+          "text": "falls znaczy „gdyby, na wypadek gdyby”. Czasownik na końcu. Jeśli falls jest pierwsze, główne zaczyna się od czasownika.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Gdyby padało, zostaniemy w domu."
+            }
+          ]
+        },
+        {
+          "title": "so ... dass: tak ..., że",
+          "text": "so stoi przed przymiotnikiem w pierwszej części, dass zaczyna drugą, czasownik na końcu.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "Byłem tak zmęczony, że od razu zasnąłem."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "La gran mudanza",
+      "points": [
+        {
+          "title": "falls: por si",
+          "text": "falls significa \"por si, en caso de que\". Verbo al final. Si falls va primero, la principal empieza por el verbo.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Por si llueve, nos quedamos en casa."
+            }
+          ]
+        },
+        {
+          "title": "so ... dass: tan ... que",
+          "text": "so va delante del adjetivo en la primera parte, dass empieza la segunda, verbo al final.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "Estaba tan cansado que me dormí enseguida."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le grand déménagement",
+      "points": [
+        {
+          "title": "falls : au cas où",
+          "text": "falls veut dire « au cas où ». Verbe à la fin. Si falls est en premier, la principale commence par le verbe.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Au cas où il pleuvrait, nous resterons à la maison."
+            }
+          ]
+        },
+        {
+          "title": "so ... dass : si ... que",
+          "text": "so se place devant l’adjectif dans la première partie, dass commence la seconde, verbe à la fin.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "J’étais si fatigué que je me suis endormi tout de suite."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Büyük taşınma",
+      "points": [
+        {
+          "title": "falls: olur da",
+          "text": "falls \"olur da, şayet\" demektir. Fiil sonda. falls başta olursa ana cümle fiille başlar.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Olur da yağmur yağarsa evde kalırız."
+            }
+          ]
+        },
+        {
+          "title": "so ... dass: o kadar ... ki",
+          "text": "so ilk kısımda sıfattan önce gelir, dass ikinci kısmı başlatır, fiil sonda.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "O kadar yorgundum ki hemen uyudum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Marea mutare",
+      "points": [
+        {
+          "title": "falls: în caz că",
+          "text": "falls înseamnă „în caz că”. Verbul la final. Dacă falls e primul, principala începe cu verbul.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "În caz că plouă, rămânem acasă."
+            }
+          ]
+        },
+        {
+          "title": "so ... dass: atât de ... încât",
+          "text": "so stă înaintea adjectivului în prima parte, dass începe a doua, verbul la final.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "Eram atât de obosit încât am adormit imediat."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Katta ko'chish",
+      "points": [
+        {
+          "title": "falls: agar birdan",
+          "text": "falls \"agar birdan, mabodo\" degani. Fe'l oxirida. falls birinchi tursa, bosh gap fe'l bilan boshlanadi.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Mabodo yomg'ir yog'sa, uyda qolamiz."
+            }
+          ]
+        },
+        {
+          "title": "so ... dass: shunchalik ... ki",
+          "text": "so birinchi qismda sifatdan oldin, dass ikkinchisini boshlaydi, fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "Shunchalik charchadimki, darhol uxlab qoldim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "बड़ा घर-बदलाव",
+      "points": [
+        {
+          "title": "falls: अगर कहीं",
+          "text": "falls मतलब \"अगर कहीं\"। क्रिया अंत में। अगर falls पहले आए, तो मुख्य वाक्य क्रिया से शुरू।",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "अगर कहीं बारिश हुई, तो हम घर पर रहेंगे।"
+            }
+          ]
+        },
+        {
+          "title": "so ... dass: इतना ... कि",
+          "text": "so पहले हिस्से में विशेषण से पहले, dass दूसरे हिस्से की शुरुआत, क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "मैं इतना थका था कि तुरंत सो गया।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الانتقال الكبير",
+      "points": [
+        {
+          "title": "falls: في حال",
+          "text": "falls تعني \"في حال\". والفعل في الآخر. وإذا جاءت falls أولاً تبدأ الرئيسية بالفعل.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "في حال أمطرت سنبقى في البيت."
+            }
+          ]
+        },
+        {
+          "title": "so ... dass: لدرجة أن",
+          "text": "so قبل الصفة في الجزء الأول، وdass تبدأ الجزء الثاني، والفعل في الآخر.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "كنت متعباً لدرجة أنني نمت فوراً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "consequence-fork-seven": {
+    "ru": {
+      "title": "Практика: в дороге",
+      "points": [
+        {
+          "title": "sodass: так что",
+          "text": "sodass говорит о результате. Это придаточное: глагол в конце, перед sodass запятая.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Шёл сильный дождь, так что мы остались дома."
+            }
+          ]
+        },
+        {
+          "title": "so ... dass: настолько, что",
+          "text": "so стоит перед прилагательным в первой части, dass начинает вторую, глагол в конце.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "Я так устал, что сразу уснул."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: у дорозі",
+      "points": [
+        {
+          "title": "sodass: тож",
+          "text": "sodass говорить про результат. Це підрядне: дієслово в кінці, перед sodass кома.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Ішов сильний дощ, тож ми залишилися вдома."
+            }
+          ]
+        },
+        {
+          "title": "so ... dass: настільки, що",
+          "text": "so стоїть перед прикметником у першій частині, dass починає другу, дієслово в кінці.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "Я так втомився, що одразу заснув."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: on the road",
+      "points": [
+        {
+          "title": "sodass: so that (result)",
+          "text": "sodass describes the result. It’s a subordinate clause: verb at the end, comma before sodass.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "It rained heavily, so we stayed at home."
+            }
+          ]
+        },
+        {
+          "title": "so ... dass: so ... that",
+          "text": "so goes before the adjective in the first part, dass starts the second, verb at the end.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "I was so tired that I fell asleep straight away."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: w drodze",
+      "points": [
+        {
+          "title": "sodass: tak że",
+          "text": "sodass mówi o skutku. To zdanie podrzędne: czasownik na końcu, przed sodass przecinek.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Mocno padało, tak że zostaliśmy w domu."
+            }
+          ]
+        },
+        {
+          "title": "so ... dass: tak ..., że",
+          "text": "so stoi przed przymiotnikiem w pierwszej części, dass zaczyna drugą, czasownik na końcu.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "Byłem tak zmęczony, że od razu zasnąłem."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: de viaje",
+      "points": [
+        {
+          "title": "sodass: de modo que",
+          "text": "sodass expresa el resultado. Es subordinada: verbo al final, coma antes de sodass.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Llovía mucho, de modo que nos quedamos en casa."
+            }
+          ]
+        },
+        {
+          "title": "so ... dass: tan ... que",
+          "text": "so va delante del adjetivo en la primera parte, dass empieza la segunda, verbo al final.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "Estaba tan cansado que me dormí enseguida."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : sur la route",
+      "points": [
+        {
+          "title": "sodass : si bien que",
+          "text": "sodass exprime le résultat. C’est une subordonnée : verbe à la fin, virgule avant sodass.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Il pleuvait fort, si bien que nous sommes restés à la maison."
+            }
+          ]
+        },
+        {
+          "title": "so ... dass : si ... que",
+          "text": "so se place devant l’adjectif dans la première partie, dass commence la seconde, verbe à la fin.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "J’étais si fatigué que je me suis endormi tout de suite."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: yolda",
+      "points": [
+        {
+          "title": "sodass: öyle ki",
+          "text": "sodass sonucu anlatır. Yan cümle: fiil sonda, sodass’tan önce virgül.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Şiddetli yağmur yağdı, öyle ki evde kaldık."
+            }
+          ]
+        },
+        {
+          "title": "so ... dass: o kadar ... ki",
+          "text": "so ilk kısımda sıfattan önce gelir, dass ikinci kısmı başlatır, fiil sonda.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "O kadar yorgundum ki hemen uyudum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: pe drum",
+      "points": [
+        {
+          "title": "sodass: astfel încât",
+          "text": "sodass arată rezultatul. E subordonată: verbul la final, virgulă înainte de sodass.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "A plouat tare, astfel încât am rămas acasă."
+            }
+          ]
+        },
+        {
+          "title": "so ... dass: atât de ... încât",
+          "text": "so stă înaintea adjectivului în prima parte, dass începe a doua, verbul la final.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "Eram atât de obosit încât am adormit imediat."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: yo'lda",
+      "points": [
+        {
+          "title": "sodass: shunday qilib",
+          "text": "sodass natijani bildiradi. Bu ergash gap: fe'l oxirida, sodass dan oldin vergul.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Kuchli yomg'ir yog'di, shuning uchun uyda qoldik."
+            }
+          ]
+        },
+        {
+          "title": "so ... dass: shunchalik ... ki",
+          "text": "so birinchi qismda sifatdan oldin, dass ikkinchisini boshlaydi, fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "Shunchalik charchadimki, darhol uxlab qoldim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: रास्ते में",
+      "points": [
+        {
+          "title": "sodass: जिससे",
+          "text": "sodass नतीजा बताता है। यह उपवाक्य है: क्रिया अंत में, sodass से पहले कॉमा।",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "तेज़ बारिश हुई, इसलिए हम घर पर रहे।"
+            }
+          ]
+        },
+        {
+          "title": "so ... dass: इतना ... कि",
+          "text": "so पहले हिस्से में विशेषण से पहले, dass दूसरे हिस्से की शुरुआत, क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "मैं इतना थका था कि तुरंत सो गया।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: في الطريق",
+      "points": [
+        {
+          "title": "sodass: بحيث",
+          "text": "sodass تعبر عن النتيجة. وهي جملة فرعية: الفعل في الآخر وقبلها فاصلة.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "أمطرت بغزارة، فبقينا في البيت."
+            }
+          ]
+        },
+        {
+          "title": "so ... dass: لدرجة أن",
+          "text": "so قبل الصفة في الجزء الأول، وdass تبدأ الجزء الثاني، والفعل في الآخر.",
+          "examples": [
+            {
+              "de": "Ich war so müde, dass ich sofort einschlief.",
+              "tr": "كنت متعباً لدرجة أنني نمت فوراً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "consequence-fork-eight": {
+    "ru": {
+      "title": "Практика: планы на выходные",
+      "points": [
+        {
+          "title": "falls: если вдруг",
+          "text": "falls значит «если вдруг, на случай если». Глагол в конце. Если falls первым, главное начинается с глагола.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Если вдруг пойдёт дождь, мы останемся дома."
+            }
+          ]
+        },
+        {
+          "title": "solange: пока",
+          "text": "solange значит «всё то время, пока»: одно длится столько же, сколько другое. Не путай с während (два действия одновременно).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Пока идёт дождь, мы сидим дома."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: плани на вихідні",
+      "points": [
+        {
+          "title": "falls: якщо раптом",
+          "text": "falls означає «якщо раптом, на випадок якщо». Дієслово в кінці. Якщо falls першим, головне починається з дієслова.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Якщо раптом піде дощ, ми залишимося вдома."
+            }
+          ]
+        },
+        {
+          "title": "solange: поки",
+          "text": "solange означає «увесь той час, поки»: одне триває стільки ж, скільки інше. Не плутай з während (дві дії одночасно).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Поки йде дощ, ми сидимо вдома."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: weekend plans",
+      "points": [
+        {
+          "title": "falls: in case",
+          "text": "falls means \"in case, if by any chance\". Verb at the end. If falls comes first, the main clause starts with the verb.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "In case it rains, we’ll stay at home."
+            }
+          ]
+        },
+        {
+          "title": "solange: as long as",
+          "text": "solange means \"as long as\": one thing lasts as long as the other. Don’t confuse with während (two actions at once).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "As long as it’s raining, we’ll stay inside."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: plany na weekend",
+      "points": [
+        {
+          "title": "falls: gdyby",
+          "text": "falls znaczy „gdyby, na wypadek gdyby”. Czasownik na końcu. Jeśli falls jest pierwsze, główne zaczyna się od czasownika.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Gdyby padało, zostaniemy w domu."
+            }
+          ]
+        },
+        {
+          "title": "solange: dopóki",
+          "text": "solange znaczy „dopóki, przez cały czas”: jedno trwa tyle co drugie. Nie myl z während (dwie czynności naraz).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Dopóki pada, zostajemy w środku."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: planes del fin de semana",
+      "points": [
+        {
+          "title": "falls: por si",
+          "text": "falls significa \"por si, en caso de que\". Verbo al final. Si falls va primero, la principal empieza por el verbo.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Por si llueve, nos quedamos en casa."
+            }
+          ]
+        },
+        {
+          "title": "solange: mientras",
+          "text": "solange significa \"mientras (todo el tiempo que)\": una cosa dura lo mismo que la otra. No confundir con während.",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Mientras llueva, nos quedamos dentro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : projets du week-end",
+      "points": [
+        {
+          "title": "falls : au cas où",
+          "text": "falls veut dire « au cas où ». Verbe à la fin. Si falls est en premier, la principale commence par le verbe.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Au cas où il pleuvrait, nous resterons à la maison."
+            }
+          ]
+        },
+        {
+          "title": "solange : tant que",
+          "text": "solange veut dire « tant que » : une chose dure autant que l’autre. Ne confonds pas avec während (deux actions en même temps).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Tant qu’il pleut, nous restons à l’intérieur."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: hafta sonu planları",
+      "points": [
+        {
+          "title": "falls: olur da",
+          "text": "falls \"olur da, şayet\" demektir. Fiil sonda. falls başta olursa ana cümle fiille başlar.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Olur da yağmur yağarsa evde kalırız."
+            }
+          ]
+        },
+        {
+          "title": "solange: -dığı sürece",
+          "text": "solange \"-dığı sürece\": biri diğeri kadar sürer. während ile karıştırma (iki eylem aynı anda).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Yağmur yağdığı sürece içeride kalıyoruz."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: planuri de weekend",
+      "points": [
+        {
+          "title": "falls: în caz că",
+          "text": "falls înseamnă „în caz că”. Verbul la final. Dacă falls e primul, principala începe cu verbul.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "În caz că plouă, rămânem acasă."
+            }
+          ]
+        },
+        {
+          "title": "solange: atâta timp cât",
+          "text": "solange înseamnă „atâta timp cât”: una durează cât cealaltă. Nu confunda cu während (două acțiuni simultane).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Atâta timp cât plouă, stăm înăuntru."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: dam olish rejalari",
+      "points": [
+        {
+          "title": "falls: agar birdan",
+          "text": "falls \"agar birdan, mabodo\" degani. Fe'l oxirida. falls birinchi tursa, bosh gap fe'l bilan boshlanadi.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Mabodo yomg'ir yog'sa, uyda qolamiz."
+            }
+          ]
+        },
+        {
+          "title": "solange: ...ar ekan",
+          "text": "solange \"...ar ekan, shu vaqt davomida\": biri ikkinchisi qancha davom etsa, shuncha. während bilan adashtirma.",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Yomg'ir yog'ar ekan, ichkarida qolamiz."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: सप्ताहांत की योजनाएँ",
+      "points": [
+        {
+          "title": "falls: अगर कहीं",
+          "text": "falls मतलब \"अगर कहीं\"। क्रिया अंत में। अगर falls पहले आए, तो मुख्य वाक्य क्रिया से शुरू।",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "अगर कहीं बारिश हुई, तो हम घर पर रहेंगे।"
+            }
+          ]
+        },
+        {
+          "title": "solange: जब तक",
+          "text": "solange मतलब \"जब तक\": एक बात तब तक चलती है जब तक दूसरी। während से मत मिलाओ (दो काम एक साथ)।",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "जब तक बारिश हो रही है, हम अंदर रहेंगे।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: خطط عطلة نهاية الأسبوع",
+      "points": [
+        {
+          "title": "falls: في حال",
+          "text": "falls تعني \"في حال\". والفعل في الآخر. وإذا جاءت falls أولاً تبدأ الرئيسية بالفعل.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "في حال أمطرت سنبقى في البيت."
+            }
+          ]
+        },
+        {
+          "title": "solange: طالما",
+          "text": "solange تعني \"طالما\": يستمر الأمر ما دام الآخر مستمراً. لا تخلط مع während (فعلان في الوقت نفسه).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "طالما تمطر سنبقى في الداخل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "consequence-fork-nine": {
+    "ru": {
+      "title": "Повторение: следствия и условия",
+      "points": [
+        {
+          "title": "sodass: так что",
+          "text": "sodass говорит о результате. Это придаточное: глагол в конце, перед sodass запятая.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Шёл сильный дождь, так что мы остались дома."
+            }
+          ]
+        },
+        {
+          "title": "Цель или результат",
+          "text": "damit: цель, то, чего хотят добиться. sodass: результат, то, что получилось.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Мы пришли рано, так что нам достались хорошие места."
+            }
+          ]
+        },
+        {
+          "title": "falls: если вдруг",
+          "text": "falls значит «если вдруг, на случай если». Глагол в конце. Если falls первым, главное начинается с глагола.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Если вдруг пойдёт дождь, мы останемся дома."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: наслідки й умови",
+      "points": [
+        {
+          "title": "sodass: тож",
+          "text": "sodass говорить про результат. Це підрядне: дієслово в кінці, перед sodass кома.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Ішов сильний дощ, тож ми залишилися вдома."
+            }
+          ]
+        },
+        {
+          "title": "Мета чи результат",
+          "text": "damit: мета, те, чого хочуть досягти. sodass: результат, те, що вийшло.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Ми прийшли рано, тож нам дісталися гарні місця."
+            }
+          ]
+        },
+        {
+          "title": "falls: якщо раптом",
+          "text": "falls означає «якщо раптом, на випадок якщо». Дієслово в кінці. Якщо falls першим, головне починається з дієслова.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Якщо раптом піде дощ, ми залишимося вдома."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: results and conditions",
+      "points": [
+        {
+          "title": "sodass: so that (result)",
+          "text": "sodass describes the result. It’s a subordinate clause: verb at the end, comma before sodass.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "It rained heavily, so we stayed at home."
+            }
+          ]
+        },
+        {
+          "title": "Goal or result",
+          "text": "damit: the goal, what you want to achieve. sodass: the result, what actually happened.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "We arrived early, so we got good seats."
+            }
+          ]
+        },
+        {
+          "title": "falls: in case",
+          "text": "falls means \"in case, if by any chance\". Verb at the end. If falls comes first, the main clause starts with the verb.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "In case it rains, we’ll stay at home."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: skutki i warunki",
+      "points": [
+        {
+          "title": "sodass: tak że",
+          "text": "sodass mówi o skutku. To zdanie podrzędne: czasownik na końcu, przed sodass przecinek.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Mocno padało, tak że zostaliśmy w domu."
+            }
+          ]
+        },
+        {
+          "title": "Cel czy skutek",
+          "text": "damit: cel, to, co chcemy osiągnąć. sodass: skutek, to, co wyszło.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Przyszliśmy wcześnie, tak że dostaliśmy dobre miejsca."
+            }
+          ]
+        },
+        {
+          "title": "falls: gdyby",
+          "text": "falls znaczy „gdyby, na wypadek gdyby”. Czasownik na końcu. Jeśli falls jest pierwsze, główne zaczyna się od czasownika.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Gdyby padało, zostaniemy w domu."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: consecuencias y condiciones",
+      "points": [
+        {
+          "title": "sodass: de modo que",
+          "text": "sodass expresa el resultado. Es subordinada: verbo al final, coma antes de sodass.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Llovía mucho, de modo que nos quedamos en casa."
+            }
+          ]
+        },
+        {
+          "title": "Objetivo o resultado",
+          "text": "damit: el objetivo, lo que se quiere lograr. sodass: el resultado, lo que salió.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Llegamos pronto, así que conseguimos buenos sitios."
+            }
+          ]
+        },
+        {
+          "title": "falls: por si",
+          "text": "falls significa \"por si, en caso de que\". Verbo al final. Si falls va primero, la principal empieza por el verbo.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Por si llueve, nos quedamos en casa."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : conséquences et conditions",
+      "points": [
+        {
+          "title": "sodass : si bien que",
+          "text": "sodass exprime le résultat. C’est une subordonnée : verbe à la fin, virgule avant sodass.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Il pleuvait fort, si bien que nous sommes restés à la maison."
+            }
+          ]
+        },
+        {
+          "title": "But ou résultat",
+          "text": "damit : le but, ce qu’on veut obtenir. sodass : le résultat, ce qui s’est passé.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Nous sommes arrivés tôt, si bien que nous avons eu de bonnes places."
+            }
+          ]
+        },
+        {
+          "title": "falls : au cas où",
+          "text": "falls veut dire « au cas où ». Verbe à la fin. Si falls est en premier, la principale commence par le verbe.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Au cas où il pleuvrait, nous resterons à la maison."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: sonuçlar ve koşullar",
+      "points": [
+        {
+          "title": "sodass: öyle ki",
+          "text": "sodass sonucu anlatır. Yan cümle: fiil sonda, sodass’tan önce virgül.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Şiddetli yağmur yağdı, öyle ki evde kaldık."
+            }
+          ]
+        },
+        {
+          "title": "Amaç mı, sonuç mu",
+          "text": "damit: amaç, ulaşılmak istenen. sodass: sonuç, olan şey.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Erken geldik, öyle ki iyi yerler bulduk."
+            }
+          ]
+        },
+        {
+          "title": "falls: olur da",
+          "text": "falls \"olur da, şayet\" demektir. Fiil sonda. falls başta olursa ana cümle fiille başlar.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Olur da yağmur yağarsa evde kalırız."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: consecințe și condiții",
+      "points": [
+        {
+          "title": "sodass: astfel încât",
+          "text": "sodass arată rezultatul. E subordonată: verbul la final, virgulă înainte de sodass.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "A plouat tare, astfel încât am rămas acasă."
+            }
+          ]
+        },
+        {
+          "title": "Scop sau rezultat",
+          "text": "damit: scopul, ce vrei să obții. sodass: rezultatul, ce a ieșit.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Am venit devreme, astfel încât am prins locuri bune."
+            }
+          ]
+        },
+        {
+          "title": "falls: în caz că",
+          "text": "falls înseamnă „în caz că”. Verbul la final. Dacă falls e primul, principala începe cu verbul.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "În caz că plouă, rămânem acasă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: natijalar va shartlar",
+      "points": [
+        {
+          "title": "sodass: shunday qilib",
+          "text": "sodass natijani bildiradi. Bu ergash gap: fe'l oxirida, sodass dan oldin vergul.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Kuchli yomg'ir yog'di, shuning uchun uyda qoldik."
+            }
+          ]
+        },
+        {
+          "title": "Maqsad yoki natija",
+          "text": "damit: maqsad, erishmoqchi bo'lgan narsa. sodass: natija, nima bo'lgani.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "Erta keldik, shuning uchun yaxshi joylar oldik."
+            }
+          ]
+        },
+        {
+          "title": "falls: agar birdan",
+          "text": "falls \"agar birdan, mabodo\" degani. Fe'l oxirida. falls birinchi tursa, bosh gap fe'l bilan boshlanadi.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Mabodo yomg'ir yog'sa, uyda qolamiz."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: नतीजे और शर्तें",
+      "points": [
+        {
+          "title": "sodass: जिससे",
+          "text": "sodass नतीजा बताता है। यह उपवाक्य है: क्रिया अंत में, sodass से पहले कॉमा।",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "तेज़ बारिश हुई, इसलिए हम घर पर रहे।"
+            }
+          ]
+        },
+        {
+          "title": "लक्ष्य या नतीजा",
+          "text": "damit: लक्ष्य, जो पाना चाहते हैं। sodass: नतीजा, जो हुआ।",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "हम जल्दी आए, इसलिए हमें अच्छी जगह मिली।"
+            }
+          ]
+        },
+        {
+          "title": "falls: अगर कहीं",
+          "text": "falls मतलब \"अगर कहीं\"। क्रिया अंत में। अगर falls पहले आए, तो मुख्य वाक्य क्रिया से शुरू।",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "अगर कहीं बारिश हुई, तो हम घर पर रहेंगे।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: النتائج والشروط",
+      "points": [
+        {
+          "title": "sodass: بحيث",
+          "text": "sodass تعبر عن النتيجة. وهي جملة فرعية: الفعل في الآخر وقبلها فاصلة.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "أمطرت بغزارة، فبقينا في البيت."
+            }
+          ]
+        },
+        {
+          "title": "هدف أم نتيجة",
+          "text": "damit: الهدف، ما نريد تحقيقه. وsodass: النتيجة، ما حدث فعلاً.",
+          "examples": [
+            {
+              "de": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+              "tr": "وصلنا مبكراً فحصلنا على مقاعد جيدة."
+            }
+          ]
+        },
+        {
+          "title": "falls: في حال",
+          "text": "falls تعني \"في حال\". والفعل في الآخر. وإذا جاءت falls أولاً تبدأ الرئيسية بالفعل.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "في حال أمطرت سنبقى في البيت."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "consequence-fork-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "sodass: так что",
+          "text": "sodass говорит о результате. Это придаточное: глагол в конце, перед sodass запятая.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Шёл сильный дождь, так что мы остались дома."
+            }
+          ]
+        },
+        {
+          "title": "falls: если вдруг",
+          "text": "falls значит «если вдруг, на случай если». Глагол в конце. Если falls первым, главное начинается с глагола.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Если вдруг пойдёт дождь, мы останемся дома."
+            }
+          ]
+        },
+        {
+          "title": "solange: пока",
+          "text": "solange значит «всё то время, пока»: одно длится столько же, сколько другое. Не путай с während (два действия одновременно).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Пока идёт дождь, мы сидим дома."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "sodass: тож",
+          "text": "sodass говорить про результат. Це підрядне: дієслово в кінці, перед sodass кома.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Ішов сильний дощ, тож ми залишилися вдома."
+            }
+          ]
+        },
+        {
+          "title": "falls: якщо раптом",
+          "text": "falls означає «якщо раптом, на випадок якщо». Дієслово в кінці. Якщо falls першим, головне починається з дієслова.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Якщо раптом піде дощ, ми залишимося вдома."
+            }
+          ]
+        },
+        {
+          "title": "solange: поки",
+          "text": "solange означає «увесь той час, поки»: одне триває стільки ж, скільки інше. Не плутай з während (дві дії одночасно).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Поки йде дощ, ми сидимо вдома."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "sodass: so that (result)",
+          "text": "sodass describes the result. It’s a subordinate clause: verb at the end, comma before sodass.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "It rained heavily, so we stayed at home."
+            }
+          ]
+        },
+        {
+          "title": "falls: in case",
+          "text": "falls means \"in case, if by any chance\". Verb at the end. If falls comes first, the main clause starts with the verb.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "In case it rains, we’ll stay at home."
+            }
+          ]
+        },
+        {
+          "title": "solange: as long as",
+          "text": "solange means \"as long as\": one thing lasts as long as the other. Don’t confuse with während (two actions at once).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "As long as it’s raining, we’ll stay inside."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "sodass: tak że",
+          "text": "sodass mówi o skutku. To zdanie podrzędne: czasownik na końcu, przed sodass przecinek.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Mocno padało, tak że zostaliśmy w domu."
+            }
+          ]
+        },
+        {
+          "title": "falls: gdyby",
+          "text": "falls znaczy „gdyby, na wypadek gdyby”. Czasownik na końcu. Jeśli falls jest pierwsze, główne zaczyna się od czasownika.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Gdyby padało, zostaniemy w domu."
+            }
+          ]
+        },
+        {
+          "title": "solange: dopóki",
+          "text": "solange znaczy „dopóki, przez cały czas”: jedno trwa tyle co drugie. Nie myl z während (dwie czynności naraz).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Dopóki pada, zostajemy w środku."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "sodass: de modo que",
+          "text": "sodass expresa el resultado. Es subordinada: verbo al final, coma antes de sodass.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Llovía mucho, de modo que nos quedamos en casa."
+            }
+          ]
+        },
+        {
+          "title": "falls: por si",
+          "text": "falls significa \"por si, en caso de que\". Verbo al final. Si falls va primero, la principal empieza por el verbo.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Por si llueve, nos quedamos en casa."
+            }
+          ]
+        },
+        {
+          "title": "solange: mientras",
+          "text": "solange significa \"mientras (todo el tiempo que)\": una cosa dura lo mismo que la otra. No confundir con während.",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Mientras llueva, nos quedamos dentro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "sodass : si bien que",
+          "text": "sodass exprime le résultat. C’est une subordonnée : verbe à la fin, virgule avant sodass.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Il pleuvait fort, si bien que nous sommes restés à la maison."
+            }
+          ]
+        },
+        {
+          "title": "falls : au cas où",
+          "text": "falls veut dire « au cas où ». Verbe à la fin. Si falls est en premier, la principale commence par le verbe.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Au cas où il pleuvrait, nous resterons à la maison."
+            }
+          ]
+        },
+        {
+          "title": "solange : tant que",
+          "text": "solange veut dire « tant que » : une chose dure autant que l’autre. Ne confonds pas avec während (deux actions en même temps).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Tant qu’il pleut, nous restons à l’intérieur."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "sodass: öyle ki",
+          "text": "sodass sonucu anlatır. Yan cümle: fiil sonda, sodass’tan önce virgül.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Şiddetli yağmur yağdı, öyle ki evde kaldık."
+            }
+          ]
+        },
+        {
+          "title": "falls: olur da",
+          "text": "falls \"olur da, şayet\" demektir. Fiil sonda. falls başta olursa ana cümle fiille başlar.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Olur da yağmur yağarsa evde kalırız."
+            }
+          ]
+        },
+        {
+          "title": "solange: -dığı sürece",
+          "text": "solange \"-dığı sürece\": biri diğeri kadar sürer. während ile karıştırma (iki eylem aynı anda).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Yağmur yağdığı sürece içeride kalıyoruz."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "sodass: astfel încât",
+          "text": "sodass arată rezultatul. E subordonată: verbul la final, virgulă înainte de sodass.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "A plouat tare, astfel încât am rămas acasă."
+            }
+          ]
+        },
+        {
+          "title": "falls: în caz că",
+          "text": "falls înseamnă „în caz că”. Verbul la final. Dacă falls e primul, principala începe cu verbul.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "În caz că plouă, rămânem acasă."
+            }
+          ]
+        },
+        {
+          "title": "solange: atâta timp cât",
+          "text": "solange înseamnă „atâta timp cât”: una durează cât cealaltă. Nu confunda cu während (două acțiuni simultane).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Atâta timp cât plouă, stăm înăuntru."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "sodass: shunday qilib",
+          "text": "sodass natijani bildiradi. Bu ergash gap: fe'l oxirida, sodass dan oldin vergul.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "Kuchli yomg'ir yog'di, shuning uchun uyda qoldik."
+            }
+          ]
+        },
+        {
+          "title": "falls: agar birdan",
+          "text": "falls \"agar birdan, mabodo\" degani. Fe'l oxirida. falls birinchi tursa, bosh gap fe'l bilan boshlanadi.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "Mabodo yomg'ir yog'sa, uyda qolamiz."
+            }
+          ]
+        },
+        {
+          "title": "solange: ...ar ekan",
+          "text": "solange \"...ar ekan, shu vaqt davomida\": biri ikkinchisi qancha davom etsa, shuncha. während bilan adashtirma.",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "Yomg'ir yog'ar ekan, ichkarida qolamiz."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "sodass: जिससे",
+          "text": "sodass नतीजा बताता है। यह उपवाक्य है: क्रिया अंत में, sodass से पहले कॉमा।",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "तेज़ बारिश हुई, इसलिए हम घर पर रहे।"
+            }
+          ]
+        },
+        {
+          "title": "falls: अगर कहीं",
+          "text": "falls मतलब \"अगर कहीं\"। क्रिया अंत में। अगर falls पहले आए, तो मुख्य वाक्य क्रिया से शुरू।",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "अगर कहीं बारिश हुई, तो हम घर पर रहेंगे।"
+            }
+          ]
+        },
+        {
+          "title": "solange: जब तक",
+          "text": "solange मतलब \"जब तक\": एक बात तब तक चलती है जब तक दूसरी। während से मत मिलाओ (दो काम एक साथ)।",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "जब तक बारिश हो रही है, हम अंदर रहेंगे।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "sodass: بحيث",
+          "text": "sodass تعبر عن النتيجة. وهي جملة فرعية: الفعل في الآخر وقبلها فاصلة.",
+          "examples": [
+            {
+              "de": "Es regnete stark, sodass wir zu Hause blieben.",
+              "tr": "أمطرت بغزارة، فبقينا في البيت."
+            }
+          ]
+        },
+        {
+          "title": "falls: في حال",
+          "text": "falls تعني \"في حال\". والفعل في الآخر. وإذا جاءت falls أولاً تبدأ الرئيسية بالفعل.",
+          "examples": [
+            {
+              "de": "Falls es regnet, bleiben wir zu Hause.",
+              "tr": "في حال أمطرت سنبقى في البيت."
+            }
+          ]
+        },
+        {
+          "title": "solange: طالما",
+          "text": "solange تعني \"طالما\": يستمر الأمر ما دام الآخر مستمراً. لا تخلط مع während (فعلان في الوقت نفسه).",
+          "examples": [
+            {
+              "de": "Solange es regnet, bleiben wir drinnen.",
+              "tr": "طالما تمطر سنبقى في الداخل."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,2145 @@
+{
+  "direction-prep-1": {
+    "ru": {
+      "title": "zu: куда идём",
+      "points": [
+        {
+          "title": "zum, zur",
+          "text": "zu значит «к» человеку или месту. zu + dem = zum, zu + der = zur.",
+          "examples": [
+            {
+              "de": "Ich gehe zu meinem Freund.",
+              "tr": "Я иду к своему другу."
+            }
+          ]
+        },
+        {
+          "title": "Всегда Dativ",
+          "text": "После zu, bei, aus, von, mit всегда Dativ: dem, der, dem, во множественном den.",
+          "examples": []
+        }
+      ]
+    },
+    "uk": {
+      "title": "zu: куди йдемо",
+      "points": [
+        {
+          "title": "zum, zur",
+          "text": "zu означає «до» людини чи місця. zu + dem = zum, zu + der = zur.",
+          "examples": [
+            {
+              "de": "Ich gehe zu meinem Freund.",
+              "tr": "Я йду до свого друга."
+            }
+          ]
+        },
+        {
+          "title": "Завжди Dativ",
+          "text": "Після zu, bei, aus, von, mit завжди Dativ: dem, der, dem, у множині den.",
+          "examples": []
+        }
+      ]
+    },
+    "en": {
+      "title": "zu: where we go",
+      "points": [
+        {
+          "title": "zum, zur",
+          "text": "zu means \"to\" a person or place. zu + dem = zum, zu + der = zur.",
+          "examples": [
+            {
+              "de": "Ich gehe zu meinem Freund.",
+              "tr": "I’m going to my friend’s."
+            }
+          ]
+        },
+        {
+          "title": "Always dative",
+          "text": "After zu, bei, aus, von, mit always use the dative: dem, der, dem, plural den.",
+          "examples": []
+        }
+      ]
+    },
+    "pl": {
+      "title": "zu: dokąd idziemy",
+      "points": [
+        {
+          "title": "zum, zur",
+          "text": "zu znaczy „do” osoby lub miejsca. zu + dem = zum, zu + der = zur.",
+          "examples": [
+            {
+              "de": "Ich gehe zu meinem Freund.",
+              "tr": "Idę do mojego przyjaciela."
+            }
+          ]
+        },
+        {
+          "title": "Zawsze Dativ",
+          "text": "Po zu, bei, aus, von, mit zawsze Dativ: dem, der, dem, w liczbie mnogiej den.",
+          "examples": []
+        }
+      ]
+    },
+    "es": {
+      "title": "zu: adónde vamos",
+      "points": [
+        {
+          "title": "zum, zur",
+          "text": "zu significa \"a\" una persona o lugar. zu + dem = zum, zu + der = zur.",
+          "examples": [
+            {
+              "de": "Ich gehe zu meinem Freund.",
+              "tr": "Voy a casa de mi amigo."
+            }
+          ]
+        },
+        {
+          "title": "Siempre dativo",
+          "text": "Después de zu, bei, aus, von, mit siempre dativo: dem, der, dem, en plural den.",
+          "examples": []
+        }
+      ]
+    },
+    "fr": {
+      "title": "zu : où on va",
+      "points": [
+        {
+          "title": "zum, zur",
+          "text": "zu veut dire « chez, à » une personne ou un lieu. zu + dem = zum, zu + der = zur.",
+          "examples": [
+            {
+              "de": "Ich gehe zu meinem Freund.",
+              "tr": "Je vais chez mon ami."
+            }
+          ]
+        },
+        {
+          "title": "Toujours le datif",
+          "text": "Après zu, bei, aus, von, mit, toujours le datif : dem, der, dem, au pluriel den.",
+          "examples": []
+        }
+      ]
+    },
+    "tr": {
+      "title": "zu: nereye gidiyoruz",
+      "points": [
+        {
+          "title": "zum, zur",
+          "text": "zu bir kişiye ya da yere \"-e\" demektir. zu + dem = zum, zu + der = zur.",
+          "examples": [
+            {
+              "de": "Ich gehe zu meinem Freund.",
+              "tr": "Arkadaşıma gidiyorum."
+            }
+          ]
+        },
+        {
+          "title": "Her zaman Dativ",
+          "text": "zu, bei, aus, von, mit’ten sonra her zaman Dativ: dem, der, dem, çoğulda den.",
+          "examples": []
+        }
+      ]
+    },
+    "ro": {
+      "title": "zu: unde mergem",
+      "points": [
+        {
+          "title": "zum, zur",
+          "text": "zu înseamnă „la” o persoană sau un loc. zu + dem = zum, zu + der = zur.",
+          "examples": [
+            {
+              "de": "Ich gehe zu meinem Freund.",
+              "tr": "Merg la prietenul meu."
+            }
+          ]
+        },
+        {
+          "title": "Mereu dativ",
+          "text": "După zu, bei, aus, von, mit mereu dativ: dem, der, dem, la plural den.",
+          "examples": []
+        }
+      ]
+    },
+    "uz": {
+      "title": "zu: qayerga boramiz",
+      "points": [
+        {
+          "title": "zum, zur",
+          "text": "zu odamga yoki joyga \"-ga\" degani. zu + dem = zum, zu + der = zur.",
+          "examples": [
+            {
+              "de": "Ich gehe zu meinem Freund.",
+              "tr": "Do'stimnikiga boryapman."
+            }
+          ]
+        },
+        {
+          "title": "Doim Dativ",
+          "text": "zu, bei, aus, von, mit dan keyin doim Dativ: dem, der, dem, ko'plikda den.",
+          "examples": []
+        }
+      ]
+    },
+    "hi": {
+      "title": "zu: कहाँ जा रहे हैं",
+      "points": [
+        {
+          "title": "zum, zur",
+          "text": "zu मतलब किसी व्यक्ति या जगह \"की ओर\"। zu + dem = zum, zu + der = zur।",
+          "examples": [
+            {
+              "de": "Ich gehe zu meinem Freund.",
+              "tr": "मैं अपने दोस्त के पास जा रहा हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "हमेशा Dativ",
+          "text": "zu, bei, aus, von, mit के बाद हमेशा Dativ: dem, der, dem, बहुवचन में den।",
+          "examples": []
+        }
+      ]
+    },
+    "ar": {
+      "title": "zu: إلى أين نذهب",
+      "points": [
+        {
+          "title": "zum, zur",
+          "text": "zu تعني \"إلى\" شخص أو مكان. zu + dem = zum، zu + der = zur.",
+          "examples": [
+            {
+              "de": "Ich gehe zu meinem Freund.",
+              "tr": "أذهب إلى صديقي."
+            }
+          ]
+        },
+        {
+          "title": "دائماً حالة الجر",
+          "text": "بعد zu وbei وaus وvon وmit دائماً حالة الجر: dem وder وdem، وفي الجمع den.",
+          "examples": []
+        }
+      ]
+    }
+  },
+  "direction-prep-2": {
+    "ru": {
+      "title": "nach: в город и домой",
+      "points": [
+        {
+          "title": "nach",
+          "text": "nach ставим перед городом и страной без артикля и в nach Hause (домой).",
+          "examples": [
+            {
+              "de": "Wir fliegen nach Spanien.",
+              "tr": "Мы летим в Испанию."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "nach: у місто і додому",
+      "points": [
+        {
+          "title": "nach",
+          "text": "nach ставимо перед містом і країною без артикля та в nach Hause (додому).",
+          "examples": [
+            {
+              "de": "Wir fliegen nach Spanien.",
+              "tr": "Ми летимо до Іспанії."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "nach: to a city and home",
+      "points": [
+        {
+          "title": "nach",
+          "text": "Use nach before cities and countries without an article, and in nach Hause (home).",
+          "examples": [
+            {
+              "de": "Wir fliegen nach Spanien.",
+              "tr": "We’re flying to Spain."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "nach: do miasta i do domu",
+      "points": [
+        {
+          "title": "nach",
+          "text": "nach stawiamy przed miastem i krajem bez rodzajnika oraz w nach Hause (do domu).",
+          "examples": [
+            {
+              "de": "Wir fliegen nach Spanien.",
+              "tr": "Lecimy do Hiszpanii."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "nach: a la ciudad y a casa",
+      "points": [
+        {
+          "title": "nach",
+          "text": "nach va delante de ciudades y países sin artículo, y en nach Hause (a casa).",
+          "examples": [
+            {
+              "de": "Wir fliegen nach Spanien.",
+              "tr": "Volamos a España."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "nach : vers une ville et à la maison",
+      "points": [
+        {
+          "title": "nach",
+          "text": "nach s’emploie devant une ville ou un pays sans article, et dans nach Hause (à la maison).",
+          "examples": [
+            {
+              "de": "Wir fliegen nach Spanien.",
+              "tr": "Nous partons en avion en Espagne."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "nach: şehre ve eve",
+      "points": [
+        {
+          "title": "nach",
+          "text": "nach artikelsiz şehir ve ülke adlarından önce ve nach Hause (eve) ifadesinde kullanılır.",
+          "examples": [
+            {
+              "de": "Wir fliegen nach Spanien.",
+              "tr": "İspanya’ya uçuyoruz."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "nach: în oraș și acasă",
+      "points": [
+        {
+          "title": "nach",
+          "text": "nach se pune înaintea orașelor și țărilor fără articol și în nach Hause (acasă).",
+          "examples": [
+            {
+              "de": "Wir fliegen nach Spanien.",
+              "tr": "Zburăm în Spania."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "nach: shaharga va uyga",
+      "points": [
+        {
+          "title": "nach",
+          "text": "nach artiklsiz shahar va davlat nomidan oldin hamda nach Hause (uyga) iborasida ishlatiladi.",
+          "examples": [
+            {
+              "de": "Wir fliegen nach Spanien.",
+              "tr": "Biz Ispaniyaga uchamiz."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "nach: शहर और घर",
+      "points": [
+        {
+          "title": "nach",
+          "text": "nach बिना आर्टिकल वाले शहर और देश से पहले, और nach Hause (घर की ओर) में आता है।",
+          "examples": [
+            {
+              "de": "Wir fliegen nach Spanien.",
+              "tr": "हम स्पेन जा रहे हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "nach: إلى مدينة وإلى البيت",
+      "points": [
+        {
+          "title": "nach",
+          "text": "نضع nach قبل المدن والدول بدون أداة، وفي nach Hause (إلى البيت).",
+          "examples": [
+            {
+              "de": "Wir fliegen nach Spanien.",
+              "tr": "نسافر جواً إلى إسبانيا."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "direction-prep-3": {
+    "ru": {
+      "title": "bei: у кого мы",
+      "points": [
+        {
+          "title": "bei, beim",
+          "text": "bei значит «у кого-то» или место работы. bei + dem = beim.",
+          "examples": [
+            {
+              "de": "Ich wohne bei meinen Eltern.",
+              "tr": "Я живу у родителей."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "bei: у кого ми",
+      "points": [
+        {
+          "title": "bei, beim",
+          "text": "bei означає «у когось» або місце роботи. bei + dem = beim.",
+          "examples": [
+            {
+              "de": "Ich wohne bei meinen Eltern.",
+              "tr": "Я живу в батьків."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "bei: at someone’s place",
+      "points": [
+        {
+          "title": "bei, beim",
+          "text": "bei means \"at someone’s place\" or where you work. bei + dem = beim.",
+          "examples": [
+            {
+              "de": "Ich wohne bei meinen Eltern.",
+              "tr": "I live with my parents."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "bei: u kogo jesteśmy",
+      "points": [
+        {
+          "title": "bei, beim",
+          "text": "bei znaczy „u kogoś” albo miejsce pracy. bei + dem = beim.",
+          "examples": [
+            {
+              "de": "Ich wohne bei meinen Eltern.",
+              "tr": "Mieszkam u rodziców."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "bei: en casa de alguien",
+      "points": [
+        {
+          "title": "bei, beim",
+          "text": "bei significa \"en casa de alguien\" o el lugar de trabajo. bei + dem = beim.",
+          "examples": [
+            {
+              "de": "Ich wohne bei meinen Eltern.",
+              "tr": "Vivo con mis padres."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "bei : chez quelqu’un",
+      "points": [
+        {
+          "title": "bei, beim",
+          "text": "bei veut dire « chez quelqu’un » ou le lieu de travail. bei + dem = beim.",
+          "examples": [
+            {
+              "de": "Ich wohne bei meinen Eltern.",
+              "tr": "J’habite chez mes parents."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "bei: kimdeyiz",
+      "points": [
+        {
+          "title": "bei, beim",
+          "text": "bei \"birinin yanında\" ya da çalışılan yer demektir. bei + dem = beim.",
+          "examples": [
+            {
+              "de": "Ich wohne bei meinen Eltern.",
+              "tr": "Ailemin yanında yaşıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "bei: la cineva",
+      "points": [
+        {
+          "title": "bei, beim",
+          "text": "bei înseamnă „la cineva” sau locul de muncă. bei + dem = beim.",
+          "examples": [
+            {
+              "de": "Ich wohne bei meinen Eltern.",
+              "tr": "Locuiesc la părinții mei."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "bei: kimnikida",
+      "points": [
+        {
+          "title": "bei, beim",
+          "text": "bei \"kimnikida\" yoki ish joyi degani. bei + dem = beim.",
+          "examples": [
+            {
+              "de": "Ich wohne bei meinen Eltern.",
+              "tr": "Ota-onamnikida yashayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "bei: किसके पास",
+      "points": [
+        {
+          "title": "bei, beim",
+          "text": "bei मतलब \"किसी के यहाँ\" या काम की जगह। bei + dem = beim।",
+          "examples": [
+            {
+              "de": "Ich wohne bei meinen Eltern.",
+              "tr": "मैं अपने माता-पिता के साथ रहता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "bei: عند من",
+      "points": [
+        {
+          "title": "bei, beim",
+          "text": "bei تعني \"عند شخص\" أو مكان العمل. bei + dem = beim.",
+          "examples": [
+            {
+              "de": "Ich wohne bei meinen Eltern.",
+              "tr": "أسكن عند والديّ."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "direction-prep-4": {
+    "ru": {
+      "title": "aus: откуда",
+      "points": [
+        {
+          "title": "aus",
+          "text": "aus значит «из» чего-то наружу или из какой страны.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Türkei.",
+              "tr": "Я из Турции."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "aus: звідки",
+      "points": [
+        {
+          "title": "aus",
+          "text": "aus означає «з» чогось назовні або з якої країни.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Türkei.",
+              "tr": "Я з Туреччини."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "aus: from where",
+      "points": [
+        {
+          "title": "aus",
+          "text": "aus means \"out of\" something or from a country.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Türkei.",
+              "tr": "I’m from Turkey."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "aus: skąd",
+      "points": [
+        {
+          "title": "aus",
+          "text": "aus znaczy „z” czegoś na zewnątrz albo z jakiego kraju.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Türkei.",
+              "tr": "Jestem z Turcji."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "aus: de dónde",
+      "points": [
+        {
+          "title": "aus",
+          "text": "aus significa \"de dentro de\" algo o de un país.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Türkei.",
+              "tr": "Soy de Turquía."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "aus : d’où",
+      "points": [
+        {
+          "title": "aus",
+          "text": "aus veut dire « hors de » quelque chose ou de quel pays.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Türkei.",
+              "tr": "Je viens de Turquie."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "aus: nereden",
+      "points": [
+        {
+          "title": "aus",
+          "text": "aus bir şeyin \"içinden dışarı\" ya da hangi ülkeden demektir.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Türkei.",
+              "tr": "Türkiyeliyim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "aus: de unde",
+      "points": [
+        {
+          "title": "aus",
+          "text": "aus înseamnă „din” ceva în afară sau din ce țară.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Türkei.",
+              "tr": "Sunt din Turcia."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "aus: qayerdan",
+      "points": [
+        {
+          "title": "aus",
+          "text": "aus biror narsaning \"ichidan\" yoki qaysi davlatdan degani.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Türkei.",
+              "tr": "Men Turkiyadanman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "aus: कहाँ से",
+      "points": [
+        {
+          "title": "aus",
+          "text": "aus मतलब किसी चीज़ के अंदर \"से\" या किस देश से।",
+          "examples": [
+            {
+              "de": "Ich komme aus der Türkei.",
+              "tr": "मैं तुर्की से हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "aus: من أين",
+      "points": [
+        {
+          "title": "aus",
+          "text": "aus تعني \"من داخل\" شيء أو من أي بلد.",
+          "examples": [
+            {
+              "de": "Ich komme aus der Türkei.",
+              "tr": "أنا من تركيا."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "direction-prep-5": {
+    "ru": {
+      "title": "von: от кого и откуда",
+      "points": [
+        {
+          "title": "von, vom",
+          "text": "von значит «от» человека или «с» места, где мы были. von + dem = vom.",
+          "examples": [
+            {
+              "de": "Ich komme von der Arbeit.",
+              "tr": "Я иду с работы."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "von: від кого і звідки",
+      "points": [
+        {
+          "title": "von, vom",
+          "text": "von означає «від» людини або «з» місця, де ми були. von + dem = vom.",
+          "examples": [
+            {
+              "de": "Ich komme von der Arbeit.",
+              "tr": "Я йду з роботи."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "von: from whom and where",
+      "points": [
+        {
+          "title": "von, vom",
+          "text": "von means \"from\" a person or a place you were at. von + dem = vom.",
+          "examples": [
+            {
+              "de": "Ich komme von der Arbeit.",
+              "tr": "I’m coming from work."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "von: od kogo i skąd",
+      "points": [
+        {
+          "title": "von, vom",
+          "text": "von znaczy „od” osoby albo „z” miejsca, gdzie byliśmy. von + dem = vom.",
+          "examples": [
+            {
+              "de": "Ich komme von der Arbeit.",
+              "tr": "Wracam z pracy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "von: de quién y de dónde",
+      "points": [
+        {
+          "title": "von, vom",
+          "text": "von significa \"de\" una persona o del lugar donde estuvimos. von + dem = vom.",
+          "examples": [
+            {
+              "de": "Ich komme von der Arbeit.",
+              "tr": "Vengo del trabajo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "von : de qui et d’où",
+      "points": [
+        {
+          "title": "von, vom",
+          "text": "von veut dire « de » une personne ou d’un lieu où l’on était. von + dem = vom.",
+          "examples": [
+            {
+              "de": "Ich komme von der Arbeit.",
+              "tr": "Je reviens du travail."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "von: kimden ve nereden",
+      "points": [
+        {
+          "title": "von, vom",
+          "text": "von bir kişiden ya da bulunduğumuz yerden \"-den\" demektir. von + dem = vom.",
+          "examples": [
+            {
+              "de": "Ich komme von der Arbeit.",
+              "tr": "İşten geliyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "von: de la cine și de unde",
+      "points": [
+        {
+          "title": "von, vom",
+          "text": "von înseamnă „de la” o persoană sau un loc unde am fost. von + dem = vom.",
+          "examples": [
+            {
+              "de": "Ich komme von der Arbeit.",
+              "tr": "Vin de la muncă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "von: kimdan va qayerdan",
+      "points": [
+        {
+          "title": "von, vom",
+          "text": "von odamdan yoki biz bo'lgan joydan \"-dan\" degani. von + dem = vom.",
+          "examples": [
+            {
+              "de": "Ich komme von der Arbeit.",
+              "tr": "Ishdan kelyapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "von: किससे और कहाँ से",
+      "points": [
+        {
+          "title": "von, vom",
+          "text": "von मतलब किसी व्यक्ति \"से\" या जहाँ हम थे उस जगह \"से\"। von + dem = vom।",
+          "examples": [
+            {
+              "de": "Ich komme von der Arbeit.",
+              "tr": "मैं काम से आ रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "von: من مَن ومن أين",
+      "points": [
+        {
+          "title": "von, vom",
+          "text": "von تعني \"من\" شخص أو من مكان كنا فيه. von + dem = vom.",
+          "examples": [
+            {
+              "de": "Ich komme von der Arbeit.",
+              "tr": "أعود من العمل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "direction-prep-6": {
+    "ru": {
+      "title": "mit: с кем и на чём",
+      "points": [
+        {
+          "title": "mit",
+          "text": "mit значит «с кем-то» и «на каком транспорте». После mit всегда Dativ.",
+          "examples": [
+            {
+              "de": "Ich fahre mit dem Fahrrad.",
+              "tr": "Я еду на велосипеде."
+            },
+            {
+              "de": "Er spricht mit dem Lehrer.",
+              "tr": "Он говорит с учителем."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "mit: з ким і чим",
+      "points": [
+        {
+          "title": "mit",
+          "text": "mit означає «з кимось» і «яким транспортом». Після mit завжди Dativ.",
+          "examples": [
+            {
+              "de": "Ich fahre mit dem Fahrrad.",
+              "tr": "Я їду на велосипеді."
+            },
+            {
+              "de": "Er spricht mit dem Lehrer.",
+              "tr": "Він говорить з учителем."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "mit: with whom and how",
+      "points": [
+        {
+          "title": "mit",
+          "text": "mit means \"with someone\" and \"by what transport\". mit always takes the dative.",
+          "examples": [
+            {
+              "de": "Ich fahre mit dem Fahrrad.",
+              "tr": "I go by bike."
+            },
+            {
+              "de": "Er spricht mit dem Lehrer.",
+              "tr": "He’s talking to the teacher."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "mit: z kim i czym",
+      "points": [
+        {
+          "title": "mit",
+          "text": "mit znaczy „z kimś” i „czym” jedziemy. Po mit zawsze Dativ.",
+          "examples": [
+            {
+              "de": "Ich fahre mit dem Fahrrad.",
+              "tr": "Jadę rowerem."
+            },
+            {
+              "de": "Er spricht mit dem Lehrer.",
+              "tr": "On rozmawia z nauczycielem."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "mit: con quién y en qué",
+      "points": [
+        {
+          "title": "mit",
+          "text": "mit significa \"con alguien\" y \"en qué transporte\". Tras mit siempre dativo.",
+          "examples": [
+            {
+              "de": "Ich fahre mit dem Fahrrad.",
+              "tr": "Voy en bici."
+            },
+            {
+              "de": "Er spricht mit dem Lehrer.",
+              "tr": "Él habla con el profesor."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "mit : avec qui et comment",
+      "points": [
+        {
+          "title": "mit",
+          "text": "mit veut dire « avec quelqu’un » et « en quel transport ». Après mit, toujours le datif.",
+          "examples": [
+            {
+              "de": "Ich fahre mit dem Fahrrad.",
+              "tr": "Je vais à vélo."
+            },
+            {
+              "de": "Er spricht mit dem Lehrer.",
+              "tr": "Il parle avec le professeur."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "mit: kiminle ve neyle",
+      "points": [
+        {
+          "title": "mit",
+          "text": "mit \"biriyle\" ve \"hangi araçla\" demektir. mit’ten sonra her zaman Dativ.",
+          "examples": [
+            {
+              "de": "Ich fahre mit dem Fahrrad.",
+              "tr": "Bisikletle gidiyorum."
+            },
+            {
+              "de": "Er spricht mit dem Lehrer.",
+              "tr": "O öğretmenle konuşuyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "mit: cu cine și cu ce",
+      "points": [
+        {
+          "title": "mit",
+          "text": "mit înseamnă „cu cineva” și „cu ce mijloc de transport”. După mit mereu dativ.",
+          "examples": [
+            {
+              "de": "Ich fahre mit dem Fahrrad.",
+              "tr": "Merg cu bicicleta."
+            },
+            {
+              "de": "Er spricht mit dem Lehrer.",
+              "tr": "El vorbește cu profesorul."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "mit: kim bilan va nima bilan",
+      "points": [
+        {
+          "title": "mit",
+          "text": "mit \"kim bilandir\" va \"qanday transportda\" degani. mit dan keyin doim Dativ.",
+          "examples": [
+            {
+              "de": "Ich fahre mit dem Fahrrad.",
+              "tr": "Men velosipedda boraman."
+            },
+            {
+              "de": "Er spricht mit dem Lehrer.",
+              "tr": "U o'qituvchi bilan gaplashyapti."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "mit: किसके साथ और किससे",
+      "points": [
+        {
+          "title": "mit",
+          "text": "mit मतलब \"किसी के साथ\" और \"किस सवारी से\"। mit के बाद हमेशा Dativ।",
+          "examples": [
+            {
+              "de": "Ich fahre mit dem Fahrrad.",
+              "tr": "मैं साइकिल से जाता हूँ।"
+            },
+            {
+              "de": "Er spricht mit dem Lehrer.",
+              "tr": "वह शिक्षक से बात कर रहा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "mit: مع مَن وبماذا",
+      "points": [
+        {
+          "title": "mit",
+          "text": "mit تعني \"مع شخص\" و\"بأي وسيلة نقل\". وبعد mit دائماً حالة الجر.",
+          "examples": [
+            {
+              "de": "Ich fahre mit dem Fahrrad.",
+              "tr": "أذهب بالدراجة."
+            },
+            {
+              "de": "Er spricht mit dem Lehrer.",
+              "tr": "هو يتكلم مع المعلم."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "direction-prep-7": {
+    "ru": {
+      "title": "Куда, где, откуда",
+      "points": [
+        {
+          "title": "Куда, где, откуда",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. С домом: nach Hause (домой), zu Hause (дома).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Я иду к врачу."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Я у врача."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Я иду от врача."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Куди, де, звідки",
+      "points": [
+        {
+          "title": "Куди, де, звідки",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. З домом: nach Hause (додому), zu Hause (удома).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Я йду до лікаря."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Я в лікаря."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Я йду від лікаря."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Where to, where, where from",
+      "points": [
+        {
+          "title": "Where to, where, where from",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. With home: nach Hause (home), zu Hause (at home).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "I’m going to the doctor’s."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "I’m at the doctor’s."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "I’m coming from the doctor’s."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Dokąd, gdzie, skąd",
+      "points": [
+        {
+          "title": "Dokąd, gdzie, skąd",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. Z domem: nach Hause (do domu), zu Hause (w domu).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Idę do lekarza."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Jestem u lekarza."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Wracam od lekarza."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Adónde, dónde, de dónde",
+      "points": [
+        {
+          "title": "Adónde, dónde, de dónde",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. Con casa: nach Hause (a casa), zu Hause (en casa).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Voy al médico."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Estoy en el médico."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Vengo del médico."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Où, où, d’où",
+      "points": [
+        {
+          "title": "Où (vers), où, d’où",
+          "text": "Wohin ? zum Arzt. Wo ? beim Arzt. Woher ? vom Arzt. Avec la maison : nach Hause (à la maison, direction), zu Hause (à la maison, lieu).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Je vais chez le médecin."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Je suis chez le médecin."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Je reviens de chez le médecin."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Nereye, nerede, nereden",
+      "points": [
+        {
+          "title": "Nereye, nerede, nereden",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. Ev için: nach Hause (eve), zu Hause (evde).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Doktora gidiyorum."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Doktordayım."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Doktordan geliyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Încotro, unde, de unde",
+      "points": [
+        {
+          "title": "Încotro, unde, de unde",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. Cu casa: nach Hause (acasă, direcție), zu Hause (acasă, loc).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Merg la medic."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Sunt la medic."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Vin de la medic."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qayerga, qayerda, qayerdan",
+      "points": [
+        {
+          "title": "Qayerga, qayerda, qayerdan",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. Uy bilan: nach Hause (uyga), zu Hause (uyda).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Men shifokorga boryapman."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Men shifokordaman."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Men shifokordan kelyapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "किधर, कहाँ, कहाँ से",
+      "points": [
+        {
+          "title": "किधर, कहाँ, कहाँ से",
+          "text": "Wohin? zum Arzt। Wo? beim Arzt। Woher? vom Arzt। घर के साथ: nach Hause (घर की ओर), zu Hause (घर पर)।",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "मैं डॉक्टर के पास जा रहा हूँ।"
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "मैं डॉक्टर के पास हूँ।"
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "मैं डॉक्टर के पास से आ रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "إلى أين، أين، من أين",
+      "points": [
+        {
+          "title": "إلى أين، أين، من أين",
+          "text": "Wohin؟ zum Arzt. Wo؟ beim Arzt. Woher؟ vom Arzt. ومع البيت: nach Hause (إلى البيت)، zu Hause (في البيت).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "أذهب إلى الطبيب."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "أنا عند الطبيب."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "أعود من عند الطبيب."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "direction-prep-9": {
+    "ru": {
+      "title": "Практика: поездка к бабушке",
+      "points": [
+        {
+          "title": "Куда, где, откуда",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. С домом: nach Hause (домой), zu Hause (дома).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Я иду к врачу."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Я у врача."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Я иду от врача."
+            }
+          ]
+        },
+        {
+          "title": "Всегда Dativ",
+          "text": "После zu, bei, aus, von, mit всегда Dativ: dem, der, dem, во множественном den.",
+          "examples": []
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: поїздка до бабусі",
+      "points": [
+        {
+          "title": "Куди, де, звідки",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. З домом: nach Hause (додому), zu Hause (удома).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Я йду до лікаря."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Я в лікаря."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Я йду від лікаря."
+            }
+          ]
+        },
+        {
+          "title": "Завжди Dativ",
+          "text": "Після zu, bei, aus, von, mit завжди Dativ: dem, der, dem, у множині den.",
+          "examples": []
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: visiting grandma",
+      "points": [
+        {
+          "title": "Where to, where, where from",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. With home: nach Hause (home), zu Hause (at home).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "I’m going to the doctor’s."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "I’m at the doctor’s."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "I’m coming from the doctor’s."
+            }
+          ]
+        },
+        {
+          "title": "Always dative",
+          "text": "After zu, bei, aus, von, mit always use the dative: dem, der, dem, plural den.",
+          "examples": []
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: wyjazd do babci",
+      "points": [
+        {
+          "title": "Dokąd, gdzie, skąd",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. Z domem: nach Hause (do domu), zu Hause (w domu).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Idę do lekarza."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Jestem u lekarza."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Wracam od lekarza."
+            }
+          ]
+        },
+        {
+          "title": "Zawsze Dativ",
+          "text": "Po zu, bei, aus, von, mit zawsze Dativ: dem, der, dem, w liczbie mnogiej den.",
+          "examples": []
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: visita a la abuela",
+      "points": [
+        {
+          "title": "Adónde, dónde, de dónde",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. Con casa: nach Hause (a casa), zu Hause (en casa).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Voy al médico."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Estoy en el médico."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Vengo del médico."
+            }
+          ]
+        },
+        {
+          "title": "Siempre dativo",
+          "text": "Después de zu, bei, aus, von, mit siempre dativo: dem, der, dem, en plural den.",
+          "examples": []
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : chez mamie",
+      "points": [
+        {
+          "title": "Où (vers), où, d’où",
+          "text": "Wohin ? zum Arzt. Wo ? beim Arzt. Woher ? vom Arzt. Avec la maison : nach Hause (à la maison, direction), zu Hause (à la maison, lieu).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Je vais chez le médecin."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Je suis chez le médecin."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Je reviens de chez le médecin."
+            }
+          ]
+        },
+        {
+          "title": "Toujours le datif",
+          "text": "Après zu, bei, aus, von, mit, toujours le datif : dem, der, dem, au pluriel den.",
+          "examples": []
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: büyükanneye ziyaret",
+      "points": [
+        {
+          "title": "Nereye, nerede, nereden",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. Ev için: nach Hause (eve), zu Hause (evde).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Doktora gidiyorum."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Doktordayım."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Doktordan geliyorum."
+            }
+          ]
+        },
+        {
+          "title": "Her zaman Dativ",
+          "text": "zu, bei, aus, von, mit’ten sonra her zaman Dativ: dem, der, dem, çoğulda den.",
+          "examples": []
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: drumul la bunica",
+      "points": [
+        {
+          "title": "Încotro, unde, de unde",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. Cu casa: nach Hause (acasă, direcție), zu Hause (acasă, loc).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Merg la medic."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Sunt la medic."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Vin de la medic."
+            }
+          ]
+        },
+        {
+          "title": "Mereu dativ",
+          "text": "După zu, bei, aus, von, mit mereu dativ: dem, der, dem, la plural den.",
+          "examples": []
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: buvinikiga safar",
+      "points": [
+        {
+          "title": "Qayerga, qayerda, qayerdan",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. Uy bilan: nach Hause (uyga), zu Hause (uyda).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Men shifokorga boryapman."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Men shifokordaman."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Men shifokordan kelyapman."
+            }
+          ]
+        },
+        {
+          "title": "Doim Dativ",
+          "text": "zu, bei, aus, von, mit dan keyin doim Dativ: dem, der, dem, ko'plikda den.",
+          "examples": []
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: दादी के पास",
+      "points": [
+        {
+          "title": "किधर, कहाँ, कहाँ से",
+          "text": "Wohin? zum Arzt। Wo? beim Arzt। Woher? vom Arzt। घर के साथ: nach Hause (घर की ओर), zu Hause (घर पर)।",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "मैं डॉक्टर के पास जा रहा हूँ।"
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "मैं डॉक्टर के पास हूँ।"
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "मैं डॉक्टर के पास से आ रहा हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "हमेशा Dativ",
+          "text": "zu, bei, aus, von, mit के बाद हमेशा Dativ: dem, der, dem, बहुवचन में den।",
+          "examples": []
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: زيارة الجدة",
+      "points": [
+        {
+          "title": "إلى أين، أين، من أين",
+          "text": "Wohin؟ zum Arzt. Wo؟ beim Arzt. Woher؟ vom Arzt. ومع البيت: nach Hause (إلى البيت)، zu Hause (في البيت).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "أذهب إلى الطبيب."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "أنا عند الطبيب."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "أعود من عند الطبيب."
+            }
+          ]
+        },
+        {
+          "title": "دائماً حالة الجر",
+          "text": "بعد zu وbei وaus وvon وmit دائماً حالة الجر: dem وder وdem، وفي الجمع den.",
+          "examples": []
+        }
+      ]
+    }
+  },
+  "direction-prep-10": {
+    "ru": {
+      "title": "Практика: мой день",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Повторяем три вопроса: zur Arbeit (куда), bei der Arbeit (где), von der Arbeit (откуда).",
+          "examples": [
+            {
+              "de": "Am Morgen fahre ich mit dem Bus zur Arbeit.",
+              "tr": "Утром я еду на автобусе на работу."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: мій день",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Повторюємо три питання: zur Arbeit (куди), bei der Arbeit (де), von der Arbeit (звідки).",
+          "examples": [
+            {
+              "de": "Am Morgen fahre ich mit dem Bus zur Arbeit.",
+              "tr": "Уранці я їду автобусом на роботу."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: my day",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "Review the three questions: zur Arbeit (where to), bei der Arbeit (where), von der Arbeit (where from).",
+          "examples": [
+            {
+              "de": "Am Morgen fahre ich mit dem Bus zur Arbeit.",
+              "tr": "In the morning I take the bus to work."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: mój dzień",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Powtarzamy trzy pytania: zur Arbeit (dokąd), bei der Arbeit (gdzie), von der Arbeit (skąd).",
+          "examples": [
+            {
+              "de": "Am Morgen fahre ich mit dem Bus zur Arbeit.",
+              "tr": "Rano jadę autobusem do pracy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: mi día",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Repasamos las tres preguntas: zur Arbeit (adónde), bei der Arbeit (dónde), von der Arbeit (de dónde).",
+          "examples": [
+            {
+              "de": "Am Morgen fahre ich mit dem Bus zur Arbeit.",
+              "tr": "Por la mañana voy al trabajo en autobús."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : ma journée",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "On révise les trois questions : zur Arbeit (où on va), bei der Arbeit (où on est), von der Arbeit (d’où on vient).",
+          "examples": [
+            {
+              "de": "Am Morgen fahre ich mit dem Bus zur Arbeit.",
+              "tr": "Le matin, je vais au travail en bus."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: günüm",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Üç soruyu tekrar ediyoruz: zur Arbeit (nereye), bei der Arbeit (nerede), von der Arbeit (nereden).",
+          "examples": [
+            {
+              "de": "Am Morgen fahre ich mit dem Bus zur Arbeit.",
+              "tr": "Sabah otobüsle işe giderim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: ziua mea",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Recapitulăm cele trei întrebări: zur Arbeit (încotro), bei der Arbeit (unde), von der Arbeit (de unde).",
+          "examples": [
+            {
+              "de": "Am Morgen fahre ich mit dem Bus zur Arbeit.",
+              "tr": "Dimineața merg cu autobuzul la muncă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: mening kunim",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Uch savolni takrorlaymiz: zur Arbeit (qayerga), bei der Arbeit (qayerda), von der Arbeit (qayerdan).",
+          "examples": [
+            {
+              "de": "Am Morgen fahre ich mit dem Bus zur Arbeit.",
+              "tr": "Ertalab avtobusda ishga boraman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: मेरा दिन",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "तीन सवाल दोहराते हैं: zur Arbeit (किधर), bei der Arbeit (कहाँ), von der Arbeit (कहाँ से)।",
+          "examples": [
+            {
+              "de": "Am Morgen fahre ich mit dem Bus zur Arbeit.",
+              "tr": "सुबह मैं बस से काम पर जाता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: يومي",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "نراجع الأسئلة الثلاثة: zur Arbeit (إلى أين)، bei der Arbeit (أين)، von der Arbeit (من أين).",
+          "examples": [
+            {
+              "de": "Am Morgen fahre ich mit dem Bus zur Arbeit.",
+              "tr": "في الصباح أذهب إلى العمل بالحافلة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "direction-prep-8": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "Куда, где, откуда",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. С домом: nach Hause (домой), zu Hause (дома).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Я иду к врачу."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Я у врача."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Я иду от врача."
+            }
+          ]
+        },
+        {
+          "title": "Всегда Dativ",
+          "text": "После zu, bei, aus, von, mit всегда Dativ: dem, der, dem, во множественном den.",
+          "examples": []
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "Куди, де, звідки",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. З домом: nach Hause (додому), zu Hause (удома).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Я йду до лікаря."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Я в лікаря."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Я йду від лікаря."
+            }
+          ]
+        },
+        {
+          "title": "Завжди Dativ",
+          "text": "Після zu, bei, aus, von, mit завжди Dativ: dem, der, dem, у множині den.",
+          "examples": []
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "Where to, where, where from",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. With home: nach Hause (home), zu Hause (at home).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "I’m going to the doctor’s."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "I’m at the doctor’s."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "I’m coming from the doctor’s."
+            }
+          ]
+        },
+        {
+          "title": "Always dative",
+          "text": "After zu, bei, aus, von, mit always use the dative: dem, der, dem, plural den.",
+          "examples": []
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "Dokąd, gdzie, skąd",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. Z domem: nach Hause (do domu), zu Hause (w domu).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Idę do lekarza."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Jestem u lekarza."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Wracam od lekarza."
+            }
+          ]
+        },
+        {
+          "title": "Zawsze Dativ",
+          "text": "Po zu, bei, aus, von, mit zawsze Dativ: dem, der, dem, w liczbie mnogiej den.",
+          "examples": []
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "Adónde, dónde, de dónde",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. Con casa: nach Hause (a casa), zu Hause (en casa).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Voy al médico."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Estoy en el médico."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Vengo del médico."
+            }
+          ]
+        },
+        {
+          "title": "Siempre dativo",
+          "text": "Después de zu, bei, aus, von, mit siempre dativo: dem, der, dem, en plural den.",
+          "examples": []
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "Où (vers), où, d’où",
+          "text": "Wohin ? zum Arzt. Wo ? beim Arzt. Woher ? vom Arzt. Avec la maison : nach Hause (à la maison, direction), zu Hause (à la maison, lieu).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Je vais chez le médecin."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Je suis chez le médecin."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Je reviens de chez le médecin."
+            }
+          ]
+        },
+        {
+          "title": "Toujours le datif",
+          "text": "Après zu, bei, aus, von, mit, toujours le datif : dem, der, dem, au pluriel den.",
+          "examples": []
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "Nereye, nerede, nereden",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. Ev için: nach Hause (eve), zu Hause (evde).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Doktora gidiyorum."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Doktordayım."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Doktordan geliyorum."
+            }
+          ]
+        },
+        {
+          "title": "Her zaman Dativ",
+          "text": "zu, bei, aus, von, mit’ten sonra her zaman Dativ: dem, der, dem, çoğulda den.",
+          "examples": []
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "Încotro, unde, de unde",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. Cu casa: nach Hause (acasă, direcție), zu Hause (acasă, loc).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Merg la medic."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Sunt la medic."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Vin de la medic."
+            }
+          ]
+        },
+        {
+          "title": "Mereu dativ",
+          "text": "După zu, bei, aus, von, mit mereu dativ: dem, der, dem, la plural den.",
+          "examples": []
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "Qayerga, qayerda, qayerdan",
+          "text": "Wohin? zum Arzt. Wo? beim Arzt. Woher? vom Arzt. Uy bilan: nach Hause (uyga), zu Hause (uyda).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "Men shifokorga boryapman."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "Men shifokordaman."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "Men shifokordan kelyapman."
+            }
+          ]
+        },
+        {
+          "title": "Doim Dativ",
+          "text": "zu, bei, aus, von, mit dan keyin doim Dativ: dem, der, dem, ko'plikda den.",
+          "examples": []
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "किधर, कहाँ, कहाँ से",
+          "text": "Wohin? zum Arzt। Wo? beim Arzt। Woher? vom Arzt। घर के साथ: nach Hause (घर की ओर), zu Hause (घर पर)।",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "मैं डॉक्टर के पास जा रहा हूँ।"
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "मैं डॉक्टर के पास हूँ।"
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "मैं डॉक्टर के पास से आ रहा हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "हमेशा Dativ",
+          "text": "zu, bei, aus, von, mit के बाद हमेशा Dativ: dem, der, dem, बहुवचन में den।",
+          "examples": []
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "إلى أين، أين، من أين",
+          "text": "Wohin؟ zum Arzt. Wo؟ beim Arzt. Woher؟ vom Arzt. ومع البيت: nach Hause (إلى البيت)، zu Hause (في البيت).",
+          "examples": [
+            {
+              "de": "Ich gehe zum Arzt.",
+              "tr": "أذهب إلى الطبيب."
+            },
+            {
+              "de": "Ich bin beim Arzt.",
+              "tr": "أنا عند الطبيب."
+            },
+            {
+              "de": "Ich komme vom Arzt.",
+              "tr": "أعود من عند الطبيب."
+            }
+          ]
+        },
+        {
+          "title": "دائماً حالة الجر",
+          "text": "بعد zu وbei وaus وvon وmit دائماً حالة الجر: dem وder وdem، وفي الجمع den.",
+          "examples": []
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,2442 @@
+{
+  "question-bridge-one": {
+    "ru": {
+      "title": "Глагол + предлог",
+      "points": [
+        {
+          "title": "Глагол + предлог",
+          "text": "Многие глаголы идут со своим предлогом, учи их вместе: denken an, sich interessieren für, sich kümmern um, sich ärgern über (всё + Akkusativ).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Я думаю о тебе."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Дієслово + прийменник",
+      "points": [
+        {
+          "title": "Дієслово + прийменник",
+          "text": "Багато дієслів ідуть зі своїм прийменником, вчи їх разом: denken an, sich interessieren für, sich kümmern um, sich ärgern über (усе + Akkusativ).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Я думаю про тебе."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Verb + preposition",
+      "points": [
+        {
+          "title": "Verb + preposition",
+          "text": "Many verbs come with their own preposition, learn them together: denken an, sich interessieren für, sich kümmern um, sich ärgern über (all + accusative).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "I’m thinking of you."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Czasownik + przyimek",
+      "points": [
+        {
+          "title": "Czasownik + przyimek",
+          "text": "Wiele czasowników ma swój przyimek, ucz się ich razem: denken an, sich interessieren für, sich kümmern um, sich ärgern über (wszystkie + Akkusativ).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Myślę o tobie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Verbo + preposición",
+      "points": [
+        {
+          "title": "Verbo + preposición",
+          "text": "Muchos verbos llevan su propia preposición, apréndelos juntos: denken an, sich interessieren für, sich kümmern um, sich ärgern über (todos + acusativo).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Pienso en ti."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Verbe + préposition",
+      "points": [
+        {
+          "title": "Verbe + préposition",
+          "text": "Beaucoup de verbes ont leur préposition, apprends-les ensemble : denken an, sich interessieren für, sich kümmern um, sich ärgern über (tous + accusatif).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Je pense à toi."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Fiil + edat",
+      "points": [
+        {
+          "title": "Fiil + edat",
+          "text": "Birçok fiil kendi edatıyla gelir, birlikte öğren: denken an, sich interessieren für, sich kümmern um, sich ärgern über (hepsi + Akkusativ).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Seni düşünüyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Verb + prepoziție",
+      "points": [
+        {
+          "title": "Verb + prepoziție",
+          "text": "Multe verbe au prepoziția lor, învață-le împreună: denken an, sich interessieren für, sich kümmern um, sich ärgern über (toate + acuzativ).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Mă gândesc la tine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Fe'l + ko'makchi",
+      "points": [
+        {
+          "title": "Fe'l + ko'makchi",
+          "text": "Ko'p fe'llar o'z ko'makchisi bilan keladi, birga o'rgan: denken an, sich interessieren für, sich kümmern um, sich ärgern über (hammasi + Akkusativ).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Seni o'ylayapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "क्रिया + संबंधसूचक",
+      "points": [
+        {
+          "title": "क्रिया + संबंधसूचक",
+          "text": "कई क्रियाएँ अपने संबंधसूचक के साथ आती हैं, साथ में सीखो: denken an, sich interessieren für, sich kümmern um, sich ärgern über (सब + Akkusativ)।",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "मैं तुम्हारे बारे में सोच रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الفعل + حرف الجر",
+      "points": [
+        {
+          "title": "الفعل + حرف الجر",
+          "text": "أفعال كثيرة تأتي مع حرف جر خاص بها، فاحفظها معاً: denken an، sich interessieren für، sich kümmern um، sich ärgern über (كلها + المفعول).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "أفكر فيك."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "question-bridge-two": {
+    "ru": {
+      "title": "Auf wen? О людях",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "О человеке: предлог + wen/wem (Auf wen wartest du?). О вещи: wo + предлог (Worauf wartest du?). Перед гласной вставляем -r-: worauf, woran, но wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Чего ты ждёшь?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Auf wen? Про людей",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Про людину: прийменник + wen/wem (Auf wen wartest du?). Про річ: wo + прийменник (Worauf wartest du?). Перед голосною вставляємо -r-: worauf, woran, але wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "На що ти чекаєш?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Auf wen? About people",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "About a person: preposition + wen/wem (Auf wen wartest du?). About a thing: wo + preposition (Worauf wartest du?). Before a vowel add -r-: worauf, woran, but wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "What are you waiting for?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Auf wen? O ludziach",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "O osobę: przyimek + wen/wem (Auf wen wartest du?). O rzecz: wo + przyimek (Worauf wartest du?). Przed samogłoską wstawiamy -r-: worauf, woran, ale wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Na co czekasz?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Auf wen? Sobre personas",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Sobre una persona: preposición + wen/wem (Auf wen wartest du?). Sobre una cosa: wo + preposición (Worauf wartest du?). Ante vocal se añade -r-: worauf, woran, pero wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "¿Qué esperas?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Auf wen ? Les personnes",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Pour une personne : préposition + wen/wem (Auf wen wartest du ?). Pour une chose : wo + préposition (Worauf wartest du ?). Devant une voyelle on ajoute -r- : worauf, woran, mais wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Qu’est-ce que tu attends ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Auf wen? Kişiler",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Kişi için: edat + wen/wem (Auf wen wartest du?). Şey için: wo + edat (Worauf wartest du?). Ünlüden önce -r- eklenir: worauf, woran, ama wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Neyi bekliyorsun?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Auf wen? Despre oameni",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Despre o persoană: prepoziție + wen/wem (Auf wen wartest du?). Despre un lucru: wo + prepoziție (Worauf wartest du?). Înainte de vocală se pune -r-: worauf, woran, dar wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Ce aștepți?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Auf wen? Odamlar haqida",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Odam haqida: ko'makchi + wen/wem (Auf wen wartest du?). Narsa haqida: wo + ko'makchi (Worauf wartest du?). Unli oldidan -r- qo'shiladi: worauf, woran, lekin wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Nimani kutyapsan?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "Auf wen? लोगों के बारे में",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "व्यक्ति के बारे में: संबंधसूचक + wen/wem (Auf wen wartest du?)। चीज़ के बारे में: wo + संबंधसूचक (Worauf wartest du?)। स्वर से पहले -r-: worauf, woran, पर wofür।",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "तुम किसका इंतज़ार कर रहे हो?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "Auf wen؟ عن الأشخاص",
+      "points": [
+        {
+          "title": "Auf wen؟ Worauf؟",
+          "text": "عن شخص: حرف الجر + wen/wem (Auf wen wartest du؟). وعن شيء: wo + حرف الجر (Worauf wartest du؟). وقبل الحرف المتحرك نضيف -r-: worauf، woran، لكن wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "ماذا تنتظر؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "question-bridge-three": {
+    "ru": {
+      "title": "Worauf? О вещах",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "О человеке: предлог + wen/wem (Auf wen wartest du?). О вещи: wo + предлог (Worauf wartest du?). Перед гласной вставляем -r-: worauf, woran, но wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Чего ты ждёшь?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Worauf? Про речі",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Про людину: прийменник + wen/wem (Auf wen wartest du?). Про річ: wo + прийменник (Worauf wartest du?). Перед голосною вставляємо -r-: worauf, woran, але wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "На що ти чекаєш?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Worauf? About things",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "About a person: preposition + wen/wem (Auf wen wartest du?). About a thing: wo + preposition (Worauf wartest du?). Before a vowel add -r-: worauf, woran, but wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "What are you waiting for?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Worauf? O rzeczach",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "O osobę: przyimek + wen/wem (Auf wen wartest du?). O rzecz: wo + przyimek (Worauf wartest du?). Przed samogłoską wstawiamy -r-: worauf, woran, ale wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Na co czekasz?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Worauf? Sobre cosas",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Sobre una persona: preposición + wen/wem (Auf wen wartest du?). Sobre una cosa: wo + preposición (Worauf wartest du?). Ante vocal se añade -r-: worauf, woran, pero wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "¿Qué esperas?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Worauf ? Les choses",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Pour une personne : préposition + wen/wem (Auf wen wartest du ?). Pour une chose : wo + préposition (Worauf wartest du ?). Devant une voyelle on ajoute -r- : worauf, woran, mais wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Qu’est-ce que tu attends ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Worauf? Şeyler",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Kişi için: edat + wen/wem (Auf wen wartest du?). Şey için: wo + edat (Worauf wartest du?). Ünlüden önce -r- eklenir: worauf, woran, ama wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Neyi bekliyorsun?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Worauf? Despre lucruri",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Despre o persoană: prepoziție + wen/wem (Auf wen wartest du?). Despre un lucru: wo + prepoziție (Worauf wartest du?). Înainte de vocală se pune -r-: worauf, woran, dar wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Ce aștepți?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Worauf? Narsalar haqida",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Odam haqida: ko'makchi + wen/wem (Auf wen wartest du?). Narsa haqida: wo + ko'makchi (Worauf wartest du?). Unli oldidan -r- qo'shiladi: worauf, woran, lekin wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Nimani kutyapsan?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "Worauf? चीज़ों के बारे में",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "व्यक्ति के बारे में: संबंधसूचक + wen/wem (Auf wen wartest du?)। चीज़ के बारे में: wo + संबंधसूचक (Worauf wartest du?)। स्वर से पहले -r-: worauf, woran, पर wofür।",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "तुम किसका इंतज़ार कर रहे हो?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "Worauf؟ عن الأشياء",
+      "points": [
+        {
+          "title": "Auf wen؟ Worauf؟",
+          "text": "عن شخص: حرف الجر + wen/wem (Auf wen wartest du؟). وعن شيء: wo + حرف الجر (Worauf wartest du؟). وقبل الحرف المتحرك نضيف -r-: worauf، woran، لكن wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "ماذا تنتظر؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "question-bridge-four": {
+    "ru": {
+      "title": "darauf, dafür в ответе",
+      "points": [
+        {
+          "title": "darauf или auf ihn",
+          "text": "В ответе вещь заменяем на da(r) + предлог: Ich warte darauf. Человека на предлог + местоимение: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Ты ждёшь автобус? Да, жду."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Ты думаешь об Анне? Да, думаю о ней."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "darauf, dafür у відповіді",
+      "points": [
+        {
+          "title": "darauf чи auf ihn",
+          "text": "У відповіді річ замінюємо на da(r) + прийменник: Ich warte darauf. Людину на прийменник + займенник: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Ти чекаєш на автобус? Так, чекаю."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Ти думаєш про Анну? Так, думаю про неї."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "darauf, dafür in answers",
+      "points": [
+        {
+          "title": "darauf or auf ihn",
+          "text": "In the answer, replace a thing with da(r) + preposition: Ich warte darauf. Replace a person with preposition + pronoun: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Are you waiting for the bus? Yes, I’m waiting for it."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Are you thinking of Anna? Yes, I’m thinking of her."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "darauf, dafür w odpowiedzi",
+      "points": [
+        {
+          "title": "darauf czy auf ihn",
+          "text": "W odpowiedzi rzecz zastępujemy da(r) + przyimek: Ich warte darauf. Osobę przyimkiem + zaimkiem: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Czekasz na autobus? Tak, czekam na niego."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Myślisz o Annie? Tak, myślę o niej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "darauf, dafür en la respuesta",
+      "points": [
+        {
+          "title": "darauf o auf ihn",
+          "text": "En la respuesta, una cosa se sustituye por da(r) + preposición: Ich warte darauf. Una persona, por preposición + pronombre: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "¿Esperas el autobús? Sí, lo espero."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "¿Piensas en Anna? Sí, pienso en ella."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "darauf, dafür dans la réponse",
+      "points": [
+        {
+          "title": "darauf ou auf ihn",
+          "text": "Dans la réponse, une chose devient da(r) + préposition : Ich warte darauf. Une personne devient préposition + pronom : Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Tu attends le bus ? Oui, je l’attends."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Tu penses à Anna ? Oui, je pense à elle."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Cevapta darauf, dafür",
+      "points": [
+        {
+          "title": "darauf mı, auf ihn mi",
+          "text": "Cevapta şey yerine da(r) + edat: Ich warte darauf. Kişi yerine edat + zamir: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Otobüsü mü bekliyorsun? Evet, onu bekliyorum."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Anna’yı mı düşünüyorsun? Evet, onu düşünüyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "darauf, dafür în răspuns",
+      "points": [
+        {
+          "title": "darauf sau auf ihn",
+          "text": "În răspuns, lucrul devine da(r) + prepoziție: Ich warte darauf. Persoana devine prepoziție + pronume: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Aștepți autobuzul? Da, îl aștept."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Te gândești la Anna? Da, mă gândesc la ea."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Javobda darauf, dafür",
+      "points": [
+        {
+          "title": "darauf yoki auf ihn",
+          "text": "Javobda narsa o'rniga da(r) + ko'makchi: Ich warte darauf. Odam o'rniga ko'makchi + olmosh: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Avtobusni kutyapsanmi? Ha, kutyapman."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Anna haqida o'ylayapsanmi? Ha, u haqida o'ylayapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "जवाब में darauf, dafür",
+      "points": [
+        {
+          "title": "darauf या auf ihn",
+          "text": "जवाब में चीज़ की जगह da(r) + संबंधसूचक: Ich warte darauf। व्यक्ति की जगह संबंधसूचक + सर्वनाम: Ich warte auf ihn।",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "क्या तुम बस का इंतज़ार कर रहे हो? हाँ, उसी का।"
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "क्या तुम अन्ना के बारे में सोच रहे हो? हाँ, उसी के बारे में।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "darauf وdafür في الجواب",
+      "points": [
+        {
+          "title": "darauf أم auf ihn",
+          "text": "في الجواب نستبدل الشيء بـ da(r) + حرف الجر: Ich warte darauf. والشخص بحرف الجر + الضمير: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "هل تنتظر الحافلة؟ نعم، أنتظرها."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "هل تفكر في آنا؟ نعم، أفكر فيها."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "question-bridge-five": {
+    "ru": {
+      "title": "auf ihn или darauf?",
+      "points": [
+        {
+          "title": "darauf или auf ihn",
+          "text": "В ответе вещь заменяем на da(r) + предлог: Ich warte darauf. Человека на предлог + местоимение: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Ты ждёшь автобус? Да, жду."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Ты думаешь об Анне? Да, думаю о ней."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "auf ihn чи darauf?",
+      "points": [
+        {
+          "title": "darauf чи auf ihn",
+          "text": "У відповіді річ замінюємо на da(r) + прийменник: Ich warte darauf. Людину на прийменник + займенник: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Ти чекаєш на автобус? Так, чекаю."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Ти думаєш про Анну? Так, думаю про неї."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "auf ihn or darauf?",
+      "points": [
+        {
+          "title": "darauf or auf ihn",
+          "text": "In the answer, replace a thing with da(r) + preposition: Ich warte darauf. Replace a person with preposition + pronoun: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Are you waiting for the bus? Yes, I’m waiting for it."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Are you thinking of Anna? Yes, I’m thinking of her."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "auf ihn czy darauf?",
+      "points": [
+        {
+          "title": "darauf czy auf ihn",
+          "text": "W odpowiedzi rzecz zastępujemy da(r) + przyimek: Ich warte darauf. Osobę przyimkiem + zaimkiem: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Czekasz na autobus? Tak, czekam na niego."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Myślisz o Annie? Tak, myślę o niej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿auf ihn o darauf?",
+      "points": [
+        {
+          "title": "darauf o auf ihn",
+          "text": "En la respuesta, una cosa se sustituye por da(r) + preposición: Ich warte darauf. Una persona, por preposición + pronombre: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "¿Esperas el autobús? Sí, lo espero."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "¿Piensas en Anna? Sí, pienso en ella."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "auf ihn ou darauf ?",
+      "points": [
+        {
+          "title": "darauf ou auf ihn",
+          "text": "Dans la réponse, une chose devient da(r) + préposition : Ich warte darauf. Une personne devient préposition + pronom : Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Tu attends le bus ? Oui, je l’attends."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Tu penses à Anna ? Oui, je pense à elle."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "auf ihn mı, darauf mu?",
+      "points": [
+        {
+          "title": "darauf mı, auf ihn mi",
+          "text": "Cevapta şey yerine da(r) + edat: Ich warte darauf. Kişi yerine edat + zamir: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Otobüsü mü bekliyorsun? Evet, onu bekliyorum."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Anna’yı mı düşünüyorsun? Evet, onu düşünüyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "auf ihn sau darauf?",
+      "points": [
+        {
+          "title": "darauf sau auf ihn",
+          "text": "În răspuns, lucrul devine da(r) + prepoziție: Ich warte darauf. Persoana devine prepoziție + pronume: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Aștepți autobuzul? Da, îl aștept."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Te gândești la Anna? Da, mă gândesc la ea."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "auf ihn yoki darauf?",
+      "points": [
+        {
+          "title": "darauf yoki auf ihn",
+          "text": "Javobda narsa o'rniga da(r) + ko'makchi: Ich warte darauf. Odam o'rniga ko'makchi + olmosh: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Avtobusni kutyapsanmi? Ha, kutyapman."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Anna haqida o'ylayapsanmi? Ha, u haqida o'ylayapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "auf ihn या darauf?",
+      "points": [
+        {
+          "title": "darauf या auf ihn",
+          "text": "जवाब में चीज़ की जगह da(r) + संबंधसूचक: Ich warte darauf। व्यक्ति की जगह संबंधसूचक + सर्वनाम: Ich warte auf ihn।",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "क्या तुम बस का इंतज़ार कर रहे हो? हाँ, उसी का।"
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "क्या तुम अन्ना के बारे में सोच रहे हो? हाँ, उसी के बारे में।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "auf ihn أم darauf؟",
+      "points": [
+        {
+          "title": "darauf أم auf ihn",
+          "text": "في الجواب نستبدل الشيء بـ da(r) + حرف الجر: Ich warte darauf. والشخص بحرف الجر + الضمير: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "هل تنتظر الحافلة؟ نعم، أنتظرها."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "هل تفكر في آنا؟ نعم، أفكر فيها."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "question-bridge-six": {
+    "ru": {
+      "title": "darauf, dass ...",
+      "points": [
+        {
+          "title": "darauf, dass ...",
+          "text": "Если дальше целое предложение, сначала da(r) + предлог, потом запятая и dass или zu + инфинитив.",
+          "examples": [
+            {
+              "de": "Ich freue mich darauf, dass du kommst.",
+              "tr": "Я рад, что ты приедешь."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "darauf, dass ...",
+      "points": [
+        {
+          "title": "darauf, dass ...",
+          "text": "Якщо далі ціле речення, спершу da(r) + прийменник, потім кома і dass або zu + інфінітив.",
+          "examples": [
+            {
+              "de": "Ich freue mich darauf, dass du kommst.",
+              "tr": "Я радію, що ти приїдеш."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "darauf, dass ...",
+      "points": [
+        {
+          "title": "darauf, dass ...",
+          "text": "If a whole clause follows, put da(r) + preposition first, then a comma and dass or zu + infinitive.",
+          "examples": [
+            {
+              "de": "Ich freue mich darauf, dass du kommst.",
+              "tr": "I’m looking forward to you coming."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "darauf, dass ...",
+      "points": [
+        {
+          "title": "darauf, dass ...",
+          "text": "Jeśli dalej jest całe zdanie, najpierw da(r) + przyimek, potem przecinek i dass albo zu + bezokolicznik.",
+          "examples": [
+            {
+              "de": "Ich freue mich darauf, dass du kommst.",
+              "tr": "Cieszę się, że przyjedziesz."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "darauf, dass ...",
+      "points": [
+        {
+          "title": "darauf, dass ...",
+          "text": "Si sigue una oración entera, primero da(r) + preposición, luego coma y dass o zu + infinitivo.",
+          "examples": [
+            {
+              "de": "Ich freue mich darauf, dass du kommst.",
+              "tr": "Me hace ilusión que vengas."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "darauf, dass ...",
+      "points": [
+        {
+          "title": "darauf, dass ...",
+          "text": "Si une phrase entière suit, on met d’abord da(r) + préposition, puis une virgule et dass ou zu + infinitif.",
+          "examples": [
+            {
+              "de": "Ich freue mich darauf, dass du kommst.",
+              "tr": "Je me réjouis que tu viennes."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "darauf, dass ...",
+      "points": [
+        {
+          "title": "darauf, dass ...",
+          "text": "Ardından tam bir cümle geliyorsa önce da(r) + edat, sonra virgül ve dass ya da zu + mastar.",
+          "examples": [
+            {
+              "de": "Ich freue mich darauf, dass du kommst.",
+              "tr": "Gelmeni dört gözle bekliyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "darauf, dass ...",
+      "points": [
+        {
+          "title": "darauf, dass ...",
+          "text": "Dacă urmează o propoziție întreagă, întâi da(r) + prepoziție, apoi virgulă și dass sau zu + infinitiv.",
+          "examples": [
+            {
+              "de": "Ich freue mich darauf, dass du kommst.",
+              "tr": "Abia aștept să vii."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "darauf, dass ...",
+      "points": [
+        {
+          "title": "darauf, dass ...",
+          "text": "Keyin butun gap kelsa, avval da(r) + ko'makchi, keyin vergul va dass yoki zu + infinitiv.",
+          "examples": [
+            {
+              "de": "Ich freue mich darauf, dass du kommst.",
+              "tr": "Kelishingni intiqlik bilan kutyapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "darauf, dass ...",
+      "points": [
+        {
+          "title": "darauf, dass ...",
+          "text": "अगर आगे पूरा वाक्य हो, तो पहले da(r) + संबंधसूचक, फिर कॉमा और dass या zu + इन्फ़िनिटिव।",
+          "examples": [
+            {
+              "de": "Ich freue mich darauf, dass du kommst.",
+              "tr": "मुझे खुशी है कि तुम आ रहे हो।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "darauf, dass ...",
+      "points": [
+        {
+          "title": "darauf, dass ...",
+          "text": "إذا تلتها جملة كاملة نضع أولاً da(r) + حرف الجر، ثم فاصلة وdass أو zu + المصدر.",
+          "examples": [
+            {
+              "de": "Ich freue mich darauf, dass du kommst.",
+              "tr": "أنا متشوق لقدومك."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "question-bridge-seven": {
+    "ru": {
+      "title": "Практика: хобби и интересы",
+      "points": [
+        {
+          "title": "Глагол + предлог",
+          "text": "Многие глаголы идут со своим предлогом, учи их вместе: denken an, sich interessieren für, sich kümmern um, sich ärgern über (всё + Akkusativ).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Я думаю о тебе."
+            }
+          ]
+        },
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "О человеке: предлог + wen/wem (Auf wen wartest du?). О вещи: wo + предлог (Worauf wartest du?). Перед гласной вставляем -r-: worauf, woran, но wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Чего ты ждёшь?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: хобі та інтереси",
+      "points": [
+        {
+          "title": "Дієслово + прийменник",
+          "text": "Багато дієслів ідуть зі своїм прийменником, вчи їх разом: denken an, sich interessieren für, sich kümmern um, sich ärgern über (усе + Akkusativ).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Я думаю про тебе."
+            }
+          ]
+        },
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Про людину: прийменник + wen/wem (Auf wen wartest du?). Про річ: wo + прийменник (Worauf wartest du?). Перед голосною вставляємо -r-: worauf, woran, але wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "На що ти чекаєш?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: hobbies and interests",
+      "points": [
+        {
+          "title": "Verb + preposition",
+          "text": "Many verbs come with their own preposition, learn them together: denken an, sich interessieren für, sich kümmern um, sich ärgern über (all + accusative).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "I’m thinking of you."
+            }
+          ]
+        },
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "About a person: preposition + wen/wem (Auf wen wartest du?). About a thing: wo + preposition (Worauf wartest du?). Before a vowel add -r-: worauf, woran, but wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "What are you waiting for?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: hobby i zainteresowania",
+      "points": [
+        {
+          "title": "Czasownik + przyimek",
+          "text": "Wiele czasowników ma swój przyimek, ucz się ich razem: denken an, sich interessieren für, sich kümmern um, sich ärgern über (wszystkie + Akkusativ).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Myślę o tobie."
+            }
+          ]
+        },
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "O osobę: przyimek + wen/wem (Auf wen wartest du?). O rzecz: wo + przyimek (Worauf wartest du?). Przed samogłoską wstawiamy -r-: worauf, woran, ale wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Na co czekasz?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: aficiones e intereses",
+      "points": [
+        {
+          "title": "Verbo + preposición",
+          "text": "Muchos verbos llevan su propia preposición, apréndelos juntos: denken an, sich interessieren für, sich kümmern um, sich ärgern über (todos + acusativo).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Pienso en ti."
+            }
+          ]
+        },
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Sobre una persona: preposición + wen/wem (Auf wen wartest du?). Sobre una cosa: wo + preposición (Worauf wartest du?). Ante vocal se añade -r-: worauf, woran, pero wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "¿Qué esperas?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : loisirs et intérêts",
+      "points": [
+        {
+          "title": "Verbe + préposition",
+          "text": "Beaucoup de verbes ont leur préposition, apprends-les ensemble : denken an, sich interessieren für, sich kümmern um, sich ärgern über (tous + accusatif).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Je pense à toi."
+            }
+          ]
+        },
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Pour une personne : préposition + wen/wem (Auf wen wartest du ?). Pour une chose : wo + préposition (Worauf wartest du ?). Devant une voyelle on ajoute -r- : worauf, woran, mais wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Qu’est-ce que tu attends ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: hobiler ve ilgi alanları",
+      "points": [
+        {
+          "title": "Fiil + edat",
+          "text": "Birçok fiil kendi edatıyla gelir, birlikte öğren: denken an, sich interessieren für, sich kümmern um, sich ärgern über (hepsi + Akkusativ).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Seni düşünüyorum."
+            }
+          ]
+        },
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Kişi için: edat + wen/wem (Auf wen wartest du?). Şey için: wo + edat (Worauf wartest du?). Ünlüden önce -r- eklenir: worauf, woran, ama wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Neyi bekliyorsun?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: hobby-uri și interese",
+      "points": [
+        {
+          "title": "Verb + prepoziție",
+          "text": "Multe verbe au prepoziția lor, învață-le împreună: denken an, sich interessieren für, sich kümmern um, sich ärgern über (toate + acuzativ).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Mă gândesc la tine."
+            }
+          ]
+        },
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Despre o persoană: prepoziție + wen/wem (Auf wen wartest du?). Despre un lucru: wo + prepoziție (Worauf wartest du?). Înainte de vocală se pune -r-: worauf, woran, dar wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Ce aștepți?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: qiziqishlar",
+      "points": [
+        {
+          "title": "Fe'l + ko'makchi",
+          "text": "Ko'p fe'llar o'z ko'makchisi bilan keladi, birga o'rgan: denken an, sich interessieren für, sich kümmern um, sich ärgern über (hammasi + Akkusativ).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Seni o'ylayapman."
+            }
+          ]
+        },
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Odam haqida: ko'makchi + wen/wem (Auf wen wartest du?). Narsa haqida: wo + ko'makchi (Worauf wartest du?). Unli oldidan -r- qo'shiladi: worauf, woran, lekin wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Nimani kutyapsan?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: शौक और रुचियाँ",
+      "points": [
+        {
+          "title": "क्रिया + संबंधसूचक",
+          "text": "कई क्रियाएँ अपने संबंधसूचक के साथ आती हैं, साथ में सीखो: denken an, sich interessieren für, sich kümmern um, sich ärgern über (सब + Akkusativ)।",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "मैं तुम्हारे बारे में सोच रहा हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "व्यक्ति के बारे में: संबंधसूचक + wen/wem (Auf wen wartest du?)। चीज़ के बारे में: wo + संबंधसूचक (Worauf wartest du?)। स्वर से पहले -r-: worauf, woran, पर wofür।",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "तुम किसका इंतज़ार कर रहे हो?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: الهوايات والاهتمامات",
+      "points": [
+        {
+          "title": "الفعل + حرف الجر",
+          "text": "أفعال كثيرة تأتي مع حرف جر خاص بها، فاحفظها معاً: denken an، sich interessieren für، sich kümmern um، sich ärgern über (كلها + المفعول).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "أفكر فيك."
+            }
+          ]
+        },
+        {
+          "title": "Auf wen؟ Worauf؟",
+          "text": "عن شخص: حرف الجر + wen/wem (Auf wen wartest du؟). وعن شيء: wo + حرف الجر (Worauf wartest du؟). وقبل الحرف المتحرك نضيف -r-: worauf، woran، لكن wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "ماذا تنتظر؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "question-bridge-eight": {
+    "ru": {
+      "title": "Практика: письмо подруге",
+      "points": [
+        {
+          "title": "darauf или auf ihn",
+          "text": "В ответе вещь заменяем на da(r) + предлог: Ich warte darauf. Человека на предлог + местоимение: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Ты ждёшь автобус? Да, жду."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Ты думаешь об Анне? Да, думаю о ней."
+            }
+          ]
+        },
+        {
+          "title": "darauf, dass ...",
+          "text": "Если дальше целое предложение, сначала da(r) + предлог, потом запятая и dass или zu + инфинитив.",
+          "examples": [
+            {
+              "de": "Ich freue mich darauf, dass du kommst.",
+              "tr": "Я рад, что ты приедешь."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: лист подрузі",
+      "points": [
+        {
+          "title": "darauf чи auf ihn",
+          "text": "У відповіді річ замінюємо на da(r) + прийменник: Ich warte darauf. Людину на прийменник + займенник: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Ти чекаєш на автобус? Так, чекаю."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Ти думаєш про Анну? Так, думаю про неї."
+            }
+          ]
+        },
+        {
+          "title": "darauf, dass ...",
+          "text": "Якщо далі ціле речення, спершу da(r) + прийменник, потім кома і dass або zu + інфінітив.",
+          "examples": [
+            {
+              "de": "Ich freue mich darauf, dass du kommst.",
+              "tr": "Я радію, що ти приїдеш."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: a letter to a friend",
+      "points": [
+        {
+          "title": "darauf or auf ihn",
+          "text": "In the answer, replace a thing with da(r) + preposition: Ich warte darauf. Replace a person with preposition + pronoun: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Are you waiting for the bus? Yes, I’m waiting for it."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Are you thinking of Anna? Yes, I’m thinking of her."
+            }
+          ]
+        },
+        {
+          "title": "darauf, dass ...",
+          "text": "If a whole clause follows, put da(r) + preposition first, then a comma and dass or zu + infinitive.",
+          "examples": [
+            {
+              "de": "Ich freue mich darauf, dass du kommst.",
+              "tr": "I’m looking forward to you coming."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: list do przyjaciółki",
+      "points": [
+        {
+          "title": "darauf czy auf ihn",
+          "text": "W odpowiedzi rzecz zastępujemy da(r) + przyimek: Ich warte darauf. Osobę przyimkiem + zaimkiem: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Czekasz na autobus? Tak, czekam na niego."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Myślisz o Annie? Tak, myślę o niej."
+            }
+          ]
+        },
+        {
+          "title": "darauf, dass ...",
+          "text": "Jeśli dalej jest całe zdanie, najpierw da(r) + przyimek, potem przecinek i dass albo zu + bezokolicznik.",
+          "examples": [
+            {
+              "de": "Ich freue mich darauf, dass du kommst.",
+              "tr": "Cieszę się, że przyjedziesz."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: carta a una amiga",
+      "points": [
+        {
+          "title": "darauf o auf ihn",
+          "text": "En la respuesta, una cosa se sustituye por da(r) + preposición: Ich warte darauf. Una persona, por preposición + pronombre: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "¿Esperas el autobús? Sí, lo espero."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "¿Piensas en Anna? Sí, pienso en ella."
+            }
+          ]
+        },
+        {
+          "title": "darauf, dass ...",
+          "text": "Si sigue una oración entera, primero da(r) + preposición, luego coma y dass o zu + infinitivo.",
+          "examples": [
+            {
+              "de": "Ich freue mich darauf, dass du kommst.",
+              "tr": "Me hace ilusión que vengas."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : lettre à une amie",
+      "points": [
+        {
+          "title": "darauf ou auf ihn",
+          "text": "Dans la réponse, une chose devient da(r) + préposition : Ich warte darauf. Une personne devient préposition + pronom : Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Tu attends le bus ? Oui, je l’attends."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Tu penses à Anna ? Oui, je pense à elle."
+            }
+          ]
+        },
+        {
+          "title": "darauf, dass ...",
+          "text": "Si une phrase entière suit, on met d’abord da(r) + préposition, puis une virgule et dass ou zu + infinitif.",
+          "examples": [
+            {
+              "de": "Ich freue mich darauf, dass du kommst.",
+              "tr": "Je me réjouis que tu viennes."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: arkadaşa mektup",
+      "points": [
+        {
+          "title": "darauf mı, auf ihn mi",
+          "text": "Cevapta şey yerine da(r) + edat: Ich warte darauf. Kişi yerine edat + zamir: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Otobüsü mü bekliyorsun? Evet, onu bekliyorum."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Anna’yı mı düşünüyorsun? Evet, onu düşünüyorum."
+            }
+          ]
+        },
+        {
+          "title": "darauf, dass ...",
+          "text": "Ardından tam bir cümle geliyorsa önce da(r) + edat, sonra virgül ve dass ya da zu + mastar.",
+          "examples": [
+            {
+              "de": "Ich freue mich darauf, dass du kommst.",
+              "tr": "Gelmeni dört gözle bekliyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: scrisoare către o prietenă",
+      "points": [
+        {
+          "title": "darauf sau auf ihn",
+          "text": "În răspuns, lucrul devine da(r) + prepoziție: Ich warte darauf. Persoana devine prepoziție + pronume: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Aștepți autobuzul? Da, îl aștept."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Te gândești la Anna? Da, mă gândesc la ea."
+            }
+          ]
+        },
+        {
+          "title": "darauf, dass ...",
+          "text": "Dacă urmează o propoziție întreagă, întâi da(r) + prepoziție, apoi virgulă și dass sau zu + infinitiv.",
+          "examples": [
+            {
+              "de": "Ich freue mich darauf, dass du kommst.",
+              "tr": "Abia aștept să vii."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: dugonaga xat",
+      "points": [
+        {
+          "title": "darauf yoki auf ihn",
+          "text": "Javobda narsa o'rniga da(r) + ko'makchi: Ich warte darauf. Odam o'rniga ko'makchi + olmosh: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Avtobusni kutyapsanmi? Ha, kutyapman."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Anna haqida o'ylayapsanmi? Ha, u haqida o'ylayapman."
+            }
+          ]
+        },
+        {
+          "title": "darauf, dass ...",
+          "text": "Keyin butun gap kelsa, avval da(r) + ko'makchi, keyin vergul va dass yoki zu + infinitiv.",
+          "examples": [
+            {
+              "de": "Ich freue mich darauf, dass du kommst.",
+              "tr": "Kelishingni intiqlik bilan kutyapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: सहेली को पत्र",
+      "points": [
+        {
+          "title": "darauf या auf ihn",
+          "text": "जवाब में चीज़ की जगह da(r) + संबंधसूचक: Ich warte darauf। व्यक्ति की जगह संबंधसूचक + सर्वनाम: Ich warte auf ihn।",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "क्या तुम बस का इंतज़ार कर रहे हो? हाँ, उसी का।"
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "क्या तुम अन्ना के बारे में सोच रहे हो? हाँ, उसी के बारे में।"
+            }
+          ]
+        },
+        {
+          "title": "darauf, dass ...",
+          "text": "अगर आगे पूरा वाक्य हो, तो पहले da(r) + संबंधसूचक, फिर कॉमा और dass या zu + इन्फ़िनिटिव।",
+          "examples": [
+            {
+              "de": "Ich freue mich darauf, dass du kommst.",
+              "tr": "मुझे खुशी है कि तुम आ रहे हो।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: رسالة إلى صديقة",
+      "points": [
+        {
+          "title": "darauf أم auf ihn",
+          "text": "في الجواب نستبدل الشيء بـ da(r) + حرف الجر: Ich warte darauf. والشخص بحرف الجر + الضمير: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "هل تنتظر الحافلة؟ نعم، أنتظرها."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "هل تفكر في آنا؟ نعم، أفكر فيها."
+            }
+          ]
+        },
+        {
+          "title": "darauf, dass ...",
+          "text": "إذا تلتها جملة كاملة نضع أولاً da(r) + حرف الجر، ثم فاصلة وdass أو zu + المصدر.",
+          "examples": [
+            {
+              "de": "Ich freue mich darauf, dass du kommst.",
+              "tr": "أنا متشوق لقدومك."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "question-bridge-nine": {
+    "ru": {
+      "title": "Повторение: вопросы с предлогами",
+      "points": [
+        {
+          "title": "Глагол + предлог",
+          "text": "Многие глаголы идут со своим предлогом, учи их вместе: denken an, sich interessieren für, sich kümmern um, sich ärgern über (всё + Akkusativ).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Я думаю о тебе."
+            }
+          ]
+        },
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "О человеке: предлог + wen/wem (Auf wen wartest du?). О вещи: wo + предлог (Worauf wartest du?). Перед гласной вставляем -r-: worauf, woran, но wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Чего ты ждёшь?"
+            }
+          ]
+        },
+        {
+          "title": "darauf или auf ihn",
+          "text": "В ответе вещь заменяем на da(r) + предлог: Ich warte darauf. Человека на предлог + местоимение: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Ты ждёшь автобус? Да, жду."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Ты думаешь об Анне? Да, думаю о ней."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: питання з прийменниками",
+      "points": [
+        {
+          "title": "Дієслово + прийменник",
+          "text": "Багато дієслів ідуть зі своїм прийменником, вчи їх разом: denken an, sich interessieren für, sich kümmern um, sich ärgern über (усе + Akkusativ).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Я думаю про тебе."
+            }
+          ]
+        },
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Про людину: прийменник + wen/wem (Auf wen wartest du?). Про річ: wo + прийменник (Worauf wartest du?). Перед голосною вставляємо -r-: worauf, woran, але wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "На що ти чекаєш?"
+            }
+          ]
+        },
+        {
+          "title": "darauf чи auf ihn",
+          "text": "У відповіді річ замінюємо на da(r) + прийменник: Ich warte darauf. Людину на прийменник + займенник: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Ти чекаєш на автобус? Так, чекаю."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Ти думаєш про Анну? Так, думаю про неї."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: questions with prepositions",
+      "points": [
+        {
+          "title": "Verb + preposition",
+          "text": "Many verbs come with their own preposition, learn them together: denken an, sich interessieren für, sich kümmern um, sich ärgern über (all + accusative).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "I’m thinking of you."
+            }
+          ]
+        },
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "About a person: preposition + wen/wem (Auf wen wartest du?). About a thing: wo + preposition (Worauf wartest du?). Before a vowel add -r-: worauf, woran, but wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "What are you waiting for?"
+            }
+          ]
+        },
+        {
+          "title": "darauf or auf ihn",
+          "text": "In the answer, replace a thing with da(r) + preposition: Ich warte darauf. Replace a person with preposition + pronoun: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Are you waiting for the bus? Yes, I’m waiting for it."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Are you thinking of Anna? Yes, I’m thinking of her."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: pytania z przyimkami",
+      "points": [
+        {
+          "title": "Czasownik + przyimek",
+          "text": "Wiele czasowników ma swój przyimek, ucz się ich razem: denken an, sich interessieren für, sich kümmern um, sich ärgern über (wszystkie + Akkusativ).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Myślę o tobie."
+            }
+          ]
+        },
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "O osobę: przyimek + wen/wem (Auf wen wartest du?). O rzecz: wo + przyimek (Worauf wartest du?). Przed samogłoską wstawiamy -r-: worauf, woran, ale wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Na co czekasz?"
+            }
+          ]
+        },
+        {
+          "title": "darauf czy auf ihn",
+          "text": "W odpowiedzi rzecz zastępujemy da(r) + przyimek: Ich warte darauf. Osobę przyimkiem + zaimkiem: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Czekasz na autobus? Tak, czekam na niego."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Myślisz o Annie? Tak, myślę o niej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: preguntas con preposición",
+      "points": [
+        {
+          "title": "Verbo + preposición",
+          "text": "Muchos verbos llevan su propia preposición, apréndelos juntos: denken an, sich interessieren für, sich kümmern um, sich ärgern über (todos + acusativo).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Pienso en ti."
+            }
+          ]
+        },
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Sobre una persona: preposición + wen/wem (Auf wen wartest du?). Sobre una cosa: wo + preposición (Worauf wartest du?). Ante vocal se añade -r-: worauf, woran, pero wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "¿Qué esperas?"
+            }
+          ]
+        },
+        {
+          "title": "darauf o auf ihn",
+          "text": "En la respuesta, una cosa se sustituye por da(r) + preposición: Ich warte darauf. Una persona, por preposición + pronombre: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "¿Esperas el autobús? Sí, lo espero."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "¿Piensas en Anna? Sí, pienso en ella."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : questions avec préposition",
+      "points": [
+        {
+          "title": "Verbe + préposition",
+          "text": "Beaucoup de verbes ont leur préposition, apprends-les ensemble : denken an, sich interessieren für, sich kümmern um, sich ärgern über (tous + accusatif).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Je pense à toi."
+            }
+          ]
+        },
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Pour une personne : préposition + wen/wem (Auf wen wartest du ?). Pour une chose : wo + préposition (Worauf wartest du ?). Devant une voyelle on ajoute -r- : worauf, woran, mais wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Qu’est-ce que tu attends ?"
+            }
+          ]
+        },
+        {
+          "title": "darauf ou auf ihn",
+          "text": "Dans la réponse, une chose devient da(r) + préposition : Ich warte darauf. Une personne devient préposition + pronom : Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Tu attends le bus ? Oui, je l’attends."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Tu penses à Anna ? Oui, je pense à elle."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: edatlı sorular",
+      "points": [
+        {
+          "title": "Fiil + edat",
+          "text": "Birçok fiil kendi edatıyla gelir, birlikte öğren: denken an, sich interessieren für, sich kümmern um, sich ärgern über (hepsi + Akkusativ).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Seni düşünüyorum."
+            }
+          ]
+        },
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Kişi için: edat + wen/wem (Auf wen wartest du?). Şey için: wo + edat (Worauf wartest du?). Ünlüden önce -r- eklenir: worauf, woran, ama wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Neyi bekliyorsun?"
+            }
+          ]
+        },
+        {
+          "title": "darauf mı, auf ihn mi",
+          "text": "Cevapta şey yerine da(r) + edat: Ich warte darauf. Kişi yerine edat + zamir: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Otobüsü mü bekliyorsun? Evet, onu bekliyorum."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Anna’yı mı düşünüyorsun? Evet, onu düşünüyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: întrebări cu prepoziții",
+      "points": [
+        {
+          "title": "Verb + prepoziție",
+          "text": "Multe verbe au prepoziția lor, învață-le împreună: denken an, sich interessieren für, sich kümmern um, sich ärgern über (toate + acuzativ).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Mă gândesc la tine."
+            }
+          ]
+        },
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Despre o persoană: prepoziție + wen/wem (Auf wen wartest du?). Despre un lucru: wo + prepoziție (Worauf wartest du?). Înainte de vocală se pune -r-: worauf, woran, dar wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Ce aștepți?"
+            }
+          ]
+        },
+        {
+          "title": "darauf sau auf ihn",
+          "text": "În răspuns, lucrul devine da(r) + prepoziție: Ich warte darauf. Persoana devine prepoziție + pronume: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Aștepți autobuzul? Da, îl aștept."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Te gândești la Anna? Da, mă gândesc la ea."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: ko'makchili savollar",
+      "points": [
+        {
+          "title": "Fe'l + ko'makchi",
+          "text": "Ko'p fe'llar o'z ko'makchisi bilan keladi, birga o'rgan: denken an, sich interessieren für, sich kümmern um, sich ärgern über (hammasi + Akkusativ).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "Seni o'ylayapman."
+            }
+          ]
+        },
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Odam haqida: ko'makchi + wen/wem (Auf wen wartest du?). Narsa haqida: wo + ko'makchi (Worauf wartest du?). Unli oldidan -r- qo'shiladi: worauf, woran, lekin wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Nimani kutyapsan?"
+            }
+          ]
+        },
+        {
+          "title": "darauf yoki auf ihn",
+          "text": "Javobda narsa o'rniga da(r) + ko'makchi: Ich warte darauf. Odam o'rniga ko'makchi + olmosh: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Avtobusni kutyapsanmi? Ha, kutyapman."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Anna haqida o'ylayapsanmi? Ha, u haqida o'ylayapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: संबंधसूचक वाले सवाल",
+      "points": [
+        {
+          "title": "क्रिया + संबंधसूचक",
+          "text": "कई क्रियाएँ अपने संबंधसूचक के साथ आती हैं, साथ में सीखो: denken an, sich interessieren für, sich kümmern um, sich ärgern über (सब + Akkusativ)।",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "मैं तुम्हारे बारे में सोच रहा हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "व्यक्ति के बारे में: संबंधसूचक + wen/wem (Auf wen wartest du?)। चीज़ के बारे में: wo + संबंधसूचक (Worauf wartest du?)। स्वर से पहले -r-: worauf, woran, पर wofür।",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "तुम किसका इंतज़ार कर रहे हो?"
+            }
+          ]
+        },
+        {
+          "title": "darauf या auf ihn",
+          "text": "जवाब में चीज़ की जगह da(r) + संबंधसूचक: Ich warte darauf। व्यक्ति की जगह संबंधसूचक + सर्वनाम: Ich warte auf ihn।",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "क्या तुम बस का इंतज़ार कर रहे हो? हाँ, उसी का।"
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "क्या तुम अन्ना के बारे में सोच रहे हो? हाँ, उसी के बारे में।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الأسئلة مع حروف الجر",
+      "points": [
+        {
+          "title": "الفعل + حرف الجر",
+          "text": "أفعال كثيرة تأتي مع حرف جر خاص بها، فاحفظها معاً: denken an، sich interessieren für، sich kümmern um، sich ärgern über (كلها + المفعول).",
+          "examples": [
+            {
+              "de": "Ich denke an dich.",
+              "tr": "أفكر فيك."
+            }
+          ]
+        },
+        {
+          "title": "Auf wen؟ Worauf؟",
+          "text": "عن شخص: حرف الجر + wen/wem (Auf wen wartest du؟). وعن شيء: wo + حرف الجر (Worauf wartest du؟). وقبل الحرف المتحرك نضيف -r-: worauf، woran، لكن wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "ماذا تنتظر؟"
+            }
+          ]
+        },
+        {
+          "title": "darauf أم auf ihn",
+          "text": "في الجواب نستبدل الشيء بـ da(r) + حرف الجر: Ich warte darauf. والشخص بحرف الجر + الضمير: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "هل تنتظر الحافلة؟ نعم، أنتظرها."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "هل تفكر في آنا؟ نعم، أفكر فيها."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "question-bridge-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "О человеке: предлог + wen/wem (Auf wen wartest du?). О вещи: wo + предлог (Worauf wartest du?). Перед гласной вставляем -r-: worauf, woran, но wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Чего ты ждёшь?"
+            }
+          ]
+        },
+        {
+          "title": "darauf или auf ihn",
+          "text": "В ответе вещь заменяем на da(r) + предлог: Ich warte darauf. Человека на предлог + местоимение: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Ты ждёшь автобус? Да, жду."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Ты думаешь об Анне? Да, думаю о ней."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Про людину: прийменник + wen/wem (Auf wen wartest du?). Про річ: wo + прийменник (Worauf wartest du?). Перед голосною вставляємо -r-: worauf, woran, але wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "На що ти чекаєш?"
+            }
+          ]
+        },
+        {
+          "title": "darauf чи auf ihn",
+          "text": "У відповіді річ замінюємо на da(r) + прийменник: Ich warte darauf. Людину на прийменник + займенник: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Ти чекаєш на автобус? Так, чекаю."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Ти думаєш про Анну? Так, думаю про неї."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "About a person: preposition + wen/wem (Auf wen wartest du?). About a thing: wo + preposition (Worauf wartest du?). Before a vowel add -r-: worauf, woran, but wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "What are you waiting for?"
+            }
+          ]
+        },
+        {
+          "title": "darauf or auf ihn",
+          "text": "In the answer, replace a thing with da(r) + preposition: Ich warte darauf. Replace a person with preposition + pronoun: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Are you waiting for the bus? Yes, I’m waiting for it."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Are you thinking of Anna? Yes, I’m thinking of her."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "O osobę: przyimek + wen/wem (Auf wen wartest du?). O rzecz: wo + przyimek (Worauf wartest du?). Przed samogłoską wstawiamy -r-: worauf, woran, ale wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Na co czekasz?"
+            }
+          ]
+        },
+        {
+          "title": "darauf czy auf ihn",
+          "text": "W odpowiedzi rzecz zastępujemy da(r) + przyimek: Ich warte darauf. Osobę przyimkiem + zaimkiem: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Czekasz na autobus? Tak, czekam na niego."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Myślisz o Annie? Tak, myślę o niej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Sobre una persona: preposición + wen/wem (Auf wen wartest du?). Sobre una cosa: wo + preposición (Worauf wartest du?). Ante vocal se añade -r-: worauf, woran, pero wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "¿Qué esperas?"
+            }
+          ]
+        },
+        {
+          "title": "darauf o auf ihn",
+          "text": "En la respuesta, una cosa se sustituye por da(r) + preposición: Ich warte darauf. Una persona, por preposición + pronombre: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "¿Esperas el autobús? Sí, lo espero."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "¿Piensas en Anna? Sí, pienso en ella."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Pour une personne : préposition + wen/wem (Auf wen wartest du ?). Pour une chose : wo + préposition (Worauf wartest du ?). Devant une voyelle on ajoute -r- : worauf, woran, mais wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Qu’est-ce que tu attends ?"
+            }
+          ]
+        },
+        {
+          "title": "darauf ou auf ihn",
+          "text": "Dans la réponse, une chose devient da(r) + préposition : Ich warte darauf. Une personne devient préposition + pronom : Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Tu attends le bus ? Oui, je l’attends."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Tu penses à Anna ? Oui, je pense à elle."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Kişi için: edat + wen/wem (Auf wen wartest du?). Şey için: wo + edat (Worauf wartest du?). Ünlüden önce -r- eklenir: worauf, woran, ama wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Neyi bekliyorsun?"
+            }
+          ]
+        },
+        {
+          "title": "darauf mı, auf ihn mi",
+          "text": "Cevapta şey yerine da(r) + edat: Ich warte darauf. Kişi yerine edat + zamir: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Otobüsü mü bekliyorsun? Evet, onu bekliyorum."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Anna’yı mı düşünüyorsun? Evet, onu düşünüyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Despre o persoană: prepoziție + wen/wem (Auf wen wartest du?). Despre un lucru: wo + prepoziție (Worauf wartest du?). Înainte de vocală se pune -r-: worauf, woran, dar wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Ce aștepți?"
+            }
+          ]
+        },
+        {
+          "title": "darauf sau auf ihn",
+          "text": "În răspuns, lucrul devine da(r) + prepoziție: Ich warte darauf. Persoana devine prepoziție + pronume: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Aștepți autobuzul? Da, îl aștept."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Te gândești la Anna? Da, mă gândesc la ea."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Odam haqida: ko'makchi + wen/wem (Auf wen wartest du?). Narsa haqida: wo + ko'makchi (Worauf wartest du?). Unli oldidan -r- qo'shiladi: worauf, woran, lekin wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Nimani kutyapsan?"
+            }
+          ]
+        },
+        {
+          "title": "darauf yoki auf ihn",
+          "text": "Javobda narsa o'rniga da(r) + ko'makchi: Ich warte darauf. Odam o'rniga ko'makchi + olmosh: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Avtobusni kutyapsanmi? Ha, kutyapman."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Anna haqida o'ylayapsanmi? Ha, u haqida o'ylayapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "व्यक्ति के बारे में: संबंधसूचक + wen/wem (Auf wen wartest du?)। चीज़ के बारे में: wo + संबंधसूचक (Worauf wartest du?)। स्वर से पहले -r-: worauf, woran, पर wofür।",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "तुम किसका इंतज़ार कर रहे हो?"
+            }
+          ]
+        },
+        {
+          "title": "darauf या auf ihn",
+          "text": "जवाब में चीज़ की जगह da(r) + संबंधसूचक: Ich warte darauf। व्यक्ति की जगह संबंधसूचक + सर्वनाम: Ich warte auf ihn।",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "क्या तुम बस का इंतज़ार कर रहे हो? हाँ, उसी का।"
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "क्या तुम अन्ना के बारे में सोच रहे हो? हाँ, उसी के बारे में।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "Auf wen؟ Worauf؟",
+          "text": "عن شخص: حرف الجر + wen/wem (Auf wen wartest du؟). وعن شيء: wo + حرف الجر (Worauf wartest du؟). وقبل الحرف المتحرك نضيف -r-: worauf، woran، لكن wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "ماذا تنتظر؟"
+            }
+          ]
+        },
+        {
+          "title": "darauf أم auf ihn",
+          "text": "في الجواب نستبدل الشيء بـ da(r) + حرف الجر: Ich warte darauf. والشخص بحرف الجر + الضمير: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "هل تنتظر الحافلة؟ نعم، أنتظرها."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "هل تفكر في آنا؟ نعم، أفكر فيها."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -193,18 +193,11 @@
           </div>
         </div>
       </div>
-      <div v-if="showFixMistakes" class="fix-mistakes">
-        <div class="fix-mistakes__card">
-          <h2 class="fix-mistakes__title">{{ t('questModals.fixMistakesTitle') }}</h2>
-          <p class="fix-mistakes__text">{{ t('questModals.fixMistakesText') }}</p>
-          <button class="btn btn-next fix-mistakes__btn" data-track="quest_fix_mistakes" @click="startFixMistakes">
-            {{ t('questModals.fixMistakesBtn', {count: mistakesToFix}) }}
-          </button>
-        </div>
-      </div>
       <VQuestResultScreen
           :finished="shouldShowResultScreen"
           :has-mistakes="questStore.hasMistakes"
+          :passed="questStore.success"
+          :is-retry="questStore.isRetryMode"
           :previously-cleared="previouslyCleared"
           :anim-step="animStep"
           :display-xp="displayXp"
@@ -213,7 +206,7 @@
           :has-next-quest="hasNextQuest"
           @next="leaveResultScreen(goNextQuest)"
           @themes="leaveResultScreen(goThemes)"
-          @retry-mistakes="questStore.startRetryMistakes()"
+          @retry-mistakes="onRetryMistakes"
       />
     </div>
     <VReviveModal
@@ -333,20 +326,22 @@ function isStreakDot(index) {
   return !!f && index >= f.from && index <= f.to
 }
 
-// Квест закончился с ошибками, а жизни есть: вместо экрана «Есть ошибки» сразу предлагаем их исправить.
-// Квест засчитывается, когда исправлены все ошибки
-const showFixMistakes = ref(false)
-const mistakesToFix = ref(0)
+const showRevive = computed(() =>
+    !authStore.isPremium &&
+    !previouslyCleared.value &&
+    questStore.requiredTasks > 0 &&
+    questStore.lives <= 0 &&
+    questStore.correctCount < questStore.requiredTasks &&
+    !questStore.success
+)
 
-function startFixMistakes() {
-  $track('quest_mistakes_retry_started', {quest_id: questId.value, mistakes: mistakesToFix.value})
-  showFixMistakes.value = false
-  consecutiveCorrectCount.value = 0
-  questStore.startRetryMistakes()
-}
+// Повтор ошибок тратит жизни: без жизней сначала окно восстановления, повтор стартует после получения жизни
+const retryAfterRevive = ref(false)
 
+// Пока нужно окно восстановления жизни, экран результата его не перекрывает
 const shouldShowResultScreen = computed(() => {
-  return questStore.finished && !showStreakModal.value && !isWaitingForStreakClose.value && !showFixMistakes.value
+  return questStore.finished && !showStreakModal.value && !isWaitingForStreakClose.value &&
+      !showRevive.value && !retryAfterRevive.value
 })
 
 // Напоминания: после успешного квеста сегодняшнее уведомление снимается
@@ -568,14 +563,26 @@ function handleOptionClick(opt) {
   }
 }
 
-const showRevive = computed(() =>
-    !authStore.isPremium &&
-    !previouslyCleared.value &&
-    questStore.requiredTasks > 0 &&
-    questStore.lives <= 0 &&
-    questStore.correctCount < questStore.requiredTasks &&
-    !questStore.success
-)
+function onRetryMistakes() {
+  const needsLife = !authStore.isPremium && !previouslyCleared.value && questStore.lives <= 0
+  if (!needsLife) {
+    questStore.startRetryMistakes()
+    return
+  }
+  retryAfterRevive.value = true
+  if (!hasShownPremiumForRevive.value) {
+    showPremiumModal.value = true
+    hasShownPremiumForRevive.value = true
+  }
+  forceRevive.value = true
+}
+
+watch(() => questStore.lives, (lives) => {
+  if (!retryAfterRevive.value || lives <= 0) return
+  retryAfterRevive.value = false
+  forceRevive.value = false
+  questStore.startRetryMistakes()
+})
 
 watch(showRevive, (isReviveNeeded) => {
   if (isReviveNeeded && !hasShownPremiumForRevive.value) {
@@ -767,14 +774,6 @@ watch(() => questStore.finished, (isFinished) => {
     required_tasks: questStore.requiredTasks
   })
 
-  // Жизни кончились — тут свой путь (окно восстановления), повтор не предлагаем
-  const canFixMistakes = questStore.lives > 0 || authStore.isPremium
-  if (!questStore.success && questStore.wrongCount > 0 && canFixMistakes) {
-    mistakesToFix.value = questStore.wrongCount
-    showFixMistakes.value = true
-    return
-  }
-
   if (questStore.success) {
     isWaitingForStreakClose.value = true
     setTimeout(async () => {
@@ -806,7 +805,7 @@ watch([questId, regionKey], async () => {
       streakWasIncremented.value = false
       showStreakModal.value = false
       isWaitingForStreakClose.value = false
-      showFixMistakes.value = false
+      retryAfterRevive.value = false
       questStore.loading = true
       questStore.error = ''
       questStore.quest = null
@@ -821,7 +820,8 @@ watch([questId, regionKey], async () => {
 
       await questStore.loadProgressFromFirebase?.()
       const prog = questStore.questProgress?.[questId.value]
-      previouslyCleared.value = !!(prog?.success || prog?.rewardClaimed)
+      // Пройден на 100% только когда награда уже получена. Пройден с ошибками без награды: это не повтор
+      previouslyCleared.value = !!prog?.rewardClaimed
 
       const initQuest = async () => {
         consecutiveCorrectCount.value = 0
@@ -1293,46 +1293,6 @@ watchEffect(() => {
 .btn-wrong {
   background-color: #ef4444;
   box-shadow: 0 5px 0 #dc2626;
-}
-
-.fix-mistakes {
-  position: fixed;
-  inset: 0;
-  z-index: 50;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: max(16px, env(safe-area-inset-top)) 16px max(16px, env(safe-area-inset-bottom));
-  background: var(--bg);
-}
-
-.fix-mistakes__card {
-  width: 100%;
-  max-width: 420px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  text-align: center;
-}
-
-.fix-mistakes__title {
-  margin: 0;
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--titleColor);
-}
-
-.fix-mistakes__text {
-  margin: 0;
-  font-size: 17px;
-  line-height: 1.45;
-  color: var(--titleColor);
-  opacity: .8;
-}
-
-.fix-mistakes__btn {
-  margin-top: 8px;
 }
 
 .btn:active:not(:disabled) {

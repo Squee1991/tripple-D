@@ -161,6 +161,10 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	}
 
 	function showNextPopup() {
+		if (!authStore?.uid) {
+			popupQueue.value.length = 0
+			return
+		}
 		if (!showPopup.value && popupQueue.value.length) {
 			popupAchievement.value = popupQueue.value.shift()
 			showPopup.value = true
@@ -213,6 +217,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	}
 
 	function updateProgress(id, val) {
+		// После выхода из аккаунта старые значения (уровень, счётчики) не должны выдавать достижения заново
+		if (!authStore?.uid) return
 		const ach = findById(id)
 		if (!ach) return
 		const target = Number(ach.targetProgress ?? 0)

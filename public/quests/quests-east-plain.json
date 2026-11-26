@@ -389,18 +389,18 @@
         "translation-ar": "جدًا"
       },
       {
-        "word": "das geht",
-        "translation-ru": "так можно, подходит",
-        "translation-en": "that works",
-        "translation-uk": "так можна, підходить",
-        "translation-pl": "to pasuje",
-        "translation-es": "eso va bien",
-        "translation-fr": "ça va",
-        "translation-tr": "olur",
-        "translation-ro": "merge",
-        "translation-uz": "bo‘ladi",
-        "translation-hi": "यह ठीक है",
-        "translation-ar": "هذا مناسب"
+        "word": "es geht",
+        "translation-ru": "так себе, пойдёт",
+        "translation-en": "so-so, okay",
+        "translation-uk": "так собі, піде",
+        "translation-pl": "jako tako",
+        "translation-es": "regular, así así",
+        "translation-fr": "comme ci, comme ça",
+        "translation-tr": "idare eder",
+        "translation-ro": "așa și așa",
+        "translation-uz": "o‘rtacha",
+        "translation-hi": "ठीक-ठाक",
+        "translation-ar": "لا بأس"
       },
       {
         "word": "der Papa",

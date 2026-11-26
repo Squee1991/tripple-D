@@ -1,0 +1,2772 @@
+{
+  "choice-crossing-one": {
+    "ru": {
+      "title": "Какой из них: welcher",
+      "points": [
+        {
+          "title": "Окончания как у der, die, das",
+          "text": "welcher, dieser, jeder берут окончание артикля: der → welcher Rock, die → welche Jacke, das → welches Kleid, мн. ч. welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Какая куртка тебе нравится?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Який із них: welcher",
+      "points": [
+        {
+          "title": "Закінчення як у der, die, das",
+          "text": "welcher, dieser, jeder беруть закінчення артикля: der → welcher Rock, die → welche Jacke, das → welches Kleid, мн. welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Яка куртка тобі подобається?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Which one: welcher",
+      "points": [
+        {
+          "title": "Endings like der, die, das",
+          "text": "welcher, dieser, jeder take the article’s ending: der → welcher Rock, die → welche Jacke, das → welches Kleid, plural welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Which jacket do you like?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Który: welcher",
+      "points": [
+        {
+          "title": "Końcówki jak der, die, das",
+          "text": "welcher, dieser, jeder biorą końcówkę rodzajnika: der → welcher Rock, die → welche Jacke, das → welches Kleid, l. mn. welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Która kurtka ci się podoba?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Cuál: welcher",
+      "points": [
+        {
+          "title": "Terminaciones como der, die, das",
+          "text": "welcher, dieser, jeder toman la terminación del artículo: der → welcher Rock, die → welche Jacke, das → welches Kleid, plural welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "¿Qué chaqueta te gusta?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Lequel : welcher",
+      "points": [
+        {
+          "title": "Terminaisons comme der, die, das",
+          "text": "welcher, dieser, jeder prennent la terminaison de l’article : der → welcher Rock, die → welche Jacke, das → welches Kleid, pluriel welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Quelle veste te plaît ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Hangisi: welcher",
+      "points": [
+        {
+          "title": "der, die, das gibi ekler",
+          "text": "welcher, dieser, jeder artikelin ekini alır: der → welcher Rock, die → welche Jacke, das → welches Kleid, çoğul welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Hangi ceketi beğendin?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Care: welcher",
+      "points": [
+        {
+          "title": "Terminații ca la der, die, das",
+          "text": "welcher, dieser, jeder iau terminația articolului: der → welcher Rock, die → welche Jacke, das → welches Kleid, plural welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Ce geacă îți place?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qaysi biri: welcher",
+      "points": [
+        {
+          "title": "der, die, das kabi qo'shimchalar",
+          "text": "welcher, dieser, jeder artikl qo'shimchasini oladi: der → welcher Rock, die → welche Jacke, das → welches Kleid, ko'plik welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Qaysi kurtka senga yoqadi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कौन-सा: welcher",
+      "points": [
+        {
+          "title": "der, die, das जैसे अंत",
+          "text": "welcher, dieser, jeder आर्टिकल का अंत लेते हैं: der → welcher Rock, die → welche Jacke, das → welches Kleid, बहुवचन welche Schuhe।",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "तुम्हें कौन-सी जैकेट पसंद है?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "أيّ: welcher",
+      "points": [
+        {
+          "title": "نهايات مثل der وdie وdas",
+          "text": "welcher وdieser وjeder تأخذ نهاية الأداة: der → welcher Rock، die → welche Jacke، das → welches Kleid، والجمع welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "أي سترة تعجبك؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "choice-crossing-two": {
+    "ru": {
+      "title": "Этот: dieser",
+      "points": [
+        {
+          "title": "Окончания как у der, die, das",
+          "text": "welcher, dieser, jeder берут окончание артикля: der → welcher Rock, die → welche Jacke, das → welches Kleid, мн. ч. welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Какая куртка тебе нравится?"
+            }
+          ]
+        },
+        {
+          "title": "diesen и diesem",
+          "text": "Akkusativ: мужской род получает -en: diesen Rock, jeden Tag. Dativ: -em для der и das, -er для die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Я беру этот свитер."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Из какой ты страны?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Цей: dieser",
+      "points": [
+        {
+          "title": "Закінчення як у der, die, das",
+          "text": "welcher, dieser, jeder беруть закінчення артикля: der → welcher Rock, die → welche Jacke, das → welches Kleid, мн. welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Яка куртка тобі подобається?"
+            }
+          ]
+        },
+        {
+          "title": "diesen і diesem",
+          "text": "Akkusativ: чоловічий рід отримує -en: diesen Rock, jeden Tag. Dativ: -em для der і das, -er для die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Я беру цей светр."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "З якої ти країни?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "This: dieser",
+      "points": [
+        {
+          "title": "Endings like der, die, das",
+          "text": "welcher, dieser, jeder take the article’s ending: der → welcher Rock, die → welche Jacke, das → welches Kleid, plural welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Which jacket do you like?"
+            }
+          ]
+        },
+        {
+          "title": "diesen and diesem",
+          "text": "Accusative: masculine takes -en: diesen Rock, jeden Tag. Dative: -em for der and das, -er for die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "I’ll take this jumper."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Which country are you from?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Ten: dieser",
+      "points": [
+        {
+          "title": "Końcówki jak der, die, das",
+          "text": "welcher, dieser, jeder biorą końcówkę rodzajnika: der → welcher Rock, die → welche Jacke, das → welches Kleid, l. mn. welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Która kurtka ci się podoba?"
+            }
+          ]
+        },
+        {
+          "title": "diesen i diesem",
+          "text": "Akkusativ: rodzaj męski dostaje -en: diesen Rock, jeden Tag. Dativ: -em dla der i das, -er dla die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Biorę ten sweter."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Z jakiego kraju jesteś?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Este: dieser",
+      "points": [
+        {
+          "title": "Terminaciones como der, die, das",
+          "text": "welcher, dieser, jeder toman la terminación del artículo: der → welcher Rock, die → welche Jacke, das → welches Kleid, plural welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "¿Qué chaqueta te gusta?"
+            }
+          ]
+        },
+        {
+          "title": "diesen y diesem",
+          "text": "Acusativo: el masculino lleva -en: diesen Rock, jeden Tag. Dativo: -em para der y das, -er para die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Me llevo este jersey."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "¿De qué país eres?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Ce : dieser",
+      "points": [
+        {
+          "title": "Terminaisons comme der, die, das",
+          "text": "welcher, dieser, jeder prennent la terminaison de l’article : der → welcher Rock, die → welche Jacke, das → welches Kleid, pluriel welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Quelle veste te plaît ?"
+            }
+          ]
+        },
+        {
+          "title": "diesen et diesem",
+          "text": "Accusatif : le masculin prend -en : diesen Rock, jeden Tag. Datif : -em pour der et das, -er pour die : in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Je prends ce pull."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "De quel pays viens-tu ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Bu: dieser",
+      "points": [
+        {
+          "title": "der, die, das gibi ekler",
+          "text": "welcher, dieser, jeder artikelin ekini alır: der → welcher Rock, die → welche Jacke, das → welches Kleid, çoğul welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Hangi ceketi beğendin?"
+            }
+          ]
+        },
+        {
+          "title": "diesen ve diesem",
+          "text": "Akkusativ: eril -en alır: diesen Rock, jeden Tag. Dativ: der ve das için -em, die için -er: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Bu kazağı alıyorum."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Hangi ülkedensin?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Acesta: dieser",
+      "points": [
+        {
+          "title": "Terminații ca la der, die, das",
+          "text": "welcher, dieser, jeder iau terminația articolului: der → welcher Rock, die → welche Jacke, das → welches Kleid, plural welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Ce geacă îți place?"
+            }
+          ]
+        },
+        {
+          "title": "diesen și diesem",
+          "text": "Acuzativ: masculinul primește -en: diesen Rock, jeden Tag. Dativ: -em pentru der și das, -er pentru die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Iau puloverul acesta."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Din ce țară ești?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Bu: dieser",
+      "points": [
+        {
+          "title": "der, die, das kabi qo'shimchalar",
+          "text": "welcher, dieser, jeder artikl qo'shimchasini oladi: der → welcher Rock, die → welche Jacke, das → welches Kleid, ko'plik welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Qaysi kurtka senga yoqadi?"
+            }
+          ]
+        },
+        {
+          "title": "diesen va diesem",
+          "text": "Akkusativ: erkak rodi -en oladi: diesen Rock, jeden Tag. Dativ: der va das uchun -em, die uchun -er: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Men bu sviterni olaman."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Qaysi davlatdansan?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "यह: dieser",
+      "points": [
+        {
+          "title": "der, die, das जैसे अंत",
+          "text": "welcher, dieser, jeder आर्टिकल का अंत लेते हैं: der → welcher Rock, die → welche Jacke, das → welches Kleid, बहुवचन welche Schuhe।",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "तुम्हें कौन-सी जैकेट पसंद है?"
+            }
+          ]
+        },
+        {
+          "title": "diesen और diesem",
+          "text": "Akkusativ: पुल्लिंग -en लेता है: diesen Rock, jeden Tag। Dativ: der और das के लिए -em, die के लिए -er: in diesem Haus, in welcher Straße।",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "मैं यह स्वेटर लेता हूँ।"
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "तुम किस देश से हो?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "هذا: dieser",
+      "points": [
+        {
+          "title": "نهايات مثل der وdie وdas",
+          "text": "welcher وdieser وjeder تأخذ نهاية الأداة: der → welcher Rock، die → welche Jacke، das → welches Kleid، والجمع welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "أي سترة تعجبك؟"
+            }
+          ]
+        },
+        {
+          "title": "diesen وdiesem",
+          "text": "المفعول: المذكر يأخذ -en: diesen Rock، jeden Tag. والجر: -em مع der وdas، و-er مع die: in diesem Haus، in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "آخذ هذه الكنزة."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "من أي بلد أنت؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "choice-crossing-three": {
+    "ru": {
+      "title": "В каком? С этим",
+      "points": [
+        {
+          "title": "diesen и diesem",
+          "text": "Akkusativ: мужской род получает -en: diesen Rock, jeden Tag. Dativ: -em для der и das, -er для die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Я беру этот свитер."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Из какой ты страны?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "У якому? З цим",
+      "points": [
+        {
+          "title": "diesen і diesem",
+          "text": "Akkusativ: чоловічий рід отримує -en: diesen Rock, jeden Tag. Dativ: -em для der і das, -er для die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Я беру цей светр."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "З якої ти країни?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "In which? With this",
+      "points": [
+        {
+          "title": "diesen and diesem",
+          "text": "Accusative: masculine takes -en: diesen Rock, jeden Tag. Dative: -em for der and das, -er for die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "I’ll take this jumper."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Which country are you from?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "W którym? Z tym",
+      "points": [
+        {
+          "title": "diesen i diesem",
+          "text": "Akkusativ: rodzaj męski dostaje -en: diesen Rock, jeden Tag. Dativ: -em dla der i das, -er dla die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Biorę ten sweter."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Z jakiego kraju jesteś?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿En cuál? Con este",
+      "points": [
+        {
+          "title": "diesen y diesem",
+          "text": "Acusativo: el masculino lleva -en: diesen Rock, jeden Tag. Dativo: -em para der y das, -er para die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Me llevo este jersey."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "¿De qué país eres?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Dans lequel ? Avec celui-ci",
+      "points": [
+        {
+          "title": "diesen et diesem",
+          "text": "Accusatif : le masculin prend -en : diesen Rock, jeden Tag. Datif : -em pour der et das, -er pour die : in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Je prends ce pull."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "De quel pays viens-tu ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Hangisinde? Bununla",
+      "points": [
+        {
+          "title": "diesen ve diesem",
+          "text": "Akkusativ: eril -en alır: diesen Rock, jeden Tag. Dativ: der ve das için -em, die için -er: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Bu kazağı alıyorum."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Hangi ülkedensin?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "În care? Cu acesta",
+      "points": [
+        {
+          "title": "diesen și diesem",
+          "text": "Acuzativ: masculinul primește -en: diesen Rock, jeden Tag. Dativ: -em pentru der și das, -er pentru die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Iau puloverul acesta."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Din ce țară ești?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qaysi birida? Bu bilan",
+      "points": [
+        {
+          "title": "diesen va diesem",
+          "text": "Akkusativ: erkak rodi -en oladi: diesen Rock, jeden Tag. Dativ: der va das uchun -em, die uchun -er: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Men bu sviterni olaman."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Qaysi davlatdansan?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "किसमें? इसके साथ",
+      "points": [
+        {
+          "title": "diesen और diesem",
+          "text": "Akkusativ: पुल्लिंग -en लेता है: diesen Rock, jeden Tag। Dativ: der और das के लिए -em, die के लिए -er: in diesem Haus, in welcher Straße।",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "मैं यह स्वेटर लेता हूँ।"
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "तुम किस देश से हो?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "في أيّ؟ مع هذا",
+      "points": [
+        {
+          "title": "diesen وdiesem",
+          "text": "المفعول: المذكر يأخذ -en: diesen Rock، jeden Tag. والجر: -em مع der وdas، و-er مع die: in diesem Haus، in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "آخذ هذه الكنزة."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "من أي بلد أنت؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "choice-crossing-four": {
+    "ru": {
+      "title": "Каждый день, все дети",
+      "points": [
+        {
+          "title": "jeder и alle",
+          "text": "jeder (каждый) только в единственном числе. Во множественном говорим alle: alle Kinder. О времени Akkusativ: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Я читаю газету каждое утро."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Щодня, усі діти",
+      "points": [
+        {
+          "title": "jeder і alle",
+          "text": "jeder (кожен) лише в однині. У множині кажемо alle: alle Kinder. Про час Akkusativ: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Я читаю газету щоранку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Every day, all children",
+      "points": [
+        {
+          "title": "jeder and alle",
+          "text": "jeder (every) is only singular. In the plural say alle: alle Kinder. For time use the accusative: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "I read the newspaper every morning."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Każdego dnia, wszystkie dzieci",
+      "points": [
+        {
+          "title": "jeder i alle",
+          "text": "jeder (każdy) tylko w liczbie pojedynczej. W mnogiej mówimy alle: alle Kinder. O czasie Akkusativ: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Czytam gazetę każdego ranka."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Cada día, todos los niños",
+      "points": [
+        {
+          "title": "jeder y alle",
+          "text": "jeder (cada) solo en singular. En plural se dice alle: alle Kinder. Para el tiempo, acusativo: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Leo el periódico cada mañana."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Chaque jour, tous les enfants",
+      "points": [
+        {
+          "title": "jeder et alle",
+          "text": "jeder (chaque) seulement au singulier. Au pluriel, on dit alle : alle Kinder. Pour le temps, accusatif : jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Je lis le journal tous les matins."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Her gün, bütün çocuklar",
+      "points": [
+        {
+          "title": "jeder ve alle",
+          "text": "jeder (her) sadece tekil. Çoğulda alle denir: alle Kinder. Zaman için Akkusativ: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Her sabah gazete okurum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "În fiecare zi, toți copiii",
+      "points": [
+        {
+          "title": "jeder și alle",
+          "text": "jeder (fiecare) doar la singular. La plural spunem alle: alle Kinder. Pentru timp, acuzativ: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Citesc ziarul în fiecare dimineață."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Har kuni, barcha bolalar",
+      "points": [
+        {
+          "title": "jeder va alle",
+          "text": "jeder (har bir) faqat birlikda. Ko'plikda alle deyiladi: alle Kinder. Vaqt uchun Akkusativ: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Har kuni ertalab gazeta o'qiyman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "हर दिन, सभी बच्चे",
+      "points": [
+        {
+          "title": "jeder और alle",
+          "text": "jeder (हर) सिर्फ़ एकवचन में। बहुवचन में alle: alle Kinder। समय के लिए Akkusativ: jeden Tag, jede Woche, jedes Jahr।",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "मैं हर सुबह अख़बार पढ़ता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "كل يوم، كل الأطفال",
+      "points": [
+        {
+          "title": "jeder وalle",
+          "text": "jeder (كل) بالمفرد فقط. وفي الجمع نقول alle: alle Kinder. وللزمن المفعول: jeden Tag، jede Woche، jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "أقرأ الجريدة كل صباح."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "choice-crossing-five": {
+    "ru": {
+      "title": "Что за машина?",
+      "points": [
+        {
+          "title": "was für ein",
+          "text": "Что за, какого вида: was für ein + существительное. ein меняется как обычно: Was für einen Hund? Во множественном без ein: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "Какая у тебя машина?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Що за машина?",
+      "points": [
+        {
+          "title": "was für ein",
+          "text": "Що за, якого виду: was für ein + іменник. ein змінюється як зазвичай: Was für einen Hund? У множині без ein: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "Яка в тебе машина?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "What kind of car?",
+      "points": [
+        {
+          "title": "was für ein",
+          "text": "What kind of: was für ein + noun. ein changes as usual: Was für einen Hund? In the plural no ein: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "What kind of car do you have?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Jaki samochód?",
+      "points": [
+        {
+          "title": "was für ein",
+          "text": "Jaki, jakiego rodzaju: was für ein + rzeczownik. ein odmienia się normalnie: Was für einen Hund? W mnogiej bez ein: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "Jaki masz samochód?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿Qué tipo de coche?",
+      "points": [
+        {
+          "title": "was für ein",
+          "text": "Qué tipo de: was für ein + sustantivo. ein cambia como siempre: Was für einen Hund? En plural sin ein: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "¿Qué coche tienes?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Quel genre de voiture ?",
+      "points": [
+        {
+          "title": "was für ein",
+          "text": "Quel genre de : was für ein + nom. ein change normalement : Was für einen Hund ? Au pluriel, sans ein : Was für Filme ?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "Quel genre de voiture as-tu ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Nasıl bir araba?",
+      "points": [
+        {
+          "title": "was für ein",
+          "text": "Ne tür: was für ein + isim. ein normal değişir: Was für einen Hund? Çoğulda ein yok: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "Nasıl bir araban var?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Ce fel de mașină?",
+      "points": [
+        {
+          "title": "was für ein",
+          "text": "Ce fel de: was für ein + substantiv. ein se schimbă ca de obicei: Was für einen Hund? La plural fără ein: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "Ce fel de mașină ai?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qanday mashina?",
+      "points": [
+        {
+          "title": "was für ein",
+          "text": "Qanday, qaysi turdagi: was für ein + ot. ein odatdagidek o'zgaradi: Was für einen Hund? Ko'plikda ein siz: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "Qanday mashinang bor?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कैसी गाड़ी?",
+      "points": [
+        {
+          "title": "was für ein",
+          "text": "किस तरह का: was für ein + संज्ञा। ein सामान्य रूप से बदलता है: Was für einen Hund? बहुवचन में बिना ein: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "तुम्हारे पास कैसी गाड़ी है?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "أي نوع من السيارات؟",
+      "points": [
+        {
+          "title": "was für ein",
+          "text": "ما نوع: was für ein + اسم. وتتغير ein كالعادة: Was für einen Hund؟ وفي الجمع بدون ein: Was für Filme؟",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "ما نوع سيارتك؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "choice-crossing-six": {
+    "ru": {
+      "title": "Вот этот! Вон тот!",
+      "points": [
+        {
+          "title": "Der hier! Den da!",
+          "text": "В ответе существительное можно не повторять: der, die, das с ударением. В Akkusativ мужской род den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Какой шарф? Вот этот."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Ось цей! Он той!",
+      "points": [
+        {
+          "title": "Der hier! Den da!",
+          "text": "У відповіді іменник можна не повторювати: der, die, das з наголосом. В Akkusativ чоловічий рід den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Який шарф? Ось цей."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "This one! That one!",
+      "points": [
+        {
+          "title": "Der hier! Den da!",
+          "text": "You can skip the noun in the answer: stressed der, die, das. In the accusative masculine is den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Which scarf? This one."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Ten tutaj! Tamten!",
+      "points": [
+        {
+          "title": "Der hier! Den da!",
+          "text": "W odpowiedzi rzeczownika można nie powtarzać: der, die, das z akcentem. W Akkusativ rodzaj męski den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Który szalik? Ten tutaj."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¡Este! ¡Aquel!",
+      "points": [
+        {
+          "title": "Der hier! Den da!",
+          "text": "En la respuesta se puede omitir el sustantivo: der, die, das con acento. En acusativo, masculino den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "¿Qué bufanda? Esta."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Celui-ci ! Celui-là !",
+      "points": [
+        {
+          "title": "Der hier ! Den da !",
+          "text": "Dans la réponse, on peut ne pas répéter le nom : der, die, das accentués. À l’accusatif, masculin den : Welchen Schal ? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Quelle écharpe ? Celle-ci."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Bu! Şu!",
+      "points": [
+        {
+          "title": "Der hier! Den da!",
+          "text": "Cevapta ismi tekrarlamaya gerek yok: vurgulu der, die, das. Akkusativ’de eril den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Hangi atkı? Bu."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Acesta! Acela!",
+      "points": [
+        {
+          "title": "Der hier! Den da!",
+          "text": "În răspuns poți să nu repeți substantivul: der, die, das accentuate. La acuzativ, masculin den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Care fular? Acesta."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mana bu! Ana u!",
+      "points": [
+        {
+          "title": "Der hier! Den da!",
+          "text": "Javobda otni takrorlamasa ham bo'ladi: urg'uli der, die, das. Akkusativda erkak rodi den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Qaysi sharf? Mana bu."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "यह वाला! वह वाला!",
+      "points": [
+        {
+          "title": "Der hier! Den da!",
+          "text": "जवाब में संज्ञा दोहराने की ज़रूरत नहीं: ज़ोर देकर der, die, das। Akkusativ में पुल्लिंग den: Welchen Schal? Den da।",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "कौन-सा मफ़लर? यह वाला।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "هذا! ذاك!",
+      "points": [
+        {
+          "title": "Der hier! Den da!",
+          "text": "يمكن عدم تكرار الاسم في الجواب: der وdie وdas مع النبر. وفي المفعول المذكر den: Welchen Schal؟ Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "أي وشاح؟ هذا."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "choice-crossing-seven": {
+    "ru": {
+      "title": "Практика: на блошином рынке",
+      "points": [
+        {
+          "title": "Окончания как у der, die, das",
+          "text": "welcher, dieser, jeder берут окончание артикля: der → welcher Rock, die → welche Jacke, das → welches Kleid, мн. ч. welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Какая куртка тебе нравится?"
+            }
+          ]
+        },
+        {
+          "title": "Der hier! Den da!",
+          "text": "В ответе существительное можно не повторять: der, die, das с ударением. В Akkusativ мужской род den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Какой шарф? Вот этот."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: на блошиному ринку",
+      "points": [
+        {
+          "title": "Закінчення як у der, die, das",
+          "text": "welcher, dieser, jeder беруть закінчення артикля: der → welcher Rock, die → welche Jacke, das → welches Kleid, мн. welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Яка куртка тобі подобається?"
+            }
+          ]
+        },
+        {
+          "title": "Der hier! Den da!",
+          "text": "У відповіді іменник можна не повторювати: der, die, das з наголосом. В Akkusativ чоловічий рід den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Який шарф? Ось цей."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: at the flea market",
+      "points": [
+        {
+          "title": "Endings like der, die, das",
+          "text": "welcher, dieser, jeder take the article’s ending: der → welcher Rock, die → welche Jacke, das → welches Kleid, plural welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Which jacket do you like?"
+            }
+          ]
+        },
+        {
+          "title": "Der hier! Den da!",
+          "text": "You can skip the noun in the answer: stressed der, die, das. In the accusative masculine is den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Which scarf? This one."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: na pchlim targu",
+      "points": [
+        {
+          "title": "Końcówki jak der, die, das",
+          "text": "welcher, dieser, jeder biorą końcówkę rodzajnika: der → welcher Rock, die → welche Jacke, das → welches Kleid, l. mn. welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Która kurtka ci się podoba?"
+            }
+          ]
+        },
+        {
+          "title": "Der hier! Den da!",
+          "text": "W odpowiedzi rzeczownika można nie powtarzać: der, die, das z akcentem. W Akkusativ rodzaj męski den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Który szalik? Ten tutaj."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: en el rastro",
+      "points": [
+        {
+          "title": "Terminaciones como der, die, das",
+          "text": "welcher, dieser, jeder toman la terminación del artículo: der → welcher Rock, die → welche Jacke, das → welches Kleid, plural welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "¿Qué chaqueta te gusta?"
+            }
+          ]
+        },
+        {
+          "title": "Der hier! Den da!",
+          "text": "En la respuesta se puede omitir el sustantivo: der, die, das con acento. En acusativo, masculino den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "¿Qué bufanda? Esta."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : au marché aux puces",
+      "points": [
+        {
+          "title": "Terminaisons comme der, die, das",
+          "text": "welcher, dieser, jeder prennent la terminaison de l’article : der → welcher Rock, die → welche Jacke, das → welches Kleid, pluriel welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Quelle veste te plaît ?"
+            }
+          ]
+        },
+        {
+          "title": "Der hier ! Den da !",
+          "text": "Dans la réponse, on peut ne pas répéter le nom : der, die, das accentués. À l’accusatif, masculin den : Welchen Schal ? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Quelle écharpe ? Celle-ci."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: bit pazarında",
+      "points": [
+        {
+          "title": "der, die, das gibi ekler",
+          "text": "welcher, dieser, jeder artikelin ekini alır: der → welcher Rock, die → welche Jacke, das → welches Kleid, çoğul welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Hangi ceketi beğendin?"
+            }
+          ]
+        },
+        {
+          "title": "Der hier! Den da!",
+          "text": "Cevapta ismi tekrarlamaya gerek yok: vurgulu der, die, das. Akkusativ’de eril den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Hangi atkı? Bu."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: la talcioc",
+      "points": [
+        {
+          "title": "Terminații ca la der, die, das",
+          "text": "welcher, dieser, jeder iau terminația articolului: der → welcher Rock, die → welche Jacke, das → welches Kleid, plural welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Ce geacă îți place?"
+            }
+          ]
+        },
+        {
+          "title": "Der hier! Den da!",
+          "text": "În răspuns poți să nu repeți substantivul: der, die, das accentuate. La acuzativ, masculin den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Care fular? Acesta."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: eski buyumlar bozorida",
+      "points": [
+        {
+          "title": "der, die, das kabi qo'shimchalar",
+          "text": "welcher, dieser, jeder artikl qo'shimchasini oladi: der → welcher Rock, die → welche Jacke, das → welches Kleid, ko'plik welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Qaysi kurtka senga yoqadi?"
+            }
+          ]
+        },
+        {
+          "title": "Der hier! Den da!",
+          "text": "Javobda otni takrorlamasa ham bo'ladi: urg'uli der, die, das. Akkusativda erkak rodi den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Qaysi sharf? Mana bu."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: कबाड़ बाज़ार में",
+      "points": [
+        {
+          "title": "der, die, das जैसे अंत",
+          "text": "welcher, dieser, jeder आर्टिकल का अंत लेते हैं: der → welcher Rock, die → welche Jacke, das → welches Kleid, बहुवचन welche Schuhe।",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "तुम्हें कौन-सी जैकेट पसंद है?"
+            }
+          ]
+        },
+        {
+          "title": "Der hier! Den da!",
+          "text": "जवाब में संज्ञा दोहराने की ज़रूरत नहीं: ज़ोर देकर der, die, das। Akkusativ में पुल्लिंग den: Welchen Schal? Den da।",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "कौन-सा मफ़लर? यह वाला।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: في سوق المستعمل",
+      "points": [
+        {
+          "title": "نهايات مثل der وdie وdas",
+          "text": "welcher وdieser وjeder تأخذ نهاية الأداة: der → welcher Rock، die → welche Jacke، das → welches Kleid، والجمع welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "أي سترة تعجبك؟"
+            }
+          ]
+        },
+        {
+          "title": "Der hier! Den da!",
+          "text": "يمكن عدم تكرار الاسم في الجواب: der وdie وdas مع النبر. وفي المفعول المذكر den: Welchen Schal؟ Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "أي وشاح؟ هذا."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "choice-crossing-eight": {
+    "ru": {
+      "title": "Практика: выбираем квартиру",
+      "points": [
+        {
+          "title": "diesen и diesem",
+          "text": "Akkusativ: мужской род получает -en: diesen Rock, jeden Tag. Dativ: -em для der и das, -er для die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Я беру этот свитер."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Из какой ты страны?"
+            }
+          ]
+        },
+        {
+          "title": "jeder и alle",
+          "text": "jeder (каждый) только в единственном числе. Во множественном говорим alle: alle Kinder. О времени Akkusativ: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Я читаю газету каждое утро."
+            }
+          ]
+        },
+        {
+          "title": "was für ein",
+          "text": "Что за, какого вида: was für ein + существительное. ein меняется как обычно: Was für einen Hund? Во множественном без ein: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "Какая у тебя машина?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: обираємо квартиру",
+      "points": [
+        {
+          "title": "diesen і diesem",
+          "text": "Akkusativ: чоловічий рід отримує -en: diesen Rock, jeden Tag. Dativ: -em для der і das, -er для die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Я беру цей светр."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "З якої ти країни?"
+            }
+          ]
+        },
+        {
+          "title": "jeder і alle",
+          "text": "jeder (кожен) лише в однині. У множині кажемо alle: alle Kinder. Про час Akkusativ: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Я читаю газету щоранку."
+            }
+          ]
+        },
+        {
+          "title": "was für ein",
+          "text": "Що за, якого виду: was für ein + іменник. ein змінюється як зазвичай: Was für einen Hund? У множині без ein: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "Яка в тебе машина?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: choosing a flat",
+      "points": [
+        {
+          "title": "diesen and diesem",
+          "text": "Accusative: masculine takes -en: diesen Rock, jeden Tag. Dative: -em for der and das, -er for die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "I’ll take this jumper."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Which country are you from?"
+            }
+          ]
+        },
+        {
+          "title": "jeder and alle",
+          "text": "jeder (every) is only singular. In the plural say alle: alle Kinder. For time use the accusative: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "I read the newspaper every morning."
+            }
+          ]
+        },
+        {
+          "title": "was für ein",
+          "text": "What kind of: was für ein + noun. ein changes as usual: Was für einen Hund? In the plural no ein: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "What kind of car do you have?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: wybieramy mieszkanie",
+      "points": [
+        {
+          "title": "diesen i diesem",
+          "text": "Akkusativ: rodzaj męski dostaje -en: diesen Rock, jeden Tag. Dativ: -em dla der i das, -er dla die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Biorę ten sweter."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Z jakiego kraju jesteś?"
+            }
+          ]
+        },
+        {
+          "title": "jeder i alle",
+          "text": "jeder (każdy) tylko w liczbie pojedynczej. W mnogiej mówimy alle: alle Kinder. O czasie Akkusativ: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Czytam gazetę każdego ranka."
+            }
+          ]
+        },
+        {
+          "title": "was für ein",
+          "text": "Jaki, jakiego rodzaju: was für ein + rzeczownik. ein odmienia się normalnie: Was für einen Hund? W mnogiej bez ein: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "Jaki masz samochód?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: elegir piso",
+      "points": [
+        {
+          "title": "diesen y diesem",
+          "text": "Acusativo: el masculino lleva -en: diesen Rock, jeden Tag. Dativo: -em para der y das, -er para die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Me llevo este jersey."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "¿De qué país eres?"
+            }
+          ]
+        },
+        {
+          "title": "jeder y alle",
+          "text": "jeder (cada) solo en singular. En plural se dice alle: alle Kinder. Para el tiempo, acusativo: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Leo el periódico cada mañana."
+            }
+          ]
+        },
+        {
+          "title": "was für ein",
+          "text": "Qué tipo de: was für ein + sustantivo. ein cambia como siempre: Was für einen Hund? En plural sin ein: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "¿Qué coche tienes?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : choisir un appartement",
+      "points": [
+        {
+          "title": "diesen et diesem",
+          "text": "Accusatif : le masculin prend -en : diesen Rock, jeden Tag. Datif : -em pour der et das, -er pour die : in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Je prends ce pull."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "De quel pays viens-tu ?"
+            }
+          ]
+        },
+        {
+          "title": "jeder et alle",
+          "text": "jeder (chaque) seulement au singulier. Au pluriel, on dit alle : alle Kinder. Pour le temps, accusatif : jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Je lis le journal tous les matins."
+            }
+          ]
+        },
+        {
+          "title": "was für ein",
+          "text": "Quel genre de : was für ein + nom. ein change normalement : Was für einen Hund ? Au pluriel, sans ein : Was für Filme ?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "Quel genre de voiture as-tu ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: daire seçmek",
+      "points": [
+        {
+          "title": "diesen ve diesem",
+          "text": "Akkusativ: eril -en alır: diesen Rock, jeden Tag. Dativ: der ve das için -em, die için -er: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Bu kazağı alıyorum."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Hangi ülkedensin?"
+            }
+          ]
+        },
+        {
+          "title": "jeder ve alle",
+          "text": "jeder (her) sadece tekil. Çoğulda alle denir: alle Kinder. Zaman için Akkusativ: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Her sabah gazete okurum."
+            }
+          ]
+        },
+        {
+          "title": "was für ein",
+          "text": "Ne tür: was für ein + isim. ein normal değişir: Was für einen Hund? Çoğulda ein yok: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "Nasıl bir araban var?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: alegem un apartament",
+      "points": [
+        {
+          "title": "diesen și diesem",
+          "text": "Acuzativ: masculinul primește -en: diesen Rock, jeden Tag. Dativ: -em pentru der și das, -er pentru die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Iau puloverul acesta."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Din ce țară ești?"
+            }
+          ]
+        },
+        {
+          "title": "jeder și alle",
+          "text": "jeder (fiecare) doar la singular. La plural spunem alle: alle Kinder. Pentru timp, acuzativ: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Citesc ziarul în fiecare dimineață."
+            }
+          ]
+        },
+        {
+          "title": "was für ein",
+          "text": "Ce fel de: was für ein + substantiv. ein se schimbă ca de obicei: Was für einen Hund? La plural fără ein: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "Ce fel de mașină ai?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: kvartira tanlaymiz",
+      "points": [
+        {
+          "title": "diesen va diesem",
+          "text": "Akkusativ: erkak rodi -en oladi: diesen Rock, jeden Tag. Dativ: der va das uchun -em, die uchun -er: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Men bu sviterni olaman."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Qaysi davlatdansan?"
+            }
+          ]
+        },
+        {
+          "title": "jeder va alle",
+          "text": "jeder (har bir) faqat birlikda. Ko'plikda alle deyiladi: alle Kinder. Vaqt uchun Akkusativ: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Har kuni ertalab gazeta o'qiyman."
+            }
+          ]
+        },
+        {
+          "title": "was für ein",
+          "text": "Qanday, qaysi turdagi: was für ein + ot. ein odatdagidek o'zgaradi: Was für einen Hund? Ko'plikda ein siz: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "Qanday mashinang bor?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: फ़्लैट चुनना",
+      "points": [
+        {
+          "title": "diesen और diesem",
+          "text": "Akkusativ: पुल्लिंग -en लेता है: diesen Rock, jeden Tag। Dativ: der और das के लिए -em, die के लिए -er: in diesem Haus, in welcher Straße।",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "मैं यह स्वेटर लेता हूँ।"
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "तुम किस देश से हो?"
+            }
+          ]
+        },
+        {
+          "title": "jeder और alle",
+          "text": "jeder (हर) सिर्फ़ एकवचन में। बहुवचन में alle: alle Kinder। समय के लिए Akkusativ: jeden Tag, jede Woche, jedes Jahr।",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "मैं हर सुबह अख़बार पढ़ता हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "was für ein",
+          "text": "किस तरह का: was für ein + संज्ञा। ein सामान्य रूप से बदलता है: Was für einen Hund? बहुवचन में बिना ein: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "तुम्हारे पास कैसी गाड़ी है?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: اختيار شقة",
+      "points": [
+        {
+          "title": "diesen وdiesem",
+          "text": "المفعول: المذكر يأخذ -en: diesen Rock، jeden Tag. والجر: -em مع der وdas، و-er مع die: in diesem Haus، in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "آخذ هذه الكنزة."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "من أي بلد أنت؟"
+            }
+          ]
+        },
+        {
+          "title": "jeder وalle",
+          "text": "jeder (كل) بالمفرد فقط. وفي الجمع نقول alle: alle Kinder. وللزمن المفعول: jeden Tag، jede Woche، jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "أقرأ الجريدة كل صباح."
+            }
+          ]
+        },
+        {
+          "title": "was für ein",
+          "text": "ما نوع: was für ein + اسم. وتتغير ein كالعادة: Was für einen Hund؟ وفي الجمع بدون ein: Was für Filme؟",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "ما نوع سيارتك؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "choice-crossing-nine": {
+    "ru": {
+      "title": "Повторение: выбор",
+      "points": [
+        {
+          "title": "Окончания как у der, die, das",
+          "text": "welcher, dieser, jeder берут окончание артикля: der → welcher Rock, die → welche Jacke, das → welches Kleid, мн. ч. welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Какая куртка тебе нравится?"
+            }
+          ]
+        },
+        {
+          "title": "diesen и diesem",
+          "text": "Akkusativ: мужской род получает -en: diesen Rock, jeden Tag. Dativ: -em для der и das, -er для die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Я беру этот свитер."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Из какой ты страны?"
+            }
+          ]
+        },
+        {
+          "title": "was für ein",
+          "text": "Что за, какого вида: was für ein + существительное. ein меняется как обычно: Was für einen Hund? Во множественном без ein: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "Какая у тебя машина?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: вибір",
+      "points": [
+        {
+          "title": "Закінчення як у der, die, das",
+          "text": "welcher, dieser, jeder беруть закінчення артикля: der → welcher Rock, die → welche Jacke, das → welches Kleid, мн. welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Яка куртка тобі подобається?"
+            }
+          ]
+        },
+        {
+          "title": "diesen і diesem",
+          "text": "Akkusativ: чоловічий рід отримує -en: diesen Rock, jeden Tag. Dativ: -em для der і das, -er для die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Я беру цей светр."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "З якої ти країни?"
+            }
+          ]
+        },
+        {
+          "title": "was für ein",
+          "text": "Що за, якого виду: was für ein + іменник. ein змінюється як зазвичай: Was für einen Hund? У множині без ein: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "Яка в тебе машина?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: choosing",
+      "points": [
+        {
+          "title": "Endings like der, die, das",
+          "text": "welcher, dieser, jeder take the article’s ending: der → welcher Rock, die → welche Jacke, das → welches Kleid, plural welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Which jacket do you like?"
+            }
+          ]
+        },
+        {
+          "title": "diesen and diesem",
+          "text": "Accusative: masculine takes -en: diesen Rock, jeden Tag. Dative: -em for der and das, -er for die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "I’ll take this jumper."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Which country are you from?"
+            }
+          ]
+        },
+        {
+          "title": "was für ein",
+          "text": "What kind of: was für ein + noun. ein changes as usual: Was für einen Hund? In the plural no ein: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "What kind of car do you have?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: wybór",
+      "points": [
+        {
+          "title": "Końcówki jak der, die, das",
+          "text": "welcher, dieser, jeder biorą końcówkę rodzajnika: der → welcher Rock, die → welche Jacke, das → welches Kleid, l. mn. welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Która kurtka ci się podoba?"
+            }
+          ]
+        },
+        {
+          "title": "diesen i diesem",
+          "text": "Akkusativ: rodzaj męski dostaje -en: diesen Rock, jeden Tag. Dativ: -em dla der i das, -er dla die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Biorę ten sweter."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Z jakiego kraju jesteś?"
+            }
+          ]
+        },
+        {
+          "title": "was für ein",
+          "text": "Jaki, jakiego rodzaju: was für ein + rzeczownik. ein odmienia się normalnie: Was für einen Hund? W mnogiej bez ein: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "Jaki masz samochód?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: elegir",
+      "points": [
+        {
+          "title": "Terminaciones como der, die, das",
+          "text": "welcher, dieser, jeder toman la terminación del artículo: der → welcher Rock, die → welche Jacke, das → welches Kleid, plural welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "¿Qué chaqueta te gusta?"
+            }
+          ]
+        },
+        {
+          "title": "diesen y diesem",
+          "text": "Acusativo: el masculino lleva -en: diesen Rock, jeden Tag. Dativo: -em para der y das, -er para die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Me llevo este jersey."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "¿De qué país eres?"
+            }
+          ]
+        },
+        {
+          "title": "was für ein",
+          "text": "Qué tipo de: was für ein + sustantivo. ein cambia como siempre: Was für einen Hund? En plural sin ein: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "¿Qué coche tienes?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : le choix",
+      "points": [
+        {
+          "title": "Terminaisons comme der, die, das",
+          "text": "welcher, dieser, jeder prennent la terminaison de l’article : der → welcher Rock, die → welche Jacke, das → welches Kleid, pluriel welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Quelle veste te plaît ?"
+            }
+          ]
+        },
+        {
+          "title": "diesen et diesem",
+          "text": "Accusatif : le masculin prend -en : diesen Rock, jeden Tag. Datif : -em pour der et das, -er pour die : in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Je prends ce pull."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "De quel pays viens-tu ?"
+            }
+          ]
+        },
+        {
+          "title": "was für ein",
+          "text": "Quel genre de : was für ein + nom. ein change normalement : Was für einen Hund ? Au pluriel, sans ein : Was für Filme ?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "Quel genre de voiture as-tu ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: seçim",
+      "points": [
+        {
+          "title": "der, die, das gibi ekler",
+          "text": "welcher, dieser, jeder artikelin ekini alır: der → welcher Rock, die → welche Jacke, das → welches Kleid, çoğul welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Hangi ceketi beğendin?"
+            }
+          ]
+        },
+        {
+          "title": "diesen ve diesem",
+          "text": "Akkusativ: eril -en alır: diesen Rock, jeden Tag. Dativ: der ve das için -em, die için -er: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Bu kazağı alıyorum."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Hangi ülkedensin?"
+            }
+          ]
+        },
+        {
+          "title": "was für ein",
+          "text": "Ne tür: was für ein + isim. ein normal değişir: Was für einen Hund? Çoğulda ein yok: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "Nasıl bir araban var?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: alegerea",
+      "points": [
+        {
+          "title": "Terminații ca la der, die, das",
+          "text": "welcher, dieser, jeder iau terminația articolului: der → welcher Rock, die → welche Jacke, das → welches Kleid, plural welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Ce geacă îți place?"
+            }
+          ]
+        },
+        {
+          "title": "diesen și diesem",
+          "text": "Acuzativ: masculinul primește -en: diesen Rock, jeden Tag. Dativ: -em pentru der și das, -er pentru die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Iau puloverul acesta."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Din ce țară ești?"
+            }
+          ]
+        },
+        {
+          "title": "was für ein",
+          "text": "Ce fel de: was für ein + substantiv. ein se schimbă ca de obicei: Was für einen Hund? La plural fără ein: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "Ce fel de mașină ai?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: tanlov",
+      "points": [
+        {
+          "title": "der, die, das kabi qo'shimchalar",
+          "text": "welcher, dieser, jeder artikl qo'shimchasini oladi: der → welcher Rock, die → welche Jacke, das → welches Kleid, ko'plik welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "Qaysi kurtka senga yoqadi?"
+            }
+          ]
+        },
+        {
+          "title": "diesen va diesem",
+          "text": "Akkusativ: erkak rodi -en oladi: diesen Rock, jeden Tag. Dativ: der va das uchun -em, die uchun -er: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Men bu sviterni olaman."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Qaysi davlatdansan?"
+            }
+          ]
+        },
+        {
+          "title": "was für ein",
+          "text": "Qanday, qaysi turdagi: was für ein + ot. ein odatdagidek o'zgaradi: Was für einen Hund? Ko'plikda ein siz: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "Qanday mashinang bor?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: चुनाव",
+      "points": [
+        {
+          "title": "der, die, das जैसे अंत",
+          "text": "welcher, dieser, jeder आर्टिकल का अंत लेते हैं: der → welcher Rock, die → welche Jacke, das → welches Kleid, बहुवचन welche Schuhe।",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "तुम्हें कौन-सी जैकेट पसंद है?"
+            }
+          ]
+        },
+        {
+          "title": "diesen और diesem",
+          "text": "Akkusativ: पुल्लिंग -en लेता है: diesen Rock, jeden Tag। Dativ: der और das के लिए -em, die के लिए -er: in diesem Haus, in welcher Straße।",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "मैं यह स्वेटर लेता हूँ।"
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "तुम किस देश से हो?"
+            }
+          ]
+        },
+        {
+          "title": "was für ein",
+          "text": "किस तरह का: was für ein + संज्ञा। ein सामान्य रूप से बदलता है: Was für einen Hund? बहुवचन में बिना ein: Was für Filme?",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "तुम्हारे पास कैसी गाड़ी है?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الاختيار",
+      "points": [
+        {
+          "title": "نهايات مثل der وdie وdas",
+          "text": "welcher وdieser وjeder تأخذ نهاية الأداة: der → welcher Rock، die → welche Jacke، das → welches Kleid، والجمع welche Schuhe.",
+          "examples": [
+            {
+              "de": "Welche Jacke gefällt dir?",
+              "tr": "أي سترة تعجبك؟"
+            }
+          ]
+        },
+        {
+          "title": "diesen وdiesem",
+          "text": "المفعول: المذكر يأخذ -en: diesen Rock، jeden Tag. والجر: -em مع der وdas، و-er مع die: in diesem Haus، in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "آخذ هذه الكنزة."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "من أي بلد أنت؟"
+            }
+          ]
+        },
+        {
+          "title": "was für ein",
+          "text": "ما نوع: was für ein + اسم. وتتغير ein كالعادة: Was für einen Hund؟ وفي الجمع بدون ein: Was für Filme؟",
+          "examples": [
+            {
+              "de": "Was für ein Auto hast du?",
+              "tr": "ما نوع سيارتك؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "choice-crossing-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "diesen и diesem",
+          "text": "Akkusativ: мужской род получает -en: diesen Rock, jeden Tag. Dativ: -em для der и das, -er для die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Я беру этот свитер."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Из какой ты страны?"
+            }
+          ]
+        },
+        {
+          "title": "jeder и alle",
+          "text": "jeder (каждый) только в единственном числе. Во множественном говорим alle: alle Kinder. О времени Akkusativ: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Я читаю газету каждое утро."
+            }
+          ]
+        },
+        {
+          "title": "Der hier! Den da!",
+          "text": "В ответе существительное можно не повторять: der, die, das с ударением. В Akkusativ мужской род den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Какой шарф? Вот этот."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "diesen і diesem",
+          "text": "Akkusativ: чоловічий рід отримує -en: diesen Rock, jeden Tag. Dativ: -em для der і das, -er для die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Я беру цей светр."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "З якої ти країни?"
+            }
+          ]
+        },
+        {
+          "title": "jeder і alle",
+          "text": "jeder (кожен) лише в однині. У множині кажемо alle: alle Kinder. Про час Akkusativ: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Я читаю газету щоранку."
+            }
+          ]
+        },
+        {
+          "title": "Der hier! Den da!",
+          "text": "У відповіді іменник можна не повторювати: der, die, das з наголосом. В Akkusativ чоловічий рід den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Який шарф? Ось цей."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "diesen and diesem",
+          "text": "Accusative: masculine takes -en: diesen Rock, jeden Tag. Dative: -em for der and das, -er for die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "I’ll take this jumper."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Which country are you from?"
+            }
+          ]
+        },
+        {
+          "title": "jeder and alle",
+          "text": "jeder (every) is only singular. In the plural say alle: alle Kinder. For time use the accusative: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "I read the newspaper every morning."
+            }
+          ]
+        },
+        {
+          "title": "Der hier! Den da!",
+          "text": "You can skip the noun in the answer: stressed der, die, das. In the accusative masculine is den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Which scarf? This one."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "diesen i diesem",
+          "text": "Akkusativ: rodzaj męski dostaje -en: diesen Rock, jeden Tag. Dativ: -em dla der i das, -er dla die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Biorę ten sweter."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Z jakiego kraju jesteś?"
+            }
+          ]
+        },
+        {
+          "title": "jeder i alle",
+          "text": "jeder (każdy) tylko w liczbie pojedynczej. W mnogiej mówimy alle: alle Kinder. O czasie Akkusativ: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Czytam gazetę każdego ranka."
+            }
+          ]
+        },
+        {
+          "title": "Der hier! Den da!",
+          "text": "W odpowiedzi rzeczownika można nie powtarzać: der, die, das z akcentem. W Akkusativ rodzaj męski den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Który szalik? Ten tutaj."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "diesen y diesem",
+          "text": "Acusativo: el masculino lleva -en: diesen Rock, jeden Tag. Dativo: -em para der y das, -er para die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Me llevo este jersey."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "¿De qué país eres?"
+            }
+          ]
+        },
+        {
+          "title": "jeder y alle",
+          "text": "jeder (cada) solo en singular. En plural se dice alle: alle Kinder. Para el tiempo, acusativo: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Leo el periódico cada mañana."
+            }
+          ]
+        },
+        {
+          "title": "Der hier! Den da!",
+          "text": "En la respuesta se puede omitir el sustantivo: der, die, das con acento. En acusativo, masculino den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "¿Qué bufanda? Esta."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "diesen et diesem",
+          "text": "Accusatif : le masculin prend -en : diesen Rock, jeden Tag. Datif : -em pour der et das, -er pour die : in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Je prends ce pull."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "De quel pays viens-tu ?"
+            }
+          ]
+        },
+        {
+          "title": "jeder et alle",
+          "text": "jeder (chaque) seulement au singulier. Au pluriel, on dit alle : alle Kinder. Pour le temps, accusatif : jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Je lis le journal tous les matins."
+            }
+          ]
+        },
+        {
+          "title": "Der hier ! Den da !",
+          "text": "Dans la réponse, on peut ne pas répéter le nom : der, die, das accentués. À l’accusatif, masculin den : Welchen Schal ? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Quelle écharpe ? Celle-ci."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "diesen ve diesem",
+          "text": "Akkusativ: eril -en alır: diesen Rock, jeden Tag. Dativ: der ve das için -em, die için -er: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Bu kazağı alıyorum."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Hangi ülkedensin?"
+            }
+          ]
+        },
+        {
+          "title": "jeder ve alle",
+          "text": "jeder (her) sadece tekil. Çoğulda alle denir: alle Kinder. Zaman için Akkusativ: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Her sabah gazete okurum."
+            }
+          ]
+        },
+        {
+          "title": "Der hier! Den da!",
+          "text": "Cevapta ismi tekrarlamaya gerek yok: vurgulu der, die, das. Akkusativ’de eril den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Hangi atkı? Bu."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "diesen și diesem",
+          "text": "Acuzativ: masculinul primește -en: diesen Rock, jeden Tag. Dativ: -em pentru der și das, -er pentru die: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Iau puloverul acesta."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Din ce țară ești?"
+            }
+          ]
+        },
+        {
+          "title": "jeder și alle",
+          "text": "jeder (fiecare) doar la singular. La plural spunem alle: alle Kinder. Pentru timp, acuzativ: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Citesc ziarul în fiecare dimineață."
+            }
+          ]
+        },
+        {
+          "title": "Der hier! Den da!",
+          "text": "În răspuns poți să nu repeți substantivul: der, die, das accentuate. La acuzativ, masculin den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Care fular? Acesta."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "diesen va diesem",
+          "text": "Akkusativ: erkak rodi -en oladi: diesen Rock, jeden Tag. Dativ: der va das uchun -em, die uchun -er: in diesem Haus, in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "Men bu sviterni olaman."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "Qaysi davlatdansan?"
+            }
+          ]
+        },
+        {
+          "title": "jeder va alle",
+          "text": "jeder (har bir) faqat birlikda. Ko'plikda alle deyiladi: alle Kinder. Vaqt uchun Akkusativ: jeden Tag, jede Woche, jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "Har kuni ertalab gazeta o'qiyman."
+            }
+          ]
+        },
+        {
+          "title": "Der hier! Den da!",
+          "text": "Javobda otni takrorlamasa ham bo'ladi: urg'uli der, die, das. Akkusativda erkak rodi den: Welchen Schal? Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "Qaysi sharf? Mana bu."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "diesen और diesem",
+          "text": "Akkusativ: पुल्लिंग -en लेता है: diesen Rock, jeden Tag। Dativ: der और das के लिए -em, die के लिए -er: in diesem Haus, in welcher Straße।",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "मैं यह स्वेटर लेता हूँ।"
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "तुम किस देश से हो?"
+            }
+          ]
+        },
+        {
+          "title": "jeder और alle",
+          "text": "jeder (हर) सिर्फ़ एकवचन में। बहुवचन में alle: alle Kinder। समय के लिए Akkusativ: jeden Tag, jede Woche, jedes Jahr।",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "मैं हर सुबह अख़बार पढ़ता हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "Der hier! Den da!",
+          "text": "जवाब में संज्ञा दोहराने की ज़रूरत नहीं: ज़ोर देकर der, die, das। Akkusativ में पुल्लिंग den: Welchen Schal? Den da।",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "कौन-सा मफ़लर? यह वाला।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "diesen وdiesem",
+          "text": "المفعول: المذكر يأخذ -en: diesen Rock، jeden Tag. والجر: -em مع der وdas، و-er مع die: in diesem Haus، in welcher Straße.",
+          "examples": [
+            {
+              "de": "Ich nehme diesen Pullover.",
+              "tr": "آخذ هذه الكنزة."
+            },
+            {
+              "de": "Aus welchem Land kommst du?",
+              "tr": "من أي بلد أنت؟"
+            }
+          ]
+        },
+        {
+          "title": "jeder وalle",
+          "text": "jeder (كل) بالمفرد فقط. وفي الجمع نقول alle: alle Kinder. وللزمن المفعول: jeden Tag، jede Woche، jedes Jahr.",
+          "examples": [
+            {
+              "de": "Ich lese jeden Morgen die Zeitung.",
+              "tr": "أقرأ الجريدة كل صباح."
+            }
+          ]
+        },
+        {
+          "title": "Der hier! Den da!",
+          "text": "يمكن عدم تكرار الاسم في الجواب: der وdie وdas مع النبر. وفي المفعول المذكر den: Welchen Schal؟ Den da.",
+          "examples": [
+            {
+              "de": "Welcher Schal? Der hier.",
+              "tr": "أي وشاح؟ هذا."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

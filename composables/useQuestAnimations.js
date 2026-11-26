@@ -112,6 +112,14 @@ export function useQuestAnimations(questStore, previouslyCleared, shouldShowResu
                     }, 600)
                 }
             }, 100)
+        } else if (questStore.success && !questStore.isRetryMode) {
+            // Первое прохождение с ошибками: экран успеха без салюта и без начисления награды
+            setTimeout(() => {
+                animStep.value = 1
+                setTimeout(() => {
+                    animStep.value = 2
+                }, 600)
+            }, 100)
         } else {
             setTimeout(() => {
                 animStep.value = 1

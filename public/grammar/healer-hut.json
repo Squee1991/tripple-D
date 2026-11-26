@@ -1,0 +1,2310 @@
+{
+  "healer-hut-one": {
+    "ru": {
+      "title": "Тело: der Kopf, das Bein",
+      "points": [
+        {
+          "title": "Двух частей: множественное",
+          "text": "Учим тело с артиклем. Рук и ног две, значит множественное: zwei Arme, zwei Beine.",
+          "examples": [
+            {
+              "de": "Ich habe zwei Arme und zwei Beine.",
+              "tr": "У меня две руки и две ноги."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Тіло: der Kopf, das Bein",
+      "points": [
+        {
+          "title": "Двох частин: множина",
+          "text": "Вчимо тіло з артиклем. Рук і ніг дві, отже множина: zwei Arme, zwei Beine.",
+          "examples": [
+            {
+              "de": "Ich habe zwei Arme und zwei Beine.",
+              "tr": "У мене дві руки і дві ноги."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The body: der Kopf, das Bein",
+      "points": [
+        {
+          "title": "Two of them: plural",
+          "text": "Learn body parts with the article. Two arms and legs, so plural: zwei Arme, zwei Beine.",
+          "examples": [
+            {
+              "de": "Ich habe zwei Arme und zwei Beine.",
+              "tr": "I have two arms and two legs."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Ciało: der Kopf, das Bein",
+      "points": [
+        {
+          "title": "Dwie części: liczba mnoga",
+          "text": "Uczymy się ciała z rodzajnikiem. Ręce i nogi są dwie, więc liczba mnoga: zwei Arme, zwei Beine.",
+          "examples": [
+            {
+              "de": "Ich habe zwei Arme und zwei Beine.",
+              "tr": "Mam dwie ręce i dwie nogi."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "El cuerpo: der Kopf, das Bein",
+      "points": [
+        {
+          "title": "Dos: plural",
+          "text": "Aprende el cuerpo con artículo. Brazos y piernas son dos, así que plural: zwei Arme, zwei Beine.",
+          "examples": [
+            {
+              "de": "Ich habe zwei Arme und zwei Beine.",
+              "tr": "Tengo dos brazos y dos piernas."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le corps : der Kopf, das Bein",
+      "points": [
+        {
+          "title": "Deux : pluriel",
+          "text": "On apprend le corps avec l’article. Deux bras et deux jambes, donc pluriel : zwei Arme, zwei Beine.",
+          "examples": [
+            {
+              "de": "Ich habe zwei Arme und zwei Beine.",
+              "tr": "J’ai deux bras et deux jambes."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Vücut: der Kopf, das Bein",
+      "points": [
+        {
+          "title": "İki tane: çoğul",
+          "text": "Uzuvları artikeliyle öğren. Kol ve bacak iki tane, o yüzden çoğul: zwei Arme, zwei Beine.",
+          "examples": [
+            {
+              "de": "Ich habe zwei Arme und zwei Beine.",
+              "tr": "İki kolum ve iki bacağım var."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Corpul: der Kopf, das Bein",
+      "points": [
+        {
+          "title": "Două: plural",
+          "text": "Învățăm corpul cu articol. Brațe și picioare sunt două, deci plural: zwei Arme, zwei Beine.",
+          "examples": [
+            {
+              "de": "Ich habe zwei Arme und zwei Beine.",
+              "tr": "Am două brațe și două picioare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Tana: der Kopf, das Bein",
+      "points": [
+        {
+          "title": "Ikkita: ko‘plik",
+          "text": "Tana a'zolarini artikl bilan o'rganamiz. Qo'l va oyoq ikkita, demak ko'plik: zwei Arme, zwei Beine.",
+          "examples": [
+            {
+              "de": "Ich habe zwei Arme und zwei Beine.",
+              "tr": "Mening ikkita qo'lim va ikkita oyog'im bor."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "शरीर: der Kopf, das Bein",
+      "points": [
+        {
+          "title": "दो: बहुवचन",
+          "text": "शरीर के अंग आर्टिकल के साथ सीखो। हाथ और पैर दो हैं, इसलिए बहुवचन: zwei Arme, zwei Beine।",
+          "examples": [
+            {
+              "de": "Ich habe zwei Arme und zwei Beine.",
+              "tr": "मेरे दो हाथ और दो पैर हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الجسم: der Kopf وdas Bein",
+      "points": [
+        {
+          "title": "اثنان: الجمع",
+          "text": "نتعلم أعضاء الجسم مع الأداة. الذراعان والساقان اثنتان، إذن الجمع: zwei Arme، zwei Beine.",
+          "examples": [
+            {
+              "de": "Ich habe zwei Arme und zwei Beine.",
+              "tr": "لي ذراعان وساقان."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "healer-hut-two": {
+    "ru": {
+      "title": "Лицо: das Auge, die Nase",
+      "points": [
+        {
+          "title": "Множественное",
+          "text": "zwei Augen, zwei Ohren. У Zahn умлаут: viele Zähne.",
+          "examples": [
+            {
+              "de": "Das Kind hat viele Zähne.",
+              "tr": "У ребёнка много зубов."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Обличчя: das Auge, die Nase",
+      "points": [
+        {
+          "title": "Множина",
+          "text": "zwei Augen, zwei Ohren. У Zahn умлаут: viele Zähne.",
+          "examples": [
+            {
+              "de": "Das Kind hat viele Zähne.",
+              "tr": "У дитини багато зубів."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The face: das Auge, die Nase",
+      "points": [
+        {
+          "title": "Plural",
+          "text": "zwei Augen, zwei Ohren. Zahn gets an umlaut: viele Zähne.",
+          "examples": [
+            {
+              "de": "Das Kind hat viele Zähne.",
+              "tr": "The child has a lot of teeth."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Twarz: das Auge, die Nase",
+      "points": [
+        {
+          "title": "Liczba mnoga",
+          "text": "zwei Augen, zwei Ohren. Zahn dostaje umlaut: viele Zähne.",
+          "examples": [
+            {
+              "de": "Das Kind hat viele Zähne.",
+              "tr": "Dziecko ma dużo zębów."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "La cara: das Auge, die Nase",
+      "points": [
+        {
+          "title": "Plural",
+          "text": "zwei Augen, zwei Ohren. Zahn lleva diéresis: viele Zähne.",
+          "examples": [
+            {
+              "de": "Das Kind hat viele Zähne.",
+              "tr": "El niño tiene muchos dientes."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le visage : das Auge, die Nase",
+      "points": [
+        {
+          "title": "Pluriel",
+          "text": "zwei Augen, zwei Ohren. Zahn prend un umlaut : viele Zähne.",
+          "examples": [
+            {
+              "de": "Das Kind hat viele Zähne.",
+              "tr": "L’enfant a beaucoup de dents."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yüz: das Auge, die Nase",
+      "points": [
+        {
+          "title": "Çoğul",
+          "text": "zwei Augen, zwei Ohren. Zahn umlaut alır: viele Zähne.",
+          "examples": [
+            {
+              "de": "Das Kind hat viele Zähne.",
+              "tr": "Çocuğun çok dişi var."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Fața: das Auge, die Nase",
+      "points": [
+        {
+          "title": "Plural",
+          "text": "zwei Augen, zwei Ohren. Zahn primește umlaut: viele Zähne.",
+          "examples": [
+            {
+              "de": "Das Kind hat viele Zähne.",
+              "tr": "Copilul are mulți dinți."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Yuz: das Auge, die Nase",
+      "points": [
+        {
+          "title": "Ko'plik",
+          "text": "zwei Augen, zwei Ohren. Zahn umlaut oladi: viele Zähne.",
+          "examples": [
+            {
+              "de": "Das Kind hat viele Zähne.",
+              "tr": "Bolaning tishlari ko'p."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "चेहरा: das Auge, die Nase",
+      "points": [
+        {
+          "title": "बहुवचन",
+          "text": "zwei Augen, zwei Ohren। Zahn में उमलाउट: viele Zähne।",
+          "examples": [
+            {
+              "de": "Das Kind hat viele Zähne.",
+              "tr": "बच्चे के बहुत दाँत हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الوجه: das Auge وdie Nase",
+      "points": [
+        {
+          "title": "الجمع",
+          "text": "zwei Augen، zwei Ohren. وZahn يأخذ أوملاوت: viele Zähne.",
+          "examples": [
+            {
+              "de": "Das Kind hat viele Zähne.",
+              "tr": "للطفل أسنان كثيرة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "healer-hut-three": {
+    "ru": {
+      "title": "Симптомы: Ich habe Fieber",
+      "points": [
+        {
+          "title": "Болезнь с haben, без артикля",
+          "text": "Болезни «имеют»: Ich habe Fieber, Er hat Husten. Боль: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "У меня температура."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "У меня болит голова."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Симптоми: Ich habe Fieber",
+      "points": [
+        {
+          "title": "Хвороба з haben, без артикля",
+          "text": "Хвороби «мають»: Ich habe Fieber, Er hat Husten. Біль: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "У мене температура."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "У мене болить голова."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Symptoms: Ich habe Fieber",
+      "points": [
+        {
+          "title": "Illness with haben, no article",
+          "text": "You \"have\" an illness: Ich habe Fieber, Er hat Husten. Pain: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "I have a fever."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "I have a headache."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Objawy: Ich habe Fieber",
+      "points": [
+        {
+          "title": "Choroba z haben, bez rodzajnika",
+          "text": "Chorobę się „ma”: Ich habe Fieber, Er hat Husten. Ból: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "Mam gorączkę."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "Boli mnie głowa."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Síntomas: Ich habe Fieber",
+      "points": [
+        {
+          "title": "Enfermedad con haben, sin artículo",
+          "text": "La enfermedad se \"tiene\": Ich habe Fieber, Er hat Husten. Dolor: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "Tengo fiebre."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "Me duele la cabeza."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Symptômes : Ich habe Fieber",
+      "points": [
+        {
+          "title": "Maladie avec haben, sans article",
+          "text": "On « a » une maladie : Ich habe Fieber, Er hat Husten. La douleur : Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "J’ai de la fièvre."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "J’ai mal à la tête."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Belirtiler: Ich habe Fieber",
+      "points": [
+        {
+          "title": "Hastalık haben ile, artikelsiz",
+          "text": "Hastalık \"sahip olunan\" bir şeydir: Ich habe Fieber, Er hat Husten. Ağrı: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "Ateşim var."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "Başım ağrıyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Simptome: Ich habe Fieber",
+      "points": [
+        {
+          "title": "Boala cu haben, fără articol",
+          "text": "Boala „o ai”: Ich habe Fieber, Er hat Husten. Durerea: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "Am febră."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "Mă doare capul."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Belgilar: Ich habe Fieber",
+      "points": [
+        {
+          "title": "Kasallik haben bilan, artiklsiz",
+          "text": "Kasallik \"bor\" bo'ladi: Ich habe Fieber, Er hat Husten. Og'riq: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "Isitmam bor."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "Boshim og'riyapti."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "लक्षण: Ich habe Fieber",
+      "points": [
+        {
+          "title": "बीमारी haben के साथ, बिना आर्टिकल",
+          "text": "बीमारी \"होती\" है: Ich habe Fieber, Er hat Husten। दर्द: Kopf + Schmerzen = Kopfschmerzen।",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "मुझे बुख़ार है।"
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "मेरे सिर में दर्द है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الأعراض: Ich habe Fieber",
+      "points": [
+        {
+          "title": "المرض مع haben بدون أداة",
+          "text": "المرض \"نملكه\": Ich habe Fieber، Er hat Husten. والألم: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "عندي حمى."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "عندي صداع."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "healer-hut-four": {
+    "ru": {
+      "title": "Как ты себя чувствуешь?",
+      "points": [
+        {
+          "title": "Готовые фразы",
+          "text": "Es geht mir gut значит «мне хорошо». Пожелать выздоровления: Gute Besserung!",
+          "examples": [
+            {
+              "de": "Wie geht es Ihnen, Frau Schulz?",
+              "tr": "Как вы себя чувствуете, госпожа Шульц?"
+            },
+            {
+              "de": "Gute Besserung, Lena!",
+              "tr": "Выздоравливай, Лена!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Як ти почуваєшся?",
+      "points": [
+        {
+          "title": "Готові фрази",
+          "text": "Es geht mir gut означає «мені добре». Побажати одужання: Gute Besserung!",
+          "examples": [
+            {
+              "de": "Wie geht es Ihnen, Frau Schulz?",
+              "tr": "Як ви почуваєтеся, пані Шульц?"
+            },
+            {
+              "de": "Gute Besserung, Lena!",
+              "tr": "Одужуй, Лено!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "How are you feeling?",
+      "points": [
+        {
+          "title": "Set phrases",
+          "text": "Es geht mir gut means \"I’m fine\". To wish someone well: Gute Besserung!",
+          "examples": [
+            {
+              "de": "Wie geht es Ihnen, Frau Schulz?",
+              "tr": "How are you, Ms Schulz?"
+            },
+            {
+              "de": "Gute Besserung, Lena!",
+              "tr": "Get well soon, Lena!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Jak się czujesz?",
+      "points": [
+        {
+          "title": "Gotowe zwroty",
+          "text": "Es geht mir gut znaczy „czuję się dobrze”. Życzyć zdrowia: Gute Besserung!",
+          "examples": [
+            {
+              "de": "Wie geht es Ihnen, Frau Schulz?",
+              "tr": "Jak się pani czuje, pani Schulz?"
+            },
+            {
+              "de": "Gute Besserung, Lena!",
+              "tr": "Zdrowiej, Lena!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿Cómo te encuentras?",
+      "points": [
+        {
+          "title": "Frases hechas",
+          "text": "Es geht mir gut significa \"estoy bien\". Para desear que se mejore: Gute Besserung!",
+          "examples": [
+            {
+              "de": "Wie geht es Ihnen, Frau Schulz?",
+              "tr": "¿Cómo se encuentra, señora Schulz?"
+            },
+            {
+              "de": "Gute Besserung, Lena!",
+              "tr": "¡Que te mejores, Lena!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Comment tu te sens ?",
+      "points": [
+        {
+          "title": "Expressions toutes faites",
+          "text": "Es geht mir gut veut dire « je vais bien ». Pour souhaiter un bon rétablissement : Gute Besserung !",
+          "examples": [
+            {
+              "de": "Wie geht es Ihnen, Frau Schulz?",
+              "tr": "Comment allez-vous, Madame Schulz ?"
+            },
+            {
+              "de": "Gute Besserung, Lena!",
+              "tr": "Bon rétablissement, Lena !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Nasıl hissediyorsun?",
+      "points": [
+        {
+          "title": "Kalıp ifadeler",
+          "text": "Es geht mir gut \"iyiyim\" demektir. Geçmiş olsun demek için: Gute Besserung!",
+          "examples": [
+            {
+              "de": "Wie geht es Ihnen, Frau Schulz?",
+              "tr": "Nasılsınız, Bayan Schulz?"
+            },
+            {
+              "de": "Gute Besserung, Lena!",
+              "tr": "Geçmiş olsun, Lena!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cum te simți?",
+      "points": [
+        {
+          "title": "Expresii fixe",
+          "text": "Es geht mir gut înseamnă „mă simt bine”. Ca să urezi însănătoșire: Gute Besserung!",
+          "examples": [
+            {
+              "de": "Wie geht es Ihnen, Frau Schulz?",
+              "tr": "Cum vă simțiți, doamnă Schulz?"
+            },
+            {
+              "de": "Gute Besserung, Lena!",
+              "tr": "Însănătoșire grabnică, Lena!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "O'zingni qanday his qilyapsan?",
+      "points": [
+        {
+          "title": "Tayyor iboralar",
+          "text": "Es geht mir gut \"o'zimni yaxshi his qilyapman\" degani. Tuzalib ketishni tilash: Gute Besserung!",
+          "examples": [
+            {
+              "de": "Wie geht es Ihnen, Frau Schulz?",
+              "tr": "O'zingizni qanday his qilyapsiz, Shulz xonim?"
+            },
+            {
+              "de": "Gute Besserung, Lena!",
+              "tr": "Tezroq tuzal, Lena!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "तुम कैसा महसूस कर रहे हो?",
+      "points": [
+        {
+          "title": "तैयार वाक्यांश",
+          "text": "Es geht mir gut मतलब \"मैं ठीक हूँ\"। जल्दी ठीक होने की शुभकामना: Gute Besserung!",
+          "examples": [
+            {
+              "de": "Wie geht es Ihnen, Frau Schulz?",
+              "tr": "आप कैसी हैं, श्रीमती शुल्ज़?"
+            },
+            {
+              "de": "Gute Besserung, Lena!",
+              "tr": "जल्दी ठीक हो जाओ, लेना!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "كيف تشعر؟",
+      "points": [
+        {
+          "title": "عبارات جاهزة",
+          "text": "Es geht mir gut تعني \"أنا بخير\". ولتتمنى الشفاء: Gute Besserung!",
+          "examples": [
+            {
+              "de": "Wie geht es Ihnen, Frau Schulz?",
+              "tr": "كيف حالك يا سيدة شولتس؟"
+            },
+            {
+              "de": "Gute Besserung, Lena!",
+              "tr": "شفاك الله يا لينا!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "healer-hut-five": {
+    "ru": {
+      "title": "Запись к врачу",
+      "points": [
+        {
+          "title": "einen Termin",
+          "text": "der Termin после möchte становится einen Termin. Подходит: Ja, das geht.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Termin.",
+              "tr": "Я хотел бы записаться на приём."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Запис до лікаря",
+      "points": [
+        {
+          "title": "einen Termin",
+          "text": "der Termin після möchte стає einen Termin. Підходить: Ja, das geht.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Termin.",
+              "tr": "Я хотів би записатися на прийом."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Making an appointment",
+      "points": [
+        {
+          "title": "einen Termin",
+          "text": "der Termin after möchte becomes einen Termin. It suits me: Ja, das geht.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Termin.",
+              "tr": "I’d like an appointment."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Zapis do lekarza",
+      "points": [
+        {
+          "title": "einen Termin",
+          "text": "der Termin po möchte zmienia się w einen Termin. Pasuje: Ja, das geht.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Termin.",
+              "tr": "Chciałbym umówić wizytę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Pedir cita",
+      "points": [
+        {
+          "title": "einen Termin",
+          "text": "der Termin después de möchte pasa a einen Termin. Me va bien: Ja, das geht.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Termin.",
+              "tr": "Quisiera una cita."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Prendre rendez-vous",
+      "points": [
+        {
+          "title": "einen Termin",
+          "text": "der Termin après möchte devient einen Termin. Ça me va : Ja, das geht.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Termin.",
+              "tr": "Je voudrais un rendez-vous."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Doktordan randevu",
+      "points": [
+        {
+          "title": "einen Termin",
+          "text": "möchte’den sonra der Termin einen Termin olur. Uygun: Ja, das geht.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Termin.",
+              "tr": "Bir randevu istiyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Programarea la medic",
+      "points": [
+        {
+          "title": "einen Termin",
+          "text": "der Termin după möchte devine einen Termin. Îmi convine: Ja, das geht.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Termin.",
+              "tr": "Aș dori o programare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Shifokorga yozilish",
+      "points": [
+        {
+          "title": "einen Termin",
+          "text": "möchte dan keyin der Termin einen Termin bo'ladi. Mos: Ja, das geht.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Termin.",
+              "tr": "Qabulga yozilmoqchiman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "डॉक्टर से अपॉइंटमेंट",
+      "points": [
+        {
+          "title": "einen Termin",
+          "text": "möchte के बाद der Termin बनता है einen Termin। ठीक है: Ja, das geht।",
+          "examples": [
+            {
+              "de": "Ich möchte einen Termin.",
+              "tr": "मुझे एक अपॉइंटमेंट चाहिए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "حجز موعد عند الطبيب",
+      "points": [
+        {
+          "title": "einen Termin",
+          "text": "بعد möchte تصبح der Termin ‏einen Termin. ومناسب: Ja, das geht.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Termin.",
+              "tr": "أودّ حجز موعد."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "healer-hut-six": {
+    "ru": {
+      "title": "У врача: es tut weh",
+      "points": [
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh значит «болит». Одна часть тела: tut weh, несколько: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "У меня болит горло."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "У меня болят ноги (стопы)."
+            }
+          ]
+        },
+        {
+          "title": "Совет врача через müssen",
+          "text": "Врач говорит, что делать: Sie müssen im Bett bleiben. Второй глагол в конце.",
+          "examples": [
+            {
+              "de": "Sie müssen im Bett bleiben.",
+              "tr": "Вам нужно лежать в постели."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "У лікаря: es tut weh",
+      "points": [
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh означає «болить». Одна частина тіла: tut weh, кілька: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "У мене болить горло."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "У мене болять ноги (стопи)."
+            }
+          ]
+        },
+        {
+          "title": "Порада лікаря через müssen",
+          "text": "Лікар каже, що робити: Sie müssen im Bett bleiben. Друге дієслово в кінці.",
+          "examples": [
+            {
+              "de": "Sie müssen im Bett bleiben.",
+              "tr": "Вам треба лежати в ліжку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "At the doctor’s: es tut weh",
+      "points": [
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh means \"hurts\". One body part: tut weh, several: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "My throat hurts."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "My feet hurt."
+            }
+          ]
+        },
+        {
+          "title": "Doctor’s advice with müssen",
+          "text": "The doctor tells you what to do: Sie müssen im Bett bleiben. The second verb goes to the end.",
+          "examples": [
+            {
+              "de": "Sie müssen im Bett bleiben.",
+              "tr": "You have to stay in bed."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "U lekarza: es tut weh",
+      "points": [
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh znaczy „boli”. Jedna część ciała: tut weh, kilka: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "Boli mnie gardło."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "Bolą mnie stopy."
+            }
+          ]
+        },
+        {
+          "title": "Rada lekarza przez müssen",
+          "text": "Lekarz mówi, co robić: Sie müssen im Bett bleiben. Drugi czasownik na końcu.",
+          "examples": [
+            {
+              "de": "Sie müssen im Bett bleiben.",
+              "tr": "Musi pan zostać w łóżku."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "En el médico: es tut weh",
+      "points": [
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh significa \"duele\". Una parte del cuerpo: tut weh, varias: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "Me duele la garganta."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "Me duelen los pies."
+            }
+          ]
+        },
+        {
+          "title": "Consejo del médico con müssen",
+          "text": "El médico dice qué hacer: Sie müssen im Bett bleiben. El segundo verbo va al final.",
+          "examples": [
+            {
+              "de": "Sie müssen im Bett bleiben.",
+              "tr": "Tiene que quedarse en la cama."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Chez le médecin : es tut weh",
+      "points": [
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh veut dire « fait mal ». Une partie du corps : tut weh, plusieurs : tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "J’ai mal à la gorge."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "J’ai mal aux pieds."
+            }
+          ]
+        },
+        {
+          "title": "Conseil du médecin avec müssen",
+          "text": "Le médecin dit quoi faire : Sie müssen im Bett bleiben. Le deuxième verbe va à la fin.",
+          "examples": [
+            {
+              "de": "Sie müssen im Bett bleiben.",
+              "tr": "Vous devez rester au lit."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Doktorda: es tut weh",
+      "points": [
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh \"ağrıyor\" demektir. Tek uzuv: tut weh, birkaç uzuv: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "Boğazım ağrıyor."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "Ayaklarım ağrıyor."
+            }
+          ]
+        },
+        {
+          "title": "Doktor tavsiyesi müssen ile",
+          "text": "Doktor ne yapacağını söyler: Sie müssen im Bett bleiben. İkinci fiil sonda.",
+          "examples": [
+            {
+              "de": "Sie müssen im Bett bleiben.",
+              "tr": "Yatakta kalmalısınız."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "La medic: es tut weh",
+      "points": [
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh înseamnă „doare”. O parte a corpului: tut weh, mai multe: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "Mă doare gâtul."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "Mă dor picioarele."
+            }
+          ]
+        },
+        {
+          "title": "Sfatul medicului cu müssen",
+          "text": "Medicul spune ce să faci: Sie müssen im Bett bleiben. Al doilea verb la final.",
+          "examples": [
+            {
+              "de": "Sie müssen im Bett bleiben.",
+              "tr": "Trebuie să stați în pat."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Shifokorda: es tut weh",
+      "points": [
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh \"og'riyapti\" degani. Bitta a'zo: tut weh, bir nechta: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "Tomog'im og'riyapti."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "Oyoqlarim og'riyapti."
+            }
+          ]
+        },
+        {
+          "title": "Shifokor maslahati müssen bilan",
+          "text": "Shifokor nima qilishni aytadi: Sie müssen im Bett bleiben. Ikkinchi fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Sie müssen im Bett bleiben.",
+              "tr": "Siz to'shakda yotishingiz kerak."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "डॉक्टर के पास: es tut weh",
+      "points": [
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh मतलब \"दर्द हो रहा है\"। एक अंग: tut weh, कई अंग: tun weh।",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "मेरे गले में दर्द है।"
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "मेरे पैरों में दर्द है।"
+            }
+          ]
+        },
+        {
+          "title": "डॉक्टर की सलाह müssen से",
+          "text": "डॉक्टर बताते हैं क्या करना है: Sie müssen im Bett bleiben। दूसरी क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Sie müssen im Bett bleiben.",
+              "tr": "आपको बिस्तर पर रहना होगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "عند الطبيب: es tut weh",
+      "points": [
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh تعني \"يؤلم\". عضو واحد: tut weh، وعدة أعضاء: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "حلقي يؤلمني."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "قدماي تؤلمانني."
+            }
+          ]
+        },
+        {
+          "title": "نصيحة الطبيب مع müssen",
+          "text": "يقول الطبيب ماذا تفعل: Sie müssen im Bett bleiben. والفعل الثاني في الآخر.",
+          "examples": [
+            {
+              "de": "Sie müssen im Bett bleiben.",
+              "tr": "يجب أن تبقى في السرير."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "healer-hut-seven": {
+    "ru": {
+      "title": "В аптеке",
+      "points": [
+        {
+          "title": "Как принимать",
+          "text": "dreimal am Tag значит «три раза в день». Лекарство «берут»: eine Tablette nehmen.",
+          "examples": [
+            {
+              "de": "Ich brauche ein Medikament.",
+              "tr": "Мне нужно лекарство."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "В аптеці",
+      "points": [
+        {
+          "title": "Як приймати",
+          "text": "dreimal am Tag означає «тричі на день». Ліки «беруть»: eine Tablette nehmen.",
+          "examples": [
+            {
+              "de": "Ich brauche ein Medikament.",
+              "tr": "Мені потрібні ліки."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "At the pharmacy",
+      "points": [
+        {
+          "title": "How to take it",
+          "text": "dreimal am Tag means \"three times a day\". Medicine is \"taken\": eine Tablette nehmen.",
+          "examples": [
+            {
+              "de": "Ich brauche ein Medikament.",
+              "tr": "I need some medicine."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "W aptece",
+      "points": [
+        {
+          "title": "Jak przyjmować",
+          "text": "dreimal am Tag znaczy „trzy razy dziennie”. Lek się „bierze”: eine Tablette nehmen.",
+          "examples": [
+            {
+              "de": "Ich brauche ein Medikament.",
+              "tr": "Potrzebuję leku."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "En la farmacia",
+      "points": [
+        {
+          "title": "Cómo tomarlo",
+          "text": "dreimal am Tag significa \"tres veces al día\". La medicina se \"toma\": eine Tablette nehmen.",
+          "examples": [
+            {
+              "de": "Ich brauche ein Medikament.",
+              "tr": "Necesito un medicamento."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "À la pharmacie",
+      "points": [
+        {
+          "title": "Comment le prendre",
+          "text": "dreimal am Tag veut dire « trois fois par jour ». On « prend » un médicament : eine Tablette nehmen.",
+          "examples": [
+            {
+              "de": "Ich brauche ein Medikament.",
+              "tr": "J’ai besoin d’un médicament."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Eczanede",
+      "points": [
+        {
+          "title": "Nasıl alınır",
+          "text": "dreimal am Tag \"günde üç kez\" demektir. İlaç \"alınır\": eine Tablette nehmen.",
+          "examples": [
+            {
+              "de": "Ich brauche ein Medikament.",
+              "tr": "Bir ilaca ihtiyacım var."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "La farmacie",
+      "points": [
+        {
+          "title": "Cum se ia",
+          "text": "dreimal am Tag înseamnă „de trei ori pe zi”. Medicamentul „se ia”: eine Tablette nehmen.",
+          "examples": [
+            {
+              "de": "Ich brauche ein Medikament.",
+              "tr": "Am nevoie de un medicament."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Dorixonada",
+      "points": [
+        {
+          "title": "Qanday ichish kerak",
+          "text": "dreimal am Tag \"kuniga uch marta\" degani. Dori \"olinadi\": eine Tablette nehmen.",
+          "examples": [
+            {
+              "de": "Ich brauche ein Medikament.",
+              "tr": "Menga dori kerak."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दवाखाने में",
+      "points": [
+        {
+          "title": "कैसे लेना है",
+          "text": "dreimal am Tag मतलब \"दिन में तीन बार\"। दवा \"ली\" जाती है: eine Tablette nehmen।",
+          "examples": [
+            {
+              "de": "Ich brauche ein Medikament.",
+              "tr": "मुझे एक दवा चाहिए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "في الصيدلية",
+      "points": [
+        {
+          "title": "كيف تأخذه",
+          "text": "dreimal am Tag تعني \"ثلاث مرات في اليوم\". والدواء \"يُؤخذ\": eine Tablette nehmen.",
+          "examples": [
+            {
+              "de": "Ich brauche ein Medikament.",
+              "tr": "أحتاج دواءً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "healer-hut-eight": {
+    "ru": {
+      "title": "Практика: я заболел",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Не можешь работать: Ich kann heute nicht arbeiten. nicht перед глаголом в конце.",
+          "examples": [
+            {
+              "de": "Heute kann ich nicht arbeiten, ich bin krank.",
+              "tr": "Сегодня я не могу работать, я болен."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: я захворів",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Не можеш працювати: Ich kann heute nicht arbeiten. nicht перед дієсловом у кінці.",
+          "examples": [
+            {
+              "de": "Heute kann ich nicht arbeiten, ich bin krank.",
+              "tr": "Сьогодні я не можу працювати, я хворий."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: I’m ill",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "You can’t work: Ich kann heute nicht arbeiten. nicht goes before the verb at the end.",
+          "examples": [
+            {
+              "de": "Heute kann ich nicht arbeiten, ich bin krank.",
+              "tr": "I can’t work today, I’m ill."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: zachorowałem",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Nie możesz pracować: Ich kann heute nicht arbeiten. nicht przed czasownikiem na końcu.",
+          "examples": [
+            {
+              "de": "Heute kann ich nicht arbeiten, ich bin krank.",
+              "tr": "Dziś nie mogę pracować, jestem chory."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: estoy enfermo",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "No puedes trabajar: Ich kann heute nicht arbeiten. nicht va delante del verbo final.",
+          "examples": [
+            {
+              "de": "Heute kann ich nicht arbeiten, ich bin krank.",
+              "tr": "Hoy no puedo trabajar, estoy enfermo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : je suis malade",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "Tu ne peux pas travailler : Ich kann heute nicht arbeiten. nicht devant le verbe final.",
+          "examples": [
+            {
+              "de": "Heute kann ich nicht arbeiten, ich bin krank.",
+              "tr": "Aujourd’hui je ne peux pas travailler, je suis malade."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: hastalandım",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Çalışamıyorsun: Ich kann heute nicht arbeiten. nicht sondaki fiilden önce.",
+          "examples": [
+            {
+              "de": "Heute kann ich nicht arbeiten, ich bin krank.",
+              "tr": "Bugün çalışamam, hastayım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: m-am îmbolnăvit",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Nu poți lucra: Ich kann heute nicht arbeiten. nicht înaintea verbului de la final.",
+          "examples": [
+            {
+              "de": "Heute kann ich nicht arbeiten, ich bin krank.",
+              "tr": "Azi nu pot lucra, sunt bolnav."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: men kasal bo'ldim",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Ishlay olmaysan: Ich kann heute nicht arbeiten. nicht oxirdagi fe'ldan oldin.",
+          "examples": [
+            {
+              "de": "Heute kann ich nicht arbeiten, ich bin krank.",
+              "tr": "Bugun ishlay olmayman, kasalman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: मैं बीमार हूँ",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "काम नहीं कर सकते: Ich kann heute nicht arbeiten। nicht अंत वाली क्रिया से पहले।",
+          "examples": [
+            {
+              "de": "Heute kann ich nicht arbeiten, ich bin krank.",
+              "tr": "आज मैं काम नहीं कर सकता, मैं बीमार हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: أنا مريض",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "لا تستطيع العمل: Ich kann heute nicht arbeiten. وnicht قبل الفعل الأخير.",
+          "examples": [
+            {
+              "de": "Heute kann ich nicht arbeiten, ich bin krank.",
+              "tr": "لا أستطيع العمل اليوم، أنا مريض."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "healer-hut-nine": {
+    "ru": {
+      "title": "Повторение: тело и здоровье",
+      "points": [
+        {
+          "title": "Болезнь с haben, без артикля",
+          "text": "Болезни «имеют»: Ich habe Fieber, Er hat Husten. Боль: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "У меня температура."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "У меня болит голова."
+            }
+          ]
+        },
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh значит «болит». Одна часть тела: tut weh, несколько: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "У меня болит горло."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "У меня болят ноги (стопы)."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: тіло і здоров’я",
+      "points": [
+        {
+          "title": "Хвороба з haben, без артикля",
+          "text": "Хвороби «мають»: Ich habe Fieber, Er hat Husten. Біль: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "У мене температура."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "У мене болить голова."
+            }
+          ]
+        },
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh означає «болить». Одна частина тіла: tut weh, кілька: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "У мене болить горло."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "У мене болять ноги (стопи)."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: body and health",
+      "points": [
+        {
+          "title": "Illness with haben, no article",
+          "text": "You \"have\" an illness: Ich habe Fieber, Er hat Husten. Pain: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "I have a fever."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "I have a headache."
+            }
+          ]
+        },
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh means \"hurts\". One body part: tut weh, several: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "My throat hurts."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "My feet hurt."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: ciało i zdrowie",
+      "points": [
+        {
+          "title": "Choroba z haben, bez rodzajnika",
+          "text": "Chorobę się „ma”: Ich habe Fieber, Er hat Husten. Ból: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "Mam gorączkę."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "Boli mnie głowa."
+            }
+          ]
+        },
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh znaczy „boli”. Jedna część ciała: tut weh, kilka: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "Boli mnie gardło."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "Bolą mnie stopy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: cuerpo y salud",
+      "points": [
+        {
+          "title": "Enfermedad con haben, sin artículo",
+          "text": "La enfermedad se \"tiene\": Ich habe Fieber, Er hat Husten. Dolor: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "Tengo fiebre."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "Me duele la cabeza."
+            }
+          ]
+        },
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh significa \"duele\". Una parte del cuerpo: tut weh, varias: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "Me duele la garganta."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "Me duelen los pies."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : corps et santé",
+      "points": [
+        {
+          "title": "Maladie avec haben, sans article",
+          "text": "On « a » une maladie : Ich habe Fieber, Er hat Husten. La douleur : Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "J’ai de la fièvre."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "J’ai mal à la tête."
+            }
+          ]
+        },
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh veut dire « fait mal ». Une partie du corps : tut weh, plusieurs : tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "J’ai mal à la gorge."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "J’ai mal aux pieds."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: vücut ve sağlık",
+      "points": [
+        {
+          "title": "Hastalık haben ile, artikelsiz",
+          "text": "Hastalık \"sahip olunan\" bir şeydir: Ich habe Fieber, Er hat Husten. Ağrı: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "Ateşim var."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "Başım ağrıyor."
+            }
+          ]
+        },
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh \"ağrıyor\" demektir. Tek uzuv: tut weh, birkaç uzuv: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "Boğazım ağrıyor."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "Ayaklarım ağrıyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: corp și sănătate",
+      "points": [
+        {
+          "title": "Boala cu haben, fără articol",
+          "text": "Boala „o ai”: Ich habe Fieber, Er hat Husten. Durerea: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "Am febră."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "Mă doare capul."
+            }
+          ]
+        },
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh înseamnă „doare”. O parte a corpului: tut weh, mai multe: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "Mă doare gâtul."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "Mă dor picioarele."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: tana va sog'liq",
+      "points": [
+        {
+          "title": "Kasallik haben bilan, artiklsiz",
+          "text": "Kasallik \"bor\" bo'ladi: Ich habe Fieber, Er hat Husten. Og'riq: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "Isitmam bor."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "Boshim og'riyapti."
+            }
+          ]
+        },
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh \"og'riyapti\" degani. Bitta a'zo: tut weh, bir nechta: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "Tomog'im og'riyapti."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "Oyoqlarim og'riyapti."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: शरीर और स्वास्थ्य",
+      "points": [
+        {
+          "title": "बीमारी haben के साथ, बिना आर्टिकल",
+          "text": "बीमारी \"होती\" है: Ich habe Fieber, Er hat Husten। दर्द: Kopf + Schmerzen = Kopfschmerzen।",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "मुझे बुख़ार है।"
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "मेरे सिर में दर्द है।"
+            }
+          ]
+        },
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh मतलब \"दर्द हो रहा है\"। एक अंग: tut weh, कई अंग: tun weh।",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "मेरे गले में दर्द है।"
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "मेरे पैरों में दर्द है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الجسم والصحة",
+      "points": [
+        {
+          "title": "المرض مع haben بدون أداة",
+          "text": "المرض \"نملكه\": Ich habe Fieber، Er hat Husten. والألم: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "عندي حمى."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "عندي صداع."
+            }
+          ]
+        },
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh تعني \"يؤلم\". عضو واحد: tut weh، وعدة أعضاء: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "حلقي يؤلمني."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "قدماي تؤلمانني."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "healer-hut-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh значит «болит». Одна часть тела: tut weh, несколько: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "У меня болит горло."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "У меня болят ноги (стопы)."
+            }
+          ]
+        },
+        {
+          "title": "Болезнь с haben, без артикля",
+          "text": "Болезни «имеют»: Ich habe Fieber, Er hat Husten. Боль: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "У меня температура."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "У меня болит голова."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh означає «болить». Одна частина тіла: tut weh, кілька: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "У мене болить горло."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "У мене болять ноги (стопи)."
+            }
+          ]
+        },
+        {
+          "title": "Хвороба з haben, без артикля",
+          "text": "Хвороби «мають»: Ich habe Fieber, Er hat Husten. Біль: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "У мене температура."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "У мене болить голова."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh means \"hurts\". One body part: tut weh, several: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "My throat hurts."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "My feet hurt."
+            }
+          ]
+        },
+        {
+          "title": "Illness with haben, no article",
+          "text": "You \"have\" an illness: Ich habe Fieber, Er hat Husten. Pain: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "I have a fever."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "I have a headache."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh znaczy „boli”. Jedna część ciała: tut weh, kilka: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "Boli mnie gardło."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "Bolą mnie stopy."
+            }
+          ]
+        },
+        {
+          "title": "Choroba z haben, bez rodzajnika",
+          "text": "Chorobę się „ma”: Ich habe Fieber, Er hat Husten. Ból: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "Mam gorączkę."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "Boli mnie głowa."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh significa \"duele\". Una parte del cuerpo: tut weh, varias: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "Me duele la garganta."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "Me duelen los pies."
+            }
+          ]
+        },
+        {
+          "title": "Enfermedad con haben, sin artículo",
+          "text": "La enfermedad se \"tiene\": Ich habe Fieber, Er hat Husten. Dolor: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "Tengo fiebre."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "Me duele la cabeza."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh veut dire « fait mal ». Une partie du corps : tut weh, plusieurs : tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "J’ai mal à la gorge."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "J’ai mal aux pieds."
+            }
+          ]
+        },
+        {
+          "title": "Maladie avec haben, sans article",
+          "text": "On « a » une maladie : Ich habe Fieber, Er hat Husten. La douleur : Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "J’ai de la fièvre."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "J’ai mal à la tête."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh \"ağrıyor\" demektir. Tek uzuv: tut weh, birkaç uzuv: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "Boğazım ağrıyor."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "Ayaklarım ağrıyor."
+            }
+          ]
+        },
+        {
+          "title": "Hastalık haben ile, artikelsiz",
+          "text": "Hastalık \"sahip olunan\" bir şeydir: Ich habe Fieber, Er hat Husten. Ağrı: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "Ateşim var."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "Başım ağrıyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh înseamnă „doare”. O parte a corpului: tut weh, mai multe: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "Mă doare gâtul."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "Mă dor picioarele."
+            }
+          ]
+        },
+        {
+          "title": "Boala cu haben, fără articol",
+          "text": "Boala „o ai”: Ich habe Fieber, Er hat Husten. Durerea: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "Am febră."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "Mă doare capul."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh \"og'riyapti\" degani. Bitta a'zo: tut weh, bir nechta: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "Tomog'im og'riyapti."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "Oyoqlarim og'riyapti."
+            }
+          ]
+        },
+        {
+          "title": "Kasallik haben bilan, artiklsiz",
+          "text": "Kasallik \"bor\" bo'ladi: Ich habe Fieber, Er hat Husten. Og'riq: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "Isitmam bor."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "Boshim og'riyapti."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh मतलब \"दर्द हो रहा है\"। एक अंग: tut weh, कई अंग: tun weh।",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "मेरे गले में दर्द है।"
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "मेरे पैरों में दर्द है।"
+            }
+          ]
+        },
+        {
+          "title": "बीमारी haben के साथ, बिना आर्टिकल",
+          "text": "बीमारी \"होती\" है: Ich habe Fieber, Er hat Husten। दर्द: Kopf + Schmerzen = Kopfschmerzen।",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "मुझे बुख़ार है।"
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "मेरे सिर में दर्द है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh تعني \"يؤلم\". عضو واحد: tut weh، وعدة أعضاء: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "حلقي يؤلمني."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "قدماي تؤلمانني."
+            }
+          ]
+        },
+        {
+          "title": "المرض مع haben بدون أداة",
+          "text": "المرض \"نملكه\": Ich habe Fieber، Er hat Husten. والألم: Kopf + Schmerzen = Kopfschmerzen.",
+          "examples": [
+            {
+              "de": "Ich habe Fieber.",
+              "tr": "عندي حمى."
+            },
+            {
+              "de": "Ich habe Kopfschmerzen.",
+              "tr": "عندي صداع."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

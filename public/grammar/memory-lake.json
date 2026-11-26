@@ -1,0 +1,2662 @@
+{
+  "memory-lake-one": {
+    "ru": {
+      "title": "Уже успел: hatte + Partizip",
+      "points": [
+        {
+          "title": "Plusquamperfekt: ещё раньше",
+          "text": "Действие, которое было раньше другого: hatte или war + Partizip II. war для движения и изменения, как в Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Когда он пришёл, я уже поел."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Когда я позвонил, он уже ушёл."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Уже встиг: hatte + Partizip",
+      "points": [
+        {
+          "title": "Plusquamperfekt: ще раніше",
+          "text": "Дія, що була раніше за іншу: hatte або war + Partizip II. war для руху й зміни, як у Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Коли він прийшов, я вже поїв."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Коли я зателефонував, він уже пішов."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Had already: hatte + Partizip",
+      "points": [
+        {
+          "title": "Plusquamperfekt: even earlier",
+          "text": "An action that happened before another one: hatte or war + Partizip II. war for movement and change, as in Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "When he came, I had already eaten."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "When I called, he had already left."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Już zdążyłem: hatte + Partizip",
+      "points": [
+        {
+          "title": "Plusquamperfekt: jeszcze wcześniej",
+          "text": "Czynność wcześniejsza od innej: hatte albo war + Partizip II. war przy ruchu i zmianie, jak w Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Kiedy przyszedł, już zjadłem."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Kiedy zadzwoniłem, on już wyszedł."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Ya había: hatte + Partizip",
+      "points": [
+        {
+          "title": "Plusquamperfekt: aún antes",
+          "text": "Una acción anterior a otra: hatte o war + Partizip II. war para el movimiento y el cambio, como en el Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Cuando llegó, yo ya había comido."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Cuando llamé, él ya se había ido."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "J’avais déjà : hatte + Partizip",
+      "points": [
+        {
+          "title": "Plusquamperfekt : encore avant",
+          "text": "Une action antérieure à une autre : hatte ou war + Partizip II. war pour le mouvement et le changement, comme au Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Quand il est arrivé, j’avais déjà mangé."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Quand j’ai appelé, il était déjà parti."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Çoktan: hatte + Partizip",
+      "points": [
+        {
+          "title": "Plusquamperfekt: daha önce",
+          "text": "Başka bir eylemden önce olan eylem: hatte ya da war + Partizip II. Hareket ve değişim için war, Perfekt’teki gibi.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "O geldiğinde ben çoktan yemiştim."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Aradığımda o çoktan gitmişti."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Deja: hatte + Partizip",
+      "points": [
+        {
+          "title": "Plusquamperfekt: și mai înainte",
+          "text": "O acțiune petrecută înaintea alteia: hatte sau war + Partizip II. war pentru mișcare și schimbare, ca la Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Când a venit, mâncasem deja."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Când am sunat, el plecase deja."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Allaqachon: hatte + Partizip",
+      "points": [
+        {
+          "title": "Plusquamperfekt: yanada oldin",
+          "text": "Boshqasidan oldin bo'lgan harakat: hatte yoki war + Partizip II. Harakat va o'zgarish uchun war, Perfekt dagidek.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "U kelganda men allaqachon ovqatlanib bo‘lgan edim."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Men qo'ng'iroq qilganimda u allaqachon ketgan edi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "पहले ही: hatte + Partizip",
+      "points": [
+        {
+          "title": "Plusquamperfekt: उससे भी पहले",
+          "text": "जो काम दूसरे से पहले हुआ: hatte या war + Partizip II। गति और बदलाव के लिए war, Perfekt की तरह।",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "जब वह आया, मैं खाना खा चुका था।"
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "जब मैंने फ़ोन किया, वह जा चुका था।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "كان قد: hatte + Partizip",
+      "points": [
+        {
+          "title": "Plusquamperfekt: قبل ذلك",
+          "text": "فعل حدث قبل فعل آخر: hatte أو war + Partizip II. وwar للحركة والتغير كما في Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "عندما جاء كنت قد أكلت."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "عندما اتصلت كان قد ذهب."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "memory-lake-two": {
+    "ru": {
+      "title": "Уже ушёл: war + Partizip",
+      "points": [
+        {
+          "title": "Plusquamperfekt: ещё раньше",
+          "text": "Действие, которое было раньше другого: hatte или war + Partizip II. war для движения и изменения, как в Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Когда он пришёл, я уже поел."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Когда я позвонил, он уже ушёл."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Уже пішов: war + Partizip",
+      "points": [
+        {
+          "title": "Plusquamperfekt: ще раніше",
+          "text": "Дія, що була раніше за іншу: hatte або war + Partizip II. war для руху й зміни, як у Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Коли він прийшов, я вже поїв."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Коли я зателефонував, він уже пішов."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Had already left: war + Partizip",
+      "points": [
+        {
+          "title": "Plusquamperfekt: even earlier",
+          "text": "An action that happened before another one: hatte or war + Partizip II. war for movement and change, as in Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "When he came, I had already eaten."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "When I called, he had already left."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Już wyszedł: war + Partizip",
+      "points": [
+        {
+          "title": "Plusquamperfekt: jeszcze wcześniej",
+          "text": "Czynność wcześniejsza od innej: hatte albo war + Partizip II. war przy ruchu i zmianie, jak w Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Kiedy przyszedł, już zjadłem."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Kiedy zadzwoniłem, on już wyszedł."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Ya se había ido: war + Partizip",
+      "points": [
+        {
+          "title": "Plusquamperfekt: aún antes",
+          "text": "Una acción anterior a otra: hatte o war + Partizip II. war para el movimiento y el cambio, como en el Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Cuando llegó, yo ya había comido."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Cuando llamé, él ya se había ido."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Il était déjà parti : war + Partizip",
+      "points": [
+        {
+          "title": "Plusquamperfekt : encore avant",
+          "text": "Une action antérieure à une autre : hatte ou war + Partizip II. war pour le mouvement et le changement, comme au Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Quand il est arrivé, j’avais déjà mangé."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Quand j’ai appelé, il était déjà parti."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Çoktan gitmişti: war + Partizip",
+      "points": [
+        {
+          "title": "Plusquamperfekt: daha önce",
+          "text": "Başka bir eylemden önce olan eylem: hatte ya da war + Partizip II. Hareket ve değişim için war, Perfekt’teki gibi.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "O geldiğinde ben çoktan yemiştim."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Aradığımda o çoktan gitmişti."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Plecase deja: war + Partizip",
+      "points": [
+        {
+          "title": "Plusquamperfekt: și mai înainte",
+          "text": "O acțiune petrecută înaintea alteia: hatte sau war + Partizip II. war pentru mișcare și schimbare, ca la Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Când a venit, mâncasem deja."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Când am sunat, el plecase deja."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Allaqachon ketgan: war + Partizip",
+      "points": [
+        {
+          "title": "Plusquamperfekt: yanada oldin",
+          "text": "Boshqasidan oldin bo'lgan harakat: hatte yoki war + Partizip II. Harakat va o'zgarish uchun war, Perfekt dagidek.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "U kelganda men allaqachon ovqatlanib bo‘lgan edim."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Men qo'ng'iroq qilganimda u allaqachon ketgan edi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "जा चुका था: war + Partizip",
+      "points": [
+        {
+          "title": "Plusquamperfekt: उससे भी पहले",
+          "text": "जो काम दूसरे से पहले हुआ: hatte या war + Partizip II। गति और बदलाव के लिए war, Perfekt की तरह।",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "जब वह आया, मैं खाना खा चुका था।"
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "जब मैंने फ़ोन किया, वह जा चुका था।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "كان قد ذهب: war + Partizip",
+      "points": [
+        {
+          "title": "Plusquamperfekt: قبل ذلك",
+          "text": "فعل حدث قبل فعل آخر: hatte أو war + Partizip II. وwar للحركة والتغير كما في Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "عندما جاء كنت قد أكلت."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "عندما اتصلت كان قد ذهب."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "memory-lake-three": {
+    "ru": {
+      "title": "После того как: nachdem",
+      "points": [
+        {
+          "title": "nachdem: после того как",
+          "text": "После nachdem Plusquamperfekt, в главном Präteritum. Глагол в придаточном в конце, главное начинается с глагола.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "После того как я поел, я пошёл гулять."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Після того як: nachdem",
+      "points": [
+        {
+          "title": "nachdem: після того як",
+          "text": "Після nachdem Plusquamperfekt, у головному Präteritum. Дієслово в підрядному в кінці, головне починається з дієслова.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Після того як я поїв, я пішов гуляти."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "After: nachdem",
+      "points": [
+        {
+          "title": "nachdem: after",
+          "text": "After nachdem use Plusquamperfekt, in the main clause Präteritum. The verb goes last in the clause, and the main clause starts with the verb.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "After I had eaten, I went for a walk."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Po tym jak: nachdem",
+      "points": [
+        {
+          "title": "nachdem: po tym jak",
+          "text": "Po nachdem Plusquamperfekt, w zdaniu głównym Präteritum. Czasownik w podrzędnym na końcu, główne zaczyna się od czasownika.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Po tym jak zjadłem, poszedłem na spacer."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Después de: nachdem",
+      "points": [
+        {
+          "title": "nachdem: después de que",
+          "text": "Tras nachdem, Plusquamperfekt; en la principal, Präteritum. El verbo va al final de la subordinada y la principal empieza por el verbo.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Después de comer, fui a pasear."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Après : nachdem",
+      "points": [
+        {
+          "title": "nachdem : après que",
+          "text": "Après nachdem, Plusquamperfekt ; dans la principale, Präteritum. Le verbe va à la fin de la subordonnée, la principale commence par le verbe.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Après avoir mangé, je suis allé me promener."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sonra: nachdem",
+      "points": [
+        {
+          "title": "nachdem: -dikten sonra",
+          "text": "nachdem’den sonra Plusquamperfekt, ana cümlede Präteritum. Yan cümlede fiil sonda, ana cümle fiille başlar.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Yemek yedikten sonra yürüyüşe çıktım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "După ce: nachdem",
+      "points": [
+        {
+          "title": "nachdem: după ce",
+          "text": "După nachdem Plusquamperfekt, în principală Präteritum. Verbul la finalul subordonatei, principala începe cu verbul.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "După ce am mâncat, am ieșit la plimbare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Keyin: nachdem",
+      "points": [
+        {
+          "title": "nachdem: ...gandan keyin",
+          "text": "nachdem dan keyin Plusquamperfekt, bosh gapda Präteritum. Ergash gapda fe'l oxirida, bosh gap fe'l bilan boshlanadi.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Ovqatlangandan keyin sayrga chiqdim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "के बाद: nachdem",
+      "points": [
+        {
+          "title": "nachdem: के बाद",
+          "text": "nachdem के बाद Plusquamperfekt, मुख्य वाक्य में Präteritum। उपवाक्य में क्रिया अंत में, मुख्य वाक्य क्रिया से शुरू।",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "खाना खाने के बाद मैं टहलने गया।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "بعد أن: nachdem",
+      "points": [
+        {
+          "title": "nachdem: بعد أن",
+          "text": "بعد nachdem يأتي Plusquamperfekt، وفي الجملة الرئيسية Präteritum. والفعل في آخر الفرعية، والرئيسية تبدأ بالفعل.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "بعد أن أكلت خرجت للتنزه."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "memory-lake-four": {
+    "ru": {
+      "title": "Прежде чем: bevor",
+      "points": [
+        {
+          "title": "bevor: прежде чем",
+          "text": "bevor значит «прежде чем». Обычно в обеих частях одно время. Глагол в придаточном в конце.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Прежде чем уйти, я выключил свет."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Перш ніж: bevor",
+      "points": [
+        {
+          "title": "bevor: перш ніж",
+          "text": "bevor означає «перш ніж». Зазвичай в обох частинах один час. Дієслово в підрядному в кінці.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Перш ніж піти, я вимкнув світло."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Before: bevor",
+      "points": [
+        {
+          "title": "bevor: before",
+          "text": "bevor means \"before\". Usually both parts are in the same tense. The verb goes to the end of the clause.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Before I left, I turned off the light."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Zanim: bevor",
+      "points": [
+        {
+          "title": "bevor: zanim",
+          "text": "bevor znaczy „zanim”. Zwykle w obu częściach ten sam czas. Czasownik w podrzędnym na końcu.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Zanim wyszedłem, zgasiłem światło."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Antes de: bevor",
+      "points": [
+        {
+          "title": "bevor: antes de que",
+          "text": "bevor significa \"antes de que\". Normalmente ambas partes van en el mismo tiempo. El verbo al final de la subordinada.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Antes de irme, apagué la luz."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Avant : bevor",
+      "points": [
+        {
+          "title": "bevor : avant que",
+          "text": "bevor veut dire « avant que ». En général, les deux parties sont au même temps. Le verbe à la fin de la subordonnée.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Avant de partir, j’ai éteint la lumière."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Önce: bevor",
+      "points": [
+        {
+          "title": "bevor: -meden önce",
+          "text": "bevor \"-meden önce\" demektir. Genelde iki kısım aynı zamanda. Yan cümlede fiil sonda.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Çıkmadan önce ışığı kapattım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Înainte: bevor",
+      "points": [
+        {
+          "title": "bevor: înainte să",
+          "text": "bevor înseamnă „înainte să”. De obicei ambele părți au același timp. Verbul la finalul subordonatei.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Înainte să plec, am stins lumina."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Oldin: bevor",
+      "points": [
+        {
+          "title": "bevor: ...dan oldin",
+          "text": "bevor \"...dan oldin\" degani. Odatda ikki qismda bir zamon. Ergash gapda fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Ketishdan oldin chiroqni o'chirdim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "से पहले: bevor",
+      "points": [
+        {
+          "title": "bevor: से पहले",
+          "text": "bevor मतलब \"से पहले\"। आमतौर पर दोनों हिस्सों में एक ही काल। उपवाक्य में क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "जाने से पहले मैंने बत्ती बुझाई।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "قبل أن: bevor",
+      "points": [
+        {
+          "title": "bevor: قبل أن",
+          "text": "bevor تعني \"قبل أن\". وعادة يكون الجزآن بالزمن نفسه. والفعل في آخر الفرعية.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "قبل أن أخرج أطفأت الضوء."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "memory-lake-five": {
+    "ru": {
+      "title": "Пока: während",
+      "points": [
+        {
+          "title": "während: пока",
+          "text": "während значит «пока, в то время как»: два действия одновременно. Глагол в придаточном в конце.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Пока я готовил, он смотрел телевизор."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Поки: während",
+      "points": [
+        {
+          "title": "während: поки",
+          "text": "während означає «поки, у той час як»: дві дії одночасно. Дієслово в підрядному в кінці.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Поки я готував, він дивився телевізор."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "While: während",
+      "points": [
+        {
+          "title": "während: while",
+          "text": "während means \"while\": two actions at the same time. The verb goes to the end of the clause.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "While I was cooking, he watched TV."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Podczas gdy: während",
+      "points": [
+        {
+          "title": "während: podczas gdy",
+          "text": "während znaczy „podczas gdy”: dwie czynności naraz. Czasownik w podrzędnym na końcu.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Kiedy gotowałem, on oglądał telewizję."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Mientras: während",
+      "points": [
+        {
+          "title": "während: mientras",
+          "text": "während significa \"mientras\": dos acciones a la vez. El verbo al final de la subordinada.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Mientras yo cocinaba, él veía la tele."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pendant que : während",
+      "points": [
+        {
+          "title": "während : pendant que",
+          "text": "während veut dire « pendant que » : deux actions en même temps. Le verbe à la fin de la subordonnée.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Pendant que je cuisinais, il regardait la télé."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "İken: während",
+      "points": [
+        {
+          "title": "während: -iken",
+          "text": "während \"-iken, -dığı sırada\" demektir: iki eylem aynı anda. Yan cümlede fiil sonda.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Ben yemek yaparken o televizyon izledi."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "În timp ce: während",
+      "points": [
+        {
+          "title": "während: în timp ce",
+          "text": "während înseamnă „în timp ce”: două acțiuni simultane. Verbul la finalul subordonatei.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "În timp ce găteam, el se uita la televizor."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ayni paytda: während",
+      "points": [
+        {
+          "title": "während: ...ayotganda",
+          "text": "während \"...ayotganda\" degani: ikki harakat bir vaqtda. Ergash gapda fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Men ovqat pishirayotganimda u televizor ko'rdi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "जबकि: während",
+      "points": [
+        {
+          "title": "während: जबकि, तब तक",
+          "text": "während मतलब \"जबकि, उसी समय\": दो काम एक साथ। उपवाक्य में क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "जब मैं खाना बना रहा था, वह टीवी देख रहा था।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "بينما: während",
+      "points": [
+        {
+          "title": "während: بينما",
+          "text": "während تعني \"بينما\": فعلان في الوقت نفسه. والفعل في آخر الفرعية.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "بينما كنت أطبخ كان يشاهد التلفاز."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "memory-lake-six": {
+    "ru": {
+      "title": "Воспоминания",
+      "points": [
+        {
+          "title": "Plusquamperfekt: ещё раньше",
+          "text": "Действие, которое было раньше другого: hatte или war + Partizip II. war для движения и изменения, как в Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Когда он пришёл, я уже поел."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Когда я позвонил, он уже ушёл."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: после того как",
+          "text": "После nachdem Plusquamperfekt, в главном Präteritum. Глагол в придаточном в конце, главное начинается с глагола.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "После того как я поел, я пошёл гулять."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Спогади",
+      "points": [
+        {
+          "title": "Plusquamperfekt: ще раніше",
+          "text": "Дія, що була раніше за іншу: hatte або war + Partizip II. war для руху й зміни, як у Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Коли він прийшов, я вже поїв."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Коли я зателефонував, він уже пішов."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: після того як",
+          "text": "Після nachdem Plusquamperfekt, у головному Präteritum. Дієслово в підрядному в кінці, головне починається з дієслова.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Після того як я поїв, я пішов гуляти."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Memories",
+      "points": [
+        {
+          "title": "Plusquamperfekt: even earlier",
+          "text": "An action that happened before another one: hatte or war + Partizip II. war for movement and change, as in Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "When he came, I had already eaten."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "When I called, he had already left."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: after",
+          "text": "After nachdem use Plusquamperfekt, in the main clause Präteritum. The verb goes last in the clause, and the main clause starts with the verb.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "After I had eaten, I went for a walk."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Wspomnienia",
+      "points": [
+        {
+          "title": "Plusquamperfekt: jeszcze wcześniej",
+          "text": "Czynność wcześniejsza od innej: hatte albo war + Partizip II. war przy ruchu i zmianie, jak w Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Kiedy przyszedł, już zjadłem."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Kiedy zadzwoniłem, on już wyszedł."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: po tym jak",
+          "text": "Po nachdem Plusquamperfekt, w zdaniu głównym Präteritum. Czasownik w podrzędnym na końcu, główne zaczyna się od czasownika.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Po tym jak zjadłem, poszedłem na spacer."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Recuerdos",
+      "points": [
+        {
+          "title": "Plusquamperfekt: aún antes",
+          "text": "Una acción anterior a otra: hatte o war + Partizip II. war para el movimiento y el cambio, como en el Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Cuando llegó, yo ya había comido."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Cuando llamé, él ya se había ido."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: después de que",
+          "text": "Tras nachdem, Plusquamperfekt; en la principal, Präteritum. El verbo va al final de la subordinada y la principal empieza por el verbo.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Después de comer, fui a pasear."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Souvenirs",
+      "points": [
+        {
+          "title": "Plusquamperfekt : encore avant",
+          "text": "Une action antérieure à une autre : hatte ou war + Partizip II. war pour le mouvement et le changement, comme au Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Quand il est arrivé, j’avais déjà mangé."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Quand j’ai appelé, il était déjà parti."
+            }
+          ]
+        },
+        {
+          "title": "nachdem : après que",
+          "text": "Après nachdem, Plusquamperfekt ; dans la principale, Präteritum. Le verbe va à la fin de la subordonnée, la principale commence par le verbe.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Après avoir mangé, je suis allé me promener."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Anılar",
+      "points": [
+        {
+          "title": "Plusquamperfekt: daha önce",
+          "text": "Başka bir eylemden önce olan eylem: hatte ya da war + Partizip II. Hareket ve değişim için war, Perfekt’teki gibi.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "O geldiğinde ben çoktan yemiştim."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Aradığımda o çoktan gitmişti."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: -dikten sonra",
+          "text": "nachdem’den sonra Plusquamperfekt, ana cümlede Präteritum. Yan cümlede fiil sonda, ana cümle fiille başlar.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Yemek yedikten sonra yürüyüşe çıktım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Amintiri",
+      "points": [
+        {
+          "title": "Plusquamperfekt: și mai înainte",
+          "text": "O acțiune petrecută înaintea alteia: hatte sau war + Partizip II. war pentru mișcare și schimbare, ca la Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Când a venit, mâncasem deja."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Când am sunat, el plecase deja."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: după ce",
+          "text": "După nachdem Plusquamperfekt, în principală Präteritum. Verbul la finalul subordonatei, principala începe cu verbul.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "După ce am mâncat, am ieșit la plimbare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Xotiralar",
+      "points": [
+        {
+          "title": "Plusquamperfekt: yanada oldin",
+          "text": "Boshqasidan oldin bo'lgan harakat: hatte yoki war + Partizip II. Harakat va o'zgarish uchun war, Perfekt dagidek.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "U kelganda men allaqachon ovqatlanib bo‘lgan edim."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Men qo'ng'iroq qilganimda u allaqachon ketgan edi."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: ...gandan keyin",
+          "text": "nachdem dan keyin Plusquamperfekt, bosh gapda Präteritum. Ergash gapda fe'l oxirida, bosh gap fe'l bilan boshlanadi.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Ovqatlangandan keyin sayrga chiqdim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "यादें",
+      "points": [
+        {
+          "title": "Plusquamperfekt: उससे भी पहले",
+          "text": "जो काम दूसरे से पहले हुआ: hatte या war + Partizip II। गति और बदलाव के लिए war, Perfekt की तरह।",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "जब वह आया, मैं खाना खा चुका था।"
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "जब मैंने फ़ोन किया, वह जा चुका था।"
+            }
+          ]
+        },
+        {
+          "title": "nachdem: के बाद",
+          "text": "nachdem के बाद Plusquamperfekt, मुख्य वाक्य में Präteritum। उपवाक्य में क्रिया अंत में, मुख्य वाक्य क्रिया से शुरू।",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "खाना खाने के बाद मैं टहलने गया।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الذكريات",
+      "points": [
+        {
+          "title": "Plusquamperfekt: قبل ذلك",
+          "text": "فعل حدث قبل فعل آخر: hatte أو war + Partizip II. وwar للحركة والتغير كما في Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "عندما جاء كنت قد أكلت."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "عندما اتصلت كان قد ذهب."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: بعد أن",
+          "text": "بعد nachdem يأتي Plusquamperfekt، وفي الجملة الرئيسية Präteritum. والفعل في آخر الفرعية، والرئيسية تبدأ بالفعل.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "بعد أن أكلت خرجت للتنزه."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "memory-lake-seven": {
+    "ru": {
+      "title": "Практика: в аэропорту",
+      "points": [
+        {
+          "title": "nachdem: после того как",
+          "text": "После nachdem Plusquamperfekt, в главном Präteritum. Глагол в придаточном в конце, главное начинается с глагола.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "После того как я поел, я пошёл гулять."
+            }
+          ]
+        },
+        {
+          "title": "bevor: прежде чем",
+          "text": "bevor значит «прежде чем». Обычно в обеих частях одно время. Глагол в придаточном в конце.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Прежде чем уйти, я выключил свет."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: в аеропорту",
+      "points": [
+        {
+          "title": "nachdem: після того як",
+          "text": "Після nachdem Plusquamperfekt, у головному Präteritum. Дієслово в підрядному в кінці, головне починається з дієслова.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Після того як я поїв, я пішов гуляти."
+            }
+          ]
+        },
+        {
+          "title": "bevor: перш ніж",
+          "text": "bevor означає «перш ніж». Зазвичай в обох частинах один час. Дієслово в підрядному в кінці.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Перш ніж піти, я вимкнув світло."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: at the airport",
+      "points": [
+        {
+          "title": "nachdem: after",
+          "text": "After nachdem use Plusquamperfekt, in the main clause Präteritum. The verb goes last in the clause, and the main clause starts with the verb.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "After I had eaten, I went for a walk."
+            }
+          ]
+        },
+        {
+          "title": "bevor: before",
+          "text": "bevor means \"before\". Usually both parts are in the same tense. The verb goes to the end of the clause.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Before I left, I turned off the light."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: na lotnisku",
+      "points": [
+        {
+          "title": "nachdem: po tym jak",
+          "text": "Po nachdem Plusquamperfekt, w zdaniu głównym Präteritum. Czasownik w podrzędnym na końcu, główne zaczyna się od czasownika.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Po tym jak zjadłem, poszedłem na spacer."
+            }
+          ]
+        },
+        {
+          "title": "bevor: zanim",
+          "text": "bevor znaczy „zanim”. Zwykle w obu częściach ten sam czas. Czasownik w podrzędnym na końcu.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Zanim wyszedłem, zgasiłem światło."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: en el aeropuerto",
+      "points": [
+        {
+          "title": "nachdem: después de que",
+          "text": "Tras nachdem, Plusquamperfekt; en la principal, Präteritum. El verbo va al final de la subordinada y la principal empieza por el verbo.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Después de comer, fui a pasear."
+            }
+          ]
+        },
+        {
+          "title": "bevor: antes de que",
+          "text": "bevor significa \"antes de que\". Normalmente ambas partes van en el mismo tiempo. El verbo al final de la subordinada.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Antes de irme, apagué la luz."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : à l’aéroport",
+      "points": [
+        {
+          "title": "nachdem : après que",
+          "text": "Après nachdem, Plusquamperfekt ; dans la principale, Präteritum. Le verbe va à la fin de la subordonnée, la principale commence par le verbe.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Après avoir mangé, je suis allé me promener."
+            }
+          ]
+        },
+        {
+          "title": "bevor : avant que",
+          "text": "bevor veut dire « avant que ». En général, les deux parties sont au même temps. Le verbe à la fin de la subordonnée.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Avant de partir, j’ai éteint la lumière."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: havalimanında",
+      "points": [
+        {
+          "title": "nachdem: -dikten sonra",
+          "text": "nachdem’den sonra Plusquamperfekt, ana cümlede Präteritum. Yan cümlede fiil sonda, ana cümle fiille başlar.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Yemek yedikten sonra yürüyüşe çıktım."
+            }
+          ]
+        },
+        {
+          "title": "bevor: -meden önce",
+          "text": "bevor \"-meden önce\" demektir. Genelde iki kısım aynı zamanda. Yan cümlede fiil sonda.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Çıkmadan önce ışığı kapattım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: la aeroport",
+      "points": [
+        {
+          "title": "nachdem: după ce",
+          "text": "După nachdem Plusquamperfekt, în principală Präteritum. Verbul la finalul subordonatei, principala începe cu verbul.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "După ce am mâncat, am ieșit la plimbare."
+            }
+          ]
+        },
+        {
+          "title": "bevor: înainte să",
+          "text": "bevor înseamnă „înainte să”. De obicei ambele părți au același timp. Verbul la finalul subordonatei.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Înainte să plec, am stins lumina."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: aeroportda",
+      "points": [
+        {
+          "title": "nachdem: ...gandan keyin",
+          "text": "nachdem dan keyin Plusquamperfekt, bosh gapda Präteritum. Ergash gapda fe'l oxirida, bosh gap fe'l bilan boshlanadi.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Ovqatlangandan keyin sayrga chiqdim."
+            }
+          ]
+        },
+        {
+          "title": "bevor: ...dan oldin",
+          "text": "bevor \"...dan oldin\" degani. Odatda ikki qismda bir zamon. Ergash gapda fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Ketishdan oldin chiroqni o'chirdim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: हवाई अड्डे पर",
+      "points": [
+        {
+          "title": "nachdem: के बाद",
+          "text": "nachdem के बाद Plusquamperfekt, मुख्य वाक्य में Präteritum। उपवाक्य में क्रिया अंत में, मुख्य वाक्य क्रिया से शुरू।",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "खाना खाने के बाद मैं टहलने गया।"
+            }
+          ]
+        },
+        {
+          "title": "bevor: से पहले",
+          "text": "bevor मतलब \"से पहले\"। आमतौर पर दोनों हिस्सों में एक ही काल। उपवाक्य में क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "जाने से पहले मैंने बत्ती बुझाई।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: في المطار",
+      "points": [
+        {
+          "title": "nachdem: بعد أن",
+          "text": "بعد nachdem يأتي Plusquamperfekt، وفي الجملة الرئيسية Präteritum. والفعل في آخر الفرعية، والرئيسية تبدأ بالفعل.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "بعد أن أكلت خرجت للتنزه."
+            }
+          ]
+        },
+        {
+          "title": "bevor: قبل أن",
+          "text": "bevor تعني \"قبل أن\". وعادة يكون الجزآن بالزمن نفسه. والفعل في آخر الفرعية.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "قبل أن أخرج أطفأت الضوء."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "memory-lake-eight": {
+    "ru": {
+      "title": "Практика: неудачный день",
+      "points": [
+        {
+          "title": "Plusquamperfekt: ещё раньше",
+          "text": "Действие, которое было раньше другого: hatte или war + Partizip II. war для движения и изменения, как в Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Когда он пришёл, я уже поел."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Когда я позвонил, он уже ушёл."
+            }
+          ]
+        },
+        {
+          "title": "während: пока",
+          "text": "während значит «пока, в то время как»: два действия одновременно. Глагол в придаточном в конце.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Пока я готовил, он смотрел телевизор."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: невдалий день",
+      "points": [
+        {
+          "title": "Plusquamperfekt: ще раніше",
+          "text": "Дія, що була раніше за іншу: hatte або war + Partizip II. war для руху й зміни, як у Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Коли він прийшов, я вже поїв."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Коли я зателефонував, він уже пішов."
+            }
+          ]
+        },
+        {
+          "title": "während: поки",
+          "text": "während означає «поки, у той час як»: дві дії одночасно. Дієслово в підрядному в кінці.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Поки я готував, він дивився телевізор."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: a bad day",
+      "points": [
+        {
+          "title": "Plusquamperfekt: even earlier",
+          "text": "An action that happened before another one: hatte or war + Partizip II. war for movement and change, as in Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "When he came, I had already eaten."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "When I called, he had already left."
+            }
+          ]
+        },
+        {
+          "title": "während: while",
+          "text": "während means \"while\": two actions at the same time. The verb goes to the end of the clause.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "While I was cooking, he watched TV."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: pechowy dzień",
+      "points": [
+        {
+          "title": "Plusquamperfekt: jeszcze wcześniej",
+          "text": "Czynność wcześniejsza od innej: hatte albo war + Partizip II. war przy ruchu i zmianie, jak w Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Kiedy przyszedł, już zjadłem."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Kiedy zadzwoniłem, on już wyszedł."
+            }
+          ]
+        },
+        {
+          "title": "während: podczas gdy",
+          "text": "während znaczy „podczas gdy”: dwie czynności naraz. Czasownik w podrzędnym na końcu.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Kiedy gotowałem, on oglądał telewizję."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: un mal día",
+      "points": [
+        {
+          "title": "Plusquamperfekt: aún antes",
+          "text": "Una acción anterior a otra: hatte o war + Partizip II. war para el movimiento y el cambio, como en el Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Cuando llegó, yo ya había comido."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Cuando llamé, él ya se había ido."
+            }
+          ]
+        },
+        {
+          "title": "während: mientras",
+          "text": "während significa \"mientras\": dos acciones a la vez. El verbo al final de la subordinada.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Mientras yo cocinaba, él veía la tele."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : une mauvaise journée",
+      "points": [
+        {
+          "title": "Plusquamperfekt : encore avant",
+          "text": "Une action antérieure à une autre : hatte ou war + Partizip II. war pour le mouvement et le changement, comme au Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Quand il est arrivé, j’avais déjà mangé."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Quand j’ai appelé, il était déjà parti."
+            }
+          ]
+        },
+        {
+          "title": "während : pendant que",
+          "text": "während veut dire « pendant que » : deux actions en même temps. Le verbe à la fin de la subordonnée.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Pendant que je cuisinais, il regardait la télé."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: kötü bir gün",
+      "points": [
+        {
+          "title": "Plusquamperfekt: daha önce",
+          "text": "Başka bir eylemden önce olan eylem: hatte ya da war + Partizip II. Hareket ve değişim için war, Perfekt’teki gibi.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "O geldiğinde ben çoktan yemiştim."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Aradığımda o çoktan gitmişti."
+            }
+          ]
+        },
+        {
+          "title": "während: -iken",
+          "text": "während \"-iken, -dığı sırada\" demektir: iki eylem aynı anda. Yan cümlede fiil sonda.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Ben yemek yaparken o televizyon izledi."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: o zi proastă",
+      "points": [
+        {
+          "title": "Plusquamperfekt: și mai înainte",
+          "text": "O acțiune petrecută înaintea alteia: hatte sau war + Partizip II. war pentru mișcare și schimbare, ca la Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Când a venit, mâncasem deja."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Când am sunat, el plecase deja."
+            }
+          ]
+        },
+        {
+          "title": "während: în timp ce",
+          "text": "während înseamnă „în timp ce”: două acțiuni simultane. Verbul la finalul subordonatei.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "În timp ce găteam, el se uita la televizor."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: omadsiz kun",
+      "points": [
+        {
+          "title": "Plusquamperfekt: yanada oldin",
+          "text": "Boshqasidan oldin bo'lgan harakat: hatte yoki war + Partizip II. Harakat va o'zgarish uchun war, Perfekt dagidek.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "U kelganda men allaqachon ovqatlanib bo‘lgan edim."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Men qo'ng'iroq qilganimda u allaqachon ketgan edi."
+            }
+          ]
+        },
+        {
+          "title": "während: ...ayotganda",
+          "text": "während \"...ayotganda\" degani: ikki harakat bir vaqtda. Ergash gapda fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Men ovqat pishirayotganimda u televizor ko'rdi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: बुरा दिन",
+      "points": [
+        {
+          "title": "Plusquamperfekt: उससे भी पहले",
+          "text": "जो काम दूसरे से पहले हुआ: hatte या war + Partizip II। गति और बदलाव के लिए war, Perfekt की तरह।",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "जब वह आया, मैं खाना खा चुका था।"
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "जब मैंने फ़ोन किया, वह जा चुका था।"
+            }
+          ]
+        },
+        {
+          "title": "während: जबकि, तब तक",
+          "text": "während मतलब \"जबकि, उसी समय\": दो काम एक साथ। उपवाक्य में क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "जब मैं खाना बना रहा था, वह टीवी देख रहा था।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: يوم سيئ",
+      "points": [
+        {
+          "title": "Plusquamperfekt: قبل ذلك",
+          "text": "فعل حدث قبل فعل آخر: hatte أو war + Partizip II. وwar للحركة والتغير كما في Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "عندما جاء كنت قد أكلت."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "عندما اتصلت كان قد ذهب."
+            }
+          ]
+        },
+        {
+          "title": "während: بينما",
+          "text": "während تعني \"بينما\": فعلان في الوقت نفسه. والفعل في آخر الفرعية.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "بينما كنت أطبخ كان يشاهد التلفاز."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "memory-lake-nine": {
+    "ru": {
+      "title": "Повторение: воспоминания",
+      "points": [
+        {
+          "title": "Plusquamperfekt: ещё раньше",
+          "text": "Действие, которое было раньше другого: hatte или war + Partizip II. war для движения и изменения, как в Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Когда он пришёл, я уже поел."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Когда я позвонил, он уже ушёл."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: после того как",
+          "text": "После nachdem Plusquamperfekt, в главном Präteritum. Глагол в придаточном в конце, главное начинается с глагола.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "После того как я поел, я пошёл гулять."
+            }
+          ]
+        },
+        {
+          "title": "während: пока",
+          "text": "während значит «пока, в то время как»: два действия одновременно. Глагол в придаточном в конце.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Пока я готовил, он смотрел телевизор."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: спогади",
+      "points": [
+        {
+          "title": "Plusquamperfekt: ще раніше",
+          "text": "Дія, що була раніше за іншу: hatte або war + Partizip II. war для руху й зміни, як у Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Коли він прийшов, я вже поїв."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Коли я зателефонував, він уже пішов."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: після того як",
+          "text": "Після nachdem Plusquamperfekt, у головному Präteritum. Дієслово в підрядному в кінці, головне починається з дієслова.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Після того як я поїв, я пішов гуляти."
+            }
+          ]
+        },
+        {
+          "title": "während: поки",
+          "text": "während означає «поки, у той час як»: дві дії одночасно. Дієслово в підрядному в кінці.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Поки я готував, він дивився телевізор."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: memories",
+      "points": [
+        {
+          "title": "Plusquamperfekt: even earlier",
+          "text": "An action that happened before another one: hatte or war + Partizip II. war for movement and change, as in Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "When he came, I had already eaten."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "When I called, he had already left."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: after",
+          "text": "After nachdem use Plusquamperfekt, in the main clause Präteritum. The verb goes last in the clause, and the main clause starts with the verb.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "After I had eaten, I went for a walk."
+            }
+          ]
+        },
+        {
+          "title": "während: while",
+          "text": "während means \"while\": two actions at the same time. The verb goes to the end of the clause.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "While I was cooking, he watched TV."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: wspomnienia",
+      "points": [
+        {
+          "title": "Plusquamperfekt: jeszcze wcześniej",
+          "text": "Czynność wcześniejsza od innej: hatte albo war + Partizip II. war przy ruchu i zmianie, jak w Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Kiedy przyszedł, już zjadłem."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Kiedy zadzwoniłem, on już wyszedł."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: po tym jak",
+          "text": "Po nachdem Plusquamperfekt, w zdaniu głównym Präteritum. Czasownik w podrzędnym na końcu, główne zaczyna się od czasownika.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Po tym jak zjadłem, poszedłem na spacer."
+            }
+          ]
+        },
+        {
+          "title": "während: podczas gdy",
+          "text": "während znaczy „podczas gdy”: dwie czynności naraz. Czasownik w podrzędnym na końcu.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Kiedy gotowałem, on oglądał telewizję."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: recuerdos",
+      "points": [
+        {
+          "title": "Plusquamperfekt: aún antes",
+          "text": "Una acción anterior a otra: hatte o war + Partizip II. war para el movimiento y el cambio, como en el Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Cuando llegó, yo ya había comido."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Cuando llamé, él ya se había ido."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: después de que",
+          "text": "Tras nachdem, Plusquamperfekt; en la principal, Präteritum. El verbo va al final de la subordinada y la principal empieza por el verbo.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Después de comer, fui a pasear."
+            }
+          ]
+        },
+        {
+          "title": "während: mientras",
+          "text": "während significa \"mientras\": dos acciones a la vez. El verbo al final de la subordinada.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Mientras yo cocinaba, él veía la tele."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : souvenirs",
+      "points": [
+        {
+          "title": "Plusquamperfekt : encore avant",
+          "text": "Une action antérieure à une autre : hatte ou war + Partizip II. war pour le mouvement et le changement, comme au Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Quand il est arrivé, j’avais déjà mangé."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Quand j’ai appelé, il était déjà parti."
+            }
+          ]
+        },
+        {
+          "title": "nachdem : après que",
+          "text": "Après nachdem, Plusquamperfekt ; dans la principale, Präteritum. Le verbe va à la fin de la subordonnée, la principale commence par le verbe.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Après avoir mangé, je suis allé me promener."
+            }
+          ]
+        },
+        {
+          "title": "während : pendant que",
+          "text": "während veut dire « pendant que » : deux actions en même temps. Le verbe à la fin de la subordonnée.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Pendant que je cuisinais, il regardait la télé."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: anılar",
+      "points": [
+        {
+          "title": "Plusquamperfekt: daha önce",
+          "text": "Başka bir eylemden önce olan eylem: hatte ya da war + Partizip II. Hareket ve değişim için war, Perfekt’teki gibi.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "O geldiğinde ben çoktan yemiştim."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Aradığımda o çoktan gitmişti."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: -dikten sonra",
+          "text": "nachdem’den sonra Plusquamperfekt, ana cümlede Präteritum. Yan cümlede fiil sonda, ana cümle fiille başlar.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Yemek yedikten sonra yürüyüşe çıktım."
+            }
+          ]
+        },
+        {
+          "title": "während: -iken",
+          "text": "während \"-iken, -dığı sırada\" demektir: iki eylem aynı anda. Yan cümlede fiil sonda.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Ben yemek yaparken o televizyon izledi."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: amintiri",
+      "points": [
+        {
+          "title": "Plusquamperfekt: și mai înainte",
+          "text": "O acțiune petrecută înaintea alteia: hatte sau war + Partizip II. war pentru mișcare și schimbare, ca la Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "Când a venit, mâncasem deja."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Când am sunat, el plecase deja."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: după ce",
+          "text": "După nachdem Plusquamperfekt, în principală Präteritum. Verbul la finalul subordonatei, principala începe cu verbul.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "După ce am mâncat, am ieșit la plimbare."
+            }
+          ]
+        },
+        {
+          "title": "während: în timp ce",
+          "text": "während înseamnă „în timp ce”: două acțiuni simultane. Verbul la finalul subordonatei.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "În timp ce găteam, el se uita la televizor."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: xotiralar",
+      "points": [
+        {
+          "title": "Plusquamperfekt: yanada oldin",
+          "text": "Boshqasidan oldin bo'lgan harakat: hatte yoki war + Partizip II. Harakat va o'zgarish uchun war, Perfekt dagidek.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "U kelganda men allaqachon ovqatlanib bo‘lgan edim."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "Men qo'ng'iroq qilganimda u allaqachon ketgan edi."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: ...gandan keyin",
+          "text": "nachdem dan keyin Plusquamperfekt, bosh gapda Präteritum. Ergash gapda fe'l oxirida, bosh gap fe'l bilan boshlanadi.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Ovqatlangandan keyin sayrga chiqdim."
+            }
+          ]
+        },
+        {
+          "title": "während: ...ayotganda",
+          "text": "während \"...ayotganda\" degani: ikki harakat bir vaqtda. Ergash gapda fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Men ovqat pishirayotganimda u televizor ko'rdi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: यादें",
+      "points": [
+        {
+          "title": "Plusquamperfekt: उससे भी पहले",
+          "text": "जो काम दूसरे से पहले हुआ: hatte या war + Partizip II। गति और बदलाव के लिए war, Perfekt की तरह।",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "जब वह आया, मैं खाना खा चुका था।"
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "जब मैंने फ़ोन किया, वह जा चुका था।"
+            }
+          ]
+        },
+        {
+          "title": "nachdem: के बाद",
+          "text": "nachdem के बाद Plusquamperfekt, मुख्य वाक्य में Präteritum। उपवाक्य में क्रिया अंत में, मुख्य वाक्य क्रिया से शुरू।",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "खाना खाने के बाद मैं टहलने गया।"
+            }
+          ]
+        },
+        {
+          "title": "während: जबकि, तब तक",
+          "text": "während मतलब \"जबकि, उसी समय\": दो काम एक साथ। उपवाक्य में क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "जब मैं खाना बना रहा था, वह टीवी देख रहा था।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الذكريات",
+      "points": [
+        {
+          "title": "Plusquamperfekt: قبل ذلك",
+          "text": "فعل حدث قبل فعل آخر: hatte أو war + Partizip II. وwar للحركة والتغير كما في Perfekt.",
+          "examples": [
+            {
+              "de": "Als er kam, hatte ich schon gegessen.",
+              "tr": "عندما جاء كنت قد أكلت."
+            },
+            {
+              "de": "Als ich anrief, war er schon gegangen.",
+              "tr": "عندما اتصلت كان قد ذهب."
+            }
+          ]
+        },
+        {
+          "title": "nachdem: بعد أن",
+          "text": "بعد nachdem يأتي Plusquamperfekt، وفي الجملة الرئيسية Präteritum. والفعل في آخر الفرعية، والرئيسية تبدأ بالفعل.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "بعد أن أكلت خرجت للتنزه."
+            }
+          ]
+        },
+        {
+          "title": "während: بينما",
+          "text": "während تعني \"بينما\": فعلان في الوقت نفسه. والفعل في آخر الفرعية.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "بينما كنت أطبخ كان يشاهد التلفاز."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "memory-lake-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "nachdem: после того как",
+          "text": "После nachdem Plusquamperfekt, в главном Präteritum. Глагол в придаточном в конце, главное начинается с глагола.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "После того как я поел, я пошёл гулять."
+            }
+          ]
+        },
+        {
+          "title": "bevor: прежде чем",
+          "text": "bevor значит «прежде чем». Обычно в обеих частях одно время. Глагол в придаточном в конце.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Прежде чем уйти, я выключил свет."
+            }
+          ]
+        },
+        {
+          "title": "während: пока",
+          "text": "während значит «пока, в то время как»: два действия одновременно. Глагол в придаточном в конце.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Пока я готовил, он смотрел телевизор."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "nachdem: після того як",
+          "text": "Після nachdem Plusquamperfekt, у головному Präteritum. Дієслово в підрядному в кінці, головне починається з дієслова.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Після того як я поїв, я пішов гуляти."
+            }
+          ]
+        },
+        {
+          "title": "bevor: перш ніж",
+          "text": "bevor означає «перш ніж». Зазвичай в обох частинах один час. Дієслово в підрядному в кінці.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Перш ніж піти, я вимкнув світло."
+            }
+          ]
+        },
+        {
+          "title": "während: поки",
+          "text": "während означає «поки, у той час як»: дві дії одночасно. Дієслово в підрядному в кінці.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Поки я готував, він дивився телевізор."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "nachdem: after",
+          "text": "After nachdem use Plusquamperfekt, in the main clause Präteritum. The verb goes last in the clause, and the main clause starts with the verb.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "After I had eaten, I went for a walk."
+            }
+          ]
+        },
+        {
+          "title": "bevor: before",
+          "text": "bevor means \"before\". Usually both parts are in the same tense. The verb goes to the end of the clause.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Before I left, I turned off the light."
+            }
+          ]
+        },
+        {
+          "title": "während: while",
+          "text": "während means \"while\": two actions at the same time. The verb goes to the end of the clause.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "While I was cooking, he watched TV."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "nachdem: po tym jak",
+          "text": "Po nachdem Plusquamperfekt, w zdaniu głównym Präteritum. Czasownik w podrzędnym na końcu, główne zaczyna się od czasownika.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Po tym jak zjadłem, poszedłem na spacer."
+            }
+          ]
+        },
+        {
+          "title": "bevor: zanim",
+          "text": "bevor znaczy „zanim”. Zwykle w obu częściach ten sam czas. Czasownik w podrzędnym na końcu.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Zanim wyszedłem, zgasiłem światło."
+            }
+          ]
+        },
+        {
+          "title": "während: podczas gdy",
+          "text": "während znaczy „podczas gdy”: dwie czynności naraz. Czasownik w podrzędnym na końcu.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Kiedy gotowałem, on oglądał telewizję."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "nachdem: después de que",
+          "text": "Tras nachdem, Plusquamperfekt; en la principal, Präteritum. El verbo va al final de la subordinada y la principal empieza por el verbo.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Después de comer, fui a pasear."
+            }
+          ]
+        },
+        {
+          "title": "bevor: antes de que",
+          "text": "bevor significa \"antes de que\". Normalmente ambas partes van en el mismo tiempo. El verbo al final de la subordinada.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Antes de irme, apagué la luz."
+            }
+          ]
+        },
+        {
+          "title": "während: mientras",
+          "text": "während significa \"mientras\": dos acciones a la vez. El verbo al final de la subordinada.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Mientras yo cocinaba, él veía la tele."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "nachdem : après que",
+          "text": "Après nachdem, Plusquamperfekt ; dans la principale, Präteritum. Le verbe va à la fin de la subordonnée, la principale commence par le verbe.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Après avoir mangé, je suis allé me promener."
+            }
+          ]
+        },
+        {
+          "title": "bevor : avant que",
+          "text": "bevor veut dire « avant que ». En général, les deux parties sont au même temps. Le verbe à la fin de la subordonnée.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Avant de partir, j’ai éteint la lumière."
+            }
+          ]
+        },
+        {
+          "title": "während : pendant que",
+          "text": "während veut dire « pendant que » : deux actions en même temps. Le verbe à la fin de la subordonnée.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Pendant que je cuisinais, il regardait la télé."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "nachdem: -dikten sonra",
+          "text": "nachdem’den sonra Plusquamperfekt, ana cümlede Präteritum. Yan cümlede fiil sonda, ana cümle fiille başlar.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Yemek yedikten sonra yürüyüşe çıktım."
+            }
+          ]
+        },
+        {
+          "title": "bevor: -meden önce",
+          "text": "bevor \"-meden önce\" demektir. Genelde iki kısım aynı zamanda. Yan cümlede fiil sonda.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Çıkmadan önce ışığı kapattım."
+            }
+          ]
+        },
+        {
+          "title": "während: -iken",
+          "text": "während \"-iken, -dığı sırada\" demektir: iki eylem aynı anda. Yan cümlede fiil sonda.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Ben yemek yaparken o televizyon izledi."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "nachdem: după ce",
+          "text": "După nachdem Plusquamperfekt, în principală Präteritum. Verbul la finalul subordonatei, principala începe cu verbul.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "După ce am mâncat, am ieșit la plimbare."
+            }
+          ]
+        },
+        {
+          "title": "bevor: înainte să",
+          "text": "bevor înseamnă „înainte să”. De obicei ambele părți au același timp. Verbul la finalul subordonatei.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Înainte să plec, am stins lumina."
+            }
+          ]
+        },
+        {
+          "title": "während: în timp ce",
+          "text": "während înseamnă „în timp ce”: două acțiuni simultane. Verbul la finalul subordonatei.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "În timp ce găteam, el se uita la televizor."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "nachdem: ...gandan keyin",
+          "text": "nachdem dan keyin Plusquamperfekt, bosh gapda Präteritum. Ergash gapda fe'l oxirida, bosh gap fe'l bilan boshlanadi.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "Ovqatlangandan keyin sayrga chiqdim."
+            }
+          ]
+        },
+        {
+          "title": "bevor: ...dan oldin",
+          "text": "bevor \"...dan oldin\" degani. Odatda ikki qismda bir zamon. Ergash gapda fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "Ketishdan oldin chiroqni o'chirdim."
+            }
+          ]
+        },
+        {
+          "title": "während: ...ayotganda",
+          "text": "während \"...ayotganda\" degani: ikki harakat bir vaqtda. Ergash gapda fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "Men ovqat pishirayotganimda u televizor ko'rdi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "nachdem: के बाद",
+          "text": "nachdem के बाद Plusquamperfekt, मुख्य वाक्य में Präteritum। उपवाक्य में क्रिया अंत में, मुख्य वाक्य क्रिया से शुरू।",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "खाना खाने के बाद मैं टहलने गया।"
+            }
+          ]
+        },
+        {
+          "title": "bevor: से पहले",
+          "text": "bevor मतलब \"से पहले\"। आमतौर पर दोनों हिस्सों में एक ही काल। उपवाक्य में क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "जाने से पहले मैंने बत्ती बुझाई।"
+            }
+          ]
+        },
+        {
+          "title": "während: जबकि, तब तक",
+          "text": "während मतलब \"जबकि, उसी समय\": दो काम एक साथ। उपवाक्य में क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "जब मैं खाना बना रहा था, वह टीवी देख रहा था।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "nachdem: بعد أن",
+          "text": "بعد nachdem يأتي Plusquamperfekt، وفي الجملة الرئيسية Präteritum. والفعل في آخر الفرعية، والرئيسية تبدأ بالفعل.",
+          "examples": [
+            {
+              "de": "Nachdem ich gegessen hatte, ging ich spazieren.",
+              "tr": "بعد أن أكلت خرجت للتنزه."
+            }
+          ]
+        },
+        {
+          "title": "bevor: قبل أن",
+          "text": "bevor تعني \"قبل أن\". وعادة يكون الجزآن بالزمن نفسه. والفعل في آخر الفرعية.",
+          "examples": [
+            {
+              "de": "Bevor ich ging, machte ich das Licht aus.",
+              "tr": "قبل أن أخرج أطفأت الضوء."
+            }
+          ]
+        },
+        {
+          "title": "während: بينما",
+          "text": "während تعني \"بينما\": فعلان في الوقت نفسه. والفعل في آخر الفرعية.",
+          "examples": [
+            {
+              "de": "Während ich kochte, sah er fern.",
+              "tr": "بينما كنت أطبخ كان يشاهد التلفاز."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

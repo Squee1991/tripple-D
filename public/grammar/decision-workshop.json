@@ -1,0 +1,2442 @@
+{
+  "decision-workshop-one": {
+    "ru": {
+      "title": "Решение принято",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "«Принять решение» по-немецки eine Entscheidung treffen, глагол treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Я наконец принял решение."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Рішення ухвалено",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "«Ухвалити рішення» німецькою eine Entscheidung treffen, дієслово treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Я нарешті ухвалив рішення."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Decision made",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"Make a decision\" in German is eine Entscheidung treffen, with the verb treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "I’ve finally made a decision."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Decyzja podjęta",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "„Podjąć decyzję” po niemiecku to eine Entscheidung treffen, czasownik treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "W końcu podjąłem decyzję."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Decisión tomada",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"Tomar una decisión\" en alemán es eine Entscheidung treffen, con treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Por fin he tomado una decisión."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Décision prise",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "« Prendre une décision » se dit eine Entscheidung treffen, avec treffen : traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "J’ai enfin pris une décision."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Karar verildi",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"Karar vermek\" Almancada eine Entscheidung treffen, fiil treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Sonunda bir karar verdim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Decizie luată",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "„A lua o decizie” în germană e eine Entscheidung treffen, cu treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "În sfârșit am luat o decizie."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qaror qabul qilindi",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"Qaror qabul qilish\" nemischa eine Entscheidung treffen, fe'l treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Nihoyat qaror qabul qildim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "फ़ैसला हो गया",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"फ़ैसला लेना\" जर्मन में eine Entscheidung treffen, क्रिया treffen: traf, hat getroffen।",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "आख़िरकार मैंने फ़ैसला ले लिया।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "اتُّخذ القرار",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"اتخاذ قرار\" بالألمانية eine Entscheidung treffen، والفعل treffen: traf، hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "اتخذت قراراً أخيراً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "decision-workshop-two": {
+    "ru": {
+      "title": "Вопрос и ответ",
+      "points": [
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Вопрос «ставят»: eine Frage stellen. Кому, в Dativ: Ich stelle dir eine Frage. Ответ «дают»: eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Можно задать вам вопрос?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Питання і відповідь",
+      "points": [
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Питання «ставлять»: eine Frage stellen. Кому, в Dativ: Ich stelle dir eine Frage. Відповідь «дають»: eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Можна поставити вам запитання?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Question and answer",
+      "points": [
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "You \"put\" a question: eine Frage stellen. To whom, in the dative: Ich stelle dir eine Frage. You \"give\" an answer: eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "May I ask you a question?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Pytanie i odpowiedź",
+      "points": [
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Pytanie się „stawia”: eine Frage stellen. Komu, w Dativ: Ich stelle dir eine Frage. Odpowiedź się „daje”: eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Czy mogę zadać panu pytanie?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Pregunta y respuesta",
+      "points": [
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "La pregunta se \"pone\": eine Frage stellen. A quién, en dativo: Ich stelle dir eine Frage. La respuesta se \"da\": eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "¿Puedo hacerle una pregunta?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Question et réponse",
+      "points": [
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "On « pose » une question : eine Frage stellen. À qui, au datif : Ich stelle dir eine Frage. On « donne » une réponse : eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Puis-je vous poser une question ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Soru ve cevap",
+      "points": [
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Soru \"konur\": eine Frage stellen. Kime, Dativ’de: Ich stelle dir eine Frage. Cevap \"verilir\": eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Size bir soru sorabilir miyim?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Întrebare și răspuns",
+      "points": [
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Întrebarea se „pune”: eine Frage stellen. Cui, la dativ: Ich stelle dir eine Frage. Răspunsul se „dă”: eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Vă pot pune o întrebare?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Savol va javob",
+      "points": [
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Savol \"qo'yiladi\": eine Frage stellen. Kimga, Dativda: Ich stelle dir eine Frage. Javob \"beriladi\": eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Sizga savol bersam bo'ladimi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "सवाल और जवाब",
+      "points": [
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "सवाल \"रखा\" जाता है: eine Frage stellen। किसे, Dativ में: Ich stelle dir eine Frage। जवाब \"दिया\" जाता है: eine Antwort geben।",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "क्या मैं आपसे एक सवाल पूछ सकता हूँ?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "السؤال والجواب",
+      "points": [
+        {
+          "title": "eine Frage stellen وeine Antwort geben",
+          "text": "السؤال \"يُطرح\": eine Frage stellen. ولمن بحالة الجر: Ich stelle dir eine Frage. والجواب \"يُعطى\": eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "هل يمكنني أن أطرح عليك سؤالاً؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "decision-workshop-three": {
+    "ru": {
+      "title": "Дай знать!",
+      "points": [
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben значит «дать знать», Bescheid wissen значит «быть в курсе». Bescheid всегда без артикля.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Дай мне знать, когда приедешь."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Дай знати!",
+      "points": [
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben означає «дати знати», Bescheid wissen означає «бути в курсі». Bescheid завжди без артикля.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Дай мені знати, коли приїдеш."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Let me know!",
+      "points": [
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben means \"let someone know\", Bescheid wissen means \"to know about it\". Bescheid never takes an article.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Let me know when you arrive."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Daj znać!",
+      "points": [
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben znaczy „dać znać”, Bescheid wissen „wiedzieć, być na bieżąco”. Bescheid zawsze bez rodzajnika.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Daj mi znać, kiedy dojedziesz."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¡Avísame!",
+      "points": [
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben significa \"avisar\", Bescheid wissen \"estar al tanto\". Bescheid nunca lleva artículo.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Avísame cuando llegues."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Préviens-moi !",
+      "points": [
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben veut dire « prévenir », Bescheid wissen « être au courant ». Bescheid n’a jamais d’article.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Préviens-moi quand tu arrives."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Haber ver!",
+      "points": [
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben \"haber vermek\", Bescheid wissen \"haberdar olmak\" demektir. Bescheid hiç artikel almaz.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Vardığında bana haber ver."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Anunță-mă!",
+      "points": [
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben înseamnă „a anunța”, Bescheid wissen „a fi la curent”. Bescheid nu are niciodată articol.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Anunță-mă când ajungi."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Xabar ber!",
+      "points": [
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben \"xabar berish\", Bescheid wissen \"xabardor bo'lish\" degani. Bescheid doim artiklsiz.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Yetib kelganingda menga xabar ber."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "बता देना!",
+      "points": [
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben मतलब \"बता देना\", Bescheid wissen मतलब \"जानकारी होना\"। Bescheid के साथ कभी आर्टिकल नहीं।",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "जब पहुँचो तो मुझे बता देना।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "أعلمني!",
+      "points": [
+        {
+          "title": "Bescheid sagen وBescheid wissen",
+          "text": "Bescheid sagen/geben تعني \"يُعلِم\"، وBescheid wissen تعني \"يكون على علم\". وBescheid دائماً بدون أداة.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "أعلمني عندما تصل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "decision-workshop-four": {
+    "ru": {
+      "title": "Думай о других",
+      "points": [
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen значит «садиться» (вежливо, без артикля). Rücksicht nehmen auf + Akkusativ значит «считаться с кем-то».",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Садитесь, пожалуйста."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Думай про інших",
+      "points": [
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen означає «сідати» (ввічливо, без артикля). Rücksicht nehmen auf + Akkusativ означає «зважати на когось».",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Сідайте, будь ласка."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Think of others",
+      "points": [
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen means \"take a seat\" (polite, no article). Rücksicht nehmen auf + accusative means \"be considerate of\".",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Please take a seat."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Myśl o innych",
+      "points": [
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen znaczy „usiąść” (grzecznie, bez rodzajnika). Rücksicht nehmen auf + Akkusativ znaczy „liczyć się z kimś”.",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Proszę usiąść."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Piensa en los demás",
+      "points": [
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen significa \"tomar asiento\" (cortés, sin artículo). Rücksicht nehmen auf + acusativo significa \"tener consideración con\".",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Tome asiento, por favor."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pense aux autres",
+      "points": [
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen veut dire « s’asseoir » (poli, sans article). Rücksicht nehmen auf + accusatif veut dire « tenir compte de ».",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Asseyez-vous, je vous prie."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Başkalarını düşün",
+      "points": [
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen \"oturmak\" (kibar, artikelsiz). Rücksicht nehmen auf + Akkusativ \"birini düşünmek, saygı göstermek\".",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Lütfen oturun."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Gândește-te la alții",
+      "points": [
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen înseamnă „a lua loc” (politicos, fără articol). Rücksicht nehmen auf + acuzativ înseamnă „a ține cont de cineva”.",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Luați loc, vă rog."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Boshqalarni o'yla",
+      "points": [
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen \"o'tirmoq\" (muloyim, artiklsiz). Rücksicht nehmen auf + Akkusativ \"birovni hisobga olish\".",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Marhamat, o'tiring."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दूसरों का ख़्याल रखो",
+      "points": [
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen मतलब \"बैठना\" (विनम्र, बिना आर्टिकल)। Rücksicht nehmen auf + Akkusativ मतलब \"किसी का ख़्याल रखना\"।",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "कृपया बैठिए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "فكّر في الآخرين",
+      "points": [
+        {
+          "title": "Platz nehmen وRücksicht nehmen",
+          "text": "Platz nehmen تعني \"يجلس\" (بأدب، بدون أداة). وRücksicht nehmen auf + المفعول تعني \"يراعي الآخرين\".",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "تفضل بالجلوس."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "decision-workshop-five": {
+    "ru": {
+      "title": "Предложение и разговор",
+      "points": [
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Предложить: einen Vorschlag machen (часто с zu + инфинитив). Серьёзно поговорить: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Можно мне кое-что предложить?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Пропозиція і розмова",
+      "points": [
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Запропонувати: einen Vorschlag machen (часто з zu + інфінітив). Серйозно поговорити: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Можна мені дещо запропонувати?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Suggestion and conversation",
+      "points": [
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "To suggest: einen Vorschlag machen (often with zu + infinitive). To have a serious talk: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "May I make a suggestion?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Propozycja i rozmowa",
+      "points": [
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Zaproponować: einen Vorschlag machen (często z zu + bezokolicznik). Poważnie porozmawiać: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Czy mogę coś zaproponować?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Propuesta y conversación",
+      "points": [
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Proponer: einen Vorschlag machen (a menudo con zu + infinitivo). Tener una conversación seria: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "¿Puedo hacer una propuesta?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Proposition et discussion",
+      "points": [
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Proposer : einen Vorschlag machen (souvent avec zu + infinitif). Avoir une vraie discussion : ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Je peux faire une proposition ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Öneri ve konuşma",
+      "points": [
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Öneri yapmak: einen Vorschlag machen (çoğu zaman zu + mastar ile). Ciddi konuşma yapmak: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Bir öneride bulunabilir miyim?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Propunere și discuție",
+      "points": [
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "A propune: einen Vorschlag machen (des cu zu + infinitiv). A purta o discuție serioasă: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Pot să fac o propunere?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Taklif va suhbat",
+      "points": [
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Taklif qilish: einen Vorschlag machen (ko'pincha zu + infinitiv bilan). Jiddiy suhbat: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Taklif bersam bo'ladimi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "सुझाव और बातचीत",
+      "points": [
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "सुझाव देना: einen Vorschlag machen (अक्सर zu + इन्फ़िनिटिव के साथ)। गंभीर बातचीत: ein Gespräch führen।",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "क्या मैं एक सुझाव दे सकता हूँ?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاقتراح والحديث",
+      "points": [
+        {
+          "title": "einen Vorschlag machen وein Gespräch führen",
+          "text": "تقديم اقتراح: einen Vorschlag machen (غالباً مع zu + المصدر). وإجراء حديث جاد: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "هل يمكنني تقديم اقتراح؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "decision-workshop-six": {
+    "ru": {
+      "title": "Совещание в команде",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "«Принять решение» по-немецки eine Entscheidung treffen, глагол treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Я наконец принял решение."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Предложить: einen Vorschlag machen (часто с zu + инфинитив). Серьёзно поговорить: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Можно мне кое-что предложить?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Нарада в команді",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "«Ухвалити рішення» німецькою eine Entscheidung treffen, дієслово treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Я нарешті ухвалив рішення."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Запропонувати: einen Vorschlag machen (часто з zu + інфінітив). Серйозно поговорити: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Можна мені дещо запропонувати?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Team meeting",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"Make a decision\" in German is eine Entscheidung treffen, with the verb treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "I’ve finally made a decision."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "To suggest: einen Vorschlag machen (often with zu + infinitive). To have a serious talk: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "May I make a suggestion?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Spotkanie zespołu",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "„Podjąć decyzję” po niemiecku to eine Entscheidung treffen, czasownik treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "W końcu podjąłem decyzję."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Zaproponować: einen Vorschlag machen (często z zu + bezokolicznik). Poważnie porozmawiać: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Czy mogę coś zaproponować?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Reunión de equipo",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"Tomar una decisión\" en alemán es eine Entscheidung treffen, con treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Por fin he tomado una decisión."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Proponer: einen Vorschlag machen (a menudo con zu + infinitivo). Tener una conversación seria: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "¿Puedo hacer una propuesta?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Réunion d’équipe",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "« Prendre une décision » se dit eine Entscheidung treffen, avec treffen : traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "J’ai enfin pris une décision."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Proposer : einen Vorschlag machen (souvent avec zu + infinitif). Avoir une vraie discussion : ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Je peux faire une proposition ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Ekip toplantısı",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"Karar vermek\" Almancada eine Entscheidung treffen, fiil treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Sonunda bir karar verdim."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Öneri yapmak: einen Vorschlag machen (çoğu zaman zu + mastar ile). Ciddi konuşma yapmak: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Bir öneride bulunabilir miyim?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Ședința echipei",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "„A lua o decizie” în germană e eine Entscheidung treffen, cu treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "În sfârșit am luat o decizie."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "A propune: einen Vorschlag machen (des cu zu + infinitiv). A purta o discuție serioasă: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Pot să fac o propunere?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Jamoa yig‘ilishi",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"Qaror qabul qilish\" nemischa eine Entscheidung treffen, fe'l treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Nihoyat qaror qabul qildim."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Taklif qilish: einen Vorschlag machen (ko'pincha zu + infinitiv bilan). Jiddiy suhbat: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Taklif bersam bo'ladimi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टीम मीटिंग",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"फ़ैसला लेना\" जर्मन में eine Entscheidung treffen, क्रिया treffen: traf, hat getroffen।",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "आख़िरकार मैंने फ़ैसला ले लिया।"
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "सुझाव देना: einen Vorschlag machen (अक्सर zu + इन्फ़िनिटिव के साथ)। गंभीर बातचीत: ein Gespräch führen।",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "क्या मैं एक सुझाव दे सकता हूँ?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "اجتماع الفريق",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"اتخاذ قرار\" بالألمانية eine Entscheidung treffen، والفعل treffen: traf، hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "اتخذت قراراً أخيراً."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen وein Gespräch führen",
+          "text": "تقديم اقتراح: einen Vorschlag machen (غالباً مع zu + المصدر). وإجراء حديث جاد: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "هل يمكنني تقديم اقتراح؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "decision-workshop-seven": {
+    "ru": {
+      "title": "Практика: родительское собрание",
+      "points": [
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Вопрос «ставят»: eine Frage stellen. Кому, в Dativ: Ich stelle dir eine Frage. Ответ «дают»: eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Можно задать вам вопрос?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben значит «дать знать», Bescheid wissen значит «быть в курсе». Bescheid всегда без артикля.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Дай мне знать, когда приедешь."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: батьківські збори",
+      "points": [
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Питання «ставлять»: eine Frage stellen. Кому, в Dativ: Ich stelle dir eine Frage. Відповідь «дають»: eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Можна поставити вам запитання?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben означає «дати знати», Bescheid wissen означає «бути в курсі». Bescheid завжди без артикля.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Дай мені знати, коли приїдеш."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: a parents’ meeting",
+      "points": [
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "You \"put\" a question: eine Frage stellen. To whom, in the dative: Ich stelle dir eine Frage. You \"give\" an answer: eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "May I ask you a question?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben means \"let someone know\", Bescheid wissen means \"to know about it\". Bescheid never takes an article.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Let me know when you arrive."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: zebranie rodziców",
+      "points": [
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Pytanie się „stawia”: eine Frage stellen. Komu, w Dativ: Ich stelle dir eine Frage. Odpowiedź się „daje”: eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Czy mogę zadać panu pytanie?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben znaczy „dać znać”, Bescheid wissen „wiedzieć, być na bieżąco”. Bescheid zawsze bez rodzajnika.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Daj mi znać, kiedy dojedziesz."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: reunión de padres",
+      "points": [
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "La pregunta se \"pone\": eine Frage stellen. A quién, en dativo: Ich stelle dir eine Frage. La respuesta se \"da\": eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "¿Puedo hacerle una pregunta?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben significa \"avisar\", Bescheid wissen \"estar al tanto\". Bescheid nunca lleva artículo.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Avísame cuando llegues."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : réunion de parents",
+      "points": [
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "On « pose » une question : eine Frage stellen. À qui, au datif : Ich stelle dir eine Frage. On « donne » une réponse : eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Puis-je vous poser une question ?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben veut dire « prévenir », Bescheid wissen « être au courant ». Bescheid n’a jamais d’article.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Préviens-moi quand tu arrives."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: veli toplantısı",
+      "points": [
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Soru \"konur\": eine Frage stellen. Kime, Dativ’de: Ich stelle dir eine Frage. Cevap \"verilir\": eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Size bir soru sorabilir miyim?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben \"haber vermek\", Bescheid wissen \"haberdar olmak\" demektir. Bescheid hiç artikel almaz.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Vardığında bana haber ver."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: ședința cu părinții",
+      "points": [
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Întrebarea se „pune”: eine Frage stellen. Cui, la dativ: Ich stelle dir eine Frage. Răspunsul se „dă”: eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Vă pot pune o întrebare?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben înseamnă „a anunța”, Bescheid wissen „a fi la curent”. Bescheid nu are niciodată articol.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Anunță-mă când ajungi."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: ota-onalar yig'ilishi",
+      "points": [
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Savol \"qo'yiladi\": eine Frage stellen. Kimga, Dativda: Ich stelle dir eine Frage. Javob \"beriladi\": eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Sizga savol bersam bo'ladimi?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben \"xabar berish\", Bescheid wissen \"xabardor bo'lish\" degani. Bescheid doim artiklsiz.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Yetib kelganingda menga xabar ber."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: अभिभावक बैठक",
+      "points": [
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "सवाल \"रखा\" जाता है: eine Frage stellen। किसे, Dativ में: Ich stelle dir eine Frage। जवाब \"दिया\" जाता है: eine Antwort geben।",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "क्या मैं आपसे एक सवाल पूछ सकता हूँ?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben मतलब \"बता देना\", Bescheid wissen मतलब \"जानकारी होना\"। Bescheid के साथ कभी आर्टिकल नहीं।",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "जब पहुँचो तो मुझे बता देना।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: اجتماع أولياء الأمور",
+      "points": [
+        {
+          "title": "eine Frage stellen وeine Antwort geben",
+          "text": "السؤال \"يُطرح\": eine Frage stellen. ولمن بحالة الجر: Ich stelle dir eine Frage. والجواب \"يُعطى\": eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "هل يمكنني أن أطرح عليك سؤالاً؟"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen وBescheid wissen",
+          "text": "Bescheid sagen/geben تعني \"يُعلِم\"، وBescheid wissen تعني \"يكون على علم\". وBescheid دائماً بدون أداة.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "أعلمني عندما تصل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "decision-workshop-eight": {
+    "ru": {
+      "title": "Практика: в гостях",
+      "points": [
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen значит «садиться» (вежливо, без артикля). Rücksicht nehmen auf + Akkusativ значит «считаться с кем-то».",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Садитесь, пожалуйста."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Предложить: einen Vorschlag machen (часто с zu + инфинитив). Серьёзно поговорить: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Можно мне кое-что предложить?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: у гостях",
+      "points": [
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen означає «сідати» (ввічливо, без артикля). Rücksicht nehmen auf + Akkusativ означає «зважати на когось».",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Сідайте, будь ласка."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Запропонувати: einen Vorschlag machen (часто з zu + інфінітив). Серйозно поговорити: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Можна мені дещо запропонувати?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: visiting",
+      "points": [
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen means \"take a seat\" (polite, no article). Rücksicht nehmen auf + accusative means \"be considerate of\".",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Please take a seat."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "To suggest: einen Vorschlag machen (often with zu + infinitive). To have a serious talk: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "May I make a suggestion?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: w gościach",
+      "points": [
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen znaczy „usiąść” (grzecznie, bez rodzajnika). Rücksicht nehmen auf + Akkusativ znaczy „liczyć się z kimś”.",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Proszę usiąść."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Zaproponować: einen Vorschlag machen (często z zu + bezokolicznik). Poważnie porozmawiać: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Czy mogę coś zaproponować?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: de visita",
+      "points": [
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen significa \"tomar asiento\" (cortés, sin artículo). Rücksicht nehmen auf + acusativo significa \"tener consideración con\".",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Tome asiento, por favor."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Proponer: einen Vorschlag machen (a menudo con zu + infinitivo). Tener una conversación seria: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "¿Puedo hacer una propuesta?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : en visite",
+      "points": [
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen veut dire « s’asseoir » (poli, sans article). Rücksicht nehmen auf + accusatif veut dire « tenir compte de ».",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Asseyez-vous, je vous prie."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Proposer : einen Vorschlag machen (souvent avec zu + infinitif). Avoir une vraie discussion : ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Je peux faire une proposition ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: misafirlikte",
+      "points": [
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen \"oturmak\" (kibar, artikelsiz). Rücksicht nehmen auf + Akkusativ \"birini düşünmek, saygı göstermek\".",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Lütfen oturun."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Öneri yapmak: einen Vorschlag machen (çoğu zaman zu + mastar ile). Ciddi konuşma yapmak: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Bir öneride bulunabilir miyim?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: în vizită",
+      "points": [
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen înseamnă „a lua loc” (politicos, fără articol). Rücksicht nehmen auf + acuzativ înseamnă „a ține cont de cineva”.",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Luați loc, vă rog."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "A propune: einen Vorschlag machen (des cu zu + infinitiv). A purta o discuție serioasă: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Pot să fac o propunere?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: mehmonda",
+      "points": [
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen \"o'tirmoq\" (muloyim, artiklsiz). Rücksicht nehmen auf + Akkusativ \"birovni hisobga olish\".",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Marhamat, o'tiring."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Taklif qilish: einen Vorschlag machen (ko'pincha zu + infinitiv bilan). Jiddiy suhbat: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Taklif bersam bo'ladimi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: मेहमान बनकर",
+      "points": [
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen मतलब \"बैठना\" (विनम्र, बिना आर्टिकल)। Rücksicht nehmen auf + Akkusativ मतलब \"किसी का ख़्याल रखना\"।",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "कृपया बैठिए।"
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "सुझाव देना: einen Vorschlag machen (अक्सर zu + इन्फ़िनिटिव के साथ)। गंभीर बातचीत: ein Gespräch führen।",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "क्या मैं एक सुझाव दे सकता हूँ?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: في زيارة",
+      "points": [
+        {
+          "title": "Platz nehmen وRücksicht nehmen",
+          "text": "Platz nehmen تعني \"يجلس\" (بأدب، بدون أداة). وRücksicht nehmen auf + المفعول تعني \"يراعي الآخرين\".",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "تفضل بالجلوس."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen وein Gespräch führen",
+          "text": "تقديم اقتراح: einen Vorschlag machen (غالباً مع zu + المصدر). وإجراء حديث جاد: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "هل يمكنني تقديم اقتراح؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "decision-workshop-nine": {
+    "ru": {
+      "title": "Повторение: устойчивые сочетания",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "«Принять решение» по-немецки eine Entscheidung treffen, глагол treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Я наконец принял решение."
+            }
+          ]
+        },
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Вопрос «ставят»: eine Frage stellen. Кому, в Dativ: Ich stelle dir eine Frage. Ответ «дают»: eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Можно задать вам вопрос?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben значит «дать знать», Bescheid wissen значит «быть в курсе». Bescheid всегда без артикля.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Дай мне знать, когда приедешь."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: сталі сполучення",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "«Ухвалити рішення» німецькою eine Entscheidung treffen, дієслово treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Я нарешті ухвалив рішення."
+            }
+          ]
+        },
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Питання «ставлять»: eine Frage stellen. Кому, в Dativ: Ich stelle dir eine Frage. Відповідь «дають»: eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Можна поставити вам запитання?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben означає «дати знати», Bescheid wissen означає «бути в курсі». Bescheid завжди без артикля.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Дай мені знати, коли приїдеш."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: fixed expressions",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"Make a decision\" in German is eine Entscheidung treffen, with the verb treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "I’ve finally made a decision."
+            }
+          ]
+        },
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "You \"put\" a question: eine Frage stellen. To whom, in the dative: Ich stelle dir eine Frage. You \"give\" an answer: eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "May I ask you a question?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben means \"let someone know\", Bescheid wissen means \"to know about it\". Bescheid never takes an article.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Let me know when you arrive."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: stałe wyrażenia",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "„Podjąć decyzję” po niemiecku to eine Entscheidung treffen, czasownik treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "W końcu podjąłem decyzję."
+            }
+          ]
+        },
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Pytanie się „stawia”: eine Frage stellen. Komu, w Dativ: Ich stelle dir eine Frage. Odpowiedź się „daje”: eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Czy mogę zadać panu pytanie?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben znaczy „dać znać”, Bescheid wissen „wiedzieć, być na bieżąco”. Bescheid zawsze bez rodzajnika.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Daj mi znać, kiedy dojedziesz."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: expresiones fijas",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"Tomar una decisión\" en alemán es eine Entscheidung treffen, con treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Por fin he tomado una decisión."
+            }
+          ]
+        },
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "La pregunta se \"pone\": eine Frage stellen. A quién, en dativo: Ich stelle dir eine Frage. La respuesta se \"da\": eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "¿Puedo hacerle una pregunta?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben significa \"avisar\", Bescheid wissen \"estar al tanto\". Bescheid nunca lleva artículo.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Avísame cuando llegues."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : expressions figées",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "« Prendre une décision » se dit eine Entscheidung treffen, avec treffen : traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "J’ai enfin pris une décision."
+            }
+          ]
+        },
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "On « pose » une question : eine Frage stellen. À qui, au datif : Ich stelle dir eine Frage. On « donne » une réponse : eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Puis-je vous poser une question ?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben veut dire « prévenir », Bescheid wissen « être au courant ». Bescheid n’a jamais d’article.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Préviens-moi quand tu arrives."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: kalıp ifadeler",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"Karar vermek\" Almancada eine Entscheidung treffen, fiil treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Sonunda bir karar verdim."
+            }
+          ]
+        },
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Soru \"konur\": eine Frage stellen. Kime, Dativ’de: Ich stelle dir eine Frage. Cevap \"verilir\": eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Size bir soru sorabilir miyim?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben \"haber vermek\", Bescheid wissen \"haberdar olmak\" demektir. Bescheid hiç artikel almaz.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Vardığında bana haber ver."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: expresii fixe",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "„A lua o decizie” în germană e eine Entscheidung treffen, cu treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "În sfârșit am luat o decizie."
+            }
+          ]
+        },
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Întrebarea se „pune”: eine Frage stellen. Cui, la dativ: Ich stelle dir eine Frage. Răspunsul se „dă”: eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Vă pot pune o întrebare?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben înseamnă „a anunța”, Bescheid wissen „a fi la curent”. Bescheid nu are niciodată articol.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Anunță-mă când ajungi."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: turg'un birikmalar",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"Qaror qabul qilish\" nemischa eine Entscheidung treffen, fe'l treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Nihoyat qaror qabul qildim."
+            }
+          ]
+        },
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "Savol \"qo'yiladi\": eine Frage stellen. Kimga, Dativda: Ich stelle dir eine Frage. Javob \"beriladi\": eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "Sizga savol bersam bo'ladimi?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben \"xabar berish\", Bescheid wissen \"xabardor bo'lish\" degani. Bescheid doim artiklsiz.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "Yetib kelganingda menga xabar ber."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: तय वाक्यांश",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"फ़ैसला लेना\" जर्मन में eine Entscheidung treffen, क्रिया treffen: traf, hat getroffen।",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "आख़िरकार मैंने फ़ैसला ले लिया।"
+            }
+          ]
+        },
+        {
+          "title": "eine Frage stellen, eine Antwort geben",
+          "text": "सवाल \"रखा\" जाता है: eine Frage stellen। किसे, Dativ में: Ich stelle dir eine Frage। जवाब \"दिया\" जाता है: eine Antwort geben।",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "क्या मैं आपसे एक सवाल पूछ सकता हूँ?"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen, Bescheid wissen",
+          "text": "Bescheid sagen/geben मतलब \"बता देना\", Bescheid wissen मतलब \"जानकारी होना\"। Bescheid के साथ कभी आर्टिकल नहीं।",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "जब पहुँचो तो मुझे बता देना।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: التعابير الثابتة",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"اتخاذ قرار\" بالألمانية eine Entscheidung treffen، والفعل treffen: traf، hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "اتخذت قراراً أخيراً."
+            }
+          ]
+        },
+        {
+          "title": "eine Frage stellen وeine Antwort geben",
+          "text": "السؤال \"يُطرح\": eine Frage stellen. ولمن بحالة الجر: Ich stelle dir eine Frage. والجواب \"يُعطى\": eine Antwort geben.",
+          "examples": [
+            {
+              "de": "Darf ich Ihnen eine Frage stellen?",
+              "tr": "هل يمكنني أن أطرح عليك سؤالاً؟"
+            }
+          ]
+        },
+        {
+          "title": "Bescheid sagen وBescheid wissen",
+          "text": "Bescheid sagen/geben تعني \"يُعلِم\"، وBescheid wissen تعني \"يكون على علم\". وBescheid دائماً بدون أداة.",
+          "examples": [
+            {
+              "de": "Sag mir Bescheid, wenn du ankommst.",
+              "tr": "أعلمني عندما تصل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "decision-workshop-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "«Принять решение» по-немецки eine Entscheidung treffen, глагол treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Я наконец принял решение."
+            }
+          ]
+        },
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen значит «садиться» (вежливо, без артикля). Rücksicht nehmen auf + Akkusativ значит «считаться с кем-то».",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Садитесь, пожалуйста."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Предложить: einen Vorschlag machen (часто с zu + инфинитив). Серьёзно поговорить: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Можно мне кое-что предложить?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "«Ухвалити рішення» німецькою eine Entscheidung treffen, дієслово treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Я нарешті ухвалив рішення."
+            }
+          ]
+        },
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen означає «сідати» (ввічливо, без артикля). Rücksicht nehmen auf + Akkusativ означає «зважати на когось».",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Сідайте, будь ласка."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Запропонувати: einen Vorschlag machen (часто з zu + інфінітив). Серйозно поговорити: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Можна мені дещо запропонувати?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"Make a decision\" in German is eine Entscheidung treffen, with the verb treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "I’ve finally made a decision."
+            }
+          ]
+        },
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen means \"take a seat\" (polite, no article). Rücksicht nehmen auf + accusative means \"be considerate of\".",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Please take a seat."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "To suggest: einen Vorschlag machen (often with zu + infinitive). To have a serious talk: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "May I make a suggestion?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "„Podjąć decyzję” po niemiecku to eine Entscheidung treffen, czasownik treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "W końcu podjąłem decyzję."
+            }
+          ]
+        },
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen znaczy „usiąść” (grzecznie, bez rodzajnika). Rücksicht nehmen auf + Akkusativ znaczy „liczyć się z kimś”.",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Proszę usiąść."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Zaproponować: einen Vorschlag machen (często z zu + bezokolicznik). Poważnie porozmawiać: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Czy mogę coś zaproponować?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"Tomar una decisión\" en alemán es eine Entscheidung treffen, con treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Por fin he tomado una decisión."
+            }
+          ]
+        },
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen significa \"tomar asiento\" (cortés, sin artículo). Rücksicht nehmen auf + acusativo significa \"tener consideración con\".",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Tome asiento, por favor."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Proponer: einen Vorschlag machen (a menudo con zu + infinitivo). Tener una conversación seria: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "¿Puedo hacer una propuesta?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "« Prendre une décision » se dit eine Entscheidung treffen, avec treffen : traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "J’ai enfin pris une décision."
+            }
+          ]
+        },
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen veut dire « s’asseoir » (poli, sans article). Rücksicht nehmen auf + accusatif veut dire « tenir compte de ».",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Asseyez-vous, je vous prie."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Proposer : einen Vorschlag machen (souvent avec zu + infinitif). Avoir une vraie discussion : ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Je peux faire une proposition ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"Karar vermek\" Almancada eine Entscheidung treffen, fiil treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Sonunda bir karar verdim."
+            }
+          ]
+        },
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen \"oturmak\" (kibar, artikelsiz). Rücksicht nehmen auf + Akkusativ \"birini düşünmek, saygı göstermek\".",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Lütfen oturun."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Öneri yapmak: einen Vorschlag machen (çoğu zaman zu + mastar ile). Ciddi konuşma yapmak: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Bir öneride bulunabilir miyim?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "„A lua o decizie” în germană e eine Entscheidung treffen, cu treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "În sfârșit am luat o decizie."
+            }
+          ]
+        },
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen înseamnă „a lua loc” (politicos, fără articol). Rücksicht nehmen auf + acuzativ înseamnă „a ține cont de cineva”.",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Luați loc, vă rog."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "A propune: einen Vorschlag machen (des cu zu + infinitiv). A purta o discuție serioasă: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Pot să fac o propunere?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"Qaror qabul qilish\" nemischa eine Entscheidung treffen, fe'l treffen: traf, hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "Nihoyat qaror qabul qildim."
+            }
+          ]
+        },
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen \"o'tirmoq\" (muloyim, artiklsiz). Rücksicht nehmen auf + Akkusativ \"birovni hisobga olish\".",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "Marhamat, o'tiring."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "Taklif qilish: einen Vorschlag machen (ko'pincha zu + infinitiv bilan). Jiddiy suhbat: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "Taklif bersam bo'ladimi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"फ़ैसला लेना\" जर्मन में eine Entscheidung treffen, क्रिया treffen: traf, hat getroffen।",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "आख़िरकार मैंने फ़ैसला ले लिया।"
+            }
+          ]
+        },
+        {
+          "title": "Platz nehmen, Rücksicht nehmen",
+          "text": "Platz nehmen मतलब \"बैठना\" (विनम्र, बिना आर्टिकल)। Rücksicht nehmen auf + Akkusativ मतलब \"किसी का ख़्याल रखना\"।",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "कृपया बैठिए।"
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen, ein Gespräch führen",
+          "text": "सुझाव देना: einen Vorschlag machen (अक्सर zu + इन्फ़िनिटिव के साथ)। गंभीर बातचीत: ein Gespräch führen।",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "क्या मैं एक सुझाव दे सकता हूँ?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "eine Entscheidung treffen",
+          "text": "\"اتخاذ قرار\" بالألمانية eine Entscheidung treffen، والفعل treffen: traf، hat getroffen.",
+          "examples": [
+            {
+              "de": "Ich habe endlich eine Entscheidung getroffen.",
+              "tr": "اتخذت قراراً أخيراً."
+            }
+          ]
+        },
+        {
+          "title": "Platz nehmen وRücksicht nehmen",
+          "text": "Platz nehmen تعني \"يجلس\" (بأدب، بدون أداة). وRücksicht nehmen auf + المفعول تعني \"يراعي الآخرين\".",
+          "examples": [
+            {
+              "de": "Nehmen Sie bitte Platz.",
+              "tr": "تفضل بالجلوس."
+            }
+          ]
+        },
+        {
+          "title": "einen Vorschlag machen وein Gespräch führen",
+          "text": "تقديم اقتراح: einen Vorschlag machen (غالباً مع zu + المصدر). وإجراء حديث جاد: ein Gespräch führen.",
+          "examples": [
+            {
+              "de": "Darf ich einen Vorschlag machen?",
+              "tr": "هل يمكنني تقديم اقتراح؟"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

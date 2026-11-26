@@ -15,7 +15,7 @@
             <polyline points="12 19 5 12 12 5"></polyline>
           </svg>
         </button>
-        <h2 class="list-title">{{ t('landWordsSession.words') }}</h2>
+        <h2 class="list-title">{{ grammar ? t('questPath.materials') : t('landWordsSession.words') }}</h2>
       </header>
       <main class="vocab-main word-list-main">
         <div v-if="isLoading" class="loading-state">
@@ -25,8 +25,27 @@
           {{ errorMessage }}
         </div>
         <template v-else-if="vocabulary.length">
+          <!-- Грамматика к заданию: объяснение и примеры (есть не у всех заданий) -->
+          <section v-if="grammar" class="grammar-card">
+            <span class="grammar-card__label">📘 {{ t('landWordsSession.grammar') }}</span>
+            <h3 class="grammar-card__title">{{ grammar.title }}</h3>
+            <div v-for="(point, pointIndex) in grammar.points" :key="pointIndex" class="grammar-point">
+              <h4 class="grammar-point__title">{{ point.title }}</h4>
+              <p class="grammar-point__text">{{ point.text }}</p>
+              <div v-if="point.examples?.length" class="grammar-examples">
+                <div v-for="(example, exampleIndex) in point.examples" :key="exampleIndex" class="grammar-example">
+                  <span class="word-sound"><SoundBtn :text="example.de.replace('→', ',')"/></span>
+                  <span class="grammar-example__text">
+                    <span class="grammar-example__de">{{ example.de }}</span>
+                    <span class="grammar-example__tr">{{ example.tr }}</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <h3 v-if="grammar" class="words-section-title">{{ t('landWordsSession.words') }} · {{ vocabulary.length }}</h3>
           <div v-for="(item, index) in vocabulary" :key="index" class="word-list-item">
-            <SoundBtn :text="item.word" class="list-sound-btn"/>
+            <span class="word-sound"><SoundBtn :text="item.word" class="list-sound-btn"/></span>
             <div class="word-details">
               <span class="word-german-list">{{ item.word }}</span>
               <span class="word-translation-list">
@@ -49,10 +68,6 @@
       </main>
       <footer class="vocab-footer" v-if="vocabulary.length">
         <button class="btn-primary" @click="startPractice">{{ t('locationWordSession.learnWords') }}</button>
-        <button class="btn-secondary" style="margin-top: 12px;" @click="startQuest">{{
-            t('landWordsSession.toQuest')
-          }}
-        </button>
       </footer>
     </template>
     <template v-else-if="viewMode === 'practice'">
@@ -69,6 +84,7 @@
             <div class="glare"></div>
           </div>
         </div>
+        <span class="progress-counter">{{ Math.min(currentStep + 1, totalSteps) }}/{{ totalSteps }}</span>
       </header>
       <main class="vocab-main" v-if="currentWord">
         <div class="flashcard" :class="{'audio-only': currentWord.displayType === 'audio'}">
@@ -186,6 +202,14 @@ const errorMessage = ref("")
 const isAdLoading = ref(false)
 
 const isTipModalOpen = ref(false)
+const grammarData = ref(null)
+// Грамматика на языке интерфейса, если перевода нет: английский, потом русский
+const grammar = computed(() => {
+  const data = grammarData.value
+  if (!data) return null
+  const lang = locale.value.split('-')[0]
+  return data[lang] || data.en || data.ru || null
+})
 const currentTipText = ref("")
 
 const learningSequence = ref([])
@@ -242,6 +266,14 @@ onMounted(async () => {
     if (currentQuest && currentQuest.vocabulary) {
       vocabulary.value = currentQuest.vocabulary
     }
+    // Грамматика лежит отдельно от генерируемых квестов: public/grammar/<земля>.json, ключ — questId
+    try {
+      const grammarResponse = await fetch(`/grammar/${regionKey}.json`)
+      if (grammarResponse.ok) {
+        const grammarFile = await grammarResponse.json()
+        grammarData.value = grammarFile?.[questId] || null
+      }
+    } catch {}
   } catch (err) {
     errorMessage.value = err.message
   } finally {
@@ -495,6 +527,16 @@ onBeforeRouteLeave((to, from, next) => {
   overflow: hidden;
 }
 
+/* счётчик шагов справа от полосы, как в квесте */
+.progress-counter {
+  flex-shrink: 0;
+  color: var(--titleColor);
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
 .progress__bar {
   height: 100%;
   background-color: #10b981;
@@ -531,41 +573,135 @@ onBeforeRouteLeave((to, from, next) => {
 }
 
 .word-list-main {
-  gap: 12px;
-  padding: 20px 15px;
+  gap: 8px;
+  padding: 12px 15px;
 }
 
+/* строка слова — те же размеры, что в списке слов темы (/articles) */
 .word-list-item {
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  background: white;
-  padding: 12px 12px 12px 10px;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-  border: 2px solid #f1f5f9;
-  transition: transform 0.1s ease;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: var(--menuItemsBg);
+  border: 2px solid var(--tabsSlideBorderColor);
+}
+
+.word-sound {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.word-sound :deep(.speak-btn__icon) {
+  width: 30px;
 }
 
 .word-details {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 4px;
+  min-width: 0;
   flex-grow: 1;
 }
 
 .word-german-list {
-  font-size: 18px;
-  font-weight: 800;
-  color: #1e293b;
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--titleColor);
 }
 
 .word-translation-list {
+  font-size: 14px;
+  color: #8e8e93;
+  font-weight: 700;
+}
+
+.words-section-title {
+  margin: 8px 0 0;
+  color: var(--titleColor);
+  font-size: 17px;
+  font-weight: 900;
+}
+
+/* карточка грамматики */
+.grammar-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #6a74e8 0%, #4f5bd5 100%);
+  color: #fff;
+}
+
+.grammar-card__label {
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.grammar-card__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.grammar-point {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.grammar-point__title {
+  margin: 0;
   font-size: 15px;
-  color: #64748b;
+  font-weight: 900;
+}
+
+.grammar-point__text {
+  margin: 0;
+  font-size: 14px;
   font-weight: 600;
-  margin-bottom: 2px;
+  line-height: 1.4;
+}
+
+.grammar-examples {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.grammar-example {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.grammar-example__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.grammar-example__de {
+  color: #1e293b;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.grammar-example__tr {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .btn-verb-forms {
@@ -685,7 +821,7 @@ onBeforeRouteLeave((to, from, next) => {
 }
 
 .vocab-footer {
-  padding: 24px;
+  padding: 12px 15px 16px;
   background: var(--bg);
 }
 

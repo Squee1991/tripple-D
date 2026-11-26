@@ -1,0 +1,2428 @@
+{
+  "job-one": {
+    "ru": {
+      "title": "Работа: базовые слова",
+      "points": [
+        {
+          "title": "arbeiten",
+          "text": "Основа на -t, поэтому du arbeitest, er arbeitet. Профессия: Ich arbeite als Koch.",
+          "examples": [
+            {
+              "de": "Ich arbeite heute.",
+              "tr": "Сегодня я работаю."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Робота: базові слова",
+      "points": [
+        {
+          "title": "arbeiten",
+          "text": "Основа на -t, тому du arbeitest, er arbeitet. Професія: Ich arbeite als Koch.",
+          "examples": [
+            {
+              "de": "Ich arbeite heute.",
+              "tr": "Сьогодні я працюю."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Work: basic words",
+      "points": [
+        {
+          "title": "arbeiten",
+          "text": "The stem ends in -t, so du arbeitest, er arbeitet. Your job: Ich arbeite als Koch.",
+          "examples": [
+            {
+              "de": "Ich arbeite heute.",
+              "tr": "I’m working today."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praca: podstawowe słowa",
+      "points": [
+        {
+          "title": "arbeiten",
+          "text": "Temat na -t, więc du arbeitest, er arbeitet. Zawód: Ich arbeite als Koch.",
+          "examples": [
+            {
+              "de": "Ich arbeite heute.",
+              "tr": "Dziś pracuję."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Trabajo: palabras básicas",
+      "points": [
+        {
+          "title": "arbeiten",
+          "text": "La raíz acaba en -t, por eso du arbeitest, er arbeitet. Profesión: Ich arbeite als Koch.",
+          "examples": [
+            {
+              "de": "Ich arbeite heute.",
+              "tr": "Hoy trabajo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le travail : mots de base",
+      "points": [
+        {
+          "title": "arbeiten",
+          "text": "Le radical finit par -t, donc du arbeitest, er arbeitet. Le métier : Ich arbeite als Koch.",
+          "examples": [
+            {
+              "de": "Ich arbeite heute.",
+              "tr": "Aujourd’hui, je travaille."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "İş: temel kelimeler",
+      "points": [
+        {
+          "title": "arbeiten",
+          "text": "Kök -t ile bitiyor, bu yüzden du arbeitest, er arbeitet. Meslek: Ich arbeite als Koch.",
+          "examples": [
+            {
+              "de": "Ich arbeite heute.",
+              "tr": "Bugün çalışıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Munca: cuvinte de bază",
+      "points": [
+        {
+          "title": "arbeiten",
+          "text": "Rădăcina se termină în -t, deci du arbeitest, er arbeitet. Meseria: Ich arbeite als Koch.",
+          "examples": [
+            {
+              "de": "Ich arbeite heute.",
+              "tr": "Azi lucrez."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ish: asosiy so'zlar",
+      "points": [
+        {
+          "title": "arbeiten",
+          "text": "O'zak -t bilan tugaydi, shuning uchun du arbeitest, er arbeitet. Kasb: Ich arbeite als Koch.",
+          "examples": [
+            {
+              "de": "Ich arbeite heute.",
+              "tr": "Bugun ishlayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "काम: बुनियादी शब्द",
+      "points": [
+        {
+          "title": "arbeiten",
+          "text": "मूल -t पर खत्म होता है, इसलिए du arbeitest, er arbeitet। पेशा: Ich arbeite als Koch।",
+          "examples": [
+            {
+              "de": "Ich arbeite heute.",
+              "tr": "आज मैं काम कर रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "العمل: كلمات أساسية",
+      "points": [
+        {
+          "title": "arbeiten",
+          "text": "الجذر ينتهي بـ -t، لذلك du arbeitest، er arbeitet. والمهنة: Ich arbeite als Koch.",
+          "examples": [
+            {
+              "de": "Ich arbeite heute.",
+              "tr": "أعمل اليوم."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "job-two": {
+    "ru": {
+      "title": "Место работы: im Büro",
+      "points": [
+        {
+          "title": "im = in dem",
+          "text": "Где: im Büro (in + dem). Дома говорят готовой фразой: zu Hause.",
+          "examples": [
+            {
+              "de": "Ich arbeite im Büro.",
+              "tr": "Я работаю в офисе."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Місце роботи: im Büro",
+      "points": [
+        {
+          "title": "im = in dem",
+          "text": "Де: im Büro (in + dem). Удома кажуть готовою фразою: zu Hause.",
+          "examples": [
+            {
+              "de": "Ich arbeite im Büro.",
+              "tr": "Я працюю в офісі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Workplace: im Büro",
+      "points": [
+        {
+          "title": "im = in dem",
+          "text": "Where: im Büro (in + dem). At home is a set phrase: zu Hause.",
+          "examples": [
+            {
+              "de": "Ich arbeite im Büro.",
+              "tr": "I work in an office."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Miejsce pracy: im Büro",
+      "points": [
+        {
+          "title": "im = in dem",
+          "text": "Gdzie: im Büro (in + dem). W domu to gotowy zwrot: zu Hause.",
+          "examples": [
+            {
+              "de": "Ich arbeite im Büro.",
+              "tr": "Pracuję w biurze."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Lugar de trabajo: im Büro",
+      "points": [
+        {
+          "title": "im = in dem",
+          "text": "Dónde: im Büro (in + dem). En casa es una frase hecha: zu Hause.",
+          "examples": [
+            {
+              "de": "Ich arbeite im Büro.",
+              "tr": "Trabajo en la oficina."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Lieu de travail : im Büro",
+      "points": [
+        {
+          "title": "im = in dem",
+          "text": "Où : im Büro (in + dem). À la maison se dit zu Hause.",
+          "examples": [
+            {
+              "de": "Ich arbeite im Büro.",
+              "tr": "Je travaille au bureau."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "İş yeri: im Büro",
+      "points": [
+        {
+          "title": "im = in dem",
+          "text": "Nerede: im Büro (in + dem). Evde kalıp ifadedir: zu Hause.",
+          "examples": [
+            {
+              "de": "Ich arbeite im Büro.",
+              "tr": "Ofiste çalışıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Locul de muncă: im Büro",
+      "points": [
+        {
+          "title": "im = in dem",
+          "text": "Unde: im Büro (in + dem). Acasă e o expresie fixă: zu Hause.",
+          "examples": [
+            {
+              "de": "Ich arbeite im Büro.",
+              "tr": "Lucrez la birou."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ish joyi: im Büro",
+      "points": [
+        {
+          "title": "im = in dem",
+          "text": "Qayerda: im Büro (in + dem). Uyda tayyor ibora: zu Hause.",
+          "examples": [
+            {
+              "de": "Ich arbeite im Büro.",
+              "tr": "Men ofisda ishlayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "काम की जगह: im Büro",
+      "points": [
+        {
+          "title": "im = in dem",
+          "text": "कहाँ: im Büro (in + dem)। घर पर एक तय वाक्यांश है: zu Hause।",
+          "examples": [
+            {
+              "de": "Ich arbeite im Büro.",
+              "tr": "मैं दफ़्तर में काम करता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مكان العمل: im Büro",
+      "points": [
+        {
+          "title": "im = in dem",
+          "text": "أين: im Büro (in + dem). وفي البيت عبارة جاهزة: zu Hause.",
+          "examples": [
+            {
+              "de": "Ich arbeite im Büro.",
+              "tr": "أعمل في المكتب."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "job-three": {
+    "ru": {
+      "title": "Коллеги",
+      "points": [
+        {
+          "title": "der Kollege, die Kollegin",
+          "text": "Женская форма с -in: der Kollege → die Kollegin.",
+          "examples": [
+            {
+              "de": "Das ist mein Kollege.",
+              "tr": "Это мой коллега."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Колеги",
+      "points": [
+        {
+          "title": "der Kollege, die Kollegin",
+          "text": "Жіноча форма з -in: der Kollege → die Kollegin.",
+          "examples": [
+            {
+              "de": "Das ist mein Kollege.",
+              "tr": "Це мій колега."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Colleagues",
+      "points": [
+        {
+          "title": "der Kollege, die Kollegin",
+          "text": "Female form with -in: der Kollege → die Kollegin.",
+          "examples": [
+            {
+              "de": "Das ist mein Kollege.",
+              "tr": "This is my colleague."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Koledzy",
+      "points": [
+        {
+          "title": "der Kollege, die Kollegin",
+          "text": "Forma żeńska z -in: der Kollege → die Kollegin.",
+          "examples": [
+            {
+              "de": "Das ist mein Kollege.",
+              "tr": "To mój kolega z pracy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Compañeros",
+      "points": [
+        {
+          "title": "der Kollege, die Kollegin",
+          "text": "Forma femenina con -in: der Kollege → die Kollegin.",
+          "examples": [
+            {
+              "de": "Das ist mein Kollege.",
+              "tr": "Este es mi compañero."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les collègues",
+      "points": [
+        {
+          "title": "der Kollege, die Kollegin",
+          "text": "Forme féminine en -in : der Kollege → die Kollegin.",
+          "examples": [
+            {
+              "de": "Das ist mein Kollege.",
+              "tr": "C’est mon collègue."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "İş arkadaşları",
+      "points": [
+        {
+          "title": "der Kollege, die Kollegin",
+          "text": "Kadın hâli -in ile: der Kollege → die Kollegin.",
+          "examples": [
+            {
+              "de": "Das ist mein Kollege.",
+              "tr": "Bu iş arkadaşım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Colegii",
+      "points": [
+        {
+          "title": "der Kollege, die Kollegin",
+          "text": "Forma feminină cu -in: der Kollege → die Kollegin.",
+          "examples": [
+            {
+              "de": "Das ist mein Kollege.",
+              "tr": "Acesta e colegul meu."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Hamkasblar",
+      "points": [
+        {
+          "title": "der Kollege, die Kollegin",
+          "text": "Ayol shakli -in bilan: der Kollege → die Kollegin.",
+          "examples": [
+            {
+              "de": "Das ist mein Kollege.",
+              "tr": "Bu mening hamkasbim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "सहकर्मी",
+      "points": [
+        {
+          "title": "der Kollege, die Kollegin",
+          "text": "स्त्रीलिंग -in से: der Kollege → die Kollegin।",
+          "examples": [
+            {
+              "de": "Das ist mein Kollege.",
+              "tr": "यह मेरा सहकर्मी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الزملاء",
+      "points": [
+        {
+          "title": "der Kollege, die Kollegin",
+          "text": "صيغة المؤنث بـ -in: der Kollege → die Kollegin.",
+          "examples": [
+            {
+              "de": "Das ist mein Kollege.",
+              "tr": "هذا زميلي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "job-four": {
+    "ru": {
+      "title": "Рабочее время",
+      "points": [
+        {
+          "title": "um + время, keine Zeit",
+          "text": "Время начала: um 8 Uhr. Нет времени: Ich habe keine Zeit (die Zeit → keine).",
+          "examples": [
+            {
+              "de": "Ich beginne meine Arbeit um 8 Uhr.",
+              "tr": "Я начинаю работу в восемь."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Робочий час",
+      "points": [
+        {
+          "title": "um + час, keine Zeit",
+          "text": "Час початку: um 8 Uhr. Немає часу: Ich habe keine Zeit (die Zeit → keine).",
+          "examples": [
+            {
+              "de": "Ich beginne meine Arbeit um 8 Uhr.",
+              "tr": "Я починаю роботу о восьмій."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Working hours",
+      "points": [
+        {
+          "title": "um + time, keine Zeit",
+          "text": "Start time: um 8 Uhr. No time: Ich habe keine Zeit (die Zeit → keine).",
+          "examples": [
+            {
+              "de": "Ich beginne meine Arbeit um 8 Uhr.",
+              "tr": "I start work at eight."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Godziny pracy",
+      "points": [
+        {
+          "title": "um + godzina, keine Zeit",
+          "text": "Godzina rozpoczęcia: um 8 Uhr. Brak czasu: Ich habe keine Zeit (die Zeit → keine).",
+          "examples": [
+            {
+              "de": "Ich beginne meine Arbeit um 8 Uhr.",
+              "tr": "Zaczynam pracę o ósmej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Horario de trabajo",
+      "points": [
+        {
+          "title": "um + hora, keine Zeit",
+          "text": "Hora de inicio: um 8 Uhr. Sin tiempo: Ich habe keine Zeit (die Zeit → keine).",
+          "examples": [
+            {
+              "de": "Ich beginne meine Arbeit um 8 Uhr.",
+              "tr": "Empiezo a trabajar a las ocho."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les horaires",
+      "points": [
+        {
+          "title": "um + heure, keine Zeit",
+          "text": "Heure de début : um 8 Uhr. Pas le temps : Ich habe keine Zeit (die Zeit → keine).",
+          "examples": [
+            {
+              "de": "Ich beginne meine Arbeit um 8 Uhr.",
+              "tr": "Je commence le travail à huit heures."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Çalışma saatleri",
+      "points": [
+        {
+          "title": "um + saat, keine Zeit",
+          "text": "Başlama saati: um 8 Uhr. Vakit yok: Ich habe keine Zeit (die Zeit → keine).",
+          "examples": [
+            {
+              "de": "Ich beginne meine Arbeit um 8 Uhr.",
+              "tr": "İşe saat sekizde başlıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Programul de lucru",
+      "points": [
+        {
+          "title": "um + oră, keine Zeit",
+          "text": "Ora de început: um 8 Uhr. Nu am timp: Ich habe keine Zeit (die Zeit → keine).",
+          "examples": [
+            {
+              "de": "Ich beginne meine Arbeit um 8 Uhr.",
+              "tr": "Încep lucrul la opt."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ish vaqti",
+      "points": [
+        {
+          "title": "um + vaqt, keine Zeit",
+          "text": "Boshlanish vaqti: um 8 Uhr. Vaqt yo'q: Ich habe keine Zeit (die Zeit → keine).",
+          "examples": [
+            {
+              "de": "Ich beginne meine Arbeit um 8 Uhr.",
+              "tr": "Ishni soat sakkizda boshlayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "काम के घंटे",
+      "points": [
+        {
+          "title": "um + समय, keine Zeit",
+          "text": "शुरू होने का समय: um 8 Uhr। समय नहीं: Ich habe keine Zeit (die Zeit → keine)।",
+          "examples": [
+            {
+              "de": "Ich beginne meine Arbeit um 8 Uhr.",
+              "tr": "मैं आठ बजे काम शुरू करता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ساعات العمل",
+      "points": [
+        {
+          "title": "um + الوقت، keine Zeit",
+          "text": "وقت البدء: um 8 Uhr. ولا وقت: Ich habe keine Zeit (die Zeit → keine).",
+          "examples": [
+            {
+              "de": "Ich beginne meine Arbeit um 8 Uhr.",
+              "tr": "أبدأ عملي في الثامنة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "job-five": {
+    "ru": {
+      "title": "Задачи на работе",
+      "points": [
+        {
+          "title": "Können Sie mir...?",
+          "text": "Вежливая просьба к начальнику: Können Sie mir das zeigen? mir значит «мне».",
+          "examples": [
+            {
+              "de": "Können Sie mir das zeigen?",
+              "tr": "Вы можете мне это показать?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Завдання на роботі",
+      "points": [
+        {
+          "title": "Können Sie mir...?",
+          "text": "Ввічливе прохання до керівника: Können Sie mir das zeigen? mir означає «мені».",
+          "examples": [
+            {
+              "de": "Können Sie mir das zeigen?",
+              "tr": "Ви можете мені це показати?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Tasks at work",
+      "points": [
+        {
+          "title": "Können Sie mir...?",
+          "text": "A polite request to your boss: Können Sie mir das zeigen? mir means \"me, to me\".",
+          "examples": [
+            {
+              "de": "Können Sie mir das zeigen?",
+              "tr": "Can you show me that?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Zadania w pracy",
+      "points": [
+        {
+          "title": "Können Sie mir...?",
+          "text": "Grzeczna prośba do szefa: Können Sie mir das zeigen? mir znaczy „mi”.",
+          "examples": [
+            {
+              "de": "Können Sie mir das zeigen?",
+              "tr": "Może mi pan to pokazać?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Tareas en el trabajo",
+      "points": [
+        {
+          "title": "Können Sie mir...?",
+          "text": "Petición educada al jefe: Können Sie mir das zeigen? mir significa \"me\".",
+          "examples": [
+            {
+              "de": "Können Sie mir das zeigen?",
+              "tr": "¿Me lo puede enseñar?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les tâches",
+      "points": [
+        {
+          "title": "Können Sie mir...?",
+          "text": "Demande polie au chef : Können Sie mir das zeigen ? mir veut dire « me, à moi ».",
+          "examples": [
+            {
+              "de": "Können Sie mir das zeigen?",
+              "tr": "Vous pouvez me montrer ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "İşteki görevler",
+      "points": [
+        {
+          "title": "Können Sie mir...?",
+          "text": "Şefe kibar rica: Können Sie mir das zeigen? mir \"bana\" demektir.",
+          "examples": [
+            {
+              "de": "Können Sie mir das zeigen?",
+              "tr": "Bunu bana gösterebilir misiniz?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Sarcini la muncă",
+      "points": [
+        {
+          "title": "Können Sie mir...?",
+          "text": "Rugăminte politicoasă către șef: Können Sie mir das zeigen? mir înseamnă „mie”.",
+          "examples": [
+            {
+              "de": "Können Sie mir das zeigen?",
+              "tr": "Îmi puteți arăta?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ishdagi vazifalar",
+      "points": [
+        {
+          "title": "Können Sie mir...?",
+          "text": "Rahbarga muloyim iltimos: Können Sie mir das zeigen? mir \"menga\" degani.",
+          "examples": [
+            {
+              "de": "Können Sie mir das zeigen?",
+              "tr": "Buni menga ko'rsata olasizmi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "काम के कार्य",
+      "points": [
+        {
+          "title": "Können Sie mir...?",
+          "text": "बॉस से विनम्र अनुरोध: Können Sie mir das zeigen? mir मतलब \"मुझे\"।",
+          "examples": [
+            {
+              "de": "Können Sie mir das zeigen?",
+              "tr": "क्या आप मुझे यह दिखा सकते हैं?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مهام العمل",
+      "points": [
+        {
+          "title": "Können Sie mir...?",
+          "text": "طلب مهذب من المدير: Können Sie mir das zeigen؟ وmir تعني \"لي\".",
+          "examples": [
+            {
+              "de": "Können Sie mir das zeigen?",
+              "tr": "هل يمكنك أن تريني ذلك؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "job-six": {
+    "ru": {
+      "title": "Инструменты и склад",
+      "points": [
+        {
+          "title": "brauchen + Akkusativ",
+          "text": "Новых правил нет. das Werkzeug не меняется: Ich brauche das Werkzeug.",
+          "examples": [
+            {
+              "de": "Ich brauche das Werkzeug.",
+              "tr": "Мне нужен инструмент."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Інструменти і склад",
+      "points": [
+        {
+          "title": "brauchen + Akkusativ",
+          "text": "Нових правил немає. das Werkzeug не змінюється: Ich brauche das Werkzeug.",
+          "examples": [
+            {
+              "de": "Ich brauche das Werkzeug.",
+              "tr": "Мені потрібен інструмент."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Tools and warehouse",
+      "points": [
+        {
+          "title": "brauchen + Akkusativ",
+          "text": "No new rules. das Werkzeug doesn’t change: Ich brauche das Werkzeug.",
+          "examples": [
+            {
+              "de": "Ich brauche das Werkzeug.",
+              "tr": "I need the tool."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Narzędzia i magazyn",
+      "points": [
+        {
+          "title": "brauchen + Akkusativ",
+          "text": "Bez nowych reguł. das Werkzeug się nie zmienia: Ich brauche das Werkzeug.",
+          "examples": [
+            {
+              "de": "Ich brauche das Werkzeug.",
+              "tr": "Potrzebuję narzędzia."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Herramientas y almacén",
+      "points": [
+        {
+          "title": "brauchen + Akkusativ",
+          "text": "Sin reglas nuevas. das Werkzeug no cambia: Ich brauche das Werkzeug.",
+          "examples": [
+            {
+              "de": "Ich brauche das Werkzeug.",
+              "tr": "Necesito la herramienta."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Outils et entrepôt",
+      "points": [
+        {
+          "title": "brauchen + Akkusativ",
+          "text": "Pas de nouvelle règle. das Werkzeug ne change pas : Ich brauche das Werkzeug.",
+          "examples": [
+            {
+              "de": "Ich brauche das Werkzeug.",
+              "tr": "J’ai besoin de l’outil."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Aletler ve depo",
+      "points": [
+        {
+          "title": "brauchen + Akkusativ",
+          "text": "Yeni kural yok. das Werkzeug değişmez: Ich brauche das Werkzeug.",
+          "examples": [
+            {
+              "de": "Ich brauche das Werkzeug.",
+              "tr": "Alete ihtiyacım var."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Unelte și depozit",
+      "points": [
+        {
+          "title": "brauchen + Akkusativ",
+          "text": "Fără reguli noi. das Werkzeug nu se schimbă: Ich brauche das Werkzeug.",
+          "examples": [
+            {
+              "de": "Ich brauche das Werkzeug.",
+              "tr": "Am nevoie de unealtă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Asboblar va ombor",
+      "points": [
+        {
+          "title": "brauchen + Akkusativ",
+          "text": "Yangi qoida yo'q. das Werkzeug o'zgarmaydi: Ich brauche das Werkzeug.",
+          "examples": [
+            {
+              "de": "Ich brauche das Werkzeug.",
+              "tr": "Menga asbob kerak."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "औज़ार और गोदाम",
+      "points": [
+        {
+          "title": "brauchen + Akkusativ",
+          "text": "कोई नया नियम नहीं। das Werkzeug नहीं बदलता: Ich brauche das Werkzeug।",
+          "examples": [
+            {
+              "de": "Ich brauche das Werkzeug.",
+              "tr": "मुझे औज़ार चाहिए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الأدوات والمستودع",
+      "points": [
+        {
+          "title": "brauchen + Akkusativ",
+          "text": "لا قواعد جديدة. das Werkzeug لا تتغير: Ich brauche das Werkzeug.",
+          "examples": [
+            {
+              "de": "Ich brauche das Werkzeug.",
+              "tr": "أحتاج الأداة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "job-seven": {
+    "ru": {
+      "title": "Пунктуальность",
+      "points": [
+        {
+          "title": "einen Termin",
+          "text": "der Termin после haben становится einen Termin.",
+          "examples": [
+            {
+              "de": "Ich habe heute einen Termin.",
+              "tr": "У меня сегодня встреча."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Пунктуальність",
+      "points": [
+        {
+          "title": "einen Termin",
+          "text": "der Termin після haben стає einen Termin.",
+          "examples": [
+            {
+              "de": "Ich habe heute einen Termin.",
+              "tr": "У мене сьогодні зустріч."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Punctuality",
+      "points": [
+        {
+          "title": "einen Termin",
+          "text": "der Termin after haben becomes einen Termin.",
+          "examples": [
+            {
+              "de": "Ich habe heute einen Termin.",
+              "tr": "I have an appointment today."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Punktualność",
+      "points": [
+        {
+          "title": "einen Termin",
+          "text": "der Termin po haben zmienia się w einen Termin.",
+          "examples": [
+            {
+              "de": "Ich habe heute einen Termin.",
+              "tr": "Mam dziś spotkanie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Puntualidad",
+      "points": [
+        {
+          "title": "einen Termin",
+          "text": "der Termin después de haben pasa a einen Termin.",
+          "examples": [
+            {
+              "de": "Ich habe heute einen Termin.",
+              "tr": "Hoy tengo una cita."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "La ponctualité",
+      "points": [
+        {
+          "title": "einen Termin",
+          "text": "der Termin après haben devient einen Termin.",
+          "examples": [
+            {
+              "de": "Ich habe heute einen Termin.",
+              "tr": "J’ai un rendez-vous aujourd’hui."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Dakiklik",
+      "points": [
+        {
+          "title": "einen Termin",
+          "text": "haben’den sonra der Termin einen Termin olur.",
+          "examples": [
+            {
+              "de": "Ich habe heute einen Termin.",
+              "tr": "Bugün bir randevum var."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Punctualitatea",
+      "points": [
+        {
+          "title": "einen Termin",
+          "text": "der Termin după haben devine einen Termin.",
+          "examples": [
+            {
+              "de": "Ich habe heute einen Termin.",
+              "tr": "Azi am o programare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Vaqtga rioya",
+      "points": [
+        {
+          "title": "einen Termin",
+          "text": "haben dan keyin der Termin einen Termin bo'ladi.",
+          "examples": [
+            {
+              "de": "Ich habe heute einen Termin.",
+              "tr": "Bugun uchrashuvim bor."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "समय की पाबंदी",
+      "points": [
+        {
+          "title": "einen Termin",
+          "text": "haben के बाद der Termin बनता है einen Termin।",
+          "examples": [
+            {
+              "de": "Ich habe heute einen Termin.",
+              "tr": "आज मेरी एक मीटिंग है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الالتزام بالمواعيد",
+      "points": [
+        {
+          "title": "einen Termin",
+          "text": "بعد haben تصبح der Termin ‏einen Termin.",
+          "examples": [
+            {
+              "de": "Ich habe heute einen Termin.",
+              "tr": "عندي موعد اليوم."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "job-eight": {
+    "ru": {
+      "title": "Погрузка: Wo soll ich...?",
+      "points": [
+        {
+          "title": "soll ich...?",
+          "text": "Wo soll ich...? значит «куда мне...?», спрашиваем, что от нас хотят. Второй глагол в конце.",
+          "examples": [
+            {
+              "de": "Wo soll ich abladen?",
+              "tr": "Где мне разгружать?"
+            },
+            {
+              "de": "Vorsicht, das ist zu schwer!",
+              "tr": "Осторожно, это слишком тяжело!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Навантаження: Wo soll ich...?",
+      "points": [
+        {
+          "title": "soll ich...?",
+          "text": "Wo soll ich...? означає «куди мені...?», питаємо, чого від нас хочуть. Друге дієслово в кінці.",
+          "examples": [
+            {
+              "de": "Wo soll ich abladen?",
+              "tr": "Де мені розвантажувати?"
+            },
+            {
+              "de": "Vorsicht, das ist zu schwer!",
+              "tr": "Обережно, це занадто важко!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Loading: Wo soll ich...?",
+      "points": [
+        {
+          "title": "soll ich...?",
+          "text": "Wo soll ich...? means \"Where should I...?\", asking what you’re supposed to do. The second verb goes to the end.",
+          "examples": [
+            {
+              "de": "Wo soll ich abladen?",
+              "tr": "Where should I unload?"
+            },
+            {
+              "de": "Vorsicht, das ist zu schwer!",
+              "tr": "Careful, that’s too heavy!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Załadunek: Wo soll ich...?",
+      "points": [
+        {
+          "title": "soll ich...?",
+          "text": "Wo soll ich...? znaczy „gdzie mam...?”, pytamy, czego od nas chcą. Drugi czasownik na końcu.",
+          "examples": [
+            {
+              "de": "Wo soll ich abladen?",
+              "tr": "Gdzie mam rozładować?"
+            },
+            {
+              "de": "Vorsicht, das ist zu schwer!",
+              "tr": "Uwaga, to za ciężkie!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Carga: Wo soll ich...?",
+      "points": [
+        {
+          "title": "soll ich...?",
+          "text": "Wo soll ich...? significa \"¿dónde debo...?\", preguntando qué se espera de ti. El segundo verbo va al final.",
+          "examples": [
+            {
+              "de": "Wo soll ich abladen?",
+              "tr": "¿Dónde descargo?"
+            },
+            {
+              "de": "Vorsicht, das ist zu schwer!",
+              "tr": "¡Cuidado, es demasiado pesado!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Chargement : Wo soll ich... ?",
+      "points": [
+        {
+          "title": "soll ich...?",
+          "text": "Wo soll ich... ? veut dire « où dois-je... ? », on demande ce qu’on attend de nous. Le deuxième verbe va à la fin.",
+          "examples": [
+            {
+              "de": "Wo soll ich abladen?",
+              "tr": "Où dois-je décharger ?"
+            },
+            {
+              "de": "Vorsicht, das ist zu schwer!",
+              "tr": "Attention, c’est trop lourd !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yükleme: Wo soll ich...?",
+      "points": [
+        {
+          "title": "soll ich...?",
+          "text": "Wo soll ich...? \"Nereye ... yapayım?\" demektir, bizden ne istendiğini sorar. İkinci fiil sonda.",
+          "examples": [
+            {
+              "de": "Wo soll ich abladen?",
+              "tr": "Nereye boşaltayım?"
+            },
+            {
+              "de": "Vorsicht, das ist zu schwer!",
+              "tr": "Dikkat, bu çok ağır!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Încărcare: Wo soll ich...?",
+      "points": [
+        {
+          "title": "soll ich...?",
+          "text": "Wo soll ich...? înseamnă „unde să...?”, întrebi ce se așteaptă de la tine. Al doilea verb la final.",
+          "examples": [
+            {
+              "de": "Wo soll ich abladen?",
+              "tr": "Unde să descarc?"
+            },
+            {
+              "de": "Vorsicht, das ist zu schwer!",
+              "tr": "Atenție, e prea greu!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Yuklash: Wo soll ich...?",
+      "points": [
+        {
+          "title": "soll ich...?",
+          "text": "Wo soll ich...? \"qayerga ... qilay?\" degani, bizdan nima kutilayotganini so'raydi. Ikkinchi fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Wo soll ich abladen?",
+              "tr": "Qayerga tushiray?"
+            },
+            {
+              "de": "Vorsicht, das ist zu schwer!",
+              "tr": "Ehtiyot bo'ling, bu juda og'ir!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "लोडिंग: Wo soll ich...?",
+      "points": [
+        {
+          "title": "soll ich...?",
+          "text": "Wo soll ich...? मतलब \"मैं कहाँ ... करूँ?\", पूछते हैं कि हमसे क्या चाहिए। दूसरी क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Wo soll ich abladen?",
+              "tr": "मैं कहाँ उतारूँ?"
+            },
+            {
+              "de": "Vorsicht, das ist zu schwer!",
+              "tr": "सावधान, यह बहुत भारी है!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "التحميل: Wo soll ich...؟",
+      "points": [
+        {
+          "title": "soll ich...?",
+          "text": "Wo soll ich...؟ تعني \"أين يجب أن...؟\"، نسأل عما يُطلب منا. والفعل الثاني في الآخر.",
+          "examples": [
+            {
+              "de": "Wo soll ich abladen?",
+              "tr": "أين يجب أن أفرّغ؟"
+            },
+            {
+              "de": "Vorsicht, das ist zu schwer!",
+              "tr": "انتبه، هذا ثقيل جداً!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "job-nine": {
+    "ru": {
+      "title": "Зарплата и отдых",
+      "points": [
+        {
+          "title": "der Feierabend",
+          "text": "Новых правил нет. der Feierabend значит конец рабочего дня.",
+          "examples": [
+            {
+              "de": "Endlich Feierabend!",
+              "tr": "Наконец-то конец рабочего дня!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Зарплата й відпочинок",
+      "points": [
+        {
+          "title": "der Feierabend",
+          "text": "Нових правил немає. der Feierabend означає кінець робочого дня.",
+          "examples": [
+            {
+              "de": "Endlich Feierabend!",
+              "tr": "Нарешті кінець робочого дня!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Pay and time off",
+      "points": [
+        {
+          "title": "der Feierabend",
+          "text": "No new rules. der Feierabend means the end of the working day.",
+          "examples": [
+            {
+              "de": "Endlich Feierabend!",
+              "tr": "Finally, the end of the working day!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Wypłata i odpoczynek",
+      "points": [
+        {
+          "title": "der Feierabend",
+          "text": "Bez nowych reguł. der Feierabend to koniec dnia pracy.",
+          "examples": [
+            {
+              "de": "Endlich Feierabend!",
+              "tr": "Nareszcie fajrant!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Sueldo y descanso",
+      "points": [
+        {
+          "title": "der Feierabend",
+          "text": "Sin reglas nuevas. der Feierabend es el final de la jornada.",
+          "examples": [
+            {
+              "de": "Endlich Feierabend!",
+              "tr": "¡Por fin termina la jornada!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Salaire et repos",
+      "points": [
+        {
+          "title": "der Feierabend",
+          "text": "Pas de nouvelle règle. der Feierabend, c’est la fin de la journée de travail.",
+          "examples": [
+            {
+              "de": "Endlich Feierabend!",
+              "tr": "Enfin la fin de la journée de travail !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Maaş ve dinlenme",
+      "points": [
+        {
+          "title": "der Feierabend",
+          "text": "Yeni kural yok. der Feierabend iş gününün bitişi demektir.",
+          "examples": [
+            {
+              "de": "Endlich Feierabend!",
+              "tr": "Sonunda mesai bitti!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Salariul și odihna",
+      "points": [
+        {
+          "title": "der Feierabend",
+          "text": "Fără reguli noi. der Feierabend înseamnă sfârșitul zilei de lucru.",
+          "examples": [
+            {
+              "de": "Endlich Feierabend!",
+              "tr": "În sfârșit, gata programul!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Maosh va dam olish",
+      "points": [
+        {
+          "title": "der Feierabend",
+          "text": "Yangi qoida yo'q. der Feierabend ish kunining oxiri degani.",
+          "examples": [
+            {
+              "de": "Endlich Feierabend!",
+              "tr": "Nihoyat ish kuni tugadi!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "वेतन और छुट्टी",
+      "points": [
+        {
+          "title": "der Feierabend",
+          "text": "कोई नया नियम नहीं। der Feierabend मतलब काम के दिन का अंत।",
+          "examples": [
+            {
+              "de": "Endlich Feierabend!",
+              "tr": "आख़िरकार काम का दिन खत्म!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الراتب والراحة",
+      "points": [
+        {
+          "title": "der Feierabend",
+          "text": "لا قواعد جديدة. der Feierabend تعني نهاية يوم العمل.",
+          "examples": [
+            {
+              "de": "Endlich Feierabend!",
+              "tr": "أخيراً انتهى يوم العمل!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "job-ten": {
+    "ru": {
+      "title": "Инструменты на объекте",
+      "points": [
+        {
+          "title": "einen Hammer",
+          "text": "der Hammer после brauchen становится einen Hammer.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Hammer.",
+              "tr": "Мне нужен молоток."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Інструменти на об’єкті",
+      "points": [
+        {
+          "title": "einen Hammer",
+          "text": "der Hammer після brauchen стає einen Hammer.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Hammer.",
+              "tr": "Мені потрібен молоток."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Tools on site",
+      "points": [
+        {
+          "title": "einen Hammer",
+          "text": "der Hammer after brauchen becomes einen Hammer.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Hammer.",
+              "tr": "I need a hammer."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Narzędzia na budowie",
+      "points": [
+        {
+          "title": "einen Hammer",
+          "text": "der Hammer po brauchen zmienia się w einen Hammer.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Hammer.",
+              "tr": "Potrzebuję młotka."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Herramientas en la obra",
+      "points": [
+        {
+          "title": "einen Hammer",
+          "text": "der Hammer después de brauchen pasa a einen Hammer.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Hammer.",
+              "tr": "Necesito un martillo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Outils sur le chantier",
+      "points": [
+        {
+          "title": "einen Hammer",
+          "text": "der Hammer après brauchen devient einen Hammer.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Hammer.",
+              "tr": "J’ai besoin d’un marteau."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Şantiyede aletler",
+      "points": [
+        {
+          "title": "einen Hammer",
+          "text": "brauchen’dan sonra der Hammer einen Hammer olur.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Hammer.",
+              "tr": "Bir çekice ihtiyacım var."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Unelte pe șantier",
+      "points": [
+        {
+          "title": "einen Hammer",
+          "text": "der Hammer după brauchen devine einen Hammer.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Hammer.",
+              "tr": "Am nevoie de un ciocan."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Obyektdagi asboblar",
+      "points": [
+        {
+          "title": "einen Hammer",
+          "text": "brauchen dan keyin der Hammer einen Hammer bo'ladi.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Hammer.",
+              "tr": "Menga bolg‘a kerak."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "साइट पर औज़ार",
+      "points": [
+        {
+          "title": "einen Hammer",
+          "text": "brauchen के बाद der Hammer बनता है einen Hammer।",
+          "examples": [
+            {
+              "de": "Ich brauche einen Hammer.",
+              "tr": "मुझे एक हथौड़ा चाहिए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الأدوات في الموقع",
+      "points": [
+        {
+          "title": "einen Hammer",
+          "text": "بعد brauchen تصبح der Hammer ‏einen Hammer.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Hammer.",
+              "tr": "أحتاج مطرقة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "job-eleven": {
+    "ru": {
+      "title": "Просьбы: Mach! Hilf mir!",
+      "points": [
+        {
+          "title": "Повелительная форма для du",
+          "text": "Просьба к коллеге на du: берём глагол без -st и без du. du machst → Mach! du hilfst → Hilf mir!",
+          "examples": [
+            {
+              "de": "Mach das schneller!",
+              "tr": "Делай это быстрее!"
+            },
+            {
+              "de": "Hilf mir bitte!",
+              "tr": "Помоги мне, пожалуйста!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Прохання: Mach! Hilf mir!",
+      "points": [
+        {
+          "title": "Наказовий спосіб для du",
+          "text": "Прохання до колеги на du: беремо дієслово без -st і без du. du machst → Mach! du hilfst → Hilf mir!",
+          "examples": [
+            {
+              "de": "Mach das schneller!",
+              "tr": "Роби це швидше!"
+            },
+            {
+              "de": "Hilf mir bitte!",
+              "tr": "Допоможи мені, будь ласка!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Requests: Mach! Hilf mir!",
+      "points": [
+        {
+          "title": "Imperative for du",
+          "text": "An order to a colleague (du): take the du form without -st and without du. du machst → Mach! du hilfst → Hilf mir!",
+          "examples": [
+            {
+              "de": "Mach das schneller!",
+              "tr": "Do it faster!"
+            },
+            {
+              "de": "Hilf mir bitte!",
+              "tr": "Help me, please!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Prośby: Mach! Hilf mir!",
+      "points": [
+        {
+          "title": "Tryb rozkazujący dla du",
+          "text": "Prośba do kolegi na du: bierzemy czasownik bez -st i bez du. du machst → Mach! du hilfst → Hilf mir!",
+          "examples": [
+            {
+              "de": "Mach das schneller!",
+              "tr": "Zrób to szybciej!"
+            },
+            {
+              "de": "Hilf mir bitte!",
+              "tr": "Pomóż mi, proszę!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Peticiones: Mach! Hilf mir!",
+      "points": [
+        {
+          "title": "Imperativo para du",
+          "text": "Orden a un compañero (du): verbo sin -st y sin du. du machst → Mach! du hilfst → Hilf mir!",
+          "examples": [
+            {
+              "de": "Mach das schneller!",
+              "tr": "¡Hazlo más rápido!"
+            },
+            {
+              "de": "Hilf mir bitte!",
+              "tr": "¡Ayúdame, por favor!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Demandes : Mach ! Hilf mir !",
+      "points": [
+        {
+          "title": "Impératif pour du",
+          "text": "Ordre à un collègue (du) : le verbe sans -st et sans du. du machst → Mach ! du hilfst → Hilf mir !",
+          "examples": [
+            {
+              "de": "Mach das schneller!",
+              "tr": "Fais-le plus vite !"
+            },
+            {
+              "de": "Hilf mir bitte!",
+              "tr": "Aide-moi, s’il te plaît !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Rica: Mach! Hilf mir!",
+      "points": [
+        {
+          "title": "du için emir kipi",
+          "text": "du ile iş arkadaşına rica: fiili -st ve du olmadan al. du machst → Mach! du hilfst → Hilf mir!",
+          "examples": [
+            {
+              "de": "Mach das schneller!",
+              "tr": "Bunu daha hızlı yap!"
+            },
+            {
+              "de": "Hilf mir bitte!",
+              "tr": "Bana yardım et, lütfen!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Rugăminți: Mach! Hilf mir!",
+      "points": [
+        {
+          "title": "Imperativ pentru du",
+          "text": "Rugăminte către un coleg (du): verbul fără -st și fără du. du machst → Mach! du hilfst → Hilf mir!",
+          "examples": [
+            {
+              "de": "Mach das schneller!",
+              "tr": "Fă asta mai repede!"
+            },
+            {
+              "de": "Hilf mir bitte!",
+              "tr": "Ajută-mă, te rog!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Iltimoslar: Mach! Hilf mir!",
+      "points": [
+        {
+          "title": "du uchun buyruq mayli",
+          "text": "Hamkasbga du bilan iltimos: fe'lni -st va du siz olamiz. du machst → Mach! du hilfst → Hilf mir!",
+          "examples": [
+            {
+              "de": "Mach das schneller!",
+              "tr": "Buni tezroq qil!"
+            },
+            {
+              "de": "Hilf mir bitte!",
+              "tr": "Iltimos, menga yordam ber!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अनुरोध: Mach! Hilf mir!",
+      "points": [
+        {
+          "title": "du के लिए आज्ञार्थ",
+          "text": "सहकर्मी से du में अनुरोध: क्रिया बिना -st और बिना du। du machst → Mach! du hilfst → Hilf mir!",
+          "examples": [
+            {
+              "de": "Mach das schneller!",
+              "tr": "इसे जल्दी करो!"
+            },
+            {
+              "de": "Hilf mir bitte!",
+              "tr": "कृपया मेरी मदद करो!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الطلبات: Mach! Hilf mir!",
+      "points": [
+        {
+          "title": "صيغة الأمر لـ du",
+          "text": "طلب من زميل بصيغة du: نأخذ الفعل بدون -st وبدون du. du machst → Mach! du hilfst → Hilf mir!",
+          "examples": [
+            {
+              "de": "Mach das schneller!",
+              "tr": "افعل ذلك أسرع!"
+            },
+            {
+              "de": "Hilf mir bitte!",
+              "tr": "ساعدني من فضلك!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "job-twelve": {
+    "ru": {
+      "title": "Размеры и счёт: zehn Stück",
+      "points": [
+        {
+          "title": "Stück и Meter после числа",
+          "text": "После числа Stück и Meter не меняются: zehn Stück, drei Meter.",
+          "examples": [
+            {
+              "de": "Ich brauche zehn Stück.",
+              "tr": "Мне нужно десять штук."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Розміри й рахунок: zehn Stück",
+      "points": [
+        {
+          "title": "Stück і Meter після числа",
+          "text": "Після числа Stück і Meter не змінюються: zehn Stück, drei Meter.",
+          "examples": [
+            {
+              "de": "Ich brauche zehn Stück.",
+              "tr": "Мені потрібно десять штук."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Sizes and counting: zehn Stück",
+      "points": [
+        {
+          "title": "Stück and Meter after a number",
+          "text": "After a number, Stück and Meter don’t change: zehn Stück, drei Meter.",
+          "examples": [
+            {
+              "de": "Ich brauche zehn Stück.",
+              "tr": "I need ten pieces."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Rozmiary i liczenie: zehn Stück",
+      "points": [
+        {
+          "title": "Stück i Meter po liczbie",
+          "text": "Po liczbie Stück i Meter się nie zmieniają: zehn Stück, drei Meter.",
+          "examples": [
+            {
+              "de": "Ich brauche zehn Stück.",
+              "tr": "Potrzebuję dziesięciu sztuk."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Medidas y cuentas: zehn Stück",
+      "points": [
+        {
+          "title": "Stück y Meter tras un número",
+          "text": "Después de un número, Stück y Meter no cambian: zehn Stück, drei Meter.",
+          "examples": [
+            {
+              "de": "Ich brauche zehn Stück.",
+              "tr": "Necesito diez piezas."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Tailles et comptes : zehn Stück",
+      "points": [
+        {
+          "title": "Stück et Meter après un nombre",
+          "text": "Après un nombre, Stück et Meter ne changent pas : zehn Stück, drei Meter.",
+          "examples": [
+            {
+              "de": "Ich brauche zehn Stück.",
+              "tr": "J’ai besoin de dix pièces."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Ölçü ve sayma: zehn Stück",
+      "points": [
+        {
+          "title": "Sayıdan sonra Stück ve Meter",
+          "text": "Sayıdan sonra Stück ve Meter değişmez: zehn Stück, drei Meter.",
+          "examples": [
+            {
+              "de": "Ich brauche zehn Stück.",
+              "tr": "On tane lazım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Mărimi și numărare: zehn Stück",
+      "points": [
+        {
+          "title": "Stück și Meter după un număr",
+          "text": "După un număr, Stück și Meter nu se schimbă: zehn Stück, drei Meter.",
+          "examples": [
+            {
+              "de": "Ich brauche zehn Stück.",
+              "tr": "Am nevoie de zece bucăți."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "O'lcham va sanoq: zehn Stück",
+      "points": [
+        {
+          "title": "Sondan keyin Stück va Meter",
+          "text": "Sondan keyin Stück va Meter o'zgarmaydi: zehn Stück, drei Meter.",
+          "examples": [
+            {
+              "de": "Ich brauche zehn Stück.",
+              "tr": "Menga o'nta dona kerak."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "माप और गिनती: zehn Stück",
+      "points": [
+        {
+          "title": "संख्या के बाद Stück और Meter",
+          "text": "संख्या के बाद Stück और Meter नहीं बदलते: zehn Stück, drei Meter।",
+          "examples": [
+            {
+              "de": "Ich brauche zehn Stück.",
+              "tr": "मुझे दस पीस चाहिए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المقاسات والعد: zehn Stück",
+      "points": [
+        {
+          "title": "Stück وMeter بعد العدد",
+          "text": "بعد العدد لا تتغير Stück وMeter: zehn Stück، drei Meter.",
+          "examples": [
+            {
+              "de": "Ich brauche zehn Stück.",
+              "tr": "أحتاج عشر قطع."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "job-thirteen": {
+    "ru": {
+      "title": "Зарплата и договор",
+      "points": [
+        {
+          "title": "bekommen",
+          "text": "bekommen значит «получать», а не «становиться», хотя звучит похоже на английское become.",
+          "examples": [
+            {
+              "de": "Ich bekomme Gehalt.",
+              "tr": "Я получаю зарплату."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Зарплата і договір",
+      "points": [
+        {
+          "title": "bekommen",
+          "text": "bekommen означає «отримувати», а не «ставати», хоч звучить схоже на англійське become.",
+          "examples": [
+            {
+              "de": "Ich bekomme Gehalt.",
+              "tr": "Я отримую зарплату."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Salary and contract",
+      "points": [
+        {
+          "title": "bekommen",
+          "text": "bekommen means \"to get, receive\", not \"to become\".",
+          "examples": [
+            {
+              "de": "Ich bekomme Gehalt.",
+              "tr": "I get a salary."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Pensja i umowa",
+      "points": [
+        {
+          "title": "bekommen",
+          "text": "bekommen znaczy „otrzymywać”, a nie „stawać się”, choć brzmi jak angielskie become.",
+          "examples": [
+            {
+              "de": "Ich bekomme Gehalt.",
+              "tr": "Dostaję pensję."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Sueldo y contrato",
+      "points": [
+        {
+          "title": "bekommen",
+          "text": "bekommen significa \"recibir\", no \"convertirse\", aunque suene como el inglés become.",
+          "examples": [
+            {
+              "de": "Ich bekomme Gehalt.",
+              "tr": "Recibo un sueldo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Salaire et contrat",
+      "points": [
+        {
+          "title": "bekommen",
+          "text": "bekommen veut dire « recevoir », pas « devenir », même si ça ressemble à l’anglais become.",
+          "examples": [
+            {
+              "de": "Ich bekomme Gehalt.",
+              "tr": "Je reçois un salaire."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Maaş ve sözleşme",
+      "points": [
+        {
+          "title": "bekommen",
+          "text": "bekommen \"almak\" demektir, İngilizce become’a benzese de \"olmak\" değildir.",
+          "examples": [
+            {
+              "de": "Ich bekomme Gehalt.",
+              "tr": "Maaş alıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Salariu și contract",
+      "points": [
+        {
+          "title": "bekommen",
+          "text": "bekommen înseamnă „a primi”, nu „a deveni”, deși seamănă cu englezescul become.",
+          "examples": [
+            {
+              "de": "Ich bekomme Gehalt.",
+              "tr": "Primesc salariu."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Maosh va shartnoma",
+      "points": [
+        {
+          "title": "bekommen",
+          "text": "bekommen \"olmoq, qabul qilmoq\" degani, inglizcha become ga o'xshasa ham \"bo'lmoq\" emas.",
+          "examples": [
+            {
+              "de": "Ich bekomme Gehalt.",
+              "tr": "Men maosh olaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "वेतन और अनुबंध",
+      "points": [
+        {
+          "title": "bekommen",
+          "text": "bekommen का मतलब \"पाना\" है, \"बनना\" नहीं, भले ही यह अंग्रेज़ी become जैसा लगे।",
+          "examples": [
+            {
+              "de": "Ich bekomme Gehalt.",
+              "tr": "मुझे वेतन मिलता है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الراتب والعقد",
+      "points": [
+        {
+          "title": "bekommen",
+          "text": "bekommen تعني \"يحصل على\"، وليس \"يصبح\"، رغم شبهها بالإنجليزية become.",
+          "examples": [
+            {
+              "de": "Ich bekomme Gehalt.",
+              "tr": "أحصل على راتب."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "job-fourteen": {
+    "ru": {
+      "title": "Больничный",
+      "points": [
+        {
+          "title": "sich krankmelden",
+          "text": "Сообщить на работу, что болеешь: Ich melde mich krank. Слово krank уходит в конец, как приставка.",
+          "examples": [
+            {
+              "de": "Ich melde mich heute krank.",
+              "tr": "Сегодня я сообщаю на работу, что заболел."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Лікарняний",
+      "points": [
+        {
+          "title": "sich krankmelden",
+          "text": "Повідомити на роботу, що хворієш: Ich melde mich krank. Слово krank іде в кінець, як префікс.",
+          "examples": [
+            {
+              "de": "Ich melde mich heute krank.",
+              "tr": "Сьогодні я повідомляю на роботу, що захворів."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Sick leave",
+      "points": [
+        {
+          "title": "sich krankmelden",
+          "text": "To call in sick: Ich melde mich krank.",
+          "examples": [
+            {
+              "de": "Ich melde mich heute krank.",
+              "tr": "I’m calling in sick today."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Zwolnienie lekarskie",
+      "points": [
+        {
+          "title": "sich krankmelden",
+          "text": "Zgłosić w pracy chorobę: Ich melde mich krank.",
+          "examples": [
+            {
+              "de": "Ich melde mich heute krank.",
+              "tr": "Dziś zgłaszam, że jestem chory."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Baja por enfermedad",
+      "points": [
+        {
+          "title": "sich krankmelden",
+          "text": "Avisar de que estás enfermo: Ich melde mich krank.",
+          "examples": [
+            {
+              "de": "Ich melde mich heute krank.",
+              "tr": "Hoy aviso de que estoy enfermo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "L’arrêt maladie",
+      "points": [
+        {
+          "title": "sich krankmelden",
+          "text": "Se déclarer malade : Ich melde mich krank.",
+          "examples": [
+            {
+              "de": "Ich melde mich heute krank.",
+              "tr": "Aujourd’hui, je me déclare malade."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Hastalık izni",
+      "points": [
+        {
+          "title": "sich krankmelden",
+          "text": "İşe hasta olduğunu bildirmek: Ich melde mich krank.",
+          "examples": [
+            {
+              "de": "Ich melde mich heute krank.",
+              "tr": "Bugün hastalık bildiriyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Concediul medical",
+      "points": [
+        {
+          "title": "sich krankmelden",
+          "text": "Să anunți că ești bolnav: Ich melde mich krank.",
+          "examples": [
+            {
+              "de": "Ich melde mich heute krank.",
+              "tr": "Azi anunț că sunt bolnav."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kasallik varaqasi",
+      "points": [
+        {
+          "title": "sich krankmelden",
+          "text": "Ishga kasal ekaningni bildirish: Ich melde mich krank.",
+          "examples": [
+            {
+              "de": "Ich melde mich heute krank.",
+              "tr": "Bugun ishga kasal ekanimni bildiraman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "बीमारी की छुट्टी",
+      "points": [
+        {
+          "title": "sich krankmelden",
+          "text": "काम पर बीमार होने की सूचना देना: Ich melde mich krank।",
+          "examples": [
+            {
+              "de": "Ich melde mich heute krank.",
+              "tr": "आज मैं बीमारी की छुट्टी की सूचना दे रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الإجازة المرضية",
+      "points": [
+        {
+          "title": "sich krankmelden",
+          "text": "للإبلاغ عن المرض في العمل: Ich melde mich krank.",
+          "examples": [
+            {
+              "de": "Ich melde mich heute krank.",
+              "tr": "اليوم أبلغ العمل بأنني مريض."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

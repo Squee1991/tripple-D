@@ -1,0 +1,2728 @@
+{
+  "advice-garden-one": {
+    "ru": {
+      "title": "Тебе следует: sollte",
+      "points": [
+        {
+          "title": "sollte: тебе следует",
+          "text": "Совет: sollte + инфинитив в конце. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Тебе стоит больше спать."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Вам не стоит так много работать."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Тобі варто: sollte",
+      "points": [
+        {
+          "title": "sollte: тобі варто",
+          "text": "Порада: sollte + інфінітив у кінці. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Тобі варто більше спати."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Вам не варто так багато працювати."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "You should: sollte",
+      "points": [
+        {
+          "title": "sollte: you should",
+          "text": "Advice: sollte + infinitive at the end. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "You should sleep more."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "You shouldn’t work so much."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powinieneś: sollte",
+      "points": [
+        {
+          "title": "sollte: powinieneś",
+          "text": "Rada: sollte + bezokolicznik na końcu. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Powinieneś więcej spać."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Nie powinien pan tyle pracować."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Deberías: sollte",
+      "points": [
+        {
+          "title": "sollte: deberías",
+          "text": "Consejo: sollte + infinitivo al final. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Deberías dormir más."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "No debería trabajar tanto."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Tu devrais : sollte",
+      "points": [
+        {
+          "title": "sollte : tu devrais",
+          "text": "Conseil : sollte + infinitif à la fin. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Tu devrais dormir plus."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Vous ne devriez pas travailler autant."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yapmalısın: sollte",
+      "points": [
+        {
+          "title": "sollte: -meli",
+          "text": "Tavsiye: sollte + mastar sonda. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Daha çok uyumalısın."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Bu kadar çok çalışmamalısınız."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Ar trebui: sollte",
+      "points": [
+        {
+          "title": "sollte: ar trebui",
+          "text": "Sfat: sollte + infinitiv la final. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Ar trebui să dormi mai mult."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "N-ar trebui să lucrați atât de mult."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kerak: sollte",
+      "points": [
+        {
+          "title": "sollte: ... kerak",
+          "text": "Maslahat: sollte + infinitiv oxirida. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Ko'proq uxlashing kerak."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Siz bunchalik ko'p ishlamasligingiz kerak."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "तुम्हें चाहिए: sollte",
+      "points": [
+        {
+          "title": "sollte: तुम्हें चाहिए",
+          "text": "सलाह: sollte + इन्फ़िनिटिव अंत में। ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten।",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "तुम्हें ज़्यादा सोना चाहिए।"
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "आपको इतना ज़्यादा काम नहीं करना चाहिए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ينبغي: sollte",
+      "points": [
+        {
+          "title": "sollte: ينبغي",
+          "text": "النصيحة: sollte + المصدر في الآخر. ich sollte، du solltest، er sollte، wir sollten، ihr solltet، sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "ينبغي أن تنام أكثر."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "لا ينبغي أن تعمل كثيراً هكذا."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "advice-garden-two": {
+    "ru": {
+      "title": "Советы для здоровья",
+      "points": [
+        {
+          "title": "sollte: тебе следует",
+          "text": "Совет: sollte + инфинитив в конце. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Тебе стоит больше спать."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Вам не стоит так много работать."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Поради для здоров’я",
+      "points": [
+        {
+          "title": "sollte: тобі варто",
+          "text": "Порада: sollte + інфінітив у кінці. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Тобі варто більше спати."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Вам не варто так багато працювати."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Health advice",
+      "points": [
+        {
+          "title": "sollte: you should",
+          "text": "Advice: sollte + infinitive at the end. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "You should sleep more."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "You shouldn’t work so much."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Rady dla zdrowia",
+      "points": [
+        {
+          "title": "sollte: powinieneś",
+          "text": "Rada: sollte + bezokolicznik na końcu. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Powinieneś więcej spać."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Nie powinien pan tyle pracować."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Consejos de salud",
+      "points": [
+        {
+          "title": "sollte: deberías",
+          "text": "Consejo: sollte + infinitivo al final. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Deberías dormir más."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "No debería trabajar tanto."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Conseils santé",
+      "points": [
+        {
+          "title": "sollte : tu devrais",
+          "text": "Conseil : sollte + infinitif à la fin. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Tu devrais dormir plus."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Vous ne devriez pas travailler autant."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sağlık tavsiyeleri",
+      "points": [
+        {
+          "title": "sollte: -meli",
+          "text": "Tavsiye: sollte + mastar sonda. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Daha çok uyumalısın."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Bu kadar çok çalışmamalısınız."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Sfaturi pentru sănătate",
+      "points": [
+        {
+          "title": "sollte: ar trebui",
+          "text": "Sfat: sollte + infinitiv la final. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Ar trebui să dormi mai mult."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "N-ar trebui să lucrați atât de mult."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Sog'liq uchun maslahatlar",
+      "points": [
+        {
+          "title": "sollte: ... kerak",
+          "text": "Maslahat: sollte + infinitiv oxirida. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Ko'proq uxlashing kerak."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Siz bunchalik ko'p ishlamasligingiz kerak."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "स्वास्थ्य की सलाह",
+      "points": [
+        {
+          "title": "sollte: तुम्हें चाहिए",
+          "text": "सलाह: sollte + इन्फ़िनिटिव अंत में। ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten।",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "तुम्हें ज़्यादा सोना चाहिए।"
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "आपको इतना ज़्यादा काम नहीं करना चाहिए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "نصائح صحية",
+      "points": [
+        {
+          "title": "sollte: ينبغي",
+          "text": "النصيحة: sollte + المصدر في الآخر. ich sollte، du solltest، er sollte، wir sollten، ihr solltet، sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "ينبغي أن تنام أكثر."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "لا ينبغي أن تعمل كثيراً هكذا."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "advice-garden-three": {
+    "ru": {
+      "title": "Я бы с удовольствием: würde gern",
+      "points": [
+        {
+          "title": "würde gern: я бы с удовольствием",
+          "text": "Желание: würde + gern + инфинитив в конце. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Я бы с удовольствием поехал на море."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Я б залюбки: würde gern",
+      "points": [
+        {
+          "title": "würde gern: я б із задоволенням",
+          "text": "Бажання: würde + gern + інфінітив у кінці. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Я б залюбки поїхав на море."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "I’d love to: würde gern",
+      "points": [
+        {
+          "title": "würde gern: I’d like to",
+          "text": "A wish: würde + gern + infinitive at the end. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "I’d like to go to the seaside."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Chętnie bym: würde gern",
+      "points": [
+        {
+          "title": "würde gern: chętnie bym",
+          "text": "Życzenie: würde + gern + bezokolicznik na końcu. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Chętnie pojechałbym nad morze."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Me encantaría: würde gern",
+      "points": [
+        {
+          "title": "würde gern: me gustaría",
+          "text": "Deseo: würde + gern + infinitivo al final. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Me gustaría ir al mar."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "J’aimerais bien : würde gern",
+      "points": [
+        {
+          "title": "würde gern : j’aimerais",
+          "text": "Souhait : würde + gern + infinitif à la fin. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "J’aimerais aller à la mer."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Çok isterdim: würde gern",
+      "points": [
+        {
+          "title": "würde gern: isterdim",
+          "text": "İstek: würde + gern + mastar sonda. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Denize gitmek isterdim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Mi-ar plăcea: würde gern",
+      "points": [
+        {
+          "title": "würde gern: aș vrea",
+          "text": "Dorință: würde + gern + infinitiv la final. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Aș vrea să merg la mare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Jon deb ... edim: würde gern",
+      "points": [
+        {
+          "title": "würde gern: ... istardim",
+          "text": "Istak: würde + gern + infinitiv oxirida. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Dengizga borishni istardim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "मुझे अच्छा लगेगा: würde gern",
+      "points": [
+        {
+          "title": "würde gern: मैं ... चाहूँगा",
+          "text": "इच्छा: würde + gern + इन्फ़िनिटिव अंत में। ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden।",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "मैं समुद्र किनारे जाना चाहूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "أودّ: würde gern",
+      "points": [
+        {
+          "title": "würde gern: أودّ",
+          "text": "الرغبة: würde + gern + المصدر في الآخر. ich würde، du würdest، er würde، wir würden، ihr würdet، sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "أودّ الذهاب إلى البحر."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "advice-garden-four": {
+    "ru": {
+      "title": "Мечты: wäre gern, hätte gern",
+      "points": [
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Мечта: ich wäre gern ... (хотел бы быть), ich hätte gern ... (хотел бы иметь). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Я хотел бы быть богатым."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Мы хотели бы собаку."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Мрії: wäre gern, hätte gern",
+      "points": [
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Мрія: ich wäre gern ... (хотів би бути), ich hätte gern ... (хотів би мати). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Я хотів би бути багатим."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Ми хотіли б собаку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Dreams: wäre gern, hätte gern",
+      "points": [
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "A dream: ich wäre gern ... (I’d like to be), ich hätte gern ... (I’d like to have). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "I’d like to be rich."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "We’d like to have a dog."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Marzenia: wäre gern, hätte gern",
+      "points": [
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Marzenie: ich wäre gern ... (chciałbym być), ich hätte gern ... (chciałbym mieć). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Chciałbym być bogaty."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Chcielibyśmy mieć psa."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Sueños: wäre gern, hätte gern",
+      "points": [
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Un sueño: ich wäre gern ... (me gustaría ser), ich hätte gern ... (me gustaría tener). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Me gustaría ser rico."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Nos gustaría tener un perro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Rêves : wäre gern, hätte gern",
+      "points": [
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Un rêve : ich wäre gern ... (j’aimerais être), ich hätte gern ... (j’aimerais avoir). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "J’aimerais être riche."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Nous aimerions avoir un chien."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Hayaller: wäre gern, hätte gern",
+      "points": [
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Hayal: ich wäre gern ... (olmak isterdim), ich hätte gern ... (sahip olmak isterdim). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Zengin olmak isterdim."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Bir köpeğimiz olsun isterdik."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Vise: wäre gern, hätte gern",
+      "points": [
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Un vis: ich wäre gern ... (aș vrea să fiu), ich hätte gern ... (aș vrea să am). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Aș vrea să fiu bogat."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Ne-ar plăcea să avem un câine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Orzular: wäre gern, hätte gern",
+      "points": [
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Orzu: ich wäre gern ... (bo'lishni istardim), ich hätte gern ... (ega bo'lishni istardim). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Boy bo'lishni istardim."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "It bo'lishini istardik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "सपने: wäre gern, hätte gern",
+      "points": [
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "सपना: ich wäre gern ... (मैं ... होना चाहूँगा), ich hätte gern ... (मेरे पास ... हो)। du wärst, du hättest, wir wären, wir hätten।",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "काश मैं अमीर होता।"
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "हम एक कुत्ता रखना चाहेंगे।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الأحلام: wäre gern وhätte gern",
+      "points": [
+        {
+          "title": "wäre gern وhätte gern",
+          "text": "الحلم: ich wäre gern ... (أودّ أن أكون)، ich hätte gern ... (أودّ أن أملك). du wärst، du hättest، wir wären، wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "أودّ أن أكون غنياً."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "نودّ أن يكون عندنا كلب."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "advice-garden-five": {
+    "ru": {
+      "title": "Есть идея!",
+      "points": [
+        {
+          "title": "Предложить",
+          "text": "Würdest du ...? Hast du Lust auf ...? Wie wäre es mit ...? Wollen wir ...? Это вежливые способы предложить что-то.",
+          "examples": [
+            {
+              "de": "Würdest du mir helfen?",
+              "tr": "Ты бы мне помог?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Є ідея!",
+      "points": [
+        {
+          "title": "Запропонувати",
+          "text": "Würdest du ...? Hast du Lust auf ...? Wie wäre es mit ...? Wollen wir ...? Це ввічливі способи щось запропонувати.",
+          "examples": [
+            {
+              "de": "Würdest du mir helfen?",
+              "tr": "Ти б мені допоміг?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "I have an idea!",
+      "points": [
+        {
+          "title": "Making suggestions",
+          "text": "Würdest du ...? Hast du Lust auf ...? Wie wäre es mit ...? Wollen wir ...? These are polite ways to suggest something.",
+          "examples": [
+            {
+              "de": "Würdest du mir helfen?",
+              "tr": "Would you help me?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Mam pomysł!",
+      "points": [
+        {
+          "title": "Zaproponować",
+          "text": "Würdest du ...? Hast du Lust auf ...? Wie wäre es mit ...? Wollen wir ...? To grzeczne sposoby, by coś zaproponować.",
+          "examples": [
+            {
+              "de": "Würdest du mir helfen?",
+              "tr": "Pomógłbyś mi?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¡Tengo una idea!",
+      "points": [
+        {
+          "title": "Proponer",
+          "text": "Würdest du ...? Hast du Lust auf ...? Wie wäre es mit ...? Wollen wir ...? Son formas educadas de proponer algo.",
+          "examples": [
+            {
+              "de": "Würdest du mir helfen?",
+              "tr": "¿Me ayudarías?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "J’ai une idée !",
+      "points": [
+        {
+          "title": "Proposer",
+          "text": "Würdest du ... ? Hast du Lust auf ... ? Wie wäre es mit ... ? Wollen wir ... ? Ce sont des façons polies de proposer quelque chose.",
+          "examples": [
+            {
+              "de": "Würdest du mir helfen?",
+              "tr": "Tu m’aiderais ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Bir fikrim var!",
+      "points": [
+        {
+          "title": "Öneri yapmak",
+          "text": "Würdest du ...? Hast du Lust auf ...? Wie wäre es mit ...? Wollen wir ...? Bir şey önermenin kibar yollarıdır.",
+          "examples": [
+            {
+              "de": "Würdest du mir helfen?",
+              "tr": "Bana yardım eder misin?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Am o idee!",
+      "points": [
+        {
+          "title": "A propune",
+          "text": "Würdest du ...? Hast du Lust auf ...? Wie wäre es mit ...? Wollen wir ...? Sunt moduri politicoase de a propune ceva.",
+          "examples": [
+            {
+              "de": "Würdest du mir helfen?",
+              "tr": "M-ai ajuta?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "G'oyam bor!",
+      "points": [
+        {
+          "title": "Taklif qilish",
+          "text": "Würdest du ...? Hast du Lust auf ...? Wie wäre es mit ...? Wollen wir ...? Bu biror narsani taklif qilishning muloyim usullari.",
+          "examples": [
+            {
+              "de": "Würdest du mir helfen?",
+              "tr": "Menga yordam berarmiding?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "एक आइडिया है!",
+      "points": [
+        {
+          "title": "सुझाव देना",
+          "text": "Würdest du ...? Hast du Lust auf ...? Wie wäre es mit ...? Wollen wir ...? ये कुछ सुझाने के विनम्र तरीके हैं।",
+          "examples": [
+            {
+              "de": "Würdest du mir helfen?",
+              "tr": "क्या तुम मेरी मदद करोगे?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "عندي فكرة!",
+      "points": [
+        {
+          "title": "تقديم اقتراح",
+          "text": "Würdest du ...؟ Hast du Lust auf ...؟ Wie wäre es mit ...؟ Wollen wir ...؟ طرق مهذبة لاقتراح شيء.",
+          "examples": [
+            {
+              "de": "Würdest du mir helfen?",
+              "tr": "هل تساعدني؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "advice-garden-six": {
+    "ru": {
+      "title": "На твоём месте...",
+      "points": [
+        {
+          "title": "На твоём месте",
+          "text": "An deiner Stelle würde ich ... (на твоём месте я бы ...). Глагол würde сразу после An deiner Stelle.",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mit dem Nachbarn sprechen.",
+              "tr": "На твоём месте я бы поговорил с соседом."
+            }
+          ]
+        },
+        {
+          "title": "sollte: тебе следует",
+          "text": "Совет: sollte + инфинитив в конце. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Тебе стоит больше спать."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Вам не стоит так много работать."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "На твоєму місці...",
+      "points": [
+        {
+          "title": "На твоєму місці",
+          "text": "An deiner Stelle würde ich ... (на твоєму місці я б ...). Дієслово würde одразу після An deiner Stelle.",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mit dem Nachbarn sprechen.",
+              "tr": "На твоєму місці я б поговорив із сусідом."
+            }
+          ]
+        },
+        {
+          "title": "sollte: тобі варто",
+          "text": "Порада: sollte + інфінітив у кінці. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Тобі варто більше спати."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Вам не варто так багато працювати."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "If I were you...",
+      "points": [
+        {
+          "title": "If I were you",
+          "text": "An deiner Stelle würde ich ... (if I were you, I’d ...). würde comes right after An deiner Stelle.",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mit dem Nachbarn sprechen.",
+              "tr": "If I were you, I’d talk to the neighbour."
+            }
+          ]
+        },
+        {
+          "title": "sollte: you should",
+          "text": "Advice: sollte + infinitive at the end. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "You should sleep more."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "You shouldn’t work so much."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Na twoim miejscu...",
+      "points": [
+        {
+          "title": "Na twoim miejscu",
+          "text": "An deiner Stelle würde ich ... (na twoim miejscu bym ...). würde zaraz po An deiner Stelle.",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mit dem Nachbarn sprechen.",
+              "tr": "Na twoim miejscu porozmawiałbym z sąsiadem."
+            }
+          ]
+        },
+        {
+          "title": "sollte: powinieneś",
+          "text": "Rada: sollte + bezokolicznik na końcu. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Powinieneś więcej spać."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Nie powinien pan tyle pracować."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Yo en tu lugar...",
+      "points": [
+        {
+          "title": "Yo en tu lugar",
+          "text": "An deiner Stelle würde ich ... (yo en tu lugar ...). würde va justo después de An deiner Stelle.",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mit dem Nachbarn sprechen.",
+              "tr": "Yo en tu lugar hablaría con el vecino."
+            }
+          ]
+        },
+        {
+          "title": "sollte: deberías",
+          "text": "Consejo: sollte + infinitivo al final. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Deberías dormir más."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "No debería trabajar tanto."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "À ta place...",
+      "points": [
+        {
+          "title": "À ta place",
+          "text": "An deiner Stelle würde ich ... (à ta place, je ...). würde vient juste après An deiner Stelle.",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mit dem Nachbarn sprechen.",
+              "tr": "À ta place, je parlerais au voisin."
+            }
+          ]
+        },
+        {
+          "title": "sollte : tu devrais",
+          "text": "Conseil : sollte + infinitif à la fin. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Tu devrais dormir plus."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Vous ne devriez pas travailler autant."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Senin yerinde olsam...",
+      "points": [
+        {
+          "title": "Senin yerinde olsam",
+          "text": "An deiner Stelle würde ich ... (senin yerinde olsam ...). würde, An deiner Stelle’den hemen sonra.",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mit dem Nachbarn sprechen.",
+              "tr": "Senin yerinde olsam komşuyla konuşurdum."
+            }
+          ]
+        },
+        {
+          "title": "sollte: -meli",
+          "text": "Tavsiye: sollte + mastar sonda. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Daha çok uyumalısın."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Bu kadar çok çalışmamalısınız."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "În locul tău...",
+      "points": [
+        {
+          "title": "În locul tău",
+          "text": "An deiner Stelle würde ich ... (în locul tău aș ...). würde vine imediat după An deiner Stelle.",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mit dem Nachbarn sprechen.",
+              "tr": "În locul tău aș vorbi cu vecinul."
+            }
+          ]
+        },
+        {
+          "title": "sollte: ar trebui",
+          "text": "Sfat: sollte + infinitiv la final. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Ar trebui să dormi mai mult."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "N-ar trebui să lucrați atât de mult."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Sening o'rningda...",
+      "points": [
+        {
+          "title": "Sening o'rningda bo'lsam",
+          "text": "An deiner Stelle würde ich ... (sening o'rningda men ...). würde An deiner Stelle dan keyin darhol.",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mit dem Nachbarn sprechen.",
+              "tr": "Sening o'rningda qo'shni bilan gaplashardim."
+            }
+          ]
+        },
+        {
+          "title": "sollte: ... kerak",
+          "text": "Maslahat: sollte + infinitiv oxirida. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Ko'proq uxlashing kerak."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Siz bunchalik ko'p ishlamasligingiz kerak."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "तुम्हारी जगह...",
+      "points": [
+        {
+          "title": "तुम्हारी जगह होता तो",
+          "text": "An deiner Stelle würde ich ... (तुम्हारी जगह मैं ...)। würde, An deiner Stelle के ठीक बाद।",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mit dem Nachbarn sprechen.",
+              "tr": "तुम्हारी जगह मैं पड़ोसी से बात करता।"
+            }
+          ]
+        },
+        {
+          "title": "sollte: तुम्हें चाहिए",
+          "text": "सलाह: sollte + इन्फ़िनिटिव अंत में। ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten।",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "तुम्हें ज़्यादा सोना चाहिए।"
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "आपको इतना ज़्यादा काम नहीं करना चाहिए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "لو كنت مكانك...",
+      "points": [
+        {
+          "title": "لو كنت مكانك",
+          "text": "An deiner Stelle würde ich ... (لو كنت مكانك لـ...). وwürde تأتي مباشرة بعد An deiner Stelle.",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mit dem Nachbarn sprechen.",
+              "tr": "لو كنت مكانك لتحدثت مع الجار."
+            }
+          ]
+        },
+        {
+          "title": "sollte: ينبغي",
+          "text": "النصيحة: sollte + المصدر في الآخر. ich sollte، du solltest، er sollte، wir sollten، ihr solltet، sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "ينبغي أن تنام أكثر."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "لا ينبغي أن تعمل كثيراً هكذا."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "advice-garden-seven": {
+    "ru": {
+      "title": "Практика: у врача",
+      "points": [
+        {
+          "title": "sollte: тебе следует",
+          "text": "Совет: sollte + инфинитив в конце. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Тебе стоит больше спать."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Вам не стоит так много работать."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: у лікаря",
+      "points": [
+        {
+          "title": "sollte: тобі варто",
+          "text": "Порада: sollte + інфінітив у кінці. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Тобі варто більше спати."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Вам не варто так багато працювати."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: at the doctor’s",
+      "points": [
+        {
+          "title": "sollte: you should",
+          "text": "Advice: sollte + infinitive at the end. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "You should sleep more."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "You shouldn’t work so much."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: u lekarza",
+      "points": [
+        {
+          "title": "sollte: powinieneś",
+          "text": "Rada: sollte + bezokolicznik na końcu. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Powinieneś więcej spać."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Nie powinien pan tyle pracować."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: en el médico",
+      "points": [
+        {
+          "title": "sollte: deberías",
+          "text": "Consejo: sollte + infinitivo al final. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Deberías dormir más."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "No debería trabajar tanto."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : chez le médecin",
+      "points": [
+        {
+          "title": "sollte : tu devrais",
+          "text": "Conseil : sollte + infinitif à la fin. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Tu devrais dormir plus."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Vous ne devriez pas travailler autant."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: doktorda",
+      "points": [
+        {
+          "title": "sollte: -meli",
+          "text": "Tavsiye: sollte + mastar sonda. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Daha çok uyumalısın."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Bu kadar çok çalışmamalısınız."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: la medic",
+      "points": [
+        {
+          "title": "sollte: ar trebui",
+          "text": "Sfat: sollte + infinitiv la final. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Ar trebui să dormi mai mult."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "N-ar trebui să lucrați atât de mult."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: shifokorda",
+      "points": [
+        {
+          "title": "sollte: ... kerak",
+          "text": "Maslahat: sollte + infinitiv oxirida. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Ko'proq uxlashing kerak."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Siz bunchalik ko'p ishlamasligingiz kerak."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: डॉक्टर के पास",
+      "points": [
+        {
+          "title": "sollte: तुम्हें चाहिए",
+          "text": "सलाह: sollte + इन्फ़िनिटिव अंत में। ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten।",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "तुम्हें ज़्यादा सोना चाहिए।"
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "आपको इतना ज़्यादा काम नहीं करना चाहिए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: عند الطبيب",
+      "points": [
+        {
+          "title": "sollte: ينبغي",
+          "text": "النصيحة: sollte + المصدر في الآخر. ich sollte، du solltest، er sollte، wir sollten، ihr solltet، sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "ينبغي أن تنام أكثر."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "لا ينبغي أن تعمل كثيراً هكذا."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "advice-garden-eight": {
+    "ru": {
+      "title": "Практика: отпуск мечты",
+      "points": [
+        {
+          "title": "würde gern: я бы с удовольствием",
+          "text": "Желание: würde + gern + инфинитив в конце. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Я бы с удовольствием поехал на море."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Мечта: ich wäre gern ... (хотел бы быть), ich hätte gern ... (хотел бы иметь). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Я хотел бы быть богатым."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Мы хотели бы собаку."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: відпустка мрії",
+      "points": [
+        {
+          "title": "würde gern: я б із задоволенням",
+          "text": "Бажання: würde + gern + інфінітив у кінці. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Я б залюбки поїхав на море."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Мрія: ich wäre gern ... (хотів би бути), ich hätte gern ... (хотів би мати). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Я хотів би бути багатим."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Ми хотіли б собаку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: a dream holiday",
+      "points": [
+        {
+          "title": "würde gern: I’d like to",
+          "text": "A wish: würde + gern + infinitive at the end. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "I’d like to go to the seaside."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "A dream: ich wäre gern ... (I’d like to be), ich hätte gern ... (I’d like to have). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "I’d like to be rich."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "We’d like to have a dog."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: wymarzony urlop",
+      "points": [
+        {
+          "title": "würde gern: chętnie bym",
+          "text": "Życzenie: würde + gern + bezokolicznik na końcu. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Chętnie pojechałbym nad morze."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Marzenie: ich wäre gern ... (chciałbym być), ich hätte gern ... (chciałbym mieć). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Chciałbym być bogaty."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Chcielibyśmy mieć psa."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: las vacaciones soñadas",
+      "points": [
+        {
+          "title": "würde gern: me gustaría",
+          "text": "Deseo: würde + gern + infinitivo al final. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Me gustaría ir al mar."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Un sueño: ich wäre gern ... (me gustaría ser), ich hätte gern ... (me gustaría tener). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Me gustaría ser rico."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Nos gustaría tener un perro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : les vacances de rêve",
+      "points": [
+        {
+          "title": "würde gern : j’aimerais",
+          "text": "Souhait : würde + gern + infinitif à la fin. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "J’aimerais aller à la mer."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Un rêve : ich wäre gern ... (j’aimerais être), ich hätte gern ... (j’aimerais avoir). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "J’aimerais être riche."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Nous aimerions avoir un chien."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: hayalimdeki tatil",
+      "points": [
+        {
+          "title": "würde gern: isterdim",
+          "text": "İstek: würde + gern + mastar sonda. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Denize gitmek isterdim."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Hayal: ich wäre gern ... (olmak isterdim), ich hätte gern ... (sahip olmak isterdim). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Zengin olmak isterdim."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Bir köpeğimiz olsun isterdik."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: vacanța de vis",
+      "points": [
+        {
+          "title": "würde gern: aș vrea",
+          "text": "Dorință: würde + gern + infinitiv la final. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Aș vrea să merg la mare."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Un vis: ich wäre gern ... (aș vrea să fiu), ich hätte gern ... (aș vrea să am). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Aș vrea să fiu bogat."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Ne-ar plăcea să avem un câine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: orzudagi ta'til",
+      "points": [
+        {
+          "title": "würde gern: ... istardim",
+          "text": "Istak: würde + gern + infinitiv oxirida. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Dengizga borishni istardim."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Orzu: ich wäre gern ... (bo'lishni istardim), ich hätte gern ... (ega bo'lishni istardim). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Boy bo'lishni istardim."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "It bo'lishini istardik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: सपनों की छुट्टी",
+      "points": [
+        {
+          "title": "würde gern: मैं ... चाहूँगा",
+          "text": "इच्छा: würde + gern + इन्फ़िनिटिव अंत में। ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden।",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "मैं समुद्र किनारे जाना चाहूँगा।"
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "सपना: ich wäre gern ... (मैं ... होना चाहूँगा), ich hätte gern ... (मेरे पास ... हो)। du wärst, du hättest, wir wären, wir hätten।",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "काश मैं अमीर होता।"
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "हम एक कुत्ता रखना चाहेंगे।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: عطلة الأحلام",
+      "points": [
+        {
+          "title": "würde gern: أودّ",
+          "text": "الرغبة: würde + gern + المصدر في الآخر. ich würde، du würdest، er würde، wir würden، ihr würdet، sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "أودّ الذهاب إلى البحر."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern وhätte gern",
+          "text": "الحلم: ich wäre gern ... (أودّ أن أكون)، ich hätte gern ... (أودّ أن أملك). du wärst، du hättest، wir wären، wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "أودّ أن أكون غنياً."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "نودّ أن يكون عندنا كلب."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "advice-garden-nine": {
+    "ru": {
+      "title": "Повторение: советы и желания",
+      "points": [
+        {
+          "title": "sollte: тебе следует",
+          "text": "Совет: sollte + инфинитив в конце. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Тебе стоит больше спать."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Вам не стоит так много работать."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: я бы с удовольствием",
+          "text": "Желание: würde + gern + инфинитив в конце. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Я бы с удовольствием поехал на море."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Мечта: ich wäre gern ... (хотел бы быть), ich hätte gern ... (хотел бы иметь). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Я хотел бы быть богатым."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Мы хотели бы собаку."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: поради й бажання",
+      "points": [
+        {
+          "title": "sollte: тобі варто",
+          "text": "Порада: sollte + інфінітив у кінці. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Тобі варто більше спати."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Вам не варто так багато працювати."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: я б із задоволенням",
+          "text": "Бажання: würde + gern + інфінітив у кінці. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Я б залюбки поїхав на море."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Мрія: ich wäre gern ... (хотів би бути), ich hätte gern ... (хотів би мати). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Я хотів би бути багатим."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Ми хотіли б собаку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: advice and wishes",
+      "points": [
+        {
+          "title": "sollte: you should",
+          "text": "Advice: sollte + infinitive at the end. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "You should sleep more."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "You shouldn’t work so much."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: I’d like to",
+          "text": "A wish: würde + gern + infinitive at the end. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "I’d like to go to the seaside."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "A dream: ich wäre gern ... (I’d like to be), ich hätte gern ... (I’d like to have). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "I’d like to be rich."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "We’d like to have a dog."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: rady i życzenia",
+      "points": [
+        {
+          "title": "sollte: powinieneś",
+          "text": "Rada: sollte + bezokolicznik na końcu. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Powinieneś więcej spać."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Nie powinien pan tyle pracować."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: chętnie bym",
+          "text": "Życzenie: würde + gern + bezokolicznik na końcu. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Chętnie pojechałbym nad morze."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Marzenie: ich wäre gern ... (chciałbym być), ich hätte gern ... (chciałbym mieć). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Chciałbym być bogaty."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Chcielibyśmy mieć psa."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: consejos y deseos",
+      "points": [
+        {
+          "title": "sollte: deberías",
+          "text": "Consejo: sollte + infinitivo al final. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Deberías dormir más."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "No debería trabajar tanto."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: me gustaría",
+          "text": "Deseo: würde + gern + infinitivo al final. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Me gustaría ir al mar."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Un sueño: ich wäre gern ... (me gustaría ser), ich hätte gern ... (me gustaría tener). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Me gustaría ser rico."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Nos gustaría tener un perro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : conseils et souhaits",
+      "points": [
+        {
+          "title": "sollte : tu devrais",
+          "text": "Conseil : sollte + infinitif à la fin. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Tu devrais dormir plus."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Vous ne devriez pas travailler autant."
+            }
+          ]
+        },
+        {
+          "title": "würde gern : j’aimerais",
+          "text": "Souhait : würde + gern + infinitif à la fin. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "J’aimerais aller à la mer."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Un rêve : ich wäre gern ... (j’aimerais être), ich hätte gern ... (j’aimerais avoir). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "J’aimerais être riche."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Nous aimerions avoir un chien."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: tavsiyeler ve istekler",
+      "points": [
+        {
+          "title": "sollte: -meli",
+          "text": "Tavsiye: sollte + mastar sonda. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Daha çok uyumalısın."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Bu kadar çok çalışmamalısınız."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: isterdim",
+          "text": "İstek: würde + gern + mastar sonda. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Denize gitmek isterdim."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Hayal: ich wäre gern ... (olmak isterdim), ich hätte gern ... (sahip olmak isterdim). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Zengin olmak isterdim."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Bir köpeğimiz olsun isterdik."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: sfaturi și dorințe",
+      "points": [
+        {
+          "title": "sollte: ar trebui",
+          "text": "Sfat: sollte + infinitiv la final. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Ar trebui să dormi mai mult."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "N-ar trebui să lucrați atât de mult."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: aș vrea",
+          "text": "Dorință: würde + gern + infinitiv la final. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Aș vrea să merg la mare."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Un vis: ich wäre gern ... (aș vrea să fiu), ich hätte gern ... (aș vrea să am). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Aș vrea să fiu bogat."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "Ne-ar plăcea să avem un câine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: maslahatlar va istaklar",
+      "points": [
+        {
+          "title": "sollte: ... kerak",
+          "text": "Maslahat: sollte + infinitiv oxirida. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Ko'proq uxlashing kerak."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Siz bunchalik ko'p ishlamasligingiz kerak."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: ... istardim",
+          "text": "Istak: würde + gern + infinitiv oxirida. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Dengizga borishni istardim."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "Orzu: ich wäre gern ... (bo'lishni istardim), ich hätte gern ... (ega bo'lishni istardim). du wärst, du hättest, wir wären, wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "Boy bo'lishni istardim."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "It bo'lishini istardik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: सलाह और इच्छाएँ",
+      "points": [
+        {
+          "title": "sollte: तुम्हें चाहिए",
+          "text": "सलाह: sollte + इन्फ़िनिटिव अंत में। ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten।",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "तुम्हें ज़्यादा सोना चाहिए।"
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "आपको इतना ज़्यादा काम नहीं करना चाहिए।"
+            }
+          ]
+        },
+        {
+          "title": "würde gern: मैं ... चाहूँगा",
+          "text": "इच्छा: würde + gern + इन्फ़िनिटिव अंत में। ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden।",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "मैं समुद्र किनारे जाना चाहूँगा।"
+            }
+          ]
+        },
+        {
+          "title": "wäre gern, hätte gern",
+          "text": "सपना: ich wäre gern ... (मैं ... होना चाहूँगा), ich hätte gern ... (मेरे पास ... हो)। du wärst, du hättest, wir wären, wir hätten।",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "काश मैं अमीर होता।"
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "हम एक कुत्ता रखना चाहेंगे।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: النصائح والرغبات",
+      "points": [
+        {
+          "title": "sollte: ينبغي",
+          "text": "النصيحة: sollte + المصدر في الآخر. ich sollte، du solltest، er sollte، wir sollten، ihr solltet، sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "ينبغي أن تنام أكثر."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "لا ينبغي أن تعمل كثيراً هكذا."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: أودّ",
+          "text": "الرغبة: würde + gern + المصدر في الآخر. ich würde، du würdest، er würde، wir würden، ihr würdet، sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "أودّ الذهاب إلى البحر."
+            }
+          ]
+        },
+        {
+          "title": "wäre gern وhätte gern",
+          "text": "الحلم: ich wäre gern ... (أودّ أن أكون)، ich hätte gern ... (أودّ أن أملك). du wärst، du hättest، wir wären، wir hätten.",
+          "examples": [
+            {
+              "de": "Ich wäre gern reich.",
+              "tr": "أودّ أن أكون غنياً."
+            },
+            {
+              "de": "Wir hätten gern einen Hund.",
+              "tr": "نودّ أن يكون عندنا كلب."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "advice-garden-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "sollte: тебе следует",
+          "text": "Совет: sollte + инфинитив в конце. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Тебе стоит больше спать."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Вам не стоит так много работать."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: я бы с удовольствием",
+          "text": "Желание: würde + gern + инфинитив в конце. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Я бы с удовольствием поехал на море."
+            }
+          ]
+        },
+        {
+          "title": "Предложить",
+          "text": "Würdest du ...? Hast du Lust auf ...? Wie wäre es mit ...? Wollen wir ...? Это вежливые способы предложить что-то.",
+          "examples": [
+            {
+              "de": "Würdest du mir helfen?",
+              "tr": "Ты бы мне помог?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "sollte: тобі варто",
+          "text": "Порада: sollte + інфінітив у кінці. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Тобі варто більше спати."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Вам не варто так багато працювати."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: я б із задоволенням",
+          "text": "Бажання: würde + gern + інфінітив у кінці. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Я б залюбки поїхав на море."
+            }
+          ]
+        },
+        {
+          "title": "Запропонувати",
+          "text": "Würdest du ...? Hast du Lust auf ...? Wie wäre es mit ...? Wollen wir ...? Це ввічливі способи щось запропонувати.",
+          "examples": [
+            {
+              "de": "Würdest du mir helfen?",
+              "tr": "Ти б мені допоміг?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "sollte: you should",
+          "text": "Advice: sollte + infinitive at the end. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "You should sleep more."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "You shouldn’t work so much."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: I’d like to",
+          "text": "A wish: würde + gern + infinitive at the end. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "I’d like to go to the seaside."
+            }
+          ]
+        },
+        {
+          "title": "Making suggestions",
+          "text": "Würdest du ...? Hast du Lust auf ...? Wie wäre es mit ...? Wollen wir ...? These are polite ways to suggest something.",
+          "examples": [
+            {
+              "de": "Würdest du mir helfen?",
+              "tr": "Would you help me?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "sollte: powinieneś",
+          "text": "Rada: sollte + bezokolicznik na końcu. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Powinieneś więcej spać."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Nie powinien pan tyle pracować."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: chętnie bym",
+          "text": "Życzenie: würde + gern + bezokolicznik na końcu. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Chętnie pojechałbym nad morze."
+            }
+          ]
+        },
+        {
+          "title": "Zaproponować",
+          "text": "Würdest du ...? Hast du Lust auf ...? Wie wäre es mit ...? Wollen wir ...? To grzeczne sposoby, by coś zaproponować.",
+          "examples": [
+            {
+              "de": "Würdest du mir helfen?",
+              "tr": "Pomógłbyś mi?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "sollte: deberías",
+          "text": "Consejo: sollte + infinitivo al final. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Deberías dormir más."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "No debería trabajar tanto."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: me gustaría",
+          "text": "Deseo: würde + gern + infinitivo al final. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Me gustaría ir al mar."
+            }
+          ]
+        },
+        {
+          "title": "Proponer",
+          "text": "Würdest du ...? Hast du Lust auf ...? Wie wäre es mit ...? Wollen wir ...? Son formas educadas de proponer algo.",
+          "examples": [
+            {
+              "de": "Würdest du mir helfen?",
+              "tr": "¿Me ayudarías?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "sollte : tu devrais",
+          "text": "Conseil : sollte + infinitif à la fin. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Tu devrais dormir plus."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Vous ne devriez pas travailler autant."
+            }
+          ]
+        },
+        {
+          "title": "würde gern : j’aimerais",
+          "text": "Souhait : würde + gern + infinitif à la fin. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "J’aimerais aller à la mer."
+            }
+          ]
+        },
+        {
+          "title": "Proposer",
+          "text": "Würdest du ... ? Hast du Lust auf ... ? Wie wäre es mit ... ? Wollen wir ... ? Ce sont des façons polies de proposer quelque chose.",
+          "examples": [
+            {
+              "de": "Würdest du mir helfen?",
+              "tr": "Tu m’aiderais ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "sollte: -meli",
+          "text": "Tavsiye: sollte + mastar sonda. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Daha çok uyumalısın."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Bu kadar çok çalışmamalısınız."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: isterdim",
+          "text": "İstek: würde + gern + mastar sonda. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Denize gitmek isterdim."
+            }
+          ]
+        },
+        {
+          "title": "Öneri yapmak",
+          "text": "Würdest du ...? Hast du Lust auf ...? Wie wäre es mit ...? Wollen wir ...? Bir şey önermenin kibar yollarıdır.",
+          "examples": [
+            {
+              "de": "Würdest du mir helfen?",
+              "tr": "Bana yardım eder misin?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "sollte: ar trebui",
+          "text": "Sfat: sollte + infinitiv la final. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Ar trebui să dormi mai mult."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "N-ar trebui să lucrați atât de mult."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: aș vrea",
+          "text": "Dorință: würde + gern + infinitiv la final. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Aș vrea să merg la mare."
+            }
+          ]
+        },
+        {
+          "title": "A propune",
+          "text": "Würdest du ...? Hast du Lust auf ...? Wie wäre es mit ...? Wollen wir ...? Sunt moduri politicoase de a propune ceva.",
+          "examples": [
+            {
+              "de": "Würdest du mir helfen?",
+              "tr": "M-ai ajuta?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "sollte: ... kerak",
+          "text": "Maslahat: sollte + infinitiv oxirida. ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "Ko'proq uxlashing kerak."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "Siz bunchalik ko'p ishlamasligingiz kerak."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: ... istardim",
+          "text": "Istak: würde + gern + infinitiv oxirida. ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "Dengizga borishni istardim."
+            }
+          ]
+        },
+        {
+          "title": "Taklif qilish",
+          "text": "Würdest du ...? Hast du Lust auf ...? Wie wäre es mit ...? Wollen wir ...? Bu biror narsani taklif qilishning muloyim usullari.",
+          "examples": [
+            {
+              "de": "Würdest du mir helfen?",
+              "tr": "Menga yordam berarmiding?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "sollte: तुम्हें चाहिए",
+          "text": "सलाह: sollte + इन्फ़िनिटिव अंत में। ich sollte, du solltest, er sollte, wir sollten, ihr solltet, sie sollten।",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "तुम्हें ज़्यादा सोना चाहिए।"
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "आपको इतना ज़्यादा काम नहीं करना चाहिए।"
+            }
+          ]
+        },
+        {
+          "title": "würde gern: मैं ... चाहूँगा",
+          "text": "इच्छा: würde + gern + इन्फ़िनिटिव अंत में। ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden।",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "मैं समुद्र किनारे जाना चाहूँगा।"
+            }
+          ]
+        },
+        {
+          "title": "सुझाव देना",
+          "text": "Würdest du ...? Hast du Lust auf ...? Wie wäre es mit ...? Wollen wir ...? ये कुछ सुझाने के विनम्र तरीके हैं।",
+          "examples": [
+            {
+              "de": "Würdest du mir helfen?",
+              "tr": "क्या तुम मेरी मदद करोगे?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "sollte: ينبغي",
+          "text": "النصيحة: sollte + المصدر في الآخر. ich sollte، du solltest، er sollte، wir sollten، ihr solltet، sie sollten.",
+          "examples": [
+            {
+              "de": "Du solltest mehr schlafen.",
+              "tr": "ينبغي أن تنام أكثر."
+            },
+            {
+              "de": "Sie sollten nicht so viel arbeiten.",
+              "tr": "لا ينبغي أن تعمل كثيراً هكذا."
+            }
+          ]
+        },
+        {
+          "title": "würde gern: أودّ",
+          "text": "الرغبة: würde + gern + المصدر في الآخر. ich würde، du würdest، er würde، wir würden، ihr würdet، sie würden.",
+          "examples": [
+            {
+              "de": "Ich würde gern ans Meer fahren.",
+              "tr": "أودّ الذهاب إلى البحر."
+            }
+          ]
+        },
+        {
+          "title": "تقديم اقتراح",
+          "text": "Würdest du ...؟ Hast du Lust auf ...؟ Wie wäre es mit ...؟ Wollen wir ...؟ طرق مهذبة لاقتراح شيء.",
+          "examples": [
+            {
+              "de": "Würdest du mir helfen?",
+              "tr": "هل تساعدني؟"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

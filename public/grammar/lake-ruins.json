@@ -1,0 +1,1958 @@
+{
+  "lake-ruins-one": {
+    "ru": {
+      "title": "Погода: es ist kalt",
+      "points": [
+        {
+          "title": "Погода всегда с es",
+          "text": "О погоде говорим через es: Es ist kalt. Es regnet. По-русски «холодно» без подлежащего, по-немецки es обязательно.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Сегодня солнечно."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Идёт снег."
+            }
+          ]
+        },
+        {
+          "title": "Порядок слов",
+          "text": "Если heute стоит первым, глагол идёт сразу за ним, а es после: Heute ist es kalt.",
+          "examples": [
+            {
+              "de": "Heute ist es windig und kalt.",
+              "tr": "Сегодня ветрено и холодно."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Погода: es ist kalt",
+      "points": [
+        {
+          "title": "Погода завжди з es",
+          "text": "Про погоду кажемо через es: Es ist kalt. Es regnet. Українською «холодно» без підмета, німецькою es обов’язкове.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Сьогодні сонячно."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Іде сніг."
+            }
+          ]
+        },
+        {
+          "title": "Порядок слів",
+          "text": "Якщо heute стоїть першим, дієслово йде одразу за ним, а es після: Heute ist es kalt.",
+          "examples": [
+            {
+              "de": "Heute ist es windig und kalt.",
+              "tr": "Сьогодні вітряно й холодно."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Weather: es ist kalt",
+      "points": [
+        {
+          "title": "Weather always uses es",
+          "text": "Talk about the weather with es, like English \"it\": Es ist kalt. Es regnet.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "It’s sunny today."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "It’s snowing."
+            }
+          ]
+        },
+        {
+          "title": "Word order",
+          "text": "If heute comes first, the verb follows straight away and es comes after: Heute ist es kalt.",
+          "examples": [
+            {
+              "de": "Heute ist es windig und kalt.",
+              "tr": "Today it’s windy and cold."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Pogoda: es ist kalt",
+      "points": [
+        {
+          "title": "Pogoda zawsze z es",
+          "text": "O pogodzie mówimy z es: Es ist kalt. Es regnet. Po polsku „zimno” bez podmiotu, po niemiecku es jest konieczne.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Dziś jest słonecznie."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Pada śnieg."
+            }
+          ]
+        },
+        {
+          "title": "Szyk wyrazów",
+          "text": "Jeśli heute jest pierwsze, czasownik idzie zaraz po nim, a es potem: Heute ist es kalt.",
+          "examples": [
+            {
+              "de": "Heute ist es windig und kalt.",
+              "tr": "Dziś jest wietrznie i zimno."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "El tiempo: es ist kalt",
+      "points": [
+        {
+          "title": "El tiempo siempre con es",
+          "text": "Del tiempo se habla con es: Es ist kalt. Es regnet. En español \"hace frío\" no tiene sujeto, en alemán es es obligatorio.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Hoy hace sol."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Está nevando."
+            }
+          ]
+        },
+        {
+          "title": "Orden de palabras",
+          "text": "Si heute va primero, el verbo va justo después y es detrás: Heute ist es kalt.",
+          "examples": [
+            {
+              "de": "Heute ist es windig und kalt.",
+              "tr": "Hoy hace viento y frío."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "La météo : es ist kalt",
+      "points": [
+        {
+          "title": "La météo toujours avec es",
+          "text": "Pour la météo, on utilise es, comme « il » en français : Es ist kalt. Es regnet.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Aujourd’hui, il fait beau."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Il neige."
+            }
+          ]
+        },
+        {
+          "title": "Ordre des mots",
+          "text": "Si heute est en premier, le verbe suit tout de suite et es vient après : Heute ist es kalt.",
+          "examples": [
+            {
+              "de": "Heute ist es windig und kalt.",
+              "tr": "Aujourd’hui, il y a du vent et il fait froid."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Hava: es ist kalt",
+      "points": [
+        {
+          "title": "Hava durumu hep es ile",
+          "text": "Hava hakkında es ile konuşulur: Es ist kalt. Es regnet. Türkçede özne yok, Almancada es şart.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Bugün hava güneşli."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Kar yağıyor."
+            }
+          ]
+        },
+        {
+          "title": "Kelime sırası",
+          "text": "heute başta olursa fiil hemen ardından, es ondan sonra gelir: Heute ist es kalt.",
+          "examples": [
+            {
+              "de": "Heute ist es windig und kalt.",
+              "tr": "Bugün rüzgârlı ve soğuk."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Vremea: es ist kalt",
+      "points": [
+        {
+          "title": "Vremea mereu cu es",
+          "text": "Despre vreme vorbim cu es: Es ist kalt. Es regnet. În română „e frig” fără subiect, în germană es e obligatoriu.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Azi e însorit."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Ninge."
+            }
+          ]
+        },
+        {
+          "title": "Ordinea cuvintelor",
+          "text": "Dacă heute e primul, verbul vine imediat, iar es după: Heute ist es kalt.",
+          "examples": [
+            {
+              "de": "Heute ist es windig und kalt.",
+              "tr": "Azi e vânt și frig."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ob-havo: es ist kalt",
+      "points": [
+        {
+          "title": "Ob-havo doim es bilan",
+          "text": "Ob-havo haqida es bilan gapiramiz: Es ist kalt. Es regnet. O'zbekchada ega yo'q, nemischada es shart.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Bugun quyoshli."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Qor yog‘yapti."
+            }
+          ]
+        },
+        {
+          "title": "So'z tartibi",
+          "text": "heute birinchi tursa, fe'l darhol keyin, es esa undan keyin: Heute ist es kalt.",
+          "examples": [
+            {
+              "de": "Heute ist es windig und kalt.",
+              "tr": "Bugun shamol va sovuq."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "मौसम: es ist kalt",
+      "points": [
+        {
+          "title": "मौसम हमेशा es के साथ",
+          "text": "मौसम के बारे में es से बात करते हैं: Es ist kalt. Es regnet। जर्मन में es ज़रूरी है।",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "आज धूप है।"
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "बर्फ़ गिर रही है।"
+            }
+          ]
+        },
+        {
+          "title": "शब्द क्रम",
+          "text": "अगर heute पहले आए, तो क्रिया तुरंत बाद और es उसके बाद: Heute ist es kalt।",
+          "examples": [
+            {
+              "de": "Heute ist es windig und kalt.",
+              "tr": "आज हवा है और ठंड है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الطقس: es ist kalt",
+      "points": [
+        {
+          "title": "الطقس دائماً مع es",
+          "text": "نتحدث عن الطقس باستعمال es: Es ist kalt. Es regnet. وes ضرورية في الألمانية.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "الجو مشمس اليوم."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "إنها تثلج."
+            }
+          ]
+        },
+        {
+          "title": "ترتيب الكلمات",
+          "text": "إذا جاءت heute أولاً يأتي الفعل بعدها مباشرة ثم es: Heute ist es kalt.",
+          "examples": [
+            {
+              "de": "Heute ist es windig und kalt.",
+              "tr": "اليوم الجو عاصف وبارد."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "lake-ruins-two": {
+    "ru": {
+      "title": "Времена года и градусы",
+      "points": [
+        {
+          "title": "es sind ... Grad",
+          "text": "Про температуру говорим во множественном: Heute sind es zehn Grad.",
+          "examples": [
+            {
+              "de": "Heute sind es zehn Grad.",
+              "tr": "Сегодня десять градусов."
+            },
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "Зимой холодно."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Пори року та градуси",
+      "points": [
+        {
+          "title": "es sind ... Grad",
+          "text": "Про температуру кажемо в множині: Heute sind es zehn Grad.",
+          "examples": [
+            {
+              "de": "Heute sind es zehn Grad.",
+              "tr": "Сьогодні десять градусів."
+            },
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "Взимку холодно."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Seasons and degrees",
+      "points": [
+        {
+          "title": "es sind ... Grad",
+          "text": "For temperature use the plural verb: Heute sind es zehn Grad.",
+          "examples": [
+            {
+              "de": "Heute sind es zehn Grad.",
+              "tr": "It’s ten degrees today."
+            },
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "In winter it’s cold."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Pory roku i stopnie",
+      "points": [
+        {
+          "title": "es sind ... Grad",
+          "text": "O temperaturze mówimy w liczbie mnogiej: Heute sind es zehn Grad.",
+          "examples": [
+            {
+              "de": "Heute sind es zehn Grad.",
+              "tr": "Dziś jest dziesięć stopni."
+            },
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "Zimą jest zimno."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Estaciones y grados",
+      "points": [
+        {
+          "title": "es sind ... Grad",
+          "text": "Para la temperatura se usa el plural: Heute sind es zehn Grad.",
+          "examples": [
+            {
+              "de": "Heute sind es zehn Grad.",
+              "tr": "Hoy hace diez grados."
+            },
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "En invierno hace frío."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Saisons et degrés",
+      "points": [
+        {
+          "title": "es sind ... Grad",
+          "text": "Pour la température, le verbe est au pluriel : Heute sind es zehn Grad.",
+          "examples": [
+            {
+              "de": "Heute sind es zehn Grad.",
+              "tr": "Aujourd’hui, il fait dix degrés."
+            },
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "En hiver, il fait froid."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Mevsimler ve dereceler",
+      "points": [
+        {
+          "title": "es sind ... Grad",
+          "text": "Sıcaklık için çoğul fiil kullanılır: Heute sind es zehn Grad.",
+          "examples": [
+            {
+              "de": "Heute sind es zehn Grad.",
+              "tr": "Bugün hava on derece."
+            },
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "Kışın hava soğuk."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Anotimpuri și grade",
+      "points": [
+        {
+          "title": "es sind ... Grad",
+          "text": "Pentru temperatură verbul e la plural: Heute sind es zehn Grad.",
+          "examples": [
+            {
+              "de": "Heute sind es zehn Grad.",
+              "tr": "Azi sunt zece grade."
+            },
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "Iarna e frig."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Fasllar va darajalar",
+      "points": [
+        {
+          "title": "es sind ... Grad",
+          "text": "Harorat haqida ko'plikda gapiramiz: Heute sind es zehn Grad.",
+          "examples": [
+            {
+              "de": "Heute sind es zehn Grad.",
+              "tr": "Bugun o'n daraja."
+            },
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "Qishda sovuq."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "मौसम और डिग्री",
+      "points": [
+        {
+          "title": "es sind ... Grad",
+          "text": "तापमान के लिए बहुवचन क्रिया: Heute sind es zehn Grad।",
+          "examples": [
+            {
+              "de": "Heute sind es zehn Grad.",
+              "tr": "आज दस डिग्री है।"
+            },
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "सर्दियों में ठंड होती है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الفصول ودرجات الحرارة",
+      "points": [
+        {
+          "title": "es sind ... Grad",
+          "text": "للحرارة نستعمل فعل الجمع: Heute sind es zehn Grad.",
+          "examples": [
+            {
+              "de": "Heute sind es zehn Grad.",
+              "tr": "الحرارة اليوم عشر درجات."
+            },
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "في الشتاء يكون الجو بارداً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "lake-ruins-three": {
+    "ru": {
+      "title": "Прогноз: morgen wird es...",
+      "points": [
+        {
+          "title": "wird: станет, будет",
+          "text": "Про погоду завтра удобно сказать wird: Morgen wird es trocken. Это готовая фраза.",
+          "examples": [
+            {
+              "de": "Morgen wird es trocken.",
+              "tr": "Завтра будет сухо."
+            },
+            {
+              "de": "Es gibt Nebel am Morgen.",
+              "tr": "Утром туман."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Прогноз: morgen wird es...",
+      "points": [
+        {
+          "title": "wird: стане, буде",
+          "text": "Про погоду завтра зручно сказати wird: Morgen wird es trocken. Це готова фраза.",
+          "examples": [
+            {
+              "de": "Morgen wird es trocken.",
+              "tr": "Завтра буде сухо."
+            },
+            {
+              "de": "Es gibt Nebel am Morgen.",
+              "tr": "Уранці туман."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Forecast: morgen wird es...",
+      "points": [
+        {
+          "title": "wird: will be",
+          "text": "For tomorrow’s weather say wird: Morgen wird es trocken. Learn it as a phrase.",
+          "examples": [
+            {
+              "de": "Morgen wird es trocken.",
+              "tr": "Tomorrow it will be dry."
+            },
+            {
+              "de": "Es gibt Nebel am Morgen.",
+              "tr": "There’s fog in the morning."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Prognoza: morgen wird es...",
+      "points": [
+        {
+          "title": "wird: będzie",
+          "text": "O pogodzie na jutro wygodnie powiedzieć wird: Morgen wird es trocken. To gotowe wyrażenie.",
+          "examples": [
+            {
+              "de": "Morgen wird es trocken.",
+              "tr": "Jutro będzie sucho."
+            },
+            {
+              "de": "Es gibt Nebel am Morgen.",
+              "tr": "Rano jest mgła."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Pronóstico: morgen wird es...",
+      "points": [
+        {
+          "title": "wird: será, se pondrá",
+          "text": "Para el tiempo de mañana se dice wird: Morgen wird es trocken. Apréndelo como frase.",
+          "examples": [
+            {
+              "de": "Morgen wird es trocken.",
+              "tr": "Mañana estará seco."
+            },
+            {
+              "de": "Es gibt Nebel am Morgen.",
+              "tr": "Hay niebla por la mañana."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Prévisions : morgen wird es...",
+      "points": [
+        {
+          "title": "wird : il va faire",
+          "text": "Pour la météo de demain, on dit wird : Morgen wird es trocken. À apprendre comme une expression.",
+          "examples": [
+            {
+              "de": "Morgen wird es trocken.",
+              "tr": "Demain, il fera sec."
+            },
+            {
+              "de": "Es gibt Nebel am Morgen.",
+              "tr": "Il y a du brouillard le matin."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tahmin: morgen wird es...",
+      "points": [
+        {
+          "title": "wird: olacak",
+          "text": "Yarının havası için wird denir: Morgen wird es trocken. Kalıp olarak öğren.",
+          "examples": [
+            {
+              "de": "Morgen wird es trocken.",
+              "tr": "Yarın hava kuru olacak."
+            },
+            {
+              "de": "Es gibt Nebel am Morgen.",
+              "tr": "Sabah sis var."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Prognoza: morgen wird es...",
+      "points": [
+        {
+          "title": "wird: va fi",
+          "text": "Pentru vremea de mâine spunem wird: Morgen wird es trocken. Învaț-o ca expresie.",
+          "examples": [
+            {
+              "de": "Morgen wird es trocken.",
+              "tr": "Mâine va fi uscat."
+            },
+            {
+              "de": "Es gibt Nebel am Morgen.",
+              "tr": "Dimineața e ceață."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Prognoz: morgen wird es...",
+      "points": [
+        {
+          "title": "wird: bo'ladi",
+          "text": "Ertangi ob-havo uchun wird deyiladi: Morgen wird es trocken. Tayyor ibora sifatida o'rgan.",
+          "examples": [
+            {
+              "de": "Morgen wird es trocken.",
+              "tr": "Ertaga quruq bo‘ladi."
+            },
+            {
+              "de": "Es gibt Nebel am Morgen.",
+              "tr": "Ertalab tuman bor."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "पूर्वानुमान: morgen wird es...",
+      "points": [
+        {
+          "title": "wird: होगा",
+          "text": "कल के मौसम के लिए wird कहते हैं: Morgen wird es trocken। इसे वाक्यांश की तरह सीखो।",
+          "examples": [
+            {
+              "de": "Morgen wird es trocken.",
+              "tr": "कल सूखा रहेगा।"
+            },
+            {
+              "de": "Es gibt Nebel am Morgen.",
+              "tr": "सुबह कोहरा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "التوقعات: morgen wird es...",
+      "points": [
+        {
+          "title": "wird: سيصبح",
+          "text": "لطقس الغد نقول wird: Morgen wird es trocken. احفظها كعبارة جاهزة.",
+          "examples": [
+            {
+              "de": "Morgen wird es trocken.",
+              "tr": "غداً سيكون الجو جافاً."
+            },
+            {
+              "de": "Es gibt Nebel am Morgen.",
+              "tr": "يوجد ضباب في الصباح."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "lake-ruins-four": {
+    "ru": {
+      "title": "Непогода: что взять",
+      "points": [
+        {
+          "title": "brauchen + Akkusativ",
+          "text": "Что нужно взять: Ich brauche + Akkusativ. Мужской род получает einen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Regenschirm.",
+              "tr": "Мне нужен зонт."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Негода: що взяти",
+      "points": [
+        {
+          "title": "brauchen + Akkusativ",
+          "text": "Що треба взяти: Ich brauche + Akkusativ. Чоловічий рід отримує einen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Regenschirm.",
+              "tr": "Мені потрібна парасолька."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Bad weather: what to take",
+      "points": [
+        {
+          "title": "brauchen + accusative",
+          "text": "What you need: Ich brauche + accusative. Masculine takes einen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Regenschirm.",
+              "tr": "I need an umbrella."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Niepogoda: co zabrać",
+      "points": [
+        {
+          "title": "brauchen + Akkusativ",
+          "text": "Co trzeba zabrać: Ich brauche + Akkusativ. Rodzaj męski dostaje einen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Regenschirm.",
+              "tr": "Potrzebuję parasola."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Mal tiempo: qué llevar",
+      "points": [
+        {
+          "title": "brauchen + acusativo",
+          "text": "Lo que necesitas: Ich brauche + acusativo. El masculino lleva einen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Regenschirm.",
+              "tr": "Necesito un paraguas."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Mauvais temps : quoi prendre",
+      "points": [
+        {
+          "title": "brauchen + accusatif",
+          "text": "Ce dont on a besoin : Ich brauche + accusatif. Le masculin prend einen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Regenschirm.",
+              "tr": "J’ai besoin d’un parapluie."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kötü hava: ne almalı",
+      "points": [
+        {
+          "title": "brauchen + Akkusativ",
+          "text": "Neye ihtiyacın var: Ich brauche + Akkusativ. Eril einen alır.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Regenschirm.",
+              "tr": "Bir şemsiyeye ihtiyacım var."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Vreme rea: ce iei",
+      "points": [
+        {
+          "title": "brauchen + acuzativ",
+          "text": "Ce îți trebuie: Ich brauche + acuzativ. Masculinul primește einen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Regenschirm.",
+              "tr": "Am nevoie de o umbrelă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Yomon ob-havo: nima olish kerak",
+      "points": [
+        {
+          "title": "brauchen + Akkusativ",
+          "text": "Nima kerak: Ich brauche + Akkusativ. Erkak rodi einen oladi.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Regenschirm.",
+              "tr": "Menga soyabon kerak."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "खराब मौसम: क्या लें",
+      "points": [
+        {
+          "title": "brauchen + Akkusativ",
+          "text": "क्या चाहिए: Ich brauche + Akkusativ। पुल्लिंग einen लेता है।",
+          "examples": [
+            {
+              "de": "Ich brauche einen Regenschirm.",
+              "tr": "मुझे छाता चाहिए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الطقس السيئ: ماذا نأخذ",
+      "points": [
+        {
+          "title": "brauchen + المفعول",
+          "text": "ما تحتاجه: Ich brauche + المفعول. والمذكر يأخذ einen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Regenschirm.",
+              "tr": "أحتاج مظلة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "lake-ruins-five": {
+    "ru": {
+      "title": "Туман и град: слова на -ig",
+      "points": [
+        {
+          "title": "Из слова в признак",
+          "text": "Из существительного делаем прилагательное с -ig: der Nebel → neblig, die Sonne → sonnig, der Wind → windig.",
+          "examples": [
+            {
+              "de": "Heute Abend ist es neblig.",
+              "tr": "Сегодня вечером туманно."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Туман і град: слова на -ig",
+      "points": [
+        {
+          "title": "Зі слова в ознаку",
+          "text": "З іменника робимо прикметник з -ig: der Nebel → neblig, die Sonne → sonnig, der Wind → windig.",
+          "examples": [
+            {
+              "de": "Heute Abend ist es neblig.",
+              "tr": "Сьогодні ввечері туманно."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Fog and hail: words ending in -ig",
+      "points": [
+        {
+          "title": "From noun to adjective",
+          "text": "Add -ig to make an adjective: der Nebel → neblig, die Sonne → sonnig, der Wind → windig.",
+          "examples": [
+            {
+              "de": "Heute Abend ist es neblig.",
+              "tr": "This evening it’s foggy."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Mgła i grad: słowa na -ig",
+      "points": [
+        {
+          "title": "Ze słowa w cechę",
+          "text": "Z rzeczownika robimy przymiotnik z -ig: der Nebel → neblig, die Sonne → sonnig, der Wind → windig.",
+          "examples": [
+            {
+              "de": "Heute Abend ist es neblig.",
+              "tr": "Dziś wieczorem jest mglisto."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Niebla y granizo: palabras en -ig",
+      "points": [
+        {
+          "title": "De sustantivo a adjetivo",
+          "text": "Con -ig se forma un adjetivo: der Nebel → neblig, die Sonne → sonnig, der Wind → windig.",
+          "examples": [
+            {
+              "de": "Heute Abend ist es neblig.",
+              "tr": "Esta noche hay niebla."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Brouillard et grêle : mots en -ig",
+      "points": [
+        {
+          "title": "Du nom à l’adjectif",
+          "text": "Avec -ig on forme un adjectif : der Nebel → neblig, die Sonne → sonnig, der Wind → windig.",
+          "examples": [
+            {
+              "de": "Heute Abend ist es neblig.",
+              "tr": "Ce soir, il y a du brouillard."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sis ve dolu: -ig ile biten kelimeler",
+      "points": [
+        {
+          "title": "İsimden sıfata",
+          "text": "-ig ekiyle sıfat yapılır: der Nebel → neblig, die Sonne → sonnig, der Wind → windig.",
+          "examples": [
+            {
+              "de": "Heute Abend ist es neblig.",
+              "tr": "Bu akşam hava sisli."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Ceață și grindină: cuvinte în -ig",
+      "points": [
+        {
+          "title": "Din substantiv în adjectiv",
+          "text": "Cu -ig facem adjectiv: der Nebel → neblig, die Sonne → sonnig, der Wind → windig.",
+          "examples": [
+            {
+              "de": "Heute Abend ist es neblig.",
+              "tr": "Diseară e ceață."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Tuman va do'l: -ig bilan tugaydigan so'zlar",
+      "points": [
+        {
+          "title": "Otdan sifatga",
+          "text": "-ig bilan sifat yasaladi: der Nebel → neblig, die Sonne → sonnig, der Wind → windig.",
+          "examples": [
+            {
+              "de": "Heute Abend ist es neblig.",
+              "tr": "Bugun kechqurun tumanli."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कोहरा और ओले: -ig वाले शब्द",
+      "points": [
+        {
+          "title": "संज्ञा से विशेषण",
+          "text": "-ig जोड़कर विशेषण बनाते हैं: der Nebel → neblig, die Sonne → sonnig, der Wind → windig।",
+          "examples": [
+            {
+              "de": "Heute Abend ist es neblig.",
+              "tr": "आज शाम कोहरा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الضباب والبَرَد: كلمات تنتهي بـ -ig",
+      "points": [
+        {
+          "title": "من الاسم إلى الصفة",
+          "text": "بإضافة -ig نصنع صفة: der Nebel → neblig، die Sonne → sonnig، der Wind → windig.",
+          "examples": [
+            {
+              "de": "Heute Abend ist es neblig.",
+              "tr": "هذا المساء الجو ضبابي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "lake-ruins-six": {
+    "ru": {
+      "title": "Жара и солнце",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Слово из двух частей берёт род последней: die Sonne + die Brille → die Sonnenbrille.",
+          "examples": [
+            {
+              "de": "Ich nehme die Sonnenbrille.",
+              "tr": "Я беру солнечные очки."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Спека і сонце",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Слово з двох частин бере рід останньої: die Sonne + die Brille → die Sonnenbrille.",
+          "examples": [
+            {
+              "de": "Ich nehme die Sonnenbrille.",
+              "tr": "Я беру сонцезахисні окуляри."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Heat and sun",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "A two-part word takes the gender of the last part: die Sonne + die Brille → die Sonnenbrille.",
+          "examples": [
+            {
+              "de": "Ich nehme die Sonnenbrille.",
+              "tr": "I’ll take my sunglasses."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Upał i słońce",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Słowo z dwóch części ma rodzaj ostatniej: die Sonne + die Brille → die Sonnenbrille.",
+          "examples": [
+            {
+              "de": "Ich nehme die Sonnenbrille.",
+              "tr": "Biorę okulary przeciwsłoneczne."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Calor y sol",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Una palabra de dos partes toma el género de la última: die Sonne + die Brille → die Sonnenbrille.",
+          "examples": [
+            {
+              "de": "Ich nehme die Sonnenbrille.",
+              "tr": "Me llevo las gafas de sol."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Chaleur et soleil",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "Un mot composé prend le genre de la dernière partie : die Sonne + die Brille → die Sonnenbrille.",
+          "examples": [
+            {
+              "de": "Ich nehme die Sonnenbrille.",
+              "tr": "Je prends mes lunettes de soleil."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sıcak ve güneş",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "İki parçalı kelime son parçanın cinsiyetini alır: die Sonne + die Brille → die Sonnenbrille.",
+          "examples": [
+            {
+              "de": "Ich nehme die Sonnenbrille.",
+              "tr": "Güneş gözlüğünü alıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Caniculă și soare",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Un cuvânt din două părți ia genul ultimei: die Sonne + die Brille → die Sonnenbrille.",
+          "examples": [
+            {
+              "de": "Ich nehme die Sonnenbrille.",
+              "tr": "Iau ochelarii de soare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Issiq va quyosh",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Ikki qismli so'z oxirgi qismning rodini oladi: die Sonne + die Brille → die Sonnenbrille.",
+          "examples": [
+            {
+              "de": "Ich nehme die Sonnenbrille.",
+              "tr": "Quyosh ko'zoynagini olaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "गर्मी और धूप",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "दो हिस्सों वाला शब्द आखिरी हिस्से का लिंग लेता है: die Sonne + die Brille → die Sonnenbrille।",
+          "examples": [
+            {
+              "de": "Ich nehme die Sonnenbrille.",
+              "tr": "मैं धूप का चश्मा लेता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الحر والشمس",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "الكلمة المركبة تأخذ جنس جزئها الأخير: die Sonne + die Brille → die Sonnenbrille.",
+          "examples": [
+            {
+              "de": "Ich nehme die Sonnenbrille.",
+              "tr": "آخذ النظارة الشمسية."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "lake-ruins-seven": {
+    "ru": {
+      "title": "Погода меняется",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Температуру ниже нуля говорят с minus: minus fünf Grad.",
+          "examples": [
+            {
+              "de": "In der Nacht sind es minus fünf Grad.",
+              "tr": "Ночью минус пять градусов."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Погода змінюється",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Температуру нижче нуля кажуть з minus: minus fünf Grad.",
+          "examples": [
+            {
+              "de": "In der Nacht sind es minus fünf Grad.",
+              "tr": "Уночі мінус п’ять градусів."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The weather changes",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "Below zero say minus: minus fünf Grad.",
+          "examples": [
+            {
+              "de": "In der Nacht sind es minus fünf Grad.",
+              "tr": "At night it’s minus five degrees."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Pogoda się zmienia",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Temperaturę poniżej zera mówimy z minus: minus fünf Grad.",
+          "examples": [
+            {
+              "de": "In der Nacht sind es minus fünf Grad.",
+              "tr": "W nocy jest minus pięć stopni."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "El tiempo cambia",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Bajo cero se dice minus: minus fünf Grad.",
+          "examples": [
+            {
+              "de": "In der Nacht sind es minus fünf Grad.",
+              "tr": "Por la noche hace cinco grados bajo cero."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le temps change",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "En dessous de zéro, on dit minus : minus fünf Grad.",
+          "examples": [
+            {
+              "de": "In der Nacht sind es minus fünf Grad.",
+              "tr": "La nuit, il fait moins cinq."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Hava değişiyor",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Sıfırın altı minus ile söylenir: minus fünf Grad.",
+          "examples": [
+            {
+              "de": "In der Nacht sind es minus fünf Grad.",
+              "tr": "Gece eksi beş derece."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Vremea se schimbă",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Sub zero spui minus: minus fünf Grad.",
+          "examples": [
+            {
+              "de": "In der Nacht sind es minus fünf Grad.",
+              "tr": "Noaptea sunt minus cinci grade."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ob-havo o'zgaradi",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Noldan past harorat minus bilan aytiladi: minus fünf Grad.",
+          "examples": [
+            {
+              "de": "In der Nacht sind es minus fünf Grad.",
+              "tr": "Tunda minus besh daraja."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "मौसम बदलता है",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "शून्य से नीचे minus कहते हैं: minus fünf Grad।",
+          "examples": [
+            {
+              "de": "In der Nacht sind es minus fünf Grad.",
+              "tr": "रात में माइनस पाँच डिग्री है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الطقس يتغير",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "تحت الصفر نقول minus: minus fünf Grad.",
+          "examples": [
+            {
+              "de": "In der Nacht sind es minus fünf Grad.",
+              "tr": "في الليل الحرارة خمس درجات تحت الصفر."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "lake-ruins-eight": {
+    "ru": {
+      "title": "Повторение: погода и одежда",
+      "points": [
+        {
+          "title": "Погода всегда с es",
+          "text": "О погоде говорим через es: Es ist kalt. Es regnet. По-русски «холодно» без подлежащего, по-немецки es обязательно.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Сегодня солнечно."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Идёт снег."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: погода й одяг",
+      "points": [
+        {
+          "title": "Погода завжди з es",
+          "text": "Про погоду кажемо через es: Es ist kalt. Es regnet. Українською «холодно» без підмета, німецькою es обов’язкове.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Сьогодні сонячно."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Іде сніг."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: weather and clothes",
+      "points": [
+        {
+          "title": "Weather always uses es",
+          "text": "Talk about the weather with es, like English \"it\": Es ist kalt. Es regnet.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "It’s sunny today."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "It’s snowing."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: pogoda i ubranie",
+      "points": [
+        {
+          "title": "Pogoda zawsze z es",
+          "text": "O pogodzie mówimy z es: Es ist kalt. Es regnet. Po polsku „zimno” bez podmiotu, po niemiecku es jest konieczne.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Dziś jest słonecznie."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Pada śnieg."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: tiempo y ropa",
+      "points": [
+        {
+          "title": "El tiempo siempre con es",
+          "text": "Del tiempo se habla con es: Es ist kalt. Es regnet. En español \"hace frío\" no tiene sujeto, en alemán es es obligatorio.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Hoy hace sol."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Está nevando."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : météo et vêtements",
+      "points": [
+        {
+          "title": "La météo toujours avec es",
+          "text": "Pour la météo, on utilise es, comme « il » en français : Es ist kalt. Es regnet.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Aujourd’hui, il fait beau."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Il neige."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: hava ve kıyafet",
+      "points": [
+        {
+          "title": "Hava durumu hep es ile",
+          "text": "Hava hakkında es ile konuşulur: Es ist kalt. Es regnet. Türkçede özne yok, Almancada es şart.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Bugün hava güneşli."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Kar yağıyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: vreme și haine",
+      "points": [
+        {
+          "title": "Vremea mereu cu es",
+          "text": "Despre vreme vorbim cu es: Es ist kalt. Es regnet. În română „e frig” fără subiect, în germană es e obligatoriu.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Azi e însorit."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Ninge."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: ob-havo va kiyim",
+      "points": [
+        {
+          "title": "Ob-havo doim es bilan",
+          "text": "Ob-havo haqida es bilan gapiramiz: Es ist kalt. Es regnet. O'zbekchada ega yo'q, nemischada es shart.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Bugun quyoshli."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Qor yog‘yapti."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: मौसम और कपड़े",
+      "points": [
+        {
+          "title": "मौसम हमेशा es के साथ",
+          "text": "मौसम के बारे में es से बात करते हैं: Es ist kalt. Es regnet। जर्मन में es ज़रूरी है।",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "आज धूप है।"
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "बर्फ़ गिर रही है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الطقس والملابس",
+      "points": [
+        {
+          "title": "الطقس دائماً مع es",
+          "text": "نتحدث عن الطقس باستعمال es: Es ist kalt. Es regnet. وes ضرورية في الألمانية.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "الجو مشمس اليوم."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "إنها تثلج."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "lake-ruins-nine": {
+    "ru": {
+      "title": "Планируем день по прогнозу",
+      "points": [
+        {
+          "title": "Части дня",
+          "text": "Повторяем: am Morgen, am Mittag, am Abend. Вопрос о погоде: Wie ist das Wetter?",
+          "examples": [
+            {
+              "de": "Wie ist das Wetter heute in Berlin?",
+              "tr": "Какая сегодня погода в Берлине?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Плануємо день за прогнозом",
+      "points": [
+        {
+          "title": "Частини дня",
+          "text": "Повторюємо: am Morgen, am Mittag, am Abend. Питання про погоду: Wie ist das Wetter?",
+          "examples": [
+            {
+              "de": "Wie ist das Wetter heute in Berlin?",
+              "tr": "Яка сьогодні погода в Берліні?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Planning the day by the forecast",
+      "points": [
+        {
+          "title": "Parts of the day",
+          "text": "Review: am Morgen, am Mittag, am Abend. Asking about the weather: Wie ist das Wetter?",
+          "examples": [
+            {
+              "de": "Wie ist das Wetter heute in Berlin?",
+              "tr": "What’s the weather like in Berlin today?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Planujemy dzień według prognozy",
+      "points": [
+        {
+          "title": "Pory dnia",
+          "text": "Powtarzamy: am Morgen, am Mittag, am Abend. Pytanie o pogodę: Wie ist das Wetter?",
+          "examples": [
+            {
+              "de": "Wie ist das Wetter heute in Berlin?",
+              "tr": "Jaka jest dziś pogoda w Berlinie?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Planear el día según el pronóstico",
+      "points": [
+        {
+          "title": "Partes del día",
+          "text": "Repaso: am Morgen, am Mittag, am Abend. Preguntar por el tiempo: Wie ist das Wetter?",
+          "examples": [
+            {
+              "de": "Wie ist das Wetter heute in Berlin?",
+              "tr": "¿Qué tiempo hace hoy en Berlín?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Planifier la journée selon la météo",
+      "points": [
+        {
+          "title": "Les moments de la journée",
+          "text": "Révision : am Morgen, am Mittag, am Abend. Demander la météo : Wie ist das Wetter ?",
+          "examples": [
+            {
+              "de": "Wie ist das Wetter heute in Berlin?",
+              "tr": "Quel temps fait-il aujourd’hui à Berlin ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Günü tahmine göre planlamak",
+      "points": [
+        {
+          "title": "Günün bölümleri",
+          "text": "Tekrar: am Morgen, am Mittag, am Abend. Havayı sormak: Wie ist das Wetter?",
+          "examples": [
+            {
+              "de": "Wie ist das Wetter heute in Berlin?",
+              "tr": "Bugün Berlin’de hava nasıl?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Planificăm ziua după prognoză",
+      "points": [
+        {
+          "title": "Părțile zilei",
+          "text": "Recapitulăm: am Morgen, am Mittag, am Abend. Întrebarea despre vreme: Wie ist das Wetter?",
+          "examples": [
+            {
+              "de": "Wie ist das Wetter heute in Berlin?",
+              "tr": "Cum e vremea azi la Berlin?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kunni prognozga qarab rejalashtiramiz",
+      "points": [
+        {
+          "title": "Kun qismlari",
+          "text": "Takrorlaymiz: am Morgen, am Mittag, am Abend. Ob-havo haqida savol: Wie ist das Wetter?",
+          "examples": [
+            {
+              "de": "Wie ist das Wetter heute in Berlin?",
+              "tr": "Bugun Berlinda ob-havo qanday?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "पूर्वानुमान से दिन की योजना",
+      "points": [
+        {
+          "title": "दिन के हिस्से",
+          "text": "दोहराव: am Morgen, am Mittag, am Abend। मौसम पूछना: Wie ist das Wetter?",
+          "examples": [
+            {
+              "de": "Wie ist das Wetter heute in Berlin?",
+              "tr": "आज बर्लिन में मौसम कैसा है?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "نخطط اليوم حسب التوقعات",
+      "points": [
+        {
+          "title": "أجزاء اليوم",
+          "text": "مراجعة: am Morgen، am Mittag، am Abend. والسؤال عن الطقس: Wie ist das Wetter؟",
+          "examples": [
+            {
+              "de": "Wie ist das Wetter heute in Berlin?",
+              "tr": "كيف الطقس اليوم في برلين؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "lake-ruins-ten": {
+    "ru": {
+      "title": "План на выходные",
+      "points": [
+        {
+          "title": "keinen для мужского рода",
+          "text": "Если вещь не нужна: Ich brauche keinen Regenschirm (der → keinen).",
+          "examples": [
+            {
+              "de": "Morgen ist es warm. Ich brauche keinen Regenschirm.",
+              "tr": "Завтра тепло. Зонт мне не нужен."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "План на вихідні",
+      "points": [
+        {
+          "title": "keinen для чоловічого роду",
+          "text": "Якщо річ не потрібна: Ich brauche keinen Regenschirm (der → keinen).",
+          "examples": [
+            {
+              "de": "Morgen ist es warm. Ich brauche keinen Regenschirm.",
+              "tr": "Завтра тепло. Парасолька мені не потрібна."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Weekend plans",
+      "points": [
+        {
+          "title": "keinen for masculine",
+          "text": "If you don’t need something: Ich brauche keinen Regenschirm (der → keinen).",
+          "examples": [
+            {
+              "de": "Morgen ist es warm. Ich brauche keinen Regenschirm.",
+              "tr": "Tomorrow it’s warm. I don’t need an umbrella."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Plan na weekend",
+      "points": [
+        {
+          "title": "keinen dla rodzaju męskiego",
+          "text": "Jeśli rzecz nie jest potrzebna: Ich brauche keinen Regenschirm (der → keinen).",
+          "examples": [
+            {
+              "de": "Morgen ist es warm. Ich brauche keinen Regenschirm.",
+              "tr": "Jutro będzie ciepło. Nie potrzebuję parasola."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Plan para el fin de semana",
+      "points": [
+        {
+          "title": "keinen para el masculino",
+          "text": "Si no necesitas algo: Ich brauche keinen Regenschirm (der → keinen).",
+          "examples": [
+            {
+              "de": "Morgen ist es warm. Ich brauche keinen Regenschirm.",
+              "tr": "Mañana hace calor. No necesito paraguas."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Projets pour le week-end",
+      "points": [
+        {
+          "title": "keinen pour le masculin",
+          "text": "Si on n’a pas besoin de quelque chose : Ich brauche keinen Regenschirm (der → keinen).",
+          "examples": [
+            {
+              "de": "Morgen ist es warm. Ich brauche keinen Regenschirm.",
+              "tr": "Demain, il fait chaud. Je n’ai pas besoin de parapluie."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Hafta sonu planı",
+      "points": [
+        {
+          "title": "Eril için keinen",
+          "text": "Bir şeye ihtiyacın yoksa: Ich brauche keinen Regenschirm (der → keinen).",
+          "examples": [
+            {
+              "de": "Morgen ist es warm. Ich brauche keinen Regenschirm.",
+              "tr": "Yarın hava sıcak. Şemsiyeye ihtiyacım yok."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Planul de weekend",
+      "points": [
+        {
+          "title": "keinen pentru masculin",
+          "text": "Dacă nu-ți trebuie ceva: Ich brauche keinen Regenschirm (der → keinen).",
+          "examples": [
+            {
+              "de": "Morgen ist es warm. Ich brauche keinen Regenschirm.",
+              "tr": "Mâine e cald. Nu am nevoie de umbrelă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Dam olish kunlari rejasi",
+      "points": [
+        {
+          "title": "Erkak rodi uchun keinen",
+          "text": "Narsa kerak bo'lmasa: Ich brauche keinen Regenschirm (der → keinen).",
+          "examples": [
+            {
+              "de": "Morgen ist es warm. Ich brauche keinen Regenschirm.",
+              "tr": "Ertaga issiq. Menga soyabon kerak emas."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "सप्ताहांत की योजना",
+      "points": [
+        {
+          "title": "पुल्लिंग के लिए keinen",
+          "text": "अगर कोई चीज़ नहीं चाहिए: Ich brauche keinen Regenschirm (der → keinen)।",
+          "examples": [
+            {
+              "de": "Morgen ist es warm. Ich brauche keinen Regenschirm.",
+              "tr": "कल गर्मी है। मुझे छाता नहीं चाहिए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "خطة عطلة نهاية الأسبوع",
+      "points": [
+        {
+          "title": "keinen للمذكر",
+          "text": "إذا لم تحتج شيئاً: Ich brauche keinen Regenschirm (der → keinen).",
+          "examples": [
+            {
+              "de": "Morgen ist es warm. Ich brauche keinen Regenschirm.",
+              "tr": "غداً الجو دافئ. لا أحتاج مظلة."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

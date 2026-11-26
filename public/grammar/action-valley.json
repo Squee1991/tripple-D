@@ -1,0 +1,2609 @@
+{
+  "action-one": {
+    "ru": {
+      "title": "Мне, тебе, ему: Dativ",
+      "points": [
+        {
+          "title": "mir, dir, ihm, ihr",
+          "text": "Кому: mir (мне), dir (тебе), ihm (ему), ihr (ей), uns (нам), euch (вам), ihnen (им), Ihnen (Вам).",
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "Ты можешь мне помочь?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Мені, тобі, йому: Dativ",
+      "points": [
+        {
+          "title": "mir, dir, ihm, ihr",
+          "text": "Кому: mir (мені), dir (тобі), ihm (йому), ihr (їй), uns (нам), euch (вам), ihnen (їм), Ihnen (Вам).",
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "Ти можеш мені допомогти?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Me, you, him: dative",
+      "points": [
+        {
+          "title": "mir, dir, ihm, ihr",
+          "text": "To whom: mir (me), dir (you), ihm (him), ihr (her), uns (us), euch (you all), ihnen (them), Ihnen (you, polite).",
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "Can you help me?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Mi, ci, mu: Dativ",
+      "points": [
+        {
+          "title": "mir, dir, ihm, ihr",
+          "text": "Komu: mir (mi), dir (ci), ihm (mu), ihr (jej), uns (nam), euch (wam), ihnen (im), Ihnen (Panu/Pani).",
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "Możesz mi pomóc?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Me, te, le: dativo",
+      "points": [
+        {
+          "title": "mir, dir, ihm, ihr",
+          "text": "A quién: mir (me), dir (te), ihm (le, a él), ihr (le, a ella), uns (nos), euch (os), ihnen (les), Ihnen (le, usted).",
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "¿Me puedes ayudar?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Me, te, lui : datif",
+      "points": [
+        {
+          "title": "mir, dir, ihm, ihr",
+          "text": "À qui : mir (me), dir (te), ihm (lui, à lui), ihr (lui, à elle), uns (nous), euch (vous), ihnen (leur), Ihnen (vous, poli).",
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "Tu peux m’aider ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Bana, sana, ona: Dativ",
+      "points": [
+        {
+          "title": "mir, dir, ihm, ihr",
+          "text": "Kime: mir (bana), dir (sana), ihm (ona, erkek), ihr (ona, kadın), uns (bize), euch (size), ihnen (onlara), Ihnen (size, kibar).",
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "Bana yardım edebilir misin?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Mie, ție, lui: dativ",
+      "points": [
+        {
+          "title": "mir, dir, ihm, ihr",
+          "text": "Cui: mir (mie), dir (ție), ihm (lui), ihr (ei), uns (nouă), euch (vouă), ihnen (lor), Ihnen (dumneavoastră).",
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "Mă poți ajuta?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Menga, senga, unga: Dativ",
+      "points": [
+        {
+          "title": "mir, dir, ihm, ihr",
+          "text": "Kimga: mir (menga), dir (senga), ihm (unga, erkak), ihr (unga, ayol), uns (bizga), euch (sizlarga), ihnen (ularga), Ihnen (Sizga).",
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "Menga yordam bera olasanmi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "मुझे, तुम्हें, उसे: Dativ",
+      "points": [
+        {
+          "title": "mir, dir, ihm, ihr",
+          "text": "किसे: mir (मुझे), dir (तुम्हें), ihm (उसे, पु), ihr (उसे, स्त्री), uns (हमें), euch (तुम सबको), ihnen (उन्हें), Ihnen (आपको)।",
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "क्या तुम मेरी मदद कर सकते हो?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "لي، لك، له: الجر",
+      "points": [
+        {
+          "title": "mir وdir وihm وihr",
+          "text": "لمن: mir (لي)، dir (لك)، ihm (له)، ihr (لها)، uns (لنا)، euch (لكم)، ihnen (لهم)، Ihnen (لحضرتك).",
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "هل يمكنك مساعدتي؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "action-two": {
+    "ru": {
+      "title": "С кем и куда",
+      "points": [
+        {
+          "title": "mit, zu, von, bei + Dativ",
+          "text": "После mit, zu, von, bei, aus, nach всегда Dativ: mit dem Freund, zum Arzt, von der Arbeit.",
+          "examples": [
+            {
+              "de": "Ich gehe mit meinem Freund.",
+              "tr": "Я иду со своим другом."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "З ким і куди",
+      "points": [
+        {
+          "title": "mit, zu, von, bei + Dativ",
+          "text": "Після mit, zu, von, bei, aus, nach завжди Dativ: mit dem Freund, zum Arzt, von der Arbeit.",
+          "examples": [
+            {
+              "de": "Ich gehe mit meinem Freund.",
+              "tr": "Я йду зі своїм другом."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "With whom and where to",
+      "points": [
+        {
+          "title": "mit, zu, von, bei + dative",
+          "text": "After mit, zu, von, bei, aus, nach always the dative: mit dem Freund, zum Arzt, von der Arbeit.",
+          "examples": [
+            {
+              "de": "Ich gehe mit meinem Freund.",
+              "tr": "I’m going with my friend."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Z kim i dokąd",
+      "points": [
+        {
+          "title": "mit, zu, von, bei + Dativ",
+          "text": "Po mit, zu, von, bei, aus, nach zawsze Dativ: mit dem Freund, zum Arzt, von der Arbeit.",
+          "examples": [
+            {
+              "de": "Ich gehe mit meinem Freund.",
+              "tr": "Idę z moim przyjacielem."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Con quién y adónde",
+      "points": [
+        {
+          "title": "mit, zu, von, bei + dativo",
+          "text": "Después de mit, zu, von, bei, aus, nach siempre dativo: mit dem Freund, zum Arzt, von der Arbeit.",
+          "examples": [
+            {
+              "de": "Ich gehe mit meinem Freund.",
+              "tr": "Voy con mi amigo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Avec qui et où",
+      "points": [
+        {
+          "title": "mit, zu, von, bei + datif",
+          "text": "Après mit, zu, von, bei, aus, nach, toujours le datif : mit dem Freund, zum Arzt, von der Arbeit.",
+          "examples": [
+            {
+              "de": "Ich gehe mit meinem Freund.",
+              "tr": "J’y vais avec mon ami."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kiminle ve nereye",
+      "points": [
+        {
+          "title": "mit, zu, von, bei + Dativ",
+          "text": "mit, zu, von, bei, aus, nach’tan sonra her zaman Dativ: mit dem Freund, zum Arzt, von der Arbeit.",
+          "examples": [
+            {
+              "de": "Ich gehe mit meinem Freund.",
+              "tr": "Arkadaşımla gidiyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cu cine și încotro",
+      "points": [
+        {
+          "title": "mit, zu, von, bei + dativ",
+          "text": "După mit, zu, von, bei, aus, nach mereu dativ: mit dem Freund, zum Arzt, von der Arbeit.",
+          "examples": [
+            {
+              "de": "Ich gehe mit meinem Freund.",
+              "tr": "Merg cu prietenul meu."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kim bilan va qayerga",
+      "points": [
+        {
+          "title": "mit, zu, von, bei + Dativ",
+          "text": "mit, zu, von, bei, aus, nach dan keyin doim Dativ: mit dem Freund, zum Arzt, von der Arbeit.",
+          "examples": [
+            {
+              "de": "Ich gehe mit meinem Freund.",
+              "tr": "Do'stim bilan boryapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "किसके साथ और कहाँ",
+      "points": [
+        {
+          "title": "mit, zu, von, bei + Dativ",
+          "text": "mit, zu, von, bei, aus, nach के बाद हमेशा Dativ: mit dem Freund, zum Arzt, von der Arbeit।",
+          "examples": [
+            {
+              "de": "Ich gehe mit meinem Freund.",
+              "tr": "मैं अपने दोस्त के साथ जा रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مع من وإلى أين",
+      "points": [
+        {
+          "title": "mit وzu وvon وbei + الجر",
+          "text": "بعد mit وzu وvon وbei وaus وnach دائماً حالة الجر: mit dem Freund، zum Arzt، von der Arbeit.",
+          "examples": [
+            {
+              "de": "Ich gehe mit meinem Freund.",
+              "tr": "أذهب مع صديقي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "action-three": {
+    "ru": {
+      "title": "für, ohne, durch: Akkusativ",
+      "points": [
+        {
+          "title": "für, ohne, durch, gegen, um",
+          "text": "После этих предлогов всегда Akkusativ: für dich, ohne den Hund, durch den Park. gegen значит «против».",
+          "examples": [
+            {
+              "de": "Ich komme ohne den Hund.",
+              "tr": "Я приду без собаки."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "für, ohne, durch: Akkusativ",
+      "points": [
+        {
+          "title": "für, ohne, durch, gegen, um",
+          "text": "Після цих прийменників завжди Akkusativ: für dich, ohne den Hund, durch den Park. gegen означає «проти».",
+          "examples": [
+            {
+              "de": "Ich komme ohne den Hund.",
+              "tr": "Я прийду без собаки."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "für, ohne, durch: accusative",
+      "points": [
+        {
+          "title": "für, ohne, durch, gegen, um",
+          "text": "These prepositions always take the accusative: für dich, ohne den Hund, durch den Park. gegen means \"against\".",
+          "examples": [
+            {
+              "de": "Ich komme ohne den Hund.",
+              "tr": "I’ll come without the dog."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "für, ohne, durch: Akkusativ",
+      "points": [
+        {
+          "title": "für, ohne, durch, gegen, um",
+          "text": "Po tych przyimkach zawsze Akkusativ: für dich, ohne den Hund, durch den Park. gegen znaczy „przeciw”.",
+          "examples": [
+            {
+              "de": "Ich komme ohne den Hund.",
+              "tr": "Przyjdę bez psa."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "für, ohne, durch: acusativo",
+      "points": [
+        {
+          "title": "für, ohne, durch, gegen, um",
+          "text": "Estas preposiciones siempre van con acusativo: für dich, ohne den Hund, durch den Park. gegen significa \"contra\".",
+          "examples": [
+            {
+              "de": "Ich komme ohne den Hund.",
+              "tr": "Vengo sin el perro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "für, ohne, durch : accusatif",
+      "points": [
+        {
+          "title": "für, ohne, durch, gegen, um",
+          "text": "Ces prépositions prennent toujours l’accusatif : für dich, ohne den Hund, durch den Park. gegen veut dire « contre ».",
+          "examples": [
+            {
+              "de": "Ich komme ohne den Hund.",
+              "tr": "Je viens sans le chien."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "für, ohne, durch: Akkusativ",
+      "points": [
+        {
+          "title": "für, ohne, durch, gegen, um",
+          "text": "Bu edatlardan sonra her zaman Akkusativ: für dich, ohne den Hund, durch den Park. gegen \"karşı\" demektir.",
+          "examples": [
+            {
+              "de": "Ich komme ohne den Hund.",
+              "tr": "Köpeksiz geliyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "für, ohne, durch: acuzativ",
+      "points": [
+        {
+          "title": "für, ohne, durch, gegen, um",
+          "text": "Aceste prepoziții cer mereu acuzativ: für dich, ohne den Hund, durch den Park. gegen înseamnă „împotriva”.",
+          "examples": [
+            {
+              "de": "Ich komme ohne den Hund.",
+              "tr": "Vin fără câine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "für, ohne, durch: Akkusativ",
+      "points": [
+        {
+          "title": "für, ohne, durch, gegen, um",
+          "text": "Bu ko'makchilardan keyin doim Akkusativ: für dich, ohne den Hund, durch den Park. gegen \"qarshi\" degani.",
+          "examples": [
+            {
+              "de": "Ich komme ohne den Hund.",
+              "tr": "Itsiz kelaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "für, ohne, durch: Akkusativ",
+      "points": [
+        {
+          "title": "für, ohne, durch, gegen, um",
+          "text": "इन संबंधसूचकों के बाद हमेशा Akkusativ: für dich, ohne den Hund, durch den Park। gegen मतलब \"के विरुद्ध\"।",
+          "examples": [
+            {
+              "de": "Ich komme ohne den Hund.",
+              "tr": "मैं कुत्ते के बिना आऊँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "für وohne وdurch: المفعول",
+      "points": [
+        {
+          "title": "für وohne وdurch وgegen وum",
+          "text": "بعد هذه الحروف دائماً حالة المفعول: für dich، ohne den Hund، durch den Park. وgegen تعني \"ضد\".",
+          "examples": [
+            {
+              "de": "Ich komme ohne den Hund.",
+              "tr": "سآتي بدون الكلب."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "action-four": {
+    "ru": {
+      "title": "Куда или где?",
+      "points": [
+        {
+          "title": "Wohin? или Wo?",
+          "text": "in, an, auf, hinter, neben и другие: если движение «куда?», то Akkusativ (auf den Tisch). Если место «где?», то Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Я ставлю вазу на стол."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Ваза стоит на столе."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Куди чи де?",
+      "points": [
+        {
+          "title": "Wohin? чи Wo?",
+          "text": "in, an, auf, hinter, neben та інші: якщо рух «куди?», то Akkusativ (auf den Tisch). Якщо місце «де?», то Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Я ставлю вазу на стіл."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Ваза стоїть на столі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Where to or where?",
+      "points": [
+        {
+          "title": "Wohin? or Wo?",
+          "text": "in, an, auf, hinter, neben and others: movement \"where to?\" takes the accusative (auf den Tisch). Location \"where?\" takes the dative (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "I put the vase on the table."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "The vase is on the table."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Dokąd czy gdzie?",
+      "points": [
+        {
+          "title": "Wohin? czy Wo?",
+          "text": "in, an, auf, hinter, neben i inne: ruch „dokąd?” to Akkusativ (auf den Tisch). Miejsce „gdzie?” to Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Stawiam wazon na stół."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Wazon stoi na stole."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿Adónde o dónde?",
+      "points": [
+        {
+          "title": "¿Wohin? o Wo?",
+          "text": "in, an, auf, hinter, neben y otras: movimiento \"¿adónde?\" lleva acusativo (auf den Tisch). Lugar \"¿dónde?\" lleva dativo (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Pongo el jarrón en la mesa."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "El jarrón está en la mesa."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Où (vers) ou où ?",
+      "points": [
+        {
+          "title": "Wohin ? ou Wo ?",
+          "text": "in, an, auf, hinter, neben et d’autres : un mouvement « vers où ? » prend l’accusatif (auf den Tisch). Un lieu « où ? » prend le datif (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Je pose le vase sur la table."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Le vase est sur la table."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Nereye mi, nerede mi?",
+      "points": [
+        {
+          "title": "Wohin? mi, Wo? mu",
+          "text": "in, an, auf, hinter, neben ve diğerleri: \"nereye?\" hareketi Akkusativ (auf den Tisch), \"nerede?\" yeri Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Vazoyu masaya koyuyorum."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Vazo masada duruyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Încotro sau unde?",
+      "points": [
+        {
+          "title": "Wohin? sau Wo?",
+          "text": "in, an, auf, hinter, neben și altele: mișcarea „încotro?” cere acuzativ (auf den Tisch). Locul „unde?” cere dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Pun vaza pe masă."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Vaza stă pe masă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qayerga yoki qayerda?",
+      "points": [
+        {
+          "title": "Wohin? yoki Wo?",
+          "text": "in, an, auf, hinter, neben va boshqalar: \"qayerga?\" harakat Akkusativ (auf den Tisch), \"qayerda?\" joy Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Vazani stolga qo'yaman."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Vaza stol ustida turibdi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "किधर या कहाँ?",
+      "points": [
+        {
+          "title": "Wohin? या Wo?",
+          "text": "in, an, auf, hinter, neben आदि: \"किधर?\" गति हो तो Akkusativ (auf den Tisch), \"कहाँ?\" जगह हो तो Dativ (auf dem Tisch)।",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "मैं फूलदान मेज़ पर रखता हूँ।"
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "फूलदान मेज़ पर रखा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "إلى أين أم أين؟",
+      "points": [
+        {
+          "title": "Wohin؟ أم Wo؟",
+          "text": "in وan وauf وhinter وneben وغيرها: الحركة \"إلى أين؟\" تأخذ المفعول (auf den Tisch)، والمكان \"أين؟\" يأخذ الجر (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "أضع المزهرية على الطاولة."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "المزهرية على الطاولة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "action-five": {
+    "ru": {
+      "title": "Кому и что",
+      "points": [
+        {
+          "title": "Сначала кому, потом что",
+          "text": "Если есть и человек, и вещь: сначала человек в Dativ, потом вещь в Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich schenke meiner Mutter Blumen.",
+              "tr": "Я дарю маме цветы."
+            },
+            {
+              "de": "Er gibt dem Kind den Apfel.",
+              "tr": "Он даёт ребёнку яблоко."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Кому і що",
+      "points": [
+        {
+          "title": "Спочатку кому, потім що",
+          "text": "Якщо є і людина, і річ: спочатку людина в Dativ, потім річ в Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich schenke meiner Mutter Blumen.",
+              "tr": "Я дарую мамі квіти."
+            },
+            {
+              "de": "Er gibt dem Kind den Apfel.",
+              "tr": "Він дає дитині яблуко."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "To whom and what",
+      "points": [
+        {
+          "title": "First to whom, then what",
+          "text": "With both a person and a thing: first the person in the dative, then the thing in the accusative.",
+          "examples": [
+            {
+              "de": "Ich schenke meiner Mutter Blumen.",
+              "tr": "I give my mother flowers."
+            },
+            {
+              "de": "Er gibt dem Kind den Apfel.",
+              "tr": "He gives the child the apple."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Komu i co",
+      "points": [
+        {
+          "title": "Najpierw komu, potem co",
+          "text": "Gdy jest i osoba, i rzecz: najpierw osoba w Dativ, potem rzecz w Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich schenke meiner Mutter Blumen.",
+              "tr": "Daruję mamie kwiaty."
+            },
+            {
+              "de": "Er gibt dem Kind den Apfel.",
+              "tr": "On daje dziecku jabłko."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "A quién y qué",
+      "points": [
+        {
+          "title": "Primero a quién, luego qué",
+          "text": "Si hay persona y cosa: primero la persona en dativo, luego la cosa en acusativo.",
+          "examples": [
+            {
+              "de": "Ich schenke meiner Mutter Blumen.",
+              "tr": "Le regalo flores a mi madre."
+            },
+            {
+              "de": "Er gibt dem Kind den Apfel.",
+              "tr": "Él le da la manzana al niño."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "À qui et quoi",
+      "points": [
+        {
+          "title": "D’abord à qui, puis quoi",
+          "text": "Avec une personne et une chose : d’abord la personne au datif, puis la chose à l’accusatif.",
+          "examples": [
+            {
+              "de": "Ich schenke meiner Mutter Blumen.",
+              "tr": "J’offre des fleurs à ma mère."
+            },
+            {
+              "de": "Er gibt dem Kind den Apfel.",
+              "tr": "Il donne la pomme à l’enfant."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kime ve neyi",
+      "points": [
+        {
+          "title": "Önce kime, sonra neyi",
+          "text": "Hem kişi hem eşya varsa: önce kişi Dativ’de, sonra eşya Akkusativ’de.",
+          "examples": [
+            {
+              "de": "Ich schenke meiner Mutter Blumen.",
+              "tr": "Anneme çiçek hediye ediyorum."
+            },
+            {
+              "de": "Er gibt dem Kind den Apfel.",
+              "tr": "Çocuğa elmayı veriyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cui și ce",
+      "points": [
+        {
+          "title": "Întâi cui, apoi ce",
+          "text": "Când există și o persoană, și un lucru: întâi persoana la dativ, apoi lucrul la acuzativ.",
+          "examples": [
+            {
+              "de": "Ich schenke meiner Mutter Blumen.",
+              "tr": "Îi dăruiesc mamei flori."
+            },
+            {
+              "de": "Er gibt dem Kind den Apfel.",
+              "tr": "El îi dă copilului mărul."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kimga va nimani",
+      "points": [
+        {
+          "title": "Avval kimga, keyin nimani",
+          "text": "Ham odam, ham narsa bo'lsa: avval odam Dativda, keyin narsa Akkusativda.",
+          "examples": [
+            {
+              "de": "Ich schenke meiner Mutter Blumen.",
+              "tr": "Onamga gul sovg'a qilaman."
+            },
+            {
+              "de": "Er gibt dem Kind den Apfel.",
+              "tr": "U bolaga olmani beradi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "किसे और क्या",
+      "points": [
+        {
+          "title": "पहले किसे, फिर क्या",
+          "text": "अगर व्यक्ति और चीज़ दोनों हों: पहले व्यक्ति Dativ में, फिर चीज़ Akkusativ में।",
+          "examples": [
+            {
+              "de": "Ich schenke meiner Mutter Blumen.",
+              "tr": "मैं अपनी माँ को फूल देता हूँ।"
+            },
+            {
+              "de": "Er gibt dem Kind den Apfel.",
+              "tr": "वह बच्चे को सेब देता है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "لمن وماذا",
+      "points": [
+        {
+          "title": "أولاً لمن ثم ماذا",
+          "text": "إذا وُجد شخص وشيء: أولاً الشخص في حالة الجر ثم الشيء في حالة المفعول.",
+          "examples": [
+            {
+              "de": "Ich schenke meiner Mutter Blumen.",
+              "tr": "أهدي أمي زهوراً."
+            },
+            {
+              "de": "Er gibt dem Kind den Apfel.",
+              "tr": "هو يعطي الطفل التفاحة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "action-six": {
+    "ru": {
+      "title": "Какой падеж у глагола",
+      "points": [
+        {
+          "title": "Глаголы с Dativ",
+          "text": "helfen, danken, gratulieren, glauben, gefallen требуют Dativ. А sehen, besuchen, anrufen требуют Akkusativ, хотя по-русски может звучать иначе.",
+          "examples": [
+            {
+              "de": "Er hilft oft seinem Vater.",
+              "tr": "Он часто помогает отцу."
+            },
+            {
+              "de": "Ich rufe den Vater an.",
+              "tr": "Я звоню отцу."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Який відмінок у дієслова",
+      "points": [
+        {
+          "title": "Дієслова з Dativ",
+          "text": "helfen, danken, gratulieren, glauben, gefallen вимагають Dativ. А sehen, besuchen, anrufen вимагають Akkusativ, хоч українською може звучати інакше.",
+          "examples": [
+            {
+              "de": "Er hilft oft seinem Vater.",
+              "tr": "Він часто допомагає батькові."
+            },
+            {
+              "de": "Ich rufe den Vater an.",
+              "tr": "Я телефоную батькові."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Which case a verb takes",
+      "points": [
+        {
+          "title": "Verbs with the dative",
+          "text": "helfen, danken, gratulieren, glauben, gefallen take the dative. sehen, besuchen, anrufen take the accusative.",
+          "examples": [
+            {
+              "de": "Er hilft oft seinem Vater.",
+              "tr": "He often helps his father."
+            },
+            {
+              "de": "Ich rufe den Vater an.",
+              "tr": "I call my father."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Jaki przypadek ma czasownik",
+      "points": [
+        {
+          "title": "Czasowniki z Dativ",
+          "text": "helfen, danken, gratulieren, glauben, gefallen wymagają Dativ. A sehen, besuchen, anrufen wymagają Akkusativ, choć po polsku bywa inaczej.",
+          "examples": [
+            {
+              "de": "Er hilft oft seinem Vater.",
+              "tr": "On często pomaga ojcu."
+            },
+            {
+              "de": "Ich rufe den Vater an.",
+              "tr": "Dzwonię do ojca."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Qué caso pide el verbo",
+      "points": [
+        {
+          "title": "Verbos con dativo",
+          "text": "helfen, danken, gratulieren, glauben, gefallen van con dativo. sehen, besuchen, anrufen van con acusativo.",
+          "examples": [
+            {
+              "de": "Er hilft oft seinem Vater.",
+              "tr": "Él ayuda a menudo a su padre."
+            },
+            {
+              "de": "Ich rufe den Vater an.",
+              "tr": "Llamo a mi padre."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Quel cas demande le verbe",
+      "points": [
+        {
+          "title": "Verbes avec le datif",
+          "text": "helfen, danken, gratulieren, glauben, gefallen demandent le datif. sehen, besuchen, anrufen demandent l’accusatif.",
+          "examples": [
+            {
+              "de": "Er hilft oft seinem Vater.",
+              "tr": "Il aide souvent son père."
+            },
+            {
+              "de": "Ich rufe den Vater an.",
+              "tr": "J’appelle mon père."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Fiil hangi hâli ister",
+      "points": [
+        {
+          "title": "Dativ alan fiiller",
+          "text": "helfen, danken, gratulieren, glauben, gefallen Dativ ister. sehen, besuchen, anrufen ise Akkusativ ister.",
+          "examples": [
+            {
+              "de": "Er hilft oft seinem Vater.",
+              "tr": "O sık sık babasına yardım eder."
+            },
+            {
+              "de": "Ich rufe den Vater an.",
+              "tr": "Babamı arıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Ce caz cere verbul",
+      "points": [
+        {
+          "title": "Verbe cu dativ",
+          "text": "helfen, danken, gratulieren, glauben, gefallen cer dativ. sehen, besuchen, anrufen cer acuzativ.",
+          "examples": [
+            {
+              "de": "Er hilft oft seinem Vater.",
+              "tr": "El își ajută des tatăl."
+            },
+            {
+              "de": "Ich rufe den Vater an.",
+              "tr": "Îl sun pe tata."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Fe'l qaysi kelishikni talab qiladi",
+      "points": [
+        {
+          "title": "Dativ talab qiladigan fe'llar",
+          "text": "helfen, danken, gratulieren, glauben, gefallen Dativ talab qiladi. sehen, besuchen, anrufen esa Akkusativ.",
+          "examples": [
+            {
+              "de": "Er hilft oft seinem Vater.",
+              "tr": "U otasiga tez-tez yordam beradi."
+            },
+            {
+              "de": "Ich rufe den Vater an.",
+              "tr": "Otamga qo'ng'iroq qilaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "क्रिया कौन-सा कारक लेती है",
+      "points": [
+        {
+          "title": "Dativ वाली क्रियाएँ",
+          "text": "helfen, danken, gratulieren, glauben, gefallen के साथ Dativ। sehen, besuchen, anrufen के साथ Akkusativ।",
+          "examples": [
+            {
+              "de": "Er hilft oft seinem Vater.",
+              "tr": "वह अक्सर अपने पिता की मदद करता है।"
+            },
+            {
+              "de": "Ich rufe den Vater an.",
+              "tr": "मैं पिता को फ़ोन करता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "أي حالة يطلب الفعل",
+      "points": [
+        {
+          "title": "أفعال مع حالة الجر",
+          "text": "helfen وdanken وgratulieren وglauben وgefallen تأخذ حالة الجر. أما sehen وbesuchen وanrufen فتأخذ المفعول.",
+          "examples": [
+            {
+              "de": "Er hilft oft seinem Vater.",
+              "tr": "هو يساعد أباه كثيراً."
+            },
+            {
+              "de": "Ich rufe den Vater an.",
+              "tr": "أتصل بأبي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "action-seven": {
+    "ru": {
+      "title": "Глаголы-ловушки",
+      "points": [
+        {
+          "title": "Глаголы с Dativ",
+          "text": "helfen, danken, gratulieren, glauben, gefallen требуют Dativ. А sehen, besuchen, anrufen требуют Akkusativ, хотя по-русски может звучать иначе.",
+          "examples": [
+            {
+              "de": "Er hilft oft seinem Vater.",
+              "tr": "Он часто помогает отцу."
+            },
+            {
+              "de": "Ich rufe den Vater an.",
+              "tr": "Я звоню отцу."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Дієслова-пастки",
+      "points": [
+        {
+          "title": "Дієслова з Dativ",
+          "text": "helfen, danken, gratulieren, glauben, gefallen вимагають Dativ. А sehen, besuchen, anrufen вимагають Akkusativ, хоч українською може звучати інакше.",
+          "examples": [
+            {
+              "de": "Er hilft oft seinem Vater.",
+              "tr": "Він часто допомагає батькові."
+            },
+            {
+              "de": "Ich rufe den Vater an.",
+              "tr": "Я телефоную батькові."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Tricky verbs",
+      "points": [
+        {
+          "title": "Verbs with the dative",
+          "text": "helfen, danken, gratulieren, glauben, gefallen take the dative. sehen, besuchen, anrufen take the accusative.",
+          "examples": [
+            {
+              "de": "Er hilft oft seinem Vater.",
+              "tr": "He often helps his father."
+            },
+            {
+              "de": "Ich rufe den Vater an.",
+              "tr": "I call my father."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Czasowniki-pułapki",
+      "points": [
+        {
+          "title": "Czasowniki z Dativ",
+          "text": "helfen, danken, gratulieren, glauben, gefallen wymagają Dativ. A sehen, besuchen, anrufen wymagają Akkusativ, choć po polsku bywa inaczej.",
+          "examples": [
+            {
+              "de": "Er hilft oft seinem Vater.",
+              "tr": "On często pomaga ojcu."
+            },
+            {
+              "de": "Ich rufe den Vater an.",
+              "tr": "Dzwonię do ojca."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Verbos trampa",
+      "points": [
+        {
+          "title": "Verbos con dativo",
+          "text": "helfen, danken, gratulieren, glauben, gefallen van con dativo. sehen, besuchen, anrufen van con acusativo.",
+          "examples": [
+            {
+              "de": "Er hilft oft seinem Vater.",
+              "tr": "Él ayuda a menudo a su padre."
+            },
+            {
+              "de": "Ich rufe den Vater an.",
+              "tr": "Llamo a mi padre."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Verbes pièges",
+      "points": [
+        {
+          "title": "Verbes avec le datif",
+          "text": "helfen, danken, gratulieren, glauben, gefallen demandent le datif. sehen, besuchen, anrufen demandent l’accusatif.",
+          "examples": [
+            {
+              "de": "Er hilft oft seinem Vater.",
+              "tr": "Il aide souvent son père."
+            },
+            {
+              "de": "Ich rufe den Vater an.",
+              "tr": "J’appelle mon père."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tuzak fiiller",
+      "points": [
+        {
+          "title": "Dativ alan fiiller",
+          "text": "helfen, danken, gratulieren, glauben, gefallen Dativ ister. sehen, besuchen, anrufen ise Akkusativ ister.",
+          "examples": [
+            {
+              "de": "Er hilft oft seinem Vater.",
+              "tr": "O sık sık babasına yardım eder."
+            },
+            {
+              "de": "Ich rufe den Vater an.",
+              "tr": "Babamı arıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Verbe-capcană",
+      "points": [
+        {
+          "title": "Verbe cu dativ",
+          "text": "helfen, danken, gratulieren, glauben, gefallen cer dativ. sehen, besuchen, anrufen cer acuzativ.",
+          "examples": [
+            {
+              "de": "Er hilft oft seinem Vater.",
+              "tr": "El își ajută des tatăl."
+            },
+            {
+              "de": "Ich rufe den Vater an.",
+              "tr": "Îl sun pe tata."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Tuzoq fe'llar",
+      "points": [
+        {
+          "title": "Dativ talab qiladigan fe'llar",
+          "text": "helfen, danken, gratulieren, glauben, gefallen Dativ talab qiladi. sehen, besuchen, anrufen esa Akkusativ.",
+          "examples": [
+            {
+              "de": "Er hilft oft seinem Vater.",
+              "tr": "U otasiga tez-tez yordam beradi."
+            },
+            {
+              "de": "Ich rufe den Vater an.",
+              "tr": "Otamga qo'ng'iroq qilaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "मुश्किल क्रियाएँ",
+      "points": [
+        {
+          "title": "Dativ वाली क्रियाएँ",
+          "text": "helfen, danken, gratulieren, glauben, gefallen के साथ Dativ। sehen, besuchen, anrufen के साथ Akkusativ।",
+          "examples": [
+            {
+              "de": "Er hilft oft seinem Vater.",
+              "tr": "वह अक्सर अपने पिता की मदद करता है।"
+            },
+            {
+              "de": "Ich rufe den Vater an.",
+              "tr": "मैं पिता को फ़ोन करता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "أفعال خادعة",
+      "points": [
+        {
+          "title": "أفعال مع حالة الجر",
+          "text": "helfen وdanken وgratulieren وglauben وgefallen تأخذ حالة الجر. أما sehen وbesuchen وanrufen فتأخذ المفعول.",
+          "examples": [
+            {
+              "de": "Er hilft oft seinem Vater.",
+              "tr": "هو يساعد أباه كثيراً."
+            },
+            {
+              "de": "Ich rufe den Vater an.",
+              "tr": "أتصل بأبي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "action-eight": {
+    "ru": {
+      "title": "Глаголы с предлогами",
+      "points": [
+        {
+          "title": "Глагол + предлог",
+          "text": "Некоторые глаголы идут со своим предлогом, его учим вместе: warten auf, denken an, sprechen über. После них Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Я жду тебя."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Мы говорим о фильме."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Дієслова з прийменниками",
+      "points": [
+        {
+          "title": "Дієслово + прийменник",
+          "text": "Деякі дієслова йдуть зі своїм прийменником, його вчимо разом: warten auf, denken an, sprechen über. Після них Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Я чекаю на тебе."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Ми говоримо про фільм."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Verbs with prepositions",
+      "points": [
+        {
+          "title": "Verb + preposition",
+          "text": "Some verbs come with their own preposition, learn them together: warten auf, denken an, sprechen über. They take the accusative.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "I’m waiting for you."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "We’re talking about the film."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Czasowniki z przyimkami",
+      "points": [
+        {
+          "title": "Czasownik + przyimek",
+          "text": "Niektóre czasowniki mają swój przyimek, uczymy się ich razem: warten auf, denken an, sprechen über. Po nich Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Czekam na ciebie."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Rozmawiamy o filmie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Verbos con preposición",
+      "points": [
+        {
+          "title": "Verbo + preposición",
+          "text": "Algunos verbos llevan su preposición, se aprenden juntos: warten auf, denken an, sprechen über. Van con acusativo.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Te espero."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Hablamos de la película."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Verbes à préposition",
+      "points": [
+        {
+          "title": "Verbe + préposition",
+          "text": "Certains verbes ont leur préposition, on les apprend ensemble : warten auf, denken an, sprechen über. Suivis de l’accusatif.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Je t’attends."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Nous parlons du film."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Edatlı fiiller",
+      "points": [
+        {
+          "title": "Fiil + edat",
+          "text": "Bazı fiillerin kendi edatı var, birlikte öğrenilir: warten auf, denken an, sprechen über. Ardından Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Seni bekliyorum."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Film hakkında konuşuyoruz."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Verbe cu prepoziție",
+      "points": [
+        {
+          "title": "Verb + prepoziție",
+          "text": "Unele verbe au prepoziția lor, se învață împreună: warten auf, denken an, sprechen über. Sunt urmate de acuzativ.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Te aștept."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Vorbim despre film."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ko'makchili fe'llar",
+      "points": [
+        {
+          "title": "Fe'l + ko'makchi",
+          "text": "Ba'zi fe'llarning o'z ko'makchisi bor, birga o'rganiladi: warten auf, denken an, sprechen über. Ulardan keyin Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Seni kutyapman."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Biz film haqida gaplashyapmiz."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "संबंधसूचक वाली क्रियाएँ",
+      "points": [
+        {
+          "title": "क्रिया + संबंधसूचक",
+          "text": "कुछ क्रियाओं का अपना संबंधसूचक होता है, साथ में सीखो: warten auf, denken an, sprechen über। इनके बाद Akkusativ।",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "मैं तुम्हारा इंतज़ार कर रहा हूँ।"
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "हम फ़िल्म के बारे में बात कर रहे हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "أفعال مع حروف جر",
+      "points": [
+        {
+          "title": "فعل + حرف جر",
+          "text": "بعض الأفعال لها حرف جر خاص يُحفظ معها: warten auf، denken an، sprechen über. وبعدها حالة المفعول.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "أنتظرك."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "نتحدث عن الفيلم."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "action-nine": {
+    "ru": {
+      "title": "darüber, wonach",
+      "points": [
+        {
+          "title": "darauf и worauf",
+          "text": "Про вещь спрашиваем wo + предлог: Worauf wartest du? Заменяем вещь da + предлог: Ich warte darauf. Перед гласной добавляется r: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "О чём вы говорите?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Меня это злит."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "darüber, wonach",
+      "points": [
+        {
+          "title": "darauf і worauf",
+          "text": "Про річ питаємо wo + прийменник: Worauf wartest du? Замінюємо річ da + прийменник: Ich warte darauf. Перед голосною додається r: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "Про що ви говорите?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Мене це злить."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "darüber, wonach",
+      "points": [
+        {
+          "title": "darauf and worauf",
+          "text": "Ask about a thing with wo + preposition: Worauf wartest du? Replace the thing with da + preposition: Ich warte darauf. Before a vowel add r: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "What are you talking about?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "That annoys me."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "darüber, wonach",
+      "points": [
+        {
+          "title": "darauf i worauf",
+          "text": "O rzecz pytamy wo + przyimek: Worauf wartest du? Rzecz zastępujemy da + przyimek: Ich warte darauf. Przed samogłoską dochodzi r: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "O czym rozmawiacie?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Złości mnie to."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "darüber, wonach",
+      "points": [
+        {
+          "title": "darauf y worauf",
+          "text": "Para preguntar por una cosa: wo + preposición: Worauf wartest du? Para sustituirla: da + preposición: Ich warte darauf. Ante vocal se añade r: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "¿De qué habláis?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Eso me molesta."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "darüber, wonach",
+      "points": [
+        {
+          "title": "darauf et worauf",
+          "text": "Pour une chose on demande wo + préposition : Worauf wartest du ? On la remplace par da + préposition : Ich warte darauf. Devant une voyelle, on ajoute r : wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "De quoi parlez-vous ?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Ça m’énerve."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "darüber, wonach",
+      "points": [
+        {
+          "title": "darauf ve worauf",
+          "text": "Bir şeyi sormak için wo + edat: Worauf wartest du? Yerine koymak için da + edat: Ich warte darauf. Ünlüden önce r eklenir: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "Ne hakkında konuşuyorsunuz?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Buna sinirleniyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "darüber, wonach",
+      "points": [
+        {
+          "title": "darauf și worauf",
+          "text": "Despre un lucru întrebi cu wo + prepoziție: Worauf wartest du? Îl înlocuiești cu da + prepoziție: Ich warte darauf. Înaintea unei vocale apare r: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "Despre ce vorbiți?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Mă enervează asta."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "darüber, wonach",
+      "points": [
+        {
+          "title": "darauf va worauf",
+          "text": "Narsa haqida wo + ko'makchi bilan so'raladi: Worauf wartest du? Narsani da + ko'makchi bilan almashtiramiz: Ich warte darauf. Unlidan oldin r qo'shiladi: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "Nima haqida gaplashyapsizlar?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Bu meni jahlimni chiqaradi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "darüber, wonach",
+      "points": [
+        {
+          "title": "darauf और worauf",
+          "text": "चीज़ के बारे में wo + संबंधसूचक से पूछते हैं: Worauf wartest du? चीज़ की जगह da + संबंधसूचक: Ich warte darauf। स्वर से पहले r जुड़ता है: wo-r-über, da-r-an।",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "तुम सब किस बारे में बात कर रहे हो?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "मुझे इस पर गुस्सा आता है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "darüber وwonach",
+      "points": [
+        {
+          "title": "darauf وworauf",
+          "text": "نسأل عن الشيء بـ wo + حرف الجر: Worauf wartest du؟ ونستبدل الشيء بـ da + حرف الجر: Ich warte darauf. وقبل الحرف الصوتي تضاف r: wo-r-über، da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "عمّ تتحدثون؟"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "هذا يزعجني."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "action-ten": {
+    "ru": {
+      "title": "darauf, wovon: закрепляем",
+      "points": [
+        {
+          "title": "darauf и worauf",
+          "text": "Про вещь спрашиваем wo + предлог: Worauf wartest du? Заменяем вещь da + предлог: Ich warte darauf. Перед гласной добавляется r: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "О чём вы говорите?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Меня это злит."
+            }
+          ]
+        },
+        {
+          "title": "Глагол + предлог",
+          "text": "Некоторые глаголы идут со своим предлогом, его учим вместе: warten auf, denken an, sprechen über. После них Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Я жду тебя."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Мы говорим о фильме."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "darauf, wovon: закріплюємо",
+      "points": [
+        {
+          "title": "darauf і worauf",
+          "text": "Про річ питаємо wo + прийменник: Worauf wartest du? Замінюємо річ da + прийменник: Ich warte darauf. Перед голосною додається r: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "Про що ви говорите?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Мене це злить."
+            }
+          ]
+        },
+        {
+          "title": "Дієслово + прийменник",
+          "text": "Деякі дієслова йдуть зі своїм прийменником, його вчимо разом: warten auf, denken an, sprechen über. Після них Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Я чекаю на тебе."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Ми говоримо про фільм."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "darauf, wovon: practice",
+      "points": [
+        {
+          "title": "darauf and worauf",
+          "text": "Ask about a thing with wo + preposition: Worauf wartest du? Replace the thing with da + preposition: Ich warte darauf. Before a vowel add r: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "What are you talking about?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "That annoys me."
+            }
+          ]
+        },
+        {
+          "title": "Verb + preposition",
+          "text": "Some verbs come with their own preposition, learn them together: warten auf, denken an, sprechen über. They take the accusative.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "I’m waiting for you."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "We’re talking about the film."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "darauf, wovon: utrwalamy",
+      "points": [
+        {
+          "title": "darauf i worauf",
+          "text": "O rzecz pytamy wo + przyimek: Worauf wartest du? Rzecz zastępujemy da + przyimek: Ich warte darauf. Przed samogłoską dochodzi r: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "O czym rozmawiacie?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Złości mnie to."
+            }
+          ]
+        },
+        {
+          "title": "Czasownik + przyimek",
+          "text": "Niektóre czasowniki mają swój przyimek, uczymy się ich razem: warten auf, denken an, sprechen über. Po nich Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Czekam na ciebie."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Rozmawiamy o filmie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "darauf, wovon: práctica",
+      "points": [
+        {
+          "title": "darauf y worauf",
+          "text": "Para preguntar por una cosa: wo + preposición: Worauf wartest du? Para sustituirla: da + preposición: Ich warte darauf. Ante vocal se añade r: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "¿De qué habláis?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Eso me molesta."
+            }
+          ]
+        },
+        {
+          "title": "Verbo + preposición",
+          "text": "Algunos verbos llevan su preposición, se aprenden juntos: warten auf, denken an, sprechen über. Van con acusativo.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Te espero."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Hablamos de la película."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "darauf, wovon : entraînement",
+      "points": [
+        {
+          "title": "darauf et worauf",
+          "text": "Pour une chose on demande wo + préposition : Worauf wartest du ? On la remplace par da + préposition : Ich warte darauf. Devant une voyelle, on ajoute r : wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "De quoi parlez-vous ?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Ça m’énerve."
+            }
+          ]
+        },
+        {
+          "title": "Verbe + préposition",
+          "text": "Certains verbes ont leur préposition, on les apprend ensemble : warten auf, denken an, sprechen über. Suivis de l’accusatif.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Je t’attends."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Nous parlons du film."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "darauf, wovon: pekiştirme",
+      "points": [
+        {
+          "title": "darauf ve worauf",
+          "text": "Bir şeyi sormak için wo + edat: Worauf wartest du? Yerine koymak için da + edat: Ich warte darauf. Ünlüden önce r eklenir: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "Ne hakkında konuşuyorsunuz?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Buna sinirleniyorum."
+            }
+          ]
+        },
+        {
+          "title": "Fiil + edat",
+          "text": "Bazı fiillerin kendi edatı var, birlikte öğrenilir: warten auf, denken an, sprechen über. Ardından Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Seni bekliyorum."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Film hakkında konuşuyoruz."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "darauf, wovon: exersăm",
+      "points": [
+        {
+          "title": "darauf și worauf",
+          "text": "Despre un lucru întrebi cu wo + prepoziție: Worauf wartest du? Îl înlocuiești cu da + prepoziție: Ich warte darauf. Înaintea unei vocale apare r: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "Despre ce vorbiți?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Mă enervează asta."
+            }
+          ]
+        },
+        {
+          "title": "Verb + prepoziție",
+          "text": "Unele verbe au prepoziția lor, se învață împreună: warten auf, denken an, sprechen über. Sunt urmate de acuzativ.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Te aștept."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Vorbim despre film."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "darauf, wovon: mustahkamlash",
+      "points": [
+        {
+          "title": "darauf va worauf",
+          "text": "Narsa haqida wo + ko'makchi bilan so'raladi: Worauf wartest du? Narsani da + ko'makchi bilan almashtiramiz: Ich warte darauf. Unlidan oldin r qo'shiladi: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "Nima haqida gaplashyapsizlar?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Bu meni jahlimni chiqaradi."
+            }
+          ]
+        },
+        {
+          "title": "Fe'l + ko'makchi",
+          "text": "Ba'zi fe'llarning o'z ko'makchisi bor, birga o'rganiladi: warten auf, denken an, sprechen über. Ulardan keyin Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "Seni kutyapman."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "Biz film haqida gaplashyapmiz."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "darauf, wovon: अभ्यास",
+      "points": [
+        {
+          "title": "darauf और worauf",
+          "text": "चीज़ के बारे में wo + संबंधसूचक से पूछते हैं: Worauf wartest du? चीज़ की जगह da + संबंधसूचक: Ich warte darauf। स्वर से पहले r जुड़ता है: wo-r-über, da-r-an।",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "तुम सब किस बारे में बात कर रहे हो?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "मुझे इस पर गुस्सा आता है।"
+            }
+          ]
+        },
+        {
+          "title": "क्रिया + संबंधसूचक",
+          "text": "कुछ क्रियाओं का अपना संबंधसूचक होता है, साथ में सीखो: warten auf, denken an, sprechen über। इनके बाद Akkusativ।",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "मैं तुम्हारा इंतज़ार कर रहा हूँ।"
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "हम फ़िल्म के बारे में बात कर रहे हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "darauf وwovon: تثبيت",
+      "points": [
+        {
+          "title": "darauf وworauf",
+          "text": "نسأل عن الشيء بـ wo + حرف الجر: Worauf wartest du؟ ونستبدل الشيء بـ da + حرف الجر: Ich warte darauf. وقبل الحرف الصوتي تضاف r: wo-r-über، da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "عمّ تتحدثون؟"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "هذا يزعجني."
+            }
+          ]
+        },
+        {
+          "title": "فعل + حرف جر",
+          "text": "بعض الأفعال لها حرف جر خاص يُحفظ معها: warten auf، denken an، sprechen über. وبعدها حالة المفعول.",
+          "examples": [
+            {
+              "de": "Ich warte auf dich.",
+              "tr": "أنتظرك."
+            },
+            {
+              "de": "Wir sprechen über den Film.",
+              "tr": "نتحدث عن الفيلم."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "action-eleven": {
+    "ru": {
+      "title": "Финальный микс",
+      "points": [
+        {
+          "title": "mir, dir, ihm, ihr",
+          "text": "Кому: mir (мне), dir (тебе), ihm (ему), ihr (ей), uns (нам), euch (вам), ihnen (им), Ihnen (Вам).",
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "Ты можешь мне помочь?"
+            }
+          ]
+        },
+        {
+          "title": "Wohin? или Wo?",
+          "text": "in, an, auf, hinter, neben и другие: если движение «куда?», то Akkusativ (auf den Tisch). Если место «где?», то Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Я ставлю вазу на стол."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Ваза стоит на столе."
+            }
+          ]
+        },
+        {
+          "title": "darauf и worauf",
+          "text": "Про вещь спрашиваем wo + предлог: Worauf wartest du? Заменяем вещь da + предлог: Ich warte darauf. Перед гласной добавляется r: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "О чём вы говорите?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Меня это злит."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Фінальний мікс",
+      "points": [
+        {
+          "title": "mir, dir, ihm, ihr",
+          "text": "Кому: mir (мені), dir (тобі), ihm (йому), ihr (їй), uns (нам), euch (вам), ihnen (їм), Ihnen (Вам).",
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "Ти можеш мені допомогти?"
+            }
+          ]
+        },
+        {
+          "title": "Wohin? чи Wo?",
+          "text": "in, an, auf, hinter, neben та інші: якщо рух «куди?», то Akkusativ (auf den Tisch). Якщо місце «де?», то Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Я ставлю вазу на стіл."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Ваза стоїть на столі."
+            }
+          ]
+        },
+        {
+          "title": "darauf і worauf",
+          "text": "Про річ питаємо wo + прийменник: Worauf wartest du? Замінюємо річ da + прийменник: Ich warte darauf. Перед голосною додається r: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "Про що ви говорите?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Мене це злить."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final mix",
+      "points": [
+        {
+          "title": "mir, dir, ihm, ihr",
+          "text": "To whom: mir (me), dir (you), ihm (him), ihr (her), uns (us), euch (you all), ihnen (them), Ihnen (you, polite).",
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "Can you help me?"
+            }
+          ]
+        },
+        {
+          "title": "Wohin? or Wo?",
+          "text": "in, an, auf, hinter, neben and others: movement \"where to?\" takes the accusative (auf den Tisch). Location \"where?\" takes the dative (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "I put the vase on the table."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "The vase is on the table."
+            }
+          ]
+        },
+        {
+          "title": "darauf and worauf",
+          "text": "Ask about a thing with wo + preposition: Worauf wartest du? Replace the thing with da + preposition: Ich warte darauf. Before a vowel add r: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "What are you talking about?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "That annoys me."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Finałowy miks",
+      "points": [
+        {
+          "title": "mir, dir, ihm, ihr",
+          "text": "Komu: mir (mi), dir (ci), ihm (mu), ihr (jej), uns (nam), euch (wam), ihnen (im), Ihnen (Panu/Pani).",
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "Możesz mi pomóc?"
+            }
+          ]
+        },
+        {
+          "title": "Wohin? czy Wo?",
+          "text": "in, an, auf, hinter, neben i inne: ruch „dokąd?” to Akkusativ (auf den Tisch). Miejsce „gdzie?” to Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Stawiam wazon na stół."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Wazon stoi na stole."
+            }
+          ]
+        },
+        {
+          "title": "darauf i worauf",
+          "text": "O rzecz pytamy wo + przyimek: Worauf wartest du? Rzecz zastępujemy da + przyimek: Ich warte darauf. Przed samogłoską dochodzi r: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "O czym rozmawiacie?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Złości mnie to."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Mezcla final",
+      "points": [
+        {
+          "title": "mir, dir, ihm, ihr",
+          "text": "A quién: mir (me), dir (te), ihm (le, a él), ihr (le, a ella), uns (nos), euch (os), ihnen (les), Ihnen (le, usted).",
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "¿Me puedes ayudar?"
+            }
+          ]
+        },
+        {
+          "title": "¿Wohin? o Wo?",
+          "text": "in, an, auf, hinter, neben y otras: movimiento \"¿adónde?\" lleva acusativo (auf den Tisch). Lugar \"¿dónde?\" lleva dativo (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Pongo el jarrón en la mesa."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "El jarrón está en la mesa."
+            }
+          ]
+        },
+        {
+          "title": "darauf y worauf",
+          "text": "Para preguntar por una cosa: wo + preposición: Worauf wartest du? Para sustituirla: da + preposición: Ich warte darauf. Ante vocal se añade r: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "¿De qué habláis?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Eso me molesta."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Mélange final",
+      "points": [
+        {
+          "title": "mir, dir, ihm, ihr",
+          "text": "À qui : mir (me), dir (te), ihm (lui, à lui), ihr (lui, à elle), uns (nous), euch (vous), ihnen (leur), Ihnen (vous, poli).",
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "Tu peux m’aider ?"
+            }
+          ]
+        },
+        {
+          "title": "Wohin ? ou Wo ?",
+          "text": "in, an, auf, hinter, neben et d’autres : un mouvement « vers où ? » prend l’accusatif (auf den Tisch). Un lieu « où ? » prend le datif (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Je pose le vase sur la table."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Le vase est sur la table."
+            }
+          ]
+        },
+        {
+          "title": "darauf et worauf",
+          "text": "Pour une chose on demande wo + préposition : Worauf wartest du ? On la remplace par da + préposition : Ich warte darauf. Devant une voyelle, on ajoute r : wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "De quoi parlez-vous ?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Ça m’énerve."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Final karışım",
+      "points": [
+        {
+          "title": "mir, dir, ihm, ihr",
+          "text": "Kime: mir (bana), dir (sana), ihm (ona, erkek), ihr (ona, kadın), uns (bize), euch (size), ihnen (onlara), Ihnen (size, kibar).",
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "Bana yardım edebilir misin?"
+            }
+          ]
+        },
+        {
+          "title": "Wohin? mi, Wo? mu",
+          "text": "in, an, auf, hinter, neben ve diğerleri: \"nereye?\" hareketi Akkusativ (auf den Tisch), \"nerede?\" yeri Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Vazoyu masaya koyuyorum."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Vazo masada duruyor."
+            }
+          ]
+        },
+        {
+          "title": "darauf ve worauf",
+          "text": "Bir şeyi sormak için wo + edat: Worauf wartest du? Yerine koymak için da + edat: Ich warte darauf. Ünlüden önce r eklenir: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "Ne hakkında konuşuyorsunuz?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Buna sinirleniyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Mix final",
+      "points": [
+        {
+          "title": "mir, dir, ihm, ihr",
+          "text": "Cui: mir (mie), dir (ție), ihm (lui), ihr (ei), uns (nouă), euch (vouă), ihnen (lor), Ihnen (dumneavoastră).",
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "Mă poți ajuta?"
+            }
+          ]
+        },
+        {
+          "title": "Wohin? sau Wo?",
+          "text": "in, an, auf, hinter, neben și altele: mișcarea „încotro?” cere acuzativ (auf den Tisch). Locul „unde?” cere dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Pun vaza pe masă."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Vaza stă pe masă."
+            }
+          ]
+        },
+        {
+          "title": "darauf și worauf",
+          "text": "Despre un lucru întrebi cu wo + prepoziție: Worauf wartest du? Îl înlocuiești cu da + prepoziție: Ich warte darauf. Înaintea unei vocale apare r: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "Despre ce vorbiți?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Mă enervează asta."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Yakuniy aralash",
+      "points": [
+        {
+          "title": "mir, dir, ihm, ihr",
+          "text": "Kimga: mir (menga), dir (senga), ihm (unga, erkak), ihr (unga, ayol), uns (bizga), euch (sizlarga), ihnen (ularga), Ihnen (Sizga).",
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "Menga yordam bera olasanmi?"
+            }
+          ]
+        },
+        {
+          "title": "Wohin? yoki Wo?",
+          "text": "in, an, auf, hinter, neben va boshqalar: \"qayerga?\" harakat Akkusativ (auf den Tisch), \"qayerda?\" joy Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Vazani stolga qo'yaman."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Vaza stol ustida turibdi."
+            }
+          ]
+        },
+        {
+          "title": "darauf va worauf",
+          "text": "Narsa haqida wo + ko'makchi bilan so'raladi: Worauf wartest du? Narsani da + ko'makchi bilan almashtiramiz: Ich warte darauf. Unlidan oldin r qo'shiladi: wo-r-über, da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "Nima haqida gaplashyapsizlar?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "Bu meni jahlimni chiqaradi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अंतिम मिश्रण",
+      "points": [
+        {
+          "title": "mir, dir, ihm, ihr",
+          "text": "किसे: mir (मुझे), dir (तुम्हें), ihm (उसे, पु), ihr (उसे, स्त्री), uns (हमें), euch (तुम सबको), ihnen (उन्हें), Ihnen (आपको)।",
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "क्या तुम मेरी मदद कर सकते हो?"
+            }
+          ]
+        },
+        {
+          "title": "Wohin? या Wo?",
+          "text": "in, an, auf, hinter, neben आदि: \"किधर?\" गति हो तो Akkusativ (auf den Tisch), \"कहाँ?\" जगह हो तो Dativ (auf dem Tisch)।",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "मैं फूलदान मेज़ पर रखता हूँ।"
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "फूलदान मेज़ पर रखा है।"
+            }
+          ]
+        },
+        {
+          "title": "darauf और worauf",
+          "text": "चीज़ के बारे में wo + संबंधसूचक से पूछते हैं: Worauf wartest du? चीज़ की जगह da + संबंधसूचक: Ich warte darauf। स्वर से पहले r जुड़ता है: wo-r-über, da-r-an।",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "तुम सब किस बारे में बात कर रहे हो?"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "मुझे इस पर गुस्सा आता है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المزيج النهائي",
+      "points": [
+        {
+          "title": "mir وdir وihm وihr",
+          "text": "لمن: mir (لي)، dir (لك)، ihm (له)، ihr (لها)، uns (لنا)، euch (لكم)، ihnen (لهم)، Ihnen (لحضرتك).",
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "هل يمكنك مساعدتي؟"
+            }
+          ]
+        },
+        {
+          "title": "Wohin؟ أم Wo؟",
+          "text": "in وan وauf وhinter وneben وغيرها: الحركة \"إلى أين؟\" تأخذ المفعول (auf den Tisch)، والمكان \"أين؟\" يأخذ الجر (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "أضع المزهرية على الطاولة."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "المزهرية على الطاولة."
+            }
+          ]
+        },
+        {
+          "title": "darauf وworauf",
+          "text": "نسأل عن الشيء بـ wo + حرف الجر: Worauf wartest du؟ ونستبدل الشيء بـ da + حرف الجر: Ich warte darauf. وقبل الحرف الصوتي تضاف r: wo-r-über، da-r-an.",
+          "examples": [
+            {
+              "de": "Worüber sprecht ihr?",
+              "tr": "عمّ تتحدثون؟"
+            },
+            {
+              "de": "Ich ärgere mich darüber.",
+              "tr": "هذا يزعجني."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,2442 @@
+{
+  "wish-island-one": {
+    "ru": {
+      "title": "Если бы у меня было...",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Нереальное условие: в части с wenn hätte или wäre в конце, во второй части würde + инфинитив в конце. Это мечта, а не реальность.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Если бы у меня было время, я бы путешествовал."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Если бы я был богат, я бы купил дом."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Якби в мене було...",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Нереальна умова: у частині з wenn hätte або wäre в кінці, у другій частині würde + інфінітив у кінці. Це мрія, а не реальність.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Якби в мене був час, я б подорожував."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Якби я був багатий, я б купив будинок."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "If I had...",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Unreal condition: in the wenn part hätte or wäre at the end, in the other part würde + infinitive at the end. It’s a dream, not reality.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "If I had time, I would travel."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "If I were rich, I would buy a house."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Gdybym miał...",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Warunek nierzeczywisty: w części z wenn hätte albo wäre na końcu, w drugiej würde + bezokolicznik na końcu. To marzenie, nie rzeczywistość.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Gdybym miał czas, podróżowałbym."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Gdybym był bogaty, kupiłbym dom."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Si tuviera...",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Condición irreal: en la parte con wenn, hätte o wäre al final; en la otra, würde + infinitivo al final. Es un sueño, no la realidad.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Si tuviera tiempo, viajaría."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Si fuera rico, compraría una casa."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Si j’avais...",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Condition irréelle : dans la partie avec wenn, hätte ou wäre à la fin ; dans l’autre, würde + infinitif à la fin. C’est un rêve, pas la réalité.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Si j’avais le temps, je voyagerais."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Si j’étais riche, j’achèterais une maison."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Olsaydı...",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Gerçek dışı koşul: wenn kısmında hätte ya da wäre sonda, diğer kısımda würde + mastar sonda. Gerçek değil, hayal.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Vaktim olsaydı seyahat ederdim."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Zengin olsaydım bir ev alırdım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Dacă aș avea...",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Condiție ireală: în partea cu wenn, hätte sau wäre la final; în cealaltă, würde + infinitiv la final. E un vis, nu realitate.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Dacă aș avea timp, aș călători."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Dacă aș fi bogat, aș cumpăra o casă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Bo'lganida...",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Noreal shart: wenn qismida hätte yoki wäre oxirida, ikkinchi qismda würde + infinitiv oxirida. Bu orzu, haqiqat emas.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Vaqtim bo'lganida sayohat qilardim."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Boy bo'lganimda uy sotib olardim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अगर मेरे पास होता...",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "अवास्तविक शर्त: wenn वाले हिस्से में hätte या wäre अंत में, दूसरे हिस्से में würde + इन्फ़िनिटिव अंत में। यह सपना है, सच नहीं।",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "अगर मेरे पास समय होता, तो मैं घूमता।"
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "अगर मैं अमीर होता, तो एक घर खरीदता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "لو كان عندي...",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "الشرط غير الواقعي: في جزء wenn تأتي hätte أو wäre في الآخر، وفي الجزء الآخر würde + المصدر في الآخر. إنه حلم لا واقع.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "لو كان عندي وقت لسافرت."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "لو كنت غنياً لاشتريت بيتاً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "wish-island-two": {
+    "ru": {
+      "title": "Если бы я был...",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Нереальное условие: в части с wenn hätte или wäre в конце, во второй части würde + инфинитив в конце. Это мечта, а не реальность.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Если бы у меня было время, я бы путешествовал."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Если бы я был богат, я бы купил дом."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Якби я був...",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Нереальна умова: у частині з wenn hätte або wäre в кінці, у другій частині würde + інфінітив у кінці. Це мрія, а не реальність.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Якби в мене був час, я б подорожував."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Якби я був багатий, я б купив будинок."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "If I were...",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Unreal condition: in the wenn part hätte or wäre at the end, in the other part würde + infinitive at the end. It’s a dream, not reality.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "If I had time, I would travel."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "If I were rich, I would buy a house."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Gdybym był...",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Warunek nierzeczywisty: w części z wenn hätte albo wäre na końcu, w drugiej würde + bezokolicznik na końcu. To marzenie, nie rzeczywistość.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Gdybym miał czas, podróżowałbym."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Gdybym był bogaty, kupiłbym dom."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Si fuera...",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Condición irreal: en la parte con wenn, hätte o wäre al final; en la otra, würde + infinitivo al final. Es un sueño, no la realidad.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Si tuviera tiempo, viajaría."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Si fuera rico, compraría una casa."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Si j’étais...",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Condition irréelle : dans la partie avec wenn, hätte ou wäre à la fin ; dans l’autre, würde + infinitif à la fin. C’est un rêve, pas la réalité.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Si j’avais le temps, je voyagerais."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Si j’étais riche, j’achèterais une maison."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Olsaydım...",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Gerçek dışı koşul: wenn kısmında hätte ya da wäre sonda, diğer kısımda würde + mastar sonda. Gerçek değil, hayal.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Vaktim olsaydı seyahat ederdim."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Zengin olsaydım bir ev alırdım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Dacă aș fi...",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Condiție ireală: în partea cu wenn, hätte sau wäre la final; în cealaltă, würde + infinitiv la final. E un vis, nu realitate.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Dacă aș avea timp, aș călători."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Dacă aș fi bogat, aș cumpăra o casă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Bo'lganimda...",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Noreal shart: wenn qismida hätte yoki wäre oxirida, ikkinchi qismda würde + infinitiv oxirida. Bu orzu, haqiqat emas.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Vaqtim bo'lganida sayohat qilardim."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Boy bo'lganimda uy sotib olardim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अगर मैं होता...",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "अवास्तविक शर्त: wenn वाले हिस्से में hätte या wäre अंत में, दूसरे हिस्से में würde + इन्फ़िनिटिव अंत में। यह सपना है, सच नहीं।",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "अगर मेरे पास समय होता, तो मैं घूमता।"
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "अगर मैं अमीर होता, तो एक घर खरीदता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "لو كنت...",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "الشرط غير الواقعي: في جزء wenn تأتي hätte أو wäre في الآخر، وفي الجزء الآخر würde + المصدر في الآخر. إنه حلم لا واقع.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "لو كان عندي وقت لسافرت."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "لو كنت غنياً لاشتريت بيتاً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "wish-island-three": {
+    "ru": {
+      "title": "Я бы..., если бы...",
+      "points": [
+        {
+          "title": "könnte и порядок частей",
+          "text": "könnte значит «мог бы». Главную часть можно поставить первой: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Если бы у меня была машина, я мог бы поехать к бабушке."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Я б..., якби...",
+      "points": [
+        {
+          "title": "könnte і порядок частин",
+          "text": "könnte означає «міг би». Головну частину можна поставити першою: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Якби в мене була машина, я міг би поїхати до бабусі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "I would... if...",
+      "points": [
+        {
+          "title": "könnte and the order of parts",
+          "text": "könnte means \"could\". The main part can come first: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "If I had a car, I could drive to grandma’s."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Zrobiłbym..., gdyby...",
+      "points": [
+        {
+          "title": "könnte i kolejność części",
+          "text": "könnte znaczy „mógłbym”. Część główną można postawić na początku: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Gdybym miał samochód, mógłbym pojechać do babci."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Yo..., si...",
+      "points": [
+        {
+          "title": "könnte y el orden de las partes",
+          "text": "könnte significa \"podría\". La parte principal puede ir primero: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Si tuviera coche, podría ir a casa de la abuela."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Je ..., si...",
+      "points": [
+        {
+          "title": "könnte et l’ordre des parties",
+          "text": "könnte veut dire « pourrait ». La principale peut venir en premier : Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Si j’avais une voiture, je pourrais aller chez mamie."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "...rdım, eğer...",
+      "points": [
+        {
+          "title": "könnte ve kısımların sırası",
+          "text": "könnte \"-ebilirdi\" demektir. Ana kısım başa da gelebilir: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Arabam olsaydı büyükanneme gidebilirdim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Aș..., dacă...",
+      "points": [
+        {
+          "title": "könnte și ordinea părților",
+          "text": "könnte înseamnă „aș putea”. Partea principală poate veni prima: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Dacă aș avea mașină, aș putea merge la bunica."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "...ardim, agar...",
+      "points": [
+        {
+          "title": "könnte va qismlar tartibi",
+          "text": "könnte \"qila olardi\" degani. Bosh qismni boshida qo'yish mumkin: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Mashinam bo'lganida buvimnikiga bora olardim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "मैं ... अगर...",
+      "points": [
+        {
+          "title": "könnte और हिस्सों का क्रम",
+          "text": "könnte मतलब \"सकता था\"। मुख्य हिस्सा पहले भी आ सकता है: Ich würde reisen, wenn ich Zeit hätte।",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "अगर मेरे पास गाड़ी होती, तो मैं दादी के पास जा सकता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "لكنتُ ... لو...",
+      "points": [
+        {
+          "title": "könnte وترتيب الأجزاء",
+          "text": "könnte تعني \"كان يمكن\". ويمكن تقديم الجزء الرئيسي: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "لو كانت عندي سيارة لاستطعت زيارة جدتي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "wish-island-four": {
+    "ru": {
+      "title": "Я мог бы: könnte",
+      "points": [
+        {
+          "title": "könnte и порядок частей",
+          "text": "könnte значит «мог бы». Главную часть можно поставить первой: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Если бы у меня была машина, я мог бы поехать к бабушке."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Я міг би: könnte",
+      "points": [
+        {
+          "title": "könnte і порядок частин",
+          "text": "könnte означає «міг би». Головну частину можна поставити першою: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Якби в мене була машина, я міг би поїхати до бабусі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "I could: könnte",
+      "points": [
+        {
+          "title": "könnte and the order of parts",
+          "text": "könnte means \"could\". The main part can come first: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "If I had a car, I could drive to grandma’s."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Mógłbym: könnte",
+      "points": [
+        {
+          "title": "könnte i kolejność części",
+          "text": "könnte znaczy „mógłbym”. Część główną można postawić na początku: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Gdybym miał samochód, mógłbym pojechać do babci."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Podría: könnte",
+      "points": [
+        {
+          "title": "könnte y el orden de las partes",
+          "text": "könnte significa \"podría\". La parte principal puede ir primero: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Si tuviera coche, podría ir a casa de la abuela."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Je pourrais : könnte",
+      "points": [
+        {
+          "title": "könnte et l’ordre des parties",
+          "text": "könnte veut dire « pourrait ». La principale peut venir en premier : Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Si j’avais une voiture, je pourrais aller chez mamie."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yapabilirdim: könnte",
+      "points": [
+        {
+          "title": "könnte ve kısımların sırası",
+          "text": "könnte \"-ebilirdi\" demektir. Ana kısım başa da gelebilir: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Arabam olsaydı büyükanneme gidebilirdim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Aș putea: könnte",
+      "points": [
+        {
+          "title": "könnte și ordinea părților",
+          "text": "könnte înseamnă „aș putea”. Partea principală poate veni prima: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Dacă aș avea mașină, aș putea merge la bunica."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qila olardim: könnte",
+      "points": [
+        {
+          "title": "könnte va qismlar tartibi",
+          "text": "könnte \"qila olardi\" degani. Bosh qismni boshida qo'yish mumkin: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Mashinam bo'lganida buvimnikiga bora olardim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "मैं सकता था: könnte",
+      "points": [
+        {
+          "title": "könnte और हिस्सों का क्रम",
+          "text": "könnte मतलब \"सकता था\"। मुख्य हिस्सा पहले भी आ सकता है: Ich würde reisen, wenn ich Zeit hätte।",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "अगर मेरे पास गाड़ी होती, तो मैं दादी के पास जा सकता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "كان يمكنني: könnte",
+      "points": [
+        {
+          "title": "könnte وترتيب الأجزاء",
+          "text": "könnte تعني \"كان يمكن\". ويمكن تقديم الجزء الرئيسي: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "لو كانت عندي سيارة لاستطعت زيارة جدتي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "wish-island-five": {
+    "ru": {
+      "title": "Жаль, что: Ich wünschte",
+      "points": [
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte значит «жаль, что нет; хотел бы я». После запятой обычный порядок слов и hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "Жаль, что у меня мало времени."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Шкода, що: Ich wünschte",
+      "points": [
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte означає «шкода, що немає; хотів би я». Після коми звичайний порядок слів і hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "Шкода, що в мене мало часу."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "I wish: Ich wünschte",
+      "points": [
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte means \"I wish\". After the comma, normal word order with hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "I wish I had more time."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Szkoda, że: Ich wünschte",
+      "points": [
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte znaczy „szkoda, że nie; chciałbym”. Po przecinku zwykły szyk i hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "Szkoda, że nie mam więcej czasu."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Ojalá: Ich wünschte",
+      "points": [
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte significa \"ojalá\". Tras la coma, orden normal con hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "Ojalá tuviera más tiempo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "J’aimerais : Ich wünschte",
+      "points": [
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte veut dire « j’aimerais tant que ». Après la virgule, ordre normal avec hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "J’aimerais avoir plus de temps."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Keşke: Ich wünschte",
+      "points": [
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte \"keşke\" demektir. Virgülden sonra normal sıra ve hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "Keşke daha çok vaktim olsa."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Păcat că: Ich wünschte",
+      "points": [
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte înseamnă „aș vrea, păcat că nu”. După virgulă, ordine normală și hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "Aș vrea să am mai mult timp."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qaniydi: Ich wünschte",
+      "points": [
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte \"qaniydi\" degani. Verguldan keyin oddiy tartib va hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "Qaniydi ko'proq vaqtim bo'lsa."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "काश: Ich wünschte",
+      "points": [
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte मतलब \"काश\"। कॉमा के बाद सामान्य क्रम और hätte, wäre, könnte।",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "काश मेरे पास और समय होता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ليت: Ich wünschte",
+      "points": [
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte تعني \"ليت\". وبعد الفاصلة ترتيب عادي مع hätte وwäre وkönnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "ليت عندي وقتاً أكثر."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "wish-island-six": {
+    "ru": {
+      "title": "Реально или мечта?",
+      "points": [
+        {
+          "title": "Реально или мечта",
+          "text": "habe, ist, kann значит «возможно, может случиться». hätte, wäre, könnte, würde значит «мечта, на самом деле нет».",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "Если завтра будет дождь, я поеду на автобусе."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Реально чи мрія?",
+      "points": [
+        {
+          "title": "Реально чи мрія",
+          "text": "habe, ist, kann означає «можливо, може статися». hätte, wäre, könnte, würde означає «мрія, насправді ні».",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "Якщо завтра буде дощ, я поїду автобусом."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Real or a dream?",
+      "points": [
+        {
+          "title": "Real or a dream",
+          "text": "habe, ist, kann: possible, it may happen. hätte, wäre, könnte, würde: a dream, not actually true.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "If it rains tomorrow, I’ll take the bus."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Realnie czy marzenie?",
+      "points": [
+        {
+          "title": "Realnie czy marzenie",
+          "text": "habe, ist, kann: możliwe, może się zdarzyć. hätte, wäre, könnte, würde: marzenie, naprawdę nie.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "Jeśli jutro będzie padać, pojadę autobusem."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿Real o sueño?",
+      "points": [
+        {
+          "title": "Real o sueño",
+          "text": "habe, ist, kann: posible, puede pasar. hätte, wäre, könnte, würde: un sueño, en realidad no.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "Si mañana llueve, cojo el autobús."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Réel ou rêve ?",
+      "points": [
+        {
+          "title": "Réel ou rêve",
+          "text": "habe, ist, kann : possible, ça peut arriver. hätte, wäre, könnte, würde : un rêve, ce n’est pas le cas.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "S’il pleut demain, je prendrai le bus."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Gerçek mi, hayal mi?",
+      "points": [
+        {
+          "title": "Gerçek mi, hayal mi",
+          "text": "habe, ist, kann: mümkün, olabilir. hätte, wäre, könnte, würde: hayal, gerçekte değil.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "Yarın yağmur yağarsa otobüse binerim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Real sau vis?",
+      "points": [
+        {
+          "title": "Real sau vis",
+          "text": "habe, ist, kann: posibil, se poate întâmpla. hätte, wäre, könnte, würde: un vis, de fapt nu.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "Dacă mâine plouă, iau autobuzul."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Haqiqatmi yoki orzu?",
+      "points": [
+        {
+          "title": "Haqiqat yoki orzu",
+          "text": "habe, ist, kann: mumkin, bo'lishi mumkin. hätte, wäre, könnte, würde: orzu, aslida yo'q.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "Ertaga yomg'ir yog'sa, avtobusga minaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "वास्तविक या सपना?",
+      "points": [
+        {
+          "title": "वास्तविक या सपना",
+          "text": "habe, ist, kann: संभव, हो सकता है। hätte, wäre, könnte, würde: सपना, असल में नहीं।",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "अगर कल बारिश हुई, तो मैं बस लूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "واقع أم حلم؟",
+      "points": [
+        {
+          "title": "واقع أم حلم",
+          "text": "habe وist وkann: ممكن وقد يحدث. وhätte وwäre وkönnte وwürde: حلم، وليس واقعاً.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "إذا أمطرت غداً سآخذ الحافلة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "wish-island-seven": {
+    "ru": {
+      "title": "Практика: мечты о путешествии",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Нереальное условие: в части с wenn hätte или wäre в конце, во второй части würde + инфинитив в конце. Это мечта, а не реальность.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Если бы у меня было время, я бы путешествовал."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Если бы я был богат, я бы купил дом."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte значит «жаль, что нет; хотел бы я». После запятой обычный порядок слов и hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "Жаль, что у меня мало времени."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: мрії про подорож",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Нереальна умова: у частині з wenn hätte або wäre в кінці, у другій частині würde + інфінітив у кінці. Це мрія, а не реальність.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Якби в мене був час, я б подорожував."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Якби я був багатий, я б купив будинок."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte означає «шкода, що немає; хотів би я». Після коми звичайний порядок слів і hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "Шкода, що в мене мало часу."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: travel dreams",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Unreal condition: in the wenn part hätte or wäre at the end, in the other part würde + infinitive at the end. It’s a dream, not reality.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "If I had time, I would travel."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "If I were rich, I would buy a house."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte means \"I wish\". After the comma, normal word order with hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "I wish I had more time."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: marzenia o podróży",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Warunek nierzeczywisty: w części z wenn hätte albo wäre na końcu, w drugiej würde + bezokolicznik na końcu. To marzenie, nie rzeczywistość.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Gdybym miał czas, podróżowałbym."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Gdybym był bogaty, kupiłbym dom."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte znaczy „szkoda, że nie; chciałbym”. Po przecinku zwykły szyk i hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "Szkoda, że nie mam więcej czasu."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: sueños de viaje",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Condición irreal: en la parte con wenn, hätte o wäre al final; en la otra, würde + infinitivo al final. Es un sueño, no la realidad.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Si tuviera tiempo, viajaría."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Si fuera rico, compraría una casa."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte significa \"ojalá\". Tras la coma, orden normal con hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "Ojalá tuviera más tiempo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : rêves de voyage",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Condition irréelle : dans la partie avec wenn, hätte ou wäre à la fin ; dans l’autre, würde + infinitif à la fin. C’est un rêve, pas la réalité.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Si j’avais le temps, je voyagerais."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Si j’étais riche, j’achèterais une maison."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte veut dire « j’aimerais tant que ». Après la virgule, ordre normal avec hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "J’aimerais avoir plus de temps."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: seyahat hayalleri",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Gerçek dışı koşul: wenn kısmında hätte ya da wäre sonda, diğer kısımda würde + mastar sonda. Gerçek değil, hayal.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Vaktim olsaydı seyahat ederdim."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Zengin olsaydım bir ev alırdım."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte \"keşke\" demektir. Virgülden sonra normal sıra ve hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "Keşke daha çok vaktim olsa."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: vise de călătorie",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Condiție ireală: în partea cu wenn, hätte sau wäre la final; în cealaltă, würde + infinitiv la final. E un vis, nu realitate.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Dacă aș avea timp, aș călători."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Dacă aș fi bogat, aș cumpăra o casă."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte înseamnă „aș vrea, păcat că nu”. După virgulă, ordine normală și hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "Aș vrea să am mai mult timp."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: sayohat orzulari",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Noreal shart: wenn qismida hätte yoki wäre oxirida, ikkinchi qismda würde + infinitiv oxirida. Bu orzu, haqiqat emas.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Vaqtim bo'lganida sayohat qilardim."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Boy bo'lganimda uy sotib olardim."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte \"qaniydi\" degani. Verguldan keyin oddiy tartib va hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "Qaniydi ko'proq vaqtim bo'lsa."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: यात्रा के सपने",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "अवास्तविक शर्त: wenn वाले हिस्से में hätte या wäre अंत में, दूसरे हिस्से में würde + इन्फ़िनिटिव अंत में। यह सपना है, सच नहीं।",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "अगर मेरे पास समय होता, तो मैं घूमता।"
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "अगर मैं अमीर होता, तो एक घर खरीदता।"
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte मतलब \"काश\"। कॉमा के बाद सामान्य क्रम और hätte, wäre, könnte।",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "काश मेरे पास और समय होता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: أحلام السفر",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "الشرط غير الواقعي: في جزء wenn تأتي hätte أو wäre في الآخر، وفي الجزء الآخر würde + المصدر في الآخر. إنه حلم لا واقع.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "لو كان عندي وقت لسافرت."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "لو كنت غنياً لاشتريت بيتاً."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte تعني \"ليت\". وبعد الفاصلة ترتيب عادي مع hätte وwäre وkönnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "ليت عندي وقتاً أكثر."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "wish-island-eight": {
+    "ru": {
+      "title": "Практика: совет другу",
+      "points": [
+        {
+          "title": "Совет через Konjunktiv II",
+          "text": "Совет: An deiner Stelle würde ich ... или Wenn ich du wäre, würde ich ... (на твоём месте я бы). Мягче: Du könntest ... (ты мог бы).",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mich mehr ausruhen.",
+              "tr": "На твоём месте я бы больше отдыхал."
+            }
+          ]
+        },
+        {
+          "title": "Реально или мечта",
+          "text": "habe, ist, kann значит «возможно, может случиться». hätte, wäre, könnte, würde значит «мечта, на самом деле нет».",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "Если завтра будет дождь, я поеду на автобусе."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: порада другові",
+      "points": [
+        {
+          "title": "Порада через Konjunktiv II",
+          "text": "Порада: An deiner Stelle würde ich ... або Wenn ich du wäre, würde ich ... (на твоєму місці я б). М’якше: Du könntest ... (ти міг би).",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mich mehr ausruhen.",
+              "tr": "На твоєму місці я б більше відпочивав."
+            }
+          ]
+        },
+        {
+          "title": "Реально чи мрія",
+          "text": "habe, ist, kann означає «можливо, може статися». hätte, wäre, könnte, würde означає «мрія, насправді ні».",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "Якщо завтра буде дощ, я поїду автобусом."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: advice to a friend",
+      "points": [
+        {
+          "title": "Advice with Konjunktiv II",
+          "text": "Advice: An deiner Stelle würde ich ... or Wenn ich du wäre, würde ich ... (if I were you, I’d). Softer: Du könntest ... (you could).",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mich mehr ausruhen.",
+              "tr": "If I were you, I’d rest more."
+            }
+          ]
+        },
+        {
+          "title": "Real or a dream",
+          "text": "habe, ist, kann: possible, it may happen. hätte, wäre, könnte, würde: a dream, not actually true.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "If it rains tomorrow, I’ll take the bus."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: rada dla przyjaciela",
+      "points": [
+        {
+          "title": "Rada przez Konjunktiv II",
+          "text": "Rada: An deiner Stelle würde ich ... albo Wenn ich du wäre, würde ich ... (na twoim miejscu bym). Łagodniej: Du könntest ... (mógłbyś).",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mich mehr ausruhen.",
+              "tr": "Na twoim miejscu więcej bym odpoczywał."
+            }
+          ]
+        },
+        {
+          "title": "Realnie czy marzenie",
+          "text": "habe, ist, kann: możliwe, może się zdarzyć. hätte, wäre, könnte, würde: marzenie, naprawdę nie.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "Jeśli jutro będzie padać, pojadę autobusem."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: consejo a un amigo",
+      "points": [
+        {
+          "title": "Consejo con Konjunktiv II",
+          "text": "Consejo: An deiner Stelle würde ich ... o Wenn ich du wäre, würde ich ... (yo en tu lugar). Más suave: Du könntest ... (podrías).",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mich mehr ausruhen.",
+              "tr": "Yo en tu lugar descansaría más."
+            }
+          ]
+        },
+        {
+          "title": "Real o sueño",
+          "text": "habe, ist, kann: posible, puede pasar. hätte, wäre, könnte, würde: un sueño, en realidad no.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "Si mañana llueve, cojo el autobús."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : conseil à un ami",
+      "points": [
+        {
+          "title": "Conseil avec le Konjunktiv II",
+          "text": "Conseil : An deiner Stelle würde ich ... ou Wenn ich du wäre, würde ich ... (à ta place, je). Plus doux : Du könntest ... (tu pourrais).",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mich mehr ausruhen.",
+              "tr": "À ta place, je me reposerais plus."
+            }
+          ]
+        },
+        {
+          "title": "Réel ou rêve",
+          "text": "habe, ist, kann : possible, ça peut arriver. hätte, wäre, könnte, würde : un rêve, ce n’est pas le cas.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "S’il pleut demain, je prendrai le bus."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: arkadaşa tavsiye",
+      "points": [
+        {
+          "title": "Konjunktiv II ile tavsiye",
+          "text": "Tavsiye: An deiner Stelle würde ich ... ya da Wenn ich du wäre, würde ich ... (senin yerinde olsam). Daha yumuşak: Du könntest ... (-ebilirsin).",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mich mehr ausruhen.",
+              "tr": "Senin yerinde olsam daha çok dinlenirdim."
+            }
+          ]
+        },
+        {
+          "title": "Gerçek mi, hayal mi",
+          "text": "habe, ist, kann: mümkün, olabilir. hätte, wäre, könnte, würde: hayal, gerçekte değil.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "Yarın yağmur yağarsa otobüse binerim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: sfat unui prieten",
+      "points": [
+        {
+          "title": "Sfat cu Konjunktiv II",
+          "text": "Sfat: An deiner Stelle würde ich ... sau Wenn ich du wäre, würde ich ... (în locul tău aș). Mai blând: Du könntest ... (ai putea).",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mich mehr ausruhen.",
+              "tr": "În locul tău m-aș odihni mai mult."
+            }
+          ]
+        },
+        {
+          "title": "Real sau vis",
+          "text": "habe, ist, kann: posibil, se poate întâmpla. hätte, wäre, könnte, würde: un vis, de fapt nu.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "Dacă mâine plouă, iau autobuzul."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: do'stga maslahat",
+      "points": [
+        {
+          "title": "Konjunktiv II bilan maslahat",
+          "text": "Maslahat: An deiner Stelle würde ich ... yoki Wenn ich du wäre, würde ich ... (sening o'rningda men). Yumshoqroq: Du könntest ... (qila olarding).",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mich mehr ausruhen.",
+              "tr": "Sening o'rningda ko'proq dam olardim."
+            }
+          ]
+        },
+        {
+          "title": "Haqiqat yoki orzu",
+          "text": "habe, ist, kann: mumkin, bo'lishi mumkin. hätte, wäre, könnte, würde: orzu, aslida yo'q.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "Ertaga yomg'ir yog'sa, avtobusga minaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: दोस्त को सलाह",
+      "points": [
+        {
+          "title": "Konjunktiv II से सलाह",
+          "text": "सलाह: An deiner Stelle würde ich ... या Wenn ich du wäre, würde ich ... (तुम्हारी जगह मैं)। नरमी से: Du könntest ... (तुम कर सकते हो)।",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mich mehr ausruhen.",
+              "tr": "तुम्हारी जगह मैं ज़्यादा आराम करता।"
+            }
+          ]
+        },
+        {
+          "title": "वास्तविक या सपना",
+          "text": "habe, ist, kann: संभव, हो सकता है। hätte, wäre, könnte, würde: सपना, असल में नहीं।",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "अगर कल बारिश हुई, तो मैं बस लूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: نصيحة لصديق",
+      "points": [
+        {
+          "title": "النصيحة بـ Konjunktiv II",
+          "text": "النصيحة: An deiner Stelle würde ich ... أو Wenn ich du wäre, würde ich ... (لو كنت مكانك). وبلطف أكثر: Du könntest ... (يمكنك).",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mich mehr ausruhen.",
+              "tr": "لو كنت مكانك لارتحت أكثر."
+            }
+          ]
+        },
+        {
+          "title": "واقع أم حلم",
+          "text": "habe وist وkann: ممكن وقد يحدث. وhätte وwäre وkönnte وwürde: حلم، وليس واقعاً.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "إذا أمطرت غداً سآخذ الحافلة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "wish-island-nine": {
+    "ru": {
+      "title": "Повторение: если бы",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Нереальное условие: в части с wenn hätte или wäre в конце, во второй части würde + инфинитив в конце. Это мечта, а не реальность.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Если бы у меня было время, я бы путешествовал."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Если бы я был богат, я бы купил дом."
+            }
+          ]
+        },
+        {
+          "title": "könnte и порядок частей",
+          "text": "könnte значит «мог бы». Главную часть можно поставить первой: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Если бы у меня была машина, я мог бы поехать к бабушке."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte значит «жаль, что нет; хотел бы я». После запятой обычный порядок слов и hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "Жаль, что у меня мало времени."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: якби",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Нереальна умова: у частині з wenn hätte або wäre в кінці, у другій частині würde + інфінітив у кінці. Це мрія, а не реальність.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Якби в мене був час, я б подорожував."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Якби я був багатий, я б купив будинок."
+            }
+          ]
+        },
+        {
+          "title": "könnte і порядок частин",
+          "text": "könnte означає «міг би». Головну частину можна поставити першою: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Якби в мене була машина, я міг би поїхати до бабусі."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte означає «шкода, що немає; хотів би я». Після коми звичайний порядок слів і hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "Шкода, що в мене мало часу."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: if",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Unreal condition: in the wenn part hätte or wäre at the end, in the other part würde + infinitive at the end. It’s a dream, not reality.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "If I had time, I would travel."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "If I were rich, I would buy a house."
+            }
+          ]
+        },
+        {
+          "title": "könnte and the order of parts",
+          "text": "könnte means \"could\". The main part can come first: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "If I had a car, I could drive to grandma’s."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte means \"I wish\". After the comma, normal word order with hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "I wish I had more time."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: gdyby",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Warunek nierzeczywisty: w części z wenn hätte albo wäre na końcu, w drugiej würde + bezokolicznik na końcu. To marzenie, nie rzeczywistość.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Gdybym miał czas, podróżowałbym."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Gdybym był bogaty, kupiłbym dom."
+            }
+          ]
+        },
+        {
+          "title": "könnte i kolejność części",
+          "text": "könnte znaczy „mógłbym”. Część główną można postawić na początku: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Gdybym miał samochód, mógłbym pojechać do babci."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte znaczy „szkoda, że nie; chciałbym”. Po przecinku zwykły szyk i hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "Szkoda, że nie mam więcej czasu."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: si",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Condición irreal: en la parte con wenn, hätte o wäre al final; en la otra, würde + infinitivo al final. Es un sueño, no la realidad.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Si tuviera tiempo, viajaría."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Si fuera rico, compraría una casa."
+            }
+          ]
+        },
+        {
+          "title": "könnte y el orden de las partes",
+          "text": "könnte significa \"podría\". La parte principal puede ir primero: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Si tuviera coche, podría ir a casa de la abuela."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte significa \"ojalá\". Tras la coma, orden normal con hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "Ojalá tuviera más tiempo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : si",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Condition irréelle : dans la partie avec wenn, hätte ou wäre à la fin ; dans l’autre, würde + infinitif à la fin. C’est un rêve, pas la réalité.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Si j’avais le temps, je voyagerais."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Si j’étais riche, j’achèterais une maison."
+            }
+          ]
+        },
+        {
+          "title": "könnte et l’ordre des parties",
+          "text": "könnte veut dire « pourrait ». La principale peut venir en premier : Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Si j’avais une voiture, je pourrais aller chez mamie."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte veut dire « j’aimerais tant que ». Après la virgule, ordre normal avec hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "J’aimerais avoir plus de temps."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: -saydı",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Gerçek dışı koşul: wenn kısmında hätte ya da wäre sonda, diğer kısımda würde + mastar sonda. Gerçek değil, hayal.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Vaktim olsaydı seyahat ederdim."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Zengin olsaydım bir ev alırdım."
+            }
+          ]
+        },
+        {
+          "title": "könnte ve kısımların sırası",
+          "text": "könnte \"-ebilirdi\" demektir. Ana kısım başa da gelebilir: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Arabam olsaydı büyükanneme gidebilirdim."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte \"keşke\" demektir. Virgülden sonra normal sıra ve hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "Keşke daha çok vaktim olsa."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: dacă",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Condiție ireală: în partea cu wenn, hätte sau wäre la final; în cealaltă, würde + infinitiv la final. E un vis, nu realitate.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Dacă aș avea timp, aș călători."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Dacă aș fi bogat, aș cumpăra o casă."
+            }
+          ]
+        },
+        {
+          "title": "könnte și ordinea părților",
+          "text": "könnte înseamnă „aș putea”. Partea principală poate veni prima: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Dacă aș avea mașină, aș putea merge la bunica."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte înseamnă „aș vrea, păcat că nu”. După virgulă, ordine normală și hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "Aș vrea să am mai mult timp."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: agar",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Noreal shart: wenn qismida hätte yoki wäre oxirida, ikkinchi qismda würde + infinitiv oxirida. Bu orzu, haqiqat emas.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Vaqtim bo'lganida sayohat qilardim."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Boy bo'lganimda uy sotib olardim."
+            }
+          ]
+        },
+        {
+          "title": "könnte va qismlar tartibi",
+          "text": "könnte \"qila olardi\" degani. Bosh qismni boshida qo'yish mumkin: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "Mashinam bo'lganida buvimnikiga bora olardim."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte \"qaniydi\" degani. Verguldan keyin oddiy tartib va hätte, wäre, könnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "Qaniydi ko'proq vaqtim bo'lsa."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: अगर",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "अवास्तविक शर्त: wenn वाले हिस्से में hätte या wäre अंत में, दूसरे हिस्से में würde + इन्फ़िनिटिव अंत में। यह सपना है, सच नहीं।",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "अगर मेरे पास समय होता, तो मैं घूमता।"
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "अगर मैं अमीर होता, तो एक घर खरीदता।"
+            }
+          ]
+        },
+        {
+          "title": "könnte और हिस्सों का क्रम",
+          "text": "könnte मतलब \"सकता था\"। मुख्य हिस्सा पहले भी आ सकता है: Ich würde reisen, wenn ich Zeit hätte।",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "अगर मेरे पास गाड़ी होती, तो मैं दादी के पास जा सकता।"
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte मतलब \"काश\"। कॉमा के बाद सामान्य क्रम और hätte, wäre, könnte।",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "काश मेरे पास और समय होता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: لو",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "الشرط غير الواقعي: في جزء wenn تأتي hätte أو wäre في الآخر، وفي الجزء الآخر würde + المصدر في الآخر. إنه حلم لا واقع.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "لو كان عندي وقت لسافرت."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "لو كنت غنياً لاشتريت بيتاً."
+            }
+          ]
+        },
+        {
+          "title": "könnte وترتيب الأجزاء",
+          "text": "könnte تعني \"كان يمكن\". ويمكن تقديم الجزء الرئيسي: Ich würde reisen, wenn ich Zeit hätte.",
+          "examples": [
+            {
+              "de": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+              "tr": "لو كانت عندي سيارة لاستطعت زيارة جدتي."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ...",
+          "text": "Ich wünschte تعني \"ليت\". وبعد الفاصلة ترتيب عادي مع hätte وwäre وkönnte.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr Zeit.",
+              "tr": "ليت عندي وقتاً أكثر."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "wish-island-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Нереальное условие: в части с wenn hätte или wäre в конце, во второй части würde + инфинитив в конце. Это мечта, а не реальность.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Если бы у меня было время, я бы путешествовал."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Если бы я был богат, я бы купил дом."
+            }
+          ]
+        },
+        {
+          "title": "Реально или мечта",
+          "text": "habe, ist, kann значит «возможно, может случиться». hätte, wäre, könnte, würde значит «мечта, на самом деле нет».",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "Если завтра будет дождь, я поеду на автобусе."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Нереальна умова: у частині з wenn hätte або wäre в кінці, у другій частині würde + інфінітив у кінці. Це мрія, а не реальність.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Якби в мене був час, я б подорожував."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Якби я був багатий, я б купив будинок."
+            }
+          ]
+        },
+        {
+          "title": "Реально чи мрія",
+          "text": "habe, ist, kann означає «можливо, може статися». hätte, wäre, könnte, würde означає «мрія, насправді ні».",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "Якщо завтра буде дощ, я поїду автобусом."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Unreal condition: in the wenn part hätte or wäre at the end, in the other part würde + infinitive at the end. It’s a dream, not reality.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "If I had time, I would travel."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "If I were rich, I would buy a house."
+            }
+          ]
+        },
+        {
+          "title": "Real or a dream",
+          "text": "habe, ist, kann: possible, it may happen. hätte, wäre, könnte, würde: a dream, not actually true.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "If it rains tomorrow, I’ll take the bus."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Warunek nierzeczywisty: w części z wenn hätte albo wäre na końcu, w drugiej würde + bezokolicznik na końcu. To marzenie, nie rzeczywistość.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Gdybym miał czas, podróżowałbym."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Gdybym był bogaty, kupiłbym dom."
+            }
+          ]
+        },
+        {
+          "title": "Realnie czy marzenie",
+          "text": "habe, ist, kann: możliwe, może się zdarzyć. hätte, wäre, könnte, würde: marzenie, naprawdę nie.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "Jeśli jutro będzie padać, pojadę autobusem."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Condición irreal: en la parte con wenn, hätte o wäre al final; en la otra, würde + infinitivo al final. Es un sueño, no la realidad.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Si tuviera tiempo, viajaría."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Si fuera rico, compraría una casa."
+            }
+          ]
+        },
+        {
+          "title": "Real o sueño",
+          "text": "habe, ist, kann: posible, puede pasar. hätte, wäre, könnte, würde: un sueño, en realidad no.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "Si mañana llueve, cojo el autobús."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Condition irréelle : dans la partie avec wenn, hätte ou wäre à la fin ; dans l’autre, würde + infinitif à la fin. C’est un rêve, pas la réalité.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Si j’avais le temps, je voyagerais."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Si j’étais riche, j’achèterais une maison."
+            }
+          ]
+        },
+        {
+          "title": "Réel ou rêve",
+          "text": "habe, ist, kann : possible, ça peut arriver. hätte, wäre, könnte, würde : un rêve, ce n’est pas le cas.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "S’il pleut demain, je prendrai le bus."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Gerçek dışı koşul: wenn kısmında hätte ya da wäre sonda, diğer kısımda würde + mastar sonda. Gerçek değil, hayal.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Vaktim olsaydı seyahat ederdim."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Zengin olsaydım bir ev alırdım."
+            }
+          ]
+        },
+        {
+          "title": "Gerçek mi, hayal mi",
+          "text": "habe, ist, kann: mümkün, olabilir. hätte, wäre, könnte, würde: hayal, gerçekte değil.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "Yarın yağmur yağarsa otobüse binerim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Condiție ireală: în partea cu wenn, hätte sau wäre la final; în cealaltă, würde + infinitiv la final. E un vis, nu realitate.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Dacă aș avea timp, aș călători."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Dacă aș fi bogat, aș cumpăra o casă."
+            }
+          ]
+        },
+        {
+          "title": "Real sau vis",
+          "text": "habe, ist, kann: posibil, se poate întâmpla. hätte, wäre, könnte, würde: un vis, de fapt nu.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "Dacă mâine plouă, iau autobuzul."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Noreal shart: wenn qismida hätte yoki wäre oxirida, ikkinchi qismda würde + infinitiv oxirida. Bu orzu, haqiqat emas.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Vaqtim bo'lganida sayohat qilardim."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Boy bo'lganimda uy sotib olardim."
+            }
+          ]
+        },
+        {
+          "title": "Haqiqat yoki orzu",
+          "text": "habe, ist, kann: mumkin, bo'lishi mumkin. hätte, wäre, könnte, würde: orzu, aslida yo'q.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "Ertaga yomg'ir yog'sa, avtobusga minaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "अवास्तविक शर्त: wenn वाले हिस्से में hätte या wäre अंत में, दूसरे हिस्से में würde + इन्फ़िनिटिव अंत में। यह सपना है, सच नहीं।",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "अगर मेरे पास समय होता, तो मैं घूमता।"
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "अगर मैं अमीर होता, तो एक घर खरीदता।"
+            }
+          ]
+        },
+        {
+          "title": "वास्तविक या सपना",
+          "text": "habe, ist, kann: संभव, हो सकता है। hätte, wäre, könnte, würde: सपना, असल में नहीं।",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "अगर कल बारिश हुई, तो मैं बस लूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "الشرط غير الواقعي: في جزء wenn تأتي hätte أو wäre في الآخر، وفي الجزء الآخر würde + المصدر في الآخر. إنه حلم لا واقع.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "لو كان عندي وقت لسافرت."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "لو كنت غنياً لاشتريت بيتاً."
+            }
+          ]
+        },
+        {
+          "title": "واقع أم حلم",
+          "text": "habe وist وkann: ممكن وقد يحدث. وhätte وwäre وkönnte وwürde: حلم، وليس واقعاً.",
+          "examples": [
+            {
+              "de": "Wenn es morgen regnet, nehme ich den Bus.",
+              "tr": "إذا أمطرت غداً سآخذ الحافلة."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

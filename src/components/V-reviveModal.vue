@@ -1,42 +1,50 @@
 <template>
-  <div v-if="show" class="modal">
-    <div @click="emit('back')" class="modal__overlay"></div>
-    <div class="modal__window">
-      <div class="modal__title">{{ t('questCompletedModals.lives') }}</div>
-      <div class="modal__text">
-        {{ t('questCompletedModals.buyLive') }}
-      </div>
-      <div class="wallet">
-        <div v-for="(row, i) in walletDetails" :key="i" class="wallet__row">
-          <div class="wallet__label">{{ row.label }}</div>
-          <div class="wallet__value">
-            {{ row.value }}
-            <img :src="Article" alt="Article" class="wallet__icon" />
+  <transition name="revive-fade">
+    <div v-if="show" class="revive" @click.self="emit('back')">
+      <div class="revive__card" role="dialog" aria-modal="true">
+        <span class="revive__grabber" aria-hidden="true"></span>
+        <div class="revive__heart" aria-hidden="true">
+          <img :src="Life" alt="" class="revive__heart-img"/>
+          <span class="revive__heart-zero">0</span>
+        </div>
+        <div class="revive__title">{{ t('questCompletedModals.lives') }}</div>
+        <div class="revive__text">{{ t('questCompletedModals.buyLive') }}</div>
+        <div class="revive__wallet">
+          <div v-for="(row, i) in walletDetails" :key="i" class="revive__row">
+            <span class="revive__label">{{ row.label }}</span>
+            <span class="revive__value" :class="{ 'revive__value--low': row.low }">
+              {{ row.value }}
+              <img :src="Article" alt="" class="revive__coin"/>
+            </span>
           </div>
         </div>
-      </div>
-      <div class="modal__actions">
-        <button
-            v-for="(btn, i) in actionButtons"
-            :key="i"
-            class="btn"
-            :class="btn.style"
-            :disabled="btn.disabled"
-            @click="btn.action"
-        >
-          {{ btn.text }}
-        </button>
+        <div class="revive__actions">
+          <button
+              v-for="(btn, i) in actionButtons"
+              :key="i"
+              type="button"
+              class="revive__btn"
+              :class="btn.style"
+              :disabled="btn.disabled"
+              @click="btn.action"
+          >
+            {{ btn.text }}
+          </button>
+        </div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script setup>
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import Article from '~/assets/images/article.svg'
+import Life from '~/assets/images/life.svg'
 
 const { t } = useI18n()
+
+const LIFE_PRICE = 5
 
 const props = defineProps({
   show: Boolean,
@@ -59,11 +67,12 @@ const emit = defineEmits(['purchase', 'back', 'watchAd'])
 const walletDetails = computed(() => [
   {
     label: t('questCompletedModals.prise'),
-    value: 5
+    value: LIFE_PRICE
   },
   {
     label: t('questCompletedModals.balance'),
-    value: props.wallet
+    value: props.wallet,
+    low: !props.canBuyLife
   }
 ])
 
@@ -75,7 +84,7 @@ const actionButtons = computed(() => {
       text: `${t('questCompletedModals.ads')} (${props.remainingAds})`,
       action: () => emit('watchAd'),
       disabled: false,
-      style: 'btn--ad'
+      style: 'revive__btn--ad'
     })
   }
 
@@ -83,14 +92,14 @@ const actionButtons = computed(() => {
     text: props.canBuyLife ? t('questCompletedModals.buy') : t('questCompletedModals.notEnough'),
     action: () => emit('purchase'),
     disabled: !props.canBuyLife,
-    style: ''
+    style: 'revive__btn--buy'
   })
 
   buttons.push({
     text: props.cancelText ? props.cancelText : t('questCompletedModals.back'),
     action: () => emit('back'),
     disabled: false,
-    style: 'btn--primary'
+    style: 'revive__btn--back'
   })
 
   return buttons
@@ -98,183 +107,186 @@ const actionButtons = computed(() => {
 </script>
 
 <style scoped>
-.modal {
+.revive {
   position: fixed;
   inset: 0;
   z-index: 19000;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
 }
 
-.modal__overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(3px);
-  animation: fadeIn 0.3s ease-out;
-}
-
-.modal__window {
+.revive__card {
   position: relative;
-  background: var(--bg);
-  width: min(90%, 420px);
-  padding: 32px 24px;
-  border-radius: 24px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
-  border-top: 2px solid whitesmoke;
-  z-index: 1001;
-  text-align: center;
-  animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.modal__title {
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: var(--titleColor);
-  margin-bottom: 12px;
-}
-
-.modal__text {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--titleColor);
-  margin-bottom: 10px;
-}
-
-.wallet {
-  background: #FFFBEB;
-  border: 2px solid whitesmoke;
-  border-radius: 16px;
-  padding: 0 20px;
-  margin: 0 auto 16px;
   width: 100%;
+  max-width: 560px;
+  padding: 10px 18px calc(18px + env(safe-area-inset-bottom));
+  border-radius: 28px 28px 0 0;
+  border-top: 4px solid #ff4b4b;
+  background: var(--bg);
+  color: var(--titleColor);
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  animation: revive-up 0.3s ease-out;
 }
 
-.wallet__row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 800;
-  margin: 8px 0;
-  font-size: 1.15rem;
-  color: #D97706;
+.revive__grabber {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin: 0 auto 10px;
+  border-radius: 3px;
+  background: rgba(127, 127, 127, 0.45);
 }
 
-.wallet__label {
-  color: #B45309;
-  font-weight: 700;
-  opacity: 0.8;
+.revive__heart {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 6px;
+  animation: revive-beat 1.6s ease-in-out infinite;
 }
 
-.wallet__value {
-  display: flex;
-  align-items: center;
-  gap: 2px;
+.revive__heart-img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(0.85) drop-shadow(0 4px 0 rgba(0, 0, 0, 0.18));
+}
+
+.revive__heart-zero {
+  position: absolute;
+  right: -4px;
+  bottom: -2px;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 6px;
+  border: 3px solid var(--bg);
+  border-radius: 14px;
+  background: #ff4b4b;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 22px;
+}
+
+.revive__title {
   font-size: 22px;
-  font-family: Lilita One, sans-serif;
-  font-weight: 400;
+  font-weight: 900;
 }
 
-.wallet__icon {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
+.revive__text {
+  margin: 6px 0 14px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  opacity: 0.85;
 }
 
-.modal__actions {
+.revive__wallet {
   display: flex;
-  gap: 12px;
-  justify-content: space-between;
   flex-direction: column;
+  gap: 4px;
+  padding: 8px 14px;
+  border-radius: 16px;
+  background: #fff;
+  border: 3px solid #e0dcdc;
+  color: #1e272e;
 }
 
-.btn {
-  flex: 1;
-  padding: 14px 16px;
-  border: 2px solid #58CC02;
-  border-bottom-width: 4px;
-  border-bottom-color: #58A700;
-  border-radius: 50px;
-  background: #58CC02;
-  cursor: pointer;
-  font-size: 1.1rem;
+.revive__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
   font-weight: 800;
-  color: #FFFFFF;
-  transition: all 0.1s ease;
 }
 
-.btn:active:not(:disabled) {
-  transform: translateY(2px);
-  border-bottom-width: 2px;
-  margin-bottom: 2px;
+.revive__label {
+  opacity: 0.7;
 }
 
-.btn:hover:not(:disabled) {
-  background: #61E002;
-  border-color: #61E002;
+.revive__value {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+  font-weight: 900;
 }
 
-.btn--primary {
-  background: #1CB0F6;
-  border-color: #1CB0F6;
-  border-bottom-color: #1899D6;
+.revive__value--low {
+  color: #ff4b4b;
 }
 
-.btn--ad {
-  background: #FF9600;
-  border-color: #FF9600;
-  border-bottom-color: #CC7800;
+.revive__coin {
+  width: 24px;
+  height: 24px;
 }
 
-.btn--primary:hover:not(:disabled) {
-  background: #2DBCFF;
-  border-color: #2DBCFF;
+.revive__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
 }
 
-.btn:disabled {
-  background: #E5E5E5;
-  border-color: #E5E5E5;
-  border-bottom-color: #D1D5DB;
-  color: #9CA3AF;
-  opacity: 1;
+.revive__btn {
+  padding: 13px;
+  border: none;
+  border-radius: 34px;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-size: 17px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.revive__btn:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: none !important;
+}
+
+.revive__btn--ad {
+  background: linear-gradient(180deg, #ffb04d, #ff9600);
+  box-shadow: 0 5px 0 #cc6f00;
+}
+
+.revive__btn--buy {
+  background: linear-gradient(180deg, #6fdc2a, #58cc02);
+  box-shadow: 0 5px 0 #46a302;
+}
+
+.revive__btn--back {
+  background: rgba(127, 127, 127, 0.16);
+  color: var(--titleColor);
+  box-shadow: 0 5px 0 rgba(127, 127, 127, 0.3);
+}
+
+.revive__btn:disabled {
+  background: #e5e5e5;
+  color: #9ca3af;
+  box-shadow: 0 5px 0 #d1d5db;
   cursor: not-allowed;
 }
 
-@media (max-width: 768px) {
-  .modal__window {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    margin: 0;
-    border-radius: 32px 32px 0 0;
-    padding: 20px 24px max(32px, env(safe-area-inset-bottom));
-    animation: slideUp 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-  }
-
-  .btn {
-    width: 100%;
-  }
+.revive-fade-enter-active,
+.revive-fade-leave-active {
+  transition: opacity 0.2s ease;
 }
 
-@keyframes slideUp {
+.revive-fade-enter-from,
+.revive-fade-leave-to {
+  opacity: 0;
+}
+
+@keyframes revive-up {
   from { transform: translateY(100%); }
   to { transform: translateY(0); }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes popIn {
-  from {
-    opacity: 0;
-    transform: scale(0.85);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+@keyframes revive-beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
 }
 </style>

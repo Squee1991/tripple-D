@@ -19520,9 +19520,7 @@
     "descriptionThematic": "Wyjaśni przypadki i rodzajniki bezpośrednio podczas ćwiczeń, jeśli masz wątpliwości."
   },
   "questModals": {
-    "fixMistakesTitle": "Poprawmy błędy",
-    "fixMistakesText": "Powtórz zadania, w których był błąd. Popraw je, a lekcja zostanie zaliczona.",
-    "fixMistakesBtn": "Popraw błędy ({count})",
+    "fixForReward": "Aby otrzymać nagrodę, wykonaj wszystkie zadania poprawnie",
     "repeat": "Powtórz błędy",
     "next": "Następne zadanie ➔",
     "back": "Do tematów",
@@ -21085,6 +21083,7 @@
     "writing": "Pisanie",
     "new": "Nowe",
     "writeLocked": "Ukończ zadanie, a odblokujesz pisanie",
+    "questLocked": "Najpierw ukończ poprzednie zadanie",
     "writeAction": "Napisz zdania ze słuchu",
     "landDone": "Kraina ukończona!",
     "landGoal": "Ukończ wszystkie zadania i pisanie",

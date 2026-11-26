@@ -1,0 +1,2706 @@
+{
+  "craft-valley-one": {
+    "ru": {
+      "title": "Что-то делается: Passiv",
+      "points": [
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "В Passiv важно не кто делает, а что происходит. wird на втором месте, Partizip II в конце. Много предметов: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Машину ремонтируют."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Окна моют."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Щось робиться: Passiv",
+      "points": [
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "У Passiv важливо не хто робить, а що відбувається. wird на другому місці, Partizip II у кінці. Багато предметів: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Машину ремонтують."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Вікна миють."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Something is done: passive",
+      "points": [
+        {
+          "title": "Passive: wird + Partizip II",
+          "text": "In the passive what matters is what happens, not who does it. wird in second place, Partizip II at the end. Several things: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "The car is being repaired."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "The windows are being cleaned."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Coś się robi: Passiv",
+      "points": [
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "W Passiv ważne jest nie to, kto robi, ale co się dzieje. wird na drugim miejscu, Partizip II na końcu. Wiele rzeczy: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Samochód jest naprawiany."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Okna są myte."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Algo se hace: pasiva",
+      "points": [
+        {
+          "title": "Pasiva: wird + Partizip II",
+          "text": "En pasiva importa lo que pasa, no quién lo hace. wird en segundo lugar, Partizip II al final. Varias cosas: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "El coche se está reparando."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Se limpian las ventanas."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Quelque chose se fait : passif",
+      "points": [
+        {
+          "title": "Passif : wird + Partizip II",
+          "text": "Au passif, ce qui compte, c’est ce qui se passe, pas qui le fait. wird en deuxième position, Partizip II à la fin. Plusieurs choses : werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "La voiture est en réparation."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "On nettoie les fenêtres."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Bir şey yapılıyor: edilgen",
+      "points": [
+        {
+          "title": "Edilgen: wird + Partizip II",
+          "text": "Edilgende önemli olan kimin yaptığı değil, ne olduğudur. wird ikinci sırada, Partizip II sonda. Birden çok şey: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Araba tamir ediliyor."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Pencereler temizleniyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Ceva se face: pasiv",
+      "points": [
+        {
+          "title": "Pasiv: wird + Partizip II",
+          "text": "La pasiv contează ce se întâmplă, nu cine face. wird pe locul doi, Partizip II la final. Mai multe lucruri: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Mașina e reparată."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Ferestrele sunt spălate."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nimadir qilinmoqda: majhul",
+      "points": [
+        {
+          "title": "Majhul: wird + Partizip II",
+          "text": "Majhul nisbatda kim qilgani emas, nima bo'layotgani muhim. wird ikkinchi o'rinda, Partizip II oxirida. Ko'p narsa: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Mashina ta'mirlanmoqda."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Derazalar yuvilmoqda."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कुछ किया जा रहा है: कर्मवाच्य",
+      "points": [
+        {
+          "title": "कर्मवाच्य: wird + Partizip II",
+          "text": "कर्मवाच्य में यह मायने रखता है कि क्या हो रहा है, कौन कर रहा है यह नहीं। wird दूसरे स्थान पर, Partizip II अंत में। कई चीज़ें: werden।",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "गाड़ी ठीक की जा रही है।"
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "खिड़कियाँ साफ़ की जा रही हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "شيء يُفعل: المجهول",
+      "points": [
+        {
+          "title": "المبني للمجهول: wird + Partizip II",
+          "text": "في المبني للمجهول المهم ما يحدث لا من يفعله. wird في المكان الثاني وPartizip II في الآخر. ولعدة أشياء: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "السيارة تُصلَح."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "النوافذ تُنظَّف."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "craft-valley-two": {
+    "ru": {
+      "title": "Много предметов: werden",
+      "points": [
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "В Passiv важно не кто делает, а что происходит. wird на втором месте, Partizip II в конце. Много предметов: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Машину ремонтируют."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Окна моют."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Багато предметів: werden",
+      "points": [
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "У Passiv важливо не хто робить, а що відбувається. wird на другому місці, Partizip II у кінці. Багато предметів: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Машину ремонтують."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Вікна миють."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Several things: werden",
+      "points": [
+        {
+          "title": "Passive: wird + Partizip II",
+          "text": "In the passive what matters is what happens, not who does it. wird in second place, Partizip II at the end. Several things: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "The car is being repaired."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "The windows are being cleaned."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Wiele rzeczy: werden",
+      "points": [
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "W Passiv ważne jest nie to, kto robi, ale co się dzieje. wird na drugim miejscu, Partizip II na końcu. Wiele rzeczy: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Samochód jest naprawiany."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Okna są myte."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Varias cosas: werden",
+      "points": [
+        {
+          "title": "Pasiva: wird + Partizip II",
+          "text": "En pasiva importa lo que pasa, no quién lo hace. wird en segundo lugar, Partizip II al final. Varias cosas: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "El coche se está reparando."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Se limpian las ventanas."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Plusieurs choses : werden",
+      "points": [
+        {
+          "title": "Passif : wird + Partizip II",
+          "text": "Au passif, ce qui compte, c’est ce qui se passe, pas qui le fait. wird en deuxième position, Partizip II à la fin. Plusieurs choses : werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "La voiture est en réparation."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "On nettoie les fenêtres."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Birden çok şey: werden",
+      "points": [
+        {
+          "title": "Edilgen: wird + Partizip II",
+          "text": "Edilgende önemli olan kimin yaptığı değil, ne olduğudur. wird ikinci sırada, Partizip II sonda. Birden çok şey: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Araba tamir ediliyor."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Pencereler temizleniyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Mai multe lucruri: werden",
+      "points": [
+        {
+          "title": "Pasiv: wird + Partizip II",
+          "text": "La pasiv contează ce se întâmplă, nu cine face. wird pe locul doi, Partizip II la final. Mai multe lucruri: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Mașina e reparată."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Ferestrele sunt spălate."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ko'p narsa: werden",
+      "points": [
+        {
+          "title": "Majhul: wird + Partizip II",
+          "text": "Majhul nisbatda kim qilgani emas, nima bo'layotgani muhim. wird ikkinchi o'rinda, Partizip II oxirida. Ko'p narsa: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Mashina ta'mirlanmoqda."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Derazalar yuvilmoqda."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कई चीज़ें: werden",
+      "points": [
+        {
+          "title": "कर्मवाच्य: wird + Partizip II",
+          "text": "कर्मवाच्य में यह मायने रखता है कि क्या हो रहा है, कौन कर रहा है यह नहीं। wird दूसरे स्थान पर, Partizip II अंत में। कई चीज़ें: werden।",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "गाड़ी ठीक की जा रही है।"
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "खिड़कियाँ साफ़ की जा रही हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "عدة أشياء: werden",
+      "points": [
+        {
+          "title": "المبني للمجهول: wird + Partizip II",
+          "text": "في المبني للمجهول المهم ما يحدث لا من يفعله. wird في المكان الثاني وPartizip II في الآخر. ولعدة أشياء: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "السيارة تُصلَح."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "النوافذ تُنظَّف."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "craft-valley-three": {
+    "ru": {
+      "title": "Кем? von",
+      "points": [
+        {
+          "title": "Кем: von + Dativ",
+          "text": "Если важно, кто делает, добавляем von + Dativ: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Ужин готовит мой папа."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Ким? von",
+      "points": [
+        {
+          "title": "Ким: von + Dativ",
+          "text": "Якщо важливо, хто робить, додаємо von + Dativ: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Вечерю готує мій тато."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "By whom? von",
+      "points": [
+        {
+          "title": "By whom: von + dative",
+          "text": "If it matters who does it, add von + dative: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Dinner is cooked by my father."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Przez kogo? von",
+      "points": [
+        {
+          "title": "Przez kogo: von + Dativ",
+          "text": "Jeśli ważne, kto robi, dodajemy von + Dativ: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Kolację gotuje mój tata."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿Por quién? von",
+      "points": [
+        {
+          "title": "Por quién: von + dativo",
+          "text": "Si importa quién lo hace, se añade von + dativo: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "La cena la prepara mi padre."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Par qui ? von",
+      "points": [
+        {
+          "title": "Par qui : von + datif",
+          "text": "Si on veut dire qui le fait, on ajoute von + datif : von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Le dîner est préparé par mon père."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kim tarafından? von",
+      "points": [
+        {
+          "title": "Kim tarafından: von + Dativ",
+          "text": "Kimin yaptığı önemliyse von + Dativ eklenir: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Akşam yemeği babam tarafından pişiriliyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "De cine? von",
+      "points": [
+        {
+          "title": "De cine: von + dativ",
+          "text": "Dacă e important cine face, adăugăm von + dativ: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Cina e gătită de tatăl meu."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kim tomonidan? von",
+      "points": [
+        {
+          "title": "Kim tomonidan: von + Dativ",
+          "text": "Kim qilgani muhim bo'lsa, von + Dativ qo'shiladi: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Kechki ovqatni dadam pishiradi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "किसके द्वारा? von",
+      "points": [
+        {
+          "title": "किसके द्वारा: von + Dativ",
+          "text": "अगर कौन करता है यह ज़रूरी हो, तो von + Dativ जोड़ो: von meiner Mutter, vom Chef (von dem)।",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "रात का खाना मेरे पिता बनाते हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "من قِبل؟ von",
+      "points": [
+        {
+          "title": "من قِبل: von + الجر",
+          "text": "إذا كان الفاعل مهماً نضيف von + الجر: von meiner Mutter، vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "العشاء يطبخه أبي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "craft-valley-four": {
+    "ru": {
+      "title": "Это было сделано: wurde",
+      "points": [
+        {
+          "title": "В прошлом: wurde",
+          "text": "Прошедшее время Passiv: wurde (один предмет), wurden (много) + Partizip II в конце.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Дом был построен в 1900 году."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Це було зроблено: wurde",
+      "points": [
+        {
+          "title": "У минулому: wurde",
+          "text": "Минулий час Passiv: wurde (один предмет), wurden (багато) + Partizip II у кінці.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Будинок збудували 1900 року."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "It was done: wurde",
+      "points": [
+        {
+          "title": "In the past: wurde",
+          "text": "Past passive: wurde (one thing), wurden (several) + Partizip II at the end.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "The house was built in 1900."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "To zostało zrobione: wurde",
+      "points": [
+        {
+          "title": "W przeszłości: wurde",
+          "text": "Passiv w przeszłości: wurde (jedna rzecz), wurden (wiele) + Partizip II na końcu.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Dom zbudowano w 1900 roku."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Se hizo: wurde",
+      "points": [
+        {
+          "title": "En pasado: wurde",
+          "text": "Pasiva en pasado: wurde (una cosa), wurden (varias) + Partizip II al final.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "La casa se construyó en 1900."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Ça a été fait : wurde",
+      "points": [
+        {
+          "title": "Au passé : wurde",
+          "text": "Passif au passé : wurde (une chose), wurden (plusieurs) + Partizip II à la fin.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "La maison a été construite en 1900."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yapıldı: wurde",
+      "points": [
+        {
+          "title": "Geçmişte: wurde",
+          "text": "Geçmiş edilgen: wurde (tek şey), wurden (birden çok) + Partizip II sonda.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Ev 1900’de inşa edildi."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "A fost făcut: wurde",
+      "points": [
+        {
+          "title": "La trecut: wurde",
+          "text": "Pasiv la trecut: wurde (un lucru), wurden (mai multe) + Partizip II la final.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Casa a fost construită în 1900."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qilingan edi: wurde",
+      "points": [
+        {
+          "title": "O'tgan zamonda: wurde",
+          "text": "O'tgan zamon majhul: wurde (bitta narsa), wurden (ko'p) + Partizip II oxirida.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Uy 1900-yilda qurilgan."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "यह किया गया था: wurde",
+      "points": [
+        {
+          "title": "भूतकाल में: wurde",
+          "text": "भूतकाल कर्मवाच्य: wurde (एक चीज़), wurden (कई) + Partizip II अंत में।",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "घर 1900 में बना था।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تم فعله: wurde",
+      "points": [
+        {
+          "title": "في الماضي: wurde",
+          "text": "المجهول في الماضي: wurde (لشيء واحد)، wurden (لعدة أشياء) + Partizip II في الآخر.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "بُني البيت عام 1900."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "craft-valley-five": {
+    "ru": {
+      "title": "Нужно сделать: muss ... werden",
+      "points": [
+        {
+          "title": "muss ... werden",
+          "text": "С модальным: модальный на втором месте, в конце Partizip II и werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Машину нужно отремонтировать."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Треба зробити: muss ... werden",
+      "points": [
+        {
+          "title": "muss ... werden",
+          "text": "З модальним: модальне на другому місці, у кінці Partizip II і werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Машину треба відремонтувати."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Must be done: muss ... werden",
+      "points": [
+        {
+          "title": "muss ... werden",
+          "text": "With a modal: the modal in second place, Partizip II and werden at the end.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "The car needs to be repaired."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Trzeba zrobić: muss ... werden",
+      "points": [
+        {
+          "title": "muss ... werden",
+          "text": "Z modalnym: modalny na drugim miejscu, na końcu Partizip II i werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Samochód trzeba naprawić."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Hay que hacerlo: muss ... werden",
+      "points": [
+        {
+          "title": "muss ... werden",
+          "text": "Con un modal: el modal en segundo lugar, Partizip II y werden al final.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Hay que reparar el coche."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Doit être fait : muss ... werden",
+      "points": [
+        {
+          "title": "muss ... werden",
+          "text": "Avec un modal : le modal en deuxième position, Partizip II et werden à la fin.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "La voiture doit être réparée."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yapılmalı: muss ... werden",
+      "points": [
+        {
+          "title": "muss ... werden",
+          "text": "Modal fiille: modal ikinci sırada, sonda Partizip II ve werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Arabanın tamir edilmesi gerekiyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Trebuie făcut: muss ... werden",
+      "points": [
+        {
+          "title": "muss ... werden",
+          "text": "Cu un modal: modalul pe locul doi, la final Partizip II și werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Mașina trebuie reparată."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qilinishi kerak: muss ... werden",
+      "points": [
+        {
+          "title": "muss ... werden",
+          "text": "Modal bilan: modal ikkinchi o'rinda, oxirida Partizip II va werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Mashinani ta'mirlash kerak."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "करना होगा: muss ... werden",
+      "points": [
+        {
+          "title": "muss ... werden",
+          "text": "मोडल के साथ: मोडल दूसरे स्थान पर, अंत में Partizip II और werden।",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "गाड़ी ठीक करवानी होगी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "يجب فعله: muss ... werden",
+      "points": [
+        {
+          "title": "muss ... werden",
+          "text": "مع فعل مساعد: المساعد في المكان الثاني، وفي الآخر Partizip II وwerden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "يجب إصلاح السيارة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "craft-valley-six": {
+    "ru": {
+      "title": "В мастерской и на почте",
+      "points": [
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "В Passiv важно не кто делает, а что происходит. wird на втором месте, Partizip II в конце. Много предметов: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Машину ремонтируют."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Окна моют."
+            }
+          ]
+        },
+        {
+          "title": "Кем: von + Dativ",
+          "text": "Если важно, кто делает, добавляем von + Dativ: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Ужин готовит мой папа."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "У майстерні й на пошті",
+      "points": [
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "У Passiv важливо не хто робить, а що відбувається. wird на другому місці, Partizip II у кінці. Багато предметів: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Машину ремонтують."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Вікна миють."
+            }
+          ]
+        },
+        {
+          "title": "Ким: von + Dativ",
+          "text": "Якщо важливо, хто робить, додаємо von + Dativ: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Вечерю готує мій тато."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "At the workshop and the post office",
+      "points": [
+        {
+          "title": "Passive: wird + Partizip II",
+          "text": "In the passive what matters is what happens, not who does it. wird in second place, Partizip II at the end. Several things: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "The car is being repaired."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "The windows are being cleaned."
+            }
+          ]
+        },
+        {
+          "title": "By whom: von + dative",
+          "text": "If it matters who does it, add von + dative: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Dinner is cooked by my father."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "W warsztacie i na poczcie",
+      "points": [
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "W Passiv ważne jest nie to, kto robi, ale co się dzieje. wird na drugim miejscu, Partizip II na końcu. Wiele rzeczy: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Samochód jest naprawiany."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Okna są myte."
+            }
+          ]
+        },
+        {
+          "title": "Przez kogo: von + Dativ",
+          "text": "Jeśli ważne, kto robi, dodajemy von + Dativ: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Kolację gotuje mój tata."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "En el taller y en correos",
+      "points": [
+        {
+          "title": "Pasiva: wird + Partizip II",
+          "text": "En pasiva importa lo que pasa, no quién lo hace. wird en segundo lugar, Partizip II al final. Varias cosas: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "El coche se está reparando."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Se limpian las ventanas."
+            }
+          ]
+        },
+        {
+          "title": "Por quién: von + dativo",
+          "text": "Si importa quién lo hace, se añade von + dativo: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "La cena la prepara mi padre."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "À l’atelier et à la poste",
+      "points": [
+        {
+          "title": "Passif : wird + Partizip II",
+          "text": "Au passif, ce qui compte, c’est ce qui se passe, pas qui le fait. wird en deuxième position, Partizip II à la fin. Plusieurs choses : werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "La voiture est en réparation."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "On nettoie les fenêtres."
+            }
+          ]
+        },
+        {
+          "title": "Par qui : von + datif",
+          "text": "Si on veut dire qui le fait, on ajoute von + datif : von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Le dîner est préparé par mon père."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Atölyede ve postanede",
+      "points": [
+        {
+          "title": "Edilgen: wird + Partizip II",
+          "text": "Edilgende önemli olan kimin yaptığı değil, ne olduğudur. wird ikinci sırada, Partizip II sonda. Birden çok şey: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Araba tamir ediliyor."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Pencereler temizleniyor."
+            }
+          ]
+        },
+        {
+          "title": "Kim tarafından: von + Dativ",
+          "text": "Kimin yaptığı önemliyse von + Dativ eklenir: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Akşam yemeği babam tarafından pişiriliyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "La atelier și la poștă",
+      "points": [
+        {
+          "title": "Pasiv: wird + Partizip II",
+          "text": "La pasiv contează ce se întâmplă, nu cine face. wird pe locul doi, Partizip II la final. Mai multe lucruri: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Mașina e reparată."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Ferestrele sunt spălate."
+            }
+          ]
+        },
+        {
+          "title": "De cine: von + dativ",
+          "text": "Dacă e important cine face, adăugăm von + dativ: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Cina e gătită de tatăl meu."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ustaxonada va pochtada",
+      "points": [
+        {
+          "title": "Majhul: wird + Partizip II",
+          "text": "Majhul nisbatda kim qilgani emas, nima bo'layotgani muhim. wird ikkinchi o'rinda, Partizip II oxirida. Ko'p narsa: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Mashina ta'mirlanmoqda."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Derazalar yuvilmoqda."
+            }
+          ]
+        },
+        {
+          "title": "Kim tomonidan: von + Dativ",
+          "text": "Kim qilgani muhim bo'lsa, von + Dativ qo'shiladi: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Kechki ovqatni dadam pishiradi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "वर्कशॉप और डाकघर में",
+      "points": [
+        {
+          "title": "कर्मवाच्य: wird + Partizip II",
+          "text": "कर्मवाच्य में यह मायने रखता है कि क्या हो रहा है, कौन कर रहा है यह नहीं। wird दूसरे स्थान पर, Partizip II अंत में। कई चीज़ें: werden।",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "गाड़ी ठीक की जा रही है।"
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "खिड़कियाँ साफ़ की जा रही हैं।"
+            }
+          ]
+        },
+        {
+          "title": "किसके द्वारा: von + Dativ",
+          "text": "अगर कौन करता है यह ज़रूरी हो, तो von + Dativ जोड़ो: von meiner Mutter, vom Chef (von dem)।",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "रात का खाना मेरे पिता बनाते हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "في الورشة ومكتب البريد",
+      "points": [
+        {
+          "title": "المبني للمجهول: wird + Partizip II",
+          "text": "في المبني للمجهول المهم ما يحدث لا من يفعله. wird في المكان الثاني وPartizip II في الآخر. ولعدة أشياء: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "السيارة تُصلَح."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "النوافذ تُنظَّف."
+            }
+          ]
+        },
+        {
+          "title": "من قِبل: von + الجر",
+          "text": "إذا كان الفاعل مهماً نضيف von + الجر: von meiner Mutter، vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "العشاء يطبخه أبي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "craft-valley-seven": {
+    "ru": {
+      "title": "Практика: как пекут хлеб",
+      "points": [
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "В Passiv важно не кто делает, а что происходит. wird на втором месте, Partizip II в конце. Много предметов: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Машину ремонтируют."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Окна моют."
+            }
+          ]
+        },
+        {
+          "title": "Кем: von + Dativ",
+          "text": "Если важно, кто делает, добавляем von + Dativ: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Ужин готовит мой папа."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: як печуть хліб",
+      "points": [
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "У Passiv важливо не хто робить, а що відбувається. wird на другому місці, Partizip II у кінці. Багато предметів: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Машину ремонтують."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Вікна миють."
+            }
+          ]
+        },
+        {
+          "title": "Ким: von + Dativ",
+          "text": "Якщо важливо, хто робить, додаємо von + Dativ: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Вечерю готує мій тато."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: how bread is baked",
+      "points": [
+        {
+          "title": "Passive: wird + Partizip II",
+          "text": "In the passive what matters is what happens, not who does it. wird in second place, Partizip II at the end. Several things: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "The car is being repaired."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "The windows are being cleaned."
+            }
+          ]
+        },
+        {
+          "title": "By whom: von + dative",
+          "text": "If it matters who does it, add von + dative: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Dinner is cooked by my father."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: jak piecze się chleb",
+      "points": [
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "W Passiv ważne jest nie to, kto robi, ale co się dzieje. wird na drugim miejscu, Partizip II na końcu. Wiele rzeczy: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Samochód jest naprawiany."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Okna są myte."
+            }
+          ]
+        },
+        {
+          "title": "Przez kogo: von + Dativ",
+          "text": "Jeśli ważne, kto robi, dodajemy von + Dativ: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Kolację gotuje mój tata."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: cómo se hace el pan",
+      "points": [
+        {
+          "title": "Pasiva: wird + Partizip II",
+          "text": "En pasiva importa lo que pasa, no quién lo hace. wird en segundo lugar, Partizip II al final. Varias cosas: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "El coche se está reparando."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Se limpian las ventanas."
+            }
+          ]
+        },
+        {
+          "title": "Por quién: von + dativo",
+          "text": "Si importa quién lo hace, se añade von + dativo: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "La cena la prepara mi padre."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : comment on fait le pain",
+      "points": [
+        {
+          "title": "Passif : wird + Partizip II",
+          "text": "Au passif, ce qui compte, c’est ce qui se passe, pas qui le fait. wird en deuxième position, Partizip II à la fin. Plusieurs choses : werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "La voiture est en réparation."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "On nettoie les fenêtres."
+            }
+          ]
+        },
+        {
+          "title": "Par qui : von + datif",
+          "text": "Si on veut dire qui le fait, on ajoute von + datif : von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Le dîner est préparé par mon père."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: ekmek nasıl pişirilir",
+      "points": [
+        {
+          "title": "Edilgen: wird + Partizip II",
+          "text": "Edilgende önemli olan kimin yaptığı değil, ne olduğudur. wird ikinci sırada, Partizip II sonda. Birden çok şey: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Araba tamir ediliyor."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Pencereler temizleniyor."
+            }
+          ]
+        },
+        {
+          "title": "Kim tarafından: von + Dativ",
+          "text": "Kimin yaptığı önemliyse von + Dativ eklenir: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Akşam yemeği babam tarafından pişiriliyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: cum se coace pâinea",
+      "points": [
+        {
+          "title": "Pasiv: wird + Partizip II",
+          "text": "La pasiv contează ce se întâmplă, nu cine face. wird pe locul doi, Partizip II la final. Mai multe lucruri: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Mașina e reparată."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Ferestrele sunt spălate."
+            }
+          ]
+        },
+        {
+          "title": "De cine: von + dativ",
+          "text": "Dacă e important cine face, adăugăm von + dativ: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Cina e gătită de tatăl meu."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: non qanday pishiriladi",
+      "points": [
+        {
+          "title": "Majhul: wird + Partizip II",
+          "text": "Majhul nisbatda kim qilgani emas, nima bo'layotgani muhim. wird ikkinchi o'rinda, Partizip II oxirida. Ko'p narsa: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Mashina ta'mirlanmoqda."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Derazalar yuvilmoqda."
+            }
+          ]
+        },
+        {
+          "title": "Kim tomonidan: von + Dativ",
+          "text": "Kim qilgani muhim bo'lsa, von + Dativ qo'shiladi: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Kechki ovqatni dadam pishiradi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: रोटी कैसे बनती है",
+      "points": [
+        {
+          "title": "कर्मवाच्य: wird + Partizip II",
+          "text": "कर्मवाच्य में यह मायने रखता है कि क्या हो रहा है, कौन कर रहा है यह नहीं। wird दूसरे स्थान पर, Partizip II अंत में। कई चीज़ें: werden।",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "गाड़ी ठीक की जा रही है।"
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "खिड़कियाँ साफ़ की जा रही हैं।"
+            }
+          ]
+        },
+        {
+          "title": "किसके द्वारा: von + Dativ",
+          "text": "अगर कौन करता है यह ज़रूरी हो, तो von + Dativ जोड़ो: von meiner Mutter, vom Chef (von dem)।",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "रात का खाना मेरे पिता बनाते हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: كيف يُخبز الخبز",
+      "points": [
+        {
+          "title": "المبني للمجهول: wird + Partizip II",
+          "text": "في المبني للمجهول المهم ما يحدث لا من يفعله. wird في المكان الثاني وPartizip II في الآخر. ولعدة أشياء: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "السيارة تُصلَح."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "النوافذ تُنظَّف."
+            }
+          ]
+        },
+        {
+          "title": "من قِبل: von + الجر",
+          "text": "إذا كان الفاعل مهماً نضيف von + الجر: von meiner Mutter، vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "العشاء يطبخه أبي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "craft-valley-eight": {
+    "ru": {
+      "title": "Практика: новости города",
+      "points": [
+        {
+          "title": "В прошлом: wurde",
+          "text": "Прошедшее время Passiv: wurde (один предмет), wurden (много) + Partizip II в конце.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Дом был построен в 1900 году."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "С модальным: модальный на втором месте, в конце Partizip II и werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Машину нужно отремонтировать."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: новини міста",
+      "points": [
+        {
+          "title": "У минулому: wurde",
+          "text": "Минулий час Passiv: wurde (один предмет), wurden (багато) + Partizip II у кінці.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Будинок збудували 1900 року."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "З модальним: модальне на другому місці, у кінці Partizip II і werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Машину треба відремонтувати."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: town news",
+      "points": [
+        {
+          "title": "In the past: wurde",
+          "text": "Past passive: wurde (one thing), wurden (several) + Partizip II at the end.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "The house was built in 1900."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "With a modal: the modal in second place, Partizip II and werden at the end.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "The car needs to be repaired."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: wiadomości z miasta",
+      "points": [
+        {
+          "title": "W przeszłości: wurde",
+          "text": "Passiv w przeszłości: wurde (jedna rzecz), wurden (wiele) + Partizip II na końcu.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Dom zbudowano w 1900 roku."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "Z modalnym: modalny na drugim miejscu, na końcu Partizip II i werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Samochód trzeba naprawić."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: noticias de la ciudad",
+      "points": [
+        {
+          "title": "En pasado: wurde",
+          "text": "Pasiva en pasado: wurde (una cosa), wurden (varias) + Partizip II al final.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "La casa se construyó en 1900."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "Con un modal: el modal en segundo lugar, Partizip II y werden al final.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Hay que reparar el coche."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : les nouvelles de la ville",
+      "points": [
+        {
+          "title": "Au passé : wurde",
+          "text": "Passif au passé : wurde (une chose), wurden (plusieurs) + Partizip II à la fin.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "La maison a été construite en 1900."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "Avec un modal : le modal en deuxième position, Partizip II et werden à la fin.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "La voiture doit être réparée."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: şehir haberleri",
+      "points": [
+        {
+          "title": "Geçmişte: wurde",
+          "text": "Geçmiş edilgen: wurde (tek şey), wurden (birden çok) + Partizip II sonda.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Ev 1900’de inşa edildi."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "Modal fiille: modal ikinci sırada, sonda Partizip II ve werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Arabanın tamir edilmesi gerekiyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: știrile orașului",
+      "points": [
+        {
+          "title": "La trecut: wurde",
+          "text": "Pasiv la trecut: wurde (un lucru), wurden (mai multe) + Partizip II la final.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Casa a fost construită în 1900."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "Cu un modal: modalul pe locul doi, la final Partizip II și werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Mașina trebuie reparată."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: shahar yangiliklari",
+      "points": [
+        {
+          "title": "O'tgan zamonda: wurde",
+          "text": "O'tgan zamon majhul: wurde (bitta narsa), wurden (ko'p) + Partizip II oxirida.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Uy 1900-yilda qurilgan."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "Modal bilan: modal ikkinchi o'rinda, oxirida Partizip II va werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Mashinani ta'mirlash kerak."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: शहर की ख़बरें",
+      "points": [
+        {
+          "title": "भूतकाल में: wurde",
+          "text": "भूतकाल कर्मवाच्य: wurde (एक चीज़), wurden (कई) + Partizip II अंत में।",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "घर 1900 में बना था।"
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "मोडल के साथ: मोडल दूसरे स्थान पर, अंत में Partizip II और werden।",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "गाड़ी ठीक करवानी होगी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: أخبار المدينة",
+      "points": [
+        {
+          "title": "في الماضي: wurde",
+          "text": "المجهول في الماضي: wurde (لشيء واحد)، wurden (لعدة أشياء) + Partizip II في الآخر.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "بُني البيت عام 1900."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "مع فعل مساعد: المساعد في المكان الثاني، وفي الآخر Partizip II وwerden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "يجب إصلاح السيارة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "craft-valley-nine": {
+    "ru": {
+      "title": "Повторение: Passiv",
+      "points": [
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "В Passiv важно не кто делает, а что происходит. wird на втором месте, Partizip II в конце. Много предметов: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Машину ремонтируют."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Окна моют."
+            }
+          ]
+        },
+        {
+          "title": "В прошлом: wurde",
+          "text": "Прошедшее время Passiv: wurde (один предмет), wurden (много) + Partizip II в конце.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Дом был построен в 1900 году."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "С модальным: модальный на втором месте, в конце Partizip II и werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Машину нужно отремонтировать."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: Passiv",
+      "points": [
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "У Passiv важливо не хто робить, а що відбувається. wird на другому місці, Partizip II у кінці. Багато предметів: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Машину ремонтують."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Вікна миють."
+            }
+          ]
+        },
+        {
+          "title": "У минулому: wurde",
+          "text": "Минулий час Passiv: wurde (один предмет), wurden (багато) + Partizip II у кінці.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Будинок збудували 1900 року."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "З модальним: модальне на другому місці, у кінці Partizip II і werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Машину треба відремонтувати."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: passive",
+      "points": [
+        {
+          "title": "Passive: wird + Partizip II",
+          "text": "In the passive what matters is what happens, not who does it. wird in second place, Partizip II at the end. Several things: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "The car is being repaired."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "The windows are being cleaned."
+            }
+          ]
+        },
+        {
+          "title": "In the past: wurde",
+          "text": "Past passive: wurde (one thing), wurden (several) + Partizip II at the end.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "The house was built in 1900."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "With a modal: the modal in second place, Partizip II and werden at the end.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "The car needs to be repaired."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: Passiv",
+      "points": [
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "W Passiv ważne jest nie to, kto robi, ale co się dzieje. wird na drugim miejscu, Partizip II na końcu. Wiele rzeczy: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Samochód jest naprawiany."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Okna są myte."
+            }
+          ]
+        },
+        {
+          "title": "W przeszłości: wurde",
+          "text": "Passiv w przeszłości: wurde (jedna rzecz), wurden (wiele) + Partizip II na końcu.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Dom zbudowano w 1900 roku."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "Z modalnym: modalny na drugim miejscu, na końcu Partizip II i werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Samochód trzeba naprawić."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: pasiva",
+      "points": [
+        {
+          "title": "Pasiva: wird + Partizip II",
+          "text": "En pasiva importa lo que pasa, no quién lo hace. wird en segundo lugar, Partizip II al final. Varias cosas: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "El coche se está reparando."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Se limpian las ventanas."
+            }
+          ]
+        },
+        {
+          "title": "En pasado: wurde",
+          "text": "Pasiva en pasado: wurde (una cosa), wurden (varias) + Partizip II al final.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "La casa se construyó en 1900."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "Con un modal: el modal en segundo lugar, Partizip II y werden al final.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Hay que reparar el coche."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : le passif",
+      "points": [
+        {
+          "title": "Passif : wird + Partizip II",
+          "text": "Au passif, ce qui compte, c’est ce qui se passe, pas qui le fait. wird en deuxième position, Partizip II à la fin. Plusieurs choses : werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "La voiture est en réparation."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "On nettoie les fenêtres."
+            }
+          ]
+        },
+        {
+          "title": "Au passé : wurde",
+          "text": "Passif au passé : wurde (une chose), wurden (plusieurs) + Partizip II à la fin.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "La maison a été construite en 1900."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "Avec un modal : le modal en deuxième position, Partizip II et werden à la fin.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "La voiture doit être réparée."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: edilgen",
+      "points": [
+        {
+          "title": "Edilgen: wird + Partizip II",
+          "text": "Edilgende önemli olan kimin yaptığı değil, ne olduğudur. wird ikinci sırada, Partizip II sonda. Birden çok şey: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Araba tamir ediliyor."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Pencereler temizleniyor."
+            }
+          ]
+        },
+        {
+          "title": "Geçmişte: wurde",
+          "text": "Geçmiş edilgen: wurde (tek şey), wurden (birden çok) + Partizip II sonda.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Ev 1900’de inşa edildi."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "Modal fiille: modal ikinci sırada, sonda Partizip II ve werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Arabanın tamir edilmesi gerekiyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: pasivul",
+      "points": [
+        {
+          "title": "Pasiv: wird + Partizip II",
+          "text": "La pasiv contează ce se întâmplă, nu cine face. wird pe locul doi, Partizip II la final. Mai multe lucruri: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Mașina e reparată."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Ferestrele sunt spălate."
+            }
+          ]
+        },
+        {
+          "title": "La trecut: wurde",
+          "text": "Pasiv la trecut: wurde (un lucru), wurden (mai multe) + Partizip II la final.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Casa a fost construită în 1900."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "Cu un modal: modalul pe locul doi, la final Partizip II și werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Mașina trebuie reparată."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: majhul",
+      "points": [
+        {
+          "title": "Majhul: wird + Partizip II",
+          "text": "Majhul nisbatda kim qilgani emas, nima bo'layotgani muhim. wird ikkinchi o'rinda, Partizip II oxirida. Ko'p narsa: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Mashina ta'mirlanmoqda."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Derazalar yuvilmoqda."
+            }
+          ]
+        },
+        {
+          "title": "O'tgan zamonda: wurde",
+          "text": "O'tgan zamon majhul: wurde (bitta narsa), wurden (ko'p) + Partizip II oxirida.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Uy 1900-yilda qurilgan."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "Modal bilan: modal ikkinchi o'rinda, oxirida Partizip II va werden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "Mashinani ta'mirlash kerak."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: कर्मवाच्य",
+      "points": [
+        {
+          "title": "कर्मवाच्य: wird + Partizip II",
+          "text": "कर्मवाच्य में यह मायने रखता है कि क्या हो रहा है, कौन कर रहा है यह नहीं। wird दूसरे स्थान पर, Partizip II अंत में। कई चीज़ें: werden।",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "गाड़ी ठीक की जा रही है।"
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "खिड़कियाँ साफ़ की जा रही हैं।"
+            }
+          ]
+        },
+        {
+          "title": "भूतकाल में: wurde",
+          "text": "भूतकाल कर्मवाच्य: wurde (एक चीज़), wurden (कई) + Partizip II अंत में।",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "घर 1900 में बना था।"
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "मोडल के साथ: मोडल दूसरे स्थान पर, अंत में Partizip II और werden।",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "गाड़ी ठीक करवानी होगी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: المجهول",
+      "points": [
+        {
+          "title": "المبني للمجهول: wird + Partizip II",
+          "text": "في المبني للمجهول المهم ما يحدث لا من يفعله. wird في المكان الثاني وPartizip II في الآخر. ولعدة أشياء: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "السيارة تُصلَح."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "النوافذ تُنظَّف."
+            }
+          ]
+        },
+        {
+          "title": "في الماضي: wurde",
+          "text": "المجهول في الماضي: wurde (لشيء واحد)، wurden (لعدة أشياء) + Partizip II في الآخر.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "بُني البيت عام 1900."
+            }
+          ]
+        },
+        {
+          "title": "muss ... werden",
+          "text": "مع فعل مساعد: المساعد في المكان الثاني، وفي الآخر Partizip II وwerden.",
+          "examples": [
+            {
+              "de": "Das Auto muss repariert werden.",
+              "tr": "يجب إصلاح السيارة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "craft-valley-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "В Passiv важно не кто делает, а что происходит. wird на втором месте, Partizip II в конце. Много предметов: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Машину ремонтируют."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Окна моют."
+            }
+          ]
+        },
+        {
+          "title": "Кем: von + Dativ",
+          "text": "Если важно, кто делает, добавляем von + Dativ: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Ужин готовит мой папа."
+            }
+          ]
+        },
+        {
+          "title": "В прошлом: wurde",
+          "text": "Прошедшее время Passiv: wurde (один предмет), wurden (много) + Partizip II в конце.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Дом был построен в 1900 году."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "У Passiv важливо не хто робить, а що відбувається. wird на другому місці, Partizip II у кінці. Багато предметів: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Машину ремонтують."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Вікна миють."
+            }
+          ]
+        },
+        {
+          "title": "Ким: von + Dativ",
+          "text": "Якщо важливо, хто робить, додаємо von + Dativ: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Вечерю готує мій тато."
+            }
+          ]
+        },
+        {
+          "title": "У минулому: wurde",
+          "text": "Минулий час Passiv: wurde (один предмет), wurden (багато) + Partizip II у кінці.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Будинок збудували 1900 року."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "Passive: wird + Partizip II",
+          "text": "In the passive what matters is what happens, not who does it. wird in second place, Partizip II at the end. Several things: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "The car is being repaired."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "The windows are being cleaned."
+            }
+          ]
+        },
+        {
+          "title": "By whom: von + dative",
+          "text": "If it matters who does it, add von + dative: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Dinner is cooked by my father."
+            }
+          ]
+        },
+        {
+          "title": "In the past: wurde",
+          "text": "Past passive: wurde (one thing), wurden (several) + Partizip II at the end.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "The house was built in 1900."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "W Passiv ważne jest nie to, kto robi, ale co się dzieje. wird na drugim miejscu, Partizip II na końcu. Wiele rzeczy: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Samochód jest naprawiany."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Okna są myte."
+            }
+          ]
+        },
+        {
+          "title": "Przez kogo: von + Dativ",
+          "text": "Jeśli ważne, kto robi, dodajemy von + Dativ: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Kolację gotuje mój tata."
+            }
+          ]
+        },
+        {
+          "title": "W przeszłości: wurde",
+          "text": "Passiv w przeszłości: wurde (jedna rzecz), wurden (wiele) + Partizip II na końcu.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Dom zbudowano w 1900 roku."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "Pasiva: wird + Partizip II",
+          "text": "En pasiva importa lo que pasa, no quién lo hace. wird en segundo lugar, Partizip II al final. Varias cosas: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "El coche se está reparando."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Se limpian las ventanas."
+            }
+          ]
+        },
+        {
+          "title": "Por quién: von + dativo",
+          "text": "Si importa quién lo hace, se añade von + dativo: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "La cena la prepara mi padre."
+            }
+          ]
+        },
+        {
+          "title": "En pasado: wurde",
+          "text": "Pasiva en pasado: wurde (una cosa), wurden (varias) + Partizip II al final.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "La casa se construyó en 1900."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "Passif : wird + Partizip II",
+          "text": "Au passif, ce qui compte, c’est ce qui se passe, pas qui le fait. wird en deuxième position, Partizip II à la fin. Plusieurs choses : werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "La voiture est en réparation."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "On nettoie les fenêtres."
+            }
+          ]
+        },
+        {
+          "title": "Par qui : von + datif",
+          "text": "Si on veut dire qui le fait, on ajoute von + datif : von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Le dîner est préparé par mon père."
+            }
+          ]
+        },
+        {
+          "title": "Au passé : wurde",
+          "text": "Passif au passé : wurde (une chose), wurden (plusieurs) + Partizip II à la fin.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "La maison a été construite en 1900."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "Edilgen: wird + Partizip II",
+          "text": "Edilgende önemli olan kimin yaptığı değil, ne olduğudur. wird ikinci sırada, Partizip II sonda. Birden çok şey: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Araba tamir ediliyor."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Pencereler temizleniyor."
+            }
+          ]
+        },
+        {
+          "title": "Kim tarafından: von + Dativ",
+          "text": "Kimin yaptığı önemliyse von + Dativ eklenir: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Akşam yemeği babam tarafından pişiriliyor."
+            }
+          ]
+        },
+        {
+          "title": "Geçmişte: wurde",
+          "text": "Geçmiş edilgen: wurde (tek şey), wurden (birden çok) + Partizip II sonda.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Ev 1900’de inşa edildi."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "Pasiv: wird + Partizip II",
+          "text": "La pasiv contează ce se întâmplă, nu cine face. wird pe locul doi, Partizip II la final. Mai multe lucruri: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Mașina e reparată."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Ferestrele sunt spălate."
+            }
+          ]
+        },
+        {
+          "title": "De cine: von + dativ",
+          "text": "Dacă e important cine face, adăugăm von + dativ: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Cina e gătită de tatăl meu."
+            }
+          ]
+        },
+        {
+          "title": "La trecut: wurde",
+          "text": "Pasiv la trecut: wurde (un lucru), wurden (mai multe) + Partizip II la final.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Casa a fost construită în 1900."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "Majhul: wird + Partizip II",
+          "text": "Majhul nisbatda kim qilgani emas, nima bo'layotgani muhim. wird ikkinchi o'rinda, Partizip II oxirida. Ko'p narsa: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Mashina ta'mirlanmoqda."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Derazalar yuvilmoqda."
+            }
+          ]
+        },
+        {
+          "title": "Kim tomonidan: von + Dativ",
+          "text": "Kim qilgani muhim bo'lsa, von + Dativ qo'shiladi: von meiner Mutter, vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "Kechki ovqatni dadam pishiradi."
+            }
+          ]
+        },
+        {
+          "title": "O'tgan zamonda: wurde",
+          "text": "O'tgan zamon majhul: wurde (bitta narsa), wurden (ko'p) + Partizip II oxirida.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "Uy 1900-yilda qurilgan."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "कर्मवाच्य: wird + Partizip II",
+          "text": "कर्मवाच्य में यह मायने रखता है कि क्या हो रहा है, कौन कर रहा है यह नहीं। wird दूसरे स्थान पर, Partizip II अंत में। कई चीज़ें: werden।",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "गाड़ी ठीक की जा रही है।"
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "खिड़कियाँ साफ़ की जा रही हैं।"
+            }
+          ]
+        },
+        {
+          "title": "किसके द्वारा: von + Dativ",
+          "text": "अगर कौन करता है यह ज़रूरी हो, तो von + Dativ जोड़ो: von meiner Mutter, vom Chef (von dem)।",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "रात का खाना मेरे पिता बनाते हैं।"
+            }
+          ]
+        },
+        {
+          "title": "भूतकाल में: wurde",
+          "text": "भूतकाल कर्मवाच्य: wurde (एक चीज़), wurden (कई) + Partizip II अंत में।",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "घर 1900 में बना था।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "المبني للمجهول: wird + Partizip II",
+          "text": "في المبني للمجهول المهم ما يحدث لا من يفعله. wird في المكان الثاني وPartizip II في الآخر. ولعدة أشياء: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "السيارة تُصلَح."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "النوافذ تُنظَّف."
+            }
+          ]
+        },
+        {
+          "title": "من قِبل: von + الجر",
+          "text": "إذا كان الفاعل مهماً نضيف von + الجر: von meiner Mutter، vom Chef (von dem).",
+          "examples": [
+            {
+              "de": "Das Abendessen wird von meinem Vater gekocht.",
+              "tr": "العشاء يطبخه أبي."
+            }
+          ]
+        },
+        {
+          "title": "في الماضي: wurde",
+          "text": "المجهول في الماضي: wurde (لشيء واحد)، wurden (لعدة أشياء) + Partizip II في الآخر.",
+          "examples": [
+            {
+              "de": "Das Haus wurde 1900 gebaut.",
+              "tr": "بُني البيت عام 1900."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

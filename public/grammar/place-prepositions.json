@@ -1,0 +1,2156 @@
+{
+  "place-prep-1": {
+    "ru": {
+      "title": "in, auf, an: где?",
+      "points": [
+        {
+          "title": "in, auf, an",
+          "text": "in значит внутри, auf сверху на поверхности, an сбоку или на вертикальной стене.",
+          "examples": []
+        },
+        {
+          "title": "Wo? + Dativ",
+          "text": "На вопрос Wo? (где?) после предлога места артикль меняется: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Книга лежит на столе."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Картина висит на стене."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "in, auf, an: де?",
+      "points": [
+        {
+          "title": "in, auf, an",
+          "text": "in означає всередині, auf зверху на поверхні, an збоку або на вертикальній стіні.",
+          "examples": []
+        },
+        {
+          "title": "Wo? + Dativ",
+          "text": "На питання Wo? (де?) після прийменника місця артикль змінюється: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Книжка лежить на столі."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Картина висить на стіні."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "in, auf, an: where?",
+      "points": [
+        {
+          "title": "in, auf, an",
+          "text": "in means inside, auf means on top of a surface, an means at the side or on a vertical wall.",
+          "examples": []
+        },
+        {
+          "title": "Wo? + dative",
+          "text": "Answering Wo? (where?), the article after a place preposition changes: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "The book is on the table."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "The picture hangs on the wall."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "in, auf, an: gdzie?",
+      "points": [
+        {
+          "title": "in, auf, an",
+          "text": "in znaczy w środku, auf na powierzchni, an z boku albo na pionowej ścianie.",
+          "examples": []
+        },
+        {
+          "title": "Wo? + Dativ",
+          "text": "Na pytanie Wo? (gdzie?) po przyimku miejsca rodzajnik się zmienia: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Książka leży na stole."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Obraz wisi na ścianie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "in, auf, an: ¿dónde?",
+      "points": [
+        {
+          "title": "in, auf, an",
+          "text": "in es dentro, auf es encima de una superficie, an es al lado o en una pared vertical.",
+          "examples": []
+        },
+        {
+          "title": "Wo? + dativo",
+          "text": "Respondiendo a Wo? (¿dónde?), tras la preposición de lugar el artículo cambia: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "El libro está sobre la mesa."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "El cuadro cuelga de la pared."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "in, auf, an : où ?",
+      "points": [
+        {
+          "title": "in, auf, an",
+          "text": "in veut dire dedans, auf sur une surface, an à côté ou sur un mur vertical.",
+          "examples": []
+        },
+        {
+          "title": "Wo ? + datif",
+          "text": "En réponse à Wo ? (où ?), après une préposition de lieu l’article change : der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Le livre est sur la table."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Le tableau est accroché au mur."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "in, auf, an: nerede?",
+      "points": [
+        {
+          "title": "in, auf, an",
+          "text": "in içinde, auf bir yüzeyin üstünde, an yanında ya da dikey bir duvarda demektir.",
+          "examples": []
+        },
+        {
+          "title": "Wo? + Dativ",
+          "text": "Wo? (nerede?) sorusunda yer edatından sonra artikel değişir: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Kitap masanın üstünde."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Resim duvarda asılı."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "in, auf, an: unde?",
+      "points": [
+        {
+          "title": "in, auf, an",
+          "text": "in înseamnă înăuntru, auf deasupra pe o suprafață, an alături sau pe un perete vertical.",
+          "examples": []
+        },
+        {
+          "title": "Wo? + dativ",
+          "text": "La întrebarea Wo? (unde?), după prepoziția de loc articolul se schimbă: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Cartea e pe masă."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Tabloul atârnă pe perete."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "in, auf, an: qayerda?",
+      "points": [
+        {
+          "title": "in, auf, an",
+          "text": "in ichida, auf sirt ustida, an yonida yoki tik devorda degani.",
+          "examples": []
+        },
+        {
+          "title": "Wo? + Dativ",
+          "text": "Wo? (qayerda?) savolida joy ko'makchisidan keyin artikl o'zgaradi: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Kitob stol ustida."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Rasm devorda osilgan."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "in, auf, an: कहाँ?",
+      "points": [
+        {
+          "title": "in, auf, an",
+          "text": "in मतलब अंदर, auf मतलब किसी सतह के ऊपर, an मतलब बगल में या खड़ी दीवार पर।",
+          "examples": []
+        },
+        {
+          "title": "Wo? + Dativ",
+          "text": "Wo? (कहाँ?) के जवाब में जगह वाले संबंधसूचक के बाद आर्टिकल बदलता है: der → dem, das → dem, die → der।",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "किताब मेज़ पर है।"
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "तस्वीर दीवार पर टँगी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "in وauf وan: أين؟",
+      "points": [
+        {
+          "title": "in وauf وan",
+          "text": "in تعني داخل، وauf فوق سطح، وan بجانب أو على حائط عمودي.",
+          "examples": []
+        },
+        {
+          "title": "Wo؟ + حالة الجر",
+          "text": "جواباً عن Wo؟ (أين؟) تتغير الأداة بعد حرف المكان: der → dem، das → dem، die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "الكتاب على الطاولة."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "اللوحة معلقة على الحائط."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "place-prep-2": {
+    "ru": {
+      "title": "unter и über",
+      "points": [
+        {
+          "title": "unter, über",
+          "text": "unter значит под, über значит над, без касания. После них тоже dem, der, dem.",
+          "examples": [
+            {
+              "de": "Der Hund schläft unter dem Tisch.",
+              "tr": "Собака спит под столом."
+            },
+            {
+              "de": "Die Lampe hängt über dem Sofa.",
+              "tr": "Лампа висит над диваном."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "unter і über",
+      "points": [
+        {
+          "title": "unter, über",
+          "text": "unter означає під, über означає над, без дотику. Після них теж dem, der, dem.",
+          "examples": [
+            {
+              "de": "Der Hund schläft unter dem Tisch.",
+              "tr": "Собака спить під столом."
+            },
+            {
+              "de": "Die Lampe hängt über dem Sofa.",
+              "tr": "Лампа висить над диваном."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "unter and über",
+      "points": [
+        {
+          "title": "unter, über",
+          "text": "unter means under, über means above, without touching. They also take dem, der, dem.",
+          "examples": [
+            {
+              "de": "Der Hund schläft unter dem Tisch.",
+              "tr": "The dog sleeps under the table."
+            },
+            {
+              "de": "Die Lampe hängt über dem Sofa.",
+              "tr": "The lamp hangs above the sofa."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "unter i über",
+      "points": [
+        {
+          "title": "unter, über",
+          "text": "unter znaczy pod, über znaczy nad, bez dotykania. Po nich też dem, der, dem.",
+          "examples": [
+            {
+              "de": "Der Hund schläft unter dem Tisch.",
+              "tr": "Pies śpi pod stołem."
+            },
+            {
+              "de": "Die Lampe hängt über dem Sofa.",
+              "tr": "Lampa wisi nad kanapą."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "unter y über",
+      "points": [
+        {
+          "title": "unter, über",
+          "text": "unter es debajo, über es encima sin tocar. También van con dem, der, dem.",
+          "examples": [
+            {
+              "de": "Der Hund schläft unter dem Tisch.",
+              "tr": "El perro duerme debajo de la mesa."
+            },
+            {
+              "de": "Die Lampe hängt über dem Sofa.",
+              "tr": "La lámpara cuelga sobre el sofá."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "unter et über",
+      "points": [
+        {
+          "title": "unter, über",
+          "text": "unter veut dire sous, über au-dessus, sans toucher. Eux aussi prennent dem, der, dem.",
+          "examples": [
+            {
+              "de": "Der Hund schläft unter dem Tisch.",
+              "tr": "Le chien dort sous la table."
+            },
+            {
+              "de": "Die Lampe hängt über dem Sofa.",
+              "tr": "La lampe est au-dessus du canapé."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "unter ve über",
+      "points": [
+        {
+          "title": "unter, über",
+          "text": "unter altında, über dokunmadan üstünde demektir. Bunlardan sonra da dem, der, dem.",
+          "examples": [
+            {
+              "de": "Der Hund schläft unter dem Tisch.",
+              "tr": "Köpek masanın altında uyuyor."
+            },
+            {
+              "de": "Die Lampe hängt über dem Sofa.",
+              "tr": "Lamba kanepenin üstünde asılı."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "unter și über",
+      "points": [
+        {
+          "title": "unter, über",
+          "text": "unter înseamnă sub, über deasupra, fără atingere. Și după ele dem, der, dem.",
+          "examples": [
+            {
+              "de": "Der Hund schläft unter dem Tisch.",
+              "tr": "Câinele doarme sub masă."
+            },
+            {
+              "de": "Die Lampe hängt über dem Sofa.",
+              "tr": "Lampa atârnă deasupra canapelei."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "unter va über",
+      "points": [
+        {
+          "title": "unter, über",
+          "text": "unter ostida, über tegmasdan ustida degani. Ulardan keyin ham dem, der, dem.",
+          "examples": [
+            {
+              "de": "Der Hund schläft unter dem Tisch.",
+              "tr": "It stol ostida uxlayapti."
+            },
+            {
+              "de": "Die Lampe hängt über dem Sofa.",
+              "tr": "Chiroq divan ustida osilgan."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "unter और über",
+      "points": [
+        {
+          "title": "unter, über",
+          "text": "unter मतलब नीचे, über मतलब ऊपर, बिना छुए। इनके बाद भी dem, der, dem।",
+          "examples": [
+            {
+              "de": "Der Hund schläft unter dem Tisch.",
+              "tr": "कुत्ता मेज़ के नीचे सो रहा है।"
+            },
+            {
+              "de": "Die Lampe hängt über dem Sofa.",
+              "tr": "लैंप सोफ़े के ऊपर टँगा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "unter وüber",
+      "points": [
+        {
+          "title": "unter, über",
+          "text": "unter تعني تحت، وüber فوق دون تلامس. وبعدهما أيضاً dem وder وdem.",
+          "examples": [
+            {
+              "de": "Der Hund schläft unter dem Tisch.",
+              "tr": "الكلب ينام تحت الطاولة."
+            },
+            {
+              "de": "Die Lampe hängt über dem Sofa.",
+              "tr": "المصباح معلق فوق الأريكة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "place-prep-3": {
+    "ru": {
+      "title": "vor и hinter",
+      "points": [
+        {
+          "title": "vor, hinter",
+          "text": "vor значит перед, hinter значит за, позади.",
+          "examples": [
+            {
+              "de": "Das Auto steht vor dem Haus.",
+              "tr": "Машина стоит перед домом."
+            },
+            {
+              "de": "hinter der Tür",
+              "tr": "за дверью"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "vor і hinter",
+      "points": [
+        {
+          "title": "vor, hinter",
+          "text": "vor означає перед, hinter означає за, позаду.",
+          "examples": [
+            {
+              "de": "Das Auto steht vor dem Haus.",
+              "tr": "Машина стоїть перед будинком."
+            },
+            {
+              "de": "hinter der Tür",
+              "tr": "за дверима"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "vor and hinter",
+      "points": [
+        {
+          "title": "vor, hinter",
+          "text": "vor means in front of, hinter means behind.",
+          "examples": [
+            {
+              "de": "Das Auto steht vor dem Haus.",
+              "tr": "The car is in front of the house."
+            },
+            {
+              "de": "hinter der Tür",
+              "tr": "behind the door"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "vor i hinter",
+      "points": [
+        {
+          "title": "vor, hinter",
+          "text": "vor znaczy przed, hinter znaczy za.",
+          "examples": [
+            {
+              "de": "Das Auto steht vor dem Haus.",
+              "tr": "Samochód stoi przed domem."
+            },
+            {
+              "de": "hinter der Tür",
+              "tr": "za drzwiami"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "vor y hinter",
+      "points": [
+        {
+          "title": "vor, hinter",
+          "text": "vor es delante de, hinter es detrás de.",
+          "examples": [
+            {
+              "de": "Das Auto steht vor dem Haus.",
+              "tr": "El coche está delante de la casa."
+            },
+            {
+              "de": "hinter der Tür",
+              "tr": "detrás de la puerta"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "vor et hinter",
+      "points": [
+        {
+          "title": "vor, hinter",
+          "text": "vor veut dire devant, hinter derrière.",
+          "examples": [
+            {
+              "de": "Das Auto steht vor dem Haus.",
+              "tr": "La voiture est devant la maison."
+            },
+            {
+              "de": "hinter der Tür",
+              "tr": "derrière la porte"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "vor ve hinter",
+      "points": [
+        {
+          "title": "vor, hinter",
+          "text": "vor önünde, hinter arkasında demektir.",
+          "examples": [
+            {
+              "de": "Das Auto steht vor dem Haus.",
+              "tr": "Araba evin önünde."
+            },
+            {
+              "de": "hinter der Tür",
+              "tr": "kapının arkasında"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "vor și hinter",
+      "points": [
+        {
+          "title": "vor, hinter",
+          "text": "vor înseamnă în fața, hinter în spatele.",
+          "examples": [
+            {
+              "de": "Das Auto steht vor dem Haus.",
+              "tr": "Mașina e în fața casei."
+            },
+            {
+              "de": "hinter der Tür",
+              "tr": "în spatele ușii"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "vor va hinter",
+      "points": [
+        {
+          "title": "vor, hinter",
+          "text": "vor oldida, hinter orqasida degani.",
+          "examples": [
+            {
+              "de": "Das Auto steht vor dem Haus.",
+              "tr": "Mashina uy oldida turibdi."
+            },
+            {
+              "de": "hinter der Tür",
+              "tr": "eshik orqasida"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "vor और hinter",
+      "points": [
+        {
+          "title": "vor, hinter",
+          "text": "vor मतलब सामने, hinter मतलब पीछे।",
+          "examples": [
+            {
+              "de": "Das Auto steht vor dem Haus.",
+              "tr": "गाड़ी घर के सामने खड़ी है।"
+            },
+            {
+              "de": "hinter der Tür",
+              "tr": "दरवाज़े के पीछे"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "vor وhinter",
+      "points": [
+        {
+          "title": "vor, hinter",
+          "text": "vor تعني أمام، وhinter خلف.",
+          "examples": [
+            {
+              "de": "Das Auto steht vor dem Haus.",
+              "tr": "السيارة أمام البيت."
+            },
+            {
+              "de": "hinter der Tür",
+              "tr": "خلف الباب"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "place-prep-4": {
+    "ru": {
+      "title": "neben и zwischen",
+      "points": [
+        {
+          "title": "neben, zwischen",
+          "text": "neben значит рядом с, zwischen значит между. После zwischen обычно два предмета через und.",
+          "examples": [
+            {
+              "de": "zwischen dem Fenster und der Tür",
+              "tr": "между окном и дверью"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "neben і zwischen",
+      "points": [
+        {
+          "title": "neben, zwischen",
+          "text": "neben означає поруч із, zwischen означає між. Після zwischen зазвичай два предмети через und.",
+          "examples": [
+            {
+              "de": "zwischen dem Fenster und der Tür",
+              "tr": "між вікном і дверима"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "neben and zwischen",
+      "points": [
+        {
+          "title": "neben, zwischen",
+          "text": "neben means next to, zwischen means between. After zwischen there are usually two things joined with und.",
+          "examples": [
+            {
+              "de": "zwischen dem Fenster und der Tür",
+              "tr": "between the window and the door"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "neben i zwischen",
+      "points": [
+        {
+          "title": "neben, zwischen",
+          "text": "neben znaczy obok, zwischen znaczy między. Po zwischen zwykle dwie rzeczy przez und.",
+          "examples": [
+            {
+              "de": "zwischen dem Fenster und der Tür",
+              "tr": "między oknem a drzwiami"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "neben y zwischen",
+      "points": [
+        {
+          "title": "neben, zwischen",
+          "text": "neben es al lado de, zwischen es entre. Tras zwischen suele haber dos cosas con und.",
+          "examples": [
+            {
+              "de": "zwischen dem Fenster und der Tür",
+              "tr": "entre la ventana y la puerta"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "neben et zwischen",
+      "points": [
+        {
+          "title": "neben, zwischen",
+          "text": "neben veut dire à côté de, zwischen entre. Après zwischen, il y a souvent deux choses reliées par und.",
+          "examples": [
+            {
+              "de": "zwischen dem Fenster und der Tür",
+              "tr": "entre la fenêtre et la porte"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "neben ve zwischen",
+      "points": [
+        {
+          "title": "neben, zwischen",
+          "text": "neben yanında, zwischen arasında demektir. zwischen’den sonra genelde und ile iki şey gelir.",
+          "examples": [
+            {
+              "de": "zwischen dem Fenster und der Tür",
+              "tr": "pencere ile kapının arasında"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "neben și zwischen",
+      "points": [
+        {
+          "title": "neben, zwischen",
+          "text": "neben înseamnă lângă, zwischen între. După zwischen de obicei două lucruri legate cu und.",
+          "examples": [
+            {
+              "de": "zwischen dem Fenster und der Tür",
+              "tr": "între fereastră și ușă"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "neben va zwischen",
+      "points": [
+        {
+          "title": "neben, zwischen",
+          "text": "neben yonida, zwischen orasida degani. zwischen dan keyin odatda und bilan ikki narsa keladi.",
+          "examples": [
+            {
+              "de": "zwischen dem Fenster und der Tür",
+              "tr": "deraza va eshik orasida"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "neben और zwischen",
+      "points": [
+        {
+          "title": "neben, zwischen",
+          "text": "neben मतलब बगल में, zwischen मतलब बीच में। zwischen के बाद आमतौर पर und से जुड़ी दो चीज़ें।",
+          "examples": [
+            {
+              "de": "zwischen dem Fenster und der Tür",
+              "tr": "खिड़की और दरवाज़े के बीच"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "neben وzwischen",
+      "points": [
+        {
+          "title": "neben, zwischen",
+          "text": "neben تعني بجانب، وzwischen بين. وبعد zwischen يأتي عادة شيئان مع und.",
+          "examples": [
+            {
+              "de": "zwischen dem Fenster und der Tür",
+              "tr": "بين النافذة والباب"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "place-prep-5": {
+    "ru": {
+      "title": "im и am: в городе",
+      "points": [
+        {
+          "title": "in + dem = im, an + dem = am",
+          "text": "Предлог и dem часто сливаются: im Park, am Bahnhof. С die не сливаются: in der Stadt, an der Haltestelle.",
+          "examples": [
+            {
+              "de": "Wir spazieren im Park.",
+              "tr": "Мы гуляем в парке."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "im і am: у місті",
+      "points": [
+        {
+          "title": "in + dem = im, an + dem = am",
+          "text": "Прийменник і dem часто зливаються: im Park, am Bahnhof. З die не зливаються: in der Stadt, an der Haltestelle.",
+          "examples": [
+            {
+              "de": "Wir spazieren im Park.",
+              "tr": "Ми гуляємо в парку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "im and am: in town",
+      "points": [
+        {
+          "title": "in + dem = im, an + dem = am",
+          "text": "The preposition and dem often merge: im Park, am Bahnhof. With die they don’t: in der Stadt, an der Haltestelle.",
+          "examples": [
+            {
+              "de": "Wir spazieren im Park.",
+              "tr": "We walk in the park."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "im i am: w mieście",
+      "points": [
+        {
+          "title": "in + dem = im, an + dem = am",
+          "text": "Przyimek i dem często się łączą: im Park, am Bahnhof. Z die się nie łączą: in der Stadt, an der Haltestelle.",
+          "examples": [
+            {
+              "de": "Wir spazieren im Park.",
+              "tr": "Spacerujemy w parku."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "im y am: en la ciudad",
+      "points": [
+        {
+          "title": "in + dem = im, an + dem = am",
+          "text": "La preposición y dem se suelen unir: im Park, am Bahnhof. Con die no: in der Stadt, an der Haltestelle.",
+          "examples": [
+            {
+              "de": "Wir spazieren im Park.",
+              "tr": "Paseamos por el parque."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "im et am : en ville",
+      "points": [
+        {
+          "title": "in + dem = im, an + dem = am",
+          "text": "La préposition et dem fusionnent souvent : im Park, am Bahnhof. Avec die, non : in der Stadt, an der Haltestelle.",
+          "examples": [
+            {
+              "de": "Wir spazieren im Park.",
+              "tr": "Nous nous promenons dans le parc."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "im ve am: şehirde",
+      "points": [
+        {
+          "title": "in + dem = im, an + dem = am",
+          "text": "Edat ve dem çoğu zaman birleşir: im Park, am Bahnhof. die ile birleşmez: in der Stadt, an der Haltestelle.",
+          "examples": [
+            {
+              "de": "Wir spazieren im Park.",
+              "tr": "Parkta yürüyoruz."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "im și am: în oraș",
+      "points": [
+        {
+          "title": "in + dem = im, an + dem = am",
+          "text": "Prepoziția și dem se contopesc des: im Park, am Bahnhof. Cu die nu: in der Stadt, an der Haltestelle.",
+          "examples": [
+            {
+              "de": "Wir spazieren im Park.",
+              "tr": "Ne plimbăm prin parc."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "im va am: shaharda",
+      "points": [
+        {
+          "title": "in + dem = im, an + dem = am",
+          "text": "Ko'makchi va dem ko'pincha qo'shiladi: im Park, am Bahnhof. die bilan qo'shilmaydi: in der Stadt, an der Haltestelle.",
+          "examples": [
+            {
+              "de": "Wir spazieren im Park.",
+              "tr": "Biz parkda sayr qilamiz."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "im और am: शहर में",
+      "points": [
+        {
+          "title": "in + dem = im, an + dem = am",
+          "text": "संबंधसूचक और dem अक्सर मिल जाते हैं: im Park, am Bahnhof। die के साथ नहीं: in der Stadt, an der Haltestelle।",
+          "examples": [
+            {
+              "de": "Wir spazieren im Park.",
+              "tr": "हम पार्क में टहलते हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "im وam: في المدينة",
+      "points": [
+        {
+          "title": "in + dem = im, an + dem = am",
+          "text": "غالباً يندمج الحرف مع dem: im Park، am Bahnhof. ولا يندمج مع die: in der Stadt، an der Haltestelle.",
+          "examples": [
+            {
+              "de": "Wir spazieren im Park.",
+              "tr": "نتنزه في الحديقة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "place-prep-6": {
+    "ru": {
+      "title": "Wo? и mein, dein",
+      "points": [
+        {
+          "title": "meinem, meiner",
+          "text": "mein и dein получают то же окончание, что и артикль: dem → meinem, der → meiner.",
+          "examples": [
+            {
+              "de": "in meinem Zimmer, in meiner Tasche",
+              "tr": "в моей комнате, в моей сумке"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Wo? і mein, dein",
+      "points": [
+        {
+          "title": "meinem, meiner",
+          "text": "mein і dein отримують те саме закінчення, що й артикль: dem → meinem, der → meiner.",
+          "examples": [
+            {
+              "de": "in meinem Zimmer, in meiner Tasche",
+              "tr": "у моїй кімнаті, у моїй сумці"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Wo? and mein, dein",
+      "points": [
+        {
+          "title": "meinem, meiner",
+          "text": "mein and dein take the same ending as the article: dem → meinem, der → meiner.",
+          "examples": [
+            {
+              "de": "in meinem Zimmer, in meiner Tasche",
+              "tr": "in my room, in my bag"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Wo? i mein, dein",
+      "points": [
+        {
+          "title": "meinem, meiner",
+          "text": "mein i dein dostają tę samą końcówkę co rodzajnik: dem → meinem, der → meiner.",
+          "examples": [
+            {
+              "de": "in meinem Zimmer, in meiner Tasche",
+              "tr": "w moim pokoju, w mojej torbie"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Wo? y mein, dein",
+      "points": [
+        {
+          "title": "meinem, meiner",
+          "text": "mein y dein toman la misma terminación que el artículo: dem → meinem, der → meiner.",
+          "examples": [
+            {
+              "de": "in meinem Zimmer, in meiner Tasche",
+              "tr": "en mi habitación, en mi bolso"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Wo ? et mein, dein",
+      "points": [
+        {
+          "title": "meinem, meiner",
+          "text": "mein et dein prennent la même terminaison que l’article : dem → meinem, der → meiner.",
+          "examples": [
+            {
+              "de": "in meinem Zimmer, in meiner Tasche",
+              "tr": "dans ma chambre, dans mon sac"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Wo? ve mein, dein",
+      "points": [
+        {
+          "title": "meinem, meiner",
+          "text": "mein ve dein artikelle aynı eki alır: dem → meinem, der → meiner.",
+          "examples": [
+            {
+              "de": "in meinem Zimmer, in meiner Tasche",
+              "tr": "odamda, çantamda"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Wo? și mein, dein",
+      "points": [
+        {
+          "title": "meinem, meiner",
+          "text": "mein și dein primesc aceeași terminație ca articolul: dem → meinem, der → meiner.",
+          "examples": [
+            {
+              "de": "in meinem Zimmer, in meiner Tasche",
+              "tr": "în camera mea, în geanta mea"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Wo? va mein, dein",
+      "points": [
+        {
+          "title": "meinem, meiner",
+          "text": "mein va dein artikl bilan bir xil qo'shimcha oladi: dem → meinem, der → meiner.",
+          "examples": [
+            {
+              "de": "in meinem Zimmer, in meiner Tasche",
+              "tr": "xonamda, sumkamda"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "Wo? और mein, dein",
+      "points": [
+        {
+          "title": "meinem, meiner",
+          "text": "mein और dein को आर्टिकल जैसा ही अंत मिलता है: dem → meinem, der → meiner।",
+          "examples": [
+            {
+              "de": "in meinem Zimmer, in meiner Tasche",
+              "tr": "मेरे कमरे में, मेरे थैले में"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "Wo؟ وmein وdein",
+      "points": [
+        {
+          "title": "meinem وmeiner",
+          "text": "تأخذ mein وdein نهاية الأداة نفسها: dem → meinem، der → meiner.",
+          "examples": [
+            {
+              "de": "in meinem Zimmer, in meiner Tasche",
+              "tr": "في غرفتي، في حقيبتي"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "place-prep-9": {
+    "ru": {
+      "title": "Практика: моя комната",
+      "points": [
+        {
+          "title": "Wo? + Dativ",
+          "text": "На вопрос Wo? (где?) после предлога места артикль меняется: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Книга лежит на столе."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Картина висит на стене."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: моя кімната",
+      "points": [
+        {
+          "title": "Wo? + Dativ",
+          "text": "На питання Wo? (де?) після прийменника місця артикль змінюється: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Книжка лежить на столі."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Картина висить на стіні."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: my room",
+      "points": [
+        {
+          "title": "Wo? + dative",
+          "text": "Answering Wo? (where?), the article after a place preposition changes: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "The book is on the table."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "The picture hangs on the wall."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: mój pokój",
+      "points": [
+        {
+          "title": "Wo? + Dativ",
+          "text": "Na pytanie Wo? (gdzie?) po przyimku miejsca rodzajnik się zmienia: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Książka leży na stole."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Obraz wisi na ścianie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: mi habitación",
+      "points": [
+        {
+          "title": "Wo? + dativo",
+          "text": "Respondiendo a Wo? (¿dónde?), tras la preposición de lugar el artículo cambia: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "El libro está sobre la mesa."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "El cuadro cuelga de la pared."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : ma chambre",
+      "points": [
+        {
+          "title": "Wo ? + datif",
+          "text": "En réponse à Wo ? (où ?), après une préposition de lieu l’article change : der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Le livre est sur la table."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Le tableau est accroché au mur."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: odam",
+      "points": [
+        {
+          "title": "Wo? + Dativ",
+          "text": "Wo? (nerede?) sorusunda yer edatından sonra artikel değişir: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Kitap masanın üstünde."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Resim duvarda asılı."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: camera mea",
+      "points": [
+        {
+          "title": "Wo? + dativ",
+          "text": "La întrebarea Wo? (unde?), după prepoziția de loc articolul se schimbă: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Cartea e pe masă."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Tabloul atârnă pe perete."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: mening xonam",
+      "points": [
+        {
+          "title": "Wo? + Dativ",
+          "text": "Wo? (qayerda?) savolida joy ko'makchisidan keyin artikl o'zgaradi: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Kitob stol ustida."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Rasm devorda osilgan."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: मेरा कमरा",
+      "points": [
+        {
+          "title": "Wo? + Dativ",
+          "text": "Wo? (कहाँ?) के जवाब में जगह वाले संबंधसूचक के बाद आर्टिकल बदलता है: der → dem, das → dem, die → der।",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "किताब मेज़ पर है।"
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "तस्वीर दीवार पर टँगी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: غرفتي",
+      "points": [
+        {
+          "title": "Wo؟ + حالة الجر",
+          "text": "جواباً عن Wo؟ (أين؟) تتغير الأداة بعد حرف المكان: der → dem، das → dem، die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "الكتاب على الطاولة."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "اللوحة معلقة على الحائط."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "place-prep-10": {
+    "ru": {
+      "title": "Практика: где это в городе?",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Повторяем: im, am, а с die без слияния: in der Stadt, an der Ecke, neben der Schule.",
+          "examples": [
+            {
+              "de": "Das Café ist an der Ecke.",
+              "tr": "Кафе на углу."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: де це в місті?",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Повторюємо: im, am, а з die без злиття: in der Stadt, an der Ecke, neben der Schule.",
+          "examples": [
+            {
+              "de": "Das Café ist an der Ecke.",
+              "tr": "Кафе на розі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: where is it in town?",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "Review: im, am, and with die no merging: in der Stadt, an der Ecke, neben der Schule.",
+          "examples": [
+            {
+              "de": "Das Café ist an der Ecke.",
+              "tr": "The café is on the corner."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: gdzie to jest w mieście?",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Powtarzamy: im, am, a z die bez łączenia: in der Stadt, an der Ecke, neben der Schule.",
+          "examples": [
+            {
+              "de": "Das Café ist an der Ecke.",
+              "tr": "Kawiarnia jest na rogu."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: ¿dónde está en la ciudad?",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Repaso: im, am, y con die sin unir: in der Stadt, an der Ecke, neben der Schule.",
+          "examples": [
+            {
+              "de": "Das Café ist an der Ecke.",
+              "tr": "El café está en la esquina."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : où est-ce en ville ?",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "Révision : im, am, et avec die sans fusion : in der Stadt, an der Ecke, neben der Schule.",
+          "examples": [
+            {
+              "de": "Das Café ist an der Ecke.",
+              "tr": "Le café est au coin."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: şehirde nerede?",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Tekrar: im, am; die ile birleşme yok: in der Stadt, an der Ecke, neben der Schule.",
+          "examples": [
+            {
+              "de": "Das Café ist an der Ecke.",
+              "tr": "Kafe köşede."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: unde e în oraș?",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Recapitulăm: im, am, iar cu die fără contopire: in der Stadt, an der Ecke, neben der Schule.",
+          "examples": [
+            {
+              "de": "Das Café ist an der Ecke.",
+              "tr": "Cafeneaua e la colț."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: shaharda qayerda?",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Takrorlaymiz: im, am, die bilan qo'shilmaydi: in der Stadt, an der Ecke, neben der Schule.",
+          "examples": [
+            {
+              "de": "Das Café ist an der Ecke.",
+              "tr": "Kafe muyulishda."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: शहर में कहाँ है?",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "दोहराव: im, am, और die के साथ बिना मिले: in der Stadt, an der Ecke, neben der Schule।",
+          "examples": [
+            {
+              "de": "Das Café ist an der Ecke.",
+              "tr": "कैफ़े कोने पर है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: أين يقع في المدينة؟",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "مراجعة: im وam، ومع die بدون اندماج: in der Stadt، an der Ecke، neben der Schule.",
+          "examples": [
+            {
+              "de": "Das Café ist an der Ecke.",
+              "tr": "المقهى عند الزاوية."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "place-prep-7": {
+    "ru": {
+      "title": "Повторение: дом и город",
+      "points": [
+        {
+          "title": "in, auf, an",
+          "text": "in значит внутри, auf сверху на поверхности, an сбоку или на вертикальной стене.",
+          "examples": []
+        },
+        {
+          "title": "Wo? + Dativ",
+          "text": "На вопрос Wo? (где?) после предлога места артикль меняется: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Книга лежит на столе."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Картина висит на стене."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: дім і місто",
+      "points": [
+        {
+          "title": "in, auf, an",
+          "text": "in означає всередині, auf зверху на поверхні, an збоку або на вертикальній стіні.",
+          "examples": []
+        },
+        {
+          "title": "Wo? + Dativ",
+          "text": "На питання Wo? (де?) після прийменника місця артикль змінюється: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Книжка лежить на столі."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Картина висить на стіні."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: home and town",
+      "points": [
+        {
+          "title": "in, auf, an",
+          "text": "in means inside, auf means on top of a surface, an means at the side or on a vertical wall.",
+          "examples": []
+        },
+        {
+          "title": "Wo? + dative",
+          "text": "Answering Wo? (where?), the article after a place preposition changes: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "The book is on the table."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "The picture hangs on the wall."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: dom i miasto",
+      "points": [
+        {
+          "title": "in, auf, an",
+          "text": "in znaczy w środku, auf na powierzchni, an z boku albo na pionowej ścianie.",
+          "examples": []
+        },
+        {
+          "title": "Wo? + Dativ",
+          "text": "Na pytanie Wo? (gdzie?) po przyimku miejsca rodzajnik się zmienia: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Książka leży na stole."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Obraz wisi na ścianie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: casa y ciudad",
+      "points": [
+        {
+          "title": "in, auf, an",
+          "text": "in es dentro, auf es encima de una superficie, an es al lado o en una pared vertical.",
+          "examples": []
+        },
+        {
+          "title": "Wo? + dativo",
+          "text": "Respondiendo a Wo? (¿dónde?), tras la preposición de lugar el artículo cambia: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "El libro está sobre la mesa."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "El cuadro cuelga de la pared."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : maison et ville",
+      "points": [
+        {
+          "title": "in, auf, an",
+          "text": "in veut dire dedans, auf sur une surface, an à côté ou sur un mur vertical.",
+          "examples": []
+        },
+        {
+          "title": "Wo ? + datif",
+          "text": "En réponse à Wo ? (où ?), après une préposition de lieu l’article change : der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Le livre est sur la table."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Le tableau est accroché au mur."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: ev ve şehir",
+      "points": [
+        {
+          "title": "in, auf, an",
+          "text": "in içinde, auf bir yüzeyin üstünde, an yanında ya da dikey bir duvarda demektir.",
+          "examples": []
+        },
+        {
+          "title": "Wo? + Dativ",
+          "text": "Wo? (nerede?) sorusunda yer edatından sonra artikel değişir: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Kitap masanın üstünde."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Resim duvarda asılı."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: casă și oraș",
+      "points": [
+        {
+          "title": "in, auf, an",
+          "text": "in înseamnă înăuntru, auf deasupra pe o suprafață, an alături sau pe un perete vertical.",
+          "examples": []
+        },
+        {
+          "title": "Wo? + dativ",
+          "text": "La întrebarea Wo? (unde?), după prepoziția de loc articolul se schimbă: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Cartea e pe masă."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Tabloul atârnă pe perete."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: uy va shahar",
+      "points": [
+        {
+          "title": "in, auf, an",
+          "text": "in ichida, auf sirt ustida, an yonida yoki tik devorda degani.",
+          "examples": []
+        },
+        {
+          "title": "Wo? + Dativ",
+          "text": "Wo? (qayerda?) savolida joy ko'makchisidan keyin artikl o'zgaradi: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Kitob stol ustida."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Rasm devorda osilgan."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: घर और शहर",
+      "points": [
+        {
+          "title": "in, auf, an",
+          "text": "in मतलब अंदर, auf मतलब किसी सतह के ऊपर, an मतलब बगल में या खड़ी दीवार पर।",
+          "examples": []
+        },
+        {
+          "title": "Wo? + Dativ",
+          "text": "Wo? (कहाँ?) के जवाब में जगह वाले संबंधसूचक के बाद आर्टिकल बदलता है: der → dem, das → dem, die → der।",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "किताब मेज़ पर है।"
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "तस्वीर दीवार पर टँगी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: البيت والمدينة",
+      "points": [
+        {
+          "title": "in وauf وan",
+          "text": "in تعني داخل، وauf فوق سطح، وan بجانب أو على حائط عمودي.",
+          "examples": []
+        },
+        {
+          "title": "Wo؟ + حالة الجر",
+          "text": "جواباً عن Wo؟ (أين؟) تتغير الأداة بعد حرف المكان: der → dem، das → dem، die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "الكتاب على الطاولة."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "اللوحة معلقة على الحائط."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "place-prep-8": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "Wo? + Dativ",
+          "text": "На вопрос Wo? (где?) после предлога места артикль меняется: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Книга лежит на столе."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Картина висит на стене."
+            }
+          ]
+        },
+        {
+          "title": "Все предлоги места",
+          "text": "in, auf, an, unter, über, vor, hinter, neben, zwischen: на вопрос Wo? все с dem, der, dem.",
+          "examples": [
+            {
+              "de": "Wir frühstücken auf dem Balkon.",
+              "tr": "Мы завтракаем на балконе."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "Wo? + Dativ",
+          "text": "На питання Wo? (де?) після прийменника місця артикль змінюється: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Книжка лежить на столі."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Картина висить на стіні."
+            }
+          ]
+        },
+        {
+          "title": "Усі прийменники місця",
+          "text": "in, auf, an, unter, über, vor, hinter, neben, zwischen: на питання Wo? усі з dem, der, dem.",
+          "examples": [
+            {
+              "de": "Wir frühstücken auf dem Balkon.",
+              "tr": "Ми снідаємо на балконі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "Wo? + dative",
+          "text": "Answering Wo? (where?), the article after a place preposition changes: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "The book is on the table."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "The picture hangs on the wall."
+            }
+          ]
+        },
+        {
+          "title": "All place prepositions",
+          "text": "in, auf, an, unter, über, vor, hinter, neben, zwischen: answering Wo? all take dem, der, dem.",
+          "examples": [
+            {
+              "de": "Wir frühstücken auf dem Balkon.",
+              "tr": "We have breakfast on the balcony."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "Wo? + Dativ",
+          "text": "Na pytanie Wo? (gdzie?) po przyimku miejsca rodzajnik się zmienia: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Książka leży na stole."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Obraz wisi na ścianie."
+            }
+          ]
+        },
+        {
+          "title": "Wszystkie przyimki miejsca",
+          "text": "in, auf, an, unter, über, vor, hinter, neben, zwischen: na pytanie Wo? wszystkie z dem, der, dem.",
+          "examples": [
+            {
+              "de": "Wir frühstücken auf dem Balkon.",
+              "tr": "Jemy śniadanie na balkonie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "Wo? + dativo",
+          "text": "Respondiendo a Wo? (¿dónde?), tras la preposición de lugar el artículo cambia: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "El libro está sobre la mesa."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "El cuadro cuelga de la pared."
+            }
+          ]
+        },
+        {
+          "title": "Todas las preposiciones de lugar",
+          "text": "in, auf, an, unter, über, vor, hinter, neben, zwischen: con Wo? todas van con dem, der, dem.",
+          "examples": [
+            {
+              "de": "Wir frühstücken auf dem Balkon.",
+              "tr": "Desayunamos en el balcón."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "Wo ? + datif",
+          "text": "En réponse à Wo ? (où ?), après une préposition de lieu l’article change : der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Le livre est sur la table."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Le tableau est accroché au mur."
+            }
+          ]
+        },
+        {
+          "title": "Toutes les prépositions de lieu",
+          "text": "in, auf, an, unter, über, vor, hinter, neben, zwischen : avec Wo ?, toutes prennent dem, der, dem.",
+          "examples": [
+            {
+              "de": "Wir frühstücken auf dem Balkon.",
+              "tr": "Nous prenons le petit déjeuner sur le balcon."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "Wo? + Dativ",
+          "text": "Wo? (nerede?) sorusunda yer edatından sonra artikel değişir: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Kitap masanın üstünde."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Resim duvarda asılı."
+            }
+          ]
+        },
+        {
+          "title": "Tüm yer edatları",
+          "text": "in, auf, an, unter, über, vor, hinter, neben, zwischen: Wo? sorusunda hepsi dem, der, dem alır.",
+          "examples": [
+            {
+              "de": "Wir frühstücken auf dem Balkon.",
+              "tr": "Balkonda kahvaltı yapıyoruz."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "Wo? + dativ",
+          "text": "La întrebarea Wo? (unde?), după prepoziția de loc articolul se schimbă: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Cartea e pe masă."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Tabloul atârnă pe perete."
+            }
+          ]
+        },
+        {
+          "title": "Toate prepozițiile de loc",
+          "text": "in, auf, an, unter, über, vor, hinter, neben, zwischen: la Wo? toate cu dem, der, dem.",
+          "examples": [
+            {
+              "de": "Wir frühstücken auf dem Balkon.",
+              "tr": "Luăm micul dejun pe balcon."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "Wo? + Dativ",
+          "text": "Wo? (qayerda?) savolida joy ko'makchisidan keyin artikl o'zgaradi: der → dem, das → dem, die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Kitob stol ustida."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "Rasm devorda osilgan."
+            }
+          ]
+        },
+        {
+          "title": "Barcha joy ko'makchilari",
+          "text": "in, auf, an, unter, über, vor, hinter, neben, zwischen: Wo? savolida hammasi dem, der, dem bilan.",
+          "examples": [
+            {
+              "de": "Wir frühstücken auf dem Balkon.",
+              "tr": "Balkonda nonushta qilamiz."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "Wo? + Dativ",
+          "text": "Wo? (कहाँ?) के जवाब में जगह वाले संबंधसूचक के बाद आर्टिकल बदलता है: der → dem, das → dem, die → der।",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "किताब मेज़ पर है।"
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "तस्वीर दीवार पर टँगी है।"
+            }
+          ]
+        },
+        {
+          "title": "सभी जगह वाले संबंधसूचक",
+          "text": "in, auf, an, unter, über, vor, hinter, neben, zwischen: Wo? में सभी dem, der, dem के साथ।",
+          "examples": [
+            {
+              "de": "Wir frühstücken auf dem Balkon.",
+              "tr": "हम बालकनी में नाश्ता करते हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "Wo؟ + حالة الجر",
+          "text": "جواباً عن Wo؟ (أين؟) تتغير الأداة بعد حرف المكان: der → dem، das → dem، die → der.",
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "الكتاب على الطاولة."
+            },
+            {
+              "de": "Das Bild hängt an der Wand.",
+              "tr": "اللوحة معلقة على الحائط."
+            }
+          ]
+        },
+        {
+          "title": "كل حروف المكان",
+          "text": "in، auf، an، unter، über، vor، hinter، neben، zwischen: مع Wo؟ كلها تأخذ dem وder وdem.",
+          "examples": [
+            {
+              "de": "Wir frühstücken auf dem Balkon.",
+              "tr": "نفطر على الشرفة."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

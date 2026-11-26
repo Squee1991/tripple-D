@@ -1,0 +1,2332 @@
+{
+  "task-tower-one": {
+    "ru": {
+      "title": "Нет желания: Lust zu",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "После Lust, Zeit, Angst, Möglichkeit стоит zu + инфинитив в самом конце. С приставкой zu внутри: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "У меня нет желания сегодня работать."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Немає бажання: Lust zu",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "Після Lust, Zeit, Angst, Möglichkeit стоїть zu + інфінітив у самому кінці. З префіксом zu всередині: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "Я не маю бажання сьогодні працювати."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Don’t feel like: Lust zu",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "After Lust, Zeit, Angst, Möglichkeit comes zu + infinitive at the very end. With a prefix zu goes inside: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "I don’t feel like working today."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Brak ochoty: Lust zu",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "Po Lust, Zeit, Angst, Möglichkeit stoi zu + bezokolicznik na samym końcu. Z przedrostkiem zu w środku: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "Nie mam ochoty dziś pracować."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Sin ganas: Lust zu",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "Después de Lust, Zeit, Angst, Möglichkeit va zu + infinitivo al final. Con prefijo, zu va dentro: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "No tengo ganas de trabajar hoy."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pas envie : Lust zu",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "Après Lust, Zeit, Angst, Möglichkeit vient zu + infinitif tout à la fin. Avec un préfixe, zu se met à l’intérieur : aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "Je n’ai pas envie de travailler aujourd’hui."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Hevesim yok: Lust zu",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "Lust, Zeit, Angst, Möglichkeit’ten sonra en sonda zu + mastar gelir. Ön ekli fiilde zu içeride: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "Bugün çalışmaya hiç hevesim yok."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "N-am chef: Lust zu",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "După Lust, Zeit, Angst, Möglichkeit vine zu + infinitiv la final. Cu prefix, zu stă în interior: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "N-am chef să lucrez azi."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Xohish yo'q: Lust zu",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "Lust, Zeit, Angst, Möglichkeit dan keyin eng oxirida zu + infinitiv. Old qo'shimcha bilan zu ichida: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "Bugun ishlashga xohishim yo‘q."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "मन नहीं: Lust zu",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "Lust, Zeit, Angst, Möglichkeit के बाद बिल्कुल अंत में zu + इन्फ़िनिटिव। उपसर्ग के साथ zu बीच में: aufzuräumen।",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "आज मेरा काम करने का मन नहीं है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "لا رغبة: Lust zu",
+      "points": [
+        {
+          "title": "Lust وZeit + zu",
+          "text": "بعد Lust وZeit وAngst وMöglichkeit يأتي zu + المصدر في آخر الجملة. ومع السابقة تكون zu في الداخل: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "ليست لدي رغبة في العمل اليوم."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "task-tower-two": {
+    "ru": {
+      "title": "Трудно, важно: Es ist ... zu",
+      "points": [
+        {
+          "title": "Es ist ... zu",
+          "text": "Es ist + прилагательное + zu + инфинитив: так говорят, что трудно, важно, опасно.",
+          "examples": [
+            {
+              "de": "Es ist schwer, Deutsch zu lernen.",
+              "tr": "Учить немецкий трудно."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Важко, важливо: Es ist ... zu",
+      "points": [
+        {
+          "title": "Es ist ... zu",
+          "text": "Es ist + прикметник + zu + інфінітив: так кажуть, що важко, важливо, небезпечно.",
+          "examples": [
+            {
+              "de": "Es ist schwer, Deutsch zu lernen.",
+              "tr": "Вчити німецьку важко."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Hard, important: Es ist ... zu",
+      "points": [
+        {
+          "title": "Es ist ... zu",
+          "text": "Es ist + adjective + zu + infinitive: to say something is hard, important, dangerous.",
+          "examples": [
+            {
+              "de": "Es ist schwer, Deutsch zu lernen.",
+              "tr": "It’s hard to learn German."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Trudno, ważne: Es ist ... zu",
+      "points": [
+        {
+          "title": "Es ist ... zu",
+          "text": "Es ist + przymiotnik + zu + bezokolicznik: tak mówimy, że coś jest trudne, ważne, niebezpieczne.",
+          "examples": [
+            {
+              "de": "Es ist schwer, Deutsch zu lernen.",
+              "tr": "Trudno jest uczyć się niemieckiego."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Difícil, importante: Es ist ... zu",
+      "points": [
+        {
+          "title": "Es ist ... zu",
+          "text": "Es ist + adjetivo + zu + infinitivo: para decir que algo es difícil, importante, peligroso.",
+          "examples": [
+            {
+              "de": "Es ist schwer, Deutsch zu lernen.",
+              "tr": "Es difícil aprender alemán."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Difficile, important : Es ist ... zu",
+      "points": [
+        {
+          "title": "Es ist ... zu",
+          "text": "Es ist + adjectif + zu + infinitif : pour dire que c’est difficile, important, dangereux.",
+          "examples": [
+            {
+              "de": "Es ist schwer, Deutsch zu lernen.",
+              "tr": "C’est difficile d’apprendre l’allemand."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Zor, önemli: Es ist ... zu",
+      "points": [
+        {
+          "title": "Es ist ... zu",
+          "text": "Es ist + sıfat + zu + mastar: bir şeyin zor, önemli, tehlikeli olduğunu söylemek için.",
+          "examples": [
+            {
+              "de": "Es ist schwer, Deutsch zu lernen.",
+              "tr": "Almanca öğrenmek zor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Greu, important: Es ist ... zu",
+      "points": [
+        {
+          "title": "Es ist ... zu",
+          "text": "Es ist + adjectiv + zu + infinitiv: ca să spui că e greu, important, periculos.",
+          "examples": [
+            {
+              "de": "Es ist schwer, Deutsch zu lernen.",
+              "tr": "E greu să înveți germana."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qiyin, muhim: Es ist ... zu",
+      "points": [
+        {
+          "title": "Es ist ... zu",
+          "text": "Es ist + sifat + zu + infinitiv: biror narsa qiyin, muhim, xavfli ekanini aytish uchun.",
+          "examples": [
+            {
+              "de": "Es ist schwer, Deutsch zu lernen.",
+              "tr": "Nemis tilini o'rganish qiyin."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "मुश्किल, ज़रूरी: Es ist ... zu",
+      "points": [
+        {
+          "title": "Es ist ... zu",
+          "text": "Es ist + विशेषण + zu + इन्फ़िनिटिव: यह कहने के लिए कि कुछ मुश्किल, ज़रूरी, खतरनाक है।",
+          "examples": [
+            {
+              "de": "Es ist schwer, Deutsch zu lernen.",
+              "tr": "जर्मन सीखना मुश्किल है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "صعب، مهم: Es ist ... zu",
+      "points": [
+        {
+          "title": "Es ist ... zu",
+          "text": "Es ist + صفة + zu + مصدر: لنقول إن شيئاً صعب أو مهم أو خطر.",
+          "examples": [
+            {
+              "de": "Es ist schwer, Deutsch zu lernen.",
+              "tr": "تعلم الألمانية صعب."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "task-tower-three": {
+    "ru": {
+      "title": "Пытаться, забыть, начать",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "После versuchen, vergessen, anfangen, aufhören тоже zu + инфинитив. После модальных глаголов zu не нужно.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Я стараюсь пить меньше кофе."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Намагатися, забути, почати",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "Після versuchen, vergessen, anfangen, aufhören теж zu + інфінітив. Після модальних дієслів zu не потрібне.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Я намагаюся пити менше кави."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Try, forget, start",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "After versuchen, vergessen, anfangen, aufhören also use zu + infinitive. After modal verbs there’s no zu.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "I’m trying to drink less coffee."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Próbować, zapomnieć, zacząć",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "Po versuchen, vergessen, anfangen, aufhören też zu + bezokolicznik. Po czasownikach modalnych zu nie ma.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Staram się pić mniej kawy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Intentar, olvidar, empezar",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "Tras versuchen, vergessen, anfangen, aufhören también zu + infinitivo. Tras los modales no va zu.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Intento tomar menos café."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Essayer, oublier, commencer",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "Après versuchen, vergessen, anfangen, aufhören aussi zu + infinitif. Après les modaux, pas de zu.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "J’essaie de boire moins de café."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Denemek, unutmak, başlamak",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "versuchen, vergessen, anfangen, aufhören’dan sonra da zu + mastar. Modal fiillerden sonra zu yok.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Daha az kahve içmeye çalışıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "A încerca, a uita, a începe",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "După versuchen, vergessen, anfangen, aufhören tot zu + infinitiv. După modale nu e zu.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Încerc să beau mai puțină cafea."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Harakat qilish, unutish, boshlash",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "versuchen, vergessen, anfangen, aufhören dan keyin ham zu + infinitiv. Modal fe'llardan keyin zu yo'q.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Kamroq qahva ichishga harakat qilyapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कोशिश, भूलना, शुरू करना",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "versuchen, vergessen, anfangen, aufhören के बाद भी zu + इन्फ़िनिटिव। मोडल क्रियाओं के बाद zu नहीं।",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "मैं कम कॉफ़ी पीने की कोशिश कर रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "يحاول، ينسى، يبدأ",
+      "points": [
+        {
+          "title": "versuchen وvergessen + zu",
+          "text": "بعد versuchen وvergessen وanfangen وaufhören أيضاً zu + المصدر. وبعد الأفعال المساعدة لا zu.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "أحاول أن أشرب قهوة أقل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "task-tower-four": {
+    "ru": {
+      "title": "Не сделав: ohne ... zu",
+      "points": [
+        {
+          "title": "ohne ... zu: не сделав",
+          "text": "ohne ... zu значит «не делая чего-то». zu и инфинитив в конце, как в um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "Он ушёл, не попрощавшись."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Не зробивши: ohne ... zu",
+      "points": [
+        {
+          "title": "ohne ... zu: не зробивши",
+          "text": "ohne ... zu означає «не роблячи чогось». zu та інфінітив у кінці, як в um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "Він пішов, не попрощавшись."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Without doing: ohne ... zu",
+      "points": [
+        {
+          "title": "ohne ... zu: without doing",
+          "text": "ohne ... zu means \"without doing something\". zu and the infinitive go at the end, as in um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "He left without saying goodbye."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Nie robiąc: ohne ... zu",
+      "points": [
+        {
+          "title": "ohne ... zu: nie robiąc",
+          "text": "ohne ... zu znaczy „nie robiąc czegoś”. zu i bezokolicznik na końcu, jak w um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "Wyszedł, nie żegnając się."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Sin hacer: ohne ... zu",
+      "points": [
+        {
+          "title": "ohne ... zu: sin hacer",
+          "text": "ohne ... zu significa \"sin hacer algo\". zu y el infinitivo al final, como en um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "Se fue sin despedirse."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Sans faire : ohne ... zu",
+      "points": [
+        {
+          "title": "ohne ... zu : sans faire",
+          "text": "ohne ... zu veut dire « sans faire quelque chose ». zu et l’infinitif à la fin, comme dans um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "Il est parti sans dire au revoir."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yapmadan: ohne ... zu",
+      "points": [
+        {
+          "title": "ohne ... zu: -meden",
+          "text": "ohne ... zu \"bir şeyi yapmadan\" demektir. zu ve mastar sonda, um ... zu gibi.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "Vedalaşmadan gitti."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Fără să: ohne ... zu",
+      "points": [
+        {
+          "title": "ohne ... zu: fără să",
+          "text": "ohne ... zu înseamnă „fără să faci ceva”. zu și infinitivul la final, ca la um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "A plecat fără să-și ia rămas bun."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qilmasdan: ohne ... zu",
+      "points": [
+        {
+          "title": "ohne ... zu: ... qilmasdan",
+          "text": "ohne ... zu \"biror narsani qilmasdan\" degani. zu va infinitiv oxirida, um ... zu dagi kabi.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "U xayrlashmasdan ketdi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "बिना किए: ohne ... zu",
+      "points": [
+        {
+          "title": "ohne ... zu: बिना ... किए",
+          "text": "ohne ... zu मतलब \"कुछ किए बिना\"। zu और इन्फ़िनिटिव अंत में, um ... zu की तरह।",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "वह बिना अलविदा कहे चला गया।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "دون أن: ohne ... zu",
+      "points": [
+        {
+          "title": "ohne ... zu: دون أن",
+          "text": "ohne ... zu تعني \"دون أن يفعل شيئاً\". وzu والمصدر في الآخر كما في um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "ذهب دون أن يودّع."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "task-tower-five": {
+    "ru": {
+      "title": "Делаю не сам: lassen",
+      "points": [
+        {
+          "title": "lassen: делаю не сам",
+          "text": "lassen + инфинитив без zu: делает кто-то другой. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Я отдаю машину в ремонт."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Роблю не сам: lassen",
+      "points": [
+        {
+          "title": "lassen: роблю не сам",
+          "text": "lassen + інфінітив без zu: робить хтось інший. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Я віддаю машину в ремонт."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Having it done: lassen",
+      "points": [
+        {
+          "title": "lassen: having something done",
+          "text": "lassen + infinitive with no zu: someone else does it. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "I’m having my car repaired."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Zlecam: lassen",
+      "points": [
+        {
+          "title": "lassen: zlecam komuś",
+          "text": "lassen + bezokolicznik bez zu: robi to ktoś inny. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Oddaję samochód do naprawy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Que otro lo haga: lassen",
+      "points": [
+        {
+          "title": "lassen: hacer que otro lo haga",
+          "text": "lassen + infinitivo sin zu: lo hace otra persona. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Llevo el coche a reparar."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Faire faire : lassen",
+      "points": [
+        {
+          "title": "lassen : faire faire",
+          "text": "lassen + infinitif sans zu : quelqu’un d’autre le fait. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Je fais réparer ma voiture."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yaptırmak: lassen",
+      "points": [
+        {
+          "title": "lassen: başkasına yaptırmak",
+          "text": "lassen + zu’suz mastar: başkası yapar. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Arabamı tamir ettiriyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Pun pe altul: lassen",
+      "points": [
+        {
+          "title": "lassen: a pune pe altul să facă",
+          "text": "lassen + infinitiv fără zu: face altcineva. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Îmi duc mașina la reparat."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qildirish: lassen",
+      "points": [
+        {
+          "title": "lassen: boshqaga qildirish",
+          "text": "lassen + zu siz infinitiv: boshqa birov qiladi. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Mashinamni ta'mirlatyapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "करवाना: lassen",
+      "points": [
+        {
+          "title": "lassen: किसी और से करवाना",
+          "text": "lassen + बिना zu इन्फ़िनिटिव: कोई और करता है। ich lasse, du lässt, er lässt।",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "मैं अपनी गाड़ी ठीक करवा रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "أجعل غيري يفعل: lassen",
+      "points": [
+        {
+          "title": "lassen: أجعل غيري يفعل",
+          "text": "lassen + المصدر بدون zu: يفعله شخص آخر. ich lasse، du lässt، er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "أُصلح سيارتي عند الميكانيكي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "task-tower-six": {
+    "ru": {
+      "title": "Дела на выходные",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "После Lust, Zeit, Angst, Möglichkeit стоит zu + инфинитив в самом конце. С приставкой zu внутри: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "У меня нет желания сегодня работать."
+            }
+          ]
+        },
+        {
+          "title": "lassen: делаю не сам",
+          "text": "lassen + инфинитив без zu: делает кто-то другой. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Я отдаю машину в ремонт."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Справи на вихідні",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "Після Lust, Zeit, Angst, Möglichkeit стоїть zu + інфінітив у самому кінці. З префіксом zu всередині: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "Я не маю бажання сьогодні працювати."
+            }
+          ]
+        },
+        {
+          "title": "lassen: роблю не сам",
+          "text": "lassen + інфінітив без zu: робить хтось інший. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Я віддаю машину в ремонт."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Weekend tasks",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "After Lust, Zeit, Angst, Möglichkeit comes zu + infinitive at the very end. With a prefix zu goes inside: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "I don’t feel like working today."
+            }
+          ]
+        },
+        {
+          "title": "lassen: having something done",
+          "text": "lassen + infinitive with no zu: someone else does it. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "I’m having my car repaired."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawy na weekend",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "Po Lust, Zeit, Angst, Möglichkeit stoi zu + bezokolicznik na samym końcu. Z przedrostkiem zu w środku: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "Nie mam ochoty dziś pracować."
+            }
+          ]
+        },
+        {
+          "title": "lassen: zlecam komuś",
+          "text": "lassen + bezokolicznik bez zu: robi to ktoś inny. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Oddaję samochód do naprawy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Tareas del fin de semana",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "Después de Lust, Zeit, Angst, Möglichkeit va zu + infinitivo al final. Con prefijo, zu va dentro: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "No tengo ganas de trabajar hoy."
+            }
+          ]
+        },
+        {
+          "title": "lassen: hacer que otro lo haga",
+          "text": "lassen + infinitivo sin zu: lo hace otra persona. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Llevo el coche a reparar."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les tâches du week-end",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "Après Lust, Zeit, Angst, Möglichkeit vient zu + infinitif tout à la fin. Avec un préfixe, zu se met à l’intérieur : aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "Je n’ai pas envie de travailler aujourd’hui."
+            }
+          ]
+        },
+        {
+          "title": "lassen : faire faire",
+          "text": "lassen + infinitif sans zu : quelqu’un d’autre le fait. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Je fais réparer ma voiture."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Hafta sonu işleri",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "Lust, Zeit, Angst, Möglichkeit’ten sonra en sonda zu + mastar gelir. Ön ekli fiilde zu içeride: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "Bugün çalışmaya hiç hevesim yok."
+            }
+          ]
+        },
+        {
+          "title": "lassen: başkasına yaptırmak",
+          "text": "lassen + zu’suz mastar: başkası yapar. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Arabamı tamir ettiriyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Treburi de weekend",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "După Lust, Zeit, Angst, Möglichkeit vine zu + infinitiv la final. Cu prefix, zu stă în interior: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "N-am chef să lucrez azi."
+            }
+          ]
+        },
+        {
+          "title": "lassen: a pune pe altul să facă",
+          "text": "lassen + infinitiv fără zu: face altcineva. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Îmi duc mașina la reparat."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Dam olish kunidagi ishlar",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "Lust, Zeit, Angst, Möglichkeit dan keyin eng oxirida zu + infinitiv. Old qo'shimcha bilan zu ichida: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "Bugun ishlashga xohishim yo‘q."
+            }
+          ]
+        },
+        {
+          "title": "lassen: boshqaga qildirish",
+          "text": "lassen + zu siz infinitiv: boshqa birov qiladi. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Mashinamni ta'mirlatyapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "सप्ताहांत के काम",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "Lust, Zeit, Angst, Möglichkeit के बाद बिल्कुल अंत में zu + इन्फ़िनिटिव। उपसर्ग के साथ zu बीच में: aufzuräumen।",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "आज मेरा काम करने का मन नहीं है।"
+            }
+          ]
+        },
+        {
+          "title": "lassen: किसी और से करवाना",
+          "text": "lassen + बिना zu इन्फ़िनिटिव: कोई और करता है। ich lasse, du lässt, er lässt।",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "मैं अपनी गाड़ी ठीक करवा रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مهام عطلة نهاية الأسبوع",
+      "points": [
+        {
+          "title": "Lust وZeit + zu",
+          "text": "بعد Lust وZeit وAngst وMöglichkeit يأتي zu + المصدر في آخر الجملة. ومع السابقة تكون zu في الداخل: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "ليست لدي رغبة في العمل اليوم."
+            }
+          ]
+        },
+        {
+          "title": "lassen: أجعل غيري يفعل",
+          "text": "lassen + المصدر بدون zu: يفعله شخص آخر. ich lasse، du lässt، er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "أُصلح سيارتي عند الميكانيكي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "task-tower-seven": {
+    "ru": {
+      "title": "Практика: первый день на работе",
+      "points": [
+        {
+          "title": "Es ist ... zu",
+          "text": "Es ist + прилагательное + zu + инфинитив: так говорят, что трудно, важно, опасно.",
+          "examples": [
+            {
+              "de": "Es ist schwer, Deutsch zu lernen.",
+              "tr": "Учить немецкий трудно."
+            }
+          ]
+        },
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "После versuchen, vergessen, anfangen, aufhören тоже zu + инфинитив. После модальных глаголов zu не нужно.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Я стараюсь пить меньше кофе."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: перший день на роботі",
+      "points": [
+        {
+          "title": "Es ist ... zu",
+          "text": "Es ist + прикметник + zu + інфінітив: так кажуть, що важко, важливо, небезпечно.",
+          "examples": [
+            {
+              "de": "Es ist schwer, Deutsch zu lernen.",
+              "tr": "Вчити німецьку важко."
+            }
+          ]
+        },
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "Після versuchen, vergessen, anfangen, aufhören теж zu + інфінітив. Після модальних дієслів zu не потрібне.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Я намагаюся пити менше кави."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: first day at work",
+      "points": [
+        {
+          "title": "Es ist ... zu",
+          "text": "Es ist + adjective + zu + infinitive: to say something is hard, important, dangerous.",
+          "examples": [
+            {
+              "de": "Es ist schwer, Deutsch zu lernen.",
+              "tr": "It’s hard to learn German."
+            }
+          ]
+        },
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "After versuchen, vergessen, anfangen, aufhören also use zu + infinitive. After modal verbs there’s no zu.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "I’m trying to drink less coffee."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: pierwszy dzień w pracy",
+      "points": [
+        {
+          "title": "Es ist ... zu",
+          "text": "Es ist + przymiotnik + zu + bezokolicznik: tak mówimy, że coś jest trudne, ważne, niebezpieczne.",
+          "examples": [
+            {
+              "de": "Es ist schwer, Deutsch zu lernen.",
+              "tr": "Trudno jest uczyć się niemieckiego."
+            }
+          ]
+        },
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "Po versuchen, vergessen, anfangen, aufhören też zu + bezokolicznik. Po czasownikach modalnych zu nie ma.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Staram się pić mniej kawy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: primer día de trabajo",
+      "points": [
+        {
+          "title": "Es ist ... zu",
+          "text": "Es ist + adjetivo + zu + infinitivo: para decir que algo es difícil, importante, peligroso.",
+          "examples": [
+            {
+              "de": "Es ist schwer, Deutsch zu lernen.",
+              "tr": "Es difícil aprender alemán."
+            }
+          ]
+        },
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "Tras versuchen, vergessen, anfangen, aufhören también zu + infinitivo. Tras los modales no va zu.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Intento tomar menos café."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : premier jour au travail",
+      "points": [
+        {
+          "title": "Es ist ... zu",
+          "text": "Es ist + adjectif + zu + infinitif : pour dire que c’est difficile, important, dangereux.",
+          "examples": [
+            {
+              "de": "Es ist schwer, Deutsch zu lernen.",
+              "tr": "C’est difficile d’apprendre l’allemand."
+            }
+          ]
+        },
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "Après versuchen, vergessen, anfangen, aufhören aussi zu + infinitif. Après les modaux, pas de zu.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "J’essaie de boire moins de café."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: işte ilk gün",
+      "points": [
+        {
+          "title": "Es ist ... zu",
+          "text": "Es ist + sıfat + zu + mastar: bir şeyin zor, önemli, tehlikeli olduğunu söylemek için.",
+          "examples": [
+            {
+              "de": "Es ist schwer, Deutsch zu lernen.",
+              "tr": "Almanca öğrenmek zor."
+            }
+          ]
+        },
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "versuchen, vergessen, anfangen, aufhören’dan sonra da zu + mastar. Modal fiillerden sonra zu yok.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Daha az kahve içmeye çalışıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: prima zi la muncă",
+      "points": [
+        {
+          "title": "Es ist ... zu",
+          "text": "Es ist + adjectiv + zu + infinitiv: ca să spui că e greu, important, periculos.",
+          "examples": [
+            {
+              "de": "Es ist schwer, Deutsch zu lernen.",
+              "tr": "E greu să înveți germana."
+            }
+          ]
+        },
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "După versuchen, vergessen, anfangen, aufhören tot zu + infinitiv. După modale nu e zu.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Încerc să beau mai puțină cafea."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: ishdagi birinchi kun",
+      "points": [
+        {
+          "title": "Es ist ... zu",
+          "text": "Es ist + sifat + zu + infinitiv: biror narsa qiyin, muhim, xavfli ekanini aytish uchun.",
+          "examples": [
+            {
+              "de": "Es ist schwer, Deutsch zu lernen.",
+              "tr": "Nemis tilini o'rganish qiyin."
+            }
+          ]
+        },
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "versuchen, vergessen, anfangen, aufhören dan keyin ham zu + infinitiv. Modal fe'llardan keyin zu yo'q.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Kamroq qahva ichishga harakat qilyapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: काम पर पहला दिन",
+      "points": [
+        {
+          "title": "Es ist ... zu",
+          "text": "Es ist + विशेषण + zu + इन्फ़िनिटिव: यह कहने के लिए कि कुछ मुश्किल, ज़रूरी, खतरनाक है।",
+          "examples": [
+            {
+              "de": "Es ist schwer, Deutsch zu lernen.",
+              "tr": "जर्मन सीखना मुश्किल है।"
+            }
+          ]
+        },
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "versuchen, vergessen, anfangen, aufhören के बाद भी zu + इन्फ़िनिटिव। मोडल क्रियाओं के बाद zu नहीं।",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "मैं कम कॉफ़ी पीने की कोशिश कर रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: أول يوم في العمل",
+      "points": [
+        {
+          "title": "Es ist ... zu",
+          "text": "Es ist + صفة + zu + مصدر: لنقول إن شيئاً صعب أو مهم أو خطر.",
+          "examples": [
+            {
+              "de": "Es ist schwer, Deutsch zu lernen.",
+              "tr": "تعلم الألمانية صعب."
+            }
+          ]
+        },
+        {
+          "title": "versuchen وvergessen + zu",
+          "text": "بعد versuchen وvergessen وanfangen وaufhören أيضاً zu + المصدر. وبعد الأفعال المساعدة لا zu.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "أحاول أن أشرب قهوة أقل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "task-tower-eight": {
+    "ru": {
+      "title": "Практика: сервис и ремонт",
+      "points": [
+        {
+          "title": "lassen: делаю не сам",
+          "text": "lassen + инфинитив без zu: делает кто-то другой. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Я отдаю машину в ремонт."
+            }
+          ]
+        },
+        {
+          "title": "ohne ... zu: не сделав",
+          "text": "ohne ... zu значит «не делая чего-то». zu и инфинитив в конце, как в um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "Он ушёл, не попрощавшись."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: сервіс і ремонт",
+      "points": [
+        {
+          "title": "lassen: роблю не сам",
+          "text": "lassen + інфінітив без zu: робить хтось інший. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Я віддаю машину в ремонт."
+            }
+          ]
+        },
+        {
+          "title": "ohne ... zu: не зробивши",
+          "text": "ohne ... zu означає «не роблячи чогось». zu та інфінітив у кінці, як в um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "Він пішов, не попрощавшись."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: service and repair",
+      "points": [
+        {
+          "title": "lassen: having something done",
+          "text": "lassen + infinitive with no zu: someone else does it. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "I’m having my car repaired."
+            }
+          ]
+        },
+        {
+          "title": "ohne ... zu: without doing",
+          "text": "ohne ... zu means \"without doing something\". zu and the infinitive go at the end, as in um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "He left without saying goodbye."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: serwis i naprawa",
+      "points": [
+        {
+          "title": "lassen: zlecam komuś",
+          "text": "lassen + bezokolicznik bez zu: robi to ktoś inny. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Oddaję samochód do naprawy."
+            }
+          ]
+        },
+        {
+          "title": "ohne ... zu: nie robiąc",
+          "text": "ohne ... zu znaczy „nie robiąc czegoś”. zu i bezokolicznik na końcu, jak w um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "Wyszedł, nie żegnając się."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: servicio y reparación",
+      "points": [
+        {
+          "title": "lassen: hacer que otro lo haga",
+          "text": "lassen + infinitivo sin zu: lo hace otra persona. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Llevo el coche a reparar."
+            }
+          ]
+        },
+        {
+          "title": "ohne ... zu: sin hacer",
+          "text": "ohne ... zu significa \"sin hacer algo\". zu y el infinitivo al final, como en um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "Se fue sin despedirse."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : service et réparation",
+      "points": [
+        {
+          "title": "lassen : faire faire",
+          "text": "lassen + infinitif sans zu : quelqu’un d’autre le fait. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Je fais réparer ma voiture."
+            }
+          ]
+        },
+        {
+          "title": "ohne ... zu : sans faire",
+          "text": "ohne ... zu veut dire « sans faire quelque chose ». zu et l’infinitif à la fin, comme dans um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "Il est parti sans dire au revoir."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: servis ve tamir",
+      "points": [
+        {
+          "title": "lassen: başkasına yaptırmak",
+          "text": "lassen + zu’suz mastar: başkası yapar. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Arabamı tamir ettiriyorum."
+            }
+          ]
+        },
+        {
+          "title": "ohne ... zu: -meden",
+          "text": "ohne ... zu \"bir şeyi yapmadan\" demektir. zu ve mastar sonda, um ... zu gibi.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "Vedalaşmadan gitti."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: service și reparații",
+      "points": [
+        {
+          "title": "lassen: a pune pe altul să facă",
+          "text": "lassen + infinitiv fără zu: face altcineva. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Îmi duc mașina la reparat."
+            }
+          ]
+        },
+        {
+          "title": "ohne ... zu: fără să",
+          "text": "ohne ... zu înseamnă „fără să faci ceva”. zu și infinitivul la final, ca la um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "A plecat fără să-și ia rămas bun."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: servis va ta'mir",
+      "points": [
+        {
+          "title": "lassen: boshqaga qildirish",
+          "text": "lassen + zu siz infinitiv: boshqa birov qiladi. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Mashinamni ta'mirlatyapman."
+            }
+          ]
+        },
+        {
+          "title": "ohne ... zu: ... qilmasdan",
+          "text": "ohne ... zu \"biror narsani qilmasdan\" degani. zu va infinitiv oxirida, um ... zu dagi kabi.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "U xayrlashmasdan ketdi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: सर्विस और मरम्मत",
+      "points": [
+        {
+          "title": "lassen: किसी और से करवाना",
+          "text": "lassen + बिना zu इन्फ़िनिटिव: कोई और करता है। ich lasse, du lässt, er lässt।",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "मैं अपनी गाड़ी ठीक करवा रहा हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "ohne ... zu: बिना ... किए",
+          "text": "ohne ... zu मतलब \"कुछ किए बिना\"। zu और इन्फ़िनिटिव अंत में, um ... zu की तरह।",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "वह बिना अलविदा कहे चला गया।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: الخدمة والإصلاح",
+      "points": [
+        {
+          "title": "lassen: أجعل غيري يفعل",
+          "text": "lassen + المصدر بدون zu: يفعله شخص آخر. ich lasse، du lässt، er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "أُصلح سيارتي عند الميكانيكي."
+            }
+          ]
+        },
+        {
+          "title": "ohne ... zu: دون أن",
+          "text": "ohne ... zu تعني \"دون أن يفعل شيئاً\". وzu والمصدر في الآخر كما في um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "ذهب دون أن يودّع."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "task-tower-nine": {
+    "ru": {
+      "title": "Повторение: zu и lassen",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "После Lust, Zeit, Angst, Möglichkeit стоит zu + инфинитив в самом конце. С приставкой zu внутри: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "У меня нет желания сегодня работать."
+            }
+          ]
+        },
+        {
+          "title": "ohne ... zu: не сделав",
+          "text": "ohne ... zu значит «не делая чего-то». zu и инфинитив в конце, как в um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "Он ушёл, не попрощавшись."
+            }
+          ]
+        },
+        {
+          "title": "lassen: делаю не сам",
+          "text": "lassen + инфинитив без zu: делает кто-то другой. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Я отдаю машину в ремонт."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: zu і lassen",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "Після Lust, Zeit, Angst, Möglichkeit стоїть zu + інфінітив у самому кінці. З префіксом zu всередині: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "Я не маю бажання сьогодні працювати."
+            }
+          ]
+        },
+        {
+          "title": "ohne ... zu: не зробивши",
+          "text": "ohne ... zu означає «не роблячи чогось». zu та інфінітив у кінці, як в um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "Він пішов, не попрощавшись."
+            }
+          ]
+        },
+        {
+          "title": "lassen: роблю не сам",
+          "text": "lassen + інфінітив без zu: робить хтось інший. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Я віддаю машину в ремонт."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: zu and lassen",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "After Lust, Zeit, Angst, Möglichkeit comes zu + infinitive at the very end. With a prefix zu goes inside: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "I don’t feel like working today."
+            }
+          ]
+        },
+        {
+          "title": "ohne ... zu: without doing",
+          "text": "ohne ... zu means \"without doing something\". zu and the infinitive go at the end, as in um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "He left without saying goodbye."
+            }
+          ]
+        },
+        {
+          "title": "lassen: having something done",
+          "text": "lassen + infinitive with no zu: someone else does it. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "I’m having my car repaired."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: zu i lassen",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "Po Lust, Zeit, Angst, Möglichkeit stoi zu + bezokolicznik na samym końcu. Z przedrostkiem zu w środku: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "Nie mam ochoty dziś pracować."
+            }
+          ]
+        },
+        {
+          "title": "ohne ... zu: nie robiąc",
+          "text": "ohne ... zu znaczy „nie robiąc czegoś”. zu i bezokolicznik na końcu, jak w um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "Wyszedł, nie żegnając się."
+            }
+          ]
+        },
+        {
+          "title": "lassen: zlecam komuś",
+          "text": "lassen + bezokolicznik bez zu: robi to ktoś inny. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Oddaję samochód do naprawy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: zu y lassen",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "Después de Lust, Zeit, Angst, Möglichkeit va zu + infinitivo al final. Con prefijo, zu va dentro: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "No tengo ganas de trabajar hoy."
+            }
+          ]
+        },
+        {
+          "title": "ohne ... zu: sin hacer",
+          "text": "ohne ... zu significa \"sin hacer algo\". zu y el infinitivo al final, como en um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "Se fue sin despedirse."
+            }
+          ]
+        },
+        {
+          "title": "lassen: hacer que otro lo haga",
+          "text": "lassen + infinitivo sin zu: lo hace otra persona. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Llevo el coche a reparar."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : zu et lassen",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "Après Lust, Zeit, Angst, Möglichkeit vient zu + infinitif tout à la fin. Avec un préfixe, zu se met à l’intérieur : aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "Je n’ai pas envie de travailler aujourd’hui."
+            }
+          ]
+        },
+        {
+          "title": "ohne ... zu : sans faire",
+          "text": "ohne ... zu veut dire « sans faire quelque chose ». zu et l’infinitif à la fin, comme dans um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "Il est parti sans dire au revoir."
+            }
+          ]
+        },
+        {
+          "title": "lassen : faire faire",
+          "text": "lassen + infinitif sans zu : quelqu’un d’autre le fait. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Je fais réparer ma voiture."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: zu ve lassen",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "Lust, Zeit, Angst, Möglichkeit’ten sonra en sonda zu + mastar gelir. Ön ekli fiilde zu içeride: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "Bugün çalışmaya hiç hevesim yok."
+            }
+          ]
+        },
+        {
+          "title": "ohne ... zu: -meden",
+          "text": "ohne ... zu \"bir şeyi yapmadan\" demektir. zu ve mastar sonda, um ... zu gibi.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "Vedalaşmadan gitti."
+            }
+          ]
+        },
+        {
+          "title": "lassen: başkasına yaptırmak",
+          "text": "lassen + zu’suz mastar: başkası yapar. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Arabamı tamir ettiriyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: zu și lassen",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "După Lust, Zeit, Angst, Möglichkeit vine zu + infinitiv la final. Cu prefix, zu stă în interior: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "N-am chef să lucrez azi."
+            }
+          ]
+        },
+        {
+          "title": "ohne ... zu: fără să",
+          "text": "ohne ... zu înseamnă „fără să faci ceva”. zu și infinitivul la final, ca la um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "A plecat fără să-și ia rămas bun."
+            }
+          ]
+        },
+        {
+          "title": "lassen: a pune pe altul să facă",
+          "text": "lassen + infinitiv fără zu: face altcineva. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Îmi duc mașina la reparat."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: zu va lassen",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "Lust, Zeit, Angst, Möglichkeit dan keyin eng oxirida zu + infinitiv. Old qo'shimcha bilan zu ichida: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "Bugun ishlashga xohishim yo‘q."
+            }
+          ]
+        },
+        {
+          "title": "ohne ... zu: ... qilmasdan",
+          "text": "ohne ... zu \"biror narsani qilmasdan\" degani. zu va infinitiv oxirida, um ... zu dagi kabi.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "U xayrlashmasdan ketdi."
+            }
+          ]
+        },
+        {
+          "title": "lassen: boshqaga qildirish",
+          "text": "lassen + zu siz infinitiv: boshqa birov qiladi. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Mashinamni ta'mirlatyapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: zu और lassen",
+      "points": [
+        {
+          "title": "Lust, Zeit + zu",
+          "text": "Lust, Zeit, Angst, Möglichkeit के बाद बिल्कुल अंत में zu + इन्फ़िनिटिव। उपसर्ग के साथ zu बीच में: aufzuräumen।",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "आज मेरा काम करने का मन नहीं है।"
+            }
+          ]
+        },
+        {
+          "title": "ohne ... zu: बिना ... किए",
+          "text": "ohne ... zu मतलब \"कुछ किए बिना\"। zu और इन्फ़िनिटिव अंत में, um ... zu की तरह।",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "वह बिना अलविदा कहे चला गया।"
+            }
+          ]
+        },
+        {
+          "title": "lassen: किसी और से करवाना",
+          "text": "lassen + बिना zu इन्फ़िनिटिव: कोई और करता है। ich lasse, du lässt, er lässt।",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "मैं अपनी गाड़ी ठीक करवा रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: zu وlassen",
+      "points": [
+        {
+          "title": "Lust وZeit + zu",
+          "text": "بعد Lust وZeit وAngst وMöglichkeit يأتي zu + المصدر في آخر الجملة. ومع السابقة تكون zu في الداخل: aufzuräumen.",
+          "examples": [
+            {
+              "de": "Ich habe keine Lust, heute zu arbeiten.",
+              "tr": "ليست لدي رغبة في العمل اليوم."
+            }
+          ]
+        },
+        {
+          "title": "ohne ... zu: دون أن",
+          "text": "ohne ... zu تعني \"دون أن يفعل شيئاً\". وzu والمصدر في الآخر كما في um ... zu.",
+          "examples": [
+            {
+              "de": "Er ging, ohne sich zu verabschieden.",
+              "tr": "ذهب دون أن يودّع."
+            }
+          ]
+        },
+        {
+          "title": "lassen: أجعل غيري يفعل",
+          "text": "lassen + المصدر بدون zu: يفعله شخص آخر. ich lasse، du lässt، er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "أُصلح سيارتي عند الميكانيكي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "task-tower-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "После versuchen, vergessen, anfangen, aufhören тоже zu + инфинитив. После модальных глаголов zu не нужно.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Я стараюсь пить меньше кофе."
+            }
+          ]
+        },
+        {
+          "title": "lassen: делаю не сам",
+          "text": "lassen + инфинитив без zu: делает кто-то другой. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Я отдаю машину в ремонт."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "Після versuchen, vergessen, anfangen, aufhören теж zu + інфінітив. Після модальних дієслів zu не потрібне.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Я намагаюся пити менше кави."
+            }
+          ]
+        },
+        {
+          "title": "lassen: роблю не сам",
+          "text": "lassen + інфінітив без zu: робить хтось інший. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Я віддаю машину в ремонт."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "After versuchen, vergessen, anfangen, aufhören also use zu + infinitive. After modal verbs there’s no zu.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "I’m trying to drink less coffee."
+            }
+          ]
+        },
+        {
+          "title": "lassen: having something done",
+          "text": "lassen + infinitive with no zu: someone else does it. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "I’m having my car repaired."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "Po versuchen, vergessen, anfangen, aufhören też zu + bezokolicznik. Po czasownikach modalnych zu nie ma.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Staram się pić mniej kawy."
+            }
+          ]
+        },
+        {
+          "title": "lassen: zlecam komuś",
+          "text": "lassen + bezokolicznik bez zu: robi to ktoś inny. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Oddaję samochód do naprawy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "Tras versuchen, vergessen, anfangen, aufhören también zu + infinitivo. Tras los modales no va zu.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Intento tomar menos café."
+            }
+          ]
+        },
+        {
+          "title": "lassen: hacer que otro lo haga",
+          "text": "lassen + infinitivo sin zu: lo hace otra persona. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Llevo el coche a reparar."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "Après versuchen, vergessen, anfangen, aufhören aussi zu + infinitif. Après les modaux, pas de zu.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "J’essaie de boire moins de café."
+            }
+          ]
+        },
+        {
+          "title": "lassen : faire faire",
+          "text": "lassen + infinitif sans zu : quelqu’un d’autre le fait. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Je fais réparer ma voiture."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "versuchen, vergessen, anfangen, aufhören’dan sonra da zu + mastar. Modal fiillerden sonra zu yok.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Daha az kahve içmeye çalışıyorum."
+            }
+          ]
+        },
+        {
+          "title": "lassen: başkasına yaptırmak",
+          "text": "lassen + zu’suz mastar: başkası yapar. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Arabamı tamir ettiriyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "După versuchen, vergessen, anfangen, aufhören tot zu + infinitiv. După modale nu e zu.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Încerc să beau mai puțină cafea."
+            }
+          ]
+        },
+        {
+          "title": "lassen: a pune pe altul să facă",
+          "text": "lassen + infinitiv fără zu: face altcineva. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Îmi duc mașina la reparat."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "versuchen, vergessen, anfangen, aufhören dan keyin ham zu + infinitiv. Modal fe'llardan keyin zu yo'q.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "Kamroq qahva ichishga harakat qilyapman."
+            }
+          ]
+        },
+        {
+          "title": "lassen: boshqaga qildirish",
+          "text": "lassen + zu siz infinitiv: boshqa birov qiladi. ich lasse, du lässt, er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Mashinamni ta'mirlatyapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "versuchen, vergessen + zu",
+          "text": "versuchen, vergessen, anfangen, aufhören के बाद भी zu + इन्फ़िनिटिव। मोडल क्रियाओं के बाद zu नहीं।",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "मैं कम कॉफ़ी पीने की कोशिश कर रहा हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "lassen: किसी और से करवाना",
+          "text": "lassen + बिना zu इन्फ़िनिटिव: कोई और करता है। ich lasse, du lässt, er lässt।",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "मैं अपनी गाड़ी ठीक करवा रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "versuchen وvergessen + zu",
+          "text": "بعد versuchen وvergessen وanfangen وaufhören أيضاً zu + المصدر. وبعد الأفعال المساعدة لا zu.",
+          "examples": [
+            {
+              "de": "Ich versuche, weniger Kaffee zu trinken.",
+              "tr": "أحاول أن أشرب قهوة أقل."
+            }
+          ]
+        },
+        {
+          "title": "lassen: أجعل غيري يفعل",
+          "text": "lassen + المصدر بدون zu: يفعله شخص آخر. ich lasse، du lässt، er lässt.",
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "أُصلح سيارتي عند الميكانيكي."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

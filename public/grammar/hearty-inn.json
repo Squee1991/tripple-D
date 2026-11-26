@@ -1,0 +1,2684 @@
+{
+  "hearty-inn-one": {
+    "ru": {
+      "title": "mögen: я люблю",
+      "points": [
+        {
+          "title": "mögen: люблю вещь",
+          "text": "ich mag, du magst, er mag, wir mögen. После mögen вещь в Akkusativ, отрицание через kein.",
+          "examples": [
+            {
+              "de": "Ich mag Käse.",
+              "tr": "Я люблю сыр."
+            },
+            {
+              "de": "Ich mag keinen Fisch.",
+              "tr": "Я не люблю рыбу."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "mögen: я люблю",
+      "points": [
+        {
+          "title": "mögen: люблю річ",
+          "text": "ich mag, du magst, er mag, wir mögen. Після mögen річ в Akkusativ, заперечення через kein.",
+          "examples": [
+            {
+              "de": "Ich mag Käse.",
+              "tr": "Я люблю сир."
+            },
+            {
+              "de": "Ich mag keinen Fisch.",
+              "tr": "Я не люблю рибу."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "mögen: I like",
+      "points": [
+        {
+          "title": "mögen: I like a thing",
+          "text": "ich mag, du magst, er mag, wir mögen. After mögen the thing is in the accusative, negation with kein.",
+          "examples": [
+            {
+              "de": "Ich mag Käse.",
+              "tr": "I like cheese."
+            },
+            {
+              "de": "Ich mag keinen Fisch.",
+              "tr": "I don’t like fish."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "mögen: lubię",
+      "points": [
+        {
+          "title": "mögen: lubię rzecz",
+          "text": "ich mag, du magst, er mag, wir mögen. Po mögen rzecz w Akkusativ, przeczenie przez kein.",
+          "examples": [
+            {
+              "de": "Ich mag Käse.",
+              "tr": "Lubię ser."
+            },
+            {
+              "de": "Ich mag keinen Fisch.",
+              "tr": "Nie lubię ryby."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "mögen: me gusta",
+      "points": [
+        {
+          "title": "mögen: me gusta algo",
+          "text": "ich mag, du magst, er mag, wir mögen. Después de mögen va el acusativo, la negación con kein.",
+          "examples": [
+            {
+              "de": "Ich mag Käse.",
+              "tr": "Me gusta el queso."
+            },
+            {
+              "de": "Ich mag keinen Fisch.",
+              "tr": "No me gusta el pescado."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "mögen : j’aime",
+      "points": [
+        {
+          "title": "mögen : aimer une chose",
+          "text": "ich mag, du magst, er mag, wir mögen. Après mögen, accusatif, et négation avec kein.",
+          "examples": [
+            {
+              "de": "Ich mag Käse.",
+              "tr": "J’aime le fromage."
+            },
+            {
+              "de": "Ich mag keinen Fisch.",
+              "tr": "Je n’aime pas le poisson."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "mögen: severim",
+      "points": [
+        {
+          "title": "mögen: bir şeyi sevmek",
+          "text": "ich mag, du magst, er mag, wir mögen. mögen’den sonra Akkusativ, olumsuz kein ile.",
+          "examples": [
+            {
+              "de": "Ich mag Käse.",
+              "tr": "Peyniri severim."
+            },
+            {
+              "de": "Ich mag keinen Fisch.",
+              "tr": "Balık sevmem."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "mögen: îmi place",
+      "points": [
+        {
+          "title": "mögen: îmi place ceva",
+          "text": "ich mag, du magst, er mag, wir mögen. După mögen, acuzativ, negația cu kein.",
+          "examples": [
+            {
+              "de": "Ich mag Käse.",
+              "tr": "Îmi place brânza."
+            },
+            {
+              "de": "Ich mag keinen Fisch.",
+              "tr": "Nu-mi place peștele."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "mögen: yaxshi ko'raman",
+      "points": [
+        {
+          "title": "mögen: narsani yoqtirish",
+          "text": "ich mag, du magst, er mag, wir mögen. mögen dan keyin Akkusativ, inkor kein bilan.",
+          "examples": [
+            {
+              "de": "Ich mag Käse.",
+              "tr": "Men pishloqni yaxshi ko'raman."
+            },
+            {
+              "de": "Ich mag keinen Fisch.",
+              "tr": "Men baliqni yoqtirmayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "mögen: मुझे पसंद है",
+      "points": [
+        {
+          "title": "mögen: कोई चीज़ पसंद होना",
+          "text": "ich mag, du magst, er mag, wir mögen। mögen के बाद Akkusativ, नकार kein से।",
+          "examples": [
+            {
+              "de": "Ich mag Käse.",
+              "tr": "मुझे पनीर पसंद है।"
+            },
+            {
+              "de": "Ich mag keinen Fisch.",
+              "tr": "मुझे मछली पसंद नहीं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "mögen: أحب",
+      "points": [
+        {
+          "title": "mögen: أحب شيئاً",
+          "text": "ich mag، du magst، er mag، wir mögen. بعد mögen يأتي المفعول، والنفي بـ kein.",
+          "examples": [
+            {
+              "de": "Ich mag Käse.",
+              "tr": "أحب الجبن."
+            },
+            {
+              "de": "Ich mag keinen Fisch.",
+              "tr": "لا أحب السمك."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "hearty-inn-two": {
+    "ru": {
+      "title": "gern: с удовольствием",
+      "points": [
+        {
+          "title": "gern: люблю делать",
+          "text": "gern стоит сразу после глагола. Ich mag Pizza: люблю пиццу. Ich esse gern Pizza: люблю есть пиццу.",
+          "examples": [
+            {
+              "de": "Er trinkt gern Tee.",
+              "tr": "Он любит пить чай."
+            },
+            {
+              "de": "Ich koche nicht gern.",
+              "tr": "Я не люблю готовить."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "gern: із задоволенням",
+      "points": [
+        {
+          "title": "gern: люблю робити",
+          "text": "gern стоїть одразу після дієслова. Ich mag Pizza: люблю піцу. Ich esse gern Pizza: люблю їсти піцу.",
+          "examples": [
+            {
+              "de": "Er trinkt gern Tee.",
+              "tr": "Він любить пити чай."
+            },
+            {
+              "de": "Ich koche nicht gern.",
+              "tr": "Я не люблю готувати."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "gern: gladly",
+      "points": [
+        {
+          "title": "gern: I like doing",
+          "text": "gern comes right after the verb. Ich mag Pizza: I like pizza. Ich esse gern Pizza: I like eating pizza.",
+          "examples": [
+            {
+              "de": "Er trinkt gern Tee.",
+              "tr": "He likes drinking tea."
+            },
+            {
+              "de": "Ich koche nicht gern.",
+              "tr": "I don’t like cooking."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "gern: chętnie",
+      "points": [
+        {
+          "title": "gern: lubię robić",
+          "text": "gern stoi zaraz po czasowniku. Ich mag Pizza: lubię pizzę. Ich esse gern Pizza: lubię jeść pizzę.",
+          "examples": [
+            {
+              "de": "Er trinkt gern Tee.",
+              "tr": "On lubi pić herbatę."
+            },
+            {
+              "de": "Ich koche nicht gern.",
+              "tr": "Nie lubię gotować."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "gern: con gusto",
+      "points": [
+        {
+          "title": "gern: me gusta hacer",
+          "text": "gern va justo después del verbo. Ich mag Pizza: me gusta la pizza. Ich esse gern Pizza: me gusta comer pizza.",
+          "examples": [
+            {
+              "de": "Er trinkt gern Tee.",
+              "tr": "A él le gusta tomar té."
+            },
+            {
+              "de": "Ich koche nicht gern.",
+              "tr": "No me gusta cocinar."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "gern : volontiers",
+      "points": [
+        {
+          "title": "gern : aimer faire",
+          "text": "gern vient juste après le verbe. Ich mag Pizza : j’aime la pizza. Ich esse gern Pizza : j’aime manger de la pizza.",
+          "examples": [
+            {
+              "de": "Er trinkt gern Tee.",
+              "tr": "Il aime boire du thé."
+            },
+            {
+              "de": "Ich koche nicht gern.",
+              "tr": "Je n’aime pas cuisiner."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "gern: severek",
+      "points": [
+        {
+          "title": "gern: yapmayı sevmek",
+          "text": "gern fiilden hemen sonra gelir. Ich mag Pizza: pizzayı severim. Ich esse gern Pizza: pizza yemeyi severim.",
+          "examples": [
+            {
+              "de": "Er trinkt gern Tee.",
+              "tr": "O çay içmeyi sever."
+            },
+            {
+              "de": "Ich koche nicht gern.",
+              "tr": "Yemek yapmayı sevmem."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "gern: cu plăcere",
+      "points": [
+        {
+          "title": "gern: îmi place să fac",
+          "text": "gern vine imediat după verb. Ich mag Pizza: îmi place pizza. Ich esse gern Pizza: îmi place să mănânc pizza.",
+          "examples": [
+            {
+              "de": "Er trinkt gern Tee.",
+              "tr": "Lui îi place să bea ceai."
+            },
+            {
+              "de": "Ich koche nicht gern.",
+              "tr": "Nu-mi place să gătesc."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "gern: jon deb",
+      "points": [
+        {
+          "title": "gern: qilishni yoqtirish",
+          "text": "gern fe'ldan keyin darhol turadi. Ich mag Pizza: pitsani yoqtiraman. Ich esse gern Pizza: pitsa yeyishni yoqtiraman.",
+          "examples": [
+            {
+              "de": "Er trinkt gern Tee.",
+              "tr": "U choy ichishni yaxshi ko'radi."
+            },
+            {
+              "de": "Ich koche nicht gern.",
+              "tr": "Ovqat pishirishni yoqtirmayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "gern: खुशी से",
+      "points": [
+        {
+          "title": "gern: करना पसंद है",
+          "text": "gern क्रिया के ठीक बाद आता है। Ich mag Pizza: मुझे पिज़्ज़ा पसंद है। Ich esse gern Pizza: मुझे पिज़्ज़ा खाना पसंद है।",
+          "examples": [
+            {
+              "de": "Er trinkt gern Tee.",
+              "tr": "उसे चाय पीना पसंद है।"
+            },
+            {
+              "de": "Ich koche nicht gern.",
+              "tr": "मुझे खाना बनाना पसंद नहीं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "gern: بكل سرور",
+      "points": [
+        {
+          "title": "gern: أحب أن أفعل",
+          "text": "تأتي gern مباشرة بعد الفعل. Ich mag Pizza: أحب البيتزا. Ich esse gern Pizza: أحب أكل البيتزا.",
+          "examples": [
+            {
+              "de": "Er trinkt gern Tee.",
+              "tr": "هو يحب شرب الشاي."
+            },
+            {
+              "de": "Ich koche nicht gern.",
+              "tr": "لا أحب الطبخ."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "hearty-inn-three": {
+    "ru": {
+      "title": "schmecken: какой вкус",
+      "points": [
+        {
+          "title": "Глагол смотрит на еду",
+          "text": "schmecken согласуем с едой: одна вещь schmeckt, много вещей schmecken.",
+          "examples": [
+            {
+              "de": "Die Suppe schmeckt gut.",
+              "tr": "Суп вкусный."
+            },
+            {
+              "de": "Die Äpfel schmecken süß.",
+              "tr": "Яблоки сладкие на вкус."
+            }
+          ]
+        },
+        {
+          "title": "zu: слишком",
+          "text": "zu перед прилагательным значит «слишком».",
+          "examples": [
+            {
+              "de": "Die Suppe ist zu salzig.",
+              "tr": "Суп слишком солёный."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "schmecken: який смак",
+      "points": [
+        {
+          "title": "Дієслово дивиться на їжу",
+          "text": "schmecken узгоджуємо з їжею: одна річ schmeckt, багато речей schmecken.",
+          "examples": [
+            {
+              "de": "Die Suppe schmeckt gut.",
+              "tr": "Суп смачний."
+            },
+            {
+              "de": "Die Äpfel schmecken süß.",
+              "tr": "Яблука солодкі на смак."
+            }
+          ]
+        },
+        {
+          "title": "zu: занадто",
+          "text": "zu перед прикметником означає «занадто».",
+          "examples": [
+            {
+              "de": "Die Suppe ist zu salzig.",
+              "tr": "Суп занадто солоний."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "schmecken: how it tastes",
+      "points": [
+        {
+          "title": "The verb agrees with the food",
+          "text": "schmecken agrees with the food: one thing schmeckt, several things schmecken.",
+          "examples": [
+            {
+              "de": "Die Suppe schmeckt gut.",
+              "tr": "The soup tastes good."
+            },
+            {
+              "de": "Die Äpfel schmecken süß.",
+              "tr": "The apples taste sweet."
+            }
+          ]
+        },
+        {
+          "title": "zu: too",
+          "text": "zu before an adjective means \"too\".",
+          "examples": [
+            {
+              "de": "Die Suppe ist zu salzig.",
+              "tr": "The soup is too salty."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "schmecken: jaki smak",
+      "points": [
+        {
+          "title": "Czasownik zgadza się z jedzeniem",
+          "text": "schmecken zgadzamy z jedzeniem: jedna rzecz schmeckt, wiele rzeczy schmecken.",
+          "examples": [
+            {
+              "de": "Die Suppe schmeckt gut.",
+              "tr": "Zupa jest smaczna."
+            },
+            {
+              "de": "Die Äpfel schmecken süß.",
+              "tr": "Jabłka są słodkie."
+            }
+          ]
+        },
+        {
+          "title": "zu: za bardzo",
+          "text": "zu przed przymiotnikiem znaczy „za”.",
+          "examples": [
+            {
+              "de": "Die Suppe ist zu salzig.",
+              "tr": "Zupa jest za słona."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "schmecken: qué sabor",
+      "points": [
+        {
+          "title": "El verbo concuerda con la comida",
+          "text": "schmecken concuerda con la comida: una cosa schmeckt, varias cosas schmecken.",
+          "examples": [
+            {
+              "de": "Die Suppe schmeckt gut.",
+              "tr": "La sopa está buena."
+            },
+            {
+              "de": "Die Äpfel schmecken süß.",
+              "tr": "Las manzanas saben dulces."
+            }
+          ]
+        },
+        {
+          "title": "zu: demasiado",
+          "text": "zu delante de un adjetivo significa \"demasiado\".",
+          "examples": [
+            {
+              "de": "Die Suppe ist zu salzig.",
+              "tr": "La sopa está demasiado salada."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "schmecken : quel goût",
+      "points": [
+        {
+          "title": "Le verbe s’accorde avec l’aliment",
+          "text": "schmecken s’accorde avec l’aliment : une chose schmeckt, plusieurs choses schmecken.",
+          "examples": [
+            {
+              "de": "Die Suppe schmeckt gut.",
+              "tr": "La soupe est bonne."
+            },
+            {
+              "de": "Die Äpfel schmecken süß.",
+              "tr": "Les pommes ont un goût sucré."
+            }
+          ]
+        },
+        {
+          "title": "zu : trop",
+          "text": "zu devant un adjectif veut dire « trop ».",
+          "examples": [
+            {
+              "de": "Die Suppe ist zu salzig.",
+              "tr": "La soupe est trop salée."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "schmecken: tadı nasıl",
+      "points": [
+        {
+          "title": "Fiil yiyeceğe uyar",
+          "text": "schmecken yiyeceğe uyar: tek şey schmeckt, birden çok şey schmecken.",
+          "examples": [
+            {
+              "de": "Die Suppe schmeckt gut.",
+              "tr": "Çorba lezzetli."
+            },
+            {
+              "de": "Die Äpfel schmecken süß.",
+              "tr": "Elmaların tadı tatlı."
+            }
+          ]
+        },
+        {
+          "title": "zu: fazla",
+          "text": "Sıfattan önce zu \"fazla, çok\" demektir.",
+          "examples": [
+            {
+              "de": "Die Suppe ist zu salzig.",
+              "tr": "Çorba çok tuzlu."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "schmecken: ce gust are",
+      "points": [
+        {
+          "title": "Verbul se acordă cu mâncarea",
+          "text": "schmecken se acordă cu mâncarea: un lucru schmeckt, mai multe schmecken.",
+          "examples": [
+            {
+              "de": "Die Suppe schmeckt gut.",
+              "tr": "Supa e bună."
+            },
+            {
+              "de": "Die Äpfel schmecken süß.",
+              "tr": "Merele au gust dulce."
+            }
+          ]
+        },
+        {
+          "title": "zu: prea",
+          "text": "zu înaintea unui adjectiv înseamnă „prea”.",
+          "examples": [
+            {
+              "de": "Die Suppe ist zu salzig.",
+              "tr": "Supa e prea sărată."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "schmecken: ta'mi qanday",
+      "points": [
+        {
+          "title": "Fe'l taomga moslashadi",
+          "text": "schmecken taomga moslashadi: bitta narsa schmeckt, ko'p narsa schmecken.",
+          "examples": [
+            {
+              "de": "Die Suppe schmeckt gut.",
+              "tr": "Sho'rva mazali."
+            },
+            {
+              "de": "Die Äpfel schmecken süß.",
+              "tr": "Olmalar shirin."
+            }
+          ]
+        },
+        {
+          "title": "zu: juda, haddan tashqari",
+          "text": "Sifatdan oldin zu \"haddan tashqari\" degani.",
+          "examples": [
+            {
+              "de": "Die Suppe ist zu salzig.",
+              "tr": "Sho'rva juda sho'r."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "schmecken: स्वाद कैसा है",
+      "points": [
+        {
+          "title": "क्रिया खाने के अनुसार",
+          "text": "schmecken खाने के अनुसार बदलता है: एक चीज़ schmeckt, कई चीज़ें schmecken।",
+          "examples": [
+            {
+              "de": "Die Suppe schmeckt gut.",
+              "tr": "सूप स्वादिष्ट है।"
+            },
+            {
+              "de": "Die Äpfel schmecken süß.",
+              "tr": "सेब मीठे हैं।"
+            }
+          ]
+        },
+        {
+          "title": "zu: बहुत ज़्यादा",
+          "text": "विशेषण से पहले zu का मतलब \"ज़्यादा ही\"।",
+          "examples": [
+            {
+              "de": "Die Suppe ist zu salzig.",
+              "tr": "सूप बहुत नमकीन है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "schmecken: ما الطعم",
+      "points": [
+        {
+          "title": "الفعل يتبع الطعام",
+          "text": "يتوافق schmecken مع الطعام: شيء واحد schmeckt، وعدة أشياء schmecken.",
+          "examples": [
+            {
+              "de": "Die Suppe schmeckt gut.",
+              "tr": "الحساء لذيذ."
+            },
+            {
+              "de": "Die Äpfel schmecken süß.",
+              "tr": "طعم التفاح حلو."
+            }
+          ]
+        },
+        {
+          "title": "zu: أكثر من اللازم",
+          "text": "zu قبل الصفة تعني \"أكثر من اللازم\".",
+          "examples": [
+            {
+              "de": "Die Suppe ist zu salzig.",
+              "tr": "الحساء مالح جداً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "hearty-inn-four": {
+    "ru": {
+      "title": "Завтрак, обед, ужин",
+      "points": [
+        {
+          "title": "es gibt: есть, подают",
+          "text": "es gibt значит «есть, подают». После него Akkusativ: Es gibt einen Salat.",
+          "examples": [
+            {
+              "de": "Was gibt es heute?",
+              "tr": "Что сегодня на обед (ужин)?"
+            },
+            {
+              "de": "Heute gibt es einen Salat.",
+              "tr": "Сегодня подают салат."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Сніданок, обід, вечеря",
+      "points": [
+        {
+          "title": "es gibt: є, подають",
+          "text": "es gibt означає «є, подають». Після нього Akkusativ: Es gibt einen Salat.",
+          "examples": [
+            {
+              "de": "Was gibt es heute?",
+              "tr": "Що сьогодні на обід (вечерю)?"
+            },
+            {
+              "de": "Heute gibt es einen Salat.",
+              "tr": "Сьогодні подають салат."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Breakfast, lunch, dinner",
+      "points": [
+        {
+          "title": "es gibt: there is",
+          "text": "es gibt means \"there is, there’s ... on the menu\". It takes the accusative: Es gibt einen Salat.",
+          "examples": [
+            {
+              "de": "Was gibt es heute?",
+              "tr": "What’s for dinner today?"
+            },
+            {
+              "de": "Heute gibt es einen Salat.",
+              "tr": "Today there’s a salad."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Śniadanie, obiad, kolacja",
+      "points": [
+        {
+          "title": "es gibt: jest, podają",
+          "text": "es gibt znaczy „jest, podają”. Po nim Akkusativ: Es gibt einen Salat.",
+          "examples": [
+            {
+              "de": "Was gibt es heute?",
+              "tr": "Co dziś jest do jedzenia?"
+            },
+            {
+              "de": "Heute gibt es einen Salat.",
+              "tr": "Dziś jest sałatka."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Desayuno, comida, cena",
+      "points": [
+        {
+          "title": "es gibt: hay",
+          "text": "es gibt significa \"hay\". Va con acusativo: Es gibt einen Salat.",
+          "examples": [
+            {
+              "de": "Was gibt es heute?",
+              "tr": "¿Qué hay hoy de comer?"
+            },
+            {
+              "de": "Heute gibt es einen Salat.",
+              "tr": "Hoy hay ensalada."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Petit déjeuner, déjeuner, dîner",
+      "points": [
+        {
+          "title": "es gibt : il y a",
+          "text": "es gibt veut dire « il y a ». Il est suivi de l’accusatif : Es gibt einen Salat.",
+          "examples": [
+            {
+              "de": "Was gibt es heute?",
+              "tr": "Qu’est-ce qu’on mange aujourd’hui ?"
+            },
+            {
+              "de": "Heute gibt es einen Salat.",
+              "tr": "Aujourd’hui, il y a une salade."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kahvaltı, öğle yemeği, akşam yemeği",
+      "points": [
+        {
+          "title": "es gibt: var",
+          "text": "es gibt \"var\" demektir. Ardından Akkusativ gelir: Es gibt einen Salat.",
+          "examples": [
+            {
+              "de": "Was gibt es heute?",
+              "tr": "Bugün yemekte ne var?"
+            },
+            {
+              "de": "Heute gibt es einen Salat.",
+              "tr": "Bugün salata var."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Mic dejun, prânz, cină",
+      "points": [
+        {
+          "title": "es gibt: există, se servește",
+          "text": "es gibt înseamnă „există, se servește”. E urmat de acuzativ: Es gibt einen Salat.",
+          "examples": [
+            {
+              "de": "Was gibt es heute?",
+              "tr": "Ce avem azi de mâncare?"
+            },
+            {
+              "de": "Heute gibt es einen Salat.",
+              "tr": "Azi e salată."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nonushta, tushlik, kechki ovqat",
+      "points": [
+        {
+          "title": "es gibt: bor",
+          "text": "es gibt \"bor\" degani. Undan keyin Akkusativ: Es gibt einen Salat.",
+          "examples": [
+            {
+              "de": "Was gibt es heute?",
+              "tr": "Bugun ovqatga nima bor?"
+            },
+            {
+              "de": "Heute gibt es einen Salat.",
+              "tr": "Bugun salat bor."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "नाश्ता, दोपहर का खाना, रात का खाना",
+      "points": [
+        {
+          "title": "es gibt: है, मिलता है",
+          "text": "es gibt का मतलब \"है, परोसा जाता है\"। इसके बाद Akkusativ: Es gibt einen Salat।",
+          "examples": [
+            {
+              "de": "Was gibt es heute?",
+              "tr": "आज खाने में क्या है?"
+            },
+            {
+              "de": "Heute gibt es einen Salat.",
+              "tr": "आज सलाद है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الفطور والغداء والعشاء",
+      "points": [
+        {
+          "title": "es gibt: يوجد",
+          "text": "es gibt تعني \"يوجد، يُقدَّم\". ويأتي بعدها المفعول: Es gibt einen Salat.",
+          "examples": [
+            {
+              "de": "Was gibt es heute?",
+              "tr": "ماذا يوجد للأكل اليوم؟"
+            },
+            {
+              "de": "Heute gibt es einen Salat.",
+              "tr": "اليوم يوجد سلطة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "hearty-inn-five": {
+    "ru": {
+      "title": "eine Tasse Kaffee: мера и еда",
+      "points": [
+        {
+          "title": "Мера без предлога",
+          "text": "Мера и еда стоят рядом, без «из» и без артикля у еды: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "стакан воды, кусок пирога"
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ меняет только меру",
+          "text": "Если мера мужского рода, она получает einen: der Teller → einen Teller Suppe.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Teller Suppe.",
+              "tr": "Я хотел бы тарелку супа."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "eine Tasse Kaffee: міра і їжа",
+      "points": [
+        {
+          "title": "Міра без прийменника",
+          "text": "Міра і їжа стоять поруч, без прийменника і без артикля в їжі: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "склянка води, шматок пирога"
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ змінює лише міру",
+          "text": "Якщо міра чоловічого роду, вона отримує einen: der Teller → einen Teller Suppe.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Teller Suppe.",
+              "tr": "Я б хотів тарілку супу."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "eine Tasse Kaffee: measure and food",
+      "points": [
+        {
+          "title": "Measure with no \"of\"",
+          "text": "The measure and the food stand side by side, with no \"of\" and no article: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "a glass of water, a piece of cake"
+            }
+          ]
+        },
+        {
+          "title": "The accusative changes only the measure",
+          "text": "A masculine measure takes einen: der Teller → einen Teller Suppe.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Teller Suppe.",
+              "tr": "I’d like a bowl of soup."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "eine Tasse Kaffee: miara i jedzenie",
+      "points": [
+        {
+          "title": "Miara bez przyimka",
+          "text": "Miara i jedzenie stoją obok siebie, bez przyimka i bez rodzajnika: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "szklanka wody, kawałek ciasta"
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ zmienia tylko miarę",
+          "text": "Jeśli miara jest rodzaju męskiego, dostaje einen: der Teller → einen Teller Suppe.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Teller Suppe.",
+              "tr": "Poproszę talerz zupy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "eine Tasse Kaffee: medida y comida",
+      "points": [
+        {
+          "title": "Medida sin \"de\"",
+          "text": "La medida y la comida van juntas, sin \"de\" y sin artículo: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "un vaso de agua, un trozo de pastel"
+            }
+          ]
+        },
+        {
+          "title": "El acusativo cambia solo la medida",
+          "text": "Si la medida es masculina, lleva einen: der Teller → einen Teller Suppe.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Teller Suppe.",
+              "tr": "Quisiera un plato de sopa."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "eine Tasse Kaffee : mesure et aliment",
+      "points": [
+        {
+          "title": "Mesure sans « de »",
+          "text": "La mesure et l’aliment sont côte à côte, sans « de » ni article : eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "un verre d’eau, un morceau de gâteau"
+            }
+          ]
+        },
+        {
+          "title": "L’accusatif change seulement la mesure",
+          "text": "Une mesure masculine prend einen : der Teller → einen Teller Suppe.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Teller Suppe.",
+              "tr": "Je voudrais une assiette de soupe."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "eine Tasse Kaffee: ölçü ve yiyecek",
+      "points": [
+        {
+          "title": "Edatsız ölçü",
+          "text": "Ölçü ve yiyecek yan yana gelir, edat ve artikel olmadan: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "bir bardak su, bir dilim kek"
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ sadece ölçüyü değiştirir",
+          "text": "Eril ölçü einen alır: der Teller → einen Teller Suppe.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Teller Suppe.",
+              "tr": "Bir tabak çorba istiyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "eine Tasse Kaffee: măsură și mâncare",
+      "points": [
+        {
+          "title": "Măsura fără „de”",
+          "text": "Măsura și mâncarea stau una lângă alta, fără „de” și fără articol: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "un pahar cu apă, o bucată de prăjitură"
+            }
+          ]
+        },
+        {
+          "title": "Acuzativul schimbă doar măsura",
+          "text": "O măsură masculină primește einen: der Teller → einen Teller Suppe.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Teller Suppe.",
+              "tr": "Aș dori o farfurie de supă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "eine Tasse Kaffee: o'lchov va taom",
+      "points": [
+        {
+          "title": "Ko'makchisiz o'lchov",
+          "text": "O'lchov va taom yonma-yon, ko'makchi va artiklsiz turadi: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "bir stakan suv, bir bo'lak pirog"
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ faqat o'lchovni o'zgartiradi",
+          "text": "Erkak rodidagi o'lchov einen oladi: der Teller → einen Teller Suppe.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Teller Suppe.",
+              "tr": "Menga bir likopcha sho'rva, iltimos."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "eine Tasse Kaffee: माप और खाना",
+      "points": [
+        {
+          "title": "बिना संबंधसूचक के माप",
+          "text": "माप और खाना साथ-साथ, बिना \"का\" और बिना आर्टिकल के: eine Tasse Kaffee।",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "एक गिलास पानी, केक का एक टुकड़ा"
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ सिर्फ़ माप बदलता है",
+          "text": "पुल्लिंग माप einen लेता है: der Teller → einen Teller Suppe।",
+          "examples": [
+            {
+              "de": "Ich möchte einen Teller Suppe.",
+              "tr": "मुझे एक प्लेट सूप चाहिए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "eine Tasse Kaffee: المقدار والطعام",
+      "points": [
+        {
+          "title": "المقدار بدون حرف جر",
+          "text": "يأتي المقدار والطعام متجاورين بدون حرف جر وبدون أداة: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "كأس ماء، قطعة كعك"
+            }
+          ]
+        },
+        {
+          "title": "حالة المفعول تغير المقدار فقط",
+          "text": "المقدار المذكر يأخذ einen: der Teller → einen Teller Suppe.",
+          "examples": [
+            {
+              "de": "Ich möchte einen Teller Suppe.",
+              "tr": "أودّ صحن حساء."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "hearty-inn-six": {
+    "ru": {
+      "title": "В ресторане: заказ",
+      "points": [
+        {
+          "title": "Вежливо на Sie",
+          "text": "С официантом говорим на Sie. Заказываем: Ich nehme... или Ich möchte...",
+          "examples": [
+            {
+              "de": "Haben Sie einen Tisch frei?",
+              "tr": "У вас есть свободный столик?"
+            },
+            {
+              "de": "Ich nehme den Fisch.",
+              "tr": "Я беру рыбу."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "У ресторані: замовлення",
+      "points": [
+        {
+          "title": "Ввічливо на Sie",
+          "text": "З офіціантом говоримо на Sie. Замовляємо: Ich nehme... або Ich möchte...",
+          "examples": [
+            {
+              "de": "Haben Sie einen Tisch frei?",
+              "tr": "У вас є вільний столик?"
+            },
+            {
+              "de": "Ich nehme den Fisch.",
+              "tr": "Я беру рибу."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "At the restaurant: ordering",
+      "points": [
+        {
+          "title": "Politely with Sie",
+          "text": "Talk to the waiter with Sie. To order: Ich nehme... or Ich möchte...",
+          "examples": [
+            {
+              "de": "Haben Sie einen Tisch frei?",
+              "tr": "Do you have a free table?"
+            },
+            {
+              "de": "Ich nehme den Fisch.",
+              "tr": "I’ll have the fish."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "W restauracji: zamówienie",
+      "points": [
+        {
+          "title": "Grzecznie na Sie",
+          "text": "Z kelnerem mówimy na Sie. Zamawiamy: Ich nehme... albo Ich möchte...",
+          "examples": [
+            {
+              "de": "Haben Sie einen Tisch frei?",
+              "tr": "Czy jest wolny stolik?"
+            },
+            {
+              "de": "Ich nehme den Fisch.",
+              "tr": "Wezmę rybę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "En el restaurante: pedir",
+      "points": [
+        {
+          "title": "De usted, con Sie",
+          "text": "Al camarero se le habla de Sie. Para pedir: Ich nehme... o Ich möchte...",
+          "examples": [
+            {
+              "de": "Haben Sie einen Tisch frei?",
+              "tr": "¿Tienen una mesa libre?"
+            },
+            {
+              "de": "Ich nehme den Fisch.",
+              "tr": "Tomo el pescado."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Au restaurant : commander",
+      "points": [
+        {
+          "title": "Poliment avec Sie",
+          "text": "On vouvoie le serveur avec Sie. Pour commander : Ich nehme... ou Ich möchte...",
+          "examples": [
+            {
+              "de": "Haben Sie einen Tisch frei?",
+              "tr": "Vous avez une table libre ?"
+            },
+            {
+              "de": "Ich nehme den Fisch.",
+              "tr": "Je prends le poisson."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Restoranda: sipariş",
+      "points": [
+        {
+          "title": "Kibarca Sie ile",
+          "text": "Garsonla Sie ile konuşulur. Sipariş: Ich nehme... ya da Ich möchte...",
+          "examples": [
+            {
+              "de": "Haben Sie einen Tisch frei?",
+              "tr": "Boş masanız var mı?"
+            },
+            {
+              "de": "Ich nehme den Fisch.",
+              "tr": "Balığı alıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "La restaurant: comanda",
+      "points": [
+        {
+          "title": "Politicos cu Sie",
+          "text": "Cu ospătarul vorbim cu Sie. Comandăm: Ich nehme... sau Ich möchte...",
+          "examples": [
+            {
+              "de": "Haben Sie einen Tisch frei?",
+              "tr": "Aveți o masă liberă?"
+            },
+            {
+              "de": "Ich nehme den Fisch.",
+              "tr": "Iau peștele."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Restoranda: buyurtma",
+      "points": [
+        {
+          "title": "Hurmat bilan Sie",
+          "text": "Ofitsiant bilan Sie bilan gaplashamiz. Buyurtma: Ich nehme... yoki Ich möchte...",
+          "examples": [
+            {
+              "de": "Haben Sie einen Tisch frei?",
+              "tr": "Bo'sh stolingiz bormi?"
+            },
+            {
+              "de": "Ich nehme den Fisch.",
+              "tr": "Men baliqni olaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "रेस्टोरेंट में: ऑर्डर",
+      "points": [
+        {
+          "title": "विनम्रता से Sie",
+          "text": "वेटर से Sie में बात करते हैं। ऑर्डर: Ich nehme... या Ich möchte...",
+          "examples": [
+            {
+              "de": "Haben Sie einen Tisch frei?",
+              "tr": "क्या आपके पास कोई खाली मेज़ है?"
+            },
+            {
+              "de": "Ich nehme den Fisch.",
+              "tr": "मैं मछली लूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "في المطعم: الطلب",
+      "points": [
+        {
+          "title": "بأدب مع Sie",
+          "text": "نخاطب النادل بـ Sie. وللطلب: Ich nehme... أو Ich möchte...",
+          "examples": [
+            {
+              "de": "Haben Sie einen Tisch frei?",
+              "tr": "هل عندكم طاولة فارغة؟"
+            },
+            {
+              "de": "Ich nehme den Fisch.",
+              "tr": "آخذ السمك."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "hearty-inn-seven": {
+    "ru": {
+      "title": "Счёт, пожалуйста!",
+      "points": [
+        {
+          "title": "Фразы при оплате",
+          "text": "Zusammen oder getrennt? значит «вместе или раздельно?». Stimmt so значит «сдачи не надо».",
+          "examples": [
+            {
+              "de": "Entschuldigung, die Rechnung, bitte!",
+              "tr": "Извините, счёт, пожалуйста!"
+            },
+            {
+              "de": "Ich zahle bar.",
+              "tr": "Я плачу наличными."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Рахунок, будь ласка!",
+      "points": [
+        {
+          "title": "Фрази під час оплати",
+          "text": "Zusammen oder getrennt? означає «разом чи окремо?». Stimmt so означає «решти не треба».",
+          "examples": [
+            {
+              "de": "Entschuldigung, die Rechnung, bitte!",
+              "tr": "Перепрошую, рахунок, будь ласка!"
+            },
+            {
+              "de": "Ich zahle bar.",
+              "tr": "Я плачу готівкою."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The bill, please!",
+      "points": [
+        {
+          "title": "Paying phrases",
+          "text": "Zusammen oder getrennt? means \"together or separately?\". Stimmt so means \"keep the change\".",
+          "examples": [
+            {
+              "de": "Entschuldigung, die Rechnung, bitte!",
+              "tr": "Excuse me, the bill, please!"
+            },
+            {
+              "de": "Ich zahle bar.",
+              "tr": "I’ll pay cash."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Rachunek, proszę!",
+      "points": [
+        {
+          "title": "Zwroty przy płaceniu",
+          "text": "Zusammen oder getrennt? znaczy „razem czy osobno?”. Stimmt so znaczy „reszty nie trzeba”.",
+          "examples": [
+            {
+              "de": "Entschuldigung, die Rechnung, bitte!",
+              "tr": "Przepraszam, rachunek proszę!"
+            },
+            {
+              "de": "Ich zahle bar.",
+              "tr": "Płacę gotówką."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¡La cuenta, por favor!",
+      "points": [
+        {
+          "title": "Frases para pagar",
+          "text": "Zusammen oder getrennt? significa \"¿juntos o por separado?\". Stimmt so significa \"quédese con el cambio\".",
+          "examples": [
+            {
+              "de": "Entschuldigung, die Rechnung, bitte!",
+              "tr": "¡Perdone, la cuenta, por favor!"
+            },
+            {
+              "de": "Ich zahle bar.",
+              "tr": "Pago en efectivo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "L’addition, s’il vous plaît !",
+      "points": [
+        {
+          "title": "Phrases pour payer",
+          "text": "Zusammen oder getrennt ? veut dire « ensemble ou séparément ? ». Stimmt so veut dire « gardez la monnaie ».",
+          "examples": [
+            {
+              "de": "Entschuldigung, die Rechnung, bitte!",
+              "tr": "Excusez-moi, l’addition, s’il vous plaît !"
+            },
+            {
+              "de": "Ich zahle bar.",
+              "tr": "Je paie en liquide."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Hesap, lütfen!",
+      "points": [
+        {
+          "title": "Ödeme ifadeleri",
+          "text": "Zusammen oder getrennt? \"Birlikte mi, ayrı mı?\" demektir. Stimmt so \"üstü kalsın\" demektir.",
+          "examples": [
+            {
+              "de": "Entschuldigung, die Rechnung, bitte!",
+              "tr": "Affedersiniz, hesap lütfen!"
+            },
+            {
+              "de": "Ich zahle bar.",
+              "tr": "Nakit ödüyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Nota, vă rog!",
+      "points": [
+        {
+          "title": "Fraze la plată",
+          "text": "Zusammen oder getrennt? înseamnă „împreună sau separat?”. Stimmt so înseamnă „păstrați restul”.",
+          "examples": [
+            {
+              "de": "Entschuldigung, die Rechnung, bitte!",
+              "tr": "Scuzați-mă, nota, vă rog!"
+            },
+            {
+              "de": "Ich zahle bar.",
+              "tr": "Plătesc cash."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Hisob, iltimos!",
+      "points": [
+        {
+          "title": "To'lov iboralari",
+          "text": "Zusammen oder getrennt? \"birgami yoki alohida?\" degani. Stimmt so \"qaytim kerak emas\" degani.",
+          "examples": [
+            {
+              "de": "Entschuldigung, die Rechnung, bitte!",
+              "tr": "Kechirasiz, hisobni bering!"
+            },
+            {
+              "de": "Ich zahle bar.",
+              "tr": "Naqd to'layman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "बिल, कृपया!",
+      "points": [
+        {
+          "title": "भुगतान के वाक्य",
+          "text": "Zusammen oder getrennt? मतलब \"साथ में या अलग-अलग?\"। Stimmt so मतलब \"बाकी रख लीजिए\"।",
+          "examples": [
+            {
+              "de": "Entschuldigung, die Rechnung, bitte!",
+              "tr": "माफ़ कीजिए, बिल, कृपया!"
+            },
+            {
+              "de": "Ich zahle bar.",
+              "tr": "मैं नकद दूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الحساب من فضلك!",
+      "points": [
+        {
+          "title": "عبارات الدفع",
+          "text": "Zusammen oder getrennt? تعني \"معاً أم كل واحد وحده؟\". وStimmt so تعني \"احتفظ بالباقي\".",
+          "examples": [
+            {
+              "de": "Entschuldigung, die Rechnung, bitte!",
+              "tr": "عذراً، الحساب من فضلك!"
+            },
+            {
+              "de": "Ich zahle bar.",
+              "tr": "أدفع نقداً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "hearty-inn-eight": {
+    "ru": {
+      "title": "Практика: ужин с друзьями",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "noch значит «ещё»: noch ein Stück, noch eine Tasse.",
+          "examples": [
+            {
+              "de": "Möchtest du noch ein Stück Kuchen?",
+              "tr": "Хочешь ещё кусок пирога?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: вечеря з друзями",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "noch означає «ще»: noch ein Stück, noch eine Tasse.",
+          "examples": [
+            {
+              "de": "Möchtest du noch ein Stück Kuchen?",
+              "tr": "Хочеш ще шматок пирога?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: dinner with friends",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "noch means \"another, more\": noch ein Stück, noch eine Tasse.",
+          "examples": [
+            {
+              "de": "Möchtest du noch ein Stück Kuchen?",
+              "tr": "Would you like another piece of cake?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: kolacja z przyjaciółmi",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "noch znaczy „jeszcze”: noch ein Stück, noch eine Tasse.",
+          "examples": [
+            {
+              "de": "Möchtest du noch ein Stück Kuchen?",
+              "tr": "Chcesz jeszcze kawałek ciasta?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: cena con amigos",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "noch significa \"otro, más\": noch ein Stück, noch eine Tasse.",
+          "examples": [
+            {
+              "de": "Möchtest du noch ein Stück Kuchen?",
+              "tr": "¿Quieres otro trozo de pastel?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : dîner entre amis",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "noch veut dire « encore » : noch ein Stück, noch eine Tasse.",
+          "examples": [
+            {
+              "de": "Möchtest du noch ein Stück Kuchen?",
+              "tr": "Tu veux encore un morceau de gâteau ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: arkadaşlarla akşam yemeği",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "noch \"bir ... daha\" demektir: noch ein Stück, noch eine Tasse.",
+          "examples": [
+            {
+              "de": "Möchtest du noch ein Stück Kuchen?",
+              "tr": "Bir dilim kek daha ister misin?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: cină cu prietenii",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "noch înseamnă „încă”: noch ein Stück, noch eine Tasse.",
+          "examples": [
+            {
+              "de": "Möchtest du noch ein Stück Kuchen?",
+              "tr": "Mai vrei o bucată de prăjitură?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: do'stlar bilan kechki ovqat",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "noch \"yana\" degani: noch ein Stück, noch eine Tasse.",
+          "examples": [
+            {
+              "de": "Möchtest du noch ein Stück Kuchen?",
+              "tr": "Yana bir bo'lak pirog xohlaysanmi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: दोस्तों के साथ रात का खाना",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "noch का मतलब \"और एक\": noch ein Stück, noch eine Tasse।",
+          "examples": [
+            {
+              "de": "Möchtest du noch ein Stück Kuchen?",
+              "tr": "क्या तुम केक का एक और टुकड़ा लोगे?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: عشاء مع الأصدقاء",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "noch تعني \"مزيداً، واحداً آخر\": noch ein Stück، noch eine Tasse.",
+          "examples": [
+            {
+              "de": "Möchtest du noch ein Stück Kuchen?",
+              "tr": "هل تريد قطعة كعك أخرى؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "hearty-inn-nine": {
+    "ru": {
+      "title": "Повторение: еда и напитки",
+      "points": [
+        {
+          "title": "mögen: люблю вещь",
+          "text": "ich mag, du magst, er mag, wir mögen. После mögen вещь в Akkusativ, отрицание через kein.",
+          "examples": [
+            {
+              "de": "Ich mag Käse.",
+              "tr": "Я люблю сыр."
+            },
+            {
+              "de": "Ich mag keinen Fisch.",
+              "tr": "Я не люблю рыбу."
+            }
+          ]
+        },
+        {
+          "title": "gern: люблю делать",
+          "text": "gern стоит сразу после глагола. Ich mag Pizza: люблю пиццу. Ich esse gern Pizza: люблю есть пиццу.",
+          "examples": [
+            {
+              "de": "Er trinkt gern Tee.",
+              "tr": "Он любит пить чай."
+            },
+            {
+              "de": "Ich koche nicht gern.",
+              "tr": "Я не люблю готовить."
+            }
+          ]
+        },
+        {
+          "title": "Мера без предлога",
+          "text": "Мера и еда стоят рядом, без «из» и без артикля у еды: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "стакан воды, кусок пирога"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: їжа і напої",
+      "points": [
+        {
+          "title": "mögen: люблю річ",
+          "text": "ich mag, du magst, er mag, wir mögen. Після mögen річ в Akkusativ, заперечення через kein.",
+          "examples": [
+            {
+              "de": "Ich mag Käse.",
+              "tr": "Я люблю сир."
+            },
+            {
+              "de": "Ich mag keinen Fisch.",
+              "tr": "Я не люблю рибу."
+            }
+          ]
+        },
+        {
+          "title": "gern: люблю робити",
+          "text": "gern стоїть одразу після дієслова. Ich mag Pizza: люблю піцу. Ich esse gern Pizza: люблю їсти піцу.",
+          "examples": [
+            {
+              "de": "Er trinkt gern Tee.",
+              "tr": "Він любить пити чай."
+            },
+            {
+              "de": "Ich koche nicht gern.",
+              "tr": "Я не люблю готувати."
+            }
+          ]
+        },
+        {
+          "title": "Міра без прийменника",
+          "text": "Міра і їжа стоять поруч, без прийменника і без артикля в їжі: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "склянка води, шматок пирога"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: food and drinks",
+      "points": [
+        {
+          "title": "mögen: I like a thing",
+          "text": "ich mag, du magst, er mag, wir mögen. After mögen the thing is in the accusative, negation with kein.",
+          "examples": [
+            {
+              "de": "Ich mag Käse.",
+              "tr": "I like cheese."
+            },
+            {
+              "de": "Ich mag keinen Fisch.",
+              "tr": "I don’t like fish."
+            }
+          ]
+        },
+        {
+          "title": "gern: I like doing",
+          "text": "gern comes right after the verb. Ich mag Pizza: I like pizza. Ich esse gern Pizza: I like eating pizza.",
+          "examples": [
+            {
+              "de": "Er trinkt gern Tee.",
+              "tr": "He likes drinking tea."
+            },
+            {
+              "de": "Ich koche nicht gern.",
+              "tr": "I don’t like cooking."
+            }
+          ]
+        },
+        {
+          "title": "Measure with no \"of\"",
+          "text": "The measure and the food stand side by side, with no \"of\" and no article: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "a glass of water, a piece of cake"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: jedzenie i napoje",
+      "points": [
+        {
+          "title": "mögen: lubię rzecz",
+          "text": "ich mag, du magst, er mag, wir mögen. Po mögen rzecz w Akkusativ, przeczenie przez kein.",
+          "examples": [
+            {
+              "de": "Ich mag Käse.",
+              "tr": "Lubię ser."
+            },
+            {
+              "de": "Ich mag keinen Fisch.",
+              "tr": "Nie lubię ryby."
+            }
+          ]
+        },
+        {
+          "title": "gern: lubię robić",
+          "text": "gern stoi zaraz po czasowniku. Ich mag Pizza: lubię pizzę. Ich esse gern Pizza: lubię jeść pizzę.",
+          "examples": [
+            {
+              "de": "Er trinkt gern Tee.",
+              "tr": "On lubi pić herbatę."
+            },
+            {
+              "de": "Ich koche nicht gern.",
+              "tr": "Nie lubię gotować."
+            }
+          ]
+        },
+        {
+          "title": "Miara bez przyimka",
+          "text": "Miara i jedzenie stoją obok siebie, bez przyimka i bez rodzajnika: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "szklanka wody, kawałek ciasta"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: comida y bebida",
+      "points": [
+        {
+          "title": "mögen: me gusta algo",
+          "text": "ich mag, du magst, er mag, wir mögen. Después de mögen va el acusativo, la negación con kein.",
+          "examples": [
+            {
+              "de": "Ich mag Käse.",
+              "tr": "Me gusta el queso."
+            },
+            {
+              "de": "Ich mag keinen Fisch.",
+              "tr": "No me gusta el pescado."
+            }
+          ]
+        },
+        {
+          "title": "gern: me gusta hacer",
+          "text": "gern va justo después del verbo. Ich mag Pizza: me gusta la pizza. Ich esse gern Pizza: me gusta comer pizza.",
+          "examples": [
+            {
+              "de": "Er trinkt gern Tee.",
+              "tr": "A él le gusta tomar té."
+            },
+            {
+              "de": "Ich koche nicht gern.",
+              "tr": "No me gusta cocinar."
+            }
+          ]
+        },
+        {
+          "title": "Medida sin \"de\"",
+          "text": "La medida y la comida van juntas, sin \"de\" y sin artículo: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "un vaso de agua, un trozo de pastel"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : nourriture et boissons",
+      "points": [
+        {
+          "title": "mögen : aimer une chose",
+          "text": "ich mag, du magst, er mag, wir mögen. Après mögen, accusatif, et négation avec kein.",
+          "examples": [
+            {
+              "de": "Ich mag Käse.",
+              "tr": "J’aime le fromage."
+            },
+            {
+              "de": "Ich mag keinen Fisch.",
+              "tr": "Je n’aime pas le poisson."
+            }
+          ]
+        },
+        {
+          "title": "gern : aimer faire",
+          "text": "gern vient juste après le verbe. Ich mag Pizza : j’aime la pizza. Ich esse gern Pizza : j’aime manger de la pizza.",
+          "examples": [
+            {
+              "de": "Er trinkt gern Tee.",
+              "tr": "Il aime boire du thé."
+            },
+            {
+              "de": "Ich koche nicht gern.",
+              "tr": "Je n’aime pas cuisiner."
+            }
+          ]
+        },
+        {
+          "title": "Mesure sans « de »",
+          "text": "La mesure et l’aliment sont côte à côte, sans « de » ni article : eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "un verre d’eau, un morceau de gâteau"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: yiyecek ve içecek",
+      "points": [
+        {
+          "title": "mögen: bir şeyi sevmek",
+          "text": "ich mag, du magst, er mag, wir mögen. mögen’den sonra Akkusativ, olumsuz kein ile.",
+          "examples": [
+            {
+              "de": "Ich mag Käse.",
+              "tr": "Peyniri severim."
+            },
+            {
+              "de": "Ich mag keinen Fisch.",
+              "tr": "Balık sevmem."
+            }
+          ]
+        },
+        {
+          "title": "gern: yapmayı sevmek",
+          "text": "gern fiilden hemen sonra gelir. Ich mag Pizza: pizzayı severim. Ich esse gern Pizza: pizza yemeyi severim.",
+          "examples": [
+            {
+              "de": "Er trinkt gern Tee.",
+              "tr": "O çay içmeyi sever."
+            },
+            {
+              "de": "Ich koche nicht gern.",
+              "tr": "Yemek yapmayı sevmem."
+            }
+          ]
+        },
+        {
+          "title": "Edatsız ölçü",
+          "text": "Ölçü ve yiyecek yan yana gelir, edat ve artikel olmadan: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "bir bardak su, bir dilim kek"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: mâncare și băuturi",
+      "points": [
+        {
+          "title": "mögen: îmi place ceva",
+          "text": "ich mag, du magst, er mag, wir mögen. După mögen, acuzativ, negația cu kein.",
+          "examples": [
+            {
+              "de": "Ich mag Käse.",
+              "tr": "Îmi place brânza."
+            },
+            {
+              "de": "Ich mag keinen Fisch.",
+              "tr": "Nu-mi place peștele."
+            }
+          ]
+        },
+        {
+          "title": "gern: îmi place să fac",
+          "text": "gern vine imediat după verb. Ich mag Pizza: îmi place pizza. Ich esse gern Pizza: îmi place să mănânc pizza.",
+          "examples": [
+            {
+              "de": "Er trinkt gern Tee.",
+              "tr": "Lui îi place să bea ceai."
+            },
+            {
+              "de": "Ich koche nicht gern.",
+              "tr": "Nu-mi place să gătesc."
+            }
+          ]
+        },
+        {
+          "title": "Măsura fără „de”",
+          "text": "Măsura și mâncarea stau una lângă alta, fără „de” și fără articol: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "un pahar cu apă, o bucată de prăjitură"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: taom va ichimliklar",
+      "points": [
+        {
+          "title": "mögen: narsani yoqtirish",
+          "text": "ich mag, du magst, er mag, wir mögen. mögen dan keyin Akkusativ, inkor kein bilan.",
+          "examples": [
+            {
+              "de": "Ich mag Käse.",
+              "tr": "Men pishloqni yaxshi ko'raman."
+            },
+            {
+              "de": "Ich mag keinen Fisch.",
+              "tr": "Men baliqni yoqtirmayman."
+            }
+          ]
+        },
+        {
+          "title": "gern: qilishni yoqtirish",
+          "text": "gern fe'ldan keyin darhol turadi. Ich mag Pizza: pitsani yoqtiraman. Ich esse gern Pizza: pitsa yeyishni yoqtiraman.",
+          "examples": [
+            {
+              "de": "Er trinkt gern Tee.",
+              "tr": "U choy ichishni yaxshi ko'radi."
+            },
+            {
+              "de": "Ich koche nicht gern.",
+              "tr": "Ovqat pishirishni yoqtirmayman."
+            }
+          ]
+        },
+        {
+          "title": "Ko'makchisiz o'lchov",
+          "text": "O'lchov va taom yonma-yon, ko'makchi va artiklsiz turadi: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "bir stakan suv, bir bo'lak pirog"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: खाना और पेय",
+      "points": [
+        {
+          "title": "mögen: कोई चीज़ पसंद होना",
+          "text": "ich mag, du magst, er mag, wir mögen। mögen के बाद Akkusativ, नकार kein से।",
+          "examples": [
+            {
+              "de": "Ich mag Käse.",
+              "tr": "मुझे पनीर पसंद है।"
+            },
+            {
+              "de": "Ich mag keinen Fisch.",
+              "tr": "मुझे मछली पसंद नहीं।"
+            }
+          ]
+        },
+        {
+          "title": "gern: करना पसंद है",
+          "text": "gern क्रिया के ठीक बाद आता है। Ich mag Pizza: मुझे पिज़्ज़ा पसंद है। Ich esse gern Pizza: मुझे पिज़्ज़ा खाना पसंद है।",
+          "examples": [
+            {
+              "de": "Er trinkt gern Tee.",
+              "tr": "उसे चाय पीना पसंद है।"
+            },
+            {
+              "de": "Ich koche nicht gern.",
+              "tr": "मुझे खाना बनाना पसंद नहीं।"
+            }
+          ]
+        },
+        {
+          "title": "बिना संबंधसूचक के माप",
+          "text": "माप और खाना साथ-साथ, बिना \"का\" और बिना आर्टिकल के: eine Tasse Kaffee।",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "एक गिलास पानी, केक का एक टुकड़ा"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الطعام والمشروبات",
+      "points": [
+        {
+          "title": "mögen: أحب شيئاً",
+          "text": "ich mag، du magst، er mag، wir mögen. بعد mögen يأتي المفعول، والنفي بـ kein.",
+          "examples": [
+            {
+              "de": "Ich mag Käse.",
+              "tr": "أحب الجبن."
+            },
+            {
+              "de": "Ich mag keinen Fisch.",
+              "tr": "لا أحب السمك."
+            }
+          ]
+        },
+        {
+          "title": "gern: أحب أن أفعل",
+          "text": "تأتي gern مباشرة بعد الفعل. Ich mag Pizza: أحب البيتزا. Ich esse gern Pizza: أحب أكل البيتزا.",
+          "examples": [
+            {
+              "de": "Er trinkt gern Tee.",
+              "tr": "هو يحب شرب الشاي."
+            },
+            {
+              "de": "Ich koche nicht gern.",
+              "tr": "لا أحب الطبخ."
+            }
+          ]
+        },
+        {
+          "title": "المقدار بدون حرف جر",
+          "text": "يأتي المقدار والطعام متجاورين بدون حرف جر وبدون أداة: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "كأس ماء، قطعة كعك"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "hearty-inn-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "mögen или gern",
+          "text": "mögen с вещью: Ich mag Kaffee. gern с действием: Ich trinke gern Kaffee.",
+          "examples": [
+            {
+              "de": "Magst du Kaffee mit Milch?",
+              "tr": "Ты любишь кофе с молоком?"
+            }
+          ]
+        },
+        {
+          "title": "schmecken",
+          "text": "Одна вещь schmeckt, много вещей schmecken.",
+          "examples": [
+            {
+              "de": "Der Saft schmeckt süß.",
+              "tr": "Сок сладкий на вкус."
+            }
+          ]
+        },
+        {
+          "title": "Мера без предлога",
+          "text": "Мера и еда стоят рядом, без «из» и без артикля у еды: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "стакан воды, кусок пирога"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "mögen чи gern",
+          "text": "mögen з річчю: Ich mag Kaffee. gern із дією: Ich trinke gern Kaffee.",
+          "examples": [
+            {
+              "de": "Magst du Kaffee mit Milch?",
+              "tr": "Ти любиш каву з молоком?"
+            }
+          ]
+        },
+        {
+          "title": "schmecken",
+          "text": "Одна річ schmeckt, багато речей schmecken.",
+          "examples": [
+            {
+              "de": "Der Saft schmeckt süß.",
+              "tr": "Сік солодкий на смак."
+            }
+          ]
+        },
+        {
+          "title": "Міра без прийменника",
+          "text": "Міра і їжа стоять поруч, без прийменника і без артикля в їжі: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "склянка води, шматок пирога"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "mögen or gern",
+          "text": "mögen with a thing: Ich mag Kaffee. gern with an action: Ich trinke gern Kaffee.",
+          "examples": [
+            {
+              "de": "Magst du Kaffee mit Milch?",
+              "tr": "Do you like coffee with milk?"
+            }
+          ]
+        },
+        {
+          "title": "schmecken",
+          "text": "One thing schmeckt, several things schmecken.",
+          "examples": [
+            {
+              "de": "Der Saft schmeckt süß.",
+              "tr": "The juice tastes sweet."
+            }
+          ]
+        },
+        {
+          "title": "Measure with no \"of\"",
+          "text": "The measure and the food stand side by side, with no \"of\" and no article: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "a glass of water, a piece of cake"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "mögen czy gern",
+          "text": "mögen z rzeczą: Ich mag Kaffee. gern z czynnością: Ich trinke gern Kaffee.",
+          "examples": [
+            {
+              "de": "Magst du Kaffee mit Milch?",
+              "tr": "Lubisz kawę z mlekiem?"
+            }
+          ]
+        },
+        {
+          "title": "schmecken",
+          "text": "Jedna rzecz schmeckt, wiele rzeczy schmecken.",
+          "examples": [
+            {
+              "de": "Der Saft schmeckt süß.",
+              "tr": "Sok jest słodki."
+            }
+          ]
+        },
+        {
+          "title": "Miara bez przyimka",
+          "text": "Miara i jedzenie stoją obok siebie, bez przyimka i bez rodzajnika: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "szklanka wody, kawałek ciasta"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "mögen o gern",
+          "text": "mögen con una cosa: Ich mag Kaffee. gern con una acción: Ich trinke gern Kaffee.",
+          "examples": [
+            {
+              "de": "Magst du Kaffee mit Milch?",
+              "tr": "¿Te gusta el café con leche?"
+            }
+          ]
+        },
+        {
+          "title": "schmecken",
+          "text": "Una cosa schmeckt, varias cosas schmecken.",
+          "examples": [
+            {
+              "de": "Der Saft schmeckt süß.",
+              "tr": "El zumo sabe dulce."
+            }
+          ]
+        },
+        {
+          "title": "Medida sin \"de\"",
+          "text": "La medida y la comida van juntas, sin \"de\" y sin artículo: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "un vaso de agua, un trozo de pastel"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "mögen ou gern",
+          "text": "mögen avec une chose : Ich mag Kaffee. gern avec une action : Ich trinke gern Kaffee.",
+          "examples": [
+            {
+              "de": "Magst du Kaffee mit Milch?",
+              "tr": "Tu aimes le café au lait ?"
+            }
+          ]
+        },
+        {
+          "title": "schmecken",
+          "text": "Une chose schmeckt, plusieurs choses schmecken.",
+          "examples": [
+            {
+              "de": "Der Saft schmeckt süß.",
+              "tr": "Le jus a un goût sucré."
+            }
+          ]
+        },
+        {
+          "title": "Mesure sans « de »",
+          "text": "La mesure et l’aliment sont côte à côte, sans « de » ni article : eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "un verre d’eau, un morceau de gâteau"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "mögen mi, gern mi",
+          "text": "mögen bir şeyle: Ich mag Kaffee. gern bir eylemle: Ich trinke gern Kaffee.",
+          "examples": [
+            {
+              "de": "Magst du Kaffee mit Milch?",
+              "tr": "Sütlü kahve sever misin?"
+            }
+          ]
+        },
+        {
+          "title": "schmecken",
+          "text": "Tek şey schmeckt, birden çok şey schmecken.",
+          "examples": [
+            {
+              "de": "Der Saft schmeckt süß.",
+              "tr": "Meyve suyunun tadı tatlı."
+            }
+          ]
+        },
+        {
+          "title": "Edatsız ölçü",
+          "text": "Ölçü ve yiyecek yan yana gelir, edat ve artikel olmadan: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "bir bardak su, bir dilim kek"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "mögen sau gern",
+          "text": "mögen cu un lucru: Ich mag Kaffee. gern cu o acțiune: Ich trinke gern Kaffee.",
+          "examples": [
+            {
+              "de": "Magst du Kaffee mit Milch?",
+              "tr": "Îți place cafeaua cu lapte?"
+            }
+          ]
+        },
+        {
+          "title": "schmecken",
+          "text": "Un lucru schmeckt, mai multe schmecken.",
+          "examples": [
+            {
+              "de": "Der Saft schmeckt süß.",
+              "tr": "Sucul are gust dulce."
+            }
+          ]
+        },
+        {
+          "title": "Măsura fără „de”",
+          "text": "Măsura și mâncarea stau una lângă alta, fără „de” și fără articol: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "un pahar cu apă, o bucată de prăjitură"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "mögen yoki gern",
+          "text": "mögen narsa bilan: Ich mag Kaffee. gern harakat bilan: Ich trinke gern Kaffee.",
+          "examples": [
+            {
+              "de": "Magst du Kaffee mit Milch?",
+              "tr": "Sutli qahvani yaxshi ko'rasanmi?"
+            }
+          ]
+        },
+        {
+          "title": "schmecken",
+          "text": "Bitta narsa schmeckt, ko'p narsa schmecken.",
+          "examples": [
+            {
+              "de": "Der Saft schmeckt süß.",
+              "tr": "Sharbat shirin."
+            }
+          ]
+        },
+        {
+          "title": "Ko'makchisiz o'lchov",
+          "text": "O'lchov va taom yonma-yon, ko'makchi va artiklsiz turadi: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "bir stakan suv, bir bo'lak pirog"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "mögen या gern",
+          "text": "mögen चीज़ के साथ: Ich mag Kaffee। gern काम के साथ: Ich trinke gern Kaffee।",
+          "examples": [
+            {
+              "de": "Magst du Kaffee mit Milch?",
+              "tr": "क्या तुम्हें दूध वाली कॉफ़ी पसंद है?"
+            }
+          ]
+        },
+        {
+          "title": "schmecken",
+          "text": "एक चीज़ schmeckt, कई चीज़ें schmecken।",
+          "examples": [
+            {
+              "de": "Der Saft schmeckt süß.",
+              "tr": "जूस मीठा है।"
+            }
+          ]
+        },
+        {
+          "title": "बिना संबंधसूचक के माप",
+          "text": "माप और खाना साथ-साथ, बिना \"का\" और बिना आर्टिकल के: eine Tasse Kaffee।",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "एक गिलास पानी, केक का एक टुकड़ा"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "mögen أم gern",
+          "text": "mögen مع الشيء: Ich mag Kaffee. وgern مع الفعل: Ich trinke gern Kaffee.",
+          "examples": [
+            {
+              "de": "Magst du Kaffee mit Milch?",
+              "tr": "هل تحب القهوة بالحليب؟"
+            }
+          ]
+        },
+        {
+          "title": "schmecken",
+          "text": "شيء واحد schmeckt، وعدة أشياء schmecken.",
+          "examples": [
+            {
+              "de": "Der Saft schmeckt süß.",
+              "tr": "طعم العصير حلو."
+            }
+          ]
+        },
+        {
+          "title": "المقدار بدون حرف جر",
+          "text": "يأتي المقدار والطعام متجاورين بدون حرف جر وبدون أداة: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "كأس ماء، قطعة كعك"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

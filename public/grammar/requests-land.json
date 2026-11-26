@@ -1,0 +1,2530 @@
+{
+  "requests-1": {
+    "ru": {
+      "title": "Просьба на «ты»",
+      "points": [
+        {
+          "title": "Просьба на du",
+          "text": "Берём форму du без -st и без du: du kommst → Komm! Если гласная меняется e → i, она остаётся: nimm, gib, hilf, lies, iss, sprich. Особая форма: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Говори медленнее!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Прочитай текст!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Прохання на «ти»",
+      "points": [
+        {
+          "title": "Прохання на du",
+          "text": "Беремо форму du без -st і без du: du kommst → Komm! Якщо голосна змінюється e → i, вона лишається: nimm, gib, hilf, lies, iss, sprich. Особлива форма: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Говори повільніше!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Прочитай текст!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Requests with du",
+      "points": [
+        {
+          "title": "Request with du",
+          "text": "Take the du form without -st and without du: du kommst → Komm! If the vowel changes e → i, it stays: nimm, gib, hilf, lies, iss, sprich. Special form: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Speak more slowly!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Read the text!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Prośba na „ty”",
+      "points": [
+        {
+          "title": "Prośba na du",
+          "text": "Bierzemy formę du bez -st i bez du: du kommst → Komm! Jeśli samogłoska zmienia się e → i, zostaje: nimm, gib, hilf, lies, iss, sprich. Forma szczególna: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Mów wolniej!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Przeczytaj tekst!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Peticiones con du",
+      "points": [
+        {
+          "title": "Petición con du",
+          "text": "Se toma la forma de du sin -st y sin du: du kommst → Komm! Si la vocal cambia e → i, se mantiene: nimm, gib, hilf, lies, iss, sprich. Forma especial: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "¡Habla más despacio!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "¡Lee el texto!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Demandes avec du",
+      "points": [
+        {
+          "title": "Demande avec du",
+          "text": "On prend la forme de du sans -st et sans du : du kommst → Komm ! Si la voyelle change e → i, elle reste : nimm, gib, hilf, lies, iss, sprich. Forme spéciale : Sei !",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Parle plus lentement !"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Lis le texte !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "du ile rica",
+      "points": [
+        {
+          "title": "du ile rica",
+          "text": "du biçimini -st ve du olmadan al: du kommst → Komm! Ünlü e → i değişiyorsa kalır: nimm, gib, hilf, lies, iss, sprich. Özel biçim: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Daha yavaş konuş!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Metni oku!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Rugăminți cu du",
+      "points": [
+        {
+          "title": "Rugăminte cu du",
+          "text": "Iei forma de la du fără -st și fără du: du kommst → Komm! Dacă vocala se schimbă e → i, rămâne: nimm, gib, hilf, lies, iss, sprich. Formă specială: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Vorbește mai rar!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Citește textul!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "du bilan iltimos",
+      "points": [
+        {
+          "title": "du bilan iltimos",
+          "text": "du shaklini -st va du siz olamiz: du kommst → Komm! Unli e → i o'zgarsa, saqlanadi: nimm, gib, hilf, lies, iss, sprich. Alohida shakl: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Sekinroq gapir!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Matnni o'qi!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "du के साथ अनुरोध",
+      "points": [
+        {
+          "title": "du के साथ अनुरोध",
+          "text": "du वाला रूप बिना -st और बिना du: du kommst → Komm! अगर स्वर e → i बदलता है, तो वैसा ही रहता है: nimm, gib, hilf, lies, iss, sprich। खास रूप: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "धीरे बोलो!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "पाठ पढ़ो!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الطلب بصيغة du",
+      "points": [
+        {
+          "title": "الطلب بصيغة du",
+          "text": "نأخذ صيغة du بدون -st وبدون du: du kommst → Komm! وإذا تغير الحرف e → i يبقى: nimm، gib، hilf، lies، iss، sprich. والصيغة الخاصة: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "تكلم ببطء أكثر!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "اقرأ النص!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "requests-2": {
+    "ru": {
+      "title": "Просьба к друзьям",
+      "points": [
+        {
+          "title": "Просьба к нескольким друзьям",
+          "text": "Форма ihr без ihr: ihr kommt → Kommt! ihr esst → Esst! Особая форма: Seid!",
+          "examples": [
+            {
+              "de": "Nehmt Regenschirme mit!",
+              "tr": "Возьмите зонты!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Прохання до друзів",
+      "points": [
+        {
+          "title": "Прохання до кількох друзів",
+          "text": "Форма ihr без ihr: ihr kommt → Kommt! ihr esst → Esst! Особлива форма: Seid!",
+          "examples": [
+            {
+              "de": "Nehmt Regenschirme mit!",
+              "tr": "Візьміть парасольки!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Requests to friends",
+      "points": [
+        {
+          "title": "Request to several friends",
+          "text": "The ihr form without ihr: ihr kommt → Kommt! ihr esst → Esst! Special form: Seid!",
+          "examples": [
+            {
+              "de": "Nehmt Regenschirme mit!",
+              "tr": "Take umbrellas with you!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Prośba do przyjaciół",
+      "points": [
+        {
+          "title": "Prośba do kilku przyjaciół",
+          "text": "Forma ihr bez ihr: ihr kommt → Kommt! ihr esst → Esst! Forma szczególna: Seid!",
+          "examples": [
+            {
+              "de": "Nehmt Regenschirme mit!",
+              "tr": "Weźcie parasole!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Peticiones a amigos",
+      "points": [
+        {
+          "title": "Petición a varios amigos",
+          "text": "La forma de ihr sin ihr: ihr kommt → Kommt! ihr esst → Esst! Forma especial: Seid!",
+          "examples": [
+            {
+              "de": "Nehmt Regenschirme mit!",
+              "tr": "¡Llevad paraguas!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Demandes à des amis",
+      "points": [
+        {
+          "title": "Demande à plusieurs amis",
+          "text": "La forme de ihr sans ihr : ihr kommt → Kommt ! ihr esst → Esst ! Forme spéciale : Seid !",
+          "examples": [
+            {
+              "de": "Nehmt Regenschirme mit!",
+              "tr": "Prenez des parapluies !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Arkadaşlara rica",
+      "points": [
+        {
+          "title": "Birkaç arkadaşa rica",
+          "text": "ihr biçimi ihr olmadan: ihr kommt → Kommt! ihr esst → Esst! Özel biçim: Seid!",
+          "examples": [
+            {
+              "de": "Nehmt Regenschirme mit!",
+              "tr": "Şemsiye alın!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Rugăminți către prieteni",
+      "points": [
+        {
+          "title": "Rugăminte către mai mulți prieteni",
+          "text": "Forma de la ihr fără ihr: ihr kommt → Kommt! ihr esst → Esst! Formă specială: Seid!",
+          "examples": [
+            {
+              "de": "Nehmt Regenschirme mit!",
+              "tr": "Luați umbrele!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Do'stlarga iltimos",
+      "points": [
+        {
+          "title": "Bir nechta do'stga iltimos",
+          "text": "ihr shakli ihr siz: ihr kommt → Kommt! ihr esst → Esst! Alohida shakl: Seid!",
+          "examples": [
+            {
+              "de": "Nehmt Regenschirme mit!",
+              "tr": "Soyabon olib olinglar!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोस्तों से अनुरोध",
+      "points": [
+        {
+          "title": "कई दोस्तों से अनुरोध",
+          "text": "ihr वाला रूप बिना ihr: ihr kommt → Kommt! ihr esst → Esst! खास रूप: Seid!",
+          "examples": [
+            {
+              "de": "Nehmt Regenschirme mit!",
+              "tr": "छाते ले लो!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الطلب من الأصدقاء",
+      "points": [
+        {
+          "title": "الطلب من عدة أصدقاء",
+          "text": "صيغة ihr بدون ihr: ihr kommt → Kommt! ihr esst → Esst! والصيغة الخاصة: Seid!",
+          "examples": [
+            {
+              "de": "Nehmt Regenschirme mit!",
+              "tr": "خذوا مظلات!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "requests-3": {
+    "ru": {
+      "title": "Вежливая просьба",
+      "points": [
+        {
+          "title": "Вежливая просьба на Sie",
+          "text": "Глагол первым, потом Sie: Kommen Sie! Warten Sie! Особая форма: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Проходите, пожалуйста!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Ввічливе прохання",
+      "points": [
+        {
+          "title": "Ввічливе прохання на Sie",
+          "text": "Дієслово першим, потім Sie: Kommen Sie! Warten Sie! Особлива форма: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Заходьте, будь ласка!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Polite requests",
+      "points": [
+        {
+          "title": "Polite request with Sie",
+          "text": "Verb first, then Sie: Kommen Sie! Warten Sie! Special form: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Please come in!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Grzeczna prośba",
+      "points": [
+        {
+          "title": "Grzeczna prośba na Sie",
+          "text": "Czasownik pierwszy, potem Sie: Kommen Sie! Warten Sie! Forma szczególna: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Proszę wejść!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Peticiones educadas",
+      "points": [
+        {
+          "title": "Petición de usted",
+          "text": "Primero el verbo, luego Sie: Kommen Sie! Warten Sie! Forma especial: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "¡Pase, por favor!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Demandes polies",
+      "points": [
+        {
+          "title": "Demande polie avec Sie",
+          "text": "Le verbe d’abord, puis Sie : Kommen Sie ! Warten Sie ! Forme spéciale : Seien Sie !",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Entrez, je vous prie !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kibar rica",
+      "points": [
+        {
+          "title": "Sie ile kibar rica",
+          "text": "Önce fiil, sonra Sie: Kommen Sie! Warten Sie! Özel biçim: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Buyurun, girin!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Rugăminți politicoase",
+      "points": [
+        {
+          "title": "Rugăminte politicoasă cu Sie",
+          "text": "Întâi verbul, apoi Sie: Kommen Sie! Warten Sie! Formă specială: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Intrați, vă rog!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Muloyim iltimos",
+      "points": [
+        {
+          "title": "Sie bilan muloyim iltimos",
+          "text": "Avval fe'l, keyin Sie: Kommen Sie! Warten Sie! Alohida shakl: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Marhamat, kiring!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "विनम्र अनुरोध",
+      "points": [
+        {
+          "title": "Sie के साथ विनम्र अनुरोध",
+          "text": "पहले क्रिया, फिर Sie: Kommen Sie! Warten Sie! खास रूप: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "कृपया अंदर आइए!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الطلب المهذب",
+      "points": [
+        {
+          "title": "الطلب المهذب بصيغة Sie",
+          "text": "الفعل أولاً ثم Sie: Kommen Sie! Warten Sie! والصيغة الخاصة: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "تفضل بالدخول!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "requests-4": {
+    "ru": {
+      "title": "Просьбы с приставками",
+      "points": [
+        {
+          "title": "Приставка в конце, bitte и mal",
+          "text": "В просьбе приставка уходит в конец: Mach die Tür auf! Слова bitte и mal делают просьбу мягче.",
+          "examples": [
+            {
+              "de": "Mach bitte das Licht an!",
+              "tr": "Включи, пожалуйста, свет!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Прохання з префіксами",
+      "points": [
+        {
+          "title": "Префікс у кінці, bitte і mal",
+          "text": "У проханні префікс іде в кінець: Mach die Tür auf! Слова bitte і mal роблять прохання м’якшим.",
+          "examples": [
+            {
+              "de": "Mach bitte das Licht an!",
+              "tr": "Увімкни, будь ласка, світло!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Requests with prefixes",
+      "points": [
+        {
+          "title": "Prefix at the end, bitte and mal",
+          "text": "In a request the prefix goes to the end: Mach die Tür auf! bitte and mal make it softer.",
+          "examples": [
+            {
+              "de": "Mach bitte das Licht an!",
+              "tr": "Please turn on the light!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Prośby z przedrostkami",
+      "points": [
+        {
+          "title": "Przedrostek na końcu, bitte i mal",
+          "text": "W prośbie przedrostek idzie na koniec: Mach die Tür auf! Słowa bitte i mal łagodzą prośbę.",
+          "examples": [
+            {
+              "de": "Mach bitte das Licht an!",
+              "tr": "Włącz proszę światło!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Peticiones con prefijos",
+      "points": [
+        {
+          "title": "Prefijo al final, bitte y mal",
+          "text": "En la petición el prefijo va al final: Mach die Tür auf! bitte y mal la suavizan.",
+          "examples": [
+            {
+              "de": "Mach bitte das Licht an!",
+              "tr": "¡Enciende la luz, por favor!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Demandes avec préfixes",
+      "points": [
+        {
+          "title": "Préfixe à la fin, bitte et mal",
+          "text": "Dans une demande, le préfixe va à la fin : Mach die Tür auf ! bitte et mal adoucissent la demande.",
+          "examples": [
+            {
+              "de": "Mach bitte das Licht an!",
+              "tr": "Allume la lumière, s’il te plaît !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Ön ekli ricalar",
+      "points": [
+        {
+          "title": "Ön ek sonda, bitte ve mal",
+          "text": "Ricada ön ek sona gider: Mach die Tür auf! bitte ve mal ricayı yumuşatır.",
+          "examples": [
+            {
+              "de": "Mach bitte das Licht an!",
+              "tr": "Lütfen ışığı aç!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Rugăminți cu prefixe",
+      "points": [
+        {
+          "title": "Prefixul la final, bitte și mal",
+          "text": "În rugăminte prefixul merge la final: Mach die Tür auf! bitte și mal o fac mai blândă.",
+          "examples": [
+            {
+              "de": "Mach bitte das Licht an!",
+              "tr": "Aprinde lumina, te rog!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Old qo'shimchali iltimoslar",
+      "points": [
+        {
+          "title": "Old qo'shimcha oxirida, bitte va mal",
+          "text": "Iltimosda old qo'shimcha oxiriga o'tadi: Mach die Tür auf! bitte va mal iltimosni yumshatadi.",
+          "examples": [
+            {
+              "de": "Mach bitte das Licht an!",
+              "tr": "Iltimos, chiroqni yoq!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "उपसर्ग वाले अनुरोध",
+      "points": [
+        {
+          "title": "उपसर्ग अंत में, bitte और mal",
+          "text": "अनुरोध में उपसर्ग अंत में जाता है: Mach die Tür auf! bitte और mal अनुरोध को नरम बनाते हैं।",
+          "examples": [
+            {
+              "de": "Mach bitte das Licht an!",
+              "tr": "कृपया बत्ती जला दो!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "طلبات مع السوابق",
+      "points": [
+        {
+          "title": "السابقة في الآخر، bitte وmal",
+          "text": "في الطلب تذهب السابقة إلى الآخر: Mach die Tür auf! وتجعل bitte وmal الطلب ألطف.",
+          "examples": [
+            {
+              "de": "Mach bitte das Licht an!",
+              "tr": "أشعل الضوء من فضلك!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "requests-5": {
+    "ru": {
+      "title": "Можешь? Можете?",
+      "points": [
+        {
+          "title": "Просьба вопросом",
+          "text": "Kannst du ...? Können Sie ...? Ещё вежливее: Könntest du ...? Könnten Sie ...? (не мог бы ты, не могли бы вы). Второй глагол в конце.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Вы можете это повторить?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Не могли бы вы открыть окно?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Можеш? Можете?",
+      "points": [
+        {
+          "title": "Прохання питанням",
+          "text": "Kannst du ...? Können Sie ...? Ще ввічливіше: Könntest du ...? Könnten Sie ...? (чи не міг би ти, чи не могли б ви). Друге дієслово в кінці.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Ви можете це повторити?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Чи не могли б ви відчинити вікно?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Can you?",
+      "points": [
+        {
+          "title": "A request as a question",
+          "text": "Kannst du ...? Können Sie ...? Even more polite: Könntest du ...? Könnten Sie ...? (could you). The second verb goes to the end.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Can you repeat that?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Could you open the window?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Możesz? Może pan?",
+      "points": [
+        {
+          "title": "Prośba pytaniem",
+          "text": "Kannst du ...? Können Sie ...? Jeszcze grzeczniej: Könntest du ...? Könnten Sie ...? (czy mógłbyś, czy mógłby pan). Drugi czasownik na końcu.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Może pan to powtórzyć?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Czy mógłby pan otworzyć okno?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿Puedes? ¿Puede?",
+      "points": [
+        {
+          "title": "Petición con pregunta",
+          "text": "Kannst du ...? Können Sie ...? Más educado: Könntest du ...? Könnten Sie ...? (¿podrías, podría usted?). El segundo verbo va al final.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "¿Puede repetirlo?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "¿Podría abrir la ventana?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Tu peux ? Vous pouvez ?",
+      "points": [
+        {
+          "title": "Demande sous forme de question",
+          "text": "Kannst du ... ? Können Sie ... ? Encore plus poli : Könntest du ... ? Könnten Sie ... ? (pourrais-tu, pourriez-vous). Le deuxième verbe va à la fin.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Vous pouvez répéter ?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Pourriez-vous ouvrir la fenêtre ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yapabilir misin?",
+      "points": [
+        {
+          "title": "Soru şeklinde rica",
+          "text": "Kannst du ...? Können Sie ...? Daha kibar: Könntest du ...? Könnten Sie ...? (... yapabilir misin/misiniz acaba). İkinci fiil sonda.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Tekrar edebilir misiniz?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Pencereyi açabilir misiniz acaba?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Poți? Puteți?",
+      "points": [
+        {
+          "title": "Rugăminte sub formă de întrebare",
+          "text": "Kannst du ...? Können Sie ...? Și mai politicos: Könntest du ...? Könnten Sie ...? (ai putea, ați putea). Al doilea verb la final.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Puteți repeta?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Ați putea deschide fereastra?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qila olasanmi?",
+      "points": [
+        {
+          "title": "Savol shaklida iltimos",
+          "text": "Kannst du ...? Können Sie ...? Yanada muloyim: Könntest du ...? Könnten Sie ...? (... qila olmaysizmi). Ikkinchi fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Buni qaytara olasizmi?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Derazani ocha olmaysizmi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "क्या तुम कर सकते हो?",
+      "points": [
+        {
+          "title": "सवाल के रूप में अनुरोध",
+          "text": "Kannst du ...? Können Sie ...? और विनम्र: Könntest du ...? Könnten Sie ...? (क्या तुम/आप ... सकेंगे)। दूसरी क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "क्या आप यह दोहरा सकते हैं?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "क्या आप खिड़की खोल सकेंगे?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "هل يمكنك؟",
+      "points": [
+        {
+          "title": "الطلب بصيغة سؤال",
+          "text": "Kannst du ...؟ Können Sie ...؟ وأكثر أدباً: Könntest du ...؟ Könnten Sie ...؟ (هل يمكنك من فضلك). والفعل الثاني في الآخر.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "هل يمكنك أن تعيد ذلك؟"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "هل يمكنك فتح النافذة من فضلك؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "requests-6": {
+    "ru": {
+      "title": "Не могли бы вы...?",
+      "points": [
+        {
+          "title": "Просьба вопросом",
+          "text": "Kannst du ...? Können Sie ...? Ещё вежливее: Könntest du ...? Könnten Sie ...? (не мог бы ты, не могли бы вы). Второй глагол в конце.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Вы можете это повторить?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Не могли бы вы открыть окно?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Чи не могли б ви...?",
+      "points": [
+        {
+          "title": "Прохання питанням",
+          "text": "Kannst du ...? Können Sie ...? Ще ввічливіше: Könntest du ...? Könnten Sie ...? (чи не міг би ти, чи не могли б ви). Друге дієслово в кінці.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Ви можете це повторити?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Чи не могли б ви відчинити вікно?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Could you...?",
+      "points": [
+        {
+          "title": "A request as a question",
+          "text": "Kannst du ...? Können Sie ...? Even more polite: Könntest du ...? Könnten Sie ...? (could you). The second verb goes to the end.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Can you repeat that?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Could you open the window?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Czy mógłby pan...?",
+      "points": [
+        {
+          "title": "Prośba pytaniem",
+          "text": "Kannst du ...? Können Sie ...? Jeszcze grzeczniej: Könntest du ...? Könnten Sie ...? (czy mógłbyś, czy mógłby pan). Drugi czasownik na końcu.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Może pan to powtórzyć?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Czy mógłby pan otworzyć okno?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿Podría...?",
+      "points": [
+        {
+          "title": "Petición con pregunta",
+          "text": "Kannst du ...? Können Sie ...? Más educado: Könntest du ...? Könnten Sie ...? (¿podrías, podría usted?). El segundo verbo va al final.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "¿Puede repetirlo?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "¿Podría abrir la ventana?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pourriez-vous... ?",
+      "points": [
+        {
+          "title": "Demande sous forme de question",
+          "text": "Kannst du ... ? Können Sie ... ? Encore plus poli : Könntest du ... ? Könnten Sie ... ? (pourrais-tu, pourriez-vous). Le deuxième verbe va à la fin.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Vous pouvez répéter ?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Pourriez-vous ouvrir la fenêtre ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "... yapabilir misiniz acaba?",
+      "points": [
+        {
+          "title": "Soru şeklinde rica",
+          "text": "Kannst du ...? Können Sie ...? Daha kibar: Könntest du ...? Könnten Sie ...? (... yapabilir misin/misiniz acaba). İkinci fiil sonda.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Tekrar edebilir misiniz?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Pencereyi açabilir misiniz acaba?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Ați putea...?",
+      "points": [
+        {
+          "title": "Rugăminte sub formă de întrebare",
+          "text": "Kannst du ...? Können Sie ...? Și mai politicos: Könntest du ...? Könnten Sie ...? (ai putea, ați putea). Al doilea verb la final.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Puteți repeta?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Ați putea deschide fereastra?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "... qila olmaysizmi?",
+      "points": [
+        {
+          "title": "Savol shaklida iltimos",
+          "text": "Kannst du ...? Können Sie ...? Yanada muloyim: Könntest du ...? Könnten Sie ...? (... qila olmaysizmi). Ikkinchi fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Buni qaytara olasizmi?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Derazani ocha olmaysizmi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "क्या आप ... सकेंगे?",
+      "points": [
+        {
+          "title": "सवाल के रूप में अनुरोध",
+          "text": "Kannst du ...? Können Sie ...? और विनम्र: Könntest du ...? Könnten Sie ...? (क्या तुम/आप ... सकेंगे)। दूसरी क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "क्या आप यह दोहरा सकते हैं?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "क्या आप खिड़की खोल सकेंगे?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "هل يمكنك من فضلك...؟",
+      "points": [
+        {
+          "title": "الطلب بصيغة سؤال",
+          "text": "Kannst du ...؟ Können Sie ...؟ وأكثر أدباً: Könntest du ...؟ Könnten Sie ...؟ (هل يمكنك من فضلك). والفعل الثاني في الآخر.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "هل يمكنك أن تعيد ذلك؟"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "هل يمكنك فتح النافذة من فضلك؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "requests-7": {
+    "ru": {
+      "title": "В кафе и магазине",
+      "points": [
+        {
+          "title": "Ich hätte gern",
+          "text": "Вежливый заказ: Ich möchte ... или Ich hätte gern ... Это готовые фразы, после них Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich hätte gern einen Tee.",
+              "tr": "Мне, пожалуйста, чай."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "У кафе й магазині",
+      "points": [
+        {
+          "title": "Ich hätte gern",
+          "text": "Ввічливе замовлення: Ich möchte ... або Ich hätte gern ... Це готові фрази, після них Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich hätte gern einen Tee.",
+              "tr": "Мені, будь ласка, чай."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "At the café and shop",
+      "points": [
+        {
+          "title": "Ich hätte gern",
+          "text": "Polite ordering: Ich möchte ... or Ich hätte gern ... These are set phrases followed by the accusative.",
+          "examples": [
+            {
+              "de": "Ich hätte gern einen Tee.",
+              "tr": "I’d like a tea, please."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "W kawiarni i sklepie",
+      "points": [
+        {
+          "title": "Ich hätte gern",
+          "text": "Grzeczne zamówienie: Ich möchte ... albo Ich hätte gern ... To gotowe zwroty, po nich Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich hätte gern einen Tee.",
+              "tr": "Poproszę herbatę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "En el café y la tienda",
+      "points": [
+        {
+          "title": "Ich hätte gern",
+          "text": "Pedido educado: Ich möchte ... o Ich hätte gern ... Son frases hechas, seguidas de acusativo.",
+          "examples": [
+            {
+              "de": "Ich hätte gern einen Tee.",
+              "tr": "Me gustaría un té."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Au café et au magasin",
+      "points": [
+        {
+          "title": "Ich hätte gern",
+          "text": "Commande polie : Ich möchte ... ou Ich hätte gern ... Ce sont des expressions toutes faites, suivies de l’accusatif.",
+          "examples": [
+            {
+              "de": "Ich hätte gern einen Tee.",
+              "tr": "Je voudrais un thé."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kafede ve mağazada",
+      "points": [
+        {
+          "title": "Ich hätte gern",
+          "text": "Kibar sipariş: Ich möchte ... ya da Ich hätte gern ... Kalıp ifadeler, ardından Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich hätte gern einen Tee.",
+              "tr": "Bir çay alabilir miyim?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "La cafenea și în magazin",
+      "points": [
+        {
+          "title": "Ich hätte gern",
+          "text": "Comandă politicoasă: Ich möchte ... sau Ich hätte gern ... Sunt expresii fixe, urmate de acuzativ.",
+          "examples": [
+            {
+              "de": "Ich hätte gern einen Tee.",
+              "tr": "Aș dori un ceai."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kafe va do'konda",
+      "points": [
+        {
+          "title": "Ich hätte gern",
+          "text": "Muloyim buyurtma: Ich möchte ... yoki Ich hätte gern ... Bu tayyor iboralar, ulardan keyin Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich hätte gern einen Tee.",
+              "tr": "Menga choy, iltimos."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कैफ़े और दुकान में",
+      "points": [
+        {
+          "title": "Ich hätte gern",
+          "text": "विनम्र ऑर्डर: Ich möchte ... या Ich hätte gern ... ये तैयार वाक्यांश हैं, इनके बाद Akkusativ।",
+          "examples": [
+            {
+              "de": "Ich hätte gern einen Tee.",
+              "tr": "मुझे एक चाय चाहिए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "في المقهى والمتجر",
+      "points": [
+        {
+          "title": "Ich hätte gern",
+          "text": "طلب مهذب: Ich möchte ... أو Ich hätte gern ... وهما عبارتان جاهزتان يليهما المفعول.",
+          "examples": [
+            {
+              "de": "Ich hätte gern einen Tee.",
+              "tr": "أودّ شاياً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "requests-9": {
+    "ru": {
+      "title": "Практика: на уроке",
+      "points": [
+        {
+          "title": "Просьба на du",
+          "text": "Берём форму du без -st и без du: du kommst → Komm! Если гласная меняется e → i, она остаётся: nimm, gib, hilf, lies, iss, sprich. Особая форма: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Говори медленнее!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Прочитай текст!"
+            }
+          ]
+        },
+        {
+          "title": "Просьба к нескольким друзьям",
+          "text": "Форма ihr без ihr: ihr kommt → Kommt! ihr esst → Esst! Особая форма: Seid!",
+          "examples": [
+            {
+              "de": "Nehmt Regenschirme mit!",
+              "tr": "Возьмите зонты!"
+            }
+          ]
+        },
+        {
+          "title": "Вежливая просьба на Sie",
+          "text": "Глагол первым, потом Sie: Kommen Sie! Warten Sie! Особая форма: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Проходите, пожалуйста!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: на уроці",
+      "points": [
+        {
+          "title": "Прохання на du",
+          "text": "Беремо форму du без -st і без du: du kommst → Komm! Якщо голосна змінюється e → i, вона лишається: nimm, gib, hilf, lies, iss, sprich. Особлива форма: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Говори повільніше!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Прочитай текст!"
+            }
+          ]
+        },
+        {
+          "title": "Прохання до кількох друзів",
+          "text": "Форма ihr без ihr: ihr kommt → Kommt! ihr esst → Esst! Особлива форма: Seid!",
+          "examples": [
+            {
+              "de": "Nehmt Regenschirme mit!",
+              "tr": "Візьміть парасольки!"
+            }
+          ]
+        },
+        {
+          "title": "Ввічливе прохання на Sie",
+          "text": "Дієслово першим, потім Sie: Kommen Sie! Warten Sie! Особлива форма: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Заходьте, будь ласка!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: in class",
+      "points": [
+        {
+          "title": "Request with du",
+          "text": "Take the du form without -st and without du: du kommst → Komm! If the vowel changes e → i, it stays: nimm, gib, hilf, lies, iss, sprich. Special form: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Speak more slowly!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Read the text!"
+            }
+          ]
+        },
+        {
+          "title": "Request to several friends",
+          "text": "The ihr form without ihr: ihr kommt → Kommt! ihr esst → Esst! Special form: Seid!",
+          "examples": [
+            {
+              "de": "Nehmt Regenschirme mit!",
+              "tr": "Take umbrellas with you!"
+            }
+          ]
+        },
+        {
+          "title": "Polite request with Sie",
+          "text": "Verb first, then Sie: Kommen Sie! Warten Sie! Special form: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Please come in!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: na lekcji",
+      "points": [
+        {
+          "title": "Prośba na du",
+          "text": "Bierzemy formę du bez -st i bez du: du kommst → Komm! Jeśli samogłoska zmienia się e → i, zostaje: nimm, gib, hilf, lies, iss, sprich. Forma szczególna: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Mów wolniej!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Przeczytaj tekst!"
+            }
+          ]
+        },
+        {
+          "title": "Prośba do kilku przyjaciół",
+          "text": "Forma ihr bez ihr: ihr kommt → Kommt! ihr esst → Esst! Forma szczególna: Seid!",
+          "examples": [
+            {
+              "de": "Nehmt Regenschirme mit!",
+              "tr": "Weźcie parasole!"
+            }
+          ]
+        },
+        {
+          "title": "Grzeczna prośba na Sie",
+          "text": "Czasownik pierwszy, potem Sie: Kommen Sie! Warten Sie! Forma szczególna: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Proszę wejść!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: en clase",
+      "points": [
+        {
+          "title": "Petición con du",
+          "text": "Se toma la forma de du sin -st y sin du: du kommst → Komm! Si la vocal cambia e → i, se mantiene: nimm, gib, hilf, lies, iss, sprich. Forma especial: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "¡Habla más despacio!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "¡Lee el texto!"
+            }
+          ]
+        },
+        {
+          "title": "Petición a varios amigos",
+          "text": "La forma de ihr sin ihr: ihr kommt → Kommt! ihr esst → Esst! Forma especial: Seid!",
+          "examples": [
+            {
+              "de": "Nehmt Regenschirme mit!",
+              "tr": "¡Llevad paraguas!"
+            }
+          ]
+        },
+        {
+          "title": "Petición de usted",
+          "text": "Primero el verbo, luego Sie: Kommen Sie! Warten Sie! Forma especial: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "¡Pase, por favor!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : en cours",
+      "points": [
+        {
+          "title": "Demande avec du",
+          "text": "On prend la forme de du sans -st et sans du : du kommst → Komm ! Si la voyelle change e → i, elle reste : nimm, gib, hilf, lies, iss, sprich. Forme spéciale : Sei !",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Parle plus lentement !"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Lis le texte !"
+            }
+          ]
+        },
+        {
+          "title": "Demande à plusieurs amis",
+          "text": "La forme de ihr sans ihr : ihr kommt → Kommt ! ihr esst → Esst ! Forme spéciale : Seid !",
+          "examples": [
+            {
+              "de": "Nehmt Regenschirme mit!",
+              "tr": "Prenez des parapluies !"
+            }
+          ]
+        },
+        {
+          "title": "Demande polie avec Sie",
+          "text": "Le verbe d’abord, puis Sie : Kommen Sie ! Warten Sie ! Forme spéciale : Seien Sie !",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Entrez, je vous prie !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: derste",
+      "points": [
+        {
+          "title": "du ile rica",
+          "text": "du biçimini -st ve du olmadan al: du kommst → Komm! Ünlü e → i değişiyorsa kalır: nimm, gib, hilf, lies, iss, sprich. Özel biçim: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Daha yavaş konuş!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Metni oku!"
+            }
+          ]
+        },
+        {
+          "title": "Birkaç arkadaşa rica",
+          "text": "ihr biçimi ihr olmadan: ihr kommt → Kommt! ihr esst → Esst! Özel biçim: Seid!",
+          "examples": [
+            {
+              "de": "Nehmt Regenschirme mit!",
+              "tr": "Şemsiye alın!"
+            }
+          ]
+        },
+        {
+          "title": "Sie ile kibar rica",
+          "text": "Önce fiil, sonra Sie: Kommen Sie! Warten Sie! Özel biçim: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Buyurun, girin!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: la oră",
+      "points": [
+        {
+          "title": "Rugăminte cu du",
+          "text": "Iei forma de la du fără -st și fără du: du kommst → Komm! Dacă vocala se schimbă e → i, rămâne: nimm, gib, hilf, lies, iss, sprich. Formă specială: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Vorbește mai rar!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Citește textul!"
+            }
+          ]
+        },
+        {
+          "title": "Rugăminte către mai mulți prieteni",
+          "text": "Forma de la ihr fără ihr: ihr kommt → Kommt! ihr esst → Esst! Formă specială: Seid!",
+          "examples": [
+            {
+              "de": "Nehmt Regenschirme mit!",
+              "tr": "Luați umbrele!"
+            }
+          ]
+        },
+        {
+          "title": "Rugăminte politicoasă cu Sie",
+          "text": "Întâi verbul, apoi Sie: Kommen Sie! Warten Sie! Formă specială: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Intrați, vă rog!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: darsda",
+      "points": [
+        {
+          "title": "du bilan iltimos",
+          "text": "du shaklini -st va du siz olamiz: du kommst → Komm! Unli e → i o'zgarsa, saqlanadi: nimm, gib, hilf, lies, iss, sprich. Alohida shakl: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Sekinroq gapir!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Matnni o'qi!"
+            }
+          ]
+        },
+        {
+          "title": "Bir nechta do'stga iltimos",
+          "text": "ihr shakli ihr siz: ihr kommt → Kommt! ihr esst → Esst! Alohida shakl: Seid!",
+          "examples": [
+            {
+              "de": "Nehmt Regenschirme mit!",
+              "tr": "Soyabon olib olinglar!"
+            }
+          ]
+        },
+        {
+          "title": "Sie bilan muloyim iltimos",
+          "text": "Avval fe'l, keyin Sie: Kommen Sie! Warten Sie! Alohida shakl: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Marhamat, kiring!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: कक्षा में",
+      "points": [
+        {
+          "title": "du के साथ अनुरोध",
+          "text": "du वाला रूप बिना -st और बिना du: du kommst → Komm! अगर स्वर e → i बदलता है, तो वैसा ही रहता है: nimm, gib, hilf, lies, iss, sprich। खास रूप: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "धीरे बोलो!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "पाठ पढ़ो!"
+            }
+          ]
+        },
+        {
+          "title": "कई दोस्तों से अनुरोध",
+          "text": "ihr वाला रूप बिना ihr: ihr kommt → Kommt! ihr esst → Esst! खास रूप: Seid!",
+          "examples": [
+            {
+              "de": "Nehmt Regenschirme mit!",
+              "tr": "छाते ले लो!"
+            }
+          ]
+        },
+        {
+          "title": "Sie के साथ विनम्र अनुरोध",
+          "text": "पहले क्रिया, फिर Sie: Kommen Sie! Warten Sie! खास रूप: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "कृपया अंदर आइए!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: في الدرس",
+      "points": [
+        {
+          "title": "الطلب بصيغة du",
+          "text": "نأخذ صيغة du بدون -st وبدون du: du kommst → Komm! وإذا تغير الحرف e → i يبقى: nimm، gib، hilf، lies، iss، sprich. والصيغة الخاصة: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "تكلم ببطء أكثر!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "اقرأ النص!"
+            }
+          ]
+        },
+        {
+          "title": "الطلب من عدة أصدقاء",
+          "text": "صيغة ihr بدون ihr: ihr kommt → Kommt! ihr esst → Esst! والصيغة الخاصة: Seid!",
+          "examples": [
+            {
+              "de": "Nehmt Regenschirme mit!",
+              "tr": "خذوا مظلات!"
+            }
+          ]
+        },
+        {
+          "title": "الطلب المهذب بصيغة Sie",
+          "text": "الفعل أولاً ثم Sie: Kommen Sie! Warten Sie! والصيغة الخاصة: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "تفضل بالدخول!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "requests-10": {
+    "ru": {
+      "title": "Практика: в гостинице",
+      "points": [
+        {
+          "title": "Просьба вопросом",
+          "text": "Kannst du ...? Können Sie ...? Ещё вежливее: Könntest du ...? Könnten Sie ...? (не мог бы ты, не могли бы вы). Второй глагол в конце.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Вы можете это повторить?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Не могли бы вы открыть окно?"
+            }
+          ]
+        },
+        {
+          "title": "Ich hätte gern",
+          "text": "Вежливый заказ: Ich möchte ... или Ich hätte gern ... Это готовые фразы, после них Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich hätte gern einen Tee.",
+              "tr": "Мне, пожалуйста, чай."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: у готелі",
+      "points": [
+        {
+          "title": "Прохання питанням",
+          "text": "Kannst du ...? Können Sie ...? Ще ввічливіше: Könntest du ...? Könnten Sie ...? (чи не міг би ти, чи не могли б ви). Друге дієслово в кінці.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Ви можете це повторити?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Чи не могли б ви відчинити вікно?"
+            }
+          ]
+        },
+        {
+          "title": "Ich hätte gern",
+          "text": "Ввічливе замовлення: Ich möchte ... або Ich hätte gern ... Це готові фрази, після них Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich hätte gern einen Tee.",
+              "tr": "Мені, будь ласка, чай."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: at the hotel",
+      "points": [
+        {
+          "title": "A request as a question",
+          "text": "Kannst du ...? Können Sie ...? Even more polite: Könntest du ...? Könnten Sie ...? (could you). The second verb goes to the end.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Can you repeat that?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Could you open the window?"
+            }
+          ]
+        },
+        {
+          "title": "Ich hätte gern",
+          "text": "Polite ordering: Ich möchte ... or Ich hätte gern ... These are set phrases followed by the accusative.",
+          "examples": [
+            {
+              "de": "Ich hätte gern einen Tee.",
+              "tr": "I’d like a tea, please."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: w hotelu",
+      "points": [
+        {
+          "title": "Prośba pytaniem",
+          "text": "Kannst du ...? Können Sie ...? Jeszcze grzeczniej: Könntest du ...? Könnten Sie ...? (czy mógłbyś, czy mógłby pan). Drugi czasownik na końcu.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Może pan to powtórzyć?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Czy mógłby pan otworzyć okno?"
+            }
+          ]
+        },
+        {
+          "title": "Ich hätte gern",
+          "text": "Grzeczne zamówienie: Ich möchte ... albo Ich hätte gern ... To gotowe zwroty, po nich Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich hätte gern einen Tee.",
+              "tr": "Poproszę herbatę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: en el hotel",
+      "points": [
+        {
+          "title": "Petición con pregunta",
+          "text": "Kannst du ...? Können Sie ...? Más educado: Könntest du ...? Könnten Sie ...? (¿podrías, podría usted?). El segundo verbo va al final.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "¿Puede repetirlo?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "¿Podría abrir la ventana?"
+            }
+          ]
+        },
+        {
+          "title": "Ich hätte gern",
+          "text": "Pedido educado: Ich möchte ... o Ich hätte gern ... Son frases hechas, seguidas de acusativo.",
+          "examples": [
+            {
+              "de": "Ich hätte gern einen Tee.",
+              "tr": "Me gustaría un té."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : à l’hôtel",
+      "points": [
+        {
+          "title": "Demande sous forme de question",
+          "text": "Kannst du ... ? Können Sie ... ? Encore plus poli : Könntest du ... ? Könnten Sie ... ? (pourrais-tu, pourriez-vous). Le deuxième verbe va à la fin.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Vous pouvez répéter ?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Pourriez-vous ouvrir la fenêtre ?"
+            }
+          ]
+        },
+        {
+          "title": "Ich hätte gern",
+          "text": "Commande polie : Ich möchte ... ou Ich hätte gern ... Ce sont des expressions toutes faites, suivies de l’accusatif.",
+          "examples": [
+            {
+              "de": "Ich hätte gern einen Tee.",
+              "tr": "Je voudrais un thé."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: otelde",
+      "points": [
+        {
+          "title": "Soru şeklinde rica",
+          "text": "Kannst du ...? Können Sie ...? Daha kibar: Könntest du ...? Könnten Sie ...? (... yapabilir misin/misiniz acaba). İkinci fiil sonda.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Tekrar edebilir misiniz?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Pencereyi açabilir misiniz acaba?"
+            }
+          ]
+        },
+        {
+          "title": "Ich hätte gern",
+          "text": "Kibar sipariş: Ich möchte ... ya da Ich hätte gern ... Kalıp ifadeler, ardından Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich hätte gern einen Tee.",
+              "tr": "Bir çay alabilir miyim?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: la hotel",
+      "points": [
+        {
+          "title": "Rugăminte sub formă de întrebare",
+          "text": "Kannst du ...? Können Sie ...? Și mai politicos: Könntest du ...? Könnten Sie ...? (ai putea, ați putea). Al doilea verb la final.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Puteți repeta?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Ați putea deschide fereastra?"
+            }
+          ]
+        },
+        {
+          "title": "Ich hätte gern",
+          "text": "Comandă politicoasă: Ich möchte ... sau Ich hätte gern ... Sunt expresii fixe, urmate de acuzativ.",
+          "examples": [
+            {
+              "de": "Ich hätte gern einen Tee.",
+              "tr": "Aș dori un ceai."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: mehmonxonada",
+      "points": [
+        {
+          "title": "Savol shaklida iltimos",
+          "text": "Kannst du ...? Können Sie ...? Yanada muloyim: Könntest du ...? Könnten Sie ...? (... qila olmaysizmi). Ikkinchi fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Buni qaytara olasizmi?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Derazani ocha olmaysizmi?"
+            }
+          ]
+        },
+        {
+          "title": "Ich hätte gern",
+          "text": "Muloyim buyurtma: Ich möchte ... yoki Ich hätte gern ... Bu tayyor iboralar, ulardan keyin Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich hätte gern einen Tee.",
+              "tr": "Menga choy, iltimos."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: होटल में",
+      "points": [
+        {
+          "title": "सवाल के रूप में अनुरोध",
+          "text": "Kannst du ...? Können Sie ...? और विनम्र: Könntest du ...? Könnten Sie ...? (क्या तुम/आप ... सकेंगे)। दूसरी क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "क्या आप यह दोहरा सकते हैं?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "क्या आप खिड़की खोल सकेंगे?"
+            }
+          ]
+        },
+        {
+          "title": "Ich hätte gern",
+          "text": "विनम्र ऑर्डर: Ich möchte ... या Ich hätte gern ... ये तैयार वाक्यांश हैं, इनके बाद Akkusativ।",
+          "examples": [
+            {
+              "de": "Ich hätte gern einen Tee.",
+              "tr": "मुझे एक चाय चाहिए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: في الفندق",
+      "points": [
+        {
+          "title": "الطلب بصيغة سؤال",
+          "text": "Kannst du ...؟ Können Sie ...؟ وأكثر أدباً: Könntest du ...؟ Könnten Sie ...؟ (هل يمكنك من فضلك). والفعل الثاني في الآخر.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "هل يمكنك أن تعيد ذلك؟"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "هل يمكنك فتح النافذة من فضلك؟"
+            }
+          ]
+        },
+        {
+          "title": "Ich hätte gern",
+          "text": "طلب مهذب: Ich möchte ... أو Ich hätte gern ... وهما عبارتان جاهزتان يليهما المفعول.",
+          "examples": [
+            {
+              "de": "Ich hätte gern einen Tee.",
+              "tr": "أودّ شاياً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "requests-8": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "Просьба на du",
+          "text": "Берём форму du без -st и без du: du kommst → Komm! Если гласная меняется e → i, она остаётся: nimm, gib, hilf, lies, iss, sprich. Особая форма: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Говори медленнее!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Прочитай текст!"
+            }
+          ]
+        },
+        {
+          "title": "Вежливая просьба на Sie",
+          "text": "Глагол первым, потом Sie: Kommen Sie! Warten Sie! Особая форма: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Проходите, пожалуйста!"
+            }
+          ]
+        },
+        {
+          "title": "Просьба вопросом",
+          "text": "Kannst du ...? Können Sie ...? Ещё вежливее: Könntest du ...? Könnten Sie ...? (не мог бы ты, не могли бы вы). Второй глагол в конце.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Вы можете это повторить?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Не могли бы вы открыть окно?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "Прохання на du",
+          "text": "Беремо форму du без -st і без du: du kommst → Komm! Якщо голосна змінюється e → i, вона лишається: nimm, gib, hilf, lies, iss, sprich. Особлива форма: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Говори повільніше!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Прочитай текст!"
+            }
+          ]
+        },
+        {
+          "title": "Ввічливе прохання на Sie",
+          "text": "Дієслово першим, потім Sie: Kommen Sie! Warten Sie! Особлива форма: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Заходьте, будь ласка!"
+            }
+          ]
+        },
+        {
+          "title": "Прохання питанням",
+          "text": "Kannst du ...? Können Sie ...? Ще ввічливіше: Könntest du ...? Könnten Sie ...? (чи не міг би ти, чи не могли б ви). Друге дієслово в кінці.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Ви можете це повторити?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Чи не могли б ви відчинити вікно?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "Request with du",
+          "text": "Take the du form without -st and without du: du kommst → Komm! If the vowel changes e → i, it stays: nimm, gib, hilf, lies, iss, sprich. Special form: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Speak more slowly!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Read the text!"
+            }
+          ]
+        },
+        {
+          "title": "Polite request with Sie",
+          "text": "Verb first, then Sie: Kommen Sie! Warten Sie! Special form: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Please come in!"
+            }
+          ]
+        },
+        {
+          "title": "A request as a question",
+          "text": "Kannst du ...? Können Sie ...? Even more polite: Könntest du ...? Könnten Sie ...? (could you). The second verb goes to the end.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Can you repeat that?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Could you open the window?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "Prośba na du",
+          "text": "Bierzemy formę du bez -st i bez du: du kommst → Komm! Jeśli samogłoska zmienia się e → i, zostaje: nimm, gib, hilf, lies, iss, sprich. Forma szczególna: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Mów wolniej!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Przeczytaj tekst!"
+            }
+          ]
+        },
+        {
+          "title": "Grzeczna prośba na Sie",
+          "text": "Czasownik pierwszy, potem Sie: Kommen Sie! Warten Sie! Forma szczególna: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Proszę wejść!"
+            }
+          ]
+        },
+        {
+          "title": "Prośba pytaniem",
+          "text": "Kannst du ...? Können Sie ...? Jeszcze grzeczniej: Könntest du ...? Könnten Sie ...? (czy mógłbyś, czy mógłby pan). Drugi czasownik na końcu.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Może pan to powtórzyć?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Czy mógłby pan otworzyć okno?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "Petición con du",
+          "text": "Se toma la forma de du sin -st y sin du: du kommst → Komm! Si la vocal cambia e → i, se mantiene: nimm, gib, hilf, lies, iss, sprich. Forma especial: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "¡Habla más despacio!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "¡Lee el texto!"
+            }
+          ]
+        },
+        {
+          "title": "Petición de usted",
+          "text": "Primero el verbo, luego Sie: Kommen Sie! Warten Sie! Forma especial: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "¡Pase, por favor!"
+            }
+          ]
+        },
+        {
+          "title": "Petición con pregunta",
+          "text": "Kannst du ...? Können Sie ...? Más educado: Könntest du ...? Könnten Sie ...? (¿podrías, podría usted?). El segundo verbo va al final.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "¿Puede repetirlo?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "¿Podría abrir la ventana?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "Demande avec du",
+          "text": "On prend la forme de du sans -st et sans du : du kommst → Komm ! Si la voyelle change e → i, elle reste : nimm, gib, hilf, lies, iss, sprich. Forme spéciale : Sei !",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Parle plus lentement !"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Lis le texte !"
+            }
+          ]
+        },
+        {
+          "title": "Demande polie avec Sie",
+          "text": "Le verbe d’abord, puis Sie : Kommen Sie ! Warten Sie ! Forme spéciale : Seien Sie !",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Entrez, je vous prie !"
+            }
+          ]
+        },
+        {
+          "title": "Demande sous forme de question",
+          "text": "Kannst du ... ? Können Sie ... ? Encore plus poli : Könntest du ... ? Könnten Sie ... ? (pourrais-tu, pourriez-vous). Le deuxième verbe va à la fin.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Vous pouvez répéter ?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Pourriez-vous ouvrir la fenêtre ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "du ile rica",
+          "text": "du biçimini -st ve du olmadan al: du kommst → Komm! Ünlü e → i değişiyorsa kalır: nimm, gib, hilf, lies, iss, sprich. Özel biçim: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Daha yavaş konuş!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Metni oku!"
+            }
+          ]
+        },
+        {
+          "title": "Sie ile kibar rica",
+          "text": "Önce fiil, sonra Sie: Kommen Sie! Warten Sie! Özel biçim: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Buyurun, girin!"
+            }
+          ]
+        },
+        {
+          "title": "Soru şeklinde rica",
+          "text": "Kannst du ...? Können Sie ...? Daha kibar: Könntest du ...? Könnten Sie ...? (... yapabilir misin/misiniz acaba). İkinci fiil sonda.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Tekrar edebilir misiniz?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Pencereyi açabilir misiniz acaba?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "Rugăminte cu du",
+          "text": "Iei forma de la du fără -st și fără du: du kommst → Komm! Dacă vocala se schimbă e → i, rămâne: nimm, gib, hilf, lies, iss, sprich. Formă specială: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Vorbește mai rar!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Citește textul!"
+            }
+          ]
+        },
+        {
+          "title": "Rugăminte politicoasă cu Sie",
+          "text": "Întâi verbul, apoi Sie: Kommen Sie! Warten Sie! Formă specială: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Intrați, vă rog!"
+            }
+          ]
+        },
+        {
+          "title": "Rugăminte sub formă de întrebare",
+          "text": "Kannst du ...? Können Sie ...? Și mai politicos: Könntest du ...? Könnten Sie ...? (ai putea, ați putea). Al doilea verb la final.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Puteți repeta?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Ați putea deschide fereastra?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "du bilan iltimos",
+          "text": "du shaklini -st va du siz olamiz: du kommst → Komm! Unli e → i o'zgarsa, saqlanadi: nimm, gib, hilf, lies, iss, sprich. Alohida shakl: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "Sekinroq gapir!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "Matnni o'qi!"
+            }
+          ]
+        },
+        {
+          "title": "Sie bilan muloyim iltimos",
+          "text": "Avval fe'l, keyin Sie: Kommen Sie! Warten Sie! Alohida shakl: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "Marhamat, kiring!"
+            }
+          ]
+        },
+        {
+          "title": "Savol shaklida iltimos",
+          "text": "Kannst du ...? Können Sie ...? Yanada muloyim: Könntest du ...? Könnten Sie ...? (... qila olmaysizmi). Ikkinchi fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "Buni qaytara olasizmi?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "Derazani ocha olmaysizmi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "du के साथ अनुरोध",
+          "text": "du वाला रूप बिना -st और बिना du: du kommst → Komm! अगर स्वर e → i बदलता है, तो वैसा ही रहता है: nimm, gib, hilf, lies, iss, sprich। खास रूप: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "धीरे बोलो!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "पाठ पढ़ो!"
+            }
+          ]
+        },
+        {
+          "title": "Sie के साथ विनम्र अनुरोध",
+          "text": "पहले क्रिया, फिर Sie: Kommen Sie! Warten Sie! खास रूप: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "कृपया अंदर आइए!"
+            }
+          ]
+        },
+        {
+          "title": "सवाल के रूप में अनुरोध",
+          "text": "Kannst du ...? Können Sie ...? और विनम्र: Könntest du ...? Könnten Sie ...? (क्या तुम/आप ... सकेंगे)। दूसरी क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "क्या आप यह दोहरा सकते हैं?"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "क्या आप खिड़की खोल सकेंगे?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "الطلب بصيغة du",
+          "text": "نأخذ صيغة du بدون -st وبدون du: du kommst → Komm! وإذا تغير الحرف e → i يبقى: nimm، gib، hilf، lies، iss، sprich. والصيغة الخاصة: Sei!",
+          "examples": [
+            {
+              "de": "Sprich langsamer!",
+              "tr": "تكلم ببطء أكثر!"
+            },
+            {
+              "de": "Lies den Text!",
+              "tr": "اقرأ النص!"
+            }
+          ]
+        },
+        {
+          "title": "الطلب المهذب بصيغة Sie",
+          "text": "الفعل أولاً ثم Sie: Kommen Sie! Warten Sie! والصيغة الخاصة: Seien Sie!",
+          "examples": [
+            {
+              "de": "Kommen Sie bitte herein!",
+              "tr": "تفضل بالدخول!"
+            }
+          ]
+        },
+        {
+          "title": "الطلب بصيغة سؤال",
+          "text": "Kannst du ...؟ Können Sie ...؟ وأكثر أدباً: Könntest du ...؟ Könnten Sie ...؟ (هل يمكنك من فضلك). والفعل الثاني في الآخر.",
+          "examples": [
+            {
+              "de": "Können Sie das wiederholen?",
+              "tr": "هل يمكنك أن تعيد ذلك؟"
+            },
+            {
+              "de": "Könnten Sie das Fenster öffnen?",
+              "tr": "هل يمكنك فتح النافذة من فضلك؟"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

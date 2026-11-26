@@ -1,0 +1,2882 @@
+{
+  "nobody-village-one": {
+    "ru": {
+      "title": "Кто-то и никто",
+      "points": [
+        {
+          "title": "jemand и niemand",
+          "text": "jemand (кто-то), niemand (никто). Глагол как с er. Отрицание уже внутри слова, второе nicht не нужно: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Кто-то стучит в дверь."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Никто не знает ответа."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Хтось і ніхто",
+      "points": [
+        {
+          "title": "jemand і niemand",
+          "text": "jemand (хтось), niemand (ніхто). Дієслово як з er. Заперечення вже всередині слова, друге nicht не потрібне: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Хтось стукає у двері."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Ніхто не знає відповіді."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Someone and no one",
+      "points": [
+        {
+          "title": "jemand and niemand",
+          "text": "jemand (someone), niemand (no one). The verb is like with er. The negation is already inside the word, no extra nicht: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Someone is knocking at the door."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "No one knows the answer."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Ktoś i nikt",
+      "points": [
+        {
+          "title": "jemand i niemand",
+          "text": "jemand (ktoś), niemand (nikt). Czasownik jak przy er. Przeczenie jest już w słowie, drugie nicht niepotrzebne: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Ktoś puka do drzwi."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Nikt nie zna odpowiedzi."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Alguien y nadie",
+      "points": [
+        {
+          "title": "jemand y niemand",
+          "text": "jemand (alguien), niemand (nadie). El verbo como con er. La negación ya está en la palabra, sin otro nicht: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Alguien llama a la puerta."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Nadie sabe la respuesta."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Quelqu’un et personne",
+      "points": [
+        {
+          "title": "jemand et niemand",
+          "text": "jemand (quelqu’un), niemand (personne). Le verbe comme avec er. La négation est déjà dans le mot, pas de nicht en plus : Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Quelqu’un frappe à la porte."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Personne ne connaît la réponse."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Biri ve hiç kimse",
+      "points": [
+        {
+          "title": "jemand ve niemand",
+          "text": "jemand (biri), niemand (hiç kimse). Fiil er’deki gibi. Olumsuzluk kelimenin içinde, ayrıca nicht gerekmez: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Biri kapıyı çalıyor."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Kimse cevabı bilmiyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cineva și nimeni",
+      "points": [
+        {
+          "title": "jemand și niemand",
+          "text": "jemand (cineva), niemand (nimeni). Verbul ca la er. Negația e deja în cuvânt, fără alt nicht: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Cineva bate la ușă."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Nimeni nu știe răspunsul."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kimdir va hech kim",
+      "points": [
+        {
+          "title": "jemand va niemand",
+          "text": "jemand (kimdir), niemand (hech kim). Fe'l er dagi kabi. Inkor so'zning ichida, yana nicht kerak emas: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Kimdir eshikni taqillatyapti."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Hech kim javobni bilmaydi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कोई और कोई नहीं",
+      "points": [
+        {
+          "title": "jemand और niemand",
+          "text": "jemand (कोई), niemand (कोई नहीं)। क्रिया er जैसी। नकार शब्द के अंदर ही है, अलग nicht नहीं: Niemand kommt।",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "कोई दरवाज़ा खटखटा रहा है।"
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "किसी को जवाब नहीं पता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "أحد ولا أحد",
+      "points": [
+        {
+          "title": "jemand وniemand",
+          "text": "jemand (أحد)، niemand (لا أحد). والفعل كما مع er. والنفي داخل الكلمة، فلا نضيف nicht: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "أحدهم يطرق الباب."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "لا أحد يعرف الجواب."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nobody-village-two": {
+    "ru": {
+      "title": "Что-то и ничего",
+      "points": [
+        {
+          "title": "etwas и nichts",
+          "text": "etwas (что-то), nichts (ничего). nichts уже отрицание: Ich sehe nichts, без второго nicht.",
+          "examples": [
+            {
+              "de": "Wir haben nichts gekauft.",
+              "tr": "Мы ничего не купили."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Щось і нічого",
+      "points": [
+        {
+          "title": "etwas і nichts",
+          "text": "etwas (щось), nichts (нічого). nichts уже заперечення: Ich sehe nichts, без другого nicht.",
+          "examples": [
+            {
+              "de": "Wir haben nichts gekauft.",
+              "tr": "Ми нічого не купили."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Something and nothing",
+      "points": [
+        {
+          "title": "etwas and nichts",
+          "text": "etwas (something), nichts (nothing). nichts is already negative: Ich sehe nichts, no extra nicht.",
+          "examples": [
+            {
+              "de": "Wir haben nichts gekauft.",
+              "tr": "We didn’t buy anything."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Coś i nic",
+      "points": [
+        {
+          "title": "etwas i nichts",
+          "text": "etwas (coś), nichts (nic). nichts to już przeczenie: Ich sehe nichts, bez drugiego nicht.",
+          "examples": [
+            {
+              "de": "Wir haben nichts gekauft.",
+              "tr": "Nic nie kupiliśmy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Algo y nada",
+      "points": [
+        {
+          "title": "etwas y nichts",
+          "text": "etwas (algo), nichts (nada). nichts ya es negación: Ich sehe nichts, sin otro nicht.",
+          "examples": [
+            {
+              "de": "Wir haben nichts gekauft.",
+              "tr": "No compramos nada."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Quelque chose et rien",
+      "points": [
+        {
+          "title": "etwas et nichts",
+          "text": "etwas (quelque chose), nichts (rien). nichts est déjà négatif : Ich sehe nichts, sans nicht.",
+          "examples": [
+            {
+              "de": "Wir haben nichts gekauft.",
+              "tr": "Nous n’avons rien acheté."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Bir şey ve hiçbir şey",
+      "points": [
+        {
+          "title": "etwas ve nichts",
+          "text": "etwas (bir şey), nichts (hiçbir şey). nichts zaten olumsuz: Ich sehe nichts, ayrıca nicht yok.",
+          "examples": [
+            {
+              "de": "Wir haben nichts gekauft.",
+              "tr": "Hiçbir şey almadık."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Ceva și nimic",
+      "points": [
+        {
+          "title": "etwas și nichts",
+          "text": "etwas (ceva), nichts (nimic). nichts e deja negație: Ich sehe nichts, fără alt nicht.",
+          "examples": [
+            {
+              "de": "Wir haben nichts gekauft.",
+              "tr": "N-am cumpărat nimic."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nimadir va hech narsa",
+      "points": [
+        {
+          "title": "etwas va nichts",
+          "text": "etwas (nimadir), nichts (hech narsa). nichts o'zi inkor: Ich sehe nichts, yana nicht yo'q.",
+          "examples": [
+            {
+              "de": "Wir haben nichts gekauft.",
+              "tr": "Biz hech narsa sotib olmadik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कुछ और कुछ नहीं",
+      "points": [
+        {
+          "title": "etwas और nichts",
+          "text": "etwas (कुछ), nichts (कुछ नहीं)। nichts पहले से नकार है: Ich sehe nichts, अलग nicht नहीं।",
+          "examples": [
+            {
+              "de": "Wir haben nichts gekauft.",
+              "tr": "हमने कुछ नहीं खरीदा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "شيء ولا شيء",
+      "points": [
+        {
+          "title": "etwas وnichts",
+          "text": "etwas (شيء ما)، nichts (لا شيء). وnichts نفي بنفسها: Ich sehe nichts بدون nicht.",
+          "examples": [
+            {
+              "de": "Wir haben nichts gekauft.",
+              "tr": "لم نشترِ شيئاً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nobody-village-three": {
+    "ru": {
+      "title": "Всё, много, мало",
+      "points": [
+        {
+          "title": "alles и alle",
+          "text": "alles значит «всё» (вещи), alle значит «все» (люди или много предметов). viel (много), wenig (мало).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "Я всё понял."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Все уже здесь."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Усе, багато, мало",
+      "points": [
+        {
+          "title": "alles і alle",
+          "text": "alles означає «усе» (речі), alle означає «усі» (люди або багато предметів). viel (багато), wenig (мало).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "Я все зрозумів."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Усі вже тут."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Everything, a lot, a little",
+      "points": [
+        {
+          "title": "alles and alle",
+          "text": "alles means \"everything\", alle means \"everyone, all\" (people or many things). viel (a lot), wenig (little).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "I understood everything."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Everyone is already here."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Wszystko, dużo, mało",
+      "points": [
+        {
+          "title": "alles i alle",
+          "text": "alles znaczy „wszystko”, alle znaczy „wszyscy” (ludzie albo wiele rzeczy). viel (dużo), wenig (mało).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "Wszystko zrozumiałem."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Wszyscy już są."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Todo, mucho, poco",
+      "points": [
+        {
+          "title": "alles y alle",
+          "text": "alles significa \"todo\", alle significa \"todos\" (personas o muchas cosas). viel (mucho), wenig (poco).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "Lo entendí todo."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Ya están todos."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Tout, beaucoup, peu",
+      "points": [
+        {
+          "title": "alles et alle",
+          "text": "alles veut dire « tout », alle « tous » (des gens ou beaucoup de choses). viel (beaucoup), wenig (peu).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "J’ai tout compris."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Tout le monde est déjà là."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Her şey, çok, az",
+      "points": [
+        {
+          "title": "alles ve alle",
+          "text": "alles \"her şey\", alle \"herkes, hepsi\" (insanlar ya da çok şey) demektir. viel (çok), wenig (az).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "Her şeyi anladım."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Herkes zaten burada."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Tot, mult, puțin",
+      "points": [
+        {
+          "title": "alles și alle",
+          "text": "alles înseamnă „totul”, alle înseamnă „toți” (oameni sau multe lucruri). viel (mult), wenig (puțin).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "Am înțeles tot."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Toți sunt deja aici."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Hamma narsa, ko'p, kam",
+      "points": [
+        {
+          "title": "alles va alle",
+          "text": "alles \"hamma narsa\", alle \"hamma, barcha\" (odamlar yoki ko'p narsa) degani. viel (ko'p), wenig (kam).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "Hammasini tushundim."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Hamma allaqachon shu yerda."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "सब, बहुत, कम",
+      "points": [
+        {
+          "title": "alles और alle",
+          "text": "alles मतलब \"सब कुछ\", alle मतलब \"सभी\" (लोग या कई चीज़ें)। viel (बहुत), wenig (कम)।",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "मैंने सब समझ लिया।"
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "सब पहले से यहाँ हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "كل شيء، كثير، قليل",
+      "points": [
+        {
+          "title": "alles وalle",
+          "text": "alles تعني \"كل شيء\"، وalle تعني \"الجميع\" (أشخاص أو أشياء كثيرة). وviel (كثير)، وwenig (قليل).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "فهمت كل شيء."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "الجميع هنا بالفعل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nobody-village-four": {
+    "ru": {
+      "title": "Здесь так делают: man",
+      "points": [
+        {
+          "title": "man: люди вообще",
+          "text": "man значит «люди вообще», когда неважно, кто именно. Глагол как с er: man sagt, man kann. По-русски часто без подлежащего: «здесь нельзя курить».",
+          "examples": [
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "tr": "Здесь нельзя курить."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Тут так роблять: man",
+      "points": [
+        {
+          "title": "man: люди загалом",
+          "text": "man означає «люди загалом», коли неважливо, хто саме. Дієслово як з er: man sagt, man kann. Українською часто без підмета: «тут не можна курити».",
+          "examples": [
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "tr": "Тут не можна курити."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "That’s how it’s done: man",
+      "points": [
+        {
+          "title": "man: people in general",
+          "text": "man means \"people in general\", when it doesn’t matter who. The verb is like with er: man sagt, man kann. English often uses \"you\" or the passive.",
+          "examples": [
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "tr": "You can’t smoke here."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Tak się tu robi: man",
+      "points": [
+        {
+          "title": "man: ludzie w ogóle",
+          "text": "man znaczy „ludzie w ogóle”, gdy nieważne kto. Czasownik jak przy er: man sagt, man kann. Po polsku często bez podmiotu: „tu nie wolno palić”.",
+          "examples": [
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "tr": "Tu nie wolno palić."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Así se hace aquí: man",
+      "points": [
+        {
+          "title": "man: la gente en general",
+          "text": "man significa \"la gente en general\", cuando no importa quién. El verbo como con er: man sagt, man kann. En español suele ser \"se\": \"aquí no se fuma\".",
+          "examples": [
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "tr": "Aquí no se puede fumar."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Ici, on fait comme ça : man",
+      "points": [
+        {
+          "title": "man : on",
+          "text": "man, c’est comme « on » en français : man sagt, man kann. Le verbe se conjugue comme avec er.",
+          "examples": [
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "tr": "Ici, on n’a pas le droit de fumer."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Burada böyle yapılır: man",
+      "points": [
+        {
+          "title": "man: genel olarak insanlar",
+          "text": "man \"genel olarak insanlar\" demektir, kim olduğu önemli değilse. Fiil er’deki gibi: man sagt, man kann.",
+          "examples": [
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "tr": "Burada sigara içilmez."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Așa se face aici: man",
+      "points": [
+        {
+          "title": "man: oamenii în general",
+          "text": "man înseamnă „oamenii în general”, când nu contează cine. Verbul ca la er: man sagt, man kann. În română de obicei cu „se”: „aici nu se fumează”.",
+          "examples": [
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "tr": "Aici nu se fumează."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Bu yerda shunday qilinadi: man",
+      "points": [
+        {
+          "title": "man: umuman odamlar",
+          "text": "man \"umuman odamlar\" degani, kim ekani muhim bo'lmasa. Fe'l er dagi kabi: man sagt, man kann.",
+          "examples": [
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "tr": "Bu yerda chekish mumkin emas."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "यहाँ ऐसे करते हैं: man",
+      "points": [
+        {
+          "title": "man: आम तौर पर लोग",
+          "text": "man मतलब \"आम तौर पर लोग\", जब यह मायने नहीं रखता कि कौन। क्रिया er जैसी: man sagt, man kann।",
+          "examples": [
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "tr": "यहाँ धूम्रपान मना है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "هكذا يفعلون هنا: man",
+      "points": [
+        {
+          "title": "man: الناس عموماً",
+          "text": "man تعني \"الناس عموماً\" حين لا يهم من بالتحديد. والفعل كما مع er: man sagt، man kann.",
+          "examples": [
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "tr": "ممنوع التدخين هنا."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nobody-village-five": {
+    "ru": {
+      "title": "У меня есть один",
+      "points": [
+        {
+          "title": "einer, eine, eins",
+          "text": "Вместо существительного: einer (der), eine (die), eins (das), мн. ч. welche. В Akkusativ мужской род einen. Нет: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "У тебя есть ручка? Да, есть."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "У меня с собой нет."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "У мене є один",
+      "points": [
+        {
+          "title": "einer, eine, eins",
+          "text": "Замість іменника: einer (der), eine (die), eins (das), мн. welche. В Akkusativ чоловічий рід einen. Немає: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "У тебе є ручка? Так, є."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "У мене із собою немає."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "I have one",
+      "points": [
+        {
+          "title": "einer, eine, eins",
+          "text": "Instead of a noun: einer (der), eine (die), eins (das), plural welche. Accusative masculine einen. None: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "Do you have a pen? Yes, I have one."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "I don’t have one with me."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Mam jeden",
+      "points": [
+        {
+          "title": "einer, eine, eins",
+          "text": "Zamiast rzeczownika: einer (der), eine (die), eins (das), l. mn. welche. W Akkusativ rodzaj męski einen. Brak: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "Masz długopis? Tak, mam."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "Nie mam przy sobie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Tengo uno",
+      "points": [
+        {
+          "title": "einer, eine, eins",
+          "text": "En lugar del sustantivo: einer (der), eine (die), eins (das), plural welche. Acusativo masculino einen. Ninguno: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "¿Tienes un bolígrafo? Sí, tengo uno."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "No llevo ninguno."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "J’en ai un",
+      "points": [
+        {
+          "title": "einer, eine, eins",
+          "text": "À la place du nom : einer (der), eine (die), eins (das), pluriel welche. Accusatif masculin einen. Aucun : keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "Tu as un stylo ? Oui, j’en ai un."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "Je n’en ai pas sur moi."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Bende bir tane var",
+      "points": [
+        {
+          "title": "einer, eine, eins",
+          "text": "İsim yerine: einer (der), eine (die), eins (das), çoğul welche. Akkusativ’de eril einen. Hiç: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "Kalemin var mı? Evet, var."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "Yanımda yok."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Am unul",
+      "points": [
+        {
+          "title": "einer, eine, eins",
+          "text": "În locul substantivului: einer (der), eine (die), eins (das), plural welche. Acuzativ masculin einen. Niciunul: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "Ai un pix? Da, am unul."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "Nu am la mine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Menda bitta bor",
+      "points": [
+        {
+          "title": "einer, eine, eins",
+          "text": "Ot o'rniga: einer (der), eine (die), eins (das), ko'plik welche. Akkusativda erkak rodi einen. Yo'q: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "Ruchkang bormi? Ha, bor."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "Yonimda yo'q."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "मेरे पास एक है",
+      "points": [
+        {
+          "title": "einer, eine, eins",
+          "text": "संज्ञा की जगह: einer (der), eine (die), eins (das), बहुवचन welche। Akkusativ में पुल्लिंग einen। कोई नहीं: keiner, keine, keins।",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "क्या तुम्हारे पास पेन है? हाँ, है।"
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "मेरे पास अभी नहीं है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "عندي واحد",
+      "points": [
+        {
+          "title": "einer وeine وeins",
+          "text": "بدل الاسم: einer (der)، eine (die)، eins (das)، والجمع welche. وفي المفعول المذكر einen. والنفي: keiner، keine، keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "هل عندك قلم؟ نعم، عندي واحد."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "ليس معي واحد."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nobody-village-six": {
+    "ru": {
+      "title": "Это мой!",
+      "points": [
+        {
+          "title": "meiner, meine, meins",
+          "text": "Чей? Ответ без существительного: meiner (der), meine (die), meins (das). Так же deiner, seiner, ihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "Это твой ключ? Да, мой."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Це мій!",
+      "points": [
+        {
+          "title": "meiner, meine, meins",
+          "text": "Чий? Відповідь без іменника: meiner (der), meine (die), meins (das). Так само deiner, seiner, ihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "Це твій ключ? Так, мій."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "It’s mine!",
+      "points": [
+        {
+          "title": "meiner, meine, meins",
+          "text": "Whose? An answer without the noun: meiner (der), meine (die), meins (das). Same with deiner, seiner, ihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "Is that your key? Yes, it’s mine."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "To mój!",
+      "points": [
+        {
+          "title": "meiner, meine, meins",
+          "text": "Czyj? Odpowiedź bez rzeczownika: meiner (der), meine (die), meins (das). Tak samo deiner, seiner, ihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "Czy to twój klucz? Tak, mój."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¡Es mío!",
+      "points": [
+        {
+          "title": "meiner, meine, meins",
+          "text": "¿De quién? Respuesta sin sustantivo: meiner (der), meine (die), meins (das). Igual deiner, seiner, ihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "¿Es tu llave? Sí, es mía."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "C’est le mien !",
+      "points": [
+        {
+          "title": "meiner, meine, meins",
+          "text": "À qui ? Réponse sans le nom : meiner (der), meine (die), meins (das). Pareil pour deiner, seiner, ihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "C’est ta clé ? Oui, c’est la mienne."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Bu benim!",
+      "points": [
+        {
+          "title": "meiner, meine, meins",
+          "text": "Kimin? İsimsiz cevap: meiner (der), meine (die), meins (das). deiner, seiner, ihrer de böyle.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "Bu senin anahtarın mı? Evet, benim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "E al meu!",
+      "points": [
+        {
+          "title": "meiner, meine, meins",
+          "text": "Al cui? Răspuns fără substantiv: meiner (der), meine (die), meins (das). La fel deiner, seiner, ihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "E cheia ta? Da, e a mea."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Bu meniki!",
+      "points": [
+        {
+          "title": "meiner, meine, meins",
+          "text": "Kimniki? Otsiz javob: meiner (der), meine (die), meins (das). deiner, seiner, ihrer ham shunday.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "Bu sening kalitingmi? Ha, meniki."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "यह मेरा है!",
+      "points": [
+        {
+          "title": "meiner, meine, meins",
+          "text": "किसका? बिना संज्ञा के जवाब: meiner (der), meine (die), meins (das)। deiner, seiner, ihrer भी ऐसे ही।",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "क्या यह तुम्हारी चाबी है? हाँ, मेरी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "إنه لي!",
+      "points": [
+        {
+          "title": "meiner وmeine وmeins",
+          "text": "لمن؟ جواب بدون اسم: meiner (der)، meine (die)، meins (das). وكذلك deiner وseiner وihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "هل هذا مفتاحك؟ نعم، إنه لي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nobody-village-seven": {
+    "ru": {
+      "title": "Практика: бюро находок",
+      "points": [
+        {
+          "title": "einer, eine, eins",
+          "text": "Вместо существительного: einer (der), eine (die), eins (das), мн. ч. welche. В Akkusativ мужской род einen. Нет: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "У тебя есть ручка? Да, есть."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "У меня с собой нет."
+            }
+          ]
+        },
+        {
+          "title": "meiner, meine, meins",
+          "text": "Чей? Ответ без существительного: meiner (der), meine (die), meins (das). Так же deiner, seiner, ihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "Это твой ключ? Да, мой."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: бюро знахідок",
+      "points": [
+        {
+          "title": "einer, eine, eins",
+          "text": "Замість іменника: einer (der), eine (die), eins (das), мн. welche. В Akkusativ чоловічий рід einen. Немає: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "У тебе є ручка? Так, є."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "У мене із собою немає."
+            }
+          ]
+        },
+        {
+          "title": "meiner, meine, meins",
+          "text": "Чий? Відповідь без іменника: meiner (der), meine (die), meins (das). Так само deiner, seiner, ihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "Це твій ключ? Так, мій."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: lost and found",
+      "points": [
+        {
+          "title": "einer, eine, eins",
+          "text": "Instead of a noun: einer (der), eine (die), eins (das), plural welche. Accusative masculine einen. None: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "Do you have a pen? Yes, I have one."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "I don’t have one with me."
+            }
+          ]
+        },
+        {
+          "title": "meiner, meine, meins",
+          "text": "Whose? An answer without the noun: meiner (der), meine (die), meins (das). Same with deiner, seiner, ihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "Is that your key? Yes, it’s mine."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: biuro rzeczy znalezionych",
+      "points": [
+        {
+          "title": "einer, eine, eins",
+          "text": "Zamiast rzeczownika: einer (der), eine (die), eins (das), l. mn. welche. W Akkusativ rodzaj męski einen. Brak: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "Masz długopis? Tak, mam."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "Nie mam przy sobie."
+            }
+          ]
+        },
+        {
+          "title": "meiner, meine, meins",
+          "text": "Czyj? Odpowiedź bez rzeczownika: meiner (der), meine (die), meins (das). Tak samo deiner, seiner, ihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "Czy to twój klucz? Tak, mój."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: objetos perdidos",
+      "points": [
+        {
+          "title": "einer, eine, eins",
+          "text": "En lugar del sustantivo: einer (der), eine (die), eins (das), plural welche. Acusativo masculino einen. Ninguno: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "¿Tienes un bolígrafo? Sí, tengo uno."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "No llevo ninguno."
+            }
+          ]
+        },
+        {
+          "title": "meiner, meine, meins",
+          "text": "¿De quién? Respuesta sin sustantivo: meiner (der), meine (die), meins (das). Igual deiner, seiner, ihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "¿Es tu llave? Sí, es mía."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : objets trouvés",
+      "points": [
+        {
+          "title": "einer, eine, eins",
+          "text": "À la place du nom : einer (der), eine (die), eins (das), pluriel welche. Accusatif masculin einen. Aucun : keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "Tu as un stylo ? Oui, j’en ai un."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "Je n’en ai pas sur moi."
+            }
+          ]
+        },
+        {
+          "title": "meiner, meine, meins",
+          "text": "À qui ? Réponse sans le nom : meiner (der), meine (die), meins (das). Pareil pour deiner, seiner, ihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "C’est ta clé ? Oui, c’est la mienne."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: kayıp eşya bürosu",
+      "points": [
+        {
+          "title": "einer, eine, eins",
+          "text": "İsim yerine: einer (der), eine (die), eins (das), çoğul welche. Akkusativ’de eril einen. Hiç: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "Kalemin var mı? Evet, var."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "Yanımda yok."
+            }
+          ]
+        },
+        {
+          "title": "meiner, meine, meins",
+          "text": "Kimin? İsimsiz cevap: meiner (der), meine (die), meins (das). deiner, seiner, ihrer de böyle.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "Bu senin anahtarın mı? Evet, benim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: obiecte pierdute",
+      "points": [
+        {
+          "title": "einer, eine, eins",
+          "text": "În locul substantivului: einer (der), eine (die), eins (das), plural welche. Acuzativ masculin einen. Niciunul: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "Ai un pix? Da, am unul."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "Nu am la mine."
+            }
+          ]
+        },
+        {
+          "title": "meiner, meine, meins",
+          "text": "Al cui? Răspuns fără substantiv: meiner (der), meine (die), meins (das). La fel deiner, seiner, ihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "E cheia ta? Da, e a mea."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: topilmalar byurosi",
+      "points": [
+        {
+          "title": "einer, eine, eins",
+          "text": "Ot o'rniga: einer (der), eine (die), eins (das), ko'plik welche. Akkusativda erkak rodi einen. Yo'q: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "Ruchkang bormi? Ha, bor."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "Yonimda yo'q."
+            }
+          ]
+        },
+        {
+          "title": "meiner, meine, meins",
+          "text": "Kimniki? Otsiz javob: meiner (der), meine (die), meins (das). deiner, seiner, ihrer ham shunday.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "Bu sening kalitingmi? Ha, meniki."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: खोया-पाया दफ़्तर",
+      "points": [
+        {
+          "title": "einer, eine, eins",
+          "text": "संज्ञा की जगह: einer (der), eine (die), eins (das), बहुवचन welche। Akkusativ में पुल्लिंग einen। कोई नहीं: keiner, keine, keins।",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "क्या तुम्हारे पास पेन है? हाँ, है।"
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "मेरे पास अभी नहीं है।"
+            }
+          ]
+        },
+        {
+          "title": "meiner, meine, meins",
+          "text": "किसका? बिना संज्ञा के जवाब: meiner (der), meine (die), meins (das)। deiner, seiner, ihrer भी ऐसे ही।",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "क्या यह तुम्हारी चाबी है? हाँ, मेरी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: مكتب المفقودات",
+      "points": [
+        {
+          "title": "einer وeine وeins",
+          "text": "بدل الاسم: einer (der)، eine (die)، eins (das)، والجمع welche. وفي المفعول المذكر einen. والنفي: keiner، keine، keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "هل عندك قلم؟ نعم، عندي واحد."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "ليس معي واحد."
+            }
+          ]
+        },
+        {
+          "title": "meiner وmeine وmeins",
+          "text": "لمن؟ جواب بدون اسم: meiner (der)، meine (die)، meins (das). وكذلك deiner وseiner وihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "هل هذا مفتاحك؟ نعم، إنه لي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nobody-village-eight": {
+    "ru": {
+      "title": "Практика: вечеринка у соседей",
+      "points": [
+        {
+          "title": "jemand и niemand",
+          "text": "jemand (кто-то), niemand (никто). Глагол как с er. Отрицание уже внутри слова, второе nicht не нужно: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Кто-то стучит в дверь."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Никто не знает ответа."
+            }
+          ]
+        },
+        {
+          "title": "alles и alle",
+          "text": "alles значит «всё» (вещи), alle значит «все» (люди или много предметов). viel (много), wenig (мало).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "Я всё понял."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Все уже здесь."
+            }
+          ]
+        },
+        {
+          "title": "man: люди вообще",
+          "text": "man значит «люди вообще», когда неважно, кто именно. Глагол как с er: man sagt, man kann. По-русски часто без подлежащего: «здесь нельзя курить».",
+          "examples": [
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "tr": "Здесь нельзя курить."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: вечірка в сусідів",
+      "points": [
+        {
+          "title": "jemand і niemand",
+          "text": "jemand (хтось), niemand (ніхто). Дієслово як з er. Заперечення вже всередині слова, друге nicht не потрібне: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Хтось стукає у двері."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Ніхто не знає відповіді."
+            }
+          ]
+        },
+        {
+          "title": "alles і alle",
+          "text": "alles означає «усе» (речі), alle означає «усі» (люди або багато предметів). viel (багато), wenig (мало).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "Я все зрозумів."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Усі вже тут."
+            }
+          ]
+        },
+        {
+          "title": "man: люди загалом",
+          "text": "man означає «люди загалом», коли неважливо, хто саме. Дієслово як з er: man sagt, man kann. Українською часто без підмета: «тут не можна курити».",
+          "examples": [
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "tr": "Тут не можна курити."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: a party at the neighbours’",
+      "points": [
+        {
+          "title": "jemand and niemand",
+          "text": "jemand (someone), niemand (no one). The verb is like with er. The negation is already inside the word, no extra nicht: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Someone is knocking at the door."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "No one knows the answer."
+            }
+          ]
+        },
+        {
+          "title": "alles and alle",
+          "text": "alles means \"everything\", alle means \"everyone, all\" (people or many things). viel (a lot), wenig (little).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "I understood everything."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Everyone is already here."
+            }
+          ]
+        },
+        {
+          "title": "man: people in general",
+          "text": "man means \"people in general\", when it doesn’t matter who. The verb is like with er: man sagt, man kann. English often uses \"you\" or the passive.",
+          "examples": [
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "tr": "You can’t smoke here."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: impreza u sąsiadów",
+      "points": [
+        {
+          "title": "jemand i niemand",
+          "text": "jemand (ktoś), niemand (nikt). Czasownik jak przy er. Przeczenie jest już w słowie, drugie nicht niepotrzebne: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Ktoś puka do drzwi."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Nikt nie zna odpowiedzi."
+            }
+          ]
+        },
+        {
+          "title": "alles i alle",
+          "text": "alles znaczy „wszystko”, alle znaczy „wszyscy” (ludzie albo wiele rzeczy). viel (dużo), wenig (mało).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "Wszystko zrozumiałem."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Wszyscy już są."
+            }
+          ]
+        },
+        {
+          "title": "man: ludzie w ogóle",
+          "text": "man znaczy „ludzie w ogóle”, gdy nieważne kto. Czasownik jak przy er: man sagt, man kann. Po polsku często bez podmiotu: „tu nie wolno palić”.",
+          "examples": [
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "tr": "Tu nie wolno palić."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: fiesta en casa de los vecinos",
+      "points": [
+        {
+          "title": "jemand y niemand",
+          "text": "jemand (alguien), niemand (nadie). El verbo como con er. La negación ya está en la palabra, sin otro nicht: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Alguien llama a la puerta."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Nadie sabe la respuesta."
+            }
+          ]
+        },
+        {
+          "title": "alles y alle",
+          "text": "alles significa \"todo\", alle significa \"todos\" (personas o muchas cosas). viel (mucho), wenig (poco).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "Lo entendí todo."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Ya están todos."
+            }
+          ]
+        },
+        {
+          "title": "man: la gente en general",
+          "text": "man significa \"la gente en general\", cuando no importa quién. El verbo como con er: man sagt, man kann. En español suele ser \"se\": \"aquí no se fuma\".",
+          "examples": [
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "tr": "Aquí no se puede fumar."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : fête chez les voisins",
+      "points": [
+        {
+          "title": "jemand et niemand",
+          "text": "jemand (quelqu’un), niemand (personne). Le verbe comme avec er. La négation est déjà dans le mot, pas de nicht en plus : Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Quelqu’un frappe à la porte."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Personne ne connaît la réponse."
+            }
+          ]
+        },
+        {
+          "title": "alles et alle",
+          "text": "alles veut dire « tout », alle « tous » (des gens ou beaucoup de choses). viel (beaucoup), wenig (peu).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "J’ai tout compris."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Tout le monde est déjà là."
+            }
+          ]
+        },
+        {
+          "title": "man : on",
+          "text": "man, c’est comme « on » en français : man sagt, man kann. Le verbe se conjugue comme avec er.",
+          "examples": [
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "tr": "Ici, on n’a pas le droit de fumer."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: komşularda parti",
+      "points": [
+        {
+          "title": "jemand ve niemand",
+          "text": "jemand (biri), niemand (hiç kimse). Fiil er’deki gibi. Olumsuzluk kelimenin içinde, ayrıca nicht gerekmez: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Biri kapıyı çalıyor."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Kimse cevabı bilmiyor."
+            }
+          ]
+        },
+        {
+          "title": "alles ve alle",
+          "text": "alles \"her şey\", alle \"herkes, hepsi\" (insanlar ya da çok şey) demektir. viel (çok), wenig (az).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "Her şeyi anladım."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Herkes zaten burada."
+            }
+          ]
+        },
+        {
+          "title": "man: genel olarak insanlar",
+          "text": "man \"genel olarak insanlar\" demektir, kim olduğu önemli değilse. Fiil er’deki gibi: man sagt, man kann.",
+          "examples": [
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "tr": "Burada sigara içilmez."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: petrecere la vecini",
+      "points": [
+        {
+          "title": "jemand și niemand",
+          "text": "jemand (cineva), niemand (nimeni). Verbul ca la er. Negația e deja în cuvânt, fără alt nicht: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Cineva bate la ușă."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Nimeni nu știe răspunsul."
+            }
+          ]
+        },
+        {
+          "title": "alles și alle",
+          "text": "alles înseamnă „totul”, alle înseamnă „toți” (oameni sau multe lucruri). viel (mult), wenig (puțin).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "Am înțeles tot."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Toți sunt deja aici."
+            }
+          ]
+        },
+        {
+          "title": "man: oamenii în general",
+          "text": "man înseamnă „oamenii în general”, când nu contează cine. Verbul ca la er: man sagt, man kann. În română de obicei cu „se”: „aici nu se fumează”.",
+          "examples": [
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "tr": "Aici nu se fumează."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: qo'shnilardagi bazm",
+      "points": [
+        {
+          "title": "jemand va niemand",
+          "text": "jemand (kimdir), niemand (hech kim). Fe'l er dagi kabi. Inkor so'zning ichida, yana nicht kerak emas: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Kimdir eshikni taqillatyapti."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Hech kim javobni bilmaydi."
+            }
+          ]
+        },
+        {
+          "title": "alles va alle",
+          "text": "alles \"hamma narsa\", alle \"hamma, barcha\" (odamlar yoki ko'p narsa) degani. viel (ko'p), wenig (kam).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "Hammasini tushundim."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Hamma allaqachon shu yerda."
+            }
+          ]
+        },
+        {
+          "title": "man: umuman odamlar",
+          "text": "man \"umuman odamlar\" degani, kim ekani muhim bo'lmasa. Fe'l er dagi kabi: man sagt, man kann.",
+          "examples": [
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "tr": "Bu yerda chekish mumkin emas."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: पड़ोसियों की पार्टी",
+      "points": [
+        {
+          "title": "jemand और niemand",
+          "text": "jemand (कोई), niemand (कोई नहीं)। क्रिया er जैसी। नकार शब्द के अंदर ही है, अलग nicht नहीं: Niemand kommt।",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "कोई दरवाज़ा खटखटा रहा है।"
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "किसी को जवाब नहीं पता।"
+            }
+          ]
+        },
+        {
+          "title": "alles और alle",
+          "text": "alles मतलब \"सब कुछ\", alle मतलब \"सभी\" (लोग या कई चीज़ें)। viel (बहुत), wenig (कम)।",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "मैंने सब समझ लिया।"
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "सब पहले से यहाँ हैं।"
+            }
+          ]
+        },
+        {
+          "title": "man: आम तौर पर लोग",
+          "text": "man मतलब \"आम तौर पर लोग\", जब यह मायने नहीं रखता कि कौन। क्रिया er जैसी: man sagt, man kann।",
+          "examples": [
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "tr": "यहाँ धूम्रपान मना है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: حفلة عند الجيران",
+      "points": [
+        {
+          "title": "jemand وniemand",
+          "text": "jemand (أحد)، niemand (لا أحد). والفعل كما مع er. والنفي داخل الكلمة، فلا نضيف nicht: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "أحدهم يطرق الباب."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "لا أحد يعرف الجواب."
+            }
+          ]
+        },
+        {
+          "title": "alles وalle",
+          "text": "alles تعني \"كل شيء\"، وalle تعني \"الجميع\" (أشخاص أو أشياء كثيرة). وviel (كثير)، وwenig (قليل).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "فهمت كل شيء."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "الجميع هنا بالفعل."
+            }
+          ]
+        },
+        {
+          "title": "man: الناس عموماً",
+          "text": "man تعني \"الناس عموماً\" حين لا يهم من بالتحديد. والفعل كما مع er: man sagt، man kann.",
+          "examples": [
+            {
+              "de": "Hier darf man nicht rauchen.",
+              "tr": "ممنوع التدخين هنا."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nobody-village-nine": {
+    "ru": {
+      "title": "Повторение: кто-то, ничего, мой",
+      "points": [
+        {
+          "title": "jemand и niemand",
+          "text": "jemand (кто-то), niemand (никто). Глагол как с er. Отрицание уже внутри слова, второе nicht не нужно: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Кто-то стучит в дверь."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Никто не знает ответа."
+            }
+          ]
+        },
+        {
+          "title": "etwas и nichts",
+          "text": "etwas (что-то), nichts (ничего). nichts уже отрицание: Ich sehe nichts, без второго nicht.",
+          "examples": [
+            {
+              "de": "Wir haben nichts gekauft.",
+              "tr": "Мы ничего не купили."
+            }
+          ]
+        },
+        {
+          "title": "einer, eine, eins",
+          "text": "Вместо существительного: einer (der), eine (die), eins (das), мн. ч. welche. В Akkusativ мужской род einen. Нет: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "У тебя есть ручка? Да, есть."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "У меня с собой нет."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: хтось, нічого, мій",
+      "points": [
+        {
+          "title": "jemand і niemand",
+          "text": "jemand (хтось), niemand (ніхто). Дієслово як з er. Заперечення вже всередині слова, друге nicht не потрібне: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Хтось стукає у двері."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Ніхто не знає відповіді."
+            }
+          ]
+        },
+        {
+          "title": "etwas і nichts",
+          "text": "etwas (щось), nichts (нічого). nichts уже заперечення: Ich sehe nichts, без другого nicht.",
+          "examples": [
+            {
+              "de": "Wir haben nichts gekauft.",
+              "tr": "Ми нічого не купили."
+            }
+          ]
+        },
+        {
+          "title": "einer, eine, eins",
+          "text": "Замість іменника: einer (der), eine (die), eins (das), мн. welche. В Akkusativ чоловічий рід einen. Немає: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "У тебе є ручка? Так, є."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "У мене із собою немає."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: someone, nothing, mine",
+      "points": [
+        {
+          "title": "jemand and niemand",
+          "text": "jemand (someone), niemand (no one). The verb is like with er. The negation is already inside the word, no extra nicht: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Someone is knocking at the door."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "No one knows the answer."
+            }
+          ]
+        },
+        {
+          "title": "etwas and nichts",
+          "text": "etwas (something), nichts (nothing). nichts is already negative: Ich sehe nichts, no extra nicht.",
+          "examples": [
+            {
+              "de": "Wir haben nichts gekauft.",
+              "tr": "We didn’t buy anything."
+            }
+          ]
+        },
+        {
+          "title": "einer, eine, eins",
+          "text": "Instead of a noun: einer (der), eine (die), eins (das), plural welche. Accusative masculine einen. None: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "Do you have a pen? Yes, I have one."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "I don’t have one with me."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: ktoś, nic, mój",
+      "points": [
+        {
+          "title": "jemand i niemand",
+          "text": "jemand (ktoś), niemand (nikt). Czasownik jak przy er. Przeczenie jest już w słowie, drugie nicht niepotrzebne: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Ktoś puka do drzwi."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Nikt nie zna odpowiedzi."
+            }
+          ]
+        },
+        {
+          "title": "etwas i nichts",
+          "text": "etwas (coś), nichts (nic). nichts to już przeczenie: Ich sehe nichts, bez drugiego nicht.",
+          "examples": [
+            {
+              "de": "Wir haben nichts gekauft.",
+              "tr": "Nic nie kupiliśmy."
+            }
+          ]
+        },
+        {
+          "title": "einer, eine, eins",
+          "text": "Zamiast rzeczownika: einer (der), eine (die), eins (das), l. mn. welche. W Akkusativ rodzaj męski einen. Brak: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "Masz długopis? Tak, mam."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "Nie mam przy sobie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: alguien, nada, mío",
+      "points": [
+        {
+          "title": "jemand y niemand",
+          "text": "jemand (alguien), niemand (nadie). El verbo como con er. La negación ya está en la palabra, sin otro nicht: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Alguien llama a la puerta."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Nadie sabe la respuesta."
+            }
+          ]
+        },
+        {
+          "title": "etwas y nichts",
+          "text": "etwas (algo), nichts (nada). nichts ya es negación: Ich sehe nichts, sin otro nicht.",
+          "examples": [
+            {
+              "de": "Wir haben nichts gekauft.",
+              "tr": "No compramos nada."
+            }
+          ]
+        },
+        {
+          "title": "einer, eine, eins",
+          "text": "En lugar del sustantivo: einer (der), eine (die), eins (das), plural welche. Acusativo masculino einen. Ninguno: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "¿Tienes un bolígrafo? Sí, tengo uno."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "No llevo ninguno."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : quelqu’un, rien, le mien",
+      "points": [
+        {
+          "title": "jemand et niemand",
+          "text": "jemand (quelqu’un), niemand (personne). Le verbe comme avec er. La négation est déjà dans le mot, pas de nicht en plus : Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Quelqu’un frappe à la porte."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Personne ne connaît la réponse."
+            }
+          ]
+        },
+        {
+          "title": "etwas et nichts",
+          "text": "etwas (quelque chose), nichts (rien). nichts est déjà négatif : Ich sehe nichts, sans nicht.",
+          "examples": [
+            {
+              "de": "Wir haben nichts gekauft.",
+              "tr": "Nous n’avons rien acheté."
+            }
+          ]
+        },
+        {
+          "title": "einer, eine, eins",
+          "text": "À la place du nom : einer (der), eine (die), eins (das), pluriel welche. Accusatif masculin einen. Aucun : keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "Tu as un stylo ? Oui, j’en ai un."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "Je n’en ai pas sur moi."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: biri, hiçbir şey, benimki",
+      "points": [
+        {
+          "title": "jemand ve niemand",
+          "text": "jemand (biri), niemand (hiç kimse). Fiil er’deki gibi. Olumsuzluk kelimenin içinde, ayrıca nicht gerekmez: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Biri kapıyı çalıyor."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Kimse cevabı bilmiyor."
+            }
+          ]
+        },
+        {
+          "title": "etwas ve nichts",
+          "text": "etwas (bir şey), nichts (hiçbir şey). nichts zaten olumsuz: Ich sehe nichts, ayrıca nicht yok.",
+          "examples": [
+            {
+              "de": "Wir haben nichts gekauft.",
+              "tr": "Hiçbir şey almadık."
+            }
+          ]
+        },
+        {
+          "title": "einer, eine, eins",
+          "text": "İsim yerine: einer (der), eine (die), eins (das), çoğul welche. Akkusativ’de eril einen. Hiç: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "Kalemin var mı? Evet, var."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "Yanımda yok."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: cineva, nimic, al meu",
+      "points": [
+        {
+          "title": "jemand și niemand",
+          "text": "jemand (cineva), niemand (nimeni). Verbul ca la er. Negația e deja în cuvânt, fără alt nicht: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Cineva bate la ușă."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Nimeni nu știe răspunsul."
+            }
+          ]
+        },
+        {
+          "title": "etwas și nichts",
+          "text": "etwas (ceva), nichts (nimic). nichts e deja negație: Ich sehe nichts, fără alt nicht.",
+          "examples": [
+            {
+              "de": "Wir haben nichts gekauft.",
+              "tr": "N-am cumpărat nimic."
+            }
+          ]
+        },
+        {
+          "title": "einer, eine, eins",
+          "text": "În locul substantivului: einer (der), eine (die), eins (das), plural welche. Acuzativ masculin einen. Niciunul: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "Ai un pix? Da, am unul."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "Nu am la mine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: kimdir, hech narsa, meniki",
+      "points": [
+        {
+          "title": "jemand va niemand",
+          "text": "jemand (kimdir), niemand (hech kim). Fe'l er dagi kabi. Inkor so'zning ichida, yana nicht kerak emas: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Kimdir eshikni taqillatyapti."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Hech kim javobni bilmaydi."
+            }
+          ]
+        },
+        {
+          "title": "etwas va nichts",
+          "text": "etwas (nimadir), nichts (hech narsa). nichts o'zi inkor: Ich sehe nichts, yana nicht yo'q.",
+          "examples": [
+            {
+              "de": "Wir haben nichts gekauft.",
+              "tr": "Biz hech narsa sotib olmadik."
+            }
+          ]
+        },
+        {
+          "title": "einer, eine, eins",
+          "text": "Ot o'rniga: einer (der), eine (die), eins (das), ko'plik welche. Akkusativda erkak rodi einen. Yo'q: keiner, keine, keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "Ruchkang bormi? Ha, bor."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "Yonimda yo'q."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: कोई, कुछ नहीं, मेरा",
+      "points": [
+        {
+          "title": "jemand और niemand",
+          "text": "jemand (कोई), niemand (कोई नहीं)। क्रिया er जैसी। नकार शब्द के अंदर ही है, अलग nicht नहीं: Niemand kommt।",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "कोई दरवाज़ा खटखटा रहा है।"
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "किसी को जवाब नहीं पता।"
+            }
+          ]
+        },
+        {
+          "title": "etwas और nichts",
+          "text": "etwas (कुछ), nichts (कुछ नहीं)। nichts पहले से नकार है: Ich sehe nichts, अलग nicht नहीं।",
+          "examples": [
+            {
+              "de": "Wir haben nichts gekauft.",
+              "tr": "हमने कुछ नहीं खरीदा।"
+            }
+          ]
+        },
+        {
+          "title": "einer, eine, eins",
+          "text": "संज्ञा की जगह: einer (der), eine (die), eins (das), बहुवचन welche। Akkusativ में पुल्लिंग einen। कोई नहीं: keiner, keine, keins।",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "क्या तुम्हारे पास पेन है? हाँ, है।"
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "मेरे पास अभी नहीं है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: أحد، لا شيء، لي",
+      "points": [
+        {
+          "title": "jemand وniemand",
+          "text": "jemand (أحد)، niemand (لا أحد). والفعل كما مع er. والنفي داخل الكلمة، فلا نضيف nicht: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "أحدهم يطرق الباب."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "لا أحد يعرف الجواب."
+            }
+          ]
+        },
+        {
+          "title": "etwas وnichts",
+          "text": "etwas (شيء ما)، nichts (لا شيء). وnichts نفي بنفسها: Ich sehe nichts بدون nicht.",
+          "examples": [
+            {
+              "de": "Wir haben nichts gekauft.",
+              "tr": "لم نشترِ شيئاً."
+            }
+          ]
+        },
+        {
+          "title": "einer وeine وeins",
+          "text": "بدل الاسم: einer (der)، eine (die)، eins (das)، والجمع welche. وفي المفعول المذكر einen. والنفي: keiner، keine، keins.",
+          "examples": [
+            {
+              "de": "Hast du einen Stift? Ja, ich habe einen.",
+              "tr": "هل عندك قلم؟ نعم، عندي واحد."
+            },
+            {
+              "de": "Ich habe keins dabei.",
+              "tr": "ليس معي واحد."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nobody-village-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "jemand и niemand",
+          "text": "jemand (кто-то), niemand (никто). Глагол как с er. Отрицание уже внутри слова, второе nicht не нужно: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Кто-то стучит в дверь."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Никто не знает ответа."
+            }
+          ]
+        },
+        {
+          "title": "alles и alle",
+          "text": "alles значит «всё» (вещи), alle значит «все» (люди или много предметов). viel (много), wenig (мало).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "Я всё понял."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Все уже здесь."
+            }
+          ]
+        },
+        {
+          "title": "meiner, meine, meins",
+          "text": "Чей? Ответ без существительного: meiner (der), meine (die), meins (das). Так же deiner, seiner, ihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "Это твой ключ? Да, мой."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "jemand і niemand",
+          "text": "jemand (хтось), niemand (ніхто). Дієслово як з er. Заперечення вже всередині слова, друге nicht не потрібне: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Хтось стукає у двері."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Ніхто не знає відповіді."
+            }
+          ]
+        },
+        {
+          "title": "alles і alle",
+          "text": "alles означає «усе» (речі), alle означає «усі» (люди або багато предметів). viel (багато), wenig (мало).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "Я все зрозумів."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Усі вже тут."
+            }
+          ]
+        },
+        {
+          "title": "meiner, meine, meins",
+          "text": "Чий? Відповідь без іменника: meiner (der), meine (die), meins (das). Так само deiner, seiner, ihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "Це твій ключ? Так, мій."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "jemand and niemand",
+          "text": "jemand (someone), niemand (no one). The verb is like with er. The negation is already inside the word, no extra nicht: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Someone is knocking at the door."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "No one knows the answer."
+            }
+          ]
+        },
+        {
+          "title": "alles and alle",
+          "text": "alles means \"everything\", alle means \"everyone, all\" (people or many things). viel (a lot), wenig (little).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "I understood everything."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Everyone is already here."
+            }
+          ]
+        },
+        {
+          "title": "meiner, meine, meins",
+          "text": "Whose? An answer without the noun: meiner (der), meine (die), meins (das). Same with deiner, seiner, ihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "Is that your key? Yes, it’s mine."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "jemand i niemand",
+          "text": "jemand (ktoś), niemand (nikt). Czasownik jak przy er. Przeczenie jest już w słowie, drugie nicht niepotrzebne: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Ktoś puka do drzwi."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Nikt nie zna odpowiedzi."
+            }
+          ]
+        },
+        {
+          "title": "alles i alle",
+          "text": "alles znaczy „wszystko”, alle znaczy „wszyscy” (ludzie albo wiele rzeczy). viel (dużo), wenig (mało).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "Wszystko zrozumiałem."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Wszyscy już są."
+            }
+          ]
+        },
+        {
+          "title": "meiner, meine, meins",
+          "text": "Czyj? Odpowiedź bez rzeczownika: meiner (der), meine (die), meins (das). Tak samo deiner, seiner, ihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "Czy to twój klucz? Tak, mój."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "jemand y niemand",
+          "text": "jemand (alguien), niemand (nadie). El verbo como con er. La negación ya está en la palabra, sin otro nicht: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Alguien llama a la puerta."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Nadie sabe la respuesta."
+            }
+          ]
+        },
+        {
+          "title": "alles y alle",
+          "text": "alles significa \"todo\", alle significa \"todos\" (personas o muchas cosas). viel (mucho), wenig (poco).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "Lo entendí todo."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Ya están todos."
+            }
+          ]
+        },
+        {
+          "title": "meiner, meine, meins",
+          "text": "¿De quién? Respuesta sin sustantivo: meiner (der), meine (die), meins (das). Igual deiner, seiner, ihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "¿Es tu llave? Sí, es mía."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "jemand et niemand",
+          "text": "jemand (quelqu’un), niemand (personne). Le verbe comme avec er. La négation est déjà dans le mot, pas de nicht en plus : Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Quelqu’un frappe à la porte."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Personne ne connaît la réponse."
+            }
+          ]
+        },
+        {
+          "title": "alles et alle",
+          "text": "alles veut dire « tout », alle « tous » (des gens ou beaucoup de choses). viel (beaucoup), wenig (peu).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "J’ai tout compris."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Tout le monde est déjà là."
+            }
+          ]
+        },
+        {
+          "title": "meiner, meine, meins",
+          "text": "À qui ? Réponse sans le nom : meiner (der), meine (die), meins (das). Pareil pour deiner, seiner, ihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "C’est ta clé ? Oui, c’est la mienne."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "jemand ve niemand",
+          "text": "jemand (biri), niemand (hiç kimse). Fiil er’deki gibi. Olumsuzluk kelimenin içinde, ayrıca nicht gerekmez: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Biri kapıyı çalıyor."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Kimse cevabı bilmiyor."
+            }
+          ]
+        },
+        {
+          "title": "alles ve alle",
+          "text": "alles \"her şey\", alle \"herkes, hepsi\" (insanlar ya da çok şey) demektir. viel (çok), wenig (az).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "Her şeyi anladım."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Herkes zaten burada."
+            }
+          ]
+        },
+        {
+          "title": "meiner, meine, meins",
+          "text": "Kimin? İsimsiz cevap: meiner (der), meine (die), meins (das). deiner, seiner, ihrer de böyle.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "Bu senin anahtarın mı? Evet, benim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "jemand și niemand",
+          "text": "jemand (cineva), niemand (nimeni). Verbul ca la er. Negația e deja în cuvânt, fără alt nicht: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Cineva bate la ușă."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Nimeni nu știe răspunsul."
+            }
+          ]
+        },
+        {
+          "title": "alles și alle",
+          "text": "alles înseamnă „totul”, alle înseamnă „toți” (oameni sau multe lucruri). viel (mult), wenig (puțin).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "Am înțeles tot."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Toți sunt deja aici."
+            }
+          ]
+        },
+        {
+          "title": "meiner, meine, meins",
+          "text": "Al cui? Răspuns fără substantiv: meiner (der), meine (die), meins (das). La fel deiner, seiner, ihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "E cheia ta? Da, e a mea."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "jemand va niemand",
+          "text": "jemand (kimdir), niemand (hech kim). Fe'l er dagi kabi. Inkor so'zning ichida, yana nicht kerak emas: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "Kimdir eshikni taqillatyapti."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "Hech kim javobni bilmaydi."
+            }
+          ]
+        },
+        {
+          "title": "alles va alle",
+          "text": "alles \"hamma narsa\", alle \"hamma, barcha\" (odamlar yoki ko'p narsa) degani. viel (ko'p), wenig (kam).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "Hammasini tushundim."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "Hamma allaqachon shu yerda."
+            }
+          ]
+        },
+        {
+          "title": "meiner, meine, meins",
+          "text": "Kimniki? Otsiz javob: meiner (der), meine (die), meins (das). deiner, seiner, ihrer ham shunday.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "Bu sening kalitingmi? Ha, meniki."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "jemand और niemand",
+          "text": "jemand (कोई), niemand (कोई नहीं)। क्रिया er जैसी। नकार शब्द के अंदर ही है, अलग nicht नहीं: Niemand kommt।",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "कोई दरवाज़ा खटखटा रहा है।"
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "किसी को जवाब नहीं पता।"
+            }
+          ]
+        },
+        {
+          "title": "alles और alle",
+          "text": "alles मतलब \"सब कुछ\", alle मतलब \"सभी\" (लोग या कई चीज़ें)। viel (बहुत), wenig (कम)।",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "मैंने सब समझ लिया।"
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "सब पहले से यहाँ हैं।"
+            }
+          ]
+        },
+        {
+          "title": "meiner, meine, meins",
+          "text": "किसका? बिना संज्ञा के जवाब: meiner (der), meine (die), meins (das)। deiner, seiner, ihrer भी ऐसे ही।",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "क्या यह तुम्हारी चाबी है? हाँ, मेरी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "jemand وniemand",
+          "text": "jemand (أحد)، niemand (لا أحد). والفعل كما مع er. والنفي داخل الكلمة، فلا نضيف nicht: Niemand kommt.",
+          "examples": [
+            {
+              "de": "Jemand klopft an die Tür.",
+              "tr": "أحدهم يطرق الباب."
+            },
+            {
+              "de": "Niemand weiß die Antwort.",
+              "tr": "لا أحد يعرف الجواب."
+            }
+          ]
+        },
+        {
+          "title": "alles وalle",
+          "text": "alles تعني \"كل شيء\"، وalle تعني \"الجميع\" (أشخاص أو أشياء كثيرة). وviel (كثير)، وwenig (قليل).",
+          "examples": [
+            {
+              "de": "Ich habe alles verstanden.",
+              "tr": "فهمت كل شيء."
+            },
+            {
+              "de": "Alle sind schon da.",
+              "tr": "الجميع هنا بالفعل."
+            }
+          ]
+        },
+        {
+          "title": "meiner وmeine وmeins",
+          "text": "لمن؟ جواب بدون اسم: meiner (der)، meine (die)، meins (das). وكذلك deiner وseiner وihrer.",
+          "examples": [
+            {
+              "de": "Ist das dein Schlüssel? Ja, das ist meiner.",
+              "tr": "هل هذا مفتاحك؟ نعم، إنه لي."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

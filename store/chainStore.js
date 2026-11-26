@@ -80,13 +80,12 @@ export const userChainStore = defineStore('chain', () => {
 	const hasMistakes = computed(() => {
 		return correctCount.value < totalQuestTasks.value
 	})
-	// Сколько заданий сейчас с ошибкой (их и повторяем)
-	const wrongCount = computed(() => Object.values(taskResults.value).filter(result => result === false).length)
-	// Была ли ошибка за этот заход, даже если её потом исправили: такой квест не «идеальный»
-	const hadMistakes = ref(false)
+
+	// Дошёл до конца квеста с жизнями: квест пройден, даже с ошибками (награда только без ошибок)
+	const reachedEnd = ref(false)
 
 	const success = computed(() => {
-		return correctCount.value >= minCorrect.value
+		return correctCount.value >= minCorrect.value || reachedEnd.value
 	})
 
 	const progressEntry = computed(() => questProgress.value[currentQuestId.value] || null)
@@ -298,7 +297,8 @@ export const userChainStore = defineStore('chain', () => {
 			if (!isRetryMode.value) {
 				daily.addLandQuestion(1)
 			}
-			if (!hasMistakes.value && !hadMistakes.value) {
+			// Ежедневное задание «языковые земли»: когда все задания выполнены верно (сразу или после исправления ошибок)
+			if (!hasMistakes.value) {
 				daily.addPerfectQuest(1)
 			}
 		}
@@ -330,7 +330,8 @@ export const userChainStore = defineStore('chain', () => {
 			const isFirstSuccess = isSuccessNow && !prev.success
 			if (isFirstSuccess) timesCompleted += 1
 			let awardedNow = false
-			if (isSuccessNow && !reward) {
+			// Награда только когда ошибок не осталось: пройден с ошибками, значит сначала их исправить
+			if (isSuccessNow && !reward && currentWrongIndices.length === 0) {
 				let currentExp = Number(data.exp || 0);
 				let currentLevel = Number(data.isLeveling || 0);
 				currentExp += 10;
@@ -417,7 +418,6 @@ export const userChainStore = defineStore('chain', () => {
 	function initializeTaskQueue(length) {
 		activeQueue.value = Array.from({length}, (_, i) => i)
 		taskResults.value = {}
-		hadMistakes.value = false
 		internalIndex.value = 0
 		isRetryMode.value = false
 	}
@@ -482,7 +482,6 @@ export const userChainStore = defineStore('chain', () => {
 
 		const originalIndex = currentTaskIndex.value
 		taskResults.value[originalIndex] = isCorrect.value
-		if (!isCorrect.value) hadMistakes.value = true
 		showResult.value = true
 
 		try {
@@ -512,6 +511,7 @@ export const userChainStore = defineStore('chain', () => {
 			return
 		}
 		if (internalIndex.value + 1 >= activeQueue.value.length) {
+			reachedEnd.value = true
 			finished.value = true
 		} else {
 			internalIndex.value += 1
@@ -618,7 +618,6 @@ export const userChainStore = defineStore('chain', () => {
 		showResult.value = false
 		isCorrect.value = false
 		taskResults.value = {}
-		hadMistakes.value = false
 		activeQueue.value = []
 		isRetryMode.value = false
 		sessionStarted.value = false
@@ -627,6 +626,7 @@ export const userChainStore = defineStore('chain', () => {
 	}
 
 	watch(finished, async (v) => {
+		if (!v) reachedEnd.value = false
 		if (v) {
 			try {
 				await saveFinalProgress()
@@ -667,7 +667,6 @@ export const userChainStore = defineStore('chain', () => {
 		task,
 		success,
 		hasMistakes,
-		wrongCount,
 		correctAnswer,
 		isConfirmDisabled,
 
@@ -679,6 +678,7 @@ export const userChainStore = defineStore('chain', () => {
 		questProgress,
 		progressLoaded,
 		sessionStarted,
+		isRetryMode,
 		justAwarded,
 		questHasAccept,
 		confirming,

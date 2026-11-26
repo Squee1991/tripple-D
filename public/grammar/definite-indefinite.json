@@ -1,0 +1,3277 @@
+{
+  "one-def": {
+    "ru": {
+      "title": "ein или der",
+      "points": [
+        {
+          "title": "Род показывает кто-то один",
+          "text": "Если артикль уже показал род (der, den, das), прилагательное получает -e или -en. Если не показал (ein), род показывает прилагательное: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "В комнате стоит новый шкаф. Новый шкаф большой."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "ein чи der",
+      "points": [
+        {
+          "title": "Рід показує хтось один",
+          "text": "Якщо артикль уже показав рід (der, den, das), прикметник отримує -e або -en. Якщо ні (ein), рід показує прикметник: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "У кімнаті стоїть нова шафа. Нова шафа велика."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "ein or der",
+      "points": [
+        {
+          "title": "Only one shows the gender",
+          "text": "If the article already shows the gender (der, den, das), the adjective takes -e or -en. If not (ein), the adjective shows it: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "There’s a new wardrobe in the room. The new wardrobe is big."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "ein czy der",
+      "points": [
+        {
+          "title": "Rodzaj pokazuje tylko jeden",
+          "text": "Jeśli rodzajnik już pokazał rodzaj (der, den, das), przymiotnik dostaje -e albo -en. Jeśli nie (ein), rodzaj pokazuje przymiotnik: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "W pokoju stoi nowa szafa. Nowa szafa jest duża."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "ein o der",
+      "points": [
+        {
+          "title": "Solo uno muestra el género",
+          "text": "Si el artículo ya muestra el género (der, den, das), el adjetivo lleva -e o -en. Si no (ein), lo muestra el adjetivo: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "En la habitación hay un armario nuevo. El armario nuevo es grande."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "ein ou der",
+      "points": [
+        {
+          "title": "Un seul montre le genre",
+          "text": "Si l’article montre déjà le genre (der, den, das), l’adjectif prend -e ou -en. Sinon (ein), c’est l’adjectif qui le montre : ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "Il y a une nouvelle armoire dans la chambre. La nouvelle armoire est grande."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "ein mi, der mi",
+      "points": [
+        {
+          "title": "Cinsiyeti sadece biri gösterir",
+          "text": "Artikel cinsiyeti zaten gösteriyorsa (der, den, das) sıfat -e ya da -en alır. Göstermiyorsa (ein) cinsiyeti sıfat gösterir: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "Odada yeni bir dolap var. Yeni dolap büyük."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "ein sau der",
+      "points": [
+        {
+          "title": "Genul îl arată unul singur",
+          "text": "Dacă articolul arată deja genul (der, den, das), adjectivul primește -e sau -en. Dacă nu (ein), genul îl arată adjectivul: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "În cameră e un dulap nou. Dulapul nou e mare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "ein yoki der",
+      "points": [
+        {
+          "title": "Rodni faqat bittasi ko'rsatadi",
+          "text": "Artikl rodni allaqachon ko'rsatgan bo'lsa (der, den, das), sifat -e yoki -en oladi. Ko'rsatmasa (ein), rodni sifat ko'rsatadi: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "Xonada yangi shkaf turibdi. Yangi shkaf katta."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "ein या der",
+      "points": [
+        {
+          "title": "लिंग कोई एक ही बताता है",
+          "text": "अगर आर्टिकल ने लिंग बता दिया (der, den, das), तो विशेषण -e या -en लेता है। अगर नहीं (ein), तो लिंग विशेषण बताता है: ein neuer, ein neues।",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "कमरे में एक नई अलमारी है। नई अलमारी बड़ी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ein أم der",
+      "points": [
+        {
+          "title": "واحد فقط يُظهر الجنس",
+          "text": "إذا أظهرت الأداة الجنس (der، den، das) تأخذ الصفة -e أو -en. وإن لم تُظهره (ein) تُظهره الصفة: ein neuer، ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "في الغرفة خزانة جديدة. الخزانة الجديدة كبيرة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "two-def": {
+    "ru": {
+      "title": "ein или der",
+      "points": [
+        {
+          "title": "ein впервые, der потом",
+          "text": "Впервые называем предмет с ein, дальше, когда он уже знаком, с der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Я покупаю новый телевизор. Новый телевизор я поставлю в гостиную."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "ein чи der",
+      "points": [
+        {
+          "title": "ein уперше, der потім",
+          "text": "Уперше називаємо предмет з ein, далі, коли він уже знайомий, з der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Я купую новий телевізор. Новий телевізор я поставлю у вітальню."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "ein or der",
+      "points": [
+        {
+          "title": "ein the first time, der after",
+          "text": "Mention a thing first with ein, then, once it’s known, with der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "I’m buying a new TV. I’ll put the new TV in the living room."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "ein czy der",
+      "points": [
+        {
+          "title": "ein za pierwszym razem, der potem",
+          "text": "Pierwszy raz mówimy o rzeczy z ein, potem, gdy jest znana, z der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Kupuję nowy telewizor. Nowy telewizor postawię w salonie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "ein o der",
+      "points": [
+        {
+          "title": "ein la primera vez, der después",
+          "text": "Primero mencionamos la cosa con ein y, cuando ya se conoce, con der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Compro un televisor nuevo. El televisor nuevo lo pongo en el salón."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "ein ou der",
+      "points": [
+        {
+          "title": "ein la première fois, der ensuite",
+          "text": "On présente d’abord la chose avec ein, puis, une fois connue, avec der : Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "J’achète une nouvelle télé. La nouvelle télé, je la mets au salon."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "ein mi, der mi",
+      "points": [
+        {
+          "title": "İlk kez ein, sonra der",
+          "text": "Bir şeyi ilk kez ein ile, bilinir olunca der ile söyleriz: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Yeni bir televizyon alıyorum. Yeni televizyonu salona koyacağım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "ein sau der",
+      "points": [
+        {
+          "title": "ein prima dată, der apoi",
+          "text": "Prima dată numim lucrul cu ein, apoi, când e cunoscut, cu der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Cumpăr un televizor nou. Televizorul nou îl pun în sufragerie."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "ein yoki der",
+      "points": [
+        {
+          "title": "Birinchi marta ein, keyin der",
+          "text": "Narsani birinchi marta ein bilan, tanish bo'lgach der bilan aytamiz: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Yangi televizor sotib olaman. Yangi televizorni mehmonxonaga qo'yaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "ein या der",
+      "points": [
+        {
+          "title": "पहली बार ein, बाद में der",
+          "text": "पहली बार चीज़ का ज़िक्र ein से, फिर जानी-पहचानी होने पर der से: Ich sehe ein neues Kleid. Das neue Kleid ist schön।",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "मैं नया टीवी खरीद रहा हूँ। नया टीवी मैं बैठक में रखूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ein أم der",
+      "points": [
+        {
+          "title": "ein أول مرة ثم der",
+          "text": "نذكر الشيء أول مرة مع ein، ثم بعد أن يصبح معروفاً مع der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "أشتري تلفازاً جديداً. سأضع التلفاز الجديد في الصالة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "three-def": {
+    "ru": {
+      "title": "ein или der",
+      "points": [
+        {
+          "title": "После ein прилагательное показывает род",
+          "text": "Подлежащее: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). Так как у ein нет окончания, его «берёт» прилагательное.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Пожилой мужчина ждал в парке."
+            }
+          ]
+        },
+        {
+          "title": "После der, die, das: -e",
+          "text": "Подлежащее в единственном числе получает -e: der alte Mann, die kleine Katze, das neue Haus. Так же die (Akkusativ) и das (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Новый дом большой."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "ein чи der",
+      "points": [
+        {
+          "title": "Після ein прикметник показує рід",
+          "text": "Підмет: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). Оскільки в ein немає закінчення, його «бере» прикметник.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Літній чоловік чекав у парку."
+            }
+          ]
+        },
+        {
+          "title": "Після der, die, das: -e",
+          "text": "Підмет в однині отримує -e: der alte Mann, die kleine Katze, das neue Haus. Так само die і das в Akkusativ.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Новий будинок великий."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "ein or der",
+      "points": [
+        {
+          "title": "After ein the adjective shows the gender",
+          "text": "Subject: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). Since ein has no ending, the adjective takes it.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "An old man waited in the park."
+            }
+          ]
+        },
+        {
+          "title": "After der, die, das: -e",
+          "text": "The singular subject takes -e: der alte Mann, die kleine Katze, das neue Haus. Same for die and das in the accusative.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "The new house is big."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "ein czy der",
+      "points": [
+        {
+          "title": "Po ein przymiotnik pokazuje rodzaj",
+          "text": "Podmiot: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). Ponieważ ein nie ma końcówki, „bierze” ją przymiotnik.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Starszy pan czekał w parku."
+            }
+          ]
+        },
+        {
+          "title": "Po der, die, das: -e",
+          "text": "Podmiot w liczbie pojedynczej dostaje -e: der alte Mann, die kleine Katze, das neue Haus. Tak samo die i das w Akkusativ.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Nowy dom jest duży."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "ein o der",
+      "points": [
+        {
+          "title": "Tras ein el adjetivo muestra el género",
+          "text": "Sujeto: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). Como ein no tiene terminación, la lleva el adjetivo.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Un hombre mayor esperó en el parque."
+            }
+          ]
+        },
+        {
+          "title": "Tras der, die, das: -e",
+          "text": "El sujeto en singular lleva -e: der alte Mann, die kleine Katze, das neue Haus. Igual die y das en acusativo.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "La casa nueva es grande."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "ein ou der",
+      "points": [
+        {
+          "title": "Après ein, l’adjectif montre le genre",
+          "text": "Sujet : ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). Comme ein n’a pas de terminaison, c’est l’adjectif qui la prend.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Un vieil homme a attendu dans le parc."
+            }
+          ]
+        },
+        {
+          "title": "Après der, die, das : -e",
+          "text": "Le sujet au singulier prend -e : der alte Mann, die kleine Katze, das neue Haus. Pareil pour die et das à l’accusatif.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "La nouvelle maison est grande."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "ein mi, der mi",
+      "points": [
+        {
+          "title": "ein’den sonra sıfat cinsiyeti gösterir",
+          "text": "Özne: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). ein ek almadığı için eki sıfat alır.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Yaşlı bir adam parkta bekledi."
+            }
+          ]
+        },
+        {
+          "title": "der, die, das’tan sonra: -e",
+          "text": "Tekil özne -e alır: der alte Mann, die kleine Katze, das neue Haus. Akkusativ’de die ve das da böyle.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Yeni ev büyük."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "ein sau der",
+      "points": [
+        {
+          "title": "După ein adjectivul arată genul",
+          "text": "Subiect: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). Pentru că ein nu are terminație, o preia adjectivul.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Un bătrân a așteptat în parc."
+            }
+          ]
+        },
+        {
+          "title": "După der, die, das: -e",
+          "text": "Subiectul la singular primește -e: der alte Mann, die kleine Katze, das neue Haus. La fel die și das la acuzativ.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Casa nouă e mare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "ein yoki der",
+      "points": [
+        {
+          "title": "ein dan keyin sifat rodni ko'rsatadi",
+          "text": "Ega: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). ein da qo'shimcha yo'qligi uchun uni sifat oladi.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Bir qariya parkda kutdi."
+            }
+          ]
+        },
+        {
+          "title": "der, die, das dan keyin: -e",
+          "text": "Birlikdagi ega -e oladi: der alte Mann, die kleine Katze, das neue Haus. Akkusativda die va das ham shunday.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Yangi uy katta."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "ein या der",
+      "points": [
+        {
+          "title": "ein के बाद विशेषण लिंग बताता है",
+          "text": "कर्ता: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es)। ein का कोई अंत नहीं, इसलिए अंत विशेषण लेता है।",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "एक बूढ़े आदमी ने पार्क में इंतज़ार किया।"
+            }
+          ]
+        },
+        {
+          "title": "der, die, das के बाद: -e",
+          "text": "एकवचन कर्ता -e लेता है: der alte Mann, die kleine Katze, das neue Haus। Akkusativ में die और das भी ऐसे ही।",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "नया घर बड़ा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ein أم der",
+      "points": [
+        {
+          "title": "بعد ein تُظهر الصفة الجنس",
+          "text": "الفاعل: ein alter Mann (der, -er)، eine junge Frau (die, -e)، ein kleines Kind (das, -es). ولأن ein بلا نهاية تأخذها الصفة.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "انتظر رجل عجوز في الحديقة."
+            }
+          ]
+        },
+        {
+          "title": "بعد der وdie وdas: -e",
+          "text": "الفاعل المفرد يأخذ -e: der alte Mann، die kleine Katze، das neue Haus. وكذلك die وdas في المفعول.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "البيت الجديد كبير."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "four-def": {
+    "ru": {
+      "title": "ein или der",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "В Akkusativ меняется только мужской род: einen neuen Schrank. Женский и средний как в подлежащем: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Он купит новый шкаф."
+            }
+          ]
+        },
+        {
+          "title": "Во всех остальных случаях: -en",
+          "text": "den (Akkusativ мужского рода), dem и der (Dativ) и множественное получают -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Я вижу старую собаку."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "ein чи der",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "В Akkusativ змінюється лише чоловічий рід: einen neuen Schrank. Жіночий і середній як у підметі: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Він купить нову шафу."
+            }
+          ]
+        },
+        {
+          "title": "В усіх інших випадках: -en",
+          "text": "den (Akkusativ чоловічого роду), dem і der (Dativ) та множина отримують -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Я бачу старого собаку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "ein or der",
+      "points": [
+        {
+          "title": "Accusative: einen neuen",
+          "text": "In the accusative only masculine changes: einen neuen Schrank. Feminine and neuter stay as for the subject: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "He’ll buy a new wardrobe."
+            }
+          ]
+        },
+        {
+          "title": "Everywhere else: -en",
+          "text": "den (masculine accusative), dem and der (dative) and all plurals take -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "I see the old dog."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "ein czy der",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "W Akkusativ zmienia się tylko rodzaj męski: einen neuen Schrank. Żeński i nijaki jak w podmiocie: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Kupi nową szafę."
+            }
+          ]
+        },
+        {
+          "title": "W pozostałych przypadkach: -en",
+          "text": "den (Akkusativ rodzaju męskiego), dem i der (Dativ) oraz liczba mnoga dostają -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Widzę starego psa."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "ein o der",
+      "points": [
+        {
+          "title": "Acusativo: einen neuen",
+          "text": "En acusativo solo cambia el masculino: einen neuen Schrank. Femenino y neutro como en el sujeto: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Comprará un armario nuevo."
+            }
+          ]
+        },
+        {
+          "title": "En los demás casos: -en",
+          "text": "den (acusativo masculino), dem y der (dativo) y el plural llevan -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Veo al perro viejo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "ein ou der",
+      "points": [
+        {
+          "title": "Accusatif : einen neuen",
+          "text": "À l’accusatif, seul le masculin change : einen neuen Schrank. Féminin et neutre comme pour le sujet : eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Il va acheter une nouvelle armoire."
+            }
+          ]
+        },
+        {
+          "title": "Dans tous les autres cas : -en",
+          "text": "den (accusatif masculin), dem et der (datif) et le pluriel prennent -en : den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Je vois le vieux chien."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "ein mi, der mi",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "Akkusativ’de sadece eril değişir: einen neuen Schrank. Dişil ve nötr öznedeki gibi: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Yeni bir dolap alacak."
+            }
+          ]
+        },
+        {
+          "title": "Diğer bütün durumlarda: -en",
+          "text": "den (eril Akkusativ), dem ve der (Dativ) ve çoğul -en alır: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Yaşlı köpeği görüyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "ein sau der",
+      "points": [
+        {
+          "title": "Acuzativ: einen neuen",
+          "text": "La acuzativ se schimbă doar masculinul: einen neuen Schrank. Femininul și neutrul ca la subiect: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Va cumpăra un dulap nou."
+            }
+          ]
+        },
+        {
+          "title": "În toate celelalte cazuri: -en",
+          "text": "den (acuzativ masculin), dem și der (dativ) și pluralul primesc -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Văd câinele bătrân."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "ein yoki der",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "Akkusativda faqat erkak rodi o'zgaradi: einen neuen Schrank. Ayol va o'rta rod egadagi kabi: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "U yangi shkaf sotib oladi."
+            }
+          ]
+        },
+        {
+          "title": "Qolgan barcha holatlarda: -en",
+          "text": "den (erkak rodi Akkusativ), dem va der (Dativ) hamda ko'plik -en oladi: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Men qari itni ko'ryapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "ein या der",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "Akkusativ में सिर्फ़ पुल्लिंग बदलता है: einen neuen Schrank। स्त्रीलिंग और नपुंसकलिंग कर्ता जैसे: eine leckere Pizza, ein schönes Kleid।",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "वह एक नई अलमारी खरीदेगा।"
+            }
+          ]
+        },
+        {
+          "title": "बाकी सब जगह: -en",
+          "text": "den (पुल्लिंग Akkusativ), dem और der (Dativ) और बहुवचन -en लेते हैं: den alten Hund, mit dem netten Freund, die netten Kollegen।",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "मुझे बूढ़ा कुत्ता दिख रहा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ein أم der",
+      "points": [
+        {
+          "title": "المفعول: einen neuen",
+          "text": "في المفعول يتغير المذكر فقط: einen neuen Schrank. والمؤنث والمحايد كما في الفاعل: eine leckere Pizza، ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "سيشتري خزانة جديدة."
+            }
+          ]
+        },
+        {
+          "title": "في كل الحالات الأخرى: -en",
+          "text": "den (المذكر في المفعول) وdem وder (الجر) والجمع تأخذ -en: den alten Hund، mit dem netten Freund، die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "أرى الكلب العجوز."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "five-def": {
+    "ru": {
+      "title": "ein или der",
+      "points": [
+        {
+          "title": "Род показывает кто-то один",
+          "text": "Если артикль уже показал род (der, den, das), прилагательное получает -e или -en. Если не показал (ein), род показывает прилагательное: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "В комнате стоит новый шкаф. Новый шкаф большой."
+            }
+          ]
+        },
+        {
+          "title": "ein впервые, der потом",
+          "text": "Впервые называем предмет с ein, дальше, когда он уже знаком, с der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Я покупаю новый телевизор. Новый телевизор я поставлю в гостиную."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "ein чи der",
+      "points": [
+        {
+          "title": "Рід показує хтось один",
+          "text": "Якщо артикль уже показав рід (der, den, das), прикметник отримує -e або -en. Якщо ні (ein), рід показує прикметник: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "У кімнаті стоїть нова шафа. Нова шафа велика."
+            }
+          ]
+        },
+        {
+          "title": "ein уперше, der потім",
+          "text": "Уперше називаємо предмет з ein, далі, коли він уже знайомий, з der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Я купую новий телевізор. Новий телевізор я поставлю у вітальню."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "ein or der",
+      "points": [
+        {
+          "title": "Only one shows the gender",
+          "text": "If the article already shows the gender (der, den, das), the adjective takes -e or -en. If not (ein), the adjective shows it: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "There’s a new wardrobe in the room. The new wardrobe is big."
+            }
+          ]
+        },
+        {
+          "title": "ein the first time, der after",
+          "text": "Mention a thing first with ein, then, once it’s known, with der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "I’m buying a new TV. I’ll put the new TV in the living room."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "ein czy der",
+      "points": [
+        {
+          "title": "Rodzaj pokazuje tylko jeden",
+          "text": "Jeśli rodzajnik już pokazał rodzaj (der, den, das), przymiotnik dostaje -e albo -en. Jeśli nie (ein), rodzaj pokazuje przymiotnik: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "W pokoju stoi nowa szafa. Nowa szafa jest duża."
+            }
+          ]
+        },
+        {
+          "title": "ein za pierwszym razem, der potem",
+          "text": "Pierwszy raz mówimy o rzeczy z ein, potem, gdy jest znana, z der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Kupuję nowy telewizor. Nowy telewizor postawię w salonie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "ein o der",
+      "points": [
+        {
+          "title": "Solo uno muestra el género",
+          "text": "Si el artículo ya muestra el género (der, den, das), el adjetivo lleva -e o -en. Si no (ein), lo muestra el adjetivo: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "En la habitación hay un armario nuevo. El armario nuevo es grande."
+            }
+          ]
+        },
+        {
+          "title": "ein la primera vez, der después",
+          "text": "Primero mencionamos la cosa con ein y, cuando ya se conoce, con der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Compro un televisor nuevo. El televisor nuevo lo pongo en el salón."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "ein ou der",
+      "points": [
+        {
+          "title": "Un seul montre le genre",
+          "text": "Si l’article montre déjà le genre (der, den, das), l’adjectif prend -e ou -en. Sinon (ein), c’est l’adjectif qui le montre : ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "Il y a une nouvelle armoire dans la chambre. La nouvelle armoire est grande."
+            }
+          ]
+        },
+        {
+          "title": "ein la première fois, der ensuite",
+          "text": "On présente d’abord la chose avec ein, puis, une fois connue, avec der : Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "J’achète une nouvelle télé. La nouvelle télé, je la mets au salon."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "ein mi, der mi",
+      "points": [
+        {
+          "title": "Cinsiyeti sadece biri gösterir",
+          "text": "Artikel cinsiyeti zaten gösteriyorsa (der, den, das) sıfat -e ya da -en alır. Göstermiyorsa (ein) cinsiyeti sıfat gösterir: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "Odada yeni bir dolap var. Yeni dolap büyük."
+            }
+          ]
+        },
+        {
+          "title": "İlk kez ein, sonra der",
+          "text": "Bir şeyi ilk kez ein ile, bilinir olunca der ile söyleriz: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Yeni bir televizyon alıyorum. Yeni televizyonu salona koyacağım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "ein sau der",
+      "points": [
+        {
+          "title": "Genul îl arată unul singur",
+          "text": "Dacă articolul arată deja genul (der, den, das), adjectivul primește -e sau -en. Dacă nu (ein), genul îl arată adjectivul: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "În cameră e un dulap nou. Dulapul nou e mare."
+            }
+          ]
+        },
+        {
+          "title": "ein prima dată, der apoi",
+          "text": "Prima dată numim lucrul cu ein, apoi, când e cunoscut, cu der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Cumpăr un televizor nou. Televizorul nou îl pun în sufragerie."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "ein yoki der",
+      "points": [
+        {
+          "title": "Rodni faqat bittasi ko'rsatadi",
+          "text": "Artikl rodni allaqachon ko'rsatgan bo'lsa (der, den, das), sifat -e yoki -en oladi. Ko'rsatmasa (ein), rodni sifat ko'rsatadi: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "Xonada yangi shkaf turibdi. Yangi shkaf katta."
+            }
+          ]
+        },
+        {
+          "title": "Birinchi marta ein, keyin der",
+          "text": "Narsani birinchi marta ein bilan, tanish bo'lgach der bilan aytamiz: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Yangi televizor sotib olaman. Yangi televizorni mehmonxonaga qo'yaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "ein या der",
+      "points": [
+        {
+          "title": "लिंग कोई एक ही बताता है",
+          "text": "अगर आर्टिकल ने लिंग बता दिया (der, den, das), तो विशेषण -e या -en लेता है। अगर नहीं (ein), तो लिंग विशेषण बताता है: ein neuer, ein neues।",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "कमरे में एक नई अलमारी है। नई अलमारी बड़ी है।"
+            }
+          ]
+        },
+        {
+          "title": "पहली बार ein, बाद में der",
+          "text": "पहली बार चीज़ का ज़िक्र ein से, फिर जानी-पहचानी होने पर der से: Ich sehe ein neues Kleid. Das neue Kleid ist schön।",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "मैं नया टीवी खरीद रहा हूँ। नया टीवी मैं बैठक में रखूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ein أم der",
+      "points": [
+        {
+          "title": "واحد فقط يُظهر الجنس",
+          "text": "إذا أظهرت الأداة الجنس (der، den، das) تأخذ الصفة -e أو -en. وإن لم تُظهره (ein) تُظهره الصفة: ein neuer، ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "في الغرفة خزانة جديدة. الخزانة الجديدة كبيرة."
+            }
+          ]
+        },
+        {
+          "title": "ein أول مرة ثم der",
+          "text": "نذكر الشيء أول مرة مع ein، ثم بعد أن يصبح معروفاً مع der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "أشتري تلفازاً جديداً. سأضع التلفاز الجديد في الصالة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "six-def": {
+    "ru": {
+      "title": "ein или der",
+      "points": [
+        {
+          "title": "Dativ: всегда -en",
+          "text": "После einem и einer прилагательное всегда с -en: in einem großen Haus, in einer kleinen Wohnung, mit einem guten Freund.",
+          "examples": [
+            {
+              "de": "Sie wohnen in einer kleinen Wohnung.",
+              "tr": "Они живут в маленькой квартире."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "ein чи der",
+      "points": [
+        {
+          "title": "Dativ: завжди -en",
+          "text": "Після einem і einer прикметник завжди з -en: in einem großen Haus, in einer kleinen Wohnung, mit einem guten Freund.",
+          "examples": [
+            {
+              "de": "Sie wohnen in einer kleinen Wohnung.",
+              "tr": "Вони живуть у маленькій квартирі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "ein or der",
+      "points": [
+        {
+          "title": "Dative: always -en",
+          "text": "After einem and einer the adjective always ends in -en: in einem großen Haus, in einer kleinen Wohnung, mit einem guten Freund.",
+          "examples": [
+            {
+              "de": "Sie wohnen in einer kleinen Wohnung.",
+              "tr": "They live in a small flat."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "ein czy der",
+      "points": [
+        {
+          "title": "Dativ: zawsze -en",
+          "text": "Po einem i einer przymiotnik zawsze z -en: in einem großen Haus, in einer kleinen Wohnung, mit einem guten Freund.",
+          "examples": [
+            {
+              "de": "Sie wohnen in einer kleinen Wohnung.",
+              "tr": "Mieszkają w małym mieszkaniu."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "ein o der",
+      "points": [
+        {
+          "title": "Dativo: siempre -en",
+          "text": "Tras einem y einer el adjetivo siempre lleva -en: in einem großen Haus, in einer kleinen Wohnung, mit einem guten Freund.",
+          "examples": [
+            {
+              "de": "Sie wohnen in einer kleinen Wohnung.",
+              "tr": "Viven en un piso pequeño."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "ein ou der",
+      "points": [
+        {
+          "title": "Datif : toujours -en",
+          "text": "Après einem et einer, l’adjectif prend toujours -en : in einem großen Haus, in einer kleinen Wohnung, mit einem guten Freund.",
+          "examples": [
+            {
+              "de": "Sie wohnen in einer kleinen Wohnung.",
+              "tr": "Ils habitent dans un petit appartement."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "ein mi, der mi",
+      "points": [
+        {
+          "title": "Dativ: her zaman -en",
+          "text": "einem ve einer’den sonra sıfat her zaman -en alır: in einem großen Haus, in einer kleinen Wohnung, mit einem guten Freund.",
+          "examples": [
+            {
+              "de": "Sie wohnen in einer kleinen Wohnung.",
+              "tr": "Küçük bir dairede oturuyorlar."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "ein sau der",
+      "points": [
+        {
+          "title": "Dativ: mereu -en",
+          "text": "După einem și einer adjectivul are mereu -en: in einem großen Haus, in einer kleinen Wohnung, mit einem guten Freund.",
+          "examples": [
+            {
+              "de": "Sie wohnen in einer kleinen Wohnung.",
+              "tr": "Locuiesc într-un apartament mic."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "ein yoki der",
+      "points": [
+        {
+          "title": "Dativ: doim -en",
+          "text": "einem va einer dan keyin sifat doim -en oladi: in einem großen Haus, in einer kleinen Wohnung, mit einem guten Freund.",
+          "examples": [
+            {
+              "de": "Sie wohnen in einer kleinen Wohnung.",
+              "tr": "Ular kichik kvartirada yashaydi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "ein या der",
+      "points": [
+        {
+          "title": "Dativ: हमेशा -en",
+          "text": "einem और einer के बाद विशेषण हमेशा -en: in einem großen Haus, in einer kleinen Wohnung, mit einem guten Freund।",
+          "examples": [
+            {
+              "de": "Sie wohnen in einer kleinen Wohnung.",
+              "tr": "वे एक छोटे फ़्लैट में रहते हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ein أم der",
+      "points": [
+        {
+          "title": "الجر: دائماً -en",
+          "text": "بعد einem وeiner تأخذ الصفة دائماً -en: in einem großen Haus، in einer kleinen Wohnung، mit einem guten Freund.",
+          "examples": [
+            {
+              "de": "Sie wohnen in einer kleinen Wohnung.",
+              "tr": "يسكنون في شقة صغيرة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "seven-def": {
+    "ru": {
+      "title": "ein или der",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "В Akkusativ меняется только мужской род: einen neuen Schrank. Женский и средний как в подлежащем: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Он купит новый шкаф."
+            }
+          ]
+        },
+        {
+          "title": "Во всех остальных случаях: -en",
+          "text": "den (Akkusativ мужского рода), dem и der (Dativ) и множественное получают -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Я вижу старую собаку."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "ein чи der",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "В Akkusativ змінюється лише чоловічий рід: einen neuen Schrank. Жіночий і середній як у підметі: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Він купить нову шафу."
+            }
+          ]
+        },
+        {
+          "title": "В усіх інших випадках: -en",
+          "text": "den (Akkusativ чоловічого роду), dem і der (Dativ) та множина отримують -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Я бачу старого собаку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "ein or der",
+      "points": [
+        {
+          "title": "Accusative: einen neuen",
+          "text": "In the accusative only masculine changes: einen neuen Schrank. Feminine and neuter stay as for the subject: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "He’ll buy a new wardrobe."
+            }
+          ]
+        },
+        {
+          "title": "Everywhere else: -en",
+          "text": "den (masculine accusative), dem and der (dative) and all plurals take -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "I see the old dog."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "ein czy der",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "W Akkusativ zmienia się tylko rodzaj męski: einen neuen Schrank. Żeński i nijaki jak w podmiocie: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Kupi nową szafę."
+            }
+          ]
+        },
+        {
+          "title": "W pozostałych przypadkach: -en",
+          "text": "den (Akkusativ rodzaju męskiego), dem i der (Dativ) oraz liczba mnoga dostają -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Widzę starego psa."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "ein o der",
+      "points": [
+        {
+          "title": "Acusativo: einen neuen",
+          "text": "En acusativo solo cambia el masculino: einen neuen Schrank. Femenino y neutro como en el sujeto: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Comprará un armario nuevo."
+            }
+          ]
+        },
+        {
+          "title": "En los demás casos: -en",
+          "text": "den (acusativo masculino), dem y der (dativo) y el plural llevan -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Veo al perro viejo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "ein ou der",
+      "points": [
+        {
+          "title": "Accusatif : einen neuen",
+          "text": "À l’accusatif, seul le masculin change : einen neuen Schrank. Féminin et neutre comme pour le sujet : eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Il va acheter une nouvelle armoire."
+            }
+          ]
+        },
+        {
+          "title": "Dans tous les autres cas : -en",
+          "text": "den (accusatif masculin), dem et der (datif) et le pluriel prennent -en : den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Je vois le vieux chien."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "ein mi, der mi",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "Akkusativ’de sadece eril değişir: einen neuen Schrank. Dişil ve nötr öznedeki gibi: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Yeni bir dolap alacak."
+            }
+          ]
+        },
+        {
+          "title": "Diğer bütün durumlarda: -en",
+          "text": "den (eril Akkusativ), dem ve der (Dativ) ve çoğul -en alır: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Yaşlı köpeği görüyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "ein sau der",
+      "points": [
+        {
+          "title": "Acuzativ: einen neuen",
+          "text": "La acuzativ se schimbă doar masculinul: einen neuen Schrank. Femininul și neutrul ca la subiect: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Va cumpăra un dulap nou."
+            }
+          ]
+        },
+        {
+          "title": "În toate celelalte cazuri: -en",
+          "text": "den (acuzativ masculin), dem și der (dativ) și pluralul primesc -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Văd câinele bătrân."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "ein yoki der",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "Akkusativda faqat erkak rodi o'zgaradi: einen neuen Schrank. Ayol va o'rta rod egadagi kabi: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "U yangi shkaf sotib oladi."
+            }
+          ]
+        },
+        {
+          "title": "Qolgan barcha holatlarda: -en",
+          "text": "den (erkak rodi Akkusativ), dem va der (Dativ) hamda ko'plik -en oladi: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Men qari itni ko'ryapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "ein या der",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "Akkusativ में सिर्फ़ पुल्लिंग बदलता है: einen neuen Schrank। स्त्रीलिंग और नपुंसकलिंग कर्ता जैसे: eine leckere Pizza, ein schönes Kleid।",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "वह एक नई अलमारी खरीदेगा।"
+            }
+          ]
+        },
+        {
+          "title": "बाकी सब जगह: -en",
+          "text": "den (पुल्लिंग Akkusativ), dem और der (Dativ) और बहुवचन -en लेते हैं: den alten Hund, mit dem netten Freund, die netten Kollegen।",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "मुझे बूढ़ा कुत्ता दिख रहा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ein أم der",
+      "points": [
+        {
+          "title": "المفعول: einen neuen",
+          "text": "في المفعول يتغير المذكر فقط: einen neuen Schrank. والمؤنث والمحايد كما في الفاعل: eine leckere Pizza، ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "سيشتري خزانة جديدة."
+            }
+          ]
+        },
+        {
+          "title": "في كل الحالات الأخرى: -en",
+          "text": "den (المذكر في المفعول) وdem وder (الجر) والجمع تأخذ -en: den alten Hund، mit dem netten Freund، die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "أرى الكلب العجوز."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "eight-def": {
+    "ru": {
+      "title": "ein или der",
+      "points": [
+        {
+          "title": "Род показывает кто-то один",
+          "text": "Если артикль уже показал род (der, den, das), прилагательное получает -e или -en. Если не показал (ein), род показывает прилагательное: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "В комнате стоит новый шкаф. Новый шкаф большой."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "ein чи der",
+      "points": [
+        {
+          "title": "Рід показує хтось один",
+          "text": "Якщо артикль уже показав рід (der, den, das), прикметник отримує -e або -en. Якщо ні (ein), рід показує прикметник: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "У кімнаті стоїть нова шафа. Нова шафа велика."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "ein or der",
+      "points": [
+        {
+          "title": "Only one shows the gender",
+          "text": "If the article already shows the gender (der, den, das), the adjective takes -e or -en. If not (ein), the adjective shows it: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "There’s a new wardrobe in the room. The new wardrobe is big."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "ein czy der",
+      "points": [
+        {
+          "title": "Rodzaj pokazuje tylko jeden",
+          "text": "Jeśli rodzajnik już pokazał rodzaj (der, den, das), przymiotnik dostaje -e albo -en. Jeśli nie (ein), rodzaj pokazuje przymiotnik: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "W pokoju stoi nowa szafa. Nowa szafa jest duża."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "ein o der",
+      "points": [
+        {
+          "title": "Solo uno muestra el género",
+          "text": "Si el artículo ya muestra el género (der, den, das), el adjetivo lleva -e o -en. Si no (ein), lo muestra el adjetivo: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "En la habitación hay un armario nuevo. El armario nuevo es grande."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "ein ou der",
+      "points": [
+        {
+          "title": "Un seul montre le genre",
+          "text": "Si l’article montre déjà le genre (der, den, das), l’adjectif prend -e ou -en. Sinon (ein), c’est l’adjectif qui le montre : ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "Il y a une nouvelle armoire dans la chambre. La nouvelle armoire est grande."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "ein mi, der mi",
+      "points": [
+        {
+          "title": "Cinsiyeti sadece biri gösterir",
+          "text": "Artikel cinsiyeti zaten gösteriyorsa (der, den, das) sıfat -e ya da -en alır. Göstermiyorsa (ein) cinsiyeti sıfat gösterir: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "Odada yeni bir dolap var. Yeni dolap büyük."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "ein sau der",
+      "points": [
+        {
+          "title": "Genul îl arată unul singur",
+          "text": "Dacă articolul arată deja genul (der, den, das), adjectivul primește -e sau -en. Dacă nu (ein), genul îl arată adjectivul: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "În cameră e un dulap nou. Dulapul nou e mare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "ein yoki der",
+      "points": [
+        {
+          "title": "Rodni faqat bittasi ko'rsatadi",
+          "text": "Artikl rodni allaqachon ko'rsatgan bo'lsa (der, den, das), sifat -e yoki -en oladi. Ko'rsatmasa (ein), rodni sifat ko'rsatadi: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "Xonada yangi shkaf turibdi. Yangi shkaf katta."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "ein या der",
+      "points": [
+        {
+          "title": "लिंग कोई एक ही बताता है",
+          "text": "अगर आर्टिकल ने लिंग बता दिया (der, den, das), तो विशेषण -e या -en लेता है। अगर नहीं (ein), तो लिंग विशेषण बताता है: ein neuer, ein neues।",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "कमरे में एक नई अलमारी है। नई अलमारी बड़ी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ein أم der",
+      "points": [
+        {
+          "title": "واحد فقط يُظهر الجنس",
+          "text": "إذا أظهرت الأداة الجنس (der، den، das) تأخذ الصفة -e أو -en. وإن لم تُظهره (ein) تُظهره الصفة: ein neuer، ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "في الغرفة خزانة جديدة. الخزانة الجديدة كبيرة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nine-def": {
+    "ru": {
+      "title": "ein или der",
+      "points": [
+        {
+          "title": "После ein прилагательное показывает род",
+          "text": "Подлежащее: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). Так как у ein нет окончания, его «берёт» прилагательное.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Пожилой мужчина ждал в парке."
+            }
+          ]
+        },
+        {
+          "title": "После der, die, das: -e",
+          "text": "Подлежащее в единственном числе получает -e: der alte Mann, die kleine Katze, das neue Haus. Так же die (Akkusativ) и das (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Новый дом большой."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "ein чи der",
+      "points": [
+        {
+          "title": "Після ein прикметник показує рід",
+          "text": "Підмет: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). Оскільки в ein немає закінчення, його «бере» прикметник.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Літній чоловік чекав у парку."
+            }
+          ]
+        },
+        {
+          "title": "Після der, die, das: -e",
+          "text": "Підмет в однині отримує -e: der alte Mann, die kleine Katze, das neue Haus. Так само die і das в Akkusativ.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Новий будинок великий."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "ein or der",
+      "points": [
+        {
+          "title": "After ein the adjective shows the gender",
+          "text": "Subject: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). Since ein has no ending, the adjective takes it.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "An old man waited in the park."
+            }
+          ]
+        },
+        {
+          "title": "After der, die, das: -e",
+          "text": "The singular subject takes -e: der alte Mann, die kleine Katze, das neue Haus. Same for die and das in the accusative.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "The new house is big."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "ein czy der",
+      "points": [
+        {
+          "title": "Po ein przymiotnik pokazuje rodzaj",
+          "text": "Podmiot: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). Ponieważ ein nie ma końcówki, „bierze” ją przymiotnik.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Starszy pan czekał w parku."
+            }
+          ]
+        },
+        {
+          "title": "Po der, die, das: -e",
+          "text": "Podmiot w liczbie pojedynczej dostaje -e: der alte Mann, die kleine Katze, das neue Haus. Tak samo die i das w Akkusativ.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Nowy dom jest duży."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "ein o der",
+      "points": [
+        {
+          "title": "Tras ein el adjetivo muestra el género",
+          "text": "Sujeto: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). Como ein no tiene terminación, la lleva el adjetivo.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Un hombre mayor esperó en el parque."
+            }
+          ]
+        },
+        {
+          "title": "Tras der, die, das: -e",
+          "text": "El sujeto en singular lleva -e: der alte Mann, die kleine Katze, das neue Haus. Igual die y das en acusativo.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "La casa nueva es grande."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "ein ou der",
+      "points": [
+        {
+          "title": "Après ein, l’adjectif montre le genre",
+          "text": "Sujet : ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). Comme ein n’a pas de terminaison, c’est l’adjectif qui la prend.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Un vieil homme a attendu dans le parc."
+            }
+          ]
+        },
+        {
+          "title": "Après der, die, das : -e",
+          "text": "Le sujet au singulier prend -e : der alte Mann, die kleine Katze, das neue Haus. Pareil pour die et das à l’accusatif.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "La nouvelle maison est grande."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "ein mi, der mi",
+      "points": [
+        {
+          "title": "ein’den sonra sıfat cinsiyeti gösterir",
+          "text": "Özne: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). ein ek almadığı için eki sıfat alır.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Yaşlı bir adam parkta bekledi."
+            }
+          ]
+        },
+        {
+          "title": "der, die, das’tan sonra: -e",
+          "text": "Tekil özne -e alır: der alte Mann, die kleine Katze, das neue Haus. Akkusativ’de die ve das da böyle.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Yeni ev büyük."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "ein sau der",
+      "points": [
+        {
+          "title": "După ein adjectivul arată genul",
+          "text": "Subiect: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). Pentru că ein nu are terminație, o preia adjectivul.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Un bătrân a așteptat în parc."
+            }
+          ]
+        },
+        {
+          "title": "După der, die, das: -e",
+          "text": "Subiectul la singular primește -e: der alte Mann, die kleine Katze, das neue Haus. La fel die și das la acuzativ.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Casa nouă e mare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "ein yoki der",
+      "points": [
+        {
+          "title": "ein dan keyin sifat rodni ko'rsatadi",
+          "text": "Ega: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es). ein da qo'shimcha yo'qligi uchun uni sifat oladi.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "Bir qariya parkda kutdi."
+            }
+          ]
+        },
+        {
+          "title": "der, die, das dan keyin: -e",
+          "text": "Birlikdagi ega -e oladi: der alte Mann, die kleine Katze, das neue Haus. Akkusativda die va das ham shunday.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Yangi uy katta."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "ein या der",
+      "points": [
+        {
+          "title": "ein के बाद विशेषण लिंग बताता है",
+          "text": "कर्ता: ein alter Mann (der, -er), eine junge Frau (die, -e), ein kleines Kind (das, -es)। ein का कोई अंत नहीं, इसलिए अंत विशेषण लेता है।",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "एक बूढ़े आदमी ने पार्क में इंतज़ार किया।"
+            }
+          ]
+        },
+        {
+          "title": "der, die, das के बाद: -e",
+          "text": "एकवचन कर्ता -e लेता है: der alte Mann, die kleine Katze, das neue Haus। Akkusativ में die और das भी ऐसे ही।",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "नया घर बड़ा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ein أم der",
+      "points": [
+        {
+          "title": "بعد ein تُظهر الصفة الجنس",
+          "text": "الفاعل: ein alter Mann (der, -er)، eine junge Frau (die, -e)، ein kleines Kind (das, -es). ولأن ein بلا نهاية تأخذها الصفة.",
+          "examples": [
+            {
+              "de": "Ein alter Mann hat im Park gewartet.",
+              "tr": "انتظر رجل عجوز في الحديقة."
+            }
+          ]
+        },
+        {
+          "title": "بعد der وdie وdas: -e",
+          "text": "الفاعل المفرد يأخذ -e: der alte Mann، die kleine Katze، das neue Haus. وكذلك die وdas في المفعول.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "البيت الجديد كبير."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "ten-def": {
+    "ru": {
+      "title": "ein или der",
+      "points": [
+        {
+          "title": "ein впервые, der потом",
+          "text": "Впервые называем предмет с ein, дальше, когда он уже знаком, с der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Я покупаю новый телевизор. Новый телевизор я поставлю в гостиную."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "ein чи der",
+      "points": [
+        {
+          "title": "ein уперше, der потім",
+          "text": "Уперше називаємо предмет з ein, далі, коли він уже знайомий, з der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Я купую новий телевізор. Новий телевізор я поставлю у вітальню."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "ein or der",
+      "points": [
+        {
+          "title": "ein the first time, der after",
+          "text": "Mention a thing first with ein, then, once it’s known, with der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "I’m buying a new TV. I’ll put the new TV in the living room."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "ein czy der",
+      "points": [
+        {
+          "title": "ein za pierwszym razem, der potem",
+          "text": "Pierwszy raz mówimy o rzeczy z ein, potem, gdy jest znana, z der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Kupuję nowy telewizor. Nowy telewizor postawię w salonie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "ein o der",
+      "points": [
+        {
+          "title": "ein la primera vez, der después",
+          "text": "Primero mencionamos la cosa con ein y, cuando ya se conoce, con der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Compro un televisor nuevo. El televisor nuevo lo pongo en el salón."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "ein ou der",
+      "points": [
+        {
+          "title": "ein la première fois, der ensuite",
+          "text": "On présente d’abord la chose avec ein, puis, une fois connue, avec der : Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "J’achète une nouvelle télé. La nouvelle télé, je la mets au salon."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "ein mi, der mi",
+      "points": [
+        {
+          "title": "İlk kez ein, sonra der",
+          "text": "Bir şeyi ilk kez ein ile, bilinir olunca der ile söyleriz: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Yeni bir televizyon alıyorum. Yeni televizyonu salona koyacağım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "ein sau der",
+      "points": [
+        {
+          "title": "ein prima dată, der apoi",
+          "text": "Prima dată numim lucrul cu ein, apoi, când e cunoscut, cu der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Cumpăr un televizor nou. Televizorul nou îl pun în sufragerie."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "ein yoki der",
+      "points": [
+        {
+          "title": "Birinchi marta ein, keyin der",
+          "text": "Narsani birinchi marta ein bilan, tanish bo'lgach der bilan aytamiz: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Yangi televizor sotib olaman. Yangi televizorni mehmonxonaga qo'yaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "ein या der",
+      "points": [
+        {
+          "title": "पहली बार ein, बाद में der",
+          "text": "पहली बार चीज़ का ज़िक्र ein से, फिर जानी-पहचानी होने पर der से: Ich sehe ein neues Kleid. Das neue Kleid ist schön।",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "मैं नया टीवी खरीद रहा हूँ। नया टीवी मैं बैठक में रखूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ein أم der",
+      "points": [
+        {
+          "title": "ein أول مرة ثم der",
+          "text": "نذكر الشيء أول مرة مع ein، ثم بعد أن يصبح معروفاً مع der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "أشتري تلفازاً جديداً. سأضع التلفاز الجديد في الصالة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "eleven-def": {
+    "ru": {
+      "title": "ein или der",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "В Akkusativ меняется только мужской род: einen neuen Schrank. Женский и средний как в подлежащем: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Он купит новый шкаф."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "ein чи der",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "В Akkusativ змінюється лише чоловічий рід: einen neuen Schrank. Жіночий і середній як у підметі: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Він купить нову шафу."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "ein or der",
+      "points": [
+        {
+          "title": "Accusative: einen neuen",
+          "text": "In the accusative only masculine changes: einen neuen Schrank. Feminine and neuter stay as for the subject: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "He’ll buy a new wardrobe."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "ein czy der",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "W Akkusativ zmienia się tylko rodzaj męski: einen neuen Schrank. Żeński i nijaki jak w podmiocie: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Kupi nową szafę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "ein o der",
+      "points": [
+        {
+          "title": "Acusativo: einen neuen",
+          "text": "En acusativo solo cambia el masculino: einen neuen Schrank. Femenino y neutro como en el sujeto: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Comprará un armario nuevo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "ein ou der",
+      "points": [
+        {
+          "title": "Accusatif : einen neuen",
+          "text": "À l’accusatif, seul le masculin change : einen neuen Schrank. Féminin et neutre comme pour le sujet : eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Il va acheter une nouvelle armoire."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "ein mi, der mi",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "Akkusativ’de sadece eril değişir: einen neuen Schrank. Dişil ve nötr öznedeki gibi: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Yeni bir dolap alacak."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "ein sau der",
+      "points": [
+        {
+          "title": "Acuzativ: einen neuen",
+          "text": "La acuzativ se schimbă doar masculinul: einen neuen Schrank. Femininul și neutrul ca la subiect: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Va cumpăra un dulap nou."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "ein yoki der",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "Akkusativda faqat erkak rodi o'zgaradi: einen neuen Schrank. Ayol va o'rta rod egadagi kabi: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "U yangi shkaf sotib oladi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "ein या der",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "Akkusativ में सिर्फ़ पुल्लिंग बदलता है: einen neuen Schrank। स्त्रीलिंग और नपुंसकलिंग कर्ता जैसे: eine leckere Pizza, ein schönes Kleid।",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "वह एक नई अलमारी खरीदेगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ein أم der",
+      "points": [
+        {
+          "title": "المفعول: einen neuen",
+          "text": "في المفعول يتغير المذكر فقط: einen neuen Schrank. والمؤنث والمحايد كما في الفاعل: eine leckere Pizza، ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "سيشتري خزانة جديدة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "twelve-def": {
+    "ru": {
+      "title": "ein или der",
+      "points": [
+        {
+          "title": "Род показывает кто-то один",
+          "text": "Если артикль уже показал род (der, den, das), прилагательное получает -e или -en. Если не показал (ein), род показывает прилагательное: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "В комнате стоит новый шкаф. Новый шкаф большой."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "ein чи der",
+      "points": [
+        {
+          "title": "Рід показує хтось один",
+          "text": "Якщо артикль уже показав рід (der, den, das), прикметник отримує -e або -en. Якщо ні (ein), рід показує прикметник: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "У кімнаті стоїть нова шафа. Нова шафа велика."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "ein or der",
+      "points": [
+        {
+          "title": "Only one shows the gender",
+          "text": "If the article already shows the gender (der, den, das), the adjective takes -e or -en. If not (ein), the adjective shows it: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "There’s a new wardrobe in the room. The new wardrobe is big."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "ein czy der",
+      "points": [
+        {
+          "title": "Rodzaj pokazuje tylko jeden",
+          "text": "Jeśli rodzajnik już pokazał rodzaj (der, den, das), przymiotnik dostaje -e albo -en. Jeśli nie (ein), rodzaj pokazuje przymiotnik: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "W pokoju stoi nowa szafa. Nowa szafa jest duża."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "ein o der",
+      "points": [
+        {
+          "title": "Solo uno muestra el género",
+          "text": "Si el artículo ya muestra el género (der, den, das), el adjetivo lleva -e o -en. Si no (ein), lo muestra el adjetivo: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "En la habitación hay un armario nuevo. El armario nuevo es grande."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "ein ou der",
+      "points": [
+        {
+          "title": "Un seul montre le genre",
+          "text": "Si l’article montre déjà le genre (der, den, das), l’adjectif prend -e ou -en. Sinon (ein), c’est l’adjectif qui le montre : ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "Il y a une nouvelle armoire dans la chambre. La nouvelle armoire est grande."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "ein mi, der mi",
+      "points": [
+        {
+          "title": "Cinsiyeti sadece biri gösterir",
+          "text": "Artikel cinsiyeti zaten gösteriyorsa (der, den, das) sıfat -e ya da -en alır. Göstermiyorsa (ein) cinsiyeti sıfat gösterir: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "Odada yeni bir dolap var. Yeni dolap büyük."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "ein sau der",
+      "points": [
+        {
+          "title": "Genul îl arată unul singur",
+          "text": "Dacă articolul arată deja genul (der, den, das), adjectivul primește -e sau -en. Dacă nu (ein), genul îl arată adjectivul: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "În cameră e un dulap nou. Dulapul nou e mare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "ein yoki der",
+      "points": [
+        {
+          "title": "Rodni faqat bittasi ko'rsatadi",
+          "text": "Artikl rodni allaqachon ko'rsatgan bo'lsa (der, den, das), sifat -e yoki -en oladi. Ko'rsatmasa (ein), rodni sifat ko'rsatadi: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "Xonada yangi shkaf turibdi. Yangi shkaf katta."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "ein या der",
+      "points": [
+        {
+          "title": "लिंग कोई एक ही बताता है",
+          "text": "अगर आर्टिकल ने लिंग बता दिया (der, den, das), तो विशेषण -e या -en लेता है। अगर नहीं (ein), तो लिंग विशेषण बताता है: ein neuer, ein neues।",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "कमरे में एक नई अलमारी है। नई अलमारी बड़ी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ein أم der",
+      "points": [
+        {
+          "title": "واحد فقط يُظهر الجنس",
+          "text": "إذا أظهرت الأداة الجنس (der، den، das) تأخذ الصفة -e أو -en. وإن لم تُظهره (ein) تُظهره الصفة: ein neuer، ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "في الغرفة خزانة جديدة. الخزانة الجديدة كبيرة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "thirteen-def": {
+    "ru": {
+      "title": "ein или der",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "В Akkusativ меняется только мужской род: einen neuen Schrank. Женский и средний как в подлежащем: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Он купит новый шкаф."
+            }
+          ]
+        },
+        {
+          "title": "Во всех остальных случаях: -en",
+          "text": "den (Akkusativ мужского рода), dem и der (Dativ) и множественное получают -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Я вижу старую собаку."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "ein чи der",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "В Akkusativ змінюється лише чоловічий рід: einen neuen Schrank. Жіночий і середній як у підметі: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Він купить нову шафу."
+            }
+          ]
+        },
+        {
+          "title": "В усіх інших випадках: -en",
+          "text": "den (Akkusativ чоловічого роду), dem і der (Dativ) та множина отримують -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Я бачу старого собаку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "ein or der",
+      "points": [
+        {
+          "title": "Accusative: einen neuen",
+          "text": "In the accusative only masculine changes: einen neuen Schrank. Feminine and neuter stay as for the subject: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "He’ll buy a new wardrobe."
+            }
+          ]
+        },
+        {
+          "title": "Everywhere else: -en",
+          "text": "den (masculine accusative), dem and der (dative) and all plurals take -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "I see the old dog."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "ein czy der",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "W Akkusativ zmienia się tylko rodzaj męski: einen neuen Schrank. Żeński i nijaki jak w podmiocie: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Kupi nową szafę."
+            }
+          ]
+        },
+        {
+          "title": "W pozostałych przypadkach: -en",
+          "text": "den (Akkusativ rodzaju męskiego), dem i der (Dativ) oraz liczba mnoga dostają -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Widzę starego psa."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "ein o der",
+      "points": [
+        {
+          "title": "Acusativo: einen neuen",
+          "text": "En acusativo solo cambia el masculino: einen neuen Schrank. Femenino y neutro como en el sujeto: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Comprará un armario nuevo."
+            }
+          ]
+        },
+        {
+          "title": "En los demás casos: -en",
+          "text": "den (acusativo masculino), dem y der (dativo) y el plural llevan -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Veo al perro viejo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "ein ou der",
+      "points": [
+        {
+          "title": "Accusatif : einen neuen",
+          "text": "À l’accusatif, seul le masculin change : einen neuen Schrank. Féminin et neutre comme pour le sujet : eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Il va acheter une nouvelle armoire."
+            }
+          ]
+        },
+        {
+          "title": "Dans tous les autres cas : -en",
+          "text": "den (accusatif masculin), dem et der (datif) et le pluriel prennent -en : den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Je vois le vieux chien."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "ein mi, der mi",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "Akkusativ’de sadece eril değişir: einen neuen Schrank. Dişil ve nötr öznedeki gibi: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Yeni bir dolap alacak."
+            }
+          ]
+        },
+        {
+          "title": "Diğer bütün durumlarda: -en",
+          "text": "den (eril Akkusativ), dem ve der (Dativ) ve çoğul -en alır: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Yaşlı köpeği görüyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "ein sau der",
+      "points": [
+        {
+          "title": "Acuzativ: einen neuen",
+          "text": "La acuzativ se schimbă doar masculinul: einen neuen Schrank. Femininul și neutrul ca la subiect: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "Va cumpăra un dulap nou."
+            }
+          ]
+        },
+        {
+          "title": "În toate celelalte cazuri: -en",
+          "text": "den (acuzativ masculin), dem și der (dativ) și pluralul primesc -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Văd câinele bătrân."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "ein yoki der",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "Akkusativda faqat erkak rodi o'zgaradi: einen neuen Schrank. Ayol va o'rta rod egadagi kabi: eine leckere Pizza, ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "U yangi shkaf sotib oladi."
+            }
+          ]
+        },
+        {
+          "title": "Qolgan barcha holatlarda: -en",
+          "text": "den (erkak rodi Akkusativ), dem va der (Dativ) hamda ko'plik -en oladi: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Men qari itni ko'ryapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "ein या der",
+      "points": [
+        {
+          "title": "Akkusativ: einen neuen",
+          "text": "Akkusativ में सिर्फ़ पुल्लिंग बदलता है: einen neuen Schrank। स्त्रीलिंग और नपुंसकलिंग कर्ता जैसे: eine leckere Pizza, ein schönes Kleid।",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "वह एक नई अलमारी खरीदेगा।"
+            }
+          ]
+        },
+        {
+          "title": "बाकी सब जगह: -en",
+          "text": "den (पुल्लिंग Akkusativ), dem और der (Dativ) और बहुवचन -en लेते हैं: den alten Hund, mit dem netten Freund, die netten Kollegen।",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "मुझे बूढ़ा कुत्ता दिख रहा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ein أم der",
+      "points": [
+        {
+          "title": "المفعول: einen neuen",
+          "text": "في المفعول يتغير المذكر فقط: einen neuen Schrank. والمؤنث والمحايد كما في الفاعل: eine leckere Pizza، ein schönes Kleid.",
+          "examples": [
+            {
+              "de": "Er wird einen neuen Schrank kaufen.",
+              "tr": "سيشتري خزانة جديدة."
+            }
+          ]
+        },
+        {
+          "title": "في كل الحالات الأخرى: -en",
+          "text": "den (المذكر في المفعول) وdem وder (الجر) والجمع تأخذ -en: den alten Hund، mit dem netten Freund، die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "أرى الكلب العجوز."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fourteen-def": {
+    "ru": {
+      "title": "ein или der",
+      "points": [
+        {
+          "title": "ein впервые, der потом",
+          "text": "Впервые называем предмет с ein, дальше, когда он уже знаком, с der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Я покупаю новый телевизор. Новый телевизор я поставлю в гостиную."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "ein чи der",
+      "points": [
+        {
+          "title": "ein уперше, der потім",
+          "text": "Уперше називаємо предмет з ein, далі, коли він уже знайомий, з der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Я купую новий телевізор. Новий телевізор я поставлю у вітальню."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "ein or der",
+      "points": [
+        {
+          "title": "ein the first time, der after",
+          "text": "Mention a thing first with ein, then, once it’s known, with der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "I’m buying a new TV. I’ll put the new TV in the living room."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "ein czy der",
+      "points": [
+        {
+          "title": "ein za pierwszym razem, der potem",
+          "text": "Pierwszy raz mówimy o rzeczy z ein, potem, gdy jest znana, z der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Kupuję nowy telewizor. Nowy telewizor postawię w salonie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "ein o der",
+      "points": [
+        {
+          "title": "ein la primera vez, der después",
+          "text": "Primero mencionamos la cosa con ein y, cuando ya se conoce, con der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Compro un televisor nuevo. El televisor nuevo lo pongo en el salón."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "ein ou der",
+      "points": [
+        {
+          "title": "ein la première fois, der ensuite",
+          "text": "On présente d’abord la chose avec ein, puis, une fois connue, avec der : Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "J’achète une nouvelle télé. La nouvelle télé, je la mets au salon."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "ein mi, der mi",
+      "points": [
+        {
+          "title": "İlk kez ein, sonra der",
+          "text": "Bir şeyi ilk kez ein ile, bilinir olunca der ile söyleriz: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Yeni bir televizyon alıyorum. Yeni televizyonu salona koyacağım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "ein sau der",
+      "points": [
+        {
+          "title": "ein prima dată, der apoi",
+          "text": "Prima dată numim lucrul cu ein, apoi, când e cunoscut, cu der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Cumpăr un televizor nou. Televizorul nou îl pun în sufragerie."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "ein yoki der",
+      "points": [
+        {
+          "title": "Birinchi marta ein, keyin der",
+          "text": "Narsani birinchi marta ein bilan, tanish bo'lgach der bilan aytamiz: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Yangi televizor sotib olaman. Yangi televizorni mehmonxonaga qo'yaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "ein या der",
+      "points": [
+        {
+          "title": "पहली बार ein, बाद में der",
+          "text": "पहली बार चीज़ का ज़िक्र ein से, फिर जानी-पहचानी होने पर der से: Ich sehe ein neues Kleid. Das neue Kleid ist schön।",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "मैं नया टीवी खरीद रहा हूँ। नया टीवी मैं बैठक में रखूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ein أم der",
+      "points": [
+        {
+          "title": "ein أول مرة ثم der",
+          "text": "نذكر الشيء أول مرة مع ein، ثم بعد أن يصبح معروفاً مع der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "أشتري تلفازاً جديداً. سأضع التلفاز الجديد في الصالة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fifteen-def": {
+    "ru": {
+      "title": "ein или der",
+      "points": [
+        {
+          "title": "Род показывает кто-то один",
+          "text": "Если артикль уже показал род (der, den, das), прилагательное получает -e или -en. Если не показал (ein), род показывает прилагательное: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "В комнате стоит новый шкаф. Новый шкаф большой."
+            }
+          ]
+        },
+        {
+          "title": "ein впервые, der потом",
+          "text": "Впервые называем предмет с ein, дальше, когда он уже знаком, с der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Я покупаю новый телевизор. Новый телевизор я поставлю в гостиную."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "ein чи der",
+      "points": [
+        {
+          "title": "Рід показує хтось один",
+          "text": "Якщо артикль уже показав рід (der, den, das), прикметник отримує -e або -en. Якщо ні (ein), рід показує прикметник: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "У кімнаті стоїть нова шафа. Нова шафа велика."
+            }
+          ]
+        },
+        {
+          "title": "ein уперше, der потім",
+          "text": "Уперше називаємо предмет з ein, далі, коли він уже знайомий, з der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Я купую новий телевізор. Новий телевізор я поставлю у вітальню."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "ein or der",
+      "points": [
+        {
+          "title": "Only one shows the gender",
+          "text": "If the article already shows the gender (der, den, das), the adjective takes -e or -en. If not (ein), the adjective shows it: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "There’s a new wardrobe in the room. The new wardrobe is big."
+            }
+          ]
+        },
+        {
+          "title": "ein the first time, der after",
+          "text": "Mention a thing first with ein, then, once it’s known, with der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "I’m buying a new TV. I’ll put the new TV in the living room."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "ein czy der",
+      "points": [
+        {
+          "title": "Rodzaj pokazuje tylko jeden",
+          "text": "Jeśli rodzajnik już pokazał rodzaj (der, den, das), przymiotnik dostaje -e albo -en. Jeśli nie (ein), rodzaj pokazuje przymiotnik: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "W pokoju stoi nowa szafa. Nowa szafa jest duża."
+            }
+          ]
+        },
+        {
+          "title": "ein za pierwszym razem, der potem",
+          "text": "Pierwszy raz mówimy o rzeczy z ein, potem, gdy jest znana, z der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Kupuję nowy telewizor. Nowy telewizor postawię w salonie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "ein o der",
+      "points": [
+        {
+          "title": "Solo uno muestra el género",
+          "text": "Si el artículo ya muestra el género (der, den, das), el adjetivo lleva -e o -en. Si no (ein), lo muestra el adjetivo: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "En la habitación hay un armario nuevo. El armario nuevo es grande."
+            }
+          ]
+        },
+        {
+          "title": "ein la primera vez, der después",
+          "text": "Primero mencionamos la cosa con ein y, cuando ya se conoce, con der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Compro un televisor nuevo. El televisor nuevo lo pongo en el salón."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "ein ou der",
+      "points": [
+        {
+          "title": "Un seul montre le genre",
+          "text": "Si l’article montre déjà le genre (der, den, das), l’adjectif prend -e ou -en. Sinon (ein), c’est l’adjectif qui le montre : ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "Il y a une nouvelle armoire dans la chambre. La nouvelle armoire est grande."
+            }
+          ]
+        },
+        {
+          "title": "ein la première fois, der ensuite",
+          "text": "On présente d’abord la chose avec ein, puis, une fois connue, avec der : Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "J’achète une nouvelle télé. La nouvelle télé, je la mets au salon."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "ein mi, der mi",
+      "points": [
+        {
+          "title": "Cinsiyeti sadece biri gösterir",
+          "text": "Artikel cinsiyeti zaten gösteriyorsa (der, den, das) sıfat -e ya da -en alır. Göstermiyorsa (ein) cinsiyeti sıfat gösterir: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "Odada yeni bir dolap var. Yeni dolap büyük."
+            }
+          ]
+        },
+        {
+          "title": "İlk kez ein, sonra der",
+          "text": "Bir şeyi ilk kez ein ile, bilinir olunca der ile söyleriz: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Yeni bir televizyon alıyorum. Yeni televizyonu salona koyacağım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "ein sau der",
+      "points": [
+        {
+          "title": "Genul îl arată unul singur",
+          "text": "Dacă articolul arată deja genul (der, den, das), adjectivul primește -e sau -en. Dacă nu (ein), genul îl arată adjectivul: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "În cameră e un dulap nou. Dulapul nou e mare."
+            }
+          ]
+        },
+        {
+          "title": "ein prima dată, der apoi",
+          "text": "Prima dată numim lucrul cu ein, apoi, când e cunoscut, cu der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Cumpăr un televizor nou. Televizorul nou îl pun în sufragerie."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "ein yoki der",
+      "points": [
+        {
+          "title": "Rodni faqat bittasi ko'rsatadi",
+          "text": "Artikl rodni allaqachon ko'rsatgan bo'lsa (der, den, das), sifat -e yoki -en oladi. Ko'rsatmasa (ein), rodni sifat ko'rsatadi: ein neuer, ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "Xonada yangi shkaf turibdi. Yangi shkaf katta."
+            }
+          ]
+        },
+        {
+          "title": "Birinchi marta ein, keyin der",
+          "text": "Narsani birinchi marta ein bilan, tanish bo'lgach der bilan aytamiz: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "Yangi televizor sotib olaman. Yangi televizorni mehmonxonaga qo'yaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "ein या der",
+      "points": [
+        {
+          "title": "लिंग कोई एक ही बताता है",
+          "text": "अगर आर्टिकल ने लिंग बता दिया (der, den, das), तो विशेषण -e या -en लेता है। अगर नहीं (ein), तो लिंग विशेषण बताता है: ein neuer, ein neues।",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "कमरे में एक नई अलमारी है। नई अलमारी बड़ी है।"
+            }
+          ]
+        },
+        {
+          "title": "पहली बार ein, बाद में der",
+          "text": "पहली बार चीज़ का ज़िक्र ein से, फिर जानी-पहचानी होने पर der से: Ich sehe ein neues Kleid. Das neue Kleid ist schön।",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "मैं नया टीवी खरीद रहा हूँ। नया टीवी मैं बैठक में रखूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ein أم der",
+      "points": [
+        {
+          "title": "واحد فقط يُظهر الجنس",
+          "text": "إذا أظهرت الأداة الجنس (der، den، das) تأخذ الصفة -e أو -en. وإن لم تُظهره (ein) تُظهره الصفة: ein neuer، ein neues.",
+          "examples": [
+            {
+              "de": "Ein neuer Schrank steht im Zimmer. Der neue Schrank ist groß.",
+              "tr": "في الغرفة خزانة جديدة. الخزانة الجديدة كبيرة."
+            }
+          ]
+        },
+        {
+          "title": "ein أول مرة ثم der",
+          "text": "نذكر الشيء أول مرة مع ein، ثم بعد أن يصبح معروفاً مع der: Ich sehe ein neues Kleid. Das neue Kleid ist schön.",
+          "examples": [
+            {
+              "de": "Ich kaufe einen neuen Fernseher. Den neuen Fernseher stelle ich ins Wohnzimmer.",
+              "tr": "أشتري تلفازاً جديداً. سأضع التلفاز الجديد في الصالة."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

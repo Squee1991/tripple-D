@@ -1,0 +1,3058 @@
+{
+  "dress-bazaar-one": {
+    "ru": {
+      "title": "tragen: что на мне",
+      "points": [
+        {
+          "title": "tragen: a → ä",
+          "text": "tragen (носить) меняет гласную у du и er: du trägst, er trägt. После него Akkusativ.",
+          "examples": [
+            {
+              "de": "Er trägt ein Hemd.",
+              "tr": "Он носит рубашку."
+            },
+            {
+              "de": "Ich trage einen Rock.",
+              "tr": "Я ношу юбку."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "tragen: що на мені",
+      "points": [
+        {
+          "title": "tragen: a → ä",
+          "text": "tragen (носити) змінює голосну у du та er: du trägst, er trägt. Після нього Akkusativ.",
+          "examples": [
+            {
+              "de": "Er trägt ein Hemd.",
+              "tr": "Він носить сорочку."
+            },
+            {
+              "de": "Ich trage einen Rock.",
+              "tr": "Я ношу спідницю."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "tragen: what I’m wearing",
+      "points": [
+        {
+          "title": "tragen: a → ä",
+          "text": "tragen (to wear) changes its vowel with du and er: du trägst, er trägt. It takes the accusative.",
+          "examples": [
+            {
+              "de": "Er trägt ein Hemd.",
+              "tr": "He’s wearing a shirt."
+            },
+            {
+              "de": "Ich trage einen Rock.",
+              "tr": "I’m wearing a skirt."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "tragen: co mam na sobie",
+      "points": [
+        {
+          "title": "tragen: a → ä",
+          "text": "tragen (nosić) zmienia samogłoskę przy du i er: du trägst, er trägt. Po nim Akkusativ.",
+          "examples": [
+            {
+              "de": "Er trägt ein Hemd.",
+              "tr": "On nosi koszulę."
+            },
+            {
+              "de": "Ich trage einen Rock.",
+              "tr": "Noszę spódnicę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "tragen: qué llevo puesto",
+      "points": [
+        {
+          "title": "tragen: a → ä",
+          "text": "tragen (llevar puesto) cambia la vocal con du y er: du trägst, er trägt. Va con acusativo.",
+          "examples": [
+            {
+              "de": "Er trägt ein Hemd.",
+              "tr": "Él lleva una camisa."
+            },
+            {
+              "de": "Ich trage einen Rock.",
+              "tr": "Llevo una falda."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "tragen : ce que je porte",
+      "points": [
+        {
+          "title": "tragen : a → ä",
+          "text": "tragen (porter) change de voyelle avec du et er : du trägst, er trägt. Suivi de l’accusatif.",
+          "examples": [
+            {
+              "de": "Er trägt ein Hemd.",
+              "tr": "Il porte une chemise."
+            },
+            {
+              "de": "Ich trage einen Rock.",
+              "tr": "Je porte une jupe."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "tragen: üzerimde ne var",
+      "points": [
+        {
+          "title": "tragen: a → ä",
+          "text": "tragen (giymek, taşımak) du ve er ile ünlü değiştirir: du trägst, er trägt. Ardından Akkusativ gelir.",
+          "examples": [
+            {
+              "de": "Er trägt ein Hemd.",
+              "tr": "O bir gömlek giyiyor."
+            },
+            {
+              "de": "Ich trage einen Rock.",
+              "tr": "Etek giyiyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "tragen: ce port",
+      "points": [
+        {
+          "title": "tragen: a → ä",
+          "text": "tragen (a purta) își schimbă vocala la du și er: du trägst, er trägt. E urmat de acuzativ.",
+          "examples": [
+            {
+              "de": "Er trägt ein Hemd.",
+              "tr": "El poartă o cămașă."
+            },
+            {
+              "de": "Ich trage einen Rock.",
+              "tr": "Port o fustă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "tragen: ustimda nima bor",
+      "points": [
+        {
+          "title": "tragen: a → ä",
+          "text": "tragen (kiymoq) du va er da unlini o'zgartiradi: du trägst, er trägt. Undan keyin Akkusativ.",
+          "examples": [
+            {
+              "de": "Er trägt ein Hemd.",
+              "tr": "U ko'ylak kiygan."
+            },
+            {
+              "de": "Ich trage einen Rock.",
+              "tr": "Men yubka kiyganman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "tragen: मैंने क्या पहना है",
+      "points": [
+        {
+          "title": "tragen: a → ä",
+          "text": "tragen (पहनना) du और er के साथ स्वर बदलता है: du trägst, er trägt। इसके बाद Akkusativ।",
+          "examples": [
+            {
+              "de": "Er trägt ein Hemd.",
+              "tr": "उसने कमीज़ पहनी है।"
+            },
+            {
+              "de": "Ich trage einen Rock.",
+              "tr": "मैंने स्कर्ट पहनी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "tragen: ماذا أرتدي",
+      "points": [
+        {
+          "title": "tragen: a → ä",
+          "text": "يتغير حرف tragen (يرتدي) مع du وer: du trägst، er trägt. ويأتي بعده المفعول.",
+          "examples": [
+            {
+              "de": "Er trägt ein Hemd.",
+              "tr": "هو يرتدي قميصاً."
+            },
+            {
+              "de": "Ich trage einen Rock.",
+              "tr": "أرتدي تنورة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dress-bazaar-two": {
+    "ru": {
+      "title": "Какого цвета?",
+      "points": [
+        {
+          "title": "После ist без окончания",
+          "text": "Цвет после ist не меняется, во множественном глагол sind.",
+          "examples": [
+            {
+              "de": "Welche Farbe hat der Rock? Er ist rot.",
+              "tr": "Какого цвета юбка? Красная."
+            },
+            {
+              "de": "Die Schuhe sind schwarz.",
+              "tr": "Туфли чёрные."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Якого кольору?",
+      "points": [
+        {
+          "title": "Після ist без закінчення",
+          "text": "Колір після ist не змінюється, у множині дієслово sind.",
+          "examples": [
+            {
+              "de": "Welche Farbe hat der Rock? Er ist rot.",
+              "tr": "Якого кольору спідниця? Червона."
+            },
+            {
+              "de": "Die Schuhe sind schwarz.",
+              "tr": "Туфлі чорні."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "What colour?",
+      "points": [
+        {
+          "title": "No ending after ist",
+          "text": "The colour after ist doesn’t change. In the plural the verb is sind.",
+          "examples": [
+            {
+              "de": "Welche Farbe hat der Rock? Er ist rot.",
+              "tr": "What colour is the skirt? It’s red."
+            },
+            {
+              "de": "Die Schuhe sind schwarz.",
+              "tr": "The shoes are black."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Jakiego koloru?",
+      "points": [
+        {
+          "title": "Po ist bez końcówki",
+          "text": "Kolor po ist się nie zmienia, w liczbie mnogiej czasownik sind.",
+          "examples": [
+            {
+              "de": "Welche Farbe hat der Rock? Er ist rot.",
+              "tr": "Jakiego koloru jest spódnica? Czerwona."
+            },
+            {
+              "de": "Die Schuhe sind schwarz.",
+              "tr": "Buty są czarne."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿De qué color?",
+      "points": [
+        {
+          "title": "Sin terminación tras ist",
+          "text": "El color después de ist no cambia. En plural el verbo es sind.",
+          "examples": [
+            {
+              "de": "Welche Farbe hat der Rock? Er ist rot.",
+              "tr": "¿De qué color es la falda? Es roja."
+            },
+            {
+              "de": "Die Schuhe sind schwarz.",
+              "tr": "Los zapatos son negros."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "De quelle couleur ?",
+      "points": [
+        {
+          "title": "Pas de terminaison après ist",
+          "text": "La couleur après ist ne change pas. Au pluriel, le verbe est sind.",
+          "examples": [
+            {
+              "de": "Welche Farbe hat der Rock? Er ist rot.",
+              "tr": "De quelle couleur est la jupe ? Elle est rouge."
+            },
+            {
+              "de": "Die Schuhe sind schwarz.",
+              "tr": "Les chaussures sont noires."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Ne renk?",
+      "points": [
+        {
+          "title": "ist’ten sonra eksiz",
+          "text": "ist’ten sonra renk değişmez. Çoğulda fiil sind olur.",
+          "examples": [
+            {
+              "de": "Welche Farbe hat der Rock? Er ist rot.",
+              "tr": "Etek ne renk? Kırmızı."
+            },
+            {
+              "de": "Die Schuhe sind schwarz.",
+              "tr": "Ayakkabılar siyah."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Ce culoare?",
+      "points": [
+        {
+          "title": "După ist fără terminație",
+          "text": "Culoarea după ist nu se schimbă. La plural verbul e sind.",
+          "examples": [
+            {
+              "de": "Welche Farbe hat der Rock? Er ist rot.",
+              "tr": "Ce culoare are fusta? E roșie."
+            },
+            {
+              "de": "Die Schuhe sind schwarz.",
+              "tr": "Pantofii sunt negri."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qanday rangda?",
+      "points": [
+        {
+          "title": "ist dan keyin qo'shimchasiz",
+          "text": "ist dan keyin rang o'zgarmaydi. Ko'plikda fe'l sind.",
+          "examples": [
+            {
+              "de": "Welche Farbe hat der Rock? Er ist rot.",
+              "tr": "Yubka qanday rangda? Qizil."
+            },
+            {
+              "de": "Die Schuhe sind schwarz.",
+              "tr": "Tuflilar qora."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "किस रंग का?",
+      "points": [
+        {
+          "title": "ist के बाद कोई अंत नहीं",
+          "text": "ist के बाद रंग नहीं बदलता। बहुवचन में क्रिया sind।",
+          "examples": [
+            {
+              "de": "Welche Farbe hat der Rock? Er ist rot.",
+              "tr": "स्कर्ट किस रंग की है? लाल।"
+            },
+            {
+              "de": "Die Schuhe sind schwarz.",
+              "tr": "जूते काले हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ما اللون؟",
+      "points": [
+        {
+          "title": "بدون نهاية بعد ist",
+          "text": "لا يتغير اللون بعد ist. وفي الجمع يكون الفعل sind.",
+          "examples": [
+            {
+              "de": "Welche Farbe hat der Rock? Er ist rot.",
+              "tr": "ما لون التنورة؟ إنها حمراء."
+            },
+            {
+              "de": "Die Schuhe sind schwarz.",
+              "tr": "الحذاء أسود."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dress-bazaar-three": {
+    "ru": {
+      "title": "Мне нравится: gefällt mir",
+      "points": [
+        {
+          "title": "gefällt mir: учим целиком",
+          "text": "Вещь здесь главная, поэтому глагол смотрит на неё: одна вещь gefällt, много вещей gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Мне нравится платье."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Мне нравятся туфли."
+            }
+          ]
+        },
+        {
+          "title": "Отрицание и вопрос",
+          "text": "nicht ставим в конец. Спросить мнение: Wie gefällt dir...?",
+          "examples": [
+            {
+              "de": "Der Hut gefällt mir nicht.",
+              "tr": "Эта шляпа мне не нравится."
+            },
+            {
+              "de": "Wie gefällt dir der Rock?",
+              "tr": "Как тебе юбка?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Мені подобається: gefällt mir",
+      "points": [
+        {
+          "title": "gefällt mir: вчимо цілком",
+          "text": "Річ тут головна, тому дієслово дивиться на неї: одна річ gefällt, багато речей gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Мені подобається сукня."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Мені подобаються туфлі."
+            }
+          ]
+        },
+        {
+          "title": "Заперечення і питання",
+          "text": "nicht ставимо в кінець. Запитати думку: Wie gefällt dir...?",
+          "examples": [
+            {
+              "de": "Der Hut gefällt mir nicht.",
+              "tr": "Цей капелюх мені не подобається."
+            },
+            {
+              "de": "Wie gefällt dir der Rock?",
+              "tr": "Як тобі спідниця?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "I like it: gefällt mir",
+      "points": [
+        {
+          "title": "gefällt mir: learn it as a whole",
+          "text": "Here the thing is the subject, so the verb agrees with it: one thing gefällt, several things gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "I like the dress."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "I like the shoes."
+            }
+          ]
+        },
+        {
+          "title": "Negation and questions",
+          "text": "Put nicht at the end. To ask an opinion: Wie gefällt dir...?",
+          "examples": [
+            {
+              "de": "Der Hut gefällt mir nicht.",
+              "tr": "I don’t like the hat."
+            },
+            {
+              "de": "Wie gefällt dir der Rock?",
+              "tr": "How do you like the skirt?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Podoba mi się: gefällt mir",
+      "points": [
+        {
+          "title": "gefällt mir: uczymy się w całości",
+          "text": "Tu rzecz jest podmiotem, więc czasownik zgadza się z nią: jedna rzecz gefällt, wiele rzeczy gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Podoba mi się sukienka."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Podobają mi się buty."
+            }
+          ]
+        },
+        {
+          "title": "Przeczenie i pytanie",
+          "text": "nicht stawiamy na końcu. Zapytać o zdanie: Wie gefällt dir...?",
+          "examples": [
+            {
+              "de": "Der Hut gefällt mir nicht.",
+              "tr": "Kapelusz mi się nie podoba."
+            },
+            {
+              "de": "Wie gefällt dir der Rock?",
+              "tr": "Jak ci się podoba spódnica?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Me gusta: gefällt mir",
+      "points": [
+        {
+          "title": "gefällt mir: se aprende entero",
+          "text": "Aquí la cosa es el sujeto, como en \"me gusta\": una cosa gefällt, varias cosas gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Me gusta el vestido."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Me gustan los zapatos."
+            }
+          ]
+        },
+        {
+          "title": "Negación y pregunta",
+          "text": "nicht va al final. Para pedir opinión: Wie gefällt dir...?",
+          "examples": [
+            {
+              "de": "Der Hut gefällt mir nicht.",
+              "tr": "El sombrero no me gusta."
+            },
+            {
+              "de": "Wie gefällt dir der Rock?",
+              "tr": "¿Qué te parece la falda?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Ça me plaît : gefällt mir",
+      "points": [
+        {
+          "title": "gefällt mir : à apprendre en bloc",
+          "text": "Ici l’objet est le sujet, donc le verbe s’accorde avec lui : une chose gefällt, plusieurs choses gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "La robe me plaît."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Les chaussures me plaisent."
+            }
+          ]
+        },
+        {
+          "title": "Négation et question",
+          "text": "nicht se met à la fin. Pour demander un avis : Wie gefällt dir... ?",
+          "examples": [
+            {
+              "de": "Der Hut gefällt mir nicht.",
+              "tr": "Le chapeau ne me plaît pas."
+            },
+            {
+              "de": "Wie gefällt dir der Rock?",
+              "tr": "Comment tu trouves la jupe ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Beğeniyorum: gefällt mir",
+      "points": [
+        {
+          "title": "gefällt mir: kalıp olarak",
+          "text": "Burada eşya öznedir, fiil ona uyar: tek şey gefällt, birden çok şey gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Elbiseyi beğendim."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Ayakkabıları beğendim."
+            }
+          ]
+        },
+        {
+          "title": "Olumsuz ve soru",
+          "text": "nicht sona konur. Fikir sormak: Wie gefällt dir...?",
+          "examples": [
+            {
+              "de": "Der Hut gefällt mir nicht.",
+              "tr": "Şapkayı beğenmedim."
+            },
+            {
+              "de": "Wie gefällt dir der Rock?",
+              "tr": "Eteği nasıl buldun?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Îmi place: gefällt mir",
+      "points": [
+        {
+          "title": "gefällt mir: se învață întreg",
+          "text": "Aici lucrul e subiectul, ca în „îmi place”: un lucru gefällt, mai multe gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Îmi place rochia."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Îmi plac pantofii."
+            }
+          ]
+        },
+        {
+          "title": "Negația și întrebarea",
+          "text": "nicht se pune la final. Ca să ceri o părere: Wie gefällt dir...?",
+          "examples": [
+            {
+              "de": "Der Hut gefällt mir nicht.",
+              "tr": "Pălăria nu-mi place."
+            },
+            {
+              "de": "Wie gefällt dir der Rock?",
+              "tr": "Cum ți se pare fusta?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Menga yoqadi: gefällt mir",
+      "points": [
+        {
+          "title": "gefällt mir: butunligicha o'rganamiz",
+          "text": "Bu yerda narsa ega, fe'l unga moslashadi: bitta narsa gefällt, ko'p narsa gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Ko'ylak menga yoqadi."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Tuflilar menga yoqadi."
+            }
+          ]
+        },
+        {
+          "title": "Inkor va savol",
+          "text": "nicht oxiriga qo'yiladi. Fikr so'rash: Wie gefällt dir...?",
+          "examples": [
+            {
+              "de": "Der Hut gefällt mir nicht.",
+              "tr": "Shlyapa menga yoqmaydi."
+            },
+            {
+              "de": "Wie gefällt dir der Rock?",
+              "tr": "Yubka senga qanday?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "मुझे पसंद है: gefällt mir",
+      "points": [
+        {
+          "title": "gefällt mir: पूरा वाक्यांश",
+          "text": "यहाँ चीज़ ही कर्ता है, इसलिए क्रिया उसी से मेल खाती है: एक चीज़ gefällt, कई चीज़ें gefallen।",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "मुझे यह ड्रेस पसंद है।"
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "मुझे ये जूते पसंद हैं।"
+            }
+          ]
+        },
+        {
+          "title": "नकार और सवाल",
+          "text": "nicht अंत में आता है। राय पूछना: Wie gefällt dir...?",
+          "examples": [
+            {
+              "de": "Der Hut gefällt mir nicht.",
+              "tr": "मुझे यह टोपी पसंद नहीं।"
+            },
+            {
+              "de": "Wie gefällt dir der Rock?",
+              "tr": "तुम्हें स्कर्ट कैसी लगी?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "يعجبني: gefällt mir",
+      "points": [
+        {
+          "title": "gefällt mir: نحفظها كاملة",
+          "text": "هنا الشيء هو الفاعل، فيتوافق الفعل معه: شيء واحد gefällt، وعدة أشياء gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "يعجبني الفستان."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "يعجبني الحذاء."
+            }
+          ]
+        },
+        {
+          "title": "النفي والسؤال",
+          "text": "نضع nicht في الآخر. ولنسأل عن الرأي: Wie gefällt dir...؟",
+          "examples": [
+            {
+              "de": "Der Hut gefällt mir nicht.",
+              "tr": "لا تعجبني القبعة."
+            },
+            {
+              "de": "Wie gefällt dir der Rock?",
+              "tr": "كيف تجد التنورة؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dress-bazaar-four": {
+    "ru": {
+      "title": "Размер и примерка",
+      "points": [
+        {
+          "title": "anprobieren отделяемый",
+          "text": "Ich probiere den Rock an. С модальным глаголом целиком в конце: Kann ich den Rock anprobieren?",
+          "examples": [
+            {
+              "de": "Welche Größe haben Sie? Größe 38.",
+              "tr": "Какой у вас размер? 38-й."
+            },
+            {
+              "de": "Kann ich den Rock anprobieren?",
+              "tr": "Можно примерить юбку?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Розмір і приміряння",
+      "points": [
+        {
+          "title": "anprobieren відокремлюване",
+          "text": "Ich probiere den Rock an. З модальним дієсловом цілим у кінці: Kann ich den Rock anprobieren?",
+          "examples": [
+            {
+              "de": "Welche Größe haben Sie? Größe 38.",
+              "tr": "Який у вас розмір? 38-й."
+            },
+            {
+              "de": "Kann ich den Rock anprobieren?",
+              "tr": "Можна приміряти спідницю?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Size and trying on",
+      "points": [
+        {
+          "title": "anprobieren is separable",
+          "text": "Ich probiere den Rock an. With a modal verb it stays whole at the end: Kann ich den Rock anprobieren?",
+          "examples": [
+            {
+              "de": "Welche Größe haben Sie? Größe 38.",
+              "tr": "What size are you? Size 38."
+            },
+            {
+              "de": "Kann ich den Rock anprobieren?",
+              "tr": "Can I try on the skirt?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Rozmiar i przymierzanie",
+      "points": [
+        {
+          "title": "anprobieren jest rozdzielny",
+          "text": "Ich probiere den Rock an. Z czasownikiem modalnym w całości na końcu: Kann ich den Rock anprobieren?",
+          "examples": [
+            {
+              "de": "Welche Größe haben Sie? Größe 38.",
+              "tr": "Jaki ma pani rozmiar? 38."
+            },
+            {
+              "de": "Kann ich den Rock anprobieren?",
+              "tr": "Mogę przymierzyć spódnicę?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Talla y probador",
+      "points": [
+        {
+          "title": "anprobieren es separable",
+          "text": "Ich probiere den Rock an. Con un modal va entero al final: Kann ich den Rock anprobieren?",
+          "examples": [
+            {
+              "de": "Welche Größe haben Sie? Größe 38.",
+              "tr": "¿Qué talla tiene? La 38."
+            },
+            {
+              "de": "Kann ich den Rock anprobieren?",
+              "tr": "¿Puedo probarme la falda?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Taille et essayage",
+      "points": [
+        {
+          "title": "anprobieren est séparable",
+          "text": "Ich probiere den Rock an. Avec un verbe de modalité, il reste entier à la fin : Kann ich den Rock anprobieren ?",
+          "examples": [
+            {
+              "de": "Welche Größe haben Sie? Größe 38.",
+              "tr": "Quelle taille faites-vous ? Du 38."
+            },
+            {
+              "de": "Kann ich den Rock anprobieren?",
+              "tr": "Je peux essayer la jupe ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Beden ve deneme",
+      "points": [
+        {
+          "title": "anprobieren ayrılabilen",
+          "text": "Ich probiere den Rock an. Modal fiille sonda bütün kalır: Kann ich den Rock anprobieren?",
+          "examples": [
+            {
+              "de": "Welche Größe haben Sie? Größe 38.",
+              "tr": "Bedeniniz kaç? 38."
+            },
+            {
+              "de": "Kann ich den Rock anprobieren?",
+              "tr": "Eteği deneyebilir miyim?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Mărimea și probarea",
+      "points": [
+        {
+          "title": "anprobieren e separabil",
+          "text": "Ich probiere den Rock an. Cu un verb modal stă întreg la final: Kann ich den Rock anprobieren?",
+          "examples": [
+            {
+              "de": "Welche Größe haben Sie? Größe 38.",
+              "tr": "Ce mărime aveți? 38."
+            },
+            {
+              "de": "Kann ich den Rock anprobieren?",
+              "tr": "Pot să probez fusta?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "O'lcham va kiyib ko'rish",
+      "points": [
+        {
+          "title": "anprobieren ajraladigan",
+          "text": "Ich probiere den Rock an. Modal fe'l bilan oxirida butun turadi: Kann ich den Rock anprobieren?",
+          "examples": [
+            {
+              "de": "Welche Größe haben Sie? Größe 38.",
+              "tr": "O'lchamingiz qanday? 38."
+            },
+            {
+              "de": "Kann ich den Rock anprobieren?",
+              "tr": "Yubkani kiyib ko'rsam bo'ladimi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "साइज़ और पहनकर देखना",
+      "points": [
+        {
+          "title": "anprobieren अलग होने वाला",
+          "text": "Ich probiere den Rock an। मोडल क्रिया के साथ अंत में पूरा: Kann ich den Rock anprobieren?",
+          "examples": [
+            {
+              "de": "Welche Größe haben Sie? Größe 38.",
+              "tr": "आपका साइज़ क्या है? 38।"
+            },
+            {
+              "de": "Kann ich den Rock anprobieren?",
+              "tr": "क्या मैं स्कर्ट पहनकर देख सकती हूँ?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المقاس والقياس",
+      "points": [
+        {
+          "title": "anprobieren فعل منفصل",
+          "text": "Ich probiere den Rock an. ومع الفعل المساعد يبقى كاملاً في الآخر: Kann ich den Rock anprobieren؟",
+          "examples": [
+            {
+              "de": "Welche Größe haben Sie? Größe 38.",
+              "tr": "ما مقاسك؟ 38."
+            },
+            {
+              "de": "Kann ich den Rock anprobieren?",
+              "tr": "هل يمكنني قياس التنورة؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dress-bazaar-five": {
+    "ru": {
+      "title": "passen: подходит по размеру",
+      "points": [
+        {
+          "title": "Глагол смотрит на вещь",
+          "text": "Одна вещь passt, много вещей passen.",
+          "examples": [
+            {
+              "de": "Die Hose passt gut.",
+              "tr": "Брюки хорошо сидят."
+            },
+            {
+              "de": "Die Schuhe passen nicht.",
+              "tr": "Туфли не подходят."
+            }
+          ]
+        },
+        {
+          "title": "zu: слишком",
+          "text": "Почему не подходит: zu groß, zu kurz, zu eng.",
+          "examples": [
+            {
+              "de": "Der Rock ist zu kurz.",
+              "tr": "Юбка слишком короткая."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "passen: підходить за розміром",
+      "points": [
+        {
+          "title": "Дієслово дивиться на річ",
+          "text": "Одна річ passt, багато речей passen.",
+          "examples": [
+            {
+              "de": "Die Hose passt gut.",
+              "tr": "Штани добре сидять."
+            },
+            {
+              "de": "Die Schuhe passen nicht.",
+              "tr": "Туфлі не підходять."
+            }
+          ]
+        },
+        {
+          "title": "zu: занадто",
+          "text": "Чому не підходить: zu groß, zu kurz, zu eng.",
+          "examples": [
+            {
+              "de": "Der Rock ist zu kurz.",
+              "tr": "Спідниця занадто коротка."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "passen: it fits",
+      "points": [
+        {
+          "title": "The verb agrees with the thing",
+          "text": "One thing passt, several things passen.",
+          "examples": [
+            {
+              "de": "Die Hose passt gut.",
+              "tr": "The trousers fit well."
+            },
+            {
+              "de": "Die Schuhe passen nicht.",
+              "tr": "The shoes don’t fit."
+            }
+          ]
+        },
+        {
+          "title": "zu: too",
+          "text": "Why it doesn’t fit: zu groß, zu kurz, zu eng.",
+          "examples": [
+            {
+              "de": "Der Rock ist zu kurz.",
+              "tr": "The skirt is too short."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "passen: pasuje",
+      "points": [
+        {
+          "title": "Czasownik zgadza się z rzeczą",
+          "text": "Jedna rzecz passt, wiele rzeczy passen.",
+          "examples": [
+            {
+              "de": "Die Hose passt gut.",
+              "tr": "Spodnie dobrze leżą."
+            },
+            {
+              "de": "Die Schuhe passen nicht.",
+              "tr": "Buty nie pasują."
+            }
+          ]
+        },
+        {
+          "title": "zu: za",
+          "text": "Dlaczego nie pasuje: zu groß, zu kurz, zu eng.",
+          "examples": [
+            {
+              "de": "Der Rock ist zu kurz.",
+              "tr": "Spódnica jest za krótka."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "passen: queda bien",
+      "points": [
+        {
+          "title": "El verbo concuerda con la cosa",
+          "text": "Una cosa passt, varias cosas passen.",
+          "examples": [
+            {
+              "de": "Die Hose passt gut.",
+              "tr": "Los pantalones quedan bien."
+            },
+            {
+              "de": "Die Schuhe passen nicht.",
+              "tr": "Los zapatos no me quedan."
+            }
+          ]
+        },
+        {
+          "title": "zu: demasiado",
+          "text": "Por qué no queda: zu groß, zu kurz, zu eng.",
+          "examples": [
+            {
+              "de": "Der Rock ist zu kurz.",
+              "tr": "La falda es demasiado corta."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "passen : ça va",
+      "points": [
+        {
+          "title": "Le verbe s’accorde avec l’objet",
+          "text": "Une chose passt, plusieurs choses passen.",
+          "examples": [
+            {
+              "de": "Die Hose passt gut.",
+              "tr": "Le pantalon va bien."
+            },
+            {
+              "de": "Die Schuhe passen nicht.",
+              "tr": "Les chaussures ne vont pas."
+            }
+          ]
+        },
+        {
+          "title": "zu : trop",
+          "text": "Pourquoi ça ne va pas : zu groß, zu kurz, zu eng.",
+          "examples": [
+            {
+              "de": "Der Rock ist zu kurz.",
+              "tr": "La jupe est trop courte."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "passen: oluyor",
+      "points": [
+        {
+          "title": "Fiil eşyaya uyar",
+          "text": "Tek şey passt, birden çok şey passen.",
+          "examples": [
+            {
+              "de": "Die Hose passt gut.",
+              "tr": "Pantolon iyi oldu."
+            },
+            {
+              "de": "Die Schuhe passen nicht.",
+              "tr": "Ayakkabılar olmuyor."
+            }
+          ]
+        },
+        {
+          "title": "zu: fazla",
+          "text": "Neden olmuyor: zu groß, zu kurz, zu eng.",
+          "examples": [
+            {
+              "de": "Der Rock ist zu kurz.",
+              "tr": "Etek çok kısa."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "passen: se potrivește",
+      "points": [
+        {
+          "title": "Verbul se acordă cu lucrul",
+          "text": "Un lucru passt, mai multe passen.",
+          "examples": [
+            {
+              "de": "Die Hose passt gut.",
+              "tr": "Pantalonii se potrivesc bine."
+            },
+            {
+              "de": "Die Schuhe passen nicht.",
+              "tr": "Pantofii nu se potrivesc."
+            }
+          ]
+        },
+        {
+          "title": "zu: prea",
+          "text": "De ce nu se potrivește: zu groß, zu kurz, zu eng.",
+          "examples": [
+            {
+              "de": "Der Rock ist zu kurz.",
+              "tr": "Fusta e prea scurtă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "passen: to'g'ri keladi",
+      "points": [
+        {
+          "title": "Fe'l narsaga moslashadi",
+          "text": "Bitta narsa passt, ko'p narsa passen.",
+          "examples": [
+            {
+              "de": "Die Hose passt gut.",
+              "tr": "Shim yaxshi to'g'ri keladi."
+            },
+            {
+              "de": "Die Schuhe passen nicht.",
+              "tr": "Tuflilar to'g'ri kelmaydi."
+            }
+          ]
+        },
+        {
+          "title": "zu: haddan tashqari",
+          "text": "Nega to'g'ri kelmaydi: zu groß, zu kurz, zu eng.",
+          "examples": [
+            {
+              "de": "Der Rock ist zu kurz.",
+              "tr": "Yubka juda kalta."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "passen: फ़िट होता है",
+      "points": [
+        {
+          "title": "क्रिया चीज़ के अनुसार",
+          "text": "एक चीज़ passt, कई चीज़ें passen।",
+          "examples": [
+            {
+              "de": "Die Hose passt gut.",
+              "tr": "पैंट अच्छी फ़िट है।"
+            },
+            {
+              "de": "Die Schuhe passen nicht.",
+              "tr": "जूते फ़िट नहीं हैं।"
+            }
+          ]
+        },
+        {
+          "title": "zu: ज़्यादा",
+          "text": "क्यों फ़िट नहीं: zu groß, zu kurz, zu eng।",
+          "examples": [
+            {
+              "de": "Der Rock ist zu kurz.",
+              "tr": "स्कर्ट बहुत छोटी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "passen: المقاس مناسب",
+      "points": [
+        {
+          "title": "الفعل يتبع الشيء",
+          "text": "شيء واحد passt، وعدة أشياء passen.",
+          "examples": [
+            {
+              "de": "Die Hose passt gut.",
+              "tr": "البنطال مناسب تماماً."
+            },
+            {
+              "de": "Die Schuhe passen nicht.",
+              "tr": "الحذاء غير مناسب."
+            }
+          ]
+        },
+        {
+          "title": "zu: أكثر من اللازم",
+          "text": "لماذا لا يناسب: zu groß، zu kurz، zu eng.",
+          "examples": [
+            {
+              "de": "Der Rock ist zu kurz.",
+              "tr": "التنورة قصيرة جداً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dress-bazaar-six": {
+    "ru": {
+      "title": "Я беру его: ihn, sie, es",
+      "points": [
+        {
+          "title": "ihn, sie, es",
+          "text": "Чтобы не повторять вещь после глагола: der Rock → ihn, die Hose → sie, das Hemd → es, во множественном sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Свитер красивый. Я беру его."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Куртка дорогая. Я её не покупаю."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Я беру його: ihn, sie, es",
+      "points": [
+        {
+          "title": "ihn, sie, es",
+          "text": "Щоб не повторювати річ після дієслова: der Rock → ihn, die Hose → sie, das Hemd → es, у множині sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Светр гарний. Я беру його."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Куртка дорога. Я її не купую."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "I’ll take it: ihn, sie, es",
+      "points": [
+        {
+          "title": "ihn, sie, es",
+          "text": "To avoid repeating the thing after the verb: der Rock → ihn, die Hose → sie, das Hemd → es, plural sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "The jumper is nice. I’ll take it."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "The jacket is expensive. I won’t buy it."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Biorę go: ihn, sie, es",
+      "points": [
+        {
+          "title": "ihn, sie, es",
+          "text": "Żeby nie powtarzać rzeczy po czasowniku: der Rock → ihn, die Hose → sie, das Hemd → es, w liczbie mnogiej sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Sweter jest ładny. Biorę go."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Kurtka jest droga. Nie kupuję jej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Me lo llevo: ihn, sie, es",
+      "points": [
+        {
+          "title": "ihn, sie, es",
+          "text": "Para no repetir la cosa tras el verbo: der Rock → ihn, die Hose → sie, das Hemd → es, en plural sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "El jersey es bonito. Me lo llevo."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "La chaqueta es cara. No la compro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Je le prends : ihn, sie, es",
+      "points": [
+        {
+          "title": "ihn, sie, es",
+          "text": "Pour ne pas répéter l’objet après le verbe : der Rock → ihn, die Hose → sie, das Hemd → es, au pluriel sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Le pull est beau. Je le prends."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "La veste est chère. Je ne l’achète pas."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Onu alıyorum: ihn, sie, es",
+      "points": [
+        {
+          "title": "ihn, sie, es",
+          "text": "Fiilden sonra eşyayı tekrarlamamak için: der Rock → ihn, die Hose → sie, das Hemd → es, çoğulda sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Kazak güzel. Onu alıyorum."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Ceket pahalı. Onu almıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Îl iau: ihn, sie, es",
+      "points": [
+        {
+          "title": "ihn, sie, es",
+          "text": "Ca să nu repeți lucrul după verb: der Rock → ihn, die Hose → sie, das Hemd → es, la plural sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Puloverul e frumos. Îl iau."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Geaca e scumpă. Nu o cumpăr."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Uni olaman: ihn, sie, es",
+      "points": [
+        {
+          "title": "ihn, sie, es",
+          "text": "Fe'ldan keyin narsani takrorlamaslik uchun: der Rock → ihn, die Hose → sie, das Hemd → es, ko'plikda sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Sviter chiroyli. Uni olaman."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Kurtka qimmat. Uni sotib olmayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "मैं इसे लेता हूँ: ihn, sie, es",
+      "points": [
+        {
+          "title": "ihn, sie, es",
+          "text": "क्रिया के बाद चीज़ दोहराने के बजाय: der Rock → ihn, die Hose → sie, das Hemd → es, बहुवचन में sie।",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "स्वेटर सुंदर है। मैं इसे लेता हूँ।"
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "जैकेट महँगी है। मैं इसे नहीं खरीदूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "سآخذه: ihn وsie وes",
+      "points": [
+        {
+          "title": "ihn وsie وes",
+          "text": "لكي لا نكرر الشيء بعد الفعل: der Rock → ihn، die Hose → sie، das Hemd → es، وفي الجمع sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "الكنزة جميلة. سآخذها."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "السترة غالية. لن أشتريها."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dress-bazaar-seven": {
+    "ru": {
+      "title": "anziehen и ausziehen",
+      "points": [
+        {
+          "title": "Надеть и снять",
+          "text": "anziehen (надевать) и ausziehen (снимать) отделяемые: приставка в конце.",
+          "examples": [
+            {
+              "de": "Ich ziehe die Jacke an.",
+              "tr": "Я надеваю куртку."
+            },
+            {
+              "de": "Er zieht die Schuhe aus.",
+              "tr": "Он снимает обувь."
+            }
+          ]
+        },
+        {
+          "title": "tragen или anziehen",
+          "text": "tragen значит «быть одетым во что-то», anziehen значит «надеть сейчас».",
+          "examples": [
+            {
+              "de": "Es ist kalt. Ich ziehe einen Pullover an.",
+              "tr": "Холодно. Я надеваю свитер."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "anziehen і ausziehen",
+      "points": [
+        {
+          "title": "Вдягнути і зняти",
+          "text": "anziehen (вдягати) і ausziehen (знімати) відокремлювані: префікс у кінці.",
+          "examples": [
+            {
+              "de": "Ich ziehe die Jacke an.",
+              "tr": "Я вдягаю куртку."
+            },
+            {
+              "de": "Er zieht die Schuhe aus.",
+              "tr": "Він знімає взуття."
+            }
+          ]
+        },
+        {
+          "title": "tragen чи anziehen",
+          "text": "tragen означає «бути вдягненим у щось», anziehen означає «вдягнути зараз».",
+          "examples": [
+            {
+              "de": "Es ist kalt. Ich ziehe einen Pullover an.",
+              "tr": "Холодно. Я вдягаю светр."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "anziehen and ausziehen",
+      "points": [
+        {
+          "title": "Put on and take off",
+          "text": "anziehen (put on) and ausziehen (take off) are separable: the prefix goes to the end.",
+          "examples": [
+            {
+              "de": "Ich ziehe die Jacke an.",
+              "tr": "I’m putting on my jacket."
+            },
+            {
+              "de": "Er zieht die Schuhe aus.",
+              "tr": "He takes off his shoes."
+            }
+          ]
+        },
+        {
+          "title": "tragen or anziehen",
+          "text": "tragen means \"to be wearing\", anziehen means \"to put on now\".",
+          "examples": [
+            {
+              "de": "Es ist kalt. Ich ziehe einen Pullover an.",
+              "tr": "It’s cold. I’m putting on a jumper."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "anziehen i ausziehen",
+      "points": [
+        {
+          "title": "Założyć i zdjąć",
+          "text": "anziehen (zakładać) i ausziehen (zdejmować) są rozdzielne: przedrostek na końcu.",
+          "examples": [
+            {
+              "de": "Ich ziehe die Jacke an.",
+              "tr": "Zakładam kurtkę."
+            },
+            {
+              "de": "Er zieht die Schuhe aus.",
+              "tr": "On zdejmuje buty."
+            }
+          ]
+        },
+        {
+          "title": "tragen czy anziehen",
+          "text": "tragen znaczy „mieć na sobie”, anziehen „założyć teraz”.",
+          "examples": [
+            {
+              "de": "Es ist kalt. Ich ziehe einen Pullover an.",
+              "tr": "Jest zimno. Zakładam sweter."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "anziehen y ausziehen",
+      "points": [
+        {
+          "title": "Ponerse y quitarse",
+          "text": "anziehen (ponerse) y ausziehen (quitarse) son separables: el prefijo va al final.",
+          "examples": [
+            {
+              "de": "Ich ziehe die Jacke an.",
+              "tr": "Me pongo la chaqueta."
+            },
+            {
+              "de": "Er zieht die Schuhe aus.",
+              "tr": "Él se quita los zapatos."
+            }
+          ]
+        },
+        {
+          "title": "tragen o anziehen",
+          "text": "tragen significa \"llevar puesto\", anziehen \"ponerse ahora\".",
+          "examples": [
+            {
+              "de": "Es ist kalt. Ich ziehe einen Pullover an.",
+              "tr": "Hace frío. Me pongo un jersey."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "anziehen et ausziehen",
+      "points": [
+        {
+          "title": "Mettre et enlever",
+          "text": "anziehen (mettre) et ausziehen (enlever) sont séparables : le préfixe va à la fin.",
+          "examples": [
+            {
+              "de": "Ich ziehe die Jacke an.",
+              "tr": "Je mets ma veste."
+            },
+            {
+              "de": "Er zieht die Schuhe aus.",
+              "tr": "Il enlève ses chaussures."
+            }
+          ]
+        },
+        {
+          "title": "tragen ou anziehen",
+          "text": "tragen veut dire « porter », anziehen « mettre maintenant ».",
+          "examples": [
+            {
+              "de": "Es ist kalt. Ich ziehe einen Pullover an.",
+              "tr": "Il fait froid. Je mets un pull."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "anziehen ve ausziehen",
+      "points": [
+        {
+          "title": "Giymek ve çıkarmak",
+          "text": "anziehen (giymek) ve ausziehen (çıkarmak) ayrılabilen fiillerdir: ön ek sonda.",
+          "examples": [
+            {
+              "de": "Ich ziehe die Jacke an.",
+              "tr": "Ceketi giyiyorum."
+            },
+            {
+              "de": "Er zieht die Schuhe aus.",
+              "tr": "O ayakkabılarını çıkarıyor."
+            }
+          ]
+        },
+        {
+          "title": "tragen mi, anziehen mi",
+          "text": "tragen \"üzerinde olmak\", anziehen \"şimdi giymek\" demektir.",
+          "examples": [
+            {
+              "de": "Es ist kalt. Ich ziehe einen Pullover an.",
+              "tr": "Hava soğuk. Kazak giyiyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "anziehen și ausziehen",
+      "points": [
+        {
+          "title": "A se îmbrăca și a se dezbrăca",
+          "text": "anziehen (a îmbrăca) și ausziehen (a scoate) sunt separabile: prefixul la final.",
+          "examples": [
+            {
+              "de": "Ich ziehe die Jacke an.",
+              "tr": "Îmi pun geaca."
+            },
+            {
+              "de": "Er zieht die Schuhe aus.",
+              "tr": "El își scoate pantofii."
+            }
+          ]
+        },
+        {
+          "title": "tragen sau anziehen",
+          "text": "tragen înseamnă „a purta”, anziehen „a îmbrăca acum”.",
+          "examples": [
+            {
+              "de": "Es ist kalt. Ich ziehe einen Pullover an.",
+              "tr": "E frig. Îmi pun un pulover."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "anziehen va ausziehen",
+      "points": [
+        {
+          "title": "Kiymoq va yechmoq",
+          "text": "anziehen (kiymoq) va ausziehen (yechmoq) ajraladigan: old qo'shimcha oxirida.",
+          "examples": [
+            {
+              "de": "Ich ziehe die Jacke an.",
+              "tr": "Men kurtkani kiyyapman."
+            },
+            {
+              "de": "Er zieht die Schuhe aus.",
+              "tr": "U tuflisini yechyapti."
+            }
+          ]
+        },
+        {
+          "title": "tragen yoki anziehen",
+          "text": "tragen \"kiyib yurmoq\", anziehen \"hozir kiymoq\" degani.",
+          "examples": [
+            {
+              "de": "Es ist kalt. Ich ziehe einen Pullover an.",
+              "tr": "Sovuq. Sviter kiyaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "anziehen और ausziehen",
+      "points": [
+        {
+          "title": "पहनना और उतारना",
+          "text": "anziehen (पहनना) और ausziehen (उतारना) अलग होने वाली क्रियाएँ हैं: उपसर्ग अंत में।",
+          "examples": [
+            {
+              "de": "Ich ziehe die Jacke an.",
+              "tr": "मैं जैकेट पहन रहा हूँ।"
+            },
+            {
+              "de": "Er zieht die Schuhe aus.",
+              "tr": "वह जूते उतार रहा है।"
+            }
+          ]
+        },
+        {
+          "title": "tragen या anziehen",
+          "text": "tragen मतलब \"पहने हुए होना\", anziehen मतलब \"अभी पहनना\"।",
+          "examples": [
+            {
+              "de": "Es ist kalt. Ich ziehe einen Pullover an.",
+              "tr": "ठंड है। मैं स्वेटर पहनता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "anziehen وausziehen",
+      "points": [
+        {
+          "title": "يلبس ويخلع",
+          "text": "anziehen (يلبس) وausziehen (يخلع) فعلان منفصلان: السابقة في الآخر.",
+          "examples": [
+            {
+              "de": "Ich ziehe die Jacke an.",
+              "tr": "ألبس السترة."
+            },
+            {
+              "de": "Er zieht die Schuhe aus.",
+              "tr": "هو يخلع حذاءه."
+            }
+          ]
+        },
+        {
+          "title": "tragen أم anziehen",
+          "text": "tragen تعني \"يرتدي (حالة)\"، وanziehen تعني \"يلبس الآن\".",
+          "examples": [
+            {
+              "de": "Es ist kalt. Ich ziehe einen Pullover an.",
+              "tr": "الجو بارد. سألبس كنزة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dress-bazaar-eight": {
+    "ru": {
+      "title": "Практика: идём за одеждой",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Повторяем: ihn вместо der-слова, passen, zu teuer.",
+          "examples": [
+            {
+              "de": "Kann ich ihn anprobieren?",
+              "tr": "Можно его примерить?"
+            },
+            {
+              "de": "Sie passt gut, aber sie ist zu teuer.",
+              "tr": "Она хорошо сидит, но слишком дорогая."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: ідемо по одяг",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Повторюємо: ihn замість der-слова, passen, zu teuer.",
+          "examples": [
+            {
+              "de": "Kann ich ihn anprobieren?",
+              "tr": "Можна його приміряти?"
+            },
+            {
+              "de": "Sie passt gut, aber sie ist zu teuer.",
+              "tr": "Вона добре сидить, але занадто дорога."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: clothes shopping",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "Review: ihn instead of a der word, passen, zu teuer.",
+          "examples": [
+            {
+              "de": "Kann ich ihn anprobieren?",
+              "tr": "Can I try it on?"
+            },
+            {
+              "de": "Sie passt gut, aber sie ist zu teuer.",
+              "tr": "It fits well, but it’s too expensive."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: idziemy po ubrania",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Powtarzamy: ihn zamiast słowa z der, passen, zu teuer.",
+          "examples": [
+            {
+              "de": "Kann ich ihn anprobieren?",
+              "tr": "Mogę go przymierzyć?"
+            },
+            {
+              "de": "Sie passt gut, aber sie ist zu teuer.",
+              "tr": "Dobrze leży, ale jest za droga."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: de compras",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Repaso: ihn en lugar de una palabra con der, passen, zu teuer.",
+          "examples": [
+            {
+              "de": "Kann ich ihn anprobieren?",
+              "tr": "¿Puedo probármelo?"
+            },
+            {
+              "de": "Sie passt gut, aber sie ist zu teuer.",
+              "tr": "Me queda bien, pero es demasiado cara."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : acheter des vêtements",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "Révision : ihn au lieu d’un mot en der, passen, zu teuer.",
+          "examples": [
+            {
+              "de": "Kann ich ihn anprobieren?",
+              "tr": "Je peux l’essayer ?"
+            },
+            {
+              "de": "Sie passt gut, aber sie ist zu teuer.",
+              "tr": "Elle va bien, mais elle est trop chère."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: kıyafet alışverişi",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Tekrar: der’li kelime yerine ihn, passen, zu teuer.",
+          "examples": [
+            {
+              "de": "Kann ich ihn anprobieren?",
+              "tr": "Onu deneyebilir miyim?"
+            },
+            {
+              "de": "Sie passt gut, aber sie ist zu teuer.",
+              "tr": "İyi oldu ama çok pahalı."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: la cumpărături de haine",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Recapitulăm: ihn în loc de cuvânt cu der, passen, zu teuer.",
+          "examples": [
+            {
+              "de": "Kann ich ihn anprobieren?",
+              "tr": "Pot să-l probez?"
+            },
+            {
+              "de": "Sie passt gut, aber sie ist zu teuer.",
+              "tr": "Se potrivește bine, dar e prea scumpă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: kiyim xaridi",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Takrorlaymiz: der li so'z o'rniga ihn, passen, zu teuer.",
+          "examples": [
+            {
+              "de": "Kann ich ihn anprobieren?",
+              "tr": "Uni kiyib ko'rsam bo'ladimi?"
+            },
+            {
+              "de": "Sie passt gut, aber sie ist zu teuer.",
+              "tr": "U yaxshi to'g'ri keladi, lekin juda qimmat."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: कपड़ों की खरीदारी",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "दोहराव: der वाले शब्द की जगह ihn, passen, zu teuer।",
+          "examples": [
+            {
+              "de": "Kann ich ihn anprobieren?",
+              "tr": "क्या मैं इसे पहनकर देख सकता हूँ?"
+            },
+            {
+              "de": "Sie passt gut, aber sie ist zu teuer.",
+              "tr": "यह अच्छी फ़िट है, लेकिन बहुत महँगी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: شراء الملابس",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "مراجعة: ihn بدل الكلمة مع der، وpassen، وzu teuer.",
+          "examples": [
+            {
+              "de": "Kann ich ihn anprobieren?",
+              "tr": "هل يمكنني قياسه؟"
+            },
+            {
+              "de": "Sie passt gut, aber sie ist zu teuer.",
+              "tr": "إنها مناسبة لكنها غالية جداً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dress-bazaar-nine": {
+    "ru": {
+      "title": "Повторение: моя одежда",
+      "points": [
+        {
+          "title": "tragen: a → ä",
+          "text": "tragen (носить) меняет гласную у du и er: du trägst, er trägt. После него Akkusativ.",
+          "examples": [
+            {
+              "de": "Er trägt ein Hemd.",
+              "tr": "Он носит рубашку."
+            },
+            {
+              "de": "Ich trage einen Rock.",
+              "tr": "Я ношу юбку."
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: учим целиком",
+          "text": "Вещь здесь главная, поэтому глагол смотрит на неё: одна вещь gefällt, много вещей gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Мне нравится платье."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Мне нравятся туфли."
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Чтобы не повторять вещь после глагола: der Rock → ihn, die Hose → sie, das Hemd → es, во множественном sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Свитер красивый. Я беру его."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Куртка дорогая. Я её не покупаю."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: мій одяг",
+      "points": [
+        {
+          "title": "tragen: a → ä",
+          "text": "tragen (носити) змінює голосну у du та er: du trägst, er trägt. Після нього Akkusativ.",
+          "examples": [
+            {
+              "de": "Er trägt ein Hemd.",
+              "tr": "Він носить сорочку."
+            },
+            {
+              "de": "Ich trage einen Rock.",
+              "tr": "Я ношу спідницю."
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: вчимо цілком",
+          "text": "Річ тут головна, тому дієслово дивиться на неї: одна річ gefällt, багато речей gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Мені подобається сукня."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Мені подобаються туфлі."
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Щоб не повторювати річ після дієслова: der Rock → ihn, die Hose → sie, das Hemd → es, у множині sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Светр гарний. Я беру його."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Куртка дорога. Я її не купую."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: my clothes",
+      "points": [
+        {
+          "title": "tragen: a → ä",
+          "text": "tragen (to wear) changes its vowel with du and er: du trägst, er trägt. It takes the accusative.",
+          "examples": [
+            {
+              "de": "Er trägt ein Hemd.",
+              "tr": "He’s wearing a shirt."
+            },
+            {
+              "de": "Ich trage einen Rock.",
+              "tr": "I’m wearing a skirt."
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: learn it as a whole",
+          "text": "Here the thing is the subject, so the verb agrees with it: one thing gefällt, several things gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "I like the dress."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "I like the shoes."
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "To avoid repeating the thing after the verb: der Rock → ihn, die Hose → sie, das Hemd → es, plural sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "The jumper is nice. I’ll take it."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "The jacket is expensive. I won’t buy it."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: moje ubrania",
+      "points": [
+        {
+          "title": "tragen: a → ä",
+          "text": "tragen (nosić) zmienia samogłoskę przy du i er: du trägst, er trägt. Po nim Akkusativ.",
+          "examples": [
+            {
+              "de": "Er trägt ein Hemd.",
+              "tr": "On nosi koszulę."
+            },
+            {
+              "de": "Ich trage einen Rock.",
+              "tr": "Noszę spódnicę."
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: uczymy się w całości",
+          "text": "Tu rzecz jest podmiotem, więc czasownik zgadza się z nią: jedna rzecz gefällt, wiele rzeczy gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Podoba mi się sukienka."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Podobają mi się buty."
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Żeby nie powtarzać rzeczy po czasowniku: der Rock → ihn, die Hose → sie, das Hemd → es, w liczbie mnogiej sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Sweter jest ładny. Biorę go."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Kurtka jest droga. Nie kupuję jej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: mi ropa",
+      "points": [
+        {
+          "title": "tragen: a → ä",
+          "text": "tragen (llevar puesto) cambia la vocal con du y er: du trägst, er trägt. Va con acusativo.",
+          "examples": [
+            {
+              "de": "Er trägt ein Hemd.",
+              "tr": "Él lleva una camisa."
+            },
+            {
+              "de": "Ich trage einen Rock.",
+              "tr": "Llevo una falda."
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: se aprende entero",
+          "text": "Aquí la cosa es el sujeto, como en \"me gusta\": una cosa gefällt, varias cosas gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Me gusta el vestido."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Me gustan los zapatos."
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Para no repetir la cosa tras el verbo: der Rock → ihn, die Hose → sie, das Hemd → es, en plural sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "El jersey es bonito. Me lo llevo."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "La chaqueta es cara. No la compro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : mes vêtements",
+      "points": [
+        {
+          "title": "tragen : a → ä",
+          "text": "tragen (porter) change de voyelle avec du et er : du trägst, er trägt. Suivi de l’accusatif.",
+          "examples": [
+            {
+              "de": "Er trägt ein Hemd.",
+              "tr": "Il porte une chemise."
+            },
+            {
+              "de": "Ich trage einen Rock.",
+              "tr": "Je porte une jupe."
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir : à apprendre en bloc",
+          "text": "Ici l’objet est le sujet, donc le verbe s’accorde avec lui : une chose gefällt, plusieurs choses gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "La robe me plaît."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Les chaussures me plaisent."
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Pour ne pas répéter l’objet après le verbe : der Rock → ihn, die Hose → sie, das Hemd → es, au pluriel sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Le pull est beau. Je le prends."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "La veste est chère. Je ne l’achète pas."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: kıyafetlerim",
+      "points": [
+        {
+          "title": "tragen: a → ä",
+          "text": "tragen (giymek, taşımak) du ve er ile ünlü değiştirir: du trägst, er trägt. Ardından Akkusativ gelir.",
+          "examples": [
+            {
+              "de": "Er trägt ein Hemd.",
+              "tr": "O bir gömlek giyiyor."
+            },
+            {
+              "de": "Ich trage einen Rock.",
+              "tr": "Etek giyiyorum."
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: kalıp olarak",
+          "text": "Burada eşya öznedir, fiil ona uyar: tek şey gefällt, birden çok şey gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Elbiseyi beğendim."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Ayakkabıları beğendim."
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Fiilden sonra eşyayı tekrarlamamak için: der Rock → ihn, die Hose → sie, das Hemd → es, çoğulda sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Kazak güzel. Onu alıyorum."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Ceket pahalı. Onu almıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: hainele mele",
+      "points": [
+        {
+          "title": "tragen: a → ä",
+          "text": "tragen (a purta) își schimbă vocala la du și er: du trägst, er trägt. E urmat de acuzativ.",
+          "examples": [
+            {
+              "de": "Er trägt ein Hemd.",
+              "tr": "El poartă o cămașă."
+            },
+            {
+              "de": "Ich trage einen Rock.",
+              "tr": "Port o fustă."
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: se învață întreg",
+          "text": "Aici lucrul e subiectul, ca în „îmi place”: un lucru gefällt, mai multe gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Îmi place rochia."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Îmi plac pantofii."
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Ca să nu repeți lucrul după verb: der Rock → ihn, die Hose → sie, das Hemd → es, la plural sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Puloverul e frumos. Îl iau."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Geaca e scumpă. Nu o cumpăr."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: kiyimlarim",
+      "points": [
+        {
+          "title": "tragen: a → ä",
+          "text": "tragen (kiymoq) du va er da unlini o'zgartiradi: du trägst, er trägt. Undan keyin Akkusativ.",
+          "examples": [
+            {
+              "de": "Er trägt ein Hemd.",
+              "tr": "U ko'ylak kiygan."
+            },
+            {
+              "de": "Ich trage einen Rock.",
+              "tr": "Men yubka kiyganman."
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: butunligicha o'rganamiz",
+          "text": "Bu yerda narsa ega, fe'l unga moslashadi: bitta narsa gefällt, ko'p narsa gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Ko'ylak menga yoqadi."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Tuflilar menga yoqadi."
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Fe'ldan keyin narsani takrorlamaslik uchun: der Rock → ihn, die Hose → sie, das Hemd → es, ko'plikda sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Sviter chiroyli. Uni olaman."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Kurtka qimmat. Uni sotib olmayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: मेरे कपड़े",
+      "points": [
+        {
+          "title": "tragen: a → ä",
+          "text": "tragen (पहनना) du और er के साथ स्वर बदलता है: du trägst, er trägt। इसके बाद Akkusativ।",
+          "examples": [
+            {
+              "de": "Er trägt ein Hemd.",
+              "tr": "उसने कमीज़ पहनी है।"
+            },
+            {
+              "de": "Ich trage einen Rock.",
+              "tr": "मैंने स्कर्ट पहनी है।"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: पूरा वाक्यांश",
+          "text": "यहाँ चीज़ ही कर्ता है, इसलिए क्रिया उसी से मेल खाती है: एक चीज़ gefällt, कई चीज़ें gefallen।",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "मुझे यह ड्रेस पसंद है।"
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "मुझे ये जूते पसंद हैं।"
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "क्रिया के बाद चीज़ दोहराने के बजाय: der Rock → ihn, die Hose → sie, das Hemd → es, बहुवचन में sie।",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "स्वेटर सुंदर है। मैं इसे लेता हूँ।"
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "जैकेट महँगी है। मैं इसे नहीं खरीदूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: ملابسي",
+      "points": [
+        {
+          "title": "tragen: a → ä",
+          "text": "يتغير حرف tragen (يرتدي) مع du وer: du trägst، er trägt. ويأتي بعده المفعول.",
+          "examples": [
+            {
+              "de": "Er trägt ein Hemd.",
+              "tr": "هو يرتدي قميصاً."
+            },
+            {
+              "de": "Ich trage einen Rock.",
+              "tr": "أرتدي تنورة."
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: نحفظها كاملة",
+          "text": "هنا الشيء هو الفاعل، فيتوافق الفعل معه: شيء واحد gefällt، وعدة أشياء gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "يعجبني الفستان."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "يعجبني الحذاء."
+            }
+          ]
+        },
+        {
+          "title": "ihn وsie وes",
+          "text": "لكي لا نكرر الشيء بعد الفعل: der Rock → ihn، die Hose → sie، das Hemd → es، وفي الجمع sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "الكنزة جميلة. سآخذها."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "السترة غالية. لن أشتريها."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dress-bazaar-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "ihr tragt",
+          "text": "У ihr гласная не меняется: ihr tragt.",
+          "examples": [
+            {
+              "de": "Tragt ihr Jeans?",
+              "tr": "Вы носите джинсы?"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: учим целиком",
+          "text": "Вещь здесь главная, поэтому глагол смотрит на неё: одна вещь gefällt, много вещей gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Мне нравится платье."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Мне нравятся туфли."
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Чтобы не повторять вещь после глагола: der Rock → ihn, die Hose → sie, das Hemd → es, во множественном sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Свитер красивый. Я беру его."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Куртка дорогая. Я её не покупаю."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "ihr tragt",
+          "text": "У ihr голосна не змінюється: ihr tragt.",
+          "examples": [
+            {
+              "de": "Tragt ihr Jeans?",
+              "tr": "Ви носите джинси?"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: вчимо цілком",
+          "text": "Річ тут головна, тому дієслово дивиться на неї: одна річ gefällt, багато речей gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Мені подобається сукня."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Мені подобаються туфлі."
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Щоб не повторювати річ після дієслова: der Rock → ihn, die Hose → sie, das Hemd → es, у множині sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Светр гарний. Я беру його."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Куртка дорога. Я її не купую."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "ihr tragt",
+          "text": "With ihr the vowel doesn’t change: ihr tragt.",
+          "examples": [
+            {
+              "de": "Tragt ihr Jeans?",
+              "tr": "Do you (all) wear jeans?"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: learn it as a whole",
+          "text": "Here the thing is the subject, so the verb agrees with it: one thing gefällt, several things gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "I like the dress."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "I like the shoes."
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "To avoid repeating the thing after the verb: der Rock → ihn, die Hose → sie, das Hemd → es, plural sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "The jumper is nice. I’ll take it."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "The jacket is expensive. I won’t buy it."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "ihr tragt",
+          "text": "Przy ihr samogłoska się nie zmienia: ihr tragt.",
+          "examples": [
+            {
+              "de": "Tragt ihr Jeans?",
+              "tr": "Nosicie dżinsy?"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: uczymy się w całości",
+          "text": "Tu rzecz jest podmiotem, więc czasownik zgadza się z nią: jedna rzecz gefällt, wiele rzeczy gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Podoba mi się sukienka."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Podobają mi się buty."
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Żeby nie powtarzać rzeczy po czasowniku: der Rock → ihn, die Hose → sie, das Hemd → es, w liczbie mnogiej sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Sweter jest ładny. Biorę go."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Kurtka jest droga. Nie kupuję jej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "ihr tragt",
+          "text": "Con ihr la vocal no cambia: ihr tragt.",
+          "examples": [
+            {
+              "de": "Tragt ihr Jeans?",
+              "tr": "¿Lleváis vaqueros?"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: se aprende entero",
+          "text": "Aquí la cosa es el sujeto, como en \"me gusta\": una cosa gefällt, varias cosas gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Me gusta el vestido."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Me gustan los zapatos."
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Para no repetir la cosa tras el verbo: der Rock → ihn, die Hose → sie, das Hemd → es, en plural sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "El jersey es bonito. Me lo llevo."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "La chaqueta es cara. No la compro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "ihr tragt",
+          "text": "Avec ihr, la voyelle ne change pas : ihr tragt.",
+          "examples": [
+            {
+              "de": "Tragt ihr Jeans?",
+              "tr": "Vous portez des jeans ?"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir : à apprendre en bloc",
+          "text": "Ici l’objet est le sujet, donc le verbe s’accorde avec lui : une chose gefällt, plusieurs choses gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "La robe me plaît."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Les chaussures me plaisent."
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Pour ne pas répéter l’objet après le verbe : der Rock → ihn, die Hose → sie, das Hemd → es, au pluriel sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Le pull est beau. Je le prends."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "La veste est chère. Je ne l’achète pas."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "ihr tragt",
+          "text": "ihr ile ünlü değişmez: ihr tragt.",
+          "examples": [
+            {
+              "de": "Tragt ihr Jeans?",
+              "tr": "Kot pantolon giyiyor musunuz?"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: kalıp olarak",
+          "text": "Burada eşya öznedir, fiil ona uyar: tek şey gefällt, birden çok şey gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Elbiseyi beğendim."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Ayakkabıları beğendim."
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Fiilden sonra eşyayı tekrarlamamak için: der Rock → ihn, die Hose → sie, das Hemd → es, çoğulda sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Kazak güzel. Onu alıyorum."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Ceket pahalı. Onu almıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "ihr tragt",
+          "text": "La ihr vocala nu se schimbă: ihr tragt.",
+          "examples": [
+            {
+              "de": "Tragt ihr Jeans?",
+              "tr": "Purtați blugi?"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: se învață întreg",
+          "text": "Aici lucrul e subiectul, ca în „îmi place”: un lucru gefällt, mai multe gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Îmi place rochia."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Îmi plac pantofii."
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Ca să nu repeți lucrul după verb: der Rock → ihn, die Hose → sie, das Hemd → es, la plural sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Puloverul e frumos. Îl iau."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Geaca e scumpă. Nu o cumpăr."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "ihr tragt",
+          "text": "ihr da unli o'zgarmaydi: ihr tragt.",
+          "examples": [
+            {
+              "de": "Tragt ihr Jeans?",
+              "tr": "Sizlar jinsi kiyasizlarmi?"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: butunligicha o'rganamiz",
+          "text": "Bu yerda narsa ega, fe'l unga moslashadi: bitta narsa gefällt, ko'p narsa gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Ko'ylak menga yoqadi."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Tuflilar menga yoqadi."
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Fe'ldan keyin narsani takrorlamaslik uchun: der Rock → ihn, die Hose → sie, das Hemd → es, ko'plikda sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Sviter chiroyli. Uni olaman."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Kurtka qimmat. Uni sotib olmayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "ihr tragt",
+          "text": "ihr के साथ स्वर नहीं बदलता: ihr tragt।",
+          "examples": [
+            {
+              "de": "Tragt ihr Jeans?",
+              "tr": "क्या तुम सब जींस पहनते हो?"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: पूरा वाक्यांश",
+          "text": "यहाँ चीज़ ही कर्ता है, इसलिए क्रिया उसी से मेल खाती है: एक चीज़ gefällt, कई चीज़ें gefallen।",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "मुझे यह ड्रेस पसंद है।"
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "मुझे ये जूते पसंद हैं।"
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "क्रिया के बाद चीज़ दोहराने के बजाय: der Rock → ihn, die Hose → sie, das Hemd → es, बहुवचन में sie।",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "स्वेटर सुंदर है। मैं इसे लेता हूँ।"
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "जैकेट महँगी है। मैं इसे नहीं खरीदूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "ihr tragt",
+          "text": "مع ihr لا يتغير الحرف: ihr tragt.",
+          "examples": [
+            {
+              "de": "Tragt ihr Jeans?",
+              "tr": "هل ترتدون الجينز؟"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: نحفظها كاملة",
+          "text": "هنا الشيء هو الفاعل، فيتوافق الفعل معه: شيء واحد gefällt، وعدة أشياء gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "يعجبني الفستان."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "يعجبني الحذاء."
+            }
+          ]
+        },
+        {
+          "title": "ihn وsie وes",
+          "text": "لكي لا نكرر الشيء بعد الفعل: der Rock → ihn، die Hose → sie، das Hemd → es، وفي الجمع sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "الكنزة جميلة. سآخذها."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "السترة غالية. لن أشتريها."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,2112 @@
+{
+  "opinion-tower-one": {
+    "ru": {
+      "title": "Я считаю, что...",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: после dass глагол в конце. Без dass порядок обычный: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Я считаю, что фильм интересный."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Я вважаю, що...",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: після dass дієслово в кінці. Без dass порядок звичайний: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Я вважаю, що фільм цікавий."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "I think that...",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: after dass the verb goes last. Without dass normal order: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "I think the film is interesting."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Uważam, że...",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: po dass czasownik na końcu. Bez dass szyk zwykły: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Uważam, że film jest ciekawy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Creo que...",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: tras dass, verbo al final. Sin dass, orden normal: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Creo que la película es interesante."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Je trouve que...",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ... : après dass, verbe à la fin. Sans dass, ordre normal : Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Je trouve que le film est intéressant."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Bence...",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: dass’tan sonra fiil sonda. dass olmadan normal sıra: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Bence film ilginç."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cred că...",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: după dass verbul la final. Fără dass, ordine normală: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Cred că filmul e interesant."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Menimcha...",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: dass dan keyin fe'l oxirida. dass siz oddiy tartib: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Menimcha, film qiziqarli."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "मुझे लगता है कि...",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: dass के बाद क्रिया अंत में। बिना dass सामान्य क्रम: Ich finde, der Film ist gut।",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "मुझे लगता है कि फ़िल्म दिलचस्प है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "أرى أن...",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: بعد dass الفعل في الآخر. وبدون dass الترتيب عادي: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "أرى أن الفيلم ممتع."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "opinion-tower-two": {
+    "ru": {
+      "title": "По-моему",
+      "points": [
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (по-моему) занимает первое место, поэтому сразу после него глагол.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "По-моему, это слишком дорого."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "На мою думку",
+      "points": [
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (на мою думку) займає перше місце, тому одразу після нього дієслово.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "На мою думку, це надто дорого."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "In my opinion",
+      "points": [
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (in my opinion) takes the first position, so the verb comes right after it.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "In my opinion, that’s too expensive."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Moim zdaniem",
+      "points": [
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (moim zdaniem) zajmuje pierwsze miejsce, więc zaraz po nim czasownik.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "Moim zdaniem to za drogie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "En mi opinión",
+      "points": [
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (en mi opinión) ocupa el primer lugar, así que justo después va el verbo.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "En mi opinión, es demasiado caro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "À mon avis",
+      "points": [
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (à mon avis) occupe la première place, donc le verbe vient juste après.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "À mon avis, c’est trop cher."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Bana göre",
+      "points": [
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (bence) ilk sırayı alır, bu yüzden hemen ardından fiil gelir.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "Bence bu çok pahalı."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "După părerea mea",
+      "points": [
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (după părerea mea) ocupă primul loc, deci imediat după el vine verbul.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "După părerea mea, e prea scump."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mening fikrimcha",
+      "points": [
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (menimcha) birinchi o'rinni egallaydi, shuning uchun darhol fe'l keladi.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "Menimcha, bu juda qimmat."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "मेरी राय में",
+      "points": [
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (मेरी राय में) पहला स्थान लेता है, इसलिए तुरंत बाद क्रिया।",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "मेरी राय में यह बहुत महँगा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "في رأيي",
+      "points": [
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (في رأيي) تحتل المكان الأول، لذلك يأتي الفعل بعدها مباشرة.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "في رأيي هذا غالٍ جداً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "opinion-tower-three": {
+    "ru": {
+      "title": "Да, ты прав. Нет, это не так",
+      "points": [
+        {
+          "title": "Da hast du recht",
+          "text": "Согласие: Da hast du recht. Das stimmt. Несогласие: Das stimmt nicht. Ich bin nicht deiner Meinung. Мягко: Ja, aber ...",
+          "examples": [
+            {
+              "de": "Da hast du recht.",
+              "tr": "Тут ты прав."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Так, ти правий. Ні, це не так",
+      "points": [
+        {
+          "title": "Da hast du recht",
+          "text": "Згода: Da hast du recht. Das stimmt. Незгода: Das stimmt nicht. Ich bin nicht deiner Meinung. М’яко: Ja, aber ...",
+          "examples": [
+            {
+              "de": "Da hast du recht.",
+              "tr": "Тут ти маєш рацію."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Yes, you’re right. No, it isn’t",
+      "points": [
+        {
+          "title": "Da hast du recht",
+          "text": "Agreeing: Da hast du recht. Das stimmt. Disagreeing: Das stimmt nicht. Ich bin nicht deiner Meinung. Softly: Ja, aber ...",
+          "examples": [
+            {
+              "de": "Da hast du recht.",
+              "tr": "You’re right there."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Tak, masz rację. Nie, to nieprawda",
+      "points": [
+        {
+          "title": "Da hast du recht",
+          "text": "Zgoda: Da hast du recht. Das stimmt. Niezgoda: Das stimmt nicht. Ich bin nicht deiner Meinung. Łagodnie: Ja, aber ...",
+          "examples": [
+            {
+              "de": "Da hast du recht.",
+              "tr": "Tu masz rację."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Sí, tienes razón. No, no es así",
+      "points": [
+        {
+          "title": "Da hast du recht",
+          "text": "Acuerdo: Da hast du recht. Das stimmt. Desacuerdo: Das stimmt nicht. Ich bin nicht deiner Meinung. Con suavidad: Ja, aber ...",
+          "examples": [
+            {
+              "de": "Da hast du recht.",
+              "tr": "En eso tienes razón."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Oui, tu as raison. Non, ce n’est pas vrai",
+      "points": [
+        {
+          "title": "Da hast du recht",
+          "text": "Être d’accord : Da hast du recht. Das stimmt. Pas d’accord : Das stimmt nicht. Ich bin nicht deiner Meinung. En douceur : Ja, aber ...",
+          "examples": [
+            {
+              "de": "Da hast du recht.",
+              "tr": "Là, tu as raison."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Evet, haklısın. Hayır, öyle değil",
+      "points": [
+        {
+          "title": "Da hast du recht",
+          "text": "Katılmak: Da hast du recht. Das stimmt. Katılmamak: Das stimmt nicht. Ich bin nicht deiner Meinung. Yumuşak: Ja, aber ...",
+          "examples": [
+            {
+              "de": "Da hast du recht.",
+              "tr": "Orada haklısın."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Da, ai dreptate. Nu, nu e așa",
+      "points": [
+        {
+          "title": "Da hast du recht",
+          "text": "Acord: Da hast du recht. Das stimmt. Dezacord: Das stimmt nicht. Ich bin nicht deiner Meinung. Blând: Ja, aber ...",
+          "examples": [
+            {
+              "de": "Da hast du recht.",
+              "tr": "Aici ai dreptate."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ha, haqsan. Yo'q, unday emas",
+      "points": [
+        {
+          "title": "Da hast du recht",
+          "text": "Rozilik: Da hast du recht. Das stimmt. Norozilik: Das stimmt nicht. Ich bin nicht deiner Meinung. Yumshoq: Ja, aber ...",
+          "examples": [
+            {
+              "de": "Da hast du recht.",
+              "tr": "Bu yerda haqsan."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "हाँ, तुम सही हो। नहीं, ऐसा नहीं",
+      "points": [
+        {
+          "title": "Da hast du recht",
+          "text": "सहमति: Da hast du recht। Das stimmt। असहमति: Das stimmt nicht। Ich bin nicht deiner Meinung। नरमी से: Ja, aber ...",
+          "examples": [
+            {
+              "de": "Da hast du recht.",
+              "tr": "इसमें तुम सही हो।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "نعم، معك حق. لا، ليس كذلك",
+      "points": [
+        {
+          "title": "Da hast du recht",
+          "text": "الموافقة: Da hast du recht. Das stimmt. وعدم الموافقة: Das stimmt nicht. Ich bin nicht deiner Meinung. وبلطف: Ja, aber ...",
+          "examples": [
+            {
+              "de": "Da hast du recht.",
+              "tr": "معك حق في هذا."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "opinion-tower-four": {
+    "ru": {
+      "title": "Наверное: wird wohl",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Предположение: werden + wohl + инфинитив (наверное). Уверенность растёт: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Он, наверное, болен."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Мабуть: wird wohl",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Припущення: werden + wohl + інфінітив (мабуть). Упевненість зростає: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Він, мабуть, хворий."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Probably: wird wohl",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "A guess: werden + wohl + infinitive (probably). Rising certainty: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "He’s probably ill."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Pewnie: wird wohl",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Przypuszczenie: werden + wohl + bezokolicznik (pewnie). Pewność rośnie: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Pewnie jest chory."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Seguramente: wird wohl",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Suposición: werden + wohl + infinitivo (seguramente). La certeza sube: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Seguramente está enfermo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Sans doute : wird wohl",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Supposition : werden + wohl + infinitif (sans doute). La certitude monte : vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Il est sans doute malade."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Herhalde: wird wohl",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Tahmin: werden + wohl + mastar (herhalde). Emin olma artar: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Herhalde hasta."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Probabil: wird wohl",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Presupunere: werden + wohl + infinitiv (probabil). Siguranța crește: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Probabil e bolnav."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ehtimol: wird wohl",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Taxmin: werden + wohl + infinitiv (ehtimol). Ishonch oshadi: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "U ehtimol kasaldir."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "शायद: wird wohl",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "अनुमान: werden + wohl + इन्फ़िनिटिव (शायद)। यक़ीन बढ़ता है: vielleicht < wahrscheinlich < bestimmt।",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "वह शायद बीमार है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "على الأرجح: wird wohl",
+      "points": [
+        {
+          "title": "wird wohl وwahrscheinlich وbestimmt",
+          "text": "التخمين: werden + wohl + المصدر (على الأرجح). والثقة تزداد: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "لعله مريض."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "opinion-tower-five": {
+    "ru": {
+      "title": "Может быть, вероятно, точно",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Предположение: werden + wohl + инфинитив (наверное). Уверенность растёт: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Он, наверное, болен."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Можливо, ймовірно, точно",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Припущення: werden + wohl + інфінітив (мабуть). Упевненість зростає: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Він, мабуть, хворий."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Maybe, probably, definitely",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "A guess: werden + wohl + infinitive (probably). Rising certainty: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "He’s probably ill."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Może, prawdopodobnie, na pewno",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Przypuszczenie: werden + wohl + bezokolicznik (pewnie). Pewność rośnie: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Pewnie jest chory."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Quizá, probablemente, seguro",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Suposición: werden + wohl + infinitivo (seguramente). La certeza sube: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Seguramente está enfermo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Peut-être, probablement, sûrement",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Supposition : werden + wohl + infinitif (sans doute). La certitude monte : vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Il est sans doute malade."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Belki, muhtemelen, kesin",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Tahmin: werden + wohl + mastar (herhalde). Emin olma artar: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Herhalde hasta."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Poate, probabil, sigur",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Presupunere: werden + wohl + infinitiv (probabil). Siguranța crește: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Probabil e bolnav."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Balki, ehtimol, albatta",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Taxmin: werden + wohl + infinitiv (ehtimol). Ishonch oshadi: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "U ehtimol kasaldir."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "शायद, संभवतः, ज़रूर",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "अनुमान: werden + wohl + इन्फ़िनिटिव (शायद)। यक़ीन बढ़ता है: vielleicht < wahrscheinlich < bestimmt।",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "वह शायद बीमार है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ربما، على الأرجح، بالتأكيد",
+      "points": [
+        {
+          "title": "wird wohl وwahrscheinlich وbestimmt",
+          "text": "التخمين: werden + wohl + المصدر (على الأرجح). والثقة تزداد: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "لعله مريض."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "opinion-tower-six": {
+    "ru": {
+      "title": "Плюсы и минусы",
+      "points": [
+        {
+          "title": "Vorteil, Nachteil",
+          "text": "Ein Vorteil/Nachteil ist, dass ... (глагол в конце). После einerseits и andererseits сразу глагол.",
+          "examples": [
+            {
+              "de": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+              "tr": "Плюс в том, что квартира в центре."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Плюси й мінуси",
+      "points": [
+        {
+          "title": "Vorteil, Nachteil",
+          "text": "Ein Vorteil/Nachteil ist, dass ... (дієслово в кінці). Після einerseits і andererseits одразу дієслово.",
+          "examples": [
+            {
+              "de": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+              "tr": "Плюс у тому, що квартира в центрі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Pros and cons",
+      "points": [
+        {
+          "title": "Vorteil, Nachteil",
+          "text": "Ein Vorteil/Nachteil ist, dass ... (verb at the end). After einerseits and andererseits the verb comes right away.",
+          "examples": [
+            {
+              "de": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+              "tr": "One advantage is that the flat is in the centre."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Plusy i minusy",
+      "points": [
+        {
+          "title": "Vorteil, Nachteil",
+          "text": "Ein Vorteil/Nachteil ist, dass ... (czasownik na końcu). Po einerseits i andererseits od razu czasownik.",
+          "examples": [
+            {
+              "de": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+              "tr": "Zaletą jest to, że mieszkanie jest w centrum."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Ventajas e inconvenientes",
+      "points": [
+        {
+          "title": "Vorteil, Nachteil",
+          "text": "Ein Vorteil/Nachteil ist, dass ... (verbo al final). Tras einerseits y andererseits, verbo enseguida.",
+          "examples": [
+            {
+              "de": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+              "tr": "Una ventaja es que el piso está en el centro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Avantages et inconvénients",
+      "points": [
+        {
+          "title": "Vorteil, Nachteil",
+          "text": "Ein Vorteil/Nachteil ist, dass ... (verbe à la fin). Après einerseits et andererseits, verbe tout de suite.",
+          "examples": [
+            {
+              "de": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+              "tr": "Un avantage, c’est que l’appartement est au centre."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Artılar ve eksiler",
+      "points": [
+        {
+          "title": "Vorteil, Nachteil",
+          "text": "Ein Vorteil/Nachteil ist, dass ... (fiil sonda). einerseits ve andererseits’ten sonra fiil hemen.",
+          "examples": [
+            {
+              "de": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+              "tr": "Bir avantajı, dairenin merkezde olması."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Avantaje și dezavantaje",
+      "points": [
+        {
+          "title": "Vorteil, Nachteil",
+          "text": "Ein Vorteil/Nachteil ist, dass ... (verbul la final). După einerseits și andererseits, verbul imediat.",
+          "examples": [
+            {
+              "de": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+              "tr": "Un avantaj e că apartamentul e în centru."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Afzallik va kamchiliklar",
+      "points": [
+        {
+          "title": "Vorteil, Nachteil",
+          "text": "Ein Vorteil/Nachteil ist, dass ... (fe'l oxirida). einerseits va andererseits dan keyin fe'l darhol.",
+          "examples": [
+            {
+              "de": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+              "tr": "Afzalligi shundaki, kvartira markazda."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "फ़ायदे और नुकसान",
+      "points": [
+        {
+          "title": "Vorteil, Nachteil",
+          "text": "Ein Vorteil/Nachteil ist, dass ... (क्रिया अंत में)। einerseits और andererseits के बाद क्रिया तुरंत।",
+          "examples": [
+            {
+              "de": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+              "tr": "एक फ़ायदा यह है कि फ़्लैट केंद्र में है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المزايا والعيوب",
+      "points": [
+        {
+          "title": "Vorteil وNachteil",
+          "text": "Ein Vorteil/Nachteil ist, dass ... (الفعل في الآخر). وبعد einerseits وandererseits الفعل مباشرة.",
+          "examples": [
+            {
+              "de": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+              "tr": "من المزايا أن الشقة في المركز."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "opinion-tower-seven": {
+    "ru": {
+      "title": "Практика: город или деревня?",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: после dass глагол в конце. Без dass порядок обычный: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Я считаю, что фильм интересный."
+            }
+          ]
+        },
+        {
+          "title": "Vorteil, Nachteil",
+          "text": "Ein Vorteil/Nachteil ist, dass ... (глагол в конце). После einerseits и andererseits сразу глагол.",
+          "examples": [
+            {
+              "de": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+              "tr": "Плюс в том, что квартира в центре."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: місто чи село?",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: після dass дієслово в кінці. Без dass порядок звичайний: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Я вважаю, що фільм цікавий."
+            }
+          ]
+        },
+        {
+          "title": "Vorteil, Nachteil",
+          "text": "Ein Vorteil/Nachteil ist, dass ... (дієслово в кінці). Після einerseits і andererseits одразу дієслово.",
+          "examples": [
+            {
+              "de": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+              "tr": "Плюс у тому, що квартира в центрі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: city or country?",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: after dass the verb goes last. Without dass normal order: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "I think the film is interesting."
+            }
+          ]
+        },
+        {
+          "title": "Vorteil, Nachteil",
+          "text": "Ein Vorteil/Nachteil ist, dass ... (verb at the end). After einerseits and andererseits the verb comes right away.",
+          "examples": [
+            {
+              "de": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+              "tr": "One advantage is that the flat is in the centre."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: miasto czy wieś?",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: po dass czasownik na końcu. Bez dass szyk zwykły: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Uważam, że film jest ciekawy."
+            }
+          ]
+        },
+        {
+          "title": "Vorteil, Nachteil",
+          "text": "Ein Vorteil/Nachteil ist, dass ... (czasownik na końcu). Po einerseits i andererseits od razu czasownik.",
+          "examples": [
+            {
+              "de": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+              "tr": "Zaletą jest to, że mieszkanie jest w centrum."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: ¿ciudad o campo?",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: tras dass, verbo al final. Sin dass, orden normal: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Creo que la película es interesante."
+            }
+          ]
+        },
+        {
+          "title": "Vorteil, Nachteil",
+          "text": "Ein Vorteil/Nachteil ist, dass ... (verbo al final). Tras einerseits y andererseits, verbo enseguida.",
+          "examples": [
+            {
+              "de": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+              "tr": "Una ventaja es que el piso está en el centro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : ville ou campagne ?",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ... : après dass, verbe à la fin. Sans dass, ordre normal : Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Je trouve que le film est intéressant."
+            }
+          ]
+        },
+        {
+          "title": "Vorteil, Nachteil",
+          "text": "Ein Vorteil/Nachteil ist, dass ... (verbe à la fin). Après einerseits et andererseits, verbe tout de suite.",
+          "examples": [
+            {
+              "de": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+              "tr": "Un avantage, c’est que l’appartement est au centre."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: şehir mi, köy mü?",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: dass’tan sonra fiil sonda. dass olmadan normal sıra: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Bence film ilginç."
+            }
+          ]
+        },
+        {
+          "title": "Vorteil, Nachteil",
+          "text": "Ein Vorteil/Nachteil ist, dass ... (fiil sonda). einerseits ve andererseits’ten sonra fiil hemen.",
+          "examples": [
+            {
+              "de": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+              "tr": "Bir avantajı, dairenin merkezde olması."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: oraș sau sat?",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: după dass verbul la final. Fără dass, ordine normală: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Cred că filmul e interesant."
+            }
+          ]
+        },
+        {
+          "title": "Vorteil, Nachteil",
+          "text": "Ein Vorteil/Nachteil ist, dass ... (verbul la final). După einerseits și andererseits, verbul imediat.",
+          "examples": [
+            {
+              "de": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+              "tr": "Un avantaj e că apartamentul e în centru."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: shahar yoki qishloq?",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: dass dan keyin fe'l oxirida. dass siz oddiy tartib: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Menimcha, film qiziqarli."
+            }
+          ]
+        },
+        {
+          "title": "Vorteil, Nachteil",
+          "text": "Ein Vorteil/Nachteil ist, dass ... (fe'l oxirida). einerseits va andererseits dan keyin fe'l darhol.",
+          "examples": [
+            {
+              "de": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+              "tr": "Afzalligi shundaki, kvartira markazda."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: शहर या गाँव?",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: dass के बाद क्रिया अंत में। बिना dass सामान्य क्रम: Ich finde, der Film ist gut।",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "मुझे लगता है कि फ़िल्म दिलचस्प है।"
+            }
+          ]
+        },
+        {
+          "title": "Vorteil, Nachteil",
+          "text": "Ein Vorteil/Nachteil ist, dass ... (क्रिया अंत में)। einerseits और andererseits के बाद क्रिया तुरंत।",
+          "examples": [
+            {
+              "de": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+              "tr": "एक फ़ायदा यह है कि फ़्लैट केंद्र में है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: المدينة أم الريف؟",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: بعد dass الفعل في الآخر. وبدون dass الترتيب عادي: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "أرى أن الفيلم ممتع."
+            }
+          ]
+        },
+        {
+          "title": "Vorteil وNachteil",
+          "text": "Ein Vorteil/Nachteil ist, dass ... (الفعل في الآخر). وبعد einerseits وandererseits الفعل مباشرة.",
+          "examples": [
+            {
+              "de": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+              "tr": "من المزايا أن الشقة في المركز."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "opinion-tower-eight": {
+    "ru": {
+      "title": "Практика: что будет завтра?",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Предположение: werden + wohl + инфинитив (наверное). Уверенность растёт: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Он, наверное, болен."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: що буде завтра?",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Припущення: werden + wohl + інфінітив (мабуть). Упевненість зростає: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Він, мабуть, хворий."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: what will tomorrow bring?",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "A guess: werden + wohl + infinitive (probably). Rising certainty: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "He’s probably ill."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: co będzie jutro?",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Przypuszczenie: werden + wohl + bezokolicznik (pewnie). Pewność rośnie: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Pewnie jest chory."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: ¿qué pasará mañana?",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Suposición: werden + wohl + infinitivo (seguramente). La certeza sube: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Seguramente está enfermo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : que se passera-t-il demain ?",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Supposition : werden + wohl + infinitif (sans doute). La certitude monte : vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Il est sans doute malade."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: yarın ne olacak?",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Tahmin: werden + wohl + mastar (herhalde). Emin olma artar: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Herhalde hasta."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: ce va fi mâine?",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Presupunere: werden + wohl + infinitiv (probabil). Siguranța crește: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Probabil e bolnav."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: ertaga nima bo'ladi?",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Taxmin: werden + wohl + infinitiv (ehtimol). Ishonch oshadi: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "U ehtimol kasaldir."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: कल क्या होगा?",
+      "points": [
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "अनुमान: werden + wohl + इन्फ़िनिटिव (शायद)। यक़ीन बढ़ता है: vielleicht < wahrscheinlich < bestimmt।",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "वह शायद बीमार है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: ماذا سيحدث غداً؟",
+      "points": [
+        {
+          "title": "wird wohl وwahrscheinlich وbestimmt",
+          "text": "التخمين: werden + wohl + المصدر (على الأرجح). والثقة تزداد: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "لعله مريض."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "opinion-tower-nine": {
+    "ru": {
+      "title": "Повторение: мнение",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: после dass глагол в конце. Без dass порядок обычный: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Я считаю, что фильм интересный."
+            }
+          ]
+        },
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (по-моему) занимает первое место, поэтому сразу после него глагол.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "По-моему, это слишком дорого."
+            }
+          ]
+        },
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Предположение: werden + wohl + инфинитив (наверное). Уверенность растёт: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Он, наверное, болен."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: думка",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: після dass дієслово в кінці. Без dass порядок звичайний: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Я вважаю, що фільм цікавий."
+            }
+          ]
+        },
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (на мою думку) займає перше місце, тому одразу після нього дієслово.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "На мою думку, це надто дорого."
+            }
+          ]
+        },
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Припущення: werden + wohl + інфінітив (мабуть). Упевненість зростає: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Він, мабуть, хворий."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: opinions",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: after dass the verb goes last. Without dass normal order: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "I think the film is interesting."
+            }
+          ]
+        },
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (in my opinion) takes the first position, so the verb comes right after it.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "In my opinion, that’s too expensive."
+            }
+          ]
+        },
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "A guess: werden + wohl + infinitive (probably). Rising certainty: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "He’s probably ill."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: opinie",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: po dass czasownik na końcu. Bez dass szyk zwykły: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Uważam, że film jest ciekawy."
+            }
+          ]
+        },
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (moim zdaniem) zajmuje pierwsze miejsce, więc zaraz po nim czasownik.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "Moim zdaniem to za drogie."
+            }
+          ]
+        },
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Przypuszczenie: werden + wohl + bezokolicznik (pewnie). Pewność rośnie: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Pewnie jest chory."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: opiniones",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: tras dass, verbo al final. Sin dass, orden normal: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Creo que la película es interesante."
+            }
+          ]
+        },
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (en mi opinión) ocupa el primer lugar, así que justo después va el verbo.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "En mi opinión, es demasiado caro."
+            }
+          ]
+        },
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Suposición: werden + wohl + infinitivo (seguramente). La certeza sube: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Seguramente está enfermo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : opinions",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ... : après dass, verbe à la fin. Sans dass, ordre normal : Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Je trouve que le film est intéressant."
+            }
+          ]
+        },
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (à mon avis) occupe la première place, donc le verbe vient juste après.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "À mon avis, c’est trop cher."
+            }
+          ]
+        },
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Supposition : werden + wohl + infinitif (sans doute). La certitude monte : vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Il est sans doute malade."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: görüşler",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: dass’tan sonra fiil sonda. dass olmadan normal sıra: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Bence film ilginç."
+            }
+          ]
+        },
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (bence) ilk sırayı alır, bu yüzden hemen ardından fiil gelir.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "Bence bu çok pahalı."
+            }
+          ]
+        },
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Tahmin: werden + wohl + mastar (herhalde). Emin olma artar: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Herhalde hasta."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: păreri",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: după dass verbul la final. Fără dass, ordine normală: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Cred că filmul e interesant."
+            }
+          ]
+        },
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (după părerea mea) ocupă primul loc, deci imediat după el vine verbul.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "După părerea mea, e prea scump."
+            }
+          ]
+        },
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Presupunere: werden + wohl + infinitiv (probabil). Siguranța crește: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Probabil e bolnav."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: fikrlar",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: dass dan keyin fe'l oxirida. dass siz oddiy tartib: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Menimcha, film qiziqarli."
+            }
+          ]
+        },
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (menimcha) birinchi o'rinni egallaydi, shuning uchun darhol fe'l keladi.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "Menimcha, bu juda qimmat."
+            }
+          ]
+        },
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Taxmin: werden + wohl + infinitiv (ehtimol). Ishonch oshadi: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "U ehtimol kasaldir."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: राय",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: dass के बाद क्रिया अंत में। बिना dass सामान्य क्रम: Ich finde, der Film ist gut।",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "मुझे लगता है कि फ़िल्म दिलचस्प है।"
+            }
+          ]
+        },
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (मेरी राय में) पहला स्थान लेता है, इसलिए तुरंत बाद क्रिया।",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "मेरी राय में यह बहुत महँगा है।"
+            }
+          ]
+        },
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "अनुमान: werden + wohl + इन्फ़िनिटिव (शायद)। यक़ीन बढ़ता है: vielleicht < wahrscheinlich < bestimmt।",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "वह शायद बीमार है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الآراء",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: بعد dass الفعل في الآخر. وبدون dass الترتيب عادي: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "أرى أن الفيلم ممتع."
+            }
+          ]
+        },
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (في رأيي) تحتل المكان الأول، لذلك يأتي الفعل بعدها مباشرة.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "في رأيي هذا غالٍ جداً."
+            }
+          ]
+        },
+        {
+          "title": "wird wohl وwahrscheinlich وbestimmt",
+          "text": "التخمين: werden + wohl + المصدر (على الأرجح). والثقة تزداد: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "لعله مريض."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "opinion-tower-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: после dass глагол в конце. Без dass порядок обычный: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Я считаю, что фильм интересный."
+            }
+          ]
+        },
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (по-моему) занимает первое место, поэтому сразу после него глагол.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "По-моему, это слишком дорого."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: після dass дієслово в кінці. Без dass порядок звичайний: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Я вважаю, що фільм цікавий."
+            }
+          ]
+        },
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (на мою думку) займає перше місце, тому одразу після нього дієслово.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "На мою думку, це надто дорого."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: after dass the verb goes last. Without dass normal order: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "I think the film is interesting."
+            }
+          ]
+        },
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (in my opinion) takes the first position, so the verb comes right after it.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "In my opinion, that’s too expensive."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: po dass czasownik na końcu. Bez dass szyk zwykły: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Uważam, że film jest ciekawy."
+            }
+          ]
+        },
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (moim zdaniem) zajmuje pierwsze miejsce, więc zaraz po nim czasownik.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "Moim zdaniem to za drogie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: tras dass, verbo al final. Sin dass, orden normal: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Creo que la película es interesante."
+            }
+          ]
+        },
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (en mi opinión) ocupa el primer lugar, así que justo después va el verbo.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "En mi opinión, es demasiado caro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ... : après dass, verbe à la fin. Sans dass, ordre normal : Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Je trouve que le film est intéressant."
+            }
+          ]
+        },
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (à mon avis) occupe la première place, donc le verbe vient juste après.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "À mon avis, c’est trop cher."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: dass’tan sonra fiil sonda. dass olmadan normal sıra: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Bence film ilginç."
+            }
+          ]
+        },
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (bence) ilk sırayı alır, bu yüzden hemen ardından fiil gelir.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "Bence bu çok pahalı."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: după dass verbul la final. Fără dass, ordine normală: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Cred că filmul e interesant."
+            }
+          ]
+        },
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (după părerea mea) ocupă primul loc, deci imediat după el vine verbul.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "După părerea mea, e prea scump."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: dass dan keyin fe'l oxirida. dass siz oddiy tartib: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Menimcha, film qiziqarli."
+            }
+          ]
+        },
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (menimcha) birinchi o'rinni egallaydi, shuning uchun darhol fe'l keladi.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "Menimcha, bu juda qimmat."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: dass के बाद क्रिया अंत में। बिना dass सामान्य क्रम: Ich finde, der Film ist gut।",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "मुझे लगता है कि फ़िल्म दिलचस्प है।"
+            }
+          ]
+        },
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (मेरी राय में) पहला स्थान लेता है, इसलिए तुरंत बाद क्रिया।",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "मेरी राय में यह बहुत महँगा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: بعد dass الفعل في الآخر. وبدون dass الترتيب عادي: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "أرى أن الفيلم ممتع."
+            }
+          ]
+        },
+        {
+          "title": "Meiner Meinung nach ...",
+          "text": "Meiner Meinung nach (في رأيي) تحتل المكان الأول، لذلك يأتي الفعل بعدها مباشرة.",
+          "examples": [
+            {
+              "de": "Meiner Meinung nach ist das zu teuer.",
+              "tr": "في رأيي هذا غالٍ جداً."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

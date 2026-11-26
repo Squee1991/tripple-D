@@ -1,0 +1,4477 @@
+{
+  "a1-summit-one": {
+    "ru": {
+      "title": "Повторение: sein, haben, окончания",
+      "points": [
+        {
+          "title": "sein (быть)",
+          "text": "Неправильный глагол: формы нужно запомнить.",
+          "examples": [
+            {
+              "de": "ich bin, du bist, er ist",
+              "tr": "я, ты, он (есть)"
+            },
+            {
+              "de": "wir sind, ihr seid, sie sind",
+              "tr": "мы, вы, они (есть)"
+            }
+          ]
+        },
+        {
+          "title": "haben (иметь)",
+          "text": "Тоже неправильный: у du и er пропадает буква b.",
+          "examples": [
+            {
+              "de": "ich habe, du hast, er hat",
+              "tr": "у меня, у тебя, у него есть"
+            },
+            {
+              "de": "wir haben, ihr habt, sie haben",
+              "tr": "у нас, у вас, у них есть"
+            }
+          ]
+        },
+        {
+          "title": "Все остальные глаголы",
+          "text": "Окончания всегда одни и те же: ich -e, du -st, er -t, wir -en, ihr -t, sie -en.",
+          "examples": [
+            {
+              "de": "ich lerne, du lernst, er lernt",
+              "tr": "я учу, ты учишь, он учит"
+            },
+            {
+              "de": "wir lernen, ihr lernt, sie lernen",
+              "tr": "мы учим, вы учите, они учат"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: sein, haben, закінчення",
+      "points": [
+        {
+          "title": "sein (бути)",
+          "text": "Неправильне дієслово: форми треба запам’ятати.",
+          "examples": [
+            {
+              "de": "ich bin, du bist, er ist",
+              "tr": "я, ти, він (є)"
+            },
+            {
+              "de": "wir sind, ihr seid, sie sind",
+              "tr": "ми, ви, вони (є)"
+            }
+          ]
+        },
+        {
+          "title": "haben (мати)",
+          "text": "Теж неправильне: у du і er зникає літера b.",
+          "examples": [
+            {
+              "de": "ich habe, du hast, er hat",
+              "tr": "у мене, у тебе, у нього є"
+            },
+            {
+              "de": "wir haben, ihr habt, sie haben",
+              "tr": "у нас, у вас, у них є"
+            }
+          ]
+        },
+        {
+          "title": "Усі інші дієслова",
+          "text": "Закінчення завжди однакові: ich -e, du -st, er -t, wir -en, ihr -t, sie -en.",
+          "examples": [
+            {
+              "de": "ich lerne, du lernst, er lernt",
+              "tr": "я вчу, ти вчиш, він вчить"
+            },
+            {
+              "de": "wir lernen, ihr lernt, sie lernen",
+              "tr": "ми вчимо, ви вчите, вони вчать"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: sein, haben, endings",
+      "points": [
+        {
+          "title": "sein (to be)",
+          "text": "An irregular verb: you need to remember the forms.",
+          "examples": [
+            {
+              "de": "ich bin, du bist, er ist",
+              "tr": "I am, you are, he is"
+            },
+            {
+              "de": "wir sind, ihr seid, sie sind",
+              "tr": "we are, you are, they are"
+            }
+          ]
+        },
+        {
+          "title": "haben (to have)",
+          "text": "Also irregular: with du and er the b disappears.",
+          "examples": [
+            {
+              "de": "ich habe, du hast, er hat",
+              "tr": "I have, you have, he has"
+            },
+            {
+              "de": "wir haben, ihr habt, sie haben",
+              "tr": "we have, you have, they have"
+            }
+          ]
+        },
+        {
+          "title": "All other verbs",
+          "text": "The endings are always the same: ich -e, du -st, er -t, wir -en, ihr -t, sie -en.",
+          "examples": [
+            {
+              "de": "ich lerne, du lernst, er lernt",
+              "tr": "I learn, you learn, he learns"
+            },
+            {
+              "de": "wir lernen, ihr lernt, sie lernen",
+              "tr": "we learn, you learn, they learn"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: sein, haben, końcówki",
+      "points": [
+        {
+          "title": "sein (być)",
+          "text": "Czasownik nieregularny: formy trzeba zapamiętać.",
+          "examples": [
+            {
+              "de": "ich bin, du bist, er ist",
+              "tr": "jestem, jesteś, on jest"
+            },
+            {
+              "de": "wir sind, ihr seid, sie sind",
+              "tr": "jesteśmy, jesteście, oni są"
+            }
+          ]
+        },
+        {
+          "title": "haben (mieć)",
+          "text": "Też nieregularny: przy du i er znika litera b.",
+          "examples": [
+            {
+              "de": "ich habe, du hast, er hat",
+              "tr": "mam, masz, on ma"
+            },
+            {
+              "de": "wir haben, ihr habt, sie haben",
+              "tr": "mamy, macie, oni mają"
+            }
+          ]
+        },
+        {
+          "title": "Wszystkie inne czasowniki",
+          "text": "Końcówki są zawsze te same: ich -e, du -st, er -t, wir -en, ihr -t, sie -en.",
+          "examples": [
+            {
+              "de": "ich lerne, du lernst, er lernt",
+              "tr": "uczę się, uczysz się, on się uczy"
+            },
+            {
+              "de": "wir lernen, ihr lernt, sie lernen",
+              "tr": "uczymy się, uczycie się, oni się uczą"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: sein, haben, terminaciones",
+      "points": [
+        {
+          "title": "sein (ser, estar)",
+          "text": "Verbo irregular: hay que memorizar las formas.",
+          "examples": [
+            {
+              "de": "ich bin, du bist, er ist",
+              "tr": "yo soy, tú eres, él es"
+            },
+            {
+              "de": "wir sind, ihr seid, sie sind",
+              "tr": "somos, sois, son"
+            }
+          ]
+        },
+        {
+          "title": "haben (tener)",
+          "text": "También irregular: con du y er desaparece la b.",
+          "examples": [
+            {
+              "de": "ich habe, du hast, er hat",
+              "tr": "tengo, tienes, él tiene"
+            },
+            {
+              "de": "wir haben, ihr habt, sie haben",
+              "tr": "tenemos, tenéis, tienen"
+            }
+          ]
+        },
+        {
+          "title": "Todos los demás verbos",
+          "text": "Las terminaciones son siempre las mismas: ich -e, du -st, er -t, wir -en, ihr -t, sie -en.",
+          "examples": [
+            {
+              "de": "ich lerne, du lernst, er lernt",
+              "tr": "aprendo, aprendes, él aprende"
+            },
+            {
+              "de": "wir lernen, ihr lernt, sie lernen",
+              "tr": "aprendemos, aprendéis, aprenden"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : sein, haben, terminaisons",
+      "points": [
+        {
+          "title": "sein (être)",
+          "text": "Verbe irrégulier : il faut retenir les formes.",
+          "examples": [
+            {
+              "de": "ich bin, du bist, er ist",
+              "tr": "je suis, tu es, il est"
+            },
+            {
+              "de": "wir sind, ihr seid, sie sind",
+              "tr": "nous sommes, vous êtes, ils sont"
+            }
+          ]
+        },
+        {
+          "title": "haben (avoir)",
+          "text": "Irrégulier aussi : avec du et er, le b disparaît.",
+          "examples": [
+            {
+              "de": "ich habe, du hast, er hat",
+              "tr": "j’ai, tu as, il a"
+            },
+            {
+              "de": "wir haben, ihr habt, sie haben",
+              "tr": "nous avons, vous avez, ils ont"
+            }
+          ]
+        },
+        {
+          "title": "Tous les autres verbes",
+          "text": "Les terminaisons sont toujours les mêmes : ich -e, du -st, er -t, wir -en, ihr -t, sie -en.",
+          "examples": [
+            {
+              "de": "ich lerne, du lernst, er lernt",
+              "tr": "j’apprends, tu apprends, il apprend"
+            },
+            {
+              "de": "wir lernen, ihr lernt, sie lernen",
+              "tr": "nous apprenons, vous apprenez, ils apprennent"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: sein, haben, ekler",
+      "points": [
+        {
+          "title": "sein (olmak)",
+          "text": "Düzensiz fiil: biçimleri ezberlemek gerekir.",
+          "examples": [
+            {
+              "de": "ich bin, du bist, er ist",
+              "tr": "ben, sen, o (dır)"
+            },
+            {
+              "de": "wir sind, ihr seid, sie sind",
+              "tr": "biz, siz, onlar (dır)"
+            }
+          ]
+        },
+        {
+          "title": "haben (sahip olmak)",
+          "text": "Bu da düzensiz: du ve er ile b düşer.",
+          "examples": [
+            {
+              "de": "ich habe, du hast, er hat",
+              "tr": "benim, senin, onun var"
+            },
+            {
+              "de": "wir haben, ihr habt, sie haben",
+              "tr": "bizim, sizin, onların var"
+            }
+          ]
+        },
+        {
+          "title": "Diğer bütün fiiller",
+          "text": "Ekler hep aynıdır: ich -e, du -st, er -t, wir -en, ihr -t, sie -en.",
+          "examples": [
+            {
+              "de": "ich lerne, du lernst, er lernt",
+              "tr": "öğreniyorum, öğreniyorsun, öğreniyor"
+            },
+            {
+              "de": "wir lernen, ihr lernt, sie lernen",
+              "tr": "öğreniyoruz, öğreniyorsunuz, öğreniyorlar"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: sein, haben, terminații",
+      "points": [
+        {
+          "title": "sein (a fi)",
+          "text": "Verb neregulat: formele trebuie memorate.",
+          "examples": [
+            {
+              "de": "ich bin, du bist, er ist",
+              "tr": "eu sunt, tu ești, el este"
+            },
+            {
+              "de": "wir sind, ihr seid, sie sind",
+              "tr": "suntem, sunteți, ei sunt"
+            }
+          ]
+        },
+        {
+          "title": "haben (a avea)",
+          "text": "Tot neregulat: la du și er dispare litera b.",
+          "examples": [
+            {
+              "de": "ich habe, du hast, er hat",
+              "tr": "am, ai, el are"
+            },
+            {
+              "de": "wir haben, ihr habt, sie haben",
+              "tr": "avem, aveți, ei au"
+            }
+          ]
+        },
+        {
+          "title": "Toate celelalte verbe",
+          "text": "Terminațiile sunt mereu aceleași: ich -e, du -st, er -t, wir -en, ihr -t, sie -en.",
+          "examples": [
+            {
+              "de": "ich lerne, du lernst, er lernt",
+              "tr": "învăț, înveți, el învață"
+            },
+            {
+              "de": "wir lernen, ihr lernt, sie lernen",
+              "tr": "învățăm, învățați, ei învață"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: sein, haben, qo'shimchalar",
+      "points": [
+        {
+          "title": "sein (bo'lmoq)",
+          "text": "Noto'g'ri fe'l: shakllarini yodlash kerak.",
+          "examples": [
+            {
+              "de": "ich bin, du bist, er ist",
+              "tr": "men, sen, u (-dir)"
+            },
+            {
+              "de": "wir sind, ihr seid, sie sind",
+              "tr": "biz, sizlar, ular (-dir)"
+            }
+          ]
+        },
+        {
+          "title": "haben (ega bo'lmoq)",
+          "text": "Bu ham noto'g'ri: du va er da b tushib qoladi.",
+          "examples": [
+            {
+              "de": "ich habe, du hast, er hat",
+              "tr": "menda, senda, unda bor"
+            },
+            {
+              "de": "wir haben, ihr habt, sie haben",
+              "tr": "bizda, sizlarda, ularda bor"
+            }
+          ]
+        },
+        {
+          "title": "Qolgan barcha fe'llar",
+          "text": "Qo'shimchalar doim bir xil: ich -e, du -st, er -t, wir -en, ihr -t, sie -en.",
+          "examples": [
+            {
+              "de": "ich lerne, du lernst, er lernt",
+              "tr": "o'rganaman, o'rganasan, o'rganadi"
+            },
+            {
+              "de": "wir lernen, ihr lernt, sie lernen",
+              "tr": "o'rganamiz, o'rganasizlar, o'rganishadi"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: sein, haben, अंत",
+      "points": [
+        {
+          "title": "sein (होना)",
+          "text": "अनियमित क्रिया: रूप याद करने होंगे।",
+          "examples": [
+            {
+              "de": "ich bin, du bist, er ist",
+              "tr": "मैं हूँ, तुम हो, वह है"
+            },
+            {
+              "de": "wir sind, ihr seid, sie sind",
+              "tr": "हम हैं, तुम सब हो, वे हैं"
+            }
+          ]
+        },
+        {
+          "title": "haben (रखना, होना)",
+          "text": "यह भी अनियमित है: du और er के साथ b हट जाता है।",
+          "examples": [
+            {
+              "de": "ich habe, du hast, er hat",
+              "tr": "मेरे, तुम्हारे, उसके पास है"
+            },
+            {
+              "de": "wir haben, ihr habt, sie haben",
+              "tr": "हमारे, तुम सबके, उनके पास है"
+            }
+          ]
+        },
+        {
+          "title": "बाकी सभी क्रियाएँ",
+          "text": "अंत हमेशा एक जैसे होते हैं: ich -e, du -st, er -t, wir -en, ihr -t, sie -en।",
+          "examples": [
+            {
+              "de": "ich lerne, du lernst, er lernt",
+              "tr": "मैं सीखता हूँ, तुम सीखते हो, वह सीखता है"
+            },
+            {
+              "de": "wir lernen, ihr lernt, sie lernen",
+              "tr": "हम सीखते हैं, तुम सब सीखते हो, वे सीखते हैं"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: sein وhaben والنهايات",
+      "points": [
+        {
+          "title": "sein (يكون)",
+          "text": "فعل شاذ: يجب حفظ صيغه.",
+          "examples": [
+            {
+              "de": "ich bin, du bist, er ist",
+              "tr": "أنا، أنت، هو"
+            },
+            {
+              "de": "wir sind, ihr seid, sie sind",
+              "tr": "نحن، أنتم، هم"
+            }
+          ]
+        },
+        {
+          "title": "haben (يملك)",
+          "text": "شاذ أيضاً: مع du وer يختفي حرف b.",
+          "examples": [
+            {
+              "de": "ich habe, du hast, er hat",
+              "tr": "عندي، عندك، عنده"
+            },
+            {
+              "de": "wir haben, ihr habt, sie haben",
+              "tr": "عندنا، عندكم، عندهم"
+            }
+          ]
+        },
+        {
+          "title": "جميع الأفعال الأخرى",
+          "text": "النهايات دائماً واحدة: ich -e، du -st، er -t، wir -en، ihr -t، sie -en.",
+          "examples": [
+            {
+              "de": "ich lerne, du lernst, er lernt",
+              "tr": "أتعلم، تتعلم، يتعلم"
+            },
+            {
+              "de": "wir lernen, ihr lernt, sie lernen",
+              "tr": "نتعلم، تتعلمون، يتعلمون"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "a1-summit-two": {
+    "ru": {
+      "title": "Повторение: вопросы и отрицание",
+      "points": [
+        {
+          "title": "Порядок слов в вопросе",
+          "text": "Без вопросительного слова глагол первым. С вопросительным словом глагол вторым.",
+          "examples": [
+            {
+              "de": "Kommst du? Wo ist das Problem?",
+              "tr": "Ты придёшь? Где проблема?"
+            }
+          ]
+        },
+        {
+          "title": "nicht или kein",
+          "text": "kein для существительного с ein или без артикля, nicht для всего остального.",
+          "examples": [
+            {
+              "de": "Das ist kein Problem.",
+              "tr": "Это не проблема."
+            },
+            {
+              "de": "Ich habe leider keine Zeit.",
+              "tr": "К сожалению, у меня нет времени."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "На вопрос с отрицанием отвечаем «да» словом Doch!",
+          "examples": [
+            {
+              "de": "Hast du keinen Hunger? Doch, natürlich!",
+              "tr": "Ты не голоден? Конечно, голоден!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: питання і заперечення",
+      "points": [
+        {
+          "title": "Порядок слів у питанні",
+          "text": "Без питального слова дієслово першим. З питальним словом дієслово другим.",
+          "examples": [
+            {
+              "de": "Kommst du? Wo ist das Problem?",
+              "tr": "Ти прийдеш? Де проблема?"
+            }
+          ]
+        },
+        {
+          "title": "nicht чи kein",
+          "text": "kein для іменника з ein або без артикля, nicht для всього іншого.",
+          "examples": [
+            {
+              "de": "Das ist kein Problem.",
+              "tr": "Це не проблема."
+            },
+            {
+              "de": "Ich habe leider keine Zeit.",
+              "tr": "На жаль, у мене немає часу."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "На питання із запереченням відповідаємо «так» словом Doch!",
+          "examples": [
+            {
+              "de": "Hast du keinen Hunger? Doch, natürlich!",
+              "tr": "Ти не голодний? Звісно, голодний!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: questions and negation",
+      "points": [
+        {
+          "title": "Word order in questions",
+          "text": "Without a question word the verb is first. With a question word the verb is second.",
+          "examples": [
+            {
+              "de": "Kommst du? Wo ist das Problem?",
+              "tr": "Are you coming? Where is the problem?"
+            }
+          ]
+        },
+        {
+          "title": "nicht or kein",
+          "text": "kein for a noun with ein or no article, nicht for everything else.",
+          "examples": [
+            {
+              "de": "Das ist kein Problem.",
+              "tr": "That’s no problem."
+            },
+            {
+              "de": "Ich habe leider keine Zeit.",
+              "tr": "Unfortunately I have no time."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "Answer \"yes\" to a negative question with Doch!",
+          "examples": [
+            {
+              "de": "Hast du keinen Hunger? Doch, natürlich!",
+              "tr": "Aren’t you hungry? Of course I am!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: pytania i przeczenie",
+      "points": [
+        {
+          "title": "Szyk w pytaniu",
+          "text": "Bez słowa pytającego czasownik pierwszy. Ze słowem pytającym czasownik drugi.",
+          "examples": [
+            {
+              "de": "Kommst du? Wo ist das Problem?",
+              "tr": "Przyjdziesz? Gdzie jest problem?"
+            }
+          ]
+        },
+        {
+          "title": "nicht czy kein",
+          "text": "kein dla rzeczownika z ein albo bez rodzajnika, nicht dla wszystkiego innego.",
+          "examples": [
+            {
+              "de": "Das ist kein Problem.",
+              "tr": "To żaden problem."
+            },
+            {
+              "de": "Ich habe leider keine Zeit.",
+              "tr": "Niestety nie mam czasu."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "Na pytanie z przeczeniem odpowiadamy „tak” słowem Doch!",
+          "examples": [
+            {
+              "de": "Hast du keinen Hunger? Doch, natürlich!",
+              "tr": "Nie jesteś głodny? Ależ oczywiście!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: preguntas y negación",
+      "points": [
+        {
+          "title": "Orden en la pregunta",
+          "text": "Sin palabra interrogativa, el verbo primero. Con palabra interrogativa, el verbo segundo.",
+          "examples": [
+            {
+              "de": "Kommst du? Wo ist das Problem?",
+              "tr": "¿Vienes? ¿Dónde está el problema?"
+            }
+          ]
+        },
+        {
+          "title": "nicht o kein",
+          "text": "kein para un sustantivo con ein o sin artículo, nicht para todo lo demás.",
+          "examples": [
+            {
+              "de": "Das ist kein Problem.",
+              "tr": "No es ningún problema."
+            },
+            {
+              "de": "Ich habe leider keine Zeit.",
+              "tr": "Por desgracia no tengo tiempo."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "A una pregunta negativa se responde \"sí\" con Doch!",
+          "examples": [
+            {
+              "de": "Hast du keinen Hunger? Doch, natürlich!",
+              "tr": "¿No tienes hambre? ¡Claro que sí!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : questions et négation",
+      "points": [
+        {
+          "title": "Ordre dans la question",
+          "text": "Sans mot interrogatif, le verbe en premier. Avec un mot interrogatif, le verbe en deuxième.",
+          "examples": [
+            {
+              "de": "Kommst du? Wo ist das Problem?",
+              "tr": "Tu viens ? Où est le problème ?"
+            }
+          ]
+        },
+        {
+          "title": "nicht ou kein",
+          "text": "kein pour un nom avec ein ou sans article, nicht pour tout le reste.",
+          "examples": [
+            {
+              "de": "Das ist kein Problem.",
+              "tr": "Ce n’est pas un problème."
+            },
+            {
+              "de": "Ich habe leider keine Zeit.",
+              "tr": "Malheureusement, je n’ai pas le temps."
+            }
+          ]
+        },
+        {
+          "title": "Doch !",
+          "text": "À une question négative, on répond « oui » par Doch !",
+          "examples": [
+            {
+              "de": "Hast du keinen Hunger? Doch, natürlich!",
+              "tr": "Tu n’as pas faim ? Si, bien sûr !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: sorular ve olumsuzluk",
+      "points": [
+        {
+          "title": "Soruda kelime sırası",
+          "text": "Soru kelimesi yoksa fiil başta. Soru kelimesi varsa fiil ikinci.",
+          "examples": [
+            {
+              "de": "Kommst du? Wo ist das Problem?",
+              "tr": "Geliyor musun? Sorun nerede?"
+            }
+          ]
+        },
+        {
+          "title": "nicht mi, kein mi",
+          "text": "ein’li ya da artikelsiz isim için kein, geri kalan her şey için nicht.",
+          "examples": [
+            {
+              "de": "Das ist kein Problem.",
+              "tr": "Sorun değil."
+            },
+            {
+              "de": "Ich habe leider keine Zeit.",
+              "tr": "Maalesef vaktim yok."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "Olumsuz soruya \"evet\" cevabı Doch! ile verilir.",
+          "examples": [
+            {
+              "de": "Hast du keinen Hunger? Doch, natürlich!",
+              "tr": "Aç değil misin? Tabii ki açım!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: întrebări și negație",
+      "points": [
+        {
+          "title": "Ordinea în întrebare",
+          "text": "Fără cuvânt interogativ, verbul primul. Cu cuvânt interogativ, verbul al doilea.",
+          "examples": [
+            {
+              "de": "Kommst du? Wo ist das Problem?",
+              "tr": "Vii? Unde e problema?"
+            }
+          ]
+        },
+        {
+          "title": "nicht sau kein",
+          "text": "kein pentru substantiv cu ein sau fără articol, nicht pentru restul.",
+          "examples": [
+            {
+              "de": "Das ist kein Problem.",
+              "tr": "Nu e nicio problemă."
+            },
+            {
+              "de": "Ich habe leider keine Zeit.",
+              "tr": "Din păcate nu am timp."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "La o întrebare negativă răspunzi „ba da” cu Doch!",
+          "examples": [
+            {
+              "de": "Hast du keinen Hunger? Doch, natürlich!",
+              "tr": "Nu ți-e foame? Ba da, sigur!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: savollar va inkor",
+      "points": [
+        {
+          "title": "Savolda so'z tartibi",
+          "text": "Savol so'zisiz fe'l birinchi. Savol so'zi bilan fe'l ikkinchi.",
+          "examples": [
+            {
+              "de": "Kommst du? Wo ist das Problem?",
+              "tr": "Kelasanmi? Muammo qayerda?"
+            }
+          ]
+        },
+        {
+          "title": "nicht yoki kein",
+          "text": "ein li yoki artiklsiz ot uchun kein, qolgan hammasi uchun nicht.",
+          "examples": [
+            {
+              "de": "Das ist kein Problem.",
+              "tr": "Bu muammo emas."
+            },
+            {
+              "de": "Ich habe leider keine Zeit.",
+              "tr": "Afsuski, vaqtim yo'q."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "Inkor savolga \"ha\" javobi Doch! bilan beriladi.",
+          "examples": [
+            {
+              "de": "Hast du keinen Hunger? Doch, natürlich!",
+              "tr": "Qorning och emasmi? Albatta och!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: सवाल और नकार",
+      "points": [
+        {
+          "title": "सवाल में शब्द क्रम",
+          "text": "प्रश्नवाचक शब्द के बिना क्रिया पहले। प्रश्नवाचक शब्द के साथ क्रिया दूसरे स्थान पर।",
+          "examples": [
+            {
+              "de": "Kommst du? Wo ist das Problem?",
+              "tr": "क्या तुम आओगे? समस्या कहाँ है?"
+            }
+          ]
+        },
+        {
+          "title": "nicht या kein",
+          "text": "ein वाली या बिना आर्टिकल वाली संज्ञा के लिए kein, बाकी सबके लिए nicht।",
+          "examples": [
+            {
+              "de": "Das ist kein Problem.",
+              "tr": "यह कोई समस्या नहीं है।"
+            },
+            {
+              "de": "Ich habe leider keine Zeit.",
+              "tr": "माफ़ करना, मेरे पास समय नहीं है।"
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "नकारात्मक सवाल का \"हाँ\" वाला जवाब Doch! से देते हैं।",
+          "examples": [
+            {
+              "de": "Hast du keinen Hunger? Doch, natürlich!",
+              "tr": "तुम्हें भूख नहीं है? बिल्कुल है!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الأسئلة والنفي",
+      "points": [
+        {
+          "title": "ترتيب السؤال",
+          "text": "بدون أداة استفهام يأتي الفعل أولاً. ومع أداة الاستفهام يأتي الفعل ثانياً.",
+          "examples": [
+            {
+              "de": "Kommst du? Wo ist das Problem?",
+              "tr": "هل ستأتي؟ أين المشكلة؟"
+            }
+          ]
+        },
+        {
+          "title": "nicht أم kein",
+          "text": "kein للاسم مع ein أو بدون أداة، وnicht لكل ما عدا ذلك.",
+          "examples": [
+            {
+              "de": "Das ist kein Problem.",
+              "tr": "هذه ليست مشكلة."
+            },
+            {
+              "de": "Ich habe leider keine Zeit.",
+              "tr": "للأسف ليس عندي وقت."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "نجيب بـ \"بلى\" عن السؤال المنفي بكلمة Doch!",
+          "examples": [
+            {
+              "de": "Hast du keinen Hunger? Doch, natürlich!",
+              "tr": "ألست جائعاً؟ بلى، طبعاً!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "a1-summit-three": {
+    "ru": {
+      "title": "Повторение: Akkusativ",
+      "points": [
+        {
+          "title": "Мужской род меняется",
+          "text": "После kaufen, brauchen, nehmen и других: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "Мне нужен йогурт."
+            }
+          ]
+        },
+        {
+          "title": "Остальное не меняется",
+          "text": "die, das и множественное остаются как были.",
+          "examples": [
+            {
+              "de": "Kaufst du eine Orange?",
+              "tr": "Ты покупаешь апельсин?"
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Чтобы не повторять вещь после глагола: der Rock → ihn, die Hose → sie, das Hemd → es, во множественном sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Свитер красивый. Я беру его."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Куртка дорогая. Я её не покупаю."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: Akkusativ",
+      "points": [
+        {
+          "title": "Чоловічий рід змінюється",
+          "text": "Після kaufen, brauchen, nehmen та інших: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "Мені потрібен йогурт."
+            }
+          ]
+        },
+        {
+          "title": "Решта не змінюється",
+          "text": "die, das і множина лишаються як були.",
+          "examples": [
+            {
+              "de": "Kaufst du eine Orange?",
+              "tr": "Ти купуєш апельсин?"
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Щоб не повторювати річ після дієслова: der Rock → ihn, die Hose → sie, das Hemd → es, у множині sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Светр гарний. Я беру його."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Куртка дорога. Я її не купую."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: the accusative",
+      "points": [
+        {
+          "title": "Masculine changes",
+          "text": "After kaufen, brauchen, nehmen and others: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "I need a yogurt."
+            }
+          ]
+        },
+        {
+          "title": "The rest stays the same",
+          "text": "die, das and plural stay as they are.",
+          "examples": [
+            {
+              "de": "Kaufst du eine Orange?",
+              "tr": "Are you buying an orange?"
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "To avoid repeating the thing after the verb: der Rock → ihn, die Hose → sie, das Hemd → es, plural sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "The jumper is nice. I’ll take it."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "The jacket is expensive. I won’t buy it."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: Akkusativ",
+      "points": [
+        {
+          "title": "Rodzaj męski się zmienia",
+          "text": "Po kaufen, brauchen, nehmen i innych: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "Potrzebuję jogurtu."
+            }
+          ]
+        },
+        {
+          "title": "Reszta się nie zmienia",
+          "text": "die, das i liczba mnoga zostają bez zmian.",
+          "examples": [
+            {
+              "de": "Kaufst du eine Orange?",
+              "tr": "Kupujesz pomarańczę?"
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Żeby nie powtarzać rzeczy po czasowniku: der Rock → ihn, die Hose → sie, das Hemd → es, w liczbie mnogiej sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Sweter jest ładny. Biorę go."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Kurtka jest droga. Nie kupuję jej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: el acusativo",
+      "points": [
+        {
+          "title": "El masculino cambia",
+          "text": "Después de kaufen, brauchen, nehmen y otros: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "Necesito un yogur."
+            }
+          ]
+        },
+        {
+          "title": "Lo demás no cambia",
+          "text": "die, das y el plural quedan igual.",
+          "examples": [
+            {
+              "de": "Kaufst du eine Orange?",
+              "tr": "¿Compras una naranja?"
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Para no repetir la cosa tras el verbo: der Rock → ihn, die Hose → sie, das Hemd → es, en plural sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "El jersey es bonito. Me lo llevo."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "La chaqueta es cara. No la compro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : l’accusatif",
+      "points": [
+        {
+          "title": "Le masculin change",
+          "text": "Après kaufen, brauchen, nehmen et d’autres : der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "J’ai besoin d’un yaourt."
+            }
+          ]
+        },
+        {
+          "title": "Le reste ne change pas",
+          "text": "die, das et le pluriel restent tels quels.",
+          "examples": [
+            {
+              "de": "Kaufst du eine Orange?",
+              "tr": "Tu achètes une orange ?"
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Pour ne pas répéter l’objet après le verbe : der Rock → ihn, die Hose → sie, das Hemd → es, au pluriel sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Le pull est beau. Je le prends."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "La veste est chère. Je ne l’achète pas."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: Akkusativ",
+      "points": [
+        {
+          "title": "Eril değişir",
+          "text": "kaufen, brauchen, nehmen ve diğerlerinden sonra: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "Bir yoğurda ihtiyacım var."
+            }
+          ]
+        },
+        {
+          "title": "Gerisi değişmez",
+          "text": "die, das ve çoğul aynı kalır.",
+          "examples": [
+            {
+              "de": "Kaufst du eine Orange?",
+              "tr": "Bir portakal mı alıyorsun?"
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Fiilden sonra eşyayı tekrarlamamak için: der Rock → ihn, die Hose → sie, das Hemd → es, çoğulda sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Kazak güzel. Onu alıyorum."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Ceket pahalı. Onu almıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: acuzativul",
+      "points": [
+        {
+          "title": "Masculinul se schimbă",
+          "text": "După kaufen, brauchen, nehmen și altele: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "Am nevoie de un iaurt."
+            }
+          ]
+        },
+        {
+          "title": "Restul nu se schimbă",
+          "text": "die, das și pluralul rămân la fel.",
+          "examples": [
+            {
+              "de": "Kaufst du eine Orange?",
+              "tr": "Cumperi o portocală?"
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Ca să nu repeți lucrul după verb: der Rock → ihn, die Hose → sie, das Hemd → es, la plural sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Puloverul e frumos. Îl iau."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Geaca e scumpă. Nu o cumpăr."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: Akkusativ",
+      "points": [
+        {
+          "title": "Erkak rodi o'zgaradi",
+          "text": "kaufen, brauchen, nehmen va boshqalardan keyin: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "Menga yogurt kerak."
+            }
+          ]
+        },
+        {
+          "title": "Qolgani o'zgarmaydi",
+          "text": "die, das va ko'plik o'zgarmaydi.",
+          "examples": [
+            {
+              "de": "Kaufst du eine Orange?",
+              "tr": "Apelsin sotib olasanmi?"
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "Fe'ldan keyin narsani takrorlamaslik uchun: der Rock → ihn, die Hose → sie, das Hemd → es, ko'plikda sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "Sviter chiroyli. Uni olaman."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "Kurtka qimmat. Uni sotib olmayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: Akkusativ",
+      "points": [
+        {
+          "title": "पुल्लिंग बदलता है",
+          "text": "kaufen, brauchen, nehmen आदि के बाद: der → den, ein → einen, kein → keinen।",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "मुझे एक दही चाहिए।"
+            }
+          ]
+        },
+        {
+          "title": "बाकी नहीं बदलता",
+          "text": "die, das और बहुवचन वैसे ही रहते हैं।",
+          "examples": [
+            {
+              "de": "Kaufst du eine Orange?",
+              "tr": "क्या तुम एक संतरा खरीद रहे हो?"
+            }
+          ]
+        },
+        {
+          "title": "ihn, sie, es",
+          "text": "क्रिया के बाद चीज़ दोहराने के बजाय: der Rock → ihn, die Hose → sie, das Hemd → es, बहुवचन में sie।",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "स्वेटर सुंदर है। मैं इसे लेता हूँ।"
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "जैकेट महँगी है। मैं इसे नहीं खरीदूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: حالة المفعول",
+      "points": [
+        {
+          "title": "المذكر يتغير",
+          "text": "بعد kaufen وbrauchen وnehmen وغيرها: der → den، ein → einen، kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "أحتاج زبادي."
+            }
+          ]
+        },
+        {
+          "title": "الباقي لا يتغير",
+          "text": "die وdas والجمع تبقى كما هي.",
+          "examples": [
+            {
+              "de": "Kaufst du eine Orange?",
+              "tr": "هل تشتري برتقالة؟"
+            }
+          ]
+        },
+        {
+          "title": "ihn وsie وes",
+          "text": "لكي لا نكرر الشيء بعد الفعل: der Rock → ihn، die Hose → sie، das Hemd → es، وفي الجمع sie.",
+          "examples": [
+            {
+              "de": "Der Pullover ist schön. Ich nehme ihn.",
+              "tr": "الكنزة جميلة. سآخذها."
+            },
+            {
+              "de": "Die Jacke ist teuer. Ich kaufe sie nicht.",
+              "tr": "السترة غالية. لن أشتريها."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "a1-summit-four": {
+    "ru": {
+      "title": "Повторение: глаголы с меняющейся гласной",
+      "points": [
+        {
+          "title": "wir и ihr без изменений",
+          "text": "Гласная меняется только у du и er/sie/es. У ich, wir, ihr, sie всё как обычно. Ошибка «wir fähren» или «ihr isst» очень частая.",
+          "examples": [
+            {
+              "de": "du fährst → wir fahren, ihr fahrt",
+              "tr": "ты едешь → мы едем, вы едете"
+            },
+            {
+              "de": "er isst → wir essen, ihr esst",
+              "tr": "он ест → мы едим, вы едите"
+            }
+          ]
+        },
+        {
+          "title": "a → ä",
+          "text": "fahren, schlafen, laufen.",
+          "examples": [
+            {
+              "de": "Er fährt schnell Auto.",
+              "tr": "Он быстро ездит на машине."
+            }
+          ]
+        },
+        {
+          "title": "e → i",
+          "text": "essen, sprechen, treffen, geben, nehmen (du nimmst).",
+          "examples": [
+            {
+              "de": "Du sprichst zu schnell!",
+              "tr": "Ты говоришь слишком быстро!"
+            }
+          ]
+        },
+        {
+          "title": "e → ie и wissen",
+          "text": "lesen, sehen, fernsehen. Отдельно wissen: ich weiß, er weiß.",
+          "examples": [
+            {
+              "de": "Sie sieht das Auto.",
+              "tr": "Она видит машину."
+            }
+          ]
+        },
+        {
+          "title": "wissen: ich weiß",
+          "text": "wissen особенный: у ich и er одинаково и без окончания -t. Ich weiß nicht значит «не знаю».",
+          "examples": [
+            {
+              "de": "ich weiß, du weißt, er weiß",
+              "tr": "я знаю, ты знаешь, он знает"
+            },
+            {
+              "de": "Weißt du die Adresse?",
+              "tr": "Ты знаешь адрес?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: дієслова зі змінною голосною",
+      "points": [
+        {
+          "title": "wir та ihr без змін",
+          "text": "Голосна змінюється лише у du та er/sie/es. У ich, wir, ihr, sie усе як зазвичай. Помилка «wir fähren» чи «ihr isst» дуже часта.",
+          "examples": [
+            {
+              "de": "du fährst → wir fahren, ihr fahrt",
+              "tr": "ти їдеш → ми їдемо, ви їдете"
+            },
+            {
+              "de": "er isst → wir essen, ihr esst",
+              "tr": "він їсть → ми їмо, ви їсте"
+            }
+          ]
+        },
+        {
+          "title": "a → ä",
+          "text": "fahren, schlafen, laufen.",
+          "examples": [
+            {
+              "de": "Er fährt schnell Auto.",
+              "tr": "Він швидко їздить машиною."
+            }
+          ]
+        },
+        {
+          "title": "e → i",
+          "text": "essen, sprechen, treffen, geben, nehmen (du nimmst).",
+          "examples": [
+            {
+              "de": "Du sprichst zu schnell!",
+              "tr": "Ти говориш занадто швидко!"
+            }
+          ]
+        },
+        {
+          "title": "e → ie і wissen",
+          "text": "lesen, sehen, fernsehen. Окремо wissen: ich weiß, er weiß.",
+          "examples": [
+            {
+              "de": "Sie sieht das Auto.",
+              "tr": "Вона бачить машину."
+            }
+          ]
+        },
+        {
+          "title": "wissen: ich weiß",
+          "text": "wissen особливе: у ich та er однаково і без закінчення -t. Ich weiß nicht означає «не знаю».",
+          "examples": [
+            {
+              "de": "ich weiß, du weißt, er weiß",
+              "tr": "я знаю, ти знаєш, він знає"
+            },
+            {
+              "de": "Weißt du die Adresse?",
+              "tr": "Ти знаєш адресу?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: verbs with a vowel change",
+      "points": [
+        {
+          "title": "wir and ihr stay regular",
+          "text": "The vowel changes only with du and er/sie/es. With ich, wir, ihr, sie everything is normal. \"wir fähren\" or \"ihr isst\" is a very common mistake.",
+          "examples": [
+            {
+              "de": "du fährst → wir fahren, ihr fahrt",
+              "tr": "you go → we go, you (all) go"
+            },
+            {
+              "de": "er isst → wir essen, ihr esst",
+              "tr": "he eats → we eat, you (all) eat"
+            }
+          ]
+        },
+        {
+          "title": "a → ä",
+          "text": "fahren, schlafen, laufen.",
+          "examples": [
+            {
+              "de": "Er fährt schnell Auto.",
+              "tr": "He drives fast."
+            }
+          ]
+        },
+        {
+          "title": "e → i",
+          "text": "essen, sprechen, treffen, geben, nehmen (du nimmst).",
+          "examples": [
+            {
+              "de": "Du sprichst zu schnell!",
+              "tr": "You speak too fast!"
+            }
+          ]
+        },
+        {
+          "title": "e → ie and wissen",
+          "text": "lesen, sehen, fernsehen. And separately wissen: ich weiß, er weiß.",
+          "examples": [
+            {
+              "de": "Sie sieht das Auto.",
+              "tr": "She sees the car."
+            }
+          ]
+        },
+        {
+          "title": "wissen: ich weiß",
+          "text": "wissen is special: ich and er are the same, with no -t. Ich weiß nicht means \"I don’t know\".",
+          "examples": [
+            {
+              "de": "ich weiß, du weißt, er weiß",
+              "tr": "I know, you know, he knows"
+            },
+            {
+              "de": "Weißt du die Adresse?",
+              "tr": "Do you know the address?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: czasowniki ze zmianą samogłoski",
+      "points": [
+        {
+          "title": "wir i ihr bez zmian",
+          "text": "Samogłoska zmienia się tylko przy du i er/sie/es. Przy ich, wir, ihr, sie wszystko normalnie. Błąd „wir fähren” albo „ihr isst” jest bardzo częsty.",
+          "examples": [
+            {
+              "de": "du fährst → wir fahren, ihr fahrt",
+              "tr": "jedziesz → jedziemy, jedziecie"
+            },
+            {
+              "de": "er isst → wir essen, ihr esst",
+              "tr": "on je → jemy, jecie"
+            }
+          ]
+        },
+        {
+          "title": "a → ä",
+          "text": "fahren, schlafen, laufen.",
+          "examples": [
+            {
+              "de": "Er fährt schnell Auto.",
+              "tr": "On szybko jeździ samochodem."
+            }
+          ]
+        },
+        {
+          "title": "e → i",
+          "text": "essen, sprechen, treffen, geben, nehmen (du nimmst).",
+          "examples": [
+            {
+              "de": "Du sprichst zu schnell!",
+              "tr": "Mówisz za szybko!"
+            }
+          ]
+        },
+        {
+          "title": "e → ie i wissen",
+          "text": "lesen, sehen, fernsehen. Osobno wissen: ich weiß, er weiß.",
+          "examples": [
+            {
+              "de": "Sie sieht das Auto.",
+              "tr": "Ona widzi samochód."
+            }
+          ]
+        },
+        {
+          "title": "wissen: ich weiß",
+          "text": "wissen jest szczególny: ich i er są takie same, bez końcówki -t. Ich weiß nicht znaczy „nie wiem”.",
+          "examples": [
+            {
+              "de": "ich weiß, du weißt, er weiß",
+              "tr": "wiem, wiesz, on wie"
+            },
+            {
+              "de": "Weißt du die Adresse?",
+              "tr": "Znasz adres?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: verbos con cambio vocálico",
+      "points": [
+        {
+          "title": "wir e ihr sin cambios",
+          "text": "La vocal cambia solo con du y er/sie/es. Con ich, wir, ihr, sie todo es normal. \"wir fähren\" o \"ihr isst\" es un error muy frecuente.",
+          "examples": [
+            {
+              "de": "du fährst → wir fahren, ihr fahrt",
+              "tr": "vas → vamos, vais"
+            },
+            {
+              "de": "er isst → wir essen, ihr esst",
+              "tr": "él come → comemos, coméis"
+            }
+          ]
+        },
+        {
+          "title": "a → ä",
+          "text": "fahren, schlafen, laufen.",
+          "examples": [
+            {
+              "de": "Er fährt schnell Auto.",
+              "tr": "Él conduce rápido."
+            }
+          ]
+        },
+        {
+          "title": "e → i",
+          "text": "essen, sprechen, treffen, geben, nehmen (du nimmst).",
+          "examples": [
+            {
+              "de": "Du sprichst zu schnell!",
+              "tr": "¡Hablas demasiado rápido!"
+            }
+          ]
+        },
+        {
+          "title": "e → ie y wissen",
+          "text": "lesen, sehen, fernsehen. Aparte, wissen: ich weiß, er weiß.",
+          "examples": [
+            {
+              "de": "Sie sieht das Auto.",
+              "tr": "Ella ve el coche."
+            }
+          ]
+        },
+        {
+          "title": "wissen: ich weiß",
+          "text": "wissen es especial: ich y er son iguales y sin -t. Ich weiß nicht significa \"no sé\".",
+          "examples": [
+            {
+              "de": "ich weiß, du weißt, er weiß",
+              "tr": "sé, sabes, él sabe"
+            },
+            {
+              "de": "Weißt du die Adresse?",
+              "tr": "¿Sabes la dirección?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : verbes à changement de voyelle",
+      "points": [
+        {
+          "title": "wir et ihr ne changent pas",
+          "text": "La voyelle change seulement avec du et er/sie/es. Avec ich, wir, ihr, sie tout est normal. « wir fähren » ou « ihr isst » est une erreur très fréquente.",
+          "examples": [
+            {
+              "de": "du fährst → wir fahren, ihr fahrt",
+              "tr": "tu vas → nous allons, vous allez"
+            },
+            {
+              "de": "er isst → wir essen, ihr esst",
+              "tr": "il mange → nous mangeons, vous mangez"
+            }
+          ]
+        },
+        {
+          "title": "a → ä",
+          "text": "fahren, schlafen, laufen.",
+          "examples": [
+            {
+              "de": "Er fährt schnell Auto.",
+              "tr": "Il conduit vite."
+            }
+          ]
+        },
+        {
+          "title": "e → i",
+          "text": "essen, sprechen, treffen, geben, nehmen (du nimmst).",
+          "examples": [
+            {
+              "de": "Du sprichst zu schnell!",
+              "tr": "Tu parles trop vite !"
+            }
+          ]
+        },
+        {
+          "title": "e → ie et wissen",
+          "text": "lesen, sehen, fernsehen. À part, wissen : ich weiß, er weiß.",
+          "examples": [
+            {
+              "de": "Sie sieht das Auto.",
+              "tr": "Elle voit la voiture."
+            }
+          ]
+        },
+        {
+          "title": "wissen : ich weiß",
+          "text": "wissen est particulier : ich et er sont identiques, sans -t. Ich weiß nicht veut dire « je ne sais pas ».",
+          "examples": [
+            {
+              "de": "ich weiß, du weißt, er weiß",
+              "tr": "je sais, tu sais, il sait"
+            },
+            {
+              "de": "Weißt du die Adresse?",
+              "tr": "Tu connais l’adresse ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: ünlüsü değişen fiiller",
+      "points": [
+        {
+          "title": "wir ve ihr değişmez",
+          "text": "Ünlü sadece du ve er/sie/es ile değişir. ich, wir, ihr, sie ile her şey normaldir. \"wir fähren\" ya da \"ihr isst\" çok sık yapılan hatadır.",
+          "examples": [
+            {
+              "de": "du fährst → wir fahren, ihr fahrt",
+              "tr": "gidiyorsun → gidiyoruz, gidiyorsunuz"
+            },
+            {
+              "de": "er isst → wir essen, ihr esst",
+              "tr": "o yiyor → yiyoruz, yiyorsunuz"
+            }
+          ]
+        },
+        {
+          "title": "a → ä",
+          "text": "fahren, schlafen, laufen.",
+          "examples": [
+            {
+              "de": "Er fährt schnell Auto.",
+              "tr": "O hızlı araba sürüyor."
+            }
+          ]
+        },
+        {
+          "title": "e → i",
+          "text": "essen, sprechen, treffen, geben, nehmen (du nimmst).",
+          "examples": [
+            {
+              "de": "Du sprichst zu schnell!",
+              "tr": "Çok hızlı konuşuyorsun!"
+            }
+          ]
+        },
+        {
+          "title": "e → ie ve wissen",
+          "text": "lesen, sehen, fernsehen. Ayrıca wissen: ich weiß, er weiß.",
+          "examples": [
+            {
+              "de": "Sie sieht das Auto.",
+              "tr": "O arabayı görüyor."
+            }
+          ]
+        },
+        {
+          "title": "wissen: ich weiß",
+          "text": "wissen özeldir: ich ve er aynıdır, -t yoktur. Ich weiß nicht \"bilmiyorum\" demektir.",
+          "examples": [
+            {
+              "de": "ich weiß, du weißt, er weiß",
+              "tr": "biliyorum, biliyorsun, biliyor"
+            },
+            {
+              "de": "Weißt du die Adresse?",
+              "tr": "Adresi biliyor musun?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: verbe cu schimbare de vocală",
+      "points": [
+        {
+          "title": "wir și ihr fără schimbări",
+          "text": "Vocala se schimbă doar la du și er/sie/es. La ich, wir, ihr, sie totul e normal. „wir fähren” sau „ihr isst” este o greșeală foarte des întâlnită.",
+          "examples": [
+            {
+              "de": "du fährst → wir fahren, ihr fahrt",
+              "tr": "mergi → mergem, mergeți"
+            },
+            {
+              "de": "er isst → wir essen, ihr esst",
+              "tr": "el mănâncă → mâncăm, mâncați"
+            }
+          ]
+        },
+        {
+          "title": "a → ä",
+          "text": "fahren, schlafen, laufen.",
+          "examples": [
+            {
+              "de": "Er fährt schnell Auto.",
+              "tr": "El conduce repede."
+            }
+          ]
+        },
+        {
+          "title": "e → i",
+          "text": "essen, sprechen, treffen, geben, nehmen (du nimmst).",
+          "examples": [
+            {
+              "de": "Du sprichst zu schnell!",
+              "tr": "Vorbești prea repede!"
+            }
+          ]
+        },
+        {
+          "title": "e → ie și wissen",
+          "text": "lesen, sehen, fernsehen. Separat wissen: ich weiß, er weiß.",
+          "examples": [
+            {
+              "de": "Sie sieht das Auto.",
+              "tr": "Ea vede mașina."
+            }
+          ]
+        },
+        {
+          "title": "wissen: ich weiß",
+          "text": "wissen e special: ich și er sunt la fel, fără -t. Ich weiß nicht înseamnă „nu știu”.",
+          "examples": [
+            {
+              "de": "ich weiß, du weißt, er weiß",
+              "tr": "știu, știi, el știe"
+            },
+            {
+              "de": "Weißt du die Adresse?",
+              "tr": "Știi adresa?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: unlisi o'zgaradigan fe'llar",
+      "points": [
+        {
+          "title": "wir va ihr o'zgarmaydi",
+          "text": "Unli faqat du va er/sie/es da o'zgaradi. ich, wir, ihr, sie da hammasi odatdagidek. \"wir fähren\" yoki \"ihr isst\" juda ko'p uchraydigan xato.",
+          "examples": [
+            {
+              "de": "du fährst → wir fahren, ihr fahrt",
+              "tr": "borasan → boramiz, borasizlar"
+            },
+            {
+              "de": "er isst → wir essen, ihr esst",
+              "tr": "u yeydi → yeymiz, yeysizlar"
+            }
+          ]
+        },
+        {
+          "title": "a → ä",
+          "text": "fahren, schlafen, laufen.",
+          "examples": [
+            {
+              "de": "Er fährt schnell Auto.",
+              "tr": "U mashinani tez haydaydi."
+            }
+          ]
+        },
+        {
+          "title": "e → i",
+          "text": "essen, sprechen, treffen, geben, nehmen (du nimmst).",
+          "examples": [
+            {
+              "de": "Du sprichst zu schnell!",
+              "tr": "Sen juda tez gapirasan!"
+            }
+          ]
+        },
+        {
+          "title": "e → ie va wissen",
+          "text": "lesen, sehen, fernsehen. Alohida wissen: ich weiß, er weiß.",
+          "examples": [
+            {
+              "de": "Sie sieht das Auto.",
+              "tr": "U mashinani ko'ryapti."
+            }
+          ]
+        },
+        {
+          "title": "wissen: ich weiß",
+          "text": "wissen alohida: ich va er bir xil, -t siz. Ich weiß nicht \"bilmayman\" degani.",
+          "examples": [
+            {
+              "de": "ich weiß, du weißt, er weiß",
+              "tr": "bilaman, bilasan, biladi"
+            },
+            {
+              "de": "Weißt du die Adresse?",
+              "tr": "Manzilni bilasanmi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: स्वर बदलने वाली क्रियाएँ",
+      "points": [
+        {
+          "title": "wir और ihr नहीं बदलते",
+          "text": "स्वर सिर्फ़ du और er/sie/es के साथ बदलता है। ich, wir, ihr, sie के साथ सब सामान्य। \"wir fähren\" या \"ihr isst\" बहुत आम गलती है।",
+          "examples": [
+            {
+              "de": "du fährst → wir fahren, ihr fahrt",
+              "tr": "तुम जाते हो → हम जाते हैं, तुम सब जाते हो"
+            },
+            {
+              "de": "er isst → wir essen, ihr esst",
+              "tr": "वह खाता है → हम खाते हैं, तुम सब खाते हो"
+            }
+          ]
+        },
+        {
+          "title": "a → ä",
+          "text": "fahren, schlafen, laufen।",
+          "examples": [
+            {
+              "de": "Er fährt schnell Auto.",
+              "tr": "वह तेज़ गाड़ी चलाता है।"
+            }
+          ]
+        },
+        {
+          "title": "e → i",
+          "text": "essen, sprechen, treffen, geben, nehmen (du nimmst)।",
+          "examples": [
+            {
+              "de": "Du sprichst zu schnell!",
+              "tr": "तुम बहुत तेज़ बोलते हो!"
+            }
+          ]
+        },
+        {
+          "title": "e → ie और wissen",
+          "text": "lesen, sehen, fernsehen। अलग से wissen: ich weiß, er weiß।",
+          "examples": [
+            {
+              "de": "Sie sieht das Auto.",
+              "tr": "उसे गाड़ी दिख रही है।"
+            }
+          ]
+        },
+        {
+          "title": "wissen: ich weiß",
+          "text": "wissen खास है: ich और er एक जैसे, बिना -t के। Ich weiß nicht का मतलब \"मुझे नहीं पता\"।",
+          "examples": [
+            {
+              "de": "ich weiß, du weißt, er weiß",
+              "tr": "मैं जानता हूँ, तुम जानते हो, वह जानता है"
+            },
+            {
+              "de": "Weißt du die Adresse?",
+              "tr": "क्या तुम्हें पता मालूम है?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الأفعال التي يتغير حرفها",
+      "points": [
+        {
+          "title": "wir وihr بدون تغيير",
+          "text": "يتغير الحرف مع du وer/sie/es فقط. أما مع ich وwir وihr وsie فكل شيء عادي. والخطأ \"wir fähren\" أو \"ihr isst\" شائع جداً.",
+          "examples": [
+            {
+              "de": "du fährst → wir fahren, ihr fahrt",
+              "tr": "تذهب → نذهب، تذهبون"
+            },
+            {
+              "de": "er isst → wir essen, ihr esst",
+              "tr": "يأكل → نأكل، تأكلون"
+            }
+          ]
+        },
+        {
+          "title": "a → ä",
+          "text": "fahren، schlafen، laufen.",
+          "examples": [
+            {
+              "de": "Er fährt schnell Auto.",
+              "tr": "هو يقود السيارة بسرعة."
+            }
+          ]
+        },
+        {
+          "title": "e → i",
+          "text": "essen، sprechen، treffen، geben، nehmen (du nimmst).",
+          "examples": [
+            {
+              "de": "Du sprichst zu schnell!",
+              "tr": "أنت تتكلم بسرعة كبيرة!"
+            }
+          ]
+        },
+        {
+          "title": "e → ie وwissen",
+          "text": "lesen، sehen، fernsehen. وعلى حدة wissen: ich weiß، er weiß.",
+          "examples": [
+            {
+              "de": "Sie sieht das Auto.",
+              "tr": "هي ترى السيارة."
+            }
+          ]
+        },
+        {
+          "title": "wissen: ich weiß",
+          "text": "wissen فعل خاص: ich وer متشابهتان وبدون -t. وIch weiß nicht تعني \"لا أعرف\".",
+          "examples": [
+            {
+              "de": "ich weiß, du weißt, er weiß",
+              "tr": "أعرف، تعرف، يعرف"
+            },
+            {
+              "de": "Weißt du die Adresse?",
+              "tr": "هل تعرف العنوان؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "a1-summit-five": {
+    "ru": {
+      "title": "Повторение: чьё и когда",
+      "points": [
+        {
+          "title": "Два шага",
+          "text": "Сначала выбираем слово по хозяину, потом окончание по вещи.",
+          "examples": [
+            {
+              "de": "ich → mein, du → dein, er → sein, sie → ihr",
+              "tr": "я, ты, он, она"
+            },
+            {
+              "de": "wir → unser, ihr → euer, sie → ihr, Sie → Ihr",
+              "tr": "мы, вы, они, Вы"
+            },
+            {
+              "de": "Ist das deine Jacke? Nein, ihre.",
+              "tr": "Это твоя куртка? Нет, её."
+            }
+          ]
+        },
+        {
+          "title": "Короткая шпаргалка",
+          "text": "am + день, um + время, im + месяц.",
+          "examples": [
+            {
+              "de": "am Freitag, um neun Uhr, im Juni",
+              "tr": "в пятницу, в девять, в июне"
+            }
+          ]
+        },
+        {
+          "title": "Время первым, глагол вторым",
+          "text": "Если время стоит в начале, глагол идёт сразу за ним, а потом ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "В понедельник я работаю."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: чиє і коли",
+      "points": [
+        {
+          "title": "Два кроки",
+          "text": "Спочатку обираємо слово за власником, потім закінчення за річчю.",
+          "examples": [
+            {
+              "de": "ich → mein, du → dein, er → sein, sie → ihr",
+              "tr": "я, ти, він, вона"
+            },
+            {
+              "de": "wir → unser, ihr → euer, sie → ihr, Sie → Ihr",
+              "tr": "ми, ви, вони, Ви"
+            },
+            {
+              "de": "Ist das deine Jacke? Nein, ihre.",
+              "tr": "Це твоя куртка? Ні, її."
+            }
+          ]
+        },
+        {
+          "title": "Коротка шпаргалка",
+          "text": "am + день, um + час, im + місяць.",
+          "examples": [
+            {
+              "de": "am Freitag, um neun Uhr, im Juni",
+              "tr": "у пʼятницю, о девʼятій, у червні"
+            }
+          ]
+        },
+        {
+          "title": "Час першим, дієслово другим",
+          "text": "Якщо час стоїть на початку, дієслово йде одразу за ним, а потім ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "У понеділок я працюю."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: whose and when",
+      "points": [
+        {
+          "title": "Two steps",
+          "text": "First choose the word by the owner, then the ending by the thing.",
+          "examples": [
+            {
+              "de": "ich → mein, du → dein, er → sein, sie → ihr",
+              "tr": "I, you, he, she"
+            },
+            {
+              "de": "wir → unser, ihr → euer, sie → ihr, Sie → Ihr",
+              "tr": "we, you (all), they, you (polite)"
+            },
+            {
+              "de": "Ist das deine Jacke? Nein, ihre.",
+              "tr": "Is this your jacket? No, hers."
+            }
+          ]
+        },
+        {
+          "title": "Quick cheat sheet",
+          "text": "am + day, um + time, im + month.",
+          "examples": [
+            {
+              "de": "am Freitag, um neun Uhr, im Juni",
+              "tr": "on Friday, at nine, in June"
+            }
+          ]
+        },
+        {
+          "title": "Time first, verb second",
+          "text": "If the time comes first, the verb comes right after it, then ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "On Monday I work."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: czyje i kiedy",
+      "points": [
+        {
+          "title": "Dwa kroki",
+          "text": "Najpierw wybieramy słowo według właściciela, potem końcówkę według rzeczy.",
+          "examples": [
+            {
+              "de": "ich → mein, du → dein, er → sein, sie → ihr",
+              "tr": "ja, ty, on, ona"
+            },
+            {
+              "de": "wir → unser, ihr → euer, sie → ihr, Sie → Ihr",
+              "tr": "my, wy, oni, Pan/Pani"
+            },
+            {
+              "de": "Ist das deine Jacke? Nein, ihre.",
+              "tr": "To twoja kurtka? Nie, jej."
+            }
+          ]
+        },
+        {
+          "title": "Krótka ściąga",
+          "text": "am + dzień, um + godzina, im + miesiąc.",
+          "examples": [
+            {
+              "de": "am Freitag, um neun Uhr, im Juni",
+              "tr": "w piątek, o dziewiątej, w czerwcu"
+            }
+          ]
+        },
+        {
+          "title": "Czas pierwszy, czasownik drugi",
+          "text": "Jeśli czas jest na początku, czasownik idzie zaraz po nim, a potem ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "W poniedziałek pracuję."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: de quién y cuándo",
+      "points": [
+        {
+          "title": "Dos pasos",
+          "text": "Primero la palabra según el dueño, luego la terminación según la cosa.",
+          "examples": [
+            {
+              "de": "ich → mein, du → dein, er → sein, sie → ihr",
+              "tr": "yo, tú, él, ella"
+            },
+            {
+              "de": "wir → unser, ihr → euer, sie → ihr, Sie → Ihr",
+              "tr": "nosotros, vosotros, ellos, usted"
+            },
+            {
+              "de": "Ist das deine Jacke? Nein, ihre.",
+              "tr": "¿Es tu chaqueta? No, la suya."
+            }
+          ]
+        },
+        {
+          "title": "Chuleta rápida",
+          "text": "am + día, um + hora, im + mes.",
+          "examples": [
+            {
+              "de": "am Freitag, um neun Uhr, im Juni",
+              "tr": "el viernes, a las nueve, en junio"
+            }
+          ]
+        },
+        {
+          "title": "Tiempo primero, verbo segundo",
+          "text": "Si el tiempo va al principio, el verbo va justo después y luego ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "El lunes trabajo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : à qui et quand",
+      "points": [
+        {
+          "title": "Deux étapes",
+          "text": "D’abord le mot selon le propriétaire, puis la terminaison selon l’objet.",
+          "examples": [
+            {
+              "de": "ich → mein, du → dein, er → sein, sie → ihr",
+              "tr": "je, tu, il, elle"
+            },
+            {
+              "de": "wir → unser, ihr → euer, sie → ihr, Sie → Ihr",
+              "tr": "nous, vous (amis), ils, vous (poli)"
+            },
+            {
+              "de": "Ist das deine Jacke? Nein, ihre.",
+              "tr": "C’est ta veste ? Non, la sienne."
+            }
+          ]
+        },
+        {
+          "title": "Petit aide-mémoire",
+          "text": "am + jour, um + heure, im + mois.",
+          "examples": [
+            {
+              "de": "am Freitag, um neun Uhr, im Juni",
+              "tr": "vendredi, à neuf heures, en juin"
+            }
+          ]
+        },
+        {
+          "title": "Le temps d’abord, le verbe ensuite",
+          "text": "Si le temps est en premier, le verbe vient juste après, puis ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "Lundi, je travaille."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: kimin ve ne zaman",
+      "points": [
+        {
+          "title": "İki adım",
+          "text": "Önce sahibine göre kelime, sonra eşyaya göre ek seçilir.",
+          "examples": [
+            {
+              "de": "ich → mein, du → dein, er → sein, sie → ihr",
+              "tr": "ben, sen, o (erkek), o (kadın)"
+            },
+            {
+              "de": "wir → unser, ihr → euer, sie → ihr, Sie → Ihr",
+              "tr": "biz, siz, onlar, siz (kibar)"
+            },
+            {
+              "de": "Ist das deine Jacke? Nein, ihre.",
+              "tr": "Bu senin ceketin mi? Hayır, onun."
+            }
+          ]
+        },
+        {
+          "title": "Kısa not",
+          "text": "am + gün, um + saat, im + ay.",
+          "examples": [
+            {
+              "de": "am Freitag, um neun Uhr, im Juni",
+              "tr": "cuma günü, saat dokuzda, haziranda"
+            }
+          ]
+        },
+        {
+          "title": "Önce zaman, sonra fiil",
+          "text": "Zaman başta olursa fiil hemen ardından, sonra ich gelir.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "Pazartesi çalışıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: al cui și când",
+      "points": [
+        {
+          "title": "Doi pași",
+          "text": "Întâi alegi cuvântul după proprietar, apoi terminația după obiect.",
+          "examples": [
+            {
+              "de": "ich → mein, du → dein, er → sein, sie → ihr",
+              "tr": "eu, tu, el, ea"
+            },
+            {
+              "de": "wir → unser, ihr → euer, sie → ihr, Sie → Ihr",
+              "tr": "noi, voi, ei, dumneavoastră"
+            },
+            {
+              "de": "Ist das deine Jacke? Nein, ihre.",
+              "tr": "E geaca ta? Nu, a ei."
+            }
+          ]
+        },
+        {
+          "title": "Fițuică scurtă",
+          "text": "am + zi, um + oră, im + lună.",
+          "examples": [
+            {
+              "de": "am Freitag, um neun Uhr, im Juni",
+              "tr": "vineri, la nouă, în iunie"
+            }
+          ]
+        },
+        {
+          "title": "Timpul primul, verbul al doilea",
+          "text": "Dacă timpul e la început, verbul vine imediat după el, apoi ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "Luni lucrez."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: kimniki va qachon",
+      "points": [
+        {
+          "title": "Ikki qadam",
+          "text": "Avval egasiga qarab so'z, keyin narsaga qarab qo'shimcha tanlanadi.",
+          "examples": [
+            {
+              "de": "ich → mein, du → dein, er → sein, sie → ihr",
+              "tr": "men, sen, u (erkak), u (ayol)"
+            },
+            {
+              "de": "wir → unser, ihr → euer, sie → ihr, Sie → Ihr",
+              "tr": "biz, sizlar, ular, Siz"
+            },
+            {
+              "de": "Ist das deine Jacke? Nein, ihre.",
+              "tr": "Bu sening kurtkangmi? Yo‘q, uniki."
+            }
+          ]
+        },
+        {
+          "title": "Qisqa eslatma",
+          "text": "am + kun, um + vaqt, im + oy.",
+          "examples": [
+            {
+              "de": "am Freitag, um neun Uhr, im Juni",
+              "tr": "juma kuni, soat to'qqizda, iyunda"
+            }
+          ]
+        },
+        {
+          "title": "Avval vaqt, keyin fe'l",
+          "text": "Vaqt boshida tursa, fe'l darhol undan keyin, so'ng ich keladi.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "Dushanba kuni ishlayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: किसका और कब",
+      "points": [
+        {
+          "title": "दो कदम",
+          "text": "पहले मालिक के अनुसार शब्द चुनो, फिर चीज़ के अनुसार अंत।",
+          "examples": [
+            {
+              "de": "ich → mein, du → dein, er → sein, sie → ihr",
+              "tr": "मैं, तुम, वह (पु), वह (स्त्री)"
+            },
+            {
+              "de": "wir → unser, ihr → euer, sie → ihr, Sie → Ihr",
+              "tr": "हम, तुम सब, वे, आप"
+            },
+            {
+              "de": "Ist das deine Jacke? Nein, ihre.",
+              "tr": "क्या यह तुम्हारी जैकेट है? नहीं, उसकी।"
+            }
+          ]
+        },
+        {
+          "title": "छोटा नोट",
+          "text": "am + दिन, um + समय, im + महीना।",
+          "examples": [
+            {
+              "de": "am Freitag, um neun Uhr, im Juni",
+              "tr": "शुक्रवार को, नौ बजे, जून में"
+            }
+          ]
+        },
+        {
+          "title": "पहले समय, फिर क्रिया",
+          "text": "अगर समय शुरुआत में हो, तो क्रिया तुरंत उसके बाद, फिर ich।",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "सोमवार को मैं काम करता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: لمن ومتى",
+      "points": [
+        {
+          "title": "خطوتان",
+          "text": "أولاً نختار الكلمة حسب المالك، ثم النهاية حسب الشيء.",
+          "examples": [
+            {
+              "de": "ich → mein, du → dein, er → sein, sie → ihr",
+              "tr": "أنا، أنت، هو، هي"
+            },
+            {
+              "de": "wir → unser, ihr → euer, sie → ihr, Sie → Ihr",
+              "tr": "نحن، أنتم، هم، حضرتك"
+            },
+            {
+              "de": "Ist das deine Jacke? Nein, ihre.",
+              "tr": "هل هذه سترتك؟ لا، سترتها."
+            }
+          ]
+        },
+        {
+          "title": "ملخص سريع",
+          "text": "am + يوم، um + ساعة، im + شهر.",
+          "examples": [
+            {
+              "de": "am Freitag, um neun Uhr, im Juni",
+              "tr": "يوم الجمعة، في التاسعة، في يونيو"
+            }
+          ]
+        },
+        {
+          "title": "الزمن أولاً والفعل ثانياً",
+          "text": "إذا جاء الزمن في البداية يأتي الفعل بعده مباشرة ثم ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "يوم الاثنين أعمل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "a1-summit-six": {
+    "ru": {
+      "title": "Повторение: модальные глаголы",
+      "points": [
+        {
+          "title": "По смыслу",
+          "text": "kann: умею, могу. muss: надо. will: хочу. darf: разрешено.",
+          "examples": [
+            {
+              "de": "Ich bin krank. Ich muss zu Hause bleiben.",
+              "tr": "Я болен. Мне надо остаться дома."
+            }
+          ]
+        },
+        {
+          "title": "Глагол в конце целиком",
+          "text": "С модальным глаголом отделяемый глагол стоит в конце целиком: Ich stehe früh auf, но Ich muss früh aufstehen.",
+          "examples": [
+            {
+              "de": "Wir müssen heute einkaufen.",
+              "tr": "Нам сегодня надо сходить за покупками."
+            },
+            {
+              "de": "Ich kann nicht mitkommen.",
+              "tr": "Я не могу пойти с вами."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht и darf nicht",
+          "text": "muss nicht значит «не надо», darf nicht значит «нельзя».",
+          "examples": []
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: модальні дієслова",
+      "points": [
+        {
+          "title": "За змістом",
+          "text": "kann: вмію, можу. muss: треба. will: хочу. darf: дозволено.",
+          "examples": [
+            {
+              "de": "Ich bin krank. Ich muss zu Hause bleiben.",
+              "tr": "Я хворий. Мені треба залишитися вдома."
+            }
+          ]
+        },
+        {
+          "title": "Дієслово в кінці цілим",
+          "text": "З модальним дієсловом відокремлюване дієслово стоїть у кінці цілим: Ich stehe früh auf, але Ich muss früh aufstehen.",
+          "examples": [
+            {
+              "de": "Wir müssen heute einkaufen.",
+              "tr": "Нам сьогодні треба сходити по покупки."
+            },
+            {
+              "de": "Ich kann nicht mitkommen.",
+              "tr": "Я не можу піти з вами."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht і darf nicht",
+          "text": "muss nicht означає «не треба», darf nicht означає «не можна».",
+          "examples": []
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: modal verbs",
+      "points": [
+        {
+          "title": "By meaning",
+          "text": "kann: can, able to. muss: have to. will: want. darf: allowed.",
+          "examples": [
+            {
+              "de": "Ich bin krank. Ich muss zu Hause bleiben.",
+              "tr": "I’m ill. I have to stay at home."
+            }
+          ]
+        },
+        {
+          "title": "The whole verb at the end",
+          "text": "With a modal verb the separable verb stays whole at the end: Ich stehe früh auf, but Ich muss früh aufstehen.",
+          "examples": [
+            {
+              "de": "Wir müssen heute einkaufen.",
+              "tr": "We have to go shopping today."
+            },
+            {
+              "de": "Ich kann nicht mitkommen.",
+              "tr": "I can’t come along."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht and darf nicht",
+          "text": "muss nicht means \"don’t have to\", darf nicht means \"must not\".",
+          "examples": []
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: czasowniki modalne",
+      "points": [
+        {
+          "title": "Według znaczenia",
+          "text": "kann: umiem, mogę. muss: muszę. will: chcę. darf: wolno mi.",
+          "examples": [
+            {
+              "de": "Ich bin krank. Ich muss zu Hause bleiben.",
+              "tr": "Jestem chory. Muszę zostać w domu."
+            }
+          ]
+        },
+        {
+          "title": "Cały czasownik na końcu",
+          "text": "Z czasownikiem modalnym czasownik rozdzielny stoi na końcu w całości: Ich stehe früh auf, ale Ich muss früh aufstehen.",
+          "examples": [
+            {
+              "de": "Wir müssen heute einkaufen.",
+              "tr": "Musimy dziś zrobić zakupy."
+            },
+            {
+              "de": "Ich kann nicht mitkommen.",
+              "tr": "Nie mogę iść z wami."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht i darf nicht",
+          "text": "muss nicht znaczy „nie trzeba”, darf nicht „nie wolno”.",
+          "examples": []
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: verbos modales",
+      "points": [
+        {
+          "title": "Según el sentido",
+          "text": "kann: sé, puedo. muss: tengo que. will: quiero. darf: tengo permiso.",
+          "examples": [
+            {
+              "de": "Ich bin krank. Ich muss zu Hause bleiben.",
+              "tr": "Estoy enfermo. Tengo que quedarme en casa."
+            }
+          ]
+        },
+        {
+          "title": "El verbo entero al final",
+          "text": "Con un modal, el verbo separable va entero al final: Ich stehe früh auf, pero Ich muss früh aufstehen.",
+          "examples": [
+            {
+              "de": "Wir müssen heute einkaufen.",
+              "tr": "Hoy tenemos que hacer la compra."
+            },
+            {
+              "de": "Ich kann nicht mitkommen.",
+              "tr": "No puedo ir con vosotros."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht y darf nicht",
+          "text": "muss nicht es \"no hace falta\", darf nicht es \"está prohibido\".",
+          "examples": []
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : verbes de modalité",
+      "points": [
+        {
+          "title": "Selon le sens",
+          "text": "kann : je sais, je peux. muss : je dois. will : je veux. darf : j’ai le droit.",
+          "examples": [
+            {
+              "de": "Ich bin krank. Ich muss zu Hause bleiben.",
+              "tr": "Je suis malade. Je dois rester à la maison."
+            }
+          ]
+        },
+        {
+          "title": "Le verbe entier à la fin",
+          "text": "Avec un verbe de modalité, le verbe séparable reste entier à la fin : Ich stehe früh auf, mais Ich muss früh aufstehen.",
+          "examples": [
+            {
+              "de": "Wir müssen heute einkaufen.",
+              "tr": "Nous devons faire les courses aujourd’hui."
+            },
+            {
+              "de": "Ich kann nicht mitkommen.",
+              "tr": "Je ne peux pas venir avec vous."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht et darf nicht",
+          "text": "muss nicht veut dire « pas besoin », darf nicht veut dire « interdit ».",
+          "examples": []
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: modal fiiller",
+      "points": [
+        {
+          "title": "Anlama göre",
+          "text": "kann: yapabilirim. muss: zorundayım. will: istiyorum. darf: iznim var.",
+          "examples": [
+            {
+              "de": "Ich bin krank. Ich muss zu Hause bleiben.",
+              "tr": "Hastayım. Evde kalmalıyım."
+            }
+          ]
+        },
+        {
+          "title": "Fiil bütün olarak sonda",
+          "text": "Modal fiille ayrılabilen fiil sonda bütün kalır: Ich stehe früh auf, ama Ich muss früh aufstehen.",
+          "examples": [
+            {
+              "de": "Wir müssen heute einkaufen.",
+              "tr": "Bugün alışveriş yapmalıyız."
+            },
+            {
+              "de": "Ich kann nicht mitkommen.",
+              "tr": "Sizinle gelemem."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht ve darf nicht",
+          "text": "muss nicht \"gerek yok\", darf nicht \"yasak\" demektir.",
+          "examples": []
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: verbe modale",
+      "points": [
+        {
+          "title": "După sens",
+          "text": "kann: pot, știu. muss: trebuie. will: vreau. darf: am voie.",
+          "examples": [
+            {
+              "de": "Ich bin krank. Ich muss zu Hause bleiben.",
+              "tr": "Sunt bolnav. Trebuie să stau acasă."
+            }
+          ]
+        },
+        {
+          "title": "Verbul întreg la final",
+          "text": "Cu un verb modal, verbul separabil stă întreg la final: Ich stehe früh auf, dar Ich muss früh aufstehen.",
+          "examples": [
+            {
+              "de": "Wir müssen heute einkaufen.",
+              "tr": "Azi trebuie să facem cumpărături."
+            },
+            {
+              "de": "Ich kann nicht mitkommen.",
+              "tr": "Nu pot veni cu voi."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht și darf nicht",
+          "text": "muss nicht înseamnă „nu e nevoie”, darf nicht „nu ai voie”.",
+          "examples": []
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: modal fe'llar",
+      "points": [
+        {
+          "title": "Ma'nosiga qarab",
+          "text": "kann: qila olaman. muss: kerak. will: xohlayman. darf: ruxsat bor.",
+          "examples": [
+            {
+              "de": "Ich bin krank. Ich muss zu Hause bleiben.",
+              "tr": "Men kasalman. Uyda qolishim kerak."
+            }
+          ]
+        },
+        {
+          "title": "Fe'l oxirida butun holda",
+          "text": "Modal fe'l bilan ajraladigan fe'l oxirida butun turadi: Ich stehe früh auf, lekin Ich muss früh aufstehen.",
+          "examples": [
+            {
+              "de": "Wir müssen heute einkaufen.",
+              "tr": "Bugun xarid qilishimiz kerak."
+            },
+            {
+              "de": "Ich kann nicht mitkommen.",
+              "tr": "Siz bilan bora olmayman."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht va darf nicht",
+          "text": "muss nicht \"shart emas\", darf nicht \"mumkin emas\" degani.",
+          "examples": []
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: मोडल क्रियाएँ",
+      "points": [
+        {
+          "title": "अर्थ के अनुसार",
+          "text": "kann: कर सकता हूँ। muss: करना होगा। will: चाहता हूँ। darf: अनुमति है।",
+          "examples": [
+            {
+              "de": "Ich bin krank. Ich muss zu Hause bleiben.",
+              "tr": "मैं बीमार हूँ। मुझे घर पर रहना है।"
+            }
+          ]
+        },
+        {
+          "title": "पूरी क्रिया अंत में",
+          "text": "मोडल क्रिया के साथ अलग होने वाली क्रिया अंत में पूरी रहती है: Ich stehe früh auf, लेकिन Ich muss früh aufstehen।",
+          "examples": [
+            {
+              "de": "Wir müssen heute einkaufen.",
+              "tr": "आज हमें खरीदारी करनी है।"
+            },
+            {
+              "de": "Ich kann nicht mitkommen.",
+              "tr": "मैं साथ नहीं आ सकता।"
+            }
+          ]
+        },
+        {
+          "title": "muss nicht और darf nicht",
+          "text": "muss nicht मतलब \"ज़रूरत नहीं\", darf nicht मतलब \"मना है\"।",
+          "examples": []
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الأفعال المساعدة",
+      "points": [
+        {
+          "title": "حسب المعنى",
+          "text": "kann: أستطيع. muss: يجب. will: أريد. darf: مسموح.",
+          "examples": [
+            {
+              "de": "Ich bin krank. Ich muss zu Hause bleiben.",
+              "tr": "أنا مريض. يجب أن أبقى في البيت."
+            }
+          ]
+        },
+        {
+          "title": "الفعل كاملاً في الآخر",
+          "text": "مع الفعل المساعد يبقى الفعل ذو السابقة كاملاً في الآخر: Ich stehe früh auf، لكن Ich muss früh aufstehen.",
+          "examples": [
+            {
+              "de": "Wir müssen heute einkaufen.",
+              "tr": "يجب أن نتسوق اليوم."
+            },
+            {
+              "de": "Ich kann nicht mitkommen.",
+              "tr": "لا أستطيع المجيء معكم."
+            }
+          ]
+        },
+        {
+          "title": "muss nicht وdarf nicht",
+          "text": "muss nicht تعني \"لا داعي\"، وdarf nicht تعني \"ممنوع\".",
+          "examples": []
+        }
+      ]
+    }
+  },
+  "a1-summit-seven": {
+    "ru": {
+      "title": "Повторение: покупки, еда, одежда",
+      "points": [
+        {
+          "title": "mögen или gern",
+          "text": "mögen с вещью: Ich mag Kaffee. gern с действием: Ich trinke gern Kaffee.",
+          "examples": [
+            {
+              "de": "Magst du Kaffee mit Milch?",
+              "tr": "Ты любишь кофе с молоком?"
+            }
+          ]
+        },
+        {
+          "title": "Мера без предлога",
+          "text": "Мера и еда стоят рядом, без «из» и без артикля у еды: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "стакан воды, кусок пирога"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: учим целиком",
+          "text": "Вещь здесь главная, поэтому глагол смотрит на неё: одна вещь gefällt, много вещей gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Мне нравится платье."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Мне нравятся туфли."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: покупки, їжа, одяг",
+      "points": [
+        {
+          "title": "mögen чи gern",
+          "text": "mögen з річчю: Ich mag Kaffee. gern із дією: Ich trinke gern Kaffee.",
+          "examples": [
+            {
+              "de": "Magst du Kaffee mit Milch?",
+              "tr": "Ти любиш каву з молоком?"
+            }
+          ]
+        },
+        {
+          "title": "Міра без прийменника",
+          "text": "Міра і їжа стоять поруч, без прийменника і без артикля в їжі: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "склянка води, шматок пирога"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: вчимо цілком",
+          "text": "Річ тут головна, тому дієслово дивиться на неї: одна річ gefällt, багато речей gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Мені подобається сукня."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Мені подобаються туфлі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: shopping, food, clothes",
+      "points": [
+        {
+          "title": "mögen or gern",
+          "text": "mögen with a thing: Ich mag Kaffee. gern with an action: Ich trinke gern Kaffee.",
+          "examples": [
+            {
+              "de": "Magst du Kaffee mit Milch?",
+              "tr": "Do you like coffee with milk?"
+            }
+          ]
+        },
+        {
+          "title": "Measure with no \"of\"",
+          "text": "The measure and the food stand side by side, with no \"of\" and no article: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "a glass of water, a piece of cake"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: learn it as a whole",
+          "text": "Here the thing is the subject, so the verb agrees with it: one thing gefällt, several things gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "I like the dress."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "I like the shoes."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: zakupy, jedzenie, ubrania",
+      "points": [
+        {
+          "title": "mögen czy gern",
+          "text": "mögen z rzeczą: Ich mag Kaffee. gern z czynnością: Ich trinke gern Kaffee.",
+          "examples": [
+            {
+              "de": "Magst du Kaffee mit Milch?",
+              "tr": "Lubisz kawę z mlekiem?"
+            }
+          ]
+        },
+        {
+          "title": "Miara bez przyimka",
+          "text": "Miara i jedzenie stoją obok siebie, bez przyimka i bez rodzajnika: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "szklanka wody, kawałek ciasta"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: uczymy się w całości",
+          "text": "Tu rzecz jest podmiotem, więc czasownik zgadza się z nią: jedna rzecz gefällt, wiele rzeczy gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Podoba mi się sukienka."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Podobają mi się buty."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: compras, comida, ropa",
+      "points": [
+        {
+          "title": "mögen o gern",
+          "text": "mögen con una cosa: Ich mag Kaffee. gern con una acción: Ich trinke gern Kaffee.",
+          "examples": [
+            {
+              "de": "Magst du Kaffee mit Milch?",
+              "tr": "¿Te gusta el café con leche?"
+            }
+          ]
+        },
+        {
+          "title": "Medida sin \"de\"",
+          "text": "La medida y la comida van juntas, sin \"de\" y sin artículo: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "un vaso de agua, un trozo de pastel"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: se aprende entero",
+          "text": "Aquí la cosa es el sujeto, como en \"me gusta\": una cosa gefällt, varias cosas gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Me gusta el vestido."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Me gustan los zapatos."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : courses, nourriture, vêtements",
+      "points": [
+        {
+          "title": "mögen ou gern",
+          "text": "mögen avec une chose : Ich mag Kaffee. gern avec une action : Ich trinke gern Kaffee.",
+          "examples": [
+            {
+              "de": "Magst du Kaffee mit Milch?",
+              "tr": "Tu aimes le café au lait ?"
+            }
+          ]
+        },
+        {
+          "title": "Mesure sans « de »",
+          "text": "La mesure et l’aliment sont côte à côte, sans « de » ni article : eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "un verre d’eau, un morceau de gâteau"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir : à apprendre en bloc",
+          "text": "Ici l’objet est le sujet, donc le verbe s’accorde avec lui : une chose gefällt, plusieurs choses gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "La robe me plaît."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Les chaussures me plaisent."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: alışveriş, yiyecek, kıyafet",
+      "points": [
+        {
+          "title": "mögen mi, gern mi",
+          "text": "mögen bir şeyle: Ich mag Kaffee. gern bir eylemle: Ich trinke gern Kaffee.",
+          "examples": [
+            {
+              "de": "Magst du Kaffee mit Milch?",
+              "tr": "Sütlü kahve sever misin?"
+            }
+          ]
+        },
+        {
+          "title": "Edatsız ölçü",
+          "text": "Ölçü ve yiyecek yan yana gelir, edat ve artikel olmadan: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "bir bardak su, bir dilim kek"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: kalıp olarak",
+          "text": "Burada eşya öznedir, fiil ona uyar: tek şey gefällt, birden çok şey gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Elbiseyi beğendim."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Ayakkabıları beğendim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: cumpărături, mâncare, haine",
+      "points": [
+        {
+          "title": "mögen sau gern",
+          "text": "mögen cu un lucru: Ich mag Kaffee. gern cu o acțiune: Ich trinke gern Kaffee.",
+          "examples": [
+            {
+              "de": "Magst du Kaffee mit Milch?",
+              "tr": "Îți place cafeaua cu lapte?"
+            }
+          ]
+        },
+        {
+          "title": "Măsura fără „de”",
+          "text": "Măsura și mâncarea stau una lângă alta, fără „de” și fără articol: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "un pahar cu apă, o bucată de prăjitură"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: se învață întreg",
+          "text": "Aici lucrul e subiectul, ca în „îmi place”: un lucru gefällt, mai multe gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Îmi place rochia."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Îmi plac pantofii."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: xarid, taom, kiyim",
+      "points": [
+        {
+          "title": "mögen yoki gern",
+          "text": "mögen narsa bilan: Ich mag Kaffee. gern harakat bilan: Ich trinke gern Kaffee.",
+          "examples": [
+            {
+              "de": "Magst du Kaffee mit Milch?",
+              "tr": "Sutli qahvani yaxshi ko'rasanmi?"
+            }
+          ]
+        },
+        {
+          "title": "Ko'makchisiz o'lchov",
+          "text": "O'lchov va taom yonma-yon, ko'makchi va artiklsiz turadi: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "bir stakan suv, bir bo'lak pirog"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: butunligicha o'rganamiz",
+          "text": "Bu yerda narsa ega, fe'l unga moslashadi: bitta narsa gefällt, ko'p narsa gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "Ko'ylak menga yoqadi."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "Tuflilar menga yoqadi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: खरीदारी, खाना, कपड़े",
+      "points": [
+        {
+          "title": "mögen या gern",
+          "text": "mögen चीज़ के साथ: Ich mag Kaffee। gern काम के साथ: Ich trinke gern Kaffee।",
+          "examples": [
+            {
+              "de": "Magst du Kaffee mit Milch?",
+              "tr": "क्या तुम्हें दूध वाली कॉफ़ी पसंद है?"
+            }
+          ]
+        },
+        {
+          "title": "बिना संबंधसूचक के माप",
+          "text": "माप और खाना साथ-साथ, बिना \"का\" और बिना आर्टिकल के: eine Tasse Kaffee।",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "एक गिलास पानी, केक का एक टुकड़ा"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: पूरा वाक्यांश",
+          "text": "यहाँ चीज़ ही कर्ता है, इसलिए क्रिया उसी से मेल खाती है: एक चीज़ gefällt, कई चीज़ें gefallen।",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "मुझे यह ड्रेस पसंद है।"
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "मुझे ये जूते पसंद हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: التسوق والطعام والملابس",
+      "points": [
+        {
+          "title": "mögen أم gern",
+          "text": "mögen مع الشيء: Ich mag Kaffee. وgern مع الفعل: Ich trinke gern Kaffee.",
+          "examples": [
+            {
+              "de": "Magst du Kaffee mit Milch?",
+              "tr": "هل تحب القهوة بالحليب؟"
+            }
+          ]
+        },
+        {
+          "title": "المقدار بدون حرف جر",
+          "text": "يأتي المقدار والطعام متجاورين بدون حرف جر وبدون أداة: eine Tasse Kaffee.",
+          "examples": [
+            {
+              "de": "ein Glas Wasser, ein Stück Kuchen",
+              "tr": "كأس ماء، قطعة كعك"
+            }
+          ]
+        },
+        {
+          "title": "gefällt mir: نحفظها كاملة",
+          "text": "هنا الشيء هو الفاعل، فيتوافق الفعل معه: شيء واحد gefällt، وعدة أشياء gefallen.",
+          "examples": [
+            {
+              "de": "Das Kleid gefällt mir.",
+              "tr": "يعجبني الفستان."
+            },
+            {
+              "de": "Die Schuhe gefallen mir.",
+              "tr": "يعجبني الحذاء."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "a1-summit-eight": {
+    "ru": {
+      "title": "Повторение: город, погода, здоровье",
+      "points": [
+        {
+          "title": "Слова не меняются",
+          "text": "links (слева), rechts (справа), geradeaus (прямо), gegenüber (напротив) стоят после ist и не меняются.",
+          "examples": [
+            {
+              "de": "Die Bank ist links.",
+              "tr": "Банк слева."
+            },
+            {
+              "de": "Das Hotel ist gegenüber dem Museum.",
+              "tr": "Отель напротив музея."
+            }
+          ]
+        },
+        {
+          "title": "Погода всегда с es",
+          "text": "О погоде говорим через es: Es ist kalt. Es regnet. По-русски «холодно» без подлежащего, по-немецки es обязательно.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Сегодня солнечно."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Идёт снег."
+            }
+          ]
+        },
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh значит «болит». Одна часть тела: tut weh, несколько: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "У меня болит горло."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "У меня болят ноги (стопы)."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: місто, погода, здоров’я",
+      "points": [
+        {
+          "title": "Слова не змінюються",
+          "text": "links (ліворуч), rechts (праворуч), geradeaus (прямо), gegenüber (навпроти) стоять після ist і не змінюються.",
+          "examples": [
+            {
+              "de": "Die Bank ist links.",
+              "tr": "Банк ліворуч."
+            },
+            {
+              "de": "Das Hotel ist gegenüber dem Museum.",
+              "tr": "Готель навпроти музею."
+            }
+          ]
+        },
+        {
+          "title": "Погода завжди з es",
+          "text": "Про погоду кажемо через es: Es ist kalt. Es regnet. Українською «холодно» без підмета, німецькою es обов’язкове.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Сьогодні сонячно."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Іде сніг."
+            }
+          ]
+        },
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh означає «болить». Одна частина тіла: tut weh, кілька: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "У мене болить горло."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "У мене болять ноги (стопи)."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: city, weather, health",
+      "points": [
+        {
+          "title": "These words don’t change",
+          "text": "links (left), rechts (right), geradeaus (straight on), gegenüber (opposite) come after ist and don’t change.",
+          "examples": [
+            {
+              "de": "Die Bank ist links.",
+              "tr": "The bank is on the left."
+            },
+            {
+              "de": "Das Hotel ist gegenüber dem Museum.",
+              "tr": "The hotel is opposite the museum."
+            }
+          ]
+        },
+        {
+          "title": "Weather always uses es",
+          "text": "Talk about the weather with es, like English \"it\": Es ist kalt. Es regnet.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "It’s sunny today."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "It’s snowing."
+            }
+          ]
+        },
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh means \"hurts\". One body part: tut weh, several: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "My throat hurts."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "My feet hurt."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: miasto, pogoda, zdrowie",
+      "points": [
+        {
+          "title": "Te słowa się nie zmieniają",
+          "text": "links (po lewej), rechts (po prawej), geradeaus (prosto), gegenüber (naprzeciwko) stoją po ist i się nie zmieniają.",
+          "examples": [
+            {
+              "de": "Die Bank ist links.",
+              "tr": "Bank jest po lewej."
+            },
+            {
+              "de": "Das Hotel ist gegenüber dem Museum.",
+              "tr": "Hotel jest naprzeciwko muzeum."
+            }
+          ]
+        },
+        {
+          "title": "Pogoda zawsze z es",
+          "text": "O pogodzie mówimy z es: Es ist kalt. Es regnet. Po polsku „zimno” bez podmiotu, po niemiecku es jest konieczne.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Dziś jest słonecznie."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Pada śnieg."
+            }
+          ]
+        },
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh znaczy „boli”. Jedna część ciała: tut weh, kilka: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "Boli mnie gardło."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "Bolą mnie stopy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: ciudad, tiempo, salud",
+      "points": [
+        {
+          "title": "No cambian",
+          "text": "links (a la izquierda), rechts (a la derecha), geradeaus (recto), gegenüber (enfrente) van tras ist y no cambian.",
+          "examples": [
+            {
+              "de": "Die Bank ist links.",
+              "tr": "El banco está a la izquierda."
+            },
+            {
+              "de": "Das Hotel ist gegenüber dem Museum.",
+              "tr": "El hotel está enfrente del museo."
+            }
+          ]
+        },
+        {
+          "title": "El tiempo siempre con es",
+          "text": "Del tiempo se habla con es: Es ist kalt. Es regnet. En español \"hace frío\" no tiene sujeto, en alemán es es obligatorio.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Hoy hace sol."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Está nevando."
+            }
+          ]
+        },
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh significa \"duele\". Una parte del cuerpo: tut weh, varias: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "Me duele la garganta."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "Me duelen los pies."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : ville, météo, santé",
+      "points": [
+        {
+          "title": "Ces mots ne changent pas",
+          "text": "links (à gauche), rechts (à droite), geradeaus (tout droit), gegenüber (en face) viennent après ist et ne changent pas.",
+          "examples": [
+            {
+              "de": "Die Bank ist links.",
+              "tr": "La banque est à gauche."
+            },
+            {
+              "de": "Das Hotel ist gegenüber dem Museum.",
+              "tr": "L’hôtel est en face du musée."
+            }
+          ]
+        },
+        {
+          "title": "La météo toujours avec es",
+          "text": "Pour la météo, on utilise es, comme « il » en français : Es ist kalt. Es regnet.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Aujourd’hui, il fait beau."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Il neige."
+            }
+          ]
+        },
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh veut dire « fait mal ». Une partie du corps : tut weh, plusieurs : tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "J’ai mal à la gorge."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "J’ai mal aux pieds."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: şehir, hava, sağlık",
+      "points": [
+        {
+          "title": "Değişmezler",
+          "text": "links (solda), rechts (sağda), geradeaus (düz), gegenüber (karşıda) ist’ten sonra gelir ve değişmez.",
+          "examples": [
+            {
+              "de": "Die Bank ist links.",
+              "tr": "Banka solda."
+            },
+            {
+              "de": "Das Hotel ist gegenüber dem Museum.",
+              "tr": "Otel müzenin karşısında."
+            }
+          ]
+        },
+        {
+          "title": "Hava durumu hep es ile",
+          "text": "Hava hakkında es ile konuşulur: Es ist kalt. Es regnet. Türkçede özne yok, Almancada es şart.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Bugün hava güneşli."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Kar yağıyor."
+            }
+          ]
+        },
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh \"ağrıyor\" demektir. Tek uzuv: tut weh, birkaç uzuv: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "Boğazım ağrıyor."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "Ayaklarım ağrıyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: oraș, vreme, sănătate",
+      "points": [
+        {
+          "title": "Nu se schimbă",
+          "text": "links (în stânga), rechts (în dreapta), geradeaus (înainte), gegenüber (vizavi) vin după ist și nu se schimbă.",
+          "examples": [
+            {
+              "de": "Die Bank ist links.",
+              "tr": "Banca e în stânga."
+            },
+            {
+              "de": "Das Hotel ist gegenüber dem Museum.",
+              "tr": "Hotelul e vizavi de muzeu."
+            }
+          ]
+        },
+        {
+          "title": "Vremea mereu cu es",
+          "text": "Despre vreme vorbim cu es: Es ist kalt. Es regnet. În română „e frig” fără subiect, în germană es e obligatoriu.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Azi e însorit."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Ninge."
+            }
+          ]
+        },
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh înseamnă „doare”. O parte a corpului: tut weh, mai multe: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "Mă doare gâtul."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "Mă dor picioarele."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: shahar, ob-havo, sog'liq",
+      "points": [
+        {
+          "title": "O'zgarmaydi",
+          "text": "links (chapda), rechts (o'ngda), geradeaus (to'g'riga), gegenüber (qarshisida) ist dan keyin keladi va o'zgarmaydi.",
+          "examples": [
+            {
+              "de": "Die Bank ist links.",
+              "tr": "Bank chapda."
+            },
+            {
+              "de": "Das Hotel ist gegenüber dem Museum.",
+              "tr": "Mehmonxona muzey qarshisida."
+            }
+          ]
+        },
+        {
+          "title": "Ob-havo doim es bilan",
+          "text": "Ob-havo haqida es bilan gapiramiz: Es ist kalt. Es regnet. O'zbekchada ega yo'q, nemischada es shart.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "Bugun quyoshli."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "Qor yog‘yapti."
+            }
+          ]
+        },
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh \"og'riyapti\" degani. Bitta a'zo: tut weh, bir nechta: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "Tomog'im og'riyapti."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "Oyoqlarim og'riyapti."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: शहर, मौसम, स्वास्थ्य",
+      "points": [
+        {
+          "title": "ये शब्द नहीं बदलते",
+          "text": "links (बाएँ), rechts (दाएँ), geradeaus (सीधे), gegenüber (सामने) ist के बाद आते हैं और नहीं बदलते।",
+          "examples": [
+            {
+              "de": "Die Bank ist links.",
+              "tr": "बैंक बाईं ओर है।"
+            },
+            {
+              "de": "Das Hotel ist gegenüber dem Museum.",
+              "tr": "होटल संग्रहालय के सामने है।"
+            }
+          ]
+        },
+        {
+          "title": "मौसम हमेशा es के साथ",
+          "text": "मौसम के बारे में es से बात करते हैं: Es ist kalt. Es regnet। जर्मन में es ज़रूरी है।",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "आज धूप है।"
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "बर्फ़ गिर रही है।"
+            }
+          ]
+        },
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh मतलब \"दर्द हो रहा है\"। एक अंग: tut weh, कई अंग: tun weh।",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "मेरे गले में दर्द है।"
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "मेरे पैरों में दर्द है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: المدينة والطقس والصحة",
+      "points": [
+        {
+          "title": "لا تتغير",
+          "text": "links (يساراً)، rechts (يميناً)، geradeaus (إلى الأمام)، gegenüber (مقابل) تأتي بعد ist ولا تتغير.",
+          "examples": [
+            {
+              "de": "Die Bank ist links.",
+              "tr": "البنك على اليسار."
+            },
+            {
+              "de": "Das Hotel ist gegenüber dem Museum.",
+              "tr": "الفندق مقابل المتحف."
+            }
+          ]
+        },
+        {
+          "title": "الطقس دائماً مع es",
+          "text": "نتحدث عن الطقس باستعمال es: Es ist kalt. Es regnet. وes ضرورية في الألمانية.",
+          "examples": [
+            {
+              "de": "Heute ist es sonnig.",
+              "tr": "الجو مشمس اليوم."
+            },
+            {
+              "de": "Es schneit.",
+              "tr": "إنها تثلج."
+            }
+          ]
+        },
+        {
+          "title": "tut weh, tun weh",
+          "text": "tut weh تعني \"يؤلم\". عضو واحد: tut weh، وعدة أعضاء: tun weh.",
+          "examples": [
+            {
+              "de": "Mein Hals tut weh.",
+              "tr": "حلقي يؤلمني."
+            },
+            {
+              "de": "Meine Füße tun weh.",
+              "tr": "قدماي تؤلمانني."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "a1-summit-nine": {
+    "ru": {
+      "title": "Большое повторение A1",
+      "points": [
+        {
+          "title": "Время первым, глагол вторым",
+          "text": "Если время стоит в начале, глагол идёт сразу за ним, а потом ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "В понедельник я работаю."
+            }
+          ]
+        },
+        {
+          "title": "Мужской род меняется",
+          "text": "После kaufen, brauchen, nehmen и других: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "Мне нужен йогурт."
+            }
+          ]
+        },
+        {
+          "title": "Второй глагол в конце",
+          "text": "Модальный глагол стоит на втором месте, а главный глагол уходит в конец и не меняется.",
+          "examples": [
+            {
+              "de": "Ich will früh aufstehen.",
+              "tr": "Я хочу рано вставать."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Велике повторення A1",
+      "points": [
+        {
+          "title": "Час першим, дієслово другим",
+          "text": "Якщо час стоїть на початку, дієслово йде одразу за ним, а потім ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "У понеділок я працюю."
+            }
+          ]
+        },
+        {
+          "title": "Чоловічий рід змінюється",
+          "text": "Після kaufen, brauchen, nehmen та інших: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "Мені потрібен йогурт."
+            }
+          ]
+        },
+        {
+          "title": "Друге дієслово в кінці",
+          "text": "Модальне дієслово стоїть на другому місці, а головне йде в кінець і не змінюється.",
+          "examples": [
+            {
+              "de": "Ich will früh aufstehen.",
+              "tr": "Я хочу рано вставати."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Big A1 review",
+      "points": [
+        {
+          "title": "Time first, verb second",
+          "text": "If the time comes first, the verb comes right after it, then ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "On Monday I work."
+            }
+          ]
+        },
+        {
+          "title": "Masculine changes",
+          "text": "After kaufen, brauchen, nehmen and others: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "I need a yogurt."
+            }
+          ]
+        },
+        {
+          "title": "The second verb goes to the end",
+          "text": "The modal verb is in second place, and the main verb goes to the end unchanged.",
+          "examples": [
+            {
+              "de": "Ich will früh aufstehen.",
+              "tr": "I want to get up early."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Wielka powtórka A1",
+      "points": [
+        {
+          "title": "Czas pierwszy, czasownik drugi",
+          "text": "Jeśli czas jest na początku, czasownik idzie zaraz po nim, a potem ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "W poniedziałek pracuję."
+            }
+          ]
+        },
+        {
+          "title": "Rodzaj męski się zmienia",
+          "text": "Po kaufen, brauchen, nehmen i innych: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "Potrzebuję jogurtu."
+            }
+          ]
+        },
+        {
+          "title": "Drugi czasownik na końcu",
+          "text": "Czasownik modalny stoi na drugim miejscu, a główny idzie na koniec i się nie zmienia.",
+          "examples": [
+            {
+              "de": "Ich will früh aufstehen.",
+              "tr": "Chcę wcześnie wstawać."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Gran repaso A1",
+      "points": [
+        {
+          "title": "Tiempo primero, verbo segundo",
+          "text": "Si el tiempo va al principio, el verbo va justo después y luego ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "El lunes trabajo."
+            }
+          ]
+        },
+        {
+          "title": "El masculino cambia",
+          "text": "Después de kaufen, brauchen, nehmen y otros: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "Necesito un yogur."
+            }
+          ]
+        },
+        {
+          "title": "El segundo verbo al final",
+          "text": "El verbo modal va en segundo lugar y el principal va al final sin cambiar.",
+          "examples": [
+            {
+              "de": "Ich will früh aufstehen.",
+              "tr": "Quiero levantarme temprano."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Grande révision A1",
+      "points": [
+        {
+          "title": "Le temps d’abord, le verbe ensuite",
+          "text": "Si le temps est en premier, le verbe vient juste après, puis ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "Lundi, je travaille."
+            }
+          ]
+        },
+        {
+          "title": "Le masculin change",
+          "text": "Après kaufen, brauchen, nehmen et d’autres : der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "J’ai besoin d’un yaourt."
+            }
+          ]
+        },
+        {
+          "title": "Le deuxième verbe à la fin",
+          "text": "Le verbe de modalité est en deuxième position, le verbe principal va à la fin sans changer.",
+          "examples": [
+            {
+              "de": "Ich will früh aufstehen.",
+              "tr": "Je veux me lever tôt."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Büyük A1 tekrarı",
+      "points": [
+        {
+          "title": "Önce zaman, sonra fiil",
+          "text": "Zaman başta olursa fiil hemen ardından, sonra ich gelir.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "Pazartesi çalışıyorum."
+            }
+          ]
+        },
+        {
+          "title": "Eril değişir",
+          "text": "kaufen, brauchen, nehmen ve diğerlerinden sonra: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "Bir yoğurda ihtiyacım var."
+            }
+          ]
+        },
+        {
+          "title": "İkinci fiil sonda",
+          "text": "Modal fiil ikinci sıradadır, asıl fiil değişmeden sona gider.",
+          "examples": [
+            {
+              "de": "Ich will früh aufstehen.",
+              "tr": "Erken kalkmak istiyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Marea recapitulare A1",
+      "points": [
+        {
+          "title": "Timpul primul, verbul al doilea",
+          "text": "Dacă timpul e la început, verbul vine imediat după el, apoi ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "Luni lucrez."
+            }
+          ]
+        },
+        {
+          "title": "Masculinul se schimbă",
+          "text": "După kaufen, brauchen, nehmen și altele: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "Am nevoie de un iaurt."
+            }
+          ]
+        },
+        {
+          "title": "Al doilea verb la final",
+          "text": "Verbul modal stă pe locul doi, iar verbul principal merge la final neschimbat.",
+          "examples": [
+            {
+              "de": "Ich will früh aufstehen.",
+              "tr": "Vreau să mă trezesc devreme."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Katta A1 takrorlash",
+      "points": [
+        {
+          "title": "Avval vaqt, keyin fe'l",
+          "text": "Vaqt boshida tursa, fe'l darhol undan keyin, so'ng ich keladi.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "Dushanba kuni ishlayman."
+            }
+          ]
+        },
+        {
+          "title": "Erkak rodi o'zgaradi",
+          "text": "kaufen, brauchen, nehmen va boshqalardan keyin: der → den, ein → einen, kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "Menga yogurt kerak."
+            }
+          ]
+        },
+        {
+          "title": "Ikkinchi fe'l oxirida",
+          "text": "Modal fe'l ikkinchi o'rinda, asosiy fe'l esa o'zgarmasdan oxiriga o'tadi.",
+          "examples": [
+            {
+              "de": "Ich will früh aufstehen.",
+              "tr": "Men erta turmoqchiman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "A1 का बड़ा दोहराव",
+      "points": [
+        {
+          "title": "पहले समय, फिर क्रिया",
+          "text": "अगर समय शुरुआत में हो, तो क्रिया तुरंत उसके बाद, फिर ich।",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "सोमवार को मैं काम करता हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "पुल्लिंग बदलता है",
+          "text": "kaufen, brauchen, nehmen आदि के बाद: der → den, ein → einen, kein → keinen।",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "मुझे एक दही चाहिए।"
+            }
+          ]
+        },
+        {
+          "title": "दूसरी क्रिया अंत में",
+          "text": "मोडल क्रिया दूसरे स्थान पर, और मुख्य क्रिया बिना बदले अंत में जाती है।",
+          "examples": [
+            {
+              "de": "Ich will früh aufstehen.",
+              "tr": "मैं जल्दी उठना चाहता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المراجعة الكبرى لـ A1",
+      "points": [
+        {
+          "title": "الزمن أولاً والفعل ثانياً",
+          "text": "إذا جاء الزمن في البداية يأتي الفعل بعده مباشرة ثم ich.",
+          "examples": [
+            {
+              "de": "Am Montag arbeite ich.",
+              "tr": "يوم الاثنين أعمل."
+            }
+          ]
+        },
+        {
+          "title": "المذكر يتغير",
+          "text": "بعد kaufen وbrauchen وnehmen وغيرها: der → den، ein → einen، kein → keinen.",
+          "examples": [
+            {
+              "de": "Ich brauche einen Joghurt.",
+              "tr": "أحتاج زبادي."
+            }
+          ]
+        },
+        {
+          "title": "الفعل الثاني في الآخر",
+          "text": "الفعل المساعد في المكان الثاني، والفعل الأساسي يذهب إلى الآخر بدون تغيير.",
+          "examples": [
+            {
+              "de": "Ich will früh aufstehen.",
+              "tr": "أريد أن أستيقظ مبكراً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "a1-summit-ten": {
+    "ru": {
+      "title": "Экзамен A1: как решать",
+      "points": [
+        {
+          "title": "Три шага",
+          "text": "1. Найди глагол и поставь его на второе место (в вопросе на первое). 2. Посмотри на род: нужен ли den, einen, meinen. 3. Второй глагол или приставку отправь в конец.",
+          "examples": [
+            {
+              "de": "Am Mittwoch habe ich keine Zeit.",
+              "tr": "В среду у меня нет времени."
+            },
+            {
+              "de": "Können Sie bitte langsam sprechen?",
+              "tr": "Вы можете говорить медленнее, пожалуйста?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Іспит A1: як розв’язувати",
+      "points": [
+        {
+          "title": "Три кроки",
+          "text": "1. Знайди дієслово й постав його на друге місце (у питанні на перше). 2. Подивися на рід: чи потрібен den, einen, meinen. 3. Друге дієслово чи префікс відправ у кінець.",
+          "examples": [
+            {
+              "de": "Am Mittwoch habe ich keine Zeit.",
+              "tr": "У середу в мене немає часу."
+            },
+            {
+              "de": "Können Sie bitte langsam sprechen?",
+              "tr": "Ви можете говорити повільніше, будь ласка?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "A1 exam: how to approach it",
+      "points": [
+        {
+          "title": "Three steps",
+          "text": "1. Find the verb and put it in second place (first in a question). 2. Check the gender: do you need den, einen, meinen? 3. Send the second verb or the prefix to the end.",
+          "examples": [
+            {
+              "de": "Am Mittwoch habe ich keine Zeit.",
+              "tr": "On Wednesday I have no time."
+            },
+            {
+              "de": "Können Sie bitte langsam sprechen?",
+              "tr": "Could you speak slowly, please?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Egzamin A1: jak rozwiązywać",
+      "points": [
+        {
+          "title": "Trzy kroki",
+          "text": "1. Znajdź czasownik i postaw go na drugim miejscu (w pytaniu na pierwszym). 2. Sprawdź rodzaj: czy potrzeba den, einen, meinen. 3. Drugi czasownik albo przedrostek wyślij na koniec.",
+          "examples": [
+            {
+              "de": "Am Mittwoch habe ich keine Zeit.",
+              "tr": "W środę nie mam czasu."
+            },
+            {
+              "de": "Können Sie bitte langsam sprechen?",
+              "tr": "Czy może pan mówić wolniej?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Examen A1: cómo resolverlo",
+      "points": [
+        {
+          "title": "Tres pasos",
+          "text": "1. Busca el verbo y ponlo en segundo lugar (en la pregunta, primero). 2. Mira el género: ¿hace falta den, einen, meinen? 3. Manda el segundo verbo o el prefijo al final.",
+          "examples": [
+            {
+              "de": "Am Mittwoch habe ich keine Zeit.",
+              "tr": "El miércoles no tengo tiempo."
+            },
+            {
+              "de": "Können Sie bitte langsam sprechen?",
+              "tr": "¿Puede hablar despacio, por favor?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Examen A1 : comment s’y prendre",
+      "points": [
+        {
+          "title": "Trois étapes",
+          "text": "1. Trouve le verbe et mets-le en deuxième position (en premier dans une question). 2. Regarde le genre : faut-il den, einen, meinen ? 3. Envoie le deuxième verbe ou le préfixe à la fin.",
+          "examples": [
+            {
+              "de": "Am Mittwoch habe ich keine Zeit.",
+              "tr": "Mercredi, je n’ai pas le temps."
+            },
+            {
+              "de": "Können Sie bitte langsam sprechen?",
+              "tr": "Vous pouvez parler lentement, s’il vous plaît ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "A1 sınavı: nasıl çözülür",
+      "points": [
+        {
+          "title": "Üç adım",
+          "text": "1. Fiili bul ve ikinci sıraya koy (soruda başa). 2. Cinsiyete bak: den, einen, meinen gerekiyor mu? 3. İkinci fiili ya da ön eki sona gönder.",
+          "examples": [
+            {
+              "de": "Am Mittwoch habe ich keine Zeit.",
+              "tr": "Çarşamba vaktim yok."
+            },
+            {
+              "de": "Können Sie bitte langsam sprechen?",
+              "tr": "Lütfen yavaş konuşur musunuz?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Examenul A1: cum rezolvi",
+      "points": [
+        {
+          "title": "Trei pași",
+          "text": "1. Găsește verbul și pune-l pe locul doi (în întrebare primul). 2. Uită-te la gen: e nevoie de den, einen, meinen? 3. Trimite al doilea verb sau prefixul la final.",
+          "examples": [
+            {
+              "de": "Am Mittwoch habe ich keine Zeit.",
+              "tr": "Miercuri nu am timp."
+            },
+            {
+              "de": "Können Sie bitte langsam sprechen?",
+              "tr": "Puteți vorbi mai rar, vă rog?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "A1 imtihoni: qanday yechish",
+      "points": [
+        {
+          "title": "Uch qadam",
+          "text": "1. Fe'lni top va ikkinchi o'ringa qo'y (savolda birinchiga). 2. Rodga qara: den, einen, meinen kerakmi. 3. Ikkinchi fe'l yoki old qo'shimchani oxiriga yubor.",
+          "examples": [
+            {
+              "de": "Am Mittwoch habe ich keine Zeit.",
+              "tr": "Chorshanba kuni vaqtim yo'q."
+            },
+            {
+              "de": "Können Sie bitte langsam sprechen?",
+              "tr": "Iltimos, sekinroq gapira olasizmi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "A1 परीक्षा: कैसे हल करें",
+      "points": [
+        {
+          "title": "तीन कदम",
+          "text": "1. क्रिया ढूँढो और उसे दूसरे स्थान पर रखो (सवाल में पहले)। 2. लिंग देखो: क्या den, einen, meinen चाहिए। 3. दूसरी क्रिया या उपसर्ग को अंत में भेजो।",
+          "examples": [
+            {
+              "de": "Am Mittwoch habe ich keine Zeit.",
+              "tr": "बुधवार को मेरे पास समय नहीं है।"
+            },
+            {
+              "de": "Können Sie bitte langsam sprechen?",
+              "tr": "क्या आप कृपया धीरे बोल सकते हैं?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "امتحان A1: كيف تحل",
+      "points": [
+        {
+          "title": "ثلاث خطوات",
+          "text": "1. ابحث عن الفعل وضعه في المكان الثاني (وفي السؤال في الأول). 2. انظر إلى الجنس: هل تحتاج den أو einen أو meinen؟ 3. أرسل الفعل الثاني أو السابقة إلى الآخر.",
+          "examples": [
+            {
+              "de": "Am Mittwoch habe ich keine Zeit.",
+              "tr": "يوم الأربعاء ليس عندي وقت."
+            },
+            {
+              "de": "Können Sie bitte langsam sprechen?",
+              "tr": "هل يمكنك التكلم ببطء من فضلك؟"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

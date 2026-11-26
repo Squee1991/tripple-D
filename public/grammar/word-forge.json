@@ -1,0 +1,2552 @@
+{
+  "word-forge-one": {
+    "ru": {
+      "title": "Из глагола: -ung",
+      "points": [
+        {
+          "title": "Глагол + -ung",
+          "text": "Основа глагола + -ung даёт существительное: einladen → die Einladung. Слова на -ung всегда die, во множественном -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Спасибо за приглашение!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "З дієслова: -ung",
+      "points": [
+        {
+          "title": "Дієслово + -ung",
+          "text": "Основа дієслова + -ung дає іменник: einladen → die Einladung. Слова на -ung завжди die, у множині -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Дякую за запрошення!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "From a verb: -ung",
+      "points": [
+        {
+          "title": "Verb + -ung",
+          "text": "Verb stem + -ung makes a noun: einladen → die Einladung. Words in -ung are always die, plural -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Thanks for the invitation!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Z czasownika: -ung",
+      "points": [
+        {
+          "title": "Czasownik + -ung",
+          "text": "Temat czasownika + -ung daje rzeczownik: einladen → die Einladung. Słowa na -ung zawsze die, w mnogiej -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Dziękuję za zaproszenie!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Del verbo: -ung",
+      "points": [
+        {
+          "title": "Verbo + -ung",
+          "text": "Raíz del verbo + -ung forma un sustantivo: einladen → die Einladung. Las palabras en -ung son siempre die, plural -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "¡Gracias por la invitación!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "À partir d’un verbe : -ung",
+      "points": [
+        {
+          "title": "Verbe + -ung",
+          "text": "Radical du verbe + -ung donne un nom : einladen → die Einladung. Les mots en -ung sont toujours die, pluriel -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Merci pour l’invitation !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Fiilden: -ung",
+      "points": [
+        {
+          "title": "Fiil + -ung",
+          "text": "Fiil kökü + -ung isim yapar: einladen → die Einladung. -ung’lu kelimeler hep die, çoğulu -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Davet için teşekkürler!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Din verb: -ung",
+      "points": [
+        {
+          "title": "Verb + -ung",
+          "text": "Rădăcina verbului + -ung dă un substantiv: einladen → die Einladung. Cuvintele în -ung sunt mereu die, plural -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Mulțumesc pentru invitație!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Fe'ldan: -ung",
+      "points": [
+        {
+          "title": "Fe'l + -ung",
+          "text": "Fe'l o'zagi + -ung ot yasaydi: einladen → die Einladung. -ung bilan tugaganlar doim die, ko'plikda -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Taklif uchun rahmat!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "क्रिया से: -ung",
+      "points": [
+        {
+          "title": "क्रिया + -ung",
+          "text": "क्रिया का मूल + -ung से संज्ञा बनती है: einladen → die Einladung। -ung वाले शब्द हमेशा die, बहुवचन -en।",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "निमंत्रण के लिए धन्यवाद!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "من الفعل: -ung",
+      "points": [
+        {
+          "title": "الفعل + -ung",
+          "text": "جذر الفعل + -ung يصنع اسماً: einladen → die Einladung. والكلمات المنتهية بـ -ung دائماً die، وجمعها -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "شكراً على الدعوة!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "word-forge-two": {
+    "ru": {
+      "title": "Из прилагательного: -heit, -keit",
+      "points": [
+        {
+          "title": "-heit, -keit",
+          "text": "Прилагательное + -heit/-keit даёт существительное (всегда die): gesund → die Gesundheit. После -lich, -ig, -bar ставим -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Здоровье важнее денег."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "З прикметника: -heit, -keit",
+      "points": [
+        {
+          "title": "-heit, -keit",
+          "text": "Прикметник + -heit/-keit дає іменник (завжди die): gesund → die Gesundheit. Після -lich, -ig, -bar ставимо -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Здоров’я важливіше за гроші."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "From an adjective: -heit, -keit",
+      "points": [
+        {
+          "title": "-heit, -keit",
+          "text": "Adjective + -heit/-keit makes a noun (always die): gesund → die Gesundheit. After -lich, -ig, -bar use -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Health is more important than money."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Z przymiotnika: -heit, -keit",
+      "points": [
+        {
+          "title": "-heit, -keit",
+          "text": "Przymiotnik + -heit/-keit daje rzeczownik (zawsze die): gesund → die Gesundheit. Po -lich, -ig, -bar stawiamy -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Zdrowie jest ważniejsze niż pieniądze."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Del adjetivo: -heit, -keit",
+      "points": [
+        {
+          "title": "-heit, -keit",
+          "text": "Adjetivo + -heit/-keit forma un sustantivo (siempre die): gesund → die Gesundheit. Tras -lich, -ig, -bar va -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "La salud es más importante que el dinero."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "À partir d’un adjectif : -heit, -keit",
+      "points": [
+        {
+          "title": "-heit, -keit",
+          "text": "Adjectif + -heit/-keit donne un nom (toujours die) : gesund → die Gesundheit. Après -lich, -ig, -bar on met -keit : möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "La santé est plus importante que l’argent."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sıfattan: -heit, -keit",
+      "points": [
+        {
+          "title": "-heit, -keit",
+          "text": "Sıfat + -heit/-keit isim yapar (hep die): gesund → die Gesundheit. -lich, -ig, -bar’dan sonra -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Sağlık paradan daha önemli."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Din adjectiv: -heit, -keit",
+      "points": [
+        {
+          "title": "-heit, -keit",
+          "text": "Adjectiv + -heit/-keit dă un substantiv (mereu die): gesund → die Gesundheit. După -lich, -ig, -bar punem -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Sănătatea e mai importantă decât banii."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Sifatdan: -heit, -keit",
+      "points": [
+        {
+          "title": "-heit, -keit",
+          "text": "Sifat + -heit/-keit ot yasaydi (doim die): gesund → die Gesundheit. -lich, -ig, -bar dan keyin -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Sog'liq puldan muhimroq."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "विशेषण से: -heit, -keit",
+      "points": [
+        {
+          "title": "-heit, -keit",
+          "text": "विशेषण + -heit/-keit से संज्ञा (हमेशा die): gesund → die Gesundheit। -lich, -ig, -bar के बाद -keit: möglich → die Möglichkeit।",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "सेहत पैसे से ज़्यादा ज़रूरी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "من الصفة: -heit و-keit",
+      "points": [
+        {
+          "title": "-heit و-keit",
+          "text": "الصفة + -heit/-keit تصنع اسماً (دائماً die): gesund → die Gesundheit. وبعد -lich و-ig و-bar نضع -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "الصحة أهم من المال."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "word-forge-three": {
+    "ru": {
+      "title": "Из существительного: -lich, -ig",
+      "points": [
+        {
+          "title": "-lich, -ig",
+          "text": "Существительное + -lich/-ig даёт прилагательное. -lich часто с умлаутом: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Я каждый день бегаю полчаса."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "З іменника: -lich, -ig",
+      "points": [
+        {
+          "title": "-lich, -ig",
+          "text": "Іменник + -lich/-ig дає прикметник. -lich часто з умлаутом: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Я щодня бігаю пів години."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "From a noun: -lich, -ig",
+      "points": [
+        {
+          "title": "-lich, -ig",
+          "text": "Noun + -lich/-ig makes an adjective. -lich often adds an umlaut: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "I jog for half an hour every day."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Z rzeczownika: -lich, -ig",
+      "points": [
+        {
+          "title": "-lich, -ig",
+          "text": "Rzeczownik + -lich/-ig daje przymiotnik. -lich często z umlautem: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Codziennie biegam pół godziny."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Del sustantivo: -lich, -ig",
+      "points": [
+        {
+          "title": "-lich, -ig",
+          "text": "Sustantivo + -lich/-ig forma un adjetivo. -lich suele llevar diéresis: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Corro media hora a diario."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "À partir d’un nom : -lich, -ig",
+      "points": [
+        {
+          "title": "-lich, -ig",
+          "text": "Nom + -lich/-ig donne un adjectif. -lich prend souvent un umlaut : der Tag → täglich. -ig : die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Je cours une demi-heure tous les jours."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "İsimden: -lich, -ig",
+      "points": [
+        {
+          "title": "-lich, -ig",
+          "text": "İsim + -lich/-ig sıfat yapar. -lich çoğu zaman umlautlu: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Her gün yarım saat koşuyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Din substantiv: -lich, -ig",
+      "points": [
+        {
+          "title": "-lich, -ig",
+          "text": "Substantiv + -lich/-ig dă un adjectiv. -lich are des umlaut: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Alerg zilnic o jumătate de oră."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Otdan: -lich, -ig",
+      "points": [
+        {
+          "title": "-lich, -ig",
+          "text": "Ot + -lich/-ig sifat yasaydi. -lich ko'pincha umlaut bilan: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Har kuni yarim soat yuguraman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "संज्ञा से: -lich, -ig",
+      "points": [
+        {
+          "title": "-lich, -ig",
+          "text": "संज्ञा + -lich/-ig से विशेषण। -lich में अक्सर उमलाउट: der Tag → täglich। -ig: die Sonne → sonnig।",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "मैं रोज़ आधा घंटा जॉगिंग करता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "من الاسم: -lich و-ig",
+      "points": [
+        {
+          "title": "-lich و-ig",
+          "text": "الاسم + -lich/-ig يصنع صفة. و-lich غالباً مع أوملاوت: der Tag → täglich. و-ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "أركض نصف ساعة يومياً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "word-forge-four": {
+    "ru": {
+      "title": "Можно сделать: -bar",
+      "points": [
+        {
+          "title": "-bar: можно сделать",
+          "text": "Основа глагола + -bar значит «это можно сделать»: essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Эти грибы съедобные."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Можна зробити: -bar",
+      "points": [
+        {
+          "title": "-bar: можна зробити",
+          "text": "Основа дієслова + -bar означає «це можна зробити»: essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Ці гриби їстівні."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Can be done: -bar",
+      "points": [
+        {
+          "title": "-bar: can be done",
+          "text": "Verb stem + -bar means \"can be done\": essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "These mushrooms are edible."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Da się zrobić: -bar",
+      "points": [
+        {
+          "title": "-bar: da się zrobić",
+          "text": "Temat czasownika + -bar znaczy „da się to zrobić”: essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Te grzyby są jadalne."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Se puede hacer: -bar",
+      "points": [
+        {
+          "title": "-bar: se puede hacer",
+          "text": "Raíz del verbo + -bar significa \"se puede hacer\": essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Estas setas son comestibles."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Faisable : -bar",
+      "points": [
+        {
+          "title": "-bar : faisable",
+          "text": "Radical du verbe + -bar veut dire « on peut le faire » : essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Ces champignons sont comestibles."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yapılabilir: -bar",
+      "points": [
+        {
+          "title": "-bar: yapılabilir",
+          "text": "Fiil kökü + -bar \"yapılabilir\" demektir: essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Bu mantarlar yenebilir."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Se poate face: -bar",
+      "points": [
+        {
+          "title": "-bar: se poate face",
+          "text": "Rădăcina verbului + -bar înseamnă „se poate face”: essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Ciupercile acestea sunt comestibile."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qilsa bo'ladi: -bar",
+      "points": [
+        {
+          "title": "-bar: qilsa bo‘ladi",
+          "text": "Fe'l o'zagi + -bar \"qilish mumkin\" degani: essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Bu qo'ziqorinlar yeyiladi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "किया जा सकता है: -bar",
+      "points": [
+        {
+          "title": "-bar: किया जा सकता है",
+          "text": "क्रिया का मूल + -bar मतलब \"किया जा सकता है\": essen → essbar, erreichen → erreichbar।",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "ये मशरूम खाने लायक हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "يمكن فعله: -bar",
+      "points": [
+        {
+          "title": "-bar: يمكن فعله",
+          "text": "جذر الفعل + -bar يعني \"يمكن فعله\": essen → essbar، erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "هذا الفطر صالح للأكل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "word-forge-five": {
+    "ru": {
+      "title": "Наоборот: un-",
+      "points": [
+        {
+          "title": "un-: наоборот",
+          "text": "un- + прилагательное даёт противоположное значение, пишется слитно: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "Это невозможно!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Навпаки: un-",
+      "points": [
+        {
+          "title": "un-: навпаки",
+          "text": "un- + прикметник дає протилежне значення, пишеться разом: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "Це неможливо!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The opposite: un-",
+      "points": [
+        {
+          "title": "un-: the opposite",
+          "text": "un- + adjective gives the opposite meaning, written as one word: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "That’s impossible!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Odwrotnie: un-",
+      "points": [
+        {
+          "title": "un-: odwrotnie",
+          "text": "un- + przymiotnik daje przeciwne znaczenie, pisze się łącznie: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "To niemożliwe!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Lo contrario: un-",
+      "points": [
+        {
+          "title": "un-: lo contrario",
+          "text": "un- + adjetivo da el significado contrario, se escribe junto: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "¡Es imposible!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le contraire : un-",
+      "points": [
+        {
+          "title": "un- : le contraire",
+          "text": "un- + adjectif donne le sens contraire, en un seul mot : möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "C’est impossible !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tersi: un-",
+      "points": [
+        {
+          "title": "un-: tersi",
+          "text": "un- + sıfat zıt anlam verir, bitişik yazılır: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "Bu imkânsız!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Opusul: un-",
+      "points": [
+        {
+          "title": "un-: opusul",
+          "text": "un- + adjectiv dă sensul opus, se scrie legat: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "E imposibil!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Teskarisi: un-",
+      "points": [
+        {
+          "title": "un-: teskarisi",
+          "text": "un- + sifat teskari ma'no beradi, qo'shib yoziladi: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "Bu mumkin emas!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "उल्टा: un-",
+      "points": [
+        {
+          "title": "un-: उल्टा",
+          "text": "un- + विशेषण उल्टा अर्थ देता है, जोड़कर लिखते हैं: möglich → unmöglich, gesund → ungesund।",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "यह नामुमकिन है!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "العكس: un-",
+      "points": [
+        {
+          "title": "un-: العكس",
+          "text": "un- + الصفة تعطي المعنى المعاكس وتُكتب متصلة: möglich → unmöglich، gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "هذا مستحيل!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "word-forge-six": {
+    "ru": {
+      "title": "Объявление о квартире",
+      "points": [
+        {
+          "title": "Глагол + -ung",
+          "text": "Основа глагола + -ung даёт существительное: einladen → die Einladung. Слова на -ung всегда die, во множественном -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Спасибо за приглашение!"
+            }
+          ]
+        },
+        {
+          "title": "-lich, -ig",
+          "text": "Существительное + -lich/-ig даёт прилагательное. -lich часто с умлаутом: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Я каждый день бегаю полчаса."
+            }
+          ]
+        },
+        {
+          "title": "-bar: можно сделать",
+          "text": "Основа глагола + -bar значит «это можно сделать»: essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Эти грибы съедобные."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Оголошення про квартиру",
+      "points": [
+        {
+          "title": "Дієслово + -ung",
+          "text": "Основа дієслова + -ung дає іменник: einladen → die Einladung. Слова на -ung завжди die, у множині -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Дякую за запрошення!"
+            }
+          ]
+        },
+        {
+          "title": "-lich, -ig",
+          "text": "Іменник + -lich/-ig дає прикметник. -lich часто з умлаутом: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Я щодня бігаю пів години."
+            }
+          ]
+        },
+        {
+          "title": "-bar: можна зробити",
+          "text": "Основа дієслова + -bar означає «це можна зробити»: essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Ці гриби їстівні."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "A flat advert",
+      "points": [
+        {
+          "title": "Verb + -ung",
+          "text": "Verb stem + -ung makes a noun: einladen → die Einladung. Words in -ung are always die, plural -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Thanks for the invitation!"
+            }
+          ]
+        },
+        {
+          "title": "-lich, -ig",
+          "text": "Noun + -lich/-ig makes an adjective. -lich often adds an umlaut: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "I jog for half an hour every day."
+            }
+          ]
+        },
+        {
+          "title": "-bar: can be done",
+          "text": "Verb stem + -bar means \"can be done\": essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "These mushrooms are edible."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Ogłoszenie o mieszkaniu",
+      "points": [
+        {
+          "title": "Czasownik + -ung",
+          "text": "Temat czasownika + -ung daje rzeczownik: einladen → die Einladung. Słowa na -ung zawsze die, w mnogiej -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Dziękuję za zaproszenie!"
+            }
+          ]
+        },
+        {
+          "title": "-lich, -ig",
+          "text": "Rzeczownik + -lich/-ig daje przymiotnik. -lich często z umlautem: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Codziennie biegam pół godziny."
+            }
+          ]
+        },
+        {
+          "title": "-bar: da się zrobić",
+          "text": "Temat czasownika + -bar znaczy „da się to zrobić”: essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Te grzyby są jadalne."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Anuncio de piso",
+      "points": [
+        {
+          "title": "Verbo + -ung",
+          "text": "Raíz del verbo + -ung forma un sustantivo: einladen → die Einladung. Las palabras en -ung son siempre die, plural -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "¡Gracias por la invitación!"
+            }
+          ]
+        },
+        {
+          "title": "-lich, -ig",
+          "text": "Sustantivo + -lich/-ig forma un adjetivo. -lich suele llevar diéresis: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Corro media hora a diario."
+            }
+          ]
+        },
+        {
+          "title": "-bar: se puede hacer",
+          "text": "Raíz del verbo + -bar significa \"se puede hacer\": essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Estas setas son comestibles."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Annonce d’appartement",
+      "points": [
+        {
+          "title": "Verbe + -ung",
+          "text": "Radical du verbe + -ung donne un nom : einladen → die Einladung. Les mots en -ung sont toujours die, pluriel -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Merci pour l’invitation !"
+            }
+          ]
+        },
+        {
+          "title": "-lich, -ig",
+          "text": "Nom + -lich/-ig donne un adjectif. -lich prend souvent un umlaut : der Tag → täglich. -ig : die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Je cours une demi-heure tous les jours."
+            }
+          ]
+        },
+        {
+          "title": "-bar : faisable",
+          "text": "Radical du verbe + -bar veut dire « on peut le faire » : essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Ces champignons sont comestibles."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Daire ilanı",
+      "points": [
+        {
+          "title": "Fiil + -ung",
+          "text": "Fiil kökü + -ung isim yapar: einladen → die Einladung. -ung’lu kelimeler hep die, çoğulu -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Davet için teşekkürler!"
+            }
+          ]
+        },
+        {
+          "title": "-lich, -ig",
+          "text": "İsim + -lich/-ig sıfat yapar. -lich çoğu zaman umlautlu: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Her gün yarım saat koşuyorum."
+            }
+          ]
+        },
+        {
+          "title": "-bar: yapılabilir",
+          "text": "Fiil kökü + -bar \"yapılabilir\" demektir: essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Bu mantarlar yenebilir."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Anunț de apartament",
+      "points": [
+        {
+          "title": "Verb + -ung",
+          "text": "Rădăcina verbului + -ung dă un substantiv: einladen → die Einladung. Cuvintele în -ung sunt mereu die, plural -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Mulțumesc pentru invitație!"
+            }
+          ]
+        },
+        {
+          "title": "-lich, -ig",
+          "text": "Substantiv + -lich/-ig dă un adjectiv. -lich are des umlaut: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Alerg zilnic o jumătate de oră."
+            }
+          ]
+        },
+        {
+          "title": "-bar: se poate face",
+          "text": "Rădăcina verbului + -bar înseamnă „se poate face”: essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Ciupercile acestea sunt comestibile."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kvartira e'loni",
+      "points": [
+        {
+          "title": "Fe'l + -ung",
+          "text": "Fe'l o'zagi + -ung ot yasaydi: einladen → die Einladung. -ung bilan tugaganlar doim die, ko'plikda -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Taklif uchun rahmat!"
+            }
+          ]
+        },
+        {
+          "title": "-lich, -ig",
+          "text": "Ot + -lich/-ig sifat yasaydi. -lich ko'pincha umlaut bilan: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Har kuni yarim soat yuguraman."
+            }
+          ]
+        },
+        {
+          "title": "-bar: qilsa bo‘ladi",
+          "text": "Fe'l o'zagi + -bar \"qilish mumkin\" degani: essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Bu qo'ziqorinlar yeyiladi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "फ़्लैट का विज्ञापन",
+      "points": [
+        {
+          "title": "क्रिया + -ung",
+          "text": "क्रिया का मूल + -ung से संज्ञा बनती है: einladen → die Einladung। -ung वाले शब्द हमेशा die, बहुवचन -en।",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "निमंत्रण के लिए धन्यवाद!"
+            }
+          ]
+        },
+        {
+          "title": "-lich, -ig",
+          "text": "संज्ञा + -lich/-ig से विशेषण। -lich में अक्सर उमलाउट: der Tag → täglich। -ig: die Sonne → sonnig।",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "मैं रोज़ आधा घंटा जॉगिंग करता हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "-bar: किया जा सकता है",
+          "text": "क्रिया का मूल + -bar मतलब \"किया जा सकता है\": essen → essbar, erreichen → erreichbar।",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "ये मशरूम खाने लायक हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "إعلان عن شقة",
+      "points": [
+        {
+          "title": "الفعل + -ung",
+          "text": "جذر الفعل + -ung يصنع اسماً: einladen → die Einladung. والكلمات المنتهية بـ -ung دائماً die، وجمعها -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "شكراً على الدعوة!"
+            }
+          ]
+        },
+        {
+          "title": "-lich و-ig",
+          "text": "الاسم + -lich/-ig يصنع صفة. و-lich غالباً مع أوملاوت: der Tag → täglich. و-ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "أركض نصف ساعة يومياً."
+            }
+          ]
+        },
+        {
+          "title": "-bar: يمكن فعله",
+          "text": "جذر الفعل + -bar يعني \"يمكن فعله\": essen → essbar، erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "هذا الفطر صالح للأكل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "word-forge-seven": {
+    "ru": {
+      "title": "Практика: онлайн-магазин",
+      "points": [
+        {
+          "title": "Глагол + -ung",
+          "text": "Основа глагола + -ung даёт существительное: einladen → die Einladung. Слова на -ung всегда die, во множественном -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Спасибо за приглашение!"
+            }
+          ]
+        },
+        {
+          "title": "un-: наоборот",
+          "text": "un- + прилагательное даёт противоположное значение, пишется слитно: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "Это невозможно!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: онлайн-магазин",
+      "points": [
+        {
+          "title": "Дієслово + -ung",
+          "text": "Основа дієслова + -ung дає іменник: einladen → die Einladung. Слова на -ung завжди die, у множині -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Дякую за запрошення!"
+            }
+          ]
+        },
+        {
+          "title": "un-: навпаки",
+          "text": "un- + прикметник дає протилежне значення, пишеться разом: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "Це неможливо!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: an online shop",
+      "points": [
+        {
+          "title": "Verb + -ung",
+          "text": "Verb stem + -ung makes a noun: einladen → die Einladung. Words in -ung are always die, plural -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Thanks for the invitation!"
+            }
+          ]
+        },
+        {
+          "title": "un-: the opposite",
+          "text": "un- + adjective gives the opposite meaning, written as one word: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "That’s impossible!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: sklep internetowy",
+      "points": [
+        {
+          "title": "Czasownik + -ung",
+          "text": "Temat czasownika + -ung daje rzeczownik: einladen → die Einladung. Słowa na -ung zawsze die, w mnogiej -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Dziękuję za zaproszenie!"
+            }
+          ]
+        },
+        {
+          "title": "un-: odwrotnie",
+          "text": "un- + przymiotnik daje przeciwne znaczenie, pisze się łącznie: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "To niemożliwe!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: tienda online",
+      "points": [
+        {
+          "title": "Verbo + -ung",
+          "text": "Raíz del verbo + -ung forma un sustantivo: einladen → die Einladung. Las palabras en -ung son siempre die, plural -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "¡Gracias por la invitación!"
+            }
+          ]
+        },
+        {
+          "title": "un-: lo contrario",
+          "text": "un- + adjetivo da el significado contrario, se escribe junto: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "¡Es imposible!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : boutique en ligne",
+      "points": [
+        {
+          "title": "Verbe + -ung",
+          "text": "Radical du verbe + -ung donne un nom : einladen → die Einladung. Les mots en -ung sont toujours die, pluriel -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Merci pour l’invitation !"
+            }
+          ]
+        },
+        {
+          "title": "un- : le contraire",
+          "text": "un- + adjectif donne le sens contraire, en un seul mot : möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "C’est impossible !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: online mağaza",
+      "points": [
+        {
+          "title": "Fiil + -ung",
+          "text": "Fiil kökü + -ung isim yapar: einladen → die Einladung. -ung’lu kelimeler hep die, çoğulu -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Davet için teşekkürler!"
+            }
+          ]
+        },
+        {
+          "title": "un-: tersi",
+          "text": "un- + sıfat zıt anlam verir, bitişik yazılır: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "Bu imkânsız!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: magazin online",
+      "points": [
+        {
+          "title": "Verb + -ung",
+          "text": "Rădăcina verbului + -ung dă un substantiv: einladen → die Einladung. Cuvintele în -ung sunt mereu die, plural -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Mulțumesc pentru invitație!"
+            }
+          ]
+        },
+        {
+          "title": "un-: opusul",
+          "text": "un- + adjectiv dă sensul opus, se scrie legat: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "E imposibil!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: onlayn do'kon",
+      "points": [
+        {
+          "title": "Fe'l + -ung",
+          "text": "Fe'l o'zagi + -ung ot yasaydi: einladen → die Einladung. -ung bilan tugaganlar doim die, ko'plikda -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Taklif uchun rahmat!"
+            }
+          ]
+        },
+        {
+          "title": "un-: teskarisi",
+          "text": "un- + sifat teskari ma'no beradi, qo'shib yoziladi: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "Bu mumkin emas!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: ऑनलाइन दुकान",
+      "points": [
+        {
+          "title": "क्रिया + -ung",
+          "text": "क्रिया का मूल + -ung से संज्ञा बनती है: einladen → die Einladung। -ung वाले शब्द हमेशा die, बहुवचन -en।",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "निमंत्रण के लिए धन्यवाद!"
+            }
+          ]
+        },
+        {
+          "title": "un-: उल्टा",
+          "text": "un- + विशेषण उल्टा अर्थ देता है, जोड़कर लिखते हैं: möglich → unmöglich, gesund → ungesund।",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "यह नामुमकिन है!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: متجر إلكتروني",
+      "points": [
+        {
+          "title": "الفعل + -ung",
+          "text": "جذر الفعل + -ung يصنع اسماً: einladen → die Einladung. والكلمات المنتهية بـ -ung دائماً die، وجمعها -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "شكراً على الدعوة!"
+            }
+          ]
+        },
+        {
+          "title": "un-: العكس",
+          "text": "un- + الصفة تعطي المعنى المعاكس وتُكتب متصلة: möglich → unmöglich، gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "هذا مستحيل!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "word-forge-eight": {
+    "ru": {
+      "title": "Практика: здоровая жизнь",
+      "points": [
+        {
+          "title": "-heit, -keit",
+          "text": "Прилагательное + -heit/-keit даёт существительное (всегда die): gesund → die Gesundheit. После -lich, -ig, -bar ставим -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Здоровье важнее денег."
+            }
+          ]
+        },
+        {
+          "title": "-lich, -ig",
+          "text": "Существительное + -lich/-ig даёт прилагательное. -lich часто с умлаутом: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Я каждый день бегаю полчаса."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: здорове життя",
+      "points": [
+        {
+          "title": "-heit, -keit",
+          "text": "Прикметник + -heit/-keit дає іменник (завжди die): gesund → die Gesundheit. Після -lich, -ig, -bar ставимо -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Здоров’я важливіше за гроші."
+            }
+          ]
+        },
+        {
+          "title": "-lich, -ig",
+          "text": "Іменник + -lich/-ig дає прикметник. -lich часто з умлаутом: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Я щодня бігаю пів години."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: healthy living",
+      "points": [
+        {
+          "title": "-heit, -keit",
+          "text": "Adjective + -heit/-keit makes a noun (always die): gesund → die Gesundheit. After -lich, -ig, -bar use -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Health is more important than money."
+            }
+          ]
+        },
+        {
+          "title": "-lich, -ig",
+          "text": "Noun + -lich/-ig makes an adjective. -lich often adds an umlaut: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "I jog for half an hour every day."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: zdrowe życie",
+      "points": [
+        {
+          "title": "-heit, -keit",
+          "text": "Przymiotnik + -heit/-keit daje rzeczownik (zawsze die): gesund → die Gesundheit. Po -lich, -ig, -bar stawiamy -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Zdrowie jest ważniejsze niż pieniądze."
+            }
+          ]
+        },
+        {
+          "title": "-lich, -ig",
+          "text": "Rzeczownik + -lich/-ig daje przymiotnik. -lich często z umlautem: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Codziennie biegam pół godziny."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: vida sana",
+      "points": [
+        {
+          "title": "-heit, -keit",
+          "text": "Adjetivo + -heit/-keit forma un sustantivo (siempre die): gesund → die Gesundheit. Tras -lich, -ig, -bar va -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "La salud es más importante que el dinero."
+            }
+          ]
+        },
+        {
+          "title": "-lich, -ig",
+          "text": "Sustantivo + -lich/-ig forma un adjetivo. -lich suele llevar diéresis: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Corro media hora a diario."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : vie saine",
+      "points": [
+        {
+          "title": "-heit, -keit",
+          "text": "Adjectif + -heit/-keit donne un nom (toujours die) : gesund → die Gesundheit. Après -lich, -ig, -bar on met -keit : möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "La santé est plus importante que l’argent."
+            }
+          ]
+        },
+        {
+          "title": "-lich, -ig",
+          "text": "Nom + -lich/-ig donne un adjectif. -lich prend souvent un umlaut : der Tag → täglich. -ig : die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Je cours une demi-heure tous les jours."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: sağlıklı yaşam",
+      "points": [
+        {
+          "title": "-heit, -keit",
+          "text": "Sıfat + -heit/-keit isim yapar (hep die): gesund → die Gesundheit. -lich, -ig, -bar’dan sonra -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Sağlık paradan daha önemli."
+            }
+          ]
+        },
+        {
+          "title": "-lich, -ig",
+          "text": "İsim + -lich/-ig sıfat yapar. -lich çoğu zaman umlautlu: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Her gün yarım saat koşuyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: viață sănătoasă",
+      "points": [
+        {
+          "title": "-heit, -keit",
+          "text": "Adjectiv + -heit/-keit dă un substantiv (mereu die): gesund → die Gesundheit. După -lich, -ig, -bar punem -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Sănătatea e mai importantă decât banii."
+            }
+          ]
+        },
+        {
+          "title": "-lich, -ig",
+          "text": "Substantiv + -lich/-ig dă un adjectiv. -lich are des umlaut: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Alerg zilnic o jumătate de oră."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: sog'lom hayot",
+      "points": [
+        {
+          "title": "-heit, -keit",
+          "text": "Sifat + -heit/-keit ot yasaydi (doim die): gesund → die Gesundheit. -lich, -ig, -bar dan keyin -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Sog'liq puldan muhimroq."
+            }
+          ]
+        },
+        {
+          "title": "-lich, -ig",
+          "text": "Ot + -lich/-ig sifat yasaydi. -lich ko'pincha umlaut bilan: der Tag → täglich. -ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "Har kuni yarim soat yuguraman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: स्वस्थ जीवन",
+      "points": [
+        {
+          "title": "-heit, -keit",
+          "text": "विशेषण + -heit/-keit से संज्ञा (हमेशा die): gesund → die Gesundheit। -lich, -ig, -bar के बाद -keit: möglich → die Möglichkeit।",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "सेहत पैसे से ज़्यादा ज़रूरी है।"
+            }
+          ]
+        },
+        {
+          "title": "-lich, -ig",
+          "text": "संज्ञा + -lich/-ig से विशेषण। -lich में अक्सर उमलाउट: der Tag → täglich। -ig: die Sonne → sonnig।",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "मैं रोज़ आधा घंटा जॉगिंग करता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: حياة صحية",
+      "points": [
+        {
+          "title": "-heit و-keit",
+          "text": "الصفة + -heit/-keit تصنع اسماً (دائماً die): gesund → die Gesundheit. وبعد -lich و-ig و-bar نضع -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "الصحة أهم من المال."
+            }
+          ]
+        },
+        {
+          "title": "-lich و-ig",
+          "text": "الاسم + -lich/-ig يصنع صفة. و-lich غالباً مع أوملاوت: der Tag → täglich. و-ig: die Sonne → sonnig.",
+          "examples": [
+            {
+              "de": "Ich jogge täglich eine halbe Stunde.",
+              "tr": "أركض نصف ساعة يومياً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "word-forge-nine": {
+    "ru": {
+      "title": "Повторение: как делают слова",
+      "points": [
+        {
+          "title": "Глагол + -ung",
+          "text": "Основа глагола + -ung даёт существительное: einladen → die Einladung. Слова на -ung всегда die, во множественном -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Спасибо за приглашение!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Прилагательное + -heit/-keit даёт существительное (всегда die): gesund → die Gesundheit. После -lich, -ig, -bar ставим -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Здоровье важнее денег."
+            }
+          ]
+        },
+        {
+          "title": "un-: наоборот",
+          "text": "un- + прилагательное даёт противоположное значение, пишется слитно: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "Это невозможно!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: як роблять слова",
+      "points": [
+        {
+          "title": "Дієслово + -ung",
+          "text": "Основа дієслова + -ung дає іменник: einladen → die Einladung. Слова на -ung завжди die, у множині -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Дякую за запрошення!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Прикметник + -heit/-keit дає іменник (завжди die): gesund → die Gesundheit. Після -lich, -ig, -bar ставимо -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Здоров’я важливіше за гроші."
+            }
+          ]
+        },
+        {
+          "title": "un-: навпаки",
+          "text": "un- + прикметник дає протилежне значення, пишеться разом: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "Це неможливо!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: word building",
+      "points": [
+        {
+          "title": "Verb + -ung",
+          "text": "Verb stem + -ung makes a noun: einladen → die Einladung. Words in -ung are always die, plural -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Thanks for the invitation!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Adjective + -heit/-keit makes a noun (always die): gesund → die Gesundheit. After -lich, -ig, -bar use -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Health is more important than money."
+            }
+          ]
+        },
+        {
+          "title": "un-: the opposite",
+          "text": "un- + adjective gives the opposite meaning, written as one word: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "That’s impossible!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: słowotwórstwo",
+      "points": [
+        {
+          "title": "Czasownik + -ung",
+          "text": "Temat czasownika + -ung daje rzeczownik: einladen → die Einladung. Słowa na -ung zawsze die, w mnogiej -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Dziękuję za zaproszenie!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Przymiotnik + -heit/-keit daje rzeczownik (zawsze die): gesund → die Gesundheit. Po -lich, -ig, -bar stawiamy -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Zdrowie jest ważniejsze niż pieniądze."
+            }
+          ]
+        },
+        {
+          "title": "un-: odwrotnie",
+          "text": "un- + przymiotnik daje przeciwne znaczenie, pisze się łącznie: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "To niemożliwe!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: formación de palabras",
+      "points": [
+        {
+          "title": "Verbo + -ung",
+          "text": "Raíz del verbo + -ung forma un sustantivo: einladen → die Einladung. Las palabras en -ung son siempre die, plural -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "¡Gracias por la invitación!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Adjetivo + -heit/-keit forma un sustantivo (siempre die): gesund → die Gesundheit. Tras -lich, -ig, -bar va -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "La salud es más importante que el dinero."
+            }
+          ]
+        },
+        {
+          "title": "un-: lo contrario",
+          "text": "un- + adjetivo da el significado contrario, se escribe junto: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "¡Es imposible!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : formation des mots",
+      "points": [
+        {
+          "title": "Verbe + -ung",
+          "text": "Radical du verbe + -ung donne un nom : einladen → die Einladung. Les mots en -ung sont toujours die, pluriel -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Merci pour l’invitation !"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Adjectif + -heit/-keit donne un nom (toujours die) : gesund → die Gesundheit. Après -lich, -ig, -bar on met -keit : möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "La santé est plus importante que l’argent."
+            }
+          ]
+        },
+        {
+          "title": "un- : le contraire",
+          "text": "un- + adjectif donne le sens contraire, en un seul mot : möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "C’est impossible !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: kelime türetme",
+      "points": [
+        {
+          "title": "Fiil + -ung",
+          "text": "Fiil kökü + -ung isim yapar: einladen → die Einladung. -ung’lu kelimeler hep die, çoğulu -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Davet için teşekkürler!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Sıfat + -heit/-keit isim yapar (hep die): gesund → die Gesundheit. -lich, -ig, -bar’dan sonra -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Sağlık paradan daha önemli."
+            }
+          ]
+        },
+        {
+          "title": "un-: tersi",
+          "text": "un- + sıfat zıt anlam verir, bitişik yazılır: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "Bu imkânsız!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: formarea cuvintelor",
+      "points": [
+        {
+          "title": "Verb + -ung",
+          "text": "Rădăcina verbului + -ung dă un substantiv: einladen → die Einladung. Cuvintele în -ung sunt mereu die, plural -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Mulțumesc pentru invitație!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Adjectiv + -heit/-keit dă un substantiv (mereu die): gesund → die Gesundheit. După -lich, -ig, -bar punem -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Sănătatea e mai importantă decât banii."
+            }
+          ]
+        },
+        {
+          "title": "un-: opusul",
+          "text": "un- + adjectiv dă sensul opus, se scrie legat: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "E imposibil!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: so'z yasalishi",
+      "points": [
+        {
+          "title": "Fe'l + -ung",
+          "text": "Fe'l o'zagi + -ung ot yasaydi: einladen → die Einladung. -ung bilan tugaganlar doim die, ko'plikda -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Taklif uchun rahmat!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Sifat + -heit/-keit ot yasaydi (doim die): gesund → die Gesundheit. -lich, -ig, -bar dan keyin -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Sog'liq puldan muhimroq."
+            }
+          ]
+        },
+        {
+          "title": "un-: teskarisi",
+          "text": "un- + sifat teskari ma'no beradi, qo'shib yoziladi: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "Bu mumkin emas!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: शब्द निर्माण",
+      "points": [
+        {
+          "title": "क्रिया + -ung",
+          "text": "क्रिया का मूल + -ung से संज्ञा बनती है: einladen → die Einladung। -ung वाले शब्द हमेशा die, बहुवचन -en।",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "निमंत्रण के लिए धन्यवाद!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "विशेषण + -heit/-keit से संज्ञा (हमेशा die): gesund → die Gesundheit। -lich, -ig, -bar के बाद -keit: möglich → die Möglichkeit।",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "सेहत पैसे से ज़्यादा ज़रूरी है।"
+            }
+          ]
+        },
+        {
+          "title": "un-: उल्टा",
+          "text": "un- + विशेषण उल्टा अर्थ देता है, जोड़कर लिखते हैं: möglich → unmöglich, gesund → ungesund।",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "यह नामुमकिन है!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: بناء الكلمات",
+      "points": [
+        {
+          "title": "الفعل + -ung",
+          "text": "جذر الفعل + -ung يصنع اسماً: einladen → die Einladung. والكلمات المنتهية بـ -ung دائماً die، وجمعها -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "شكراً على الدعوة!"
+            }
+          ]
+        },
+        {
+          "title": "-heit و-keit",
+          "text": "الصفة + -heit/-keit تصنع اسماً (دائماً die): gesund → die Gesundheit. وبعد -lich و-ig و-bar نضع -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "الصحة أهم من المال."
+            }
+          ]
+        },
+        {
+          "title": "un-: العكس",
+          "text": "un- + الصفة تعطي المعنى المعاكس وتُكتب متصلة: möglich → unmöglich، gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "هذا مستحيل!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "word-forge-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "Глагол + -ung",
+          "text": "Основа глагола + -ung даёт существительное: einladen → die Einladung. Слова на -ung всегда die, во множественном -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Спасибо за приглашение!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Прилагательное + -heit/-keit даёт существительное (всегда die): gesund → die Gesundheit. После -lich, -ig, -bar ставим -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Здоровье важнее денег."
+            }
+          ]
+        },
+        {
+          "title": "-bar: можно сделать",
+          "text": "Основа глагола + -bar значит «это можно сделать»: essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Эти грибы съедобные."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "Дієслово + -ung",
+          "text": "Основа дієслова + -ung дає іменник: einladen → die Einladung. Слова на -ung завжди die, у множині -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Дякую за запрошення!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Прикметник + -heit/-keit дає іменник (завжди die): gesund → die Gesundheit. Після -lich, -ig, -bar ставимо -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Здоров’я важливіше за гроші."
+            }
+          ]
+        },
+        {
+          "title": "-bar: можна зробити",
+          "text": "Основа дієслова + -bar означає «це можна зробити»: essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Ці гриби їстівні."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "Verb + -ung",
+          "text": "Verb stem + -ung makes a noun: einladen → die Einladung. Words in -ung are always die, plural -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Thanks for the invitation!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Adjective + -heit/-keit makes a noun (always die): gesund → die Gesundheit. After -lich, -ig, -bar use -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Health is more important than money."
+            }
+          ]
+        },
+        {
+          "title": "-bar: can be done",
+          "text": "Verb stem + -bar means \"can be done\": essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "These mushrooms are edible."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "Czasownik + -ung",
+          "text": "Temat czasownika + -ung daje rzeczownik: einladen → die Einladung. Słowa na -ung zawsze die, w mnogiej -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Dziękuję za zaproszenie!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Przymiotnik + -heit/-keit daje rzeczownik (zawsze die): gesund → die Gesundheit. Po -lich, -ig, -bar stawiamy -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Zdrowie jest ważniejsze niż pieniądze."
+            }
+          ]
+        },
+        {
+          "title": "-bar: da się zrobić",
+          "text": "Temat czasownika + -bar znaczy „da się to zrobić”: essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Te grzyby są jadalne."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "Verbo + -ung",
+          "text": "Raíz del verbo + -ung forma un sustantivo: einladen → die Einladung. Las palabras en -ung son siempre die, plural -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "¡Gracias por la invitación!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Adjetivo + -heit/-keit forma un sustantivo (siempre die): gesund → die Gesundheit. Tras -lich, -ig, -bar va -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "La salud es más importante que el dinero."
+            }
+          ]
+        },
+        {
+          "title": "-bar: se puede hacer",
+          "text": "Raíz del verbo + -bar significa \"se puede hacer\": essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Estas setas son comestibles."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "Verbe + -ung",
+          "text": "Radical du verbe + -ung donne un nom : einladen → die Einladung. Les mots en -ung sont toujours die, pluriel -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Merci pour l’invitation !"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Adjectif + -heit/-keit donne un nom (toujours die) : gesund → die Gesundheit. Après -lich, -ig, -bar on met -keit : möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "La santé est plus importante que l’argent."
+            }
+          ]
+        },
+        {
+          "title": "-bar : faisable",
+          "text": "Radical du verbe + -bar veut dire « on peut le faire » : essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Ces champignons sont comestibles."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "Fiil + -ung",
+          "text": "Fiil kökü + -ung isim yapar: einladen → die Einladung. -ung’lu kelimeler hep die, çoğulu -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Davet için teşekkürler!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Sıfat + -heit/-keit isim yapar (hep die): gesund → die Gesundheit. -lich, -ig, -bar’dan sonra -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Sağlık paradan daha önemli."
+            }
+          ]
+        },
+        {
+          "title": "-bar: yapılabilir",
+          "text": "Fiil kökü + -bar \"yapılabilir\" demektir: essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Bu mantarlar yenebilir."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "Verb + -ung",
+          "text": "Rădăcina verbului + -ung dă un substantiv: einladen → die Einladung. Cuvintele în -ung sunt mereu die, plural -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Mulțumesc pentru invitație!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Adjectiv + -heit/-keit dă un substantiv (mereu die): gesund → die Gesundheit. După -lich, -ig, -bar punem -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Sănătatea e mai importantă decât banii."
+            }
+          ]
+        },
+        {
+          "title": "-bar: se poate face",
+          "text": "Rădăcina verbului + -bar înseamnă „se poate face”: essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Ciupercile acestea sunt comestibile."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "Fe'l + -ung",
+          "text": "Fe'l o'zagi + -ung ot yasaydi: einladen → die Einladung. -ung bilan tugaganlar doim die, ko'plikda -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Taklif uchun rahmat!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Sifat + -heit/-keit ot yasaydi (doim die): gesund → die Gesundheit. -lich, -ig, -bar dan keyin -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Sog'liq puldan muhimroq."
+            }
+          ]
+        },
+        {
+          "title": "-bar: qilsa bo‘ladi",
+          "text": "Fe'l o'zagi + -bar \"qilish mumkin\" degani: essen → essbar, erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "Bu qo'ziqorinlar yeyiladi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "क्रिया + -ung",
+          "text": "क्रिया का मूल + -ung से संज्ञा बनती है: einladen → die Einladung। -ung वाले शब्द हमेशा die, बहुवचन -en।",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "निमंत्रण के लिए धन्यवाद!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "विशेषण + -heit/-keit से संज्ञा (हमेशा die): gesund → die Gesundheit। -lich, -ig, -bar के बाद -keit: möglich → die Möglichkeit।",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "सेहत पैसे से ज़्यादा ज़रूरी है।"
+            }
+          ]
+        },
+        {
+          "title": "-bar: किया जा सकता है",
+          "text": "क्रिया का मूल + -bar मतलब \"किया जा सकता है\": essen → essbar, erreichen → erreichbar।",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "ये मशरूम खाने लायक हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "الفعل + -ung",
+          "text": "جذر الفعل + -ung يصنع اسماً: einladen → die Einladung. والكلمات المنتهية بـ -ung دائماً die، وجمعها -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "شكراً على الدعوة!"
+            }
+          ]
+        },
+        {
+          "title": "-heit و-keit",
+          "text": "الصفة + -heit/-keit تصنع اسماً (دائماً die): gesund → die Gesundheit. وبعد -lich و-ig و-bar نضع -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "الصحة أهم من المال."
+            }
+          ]
+        },
+        {
+          "title": "-bar: يمكن فعله",
+          "text": "جذر الفعل + -bar يعني \"يمكن فعله\": essen → essbar، erreichen → erreichbar.",
+          "examples": [
+            {
+              "de": "Diese Pilze sind essbar.",
+              "tr": "هذا الفطر صالح للأكل."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

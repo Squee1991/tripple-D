@@ -1,0 +1,2332 @@
+{
+  "comparison-hills-one": {
+    "ru": {
+      "title": "Быстрее и медленнее",
+      "points": [
+        {
+          "title": "-er: быстрее",
+          "text": "Сравнительная степень: + -er. schnell → schneller. Короткие слова часто с умлаутом: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Мой брат старше."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Швидше й повільніше",
+      "points": [
+        {
+          "title": "-er: швидше",
+          "text": "Вищий ступінь: + -er. schnell → schneller. Короткі слова часто з умлаутом: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Мій брат старший."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Faster and slower",
+      "points": [
+        {
+          "title": "-er: faster",
+          "text": "Comparative: add -er. schnell → schneller. Short words often get an umlaut: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "My brother is older."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Szybciej i wolniej",
+      "points": [
+        {
+          "title": "-er: szybszy",
+          "text": "Stopień wyższy: + -er. schnell → schneller. Krótkie słowa często z umlautem: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Mój brat jest starszy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Más rápido y más lento",
+      "points": [
+        {
+          "title": "-er: más rápido",
+          "text": "Comparativo: + -er. schnell → schneller. Las palabras cortas suelen llevar diéresis: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Mi hermano es mayor."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Plus vite et plus lentement",
+      "points": [
+        {
+          "title": "-er : plus rapide",
+          "text": "Comparatif : + -er. schnell → schneller. Les mots courts prennent souvent un umlaut : alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Mon frère est plus âgé."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Daha hızlı ve daha yavaş",
+      "points": [
+        {
+          "title": "-er: daha hızlı",
+          "text": "Karşılaştırma: + -er. schnell → schneller. Kısa kelimeler çoğu zaman umlaut alır: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Erkek kardeşim daha büyük."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Mai repede și mai încet",
+      "points": [
+        {
+          "title": "-er: mai rapid",
+          "text": "Comparativul: + -er. schnell → schneller. Cuvintele scurte primesc des umlaut: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Fratele meu e mai mare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Tezroq va sekinroq",
+      "points": [
+        {
+          "title": "-er: tezroq",
+          "text": "Qiyosiy daraja: + -er. schnell → schneller. Qisqa so'zlar ko'pincha umlaut oladi: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Akam kattaroq."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "तेज़ और धीमा",
+      "points": [
+        {
+          "title": "-er: ज़्यादा तेज़",
+          "text": "तुलनात्मक: + -er। schnell → schneller। छोटे शब्दों में अक्सर उमलाउट: alt → älter, groß → größer।",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "मेरा भाई बड़ा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "أسرع وأبطأ",
+      "points": [
+        {
+          "title": "-er: أسرع",
+          "text": "صيغة المقارنة: + -er. schnell → schneller. والكلمات القصيرة تأخذ غالباً أوملاوت: alt → älter، groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "أخي أكبر."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "comparison-hills-two": {
+    "ru": {
+      "title": "Старше и моложе: умлаут",
+      "points": [
+        {
+          "title": "-er: быстрее",
+          "text": "Сравнительная степень: + -er. schnell → schneller. Короткие слова часто с умлаутом: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Мой брат старше."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Старший і молодший: умлаут",
+      "points": [
+        {
+          "title": "-er: швидше",
+          "text": "Вищий ступінь: + -er. schnell → schneller. Короткі слова часто з умлаутом: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Мій брат старший."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Older and younger: umlaut",
+      "points": [
+        {
+          "title": "-er: faster",
+          "text": "Comparative: add -er. schnell → schneller. Short words often get an umlaut: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "My brother is older."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Starszy i młodszy: umlaut",
+      "points": [
+        {
+          "title": "-er: szybszy",
+          "text": "Stopień wyższy: + -er. schnell → schneller. Krótkie słowa często z umlautem: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Mój brat jest starszy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Mayor y menor: diéresis",
+      "points": [
+        {
+          "title": "-er: más rápido",
+          "text": "Comparativo: + -er. schnell → schneller. Las palabras cortas suelen llevar diéresis: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Mi hermano es mayor."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Plus âgé et plus jeune : umlaut",
+      "points": [
+        {
+          "title": "-er : plus rapide",
+          "text": "Comparatif : + -er. schnell → schneller. Les mots courts prennent souvent un umlaut : alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Mon frère est plus âgé."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Daha büyük ve daha küçük: umlaut",
+      "points": [
+        {
+          "title": "-er: daha hızlı",
+          "text": "Karşılaştırma: + -er. schnell → schneller. Kısa kelimeler çoğu zaman umlaut alır: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Erkek kardeşim daha büyük."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Mai mare și mai mic: umlaut",
+      "points": [
+        {
+          "title": "-er: mai rapid",
+          "text": "Comparativul: + -er. schnell → schneller. Cuvintele scurte primesc des umlaut: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Fratele meu e mai mare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kattaroq va kichikroq: umlaut",
+      "points": [
+        {
+          "title": "-er: tezroq",
+          "text": "Qiyosiy daraja: + -er. schnell → schneller. Qisqa so'zlar ko'pincha umlaut oladi: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Akam kattaroq."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "बड़ा और छोटा: उमलाउट",
+      "points": [
+        {
+          "title": "-er: ज़्यादा तेज़",
+          "text": "तुलनात्मक: + -er। schnell → schneller। छोटे शब्दों में अक्सर उमलाउट: alt → älter, groß → größer।",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "मेरा भाई बड़ा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "أكبر وأصغر: الأوملاوت",
+      "points": [
+        {
+          "title": "-er: أسرع",
+          "text": "صيغة المقارنة: + -er. schnell → schneller. والكلمات القصيرة تأخذ غالباً أوملاوت: alt → älter، groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "أخي أكبر."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "comparison-hills-three": {
+    "ru": {
+      "title": "Лучше, чем: als",
+      "points": [
+        {
+          "title": "als и особые формы",
+          "text": "С чем сравниваем, ставим после als: älter als ich. Особые: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Чай лучше, чем кофе."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Краще, ніж: als",
+      "points": [
+        {
+          "title": "als і особливі форми",
+          "text": "З чим порівнюємо, ставимо після als: älter als ich. Особливі: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Чай кращий за каву."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Better than: als",
+      "points": [
+        {
+          "title": "als and irregular forms",
+          "text": "What you compare with goes after als: älter als ich. Irregular: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Tea is better than coffee."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Lepszy niż: als",
+      "points": [
+        {
+          "title": "als i formy szczególne",
+          "text": "To, z czym porównujemy, stoi po als: älter als ich. Szczególne: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Herbata jest lepsza niż kawa."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Mejor que: als",
+      "points": [
+        {
+          "title": "als y formas especiales",
+          "text": "Lo comparado va tras als: älter als ich. Especiales: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "El té es mejor que el café."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Meilleur que : als",
+      "points": [
+        {
+          "title": "als et formes irrégulières",
+          "text": "Ce à quoi on compare vient après als : älter als ich. Irréguliers : gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Le thé est meilleur que le café."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "... -den daha iyi: als",
+      "points": [
+        {
+          "title": "als ve özel biçimler",
+          "text": "Karşılaştırılan als’tan sonra gelir: älter als ich. Özel: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Çay kahveden daha iyi."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Mai bun decât: als",
+      "points": [
+        {
+          "title": "als și forme speciale",
+          "text": "Cu ce comparăm vine după als: älter als ich. Speciale: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Ceaiul e mai bun decât cafeaua."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "...dan yaxshiroq: als",
+      "points": [
+        {
+          "title": "als va alohida shakllar",
+          "text": "Nima bilan solishtirsak, als dan keyin: älter als ich. Alohida: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Choy qahvadan yaxshiroq."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "से बेहतर: als",
+      "points": [
+        {
+          "title": "als और खास रूप",
+          "text": "जिससे तुलना हो, वह als के बाद: älter als ich। खास: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer।",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "चाय कॉफ़ी से बेहतर है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "أفضل من: als",
+      "points": [
+        {
+          "title": "als والصيغ الخاصة",
+          "text": "ما نقارن به يأتي بعد als: älter als ich. والخاصة: gut → besser، viel → mehr، gern → lieber، hoch → höher، teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "الشاي أفضل من القهوة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "comparison-hills-four": {
+    "ru": {
+      "title": "Такой же, как: so ... wie",
+      "points": [
+        {
+          "title": "so ... wie",
+          "text": "Одинаково: so groß wie. Не одинаково: nicht so groß wie. После -er идёт als, после so идёт wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Я такого же роста, как папа."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Такий самий, як: so ... wie",
+      "points": [
+        {
+          "title": "so ... wie",
+          "text": "Однаково: so groß wie. Не однаково: nicht so groß wie. Після -er іде als, після so іде wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Я такого ж зросту, як тато."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "As ... as: so ... wie",
+      "points": [
+        {
+          "title": "so ... wie",
+          "text": "Equal: so groß wie. Not equal: nicht so groß wie. After -er use als, after so use wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "I’m as tall as my father."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Taki sam jak: so ... wie",
+      "points": [
+        {
+          "title": "so ... wie",
+          "text": "Tak samo: so groß wie. Nie tak samo: nicht so groß wie. Po -er idzie als, po so idzie wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Jestem tak wysoki jak tata."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Tan ... como: so ... wie",
+      "points": [
+        {
+          "title": "so ... wie",
+          "text": "Igual: so groß wie. No igual: nicht so groß wie. Tras -er va als, tras so va wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Soy tan alto como mi padre."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Aussi ... que : so ... wie",
+      "points": [
+        {
+          "title": "so ... wie",
+          "text": "Égalité : so groß wie. Pas autant : nicht so groß wie. Après -er on met als, après so on met wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Je suis aussi grand que mon père."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "... kadar: so ... wie",
+      "points": [
+        {
+          "title": "so ... wie",
+          "text": "Eşit: so groß wie. Eşit değil: nicht so groß wie. -er’den sonra als, so’dan sonra wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Babam kadar uzunum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "La fel de ... ca: so ... wie",
+      "points": [
+        {
+          "title": "so ... wie",
+          "text": "La fel: so groß wie. Nu la fel: nicht so groß wie. După -er vine als, după so vine wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Sunt la fel de înalt ca tata."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "... dek: so ... wie",
+      "points": [
+        {
+          "title": "so ... wie",
+          "text": "Bir xil: so groß wie. Bir xil emas: nicht so groß wie. -er dan keyin als, so dan keyin wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Men otamdek bo'yliman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "... जितना: so ... wie",
+      "points": [
+        {
+          "title": "so ... wie",
+          "text": "बराबर: so groß wie। बराबर नहीं: nicht so groß wie। -er के बाद als, so के बाद wie।",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "मैं अपने पिता जितना लंबा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "بقدر: so ... wie",
+      "points": [
+        {
+          "title": "so ... wie",
+          "text": "التساوي: so groß wie. وعدم التساوي: nicht so groß wie. بعد -er نستعمل als، وبعد so نستعمل wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "أنا بطول أبي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "comparison-hills-five": {
+    "ru": {
+      "title": "Лучше всех: am ...sten",
+      "points": [
+        {
+          "title": "am ...sten: лучше всех",
+          "text": "Превосходная степень после глагола: am schnellsten, am ältesten. Особые: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Анна поёт лучше всех."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Найкраще: am ...sten",
+      "points": [
+        {
+          "title": "am ...sten: найкраще",
+          "text": "Найвищий ступінь після дієслова: am schnellsten, am ältesten. Особливі: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Анна співає найкраще."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The best: am ...sten",
+      "points": [
+        {
+          "title": "am ...sten: the most",
+          "text": "Superlative after the verb: am schnellsten, am ältesten. Irregular: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna sings best."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Najlepiej: am ...sten",
+      "points": [
+        {
+          "title": "am ...sten: najbardziej",
+          "text": "Stopień najwyższy po czasowniku: am schnellsten, am ältesten. Szczególne: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna śpiewa najlepiej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Lo mejor: am ...sten",
+      "points": [
+        {
+          "title": "am ...sten: lo más",
+          "text": "Superlativo tras el verbo: am schnellsten, am ältesten. Especiales: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna canta mejor que nadie."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le mieux : am ...sten",
+      "points": [
+        {
+          "title": "am ...sten : le plus",
+          "text": "Superlatif après le verbe : am schnellsten, am ältesten. Irréguliers : am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "C’est Anna qui chante le mieux."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "En iyi: am ...sten",
+      "points": [
+        {
+          "title": "am ...sten: en çok",
+          "text": "Fiilden sonra en üstünlük: am schnellsten, am ältesten. Özel: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "En iyi Anna şarkı söylüyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cel mai bine: am ...sten",
+      "points": [
+        {
+          "title": "am ...sten: cel mai",
+          "text": "Superlativul după verb: am schnellsten, am ältesten. Speciale: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna cântă cel mai bine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Eng yaxshi: am ...sten",
+      "points": [
+        {
+          "title": "am ...sten: eng",
+          "text": "Fe'ldan keyin orttirma daraja: am schnellsten, am ältesten. Alohida: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna hammadan yaxshi kuylaydi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "सबसे अच्छा: am ...sten",
+      "points": [
+        {
+          "title": "am ...sten: सबसे",
+          "text": "क्रिया के बाद सर्वोत्तम रूप: am schnellsten, am ältesten। खास: am besten, am meisten, am liebsten।",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "अन्ना सबसे अच्छा गाती है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الأفضل: am ...sten",
+      "points": [
+        {
+          "title": "am ...sten: الأكثر",
+          "text": "صيغة التفضيل بعد الفعل: am schnellsten، am ältesten. والخاصة: am besten، am meisten، am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "آنا تغني أفضل من الجميع."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "comparison-hills-six": {
+    "ru": {
+      "title": "Самый высокий в мире",
+      "points": [
+        {
+          "title": "der schnellste Zug",
+          "text": "Перед существительным: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "Это самая красивая улица."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Найвищий у світі",
+      "points": [
+        {
+          "title": "der schnellste Zug",
+          "text": "Перед іменником: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "Це найгарніша вулиця."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The tallest in the world",
+      "points": [
+        {
+          "title": "der schnellste Zug",
+          "text": "Before a noun: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "This is the most beautiful street."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Najwyższy na świecie",
+      "points": [
+        {
+          "title": "der schnellste Zug",
+          "text": "Przed rzeczownikiem: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "To najpiękniejsza ulica."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "El más alto del mundo",
+      "points": [
+        {
+          "title": "der schnellste Zug",
+          "text": "Delante del sustantivo: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "Es la calle más bonita."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le plus haut du monde",
+      "points": [
+        {
+          "title": "der schnellste Zug",
+          "text": "Devant un nom : der/die/das + -ste : der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "C’est la plus belle rue."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Dünyanın en yükseği",
+      "points": [
+        {
+          "title": "der schnellste Zug",
+          "text": "İsimden önce: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "Bu en güzel cadde."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cel mai înalt din lume",
+      "points": [
+        {
+          "title": "der schnellste Zug",
+          "text": "Înaintea substantivului: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "E cea mai frumoasă stradă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Dunyodagi eng baland",
+      "points": [
+        {
+          "title": "der schnellste Zug",
+          "text": "Otdan oldin: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "Bu eng chiroyli ko'cha."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दुनिया में सबसे ऊँचा",
+      "points": [
+        {
+          "title": "der schnellste Zug",
+          "text": "संज्ञा से पहले: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant।",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "यह सबसे सुंदर सड़क है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الأعلى في العالم",
+      "points": [
+        {
+          "title": "der schnellste Zug",
+          "text": "قبل الاسم: der/die/das + -ste: der schnellste Zug، die größte Stadt، das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "هذا أجمل شارع."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "comparison-hills-seven": {
+    "ru": {
+      "title": "Практика: в магазине одежды",
+      "points": [
+        {
+          "title": "als и особые формы",
+          "text": "С чем сравниваем, ставим после als: älter als ich. Особые: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Чай лучше, чем кофе."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Одинаково: so groß wie. Не одинаково: nicht so groß wie. После -er идёт als, после so идёт wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Я такого же роста, как папа."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: у магазині одягу",
+      "points": [
+        {
+          "title": "als і особливі форми",
+          "text": "З чим порівнюємо, ставимо після als: älter als ich. Особливі: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Чай кращий за каву."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Однаково: so groß wie. Не однаково: nicht so groß wie. Після -er іде als, після so іде wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Я такого ж зросту, як тато."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: in a clothes shop",
+      "points": [
+        {
+          "title": "als and irregular forms",
+          "text": "What you compare with goes after als: älter als ich. Irregular: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Tea is better than coffee."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Equal: so groß wie. Not equal: nicht so groß wie. After -er use als, after so use wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "I’m as tall as my father."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: w sklepie z ubraniami",
+      "points": [
+        {
+          "title": "als i formy szczególne",
+          "text": "To, z czym porównujemy, stoi po als: älter als ich. Szczególne: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Herbata jest lepsza niż kawa."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Tak samo: so groß wie. Nie tak samo: nicht so groß wie. Po -er idzie als, po so idzie wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Jestem tak wysoki jak tata."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: en una tienda de ropa",
+      "points": [
+        {
+          "title": "als y formas especiales",
+          "text": "Lo comparado va tras als: älter als ich. Especiales: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "El té es mejor que el café."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Igual: so groß wie. No igual: nicht so groß wie. Tras -er va als, tras so va wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Soy tan alto como mi padre."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : dans un magasin de vêtements",
+      "points": [
+        {
+          "title": "als et formes irrégulières",
+          "text": "Ce à quoi on compare vient après als : älter als ich. Irréguliers : gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Le thé est meilleur que le café."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Égalité : so groß wie. Pas autant : nicht so groß wie. Après -er on met als, après so on met wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Je suis aussi grand que mon père."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: giyim mağazasında",
+      "points": [
+        {
+          "title": "als ve özel biçimler",
+          "text": "Karşılaştırılan als’tan sonra gelir: älter als ich. Özel: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Çay kahveden daha iyi."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Eşit: so groß wie. Eşit değil: nicht so groß wie. -er’den sonra als, so’dan sonra wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Babam kadar uzunum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: în magazinul de haine",
+      "points": [
+        {
+          "title": "als și forme speciale",
+          "text": "Cu ce comparăm vine după als: älter als ich. Speciale: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Ceaiul e mai bun decât cafeaua."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "La fel: so groß wie. Nu la fel: nicht so groß wie. După -er vine als, după so vine wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Sunt la fel de înalt ca tata."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: kiyim do'konida",
+      "points": [
+        {
+          "title": "als va alohida shakllar",
+          "text": "Nima bilan solishtirsak, als dan keyin: älter als ich. Alohida: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Choy qahvadan yaxshiroq."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Bir xil: so groß wie. Bir xil emas: nicht so groß wie. -er dan keyin als, so dan keyin wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Men otamdek bo'yliman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: कपड़ों की दुकान में",
+      "points": [
+        {
+          "title": "als और खास रूप",
+          "text": "जिससे तुलना हो, वह als के बाद: älter als ich। खास: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer।",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "चाय कॉफ़ी से बेहतर है।"
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "बराबर: so groß wie। बराबर नहीं: nicht so groß wie। -er के बाद als, so के बाद wie।",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "मैं अपने पिता जितना लंबा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: في متجر الملابس",
+      "points": [
+        {
+          "title": "als والصيغ الخاصة",
+          "text": "ما نقارن به يأتي بعد als: älter als ich. والخاصة: gut → besser، viel → mehr، gern → lieber، hoch → höher، teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "الشاي أفضل من القهوة."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "التساوي: so groß wie. وعدم التساوي: nicht so groß wie. بعد -er نستعمل als، وبعد so نستعمل wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "أنا بطول أبي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "comparison-hills-eight": {
+    "ru": {
+      "title": "Практика: лучший город",
+      "points": [
+        {
+          "title": "am ...sten: лучше всех",
+          "text": "Превосходная степень после глагола: am schnellsten, am ältesten. Особые: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Анна поёт лучше всех."
+            }
+          ]
+        },
+        {
+          "title": "der schnellste Zug",
+          "text": "Перед существительным: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "Это самая красивая улица."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: найкраще місто",
+      "points": [
+        {
+          "title": "am ...sten: найкраще",
+          "text": "Найвищий ступінь після дієслова: am schnellsten, am ältesten. Особливі: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Анна співає найкраще."
+            }
+          ]
+        },
+        {
+          "title": "der schnellste Zug",
+          "text": "Перед іменником: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "Це найгарніша вулиця."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: the best city",
+      "points": [
+        {
+          "title": "am ...sten: the most",
+          "text": "Superlative after the verb: am schnellsten, am ältesten. Irregular: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna sings best."
+            }
+          ]
+        },
+        {
+          "title": "der schnellste Zug",
+          "text": "Before a noun: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "This is the most beautiful street."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: najlepsze miasto",
+      "points": [
+        {
+          "title": "am ...sten: najbardziej",
+          "text": "Stopień najwyższy po czasowniku: am schnellsten, am ältesten. Szczególne: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna śpiewa najlepiej."
+            }
+          ]
+        },
+        {
+          "title": "der schnellste Zug",
+          "text": "Przed rzeczownikiem: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "To najpiękniejsza ulica."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: la mejor ciudad",
+      "points": [
+        {
+          "title": "am ...sten: lo más",
+          "text": "Superlativo tras el verbo: am schnellsten, am ältesten. Especiales: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna canta mejor que nadie."
+            }
+          ]
+        },
+        {
+          "title": "der schnellste Zug",
+          "text": "Delante del sustantivo: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "Es la calle más bonita."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : la meilleure ville",
+      "points": [
+        {
+          "title": "am ...sten : le plus",
+          "text": "Superlatif après le verbe : am schnellsten, am ältesten. Irréguliers : am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "C’est Anna qui chante le mieux."
+            }
+          ]
+        },
+        {
+          "title": "der schnellste Zug",
+          "text": "Devant un nom : der/die/das + -ste : der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "C’est la plus belle rue."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: en iyi şehir",
+      "points": [
+        {
+          "title": "am ...sten: en çok",
+          "text": "Fiilden sonra en üstünlük: am schnellsten, am ältesten. Özel: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "En iyi Anna şarkı söylüyor."
+            }
+          ]
+        },
+        {
+          "title": "der schnellste Zug",
+          "text": "İsimden önce: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "Bu en güzel cadde."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: cel mai bun oraș",
+      "points": [
+        {
+          "title": "am ...sten: cel mai",
+          "text": "Superlativul după verb: am schnellsten, am ältesten. Speciale: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna cântă cel mai bine."
+            }
+          ]
+        },
+        {
+          "title": "der schnellste Zug",
+          "text": "Înaintea substantivului: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "E cea mai frumoasă stradă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: eng yaxshi shahar",
+      "points": [
+        {
+          "title": "am ...sten: eng",
+          "text": "Fe'ldan keyin orttirma daraja: am schnellsten, am ältesten. Alohida: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna hammadan yaxshi kuylaydi."
+            }
+          ]
+        },
+        {
+          "title": "der schnellste Zug",
+          "text": "Otdan oldin: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "Bu eng chiroyli ko'cha."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: सबसे अच्छा शहर",
+      "points": [
+        {
+          "title": "am ...sten: सबसे",
+          "text": "क्रिया के बाद सर्वोत्तम रूप: am schnellsten, am ältesten। खास: am besten, am meisten, am liebsten।",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "अन्ना सबसे अच्छा गाती है।"
+            }
+          ]
+        },
+        {
+          "title": "der schnellste Zug",
+          "text": "संज्ञा से पहले: der/die/das + -ste: der schnellste Zug, die größte Stadt, das beste Restaurant।",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "यह सबसे सुंदर सड़क है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: أفضل مدينة",
+      "points": [
+        {
+          "title": "am ...sten: الأكثر",
+          "text": "صيغة التفضيل بعد الفعل: am schnellsten، am ältesten. والخاصة: am besten، am meisten، am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "آنا تغني أفضل من الجميع."
+            }
+          ]
+        },
+        {
+          "title": "der schnellste Zug",
+          "text": "قبل الاسم: der/die/das + -ste: der schnellste Zug، die größte Stadt، das beste Restaurant.",
+          "examples": [
+            {
+              "de": "Das ist die schönste Straße.",
+              "tr": "هذا أجمل شارع."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "comparison-hills-nine": {
+    "ru": {
+      "title": "Повторение: сравнение",
+      "points": [
+        {
+          "title": "als и особые формы",
+          "text": "С чем сравниваем, ставим после als: älter als ich. Особые: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Чай лучше, чем кофе."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Одинаково: so groß wie. Не одинаково: nicht so groß wie. После -er идёт als, после so идёт wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Я такого же роста, как папа."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: лучше всех",
+          "text": "Превосходная степень после глагола: am schnellsten, am ältesten. Особые: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Анна поёт лучше всех."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: порівняння",
+      "points": [
+        {
+          "title": "als і особливі форми",
+          "text": "З чим порівнюємо, ставимо після als: älter als ich. Особливі: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Чай кращий за каву."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Однаково: so groß wie. Не однаково: nicht so groß wie. Після -er іде als, після so іде wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Я такого ж зросту, як тато."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: найкраще",
+          "text": "Найвищий ступінь після дієслова: am schnellsten, am ältesten. Особливі: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Анна співає найкраще."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: comparison",
+      "points": [
+        {
+          "title": "als and irregular forms",
+          "text": "What you compare with goes after als: älter als ich. Irregular: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Tea is better than coffee."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Equal: so groß wie. Not equal: nicht so groß wie. After -er use als, after so use wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "I’m as tall as my father."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: the most",
+          "text": "Superlative after the verb: am schnellsten, am ältesten. Irregular: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna sings best."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: porównanie",
+      "points": [
+        {
+          "title": "als i formy szczególne",
+          "text": "To, z czym porównujemy, stoi po als: älter als ich. Szczególne: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Herbata jest lepsza niż kawa."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Tak samo: so groß wie. Nie tak samo: nicht so groß wie. Po -er idzie als, po so idzie wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Jestem tak wysoki jak tata."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: najbardziej",
+          "text": "Stopień najwyższy po czasowniku: am schnellsten, am ältesten. Szczególne: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna śpiewa najlepiej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: comparación",
+      "points": [
+        {
+          "title": "als y formas especiales",
+          "text": "Lo comparado va tras als: älter als ich. Especiales: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "El té es mejor que el café."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Igual: so groß wie. No igual: nicht so groß wie. Tras -er va als, tras so va wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Soy tan alto como mi padre."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: lo más",
+          "text": "Superlativo tras el verbo: am schnellsten, am ältesten. Especiales: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna canta mejor que nadie."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : la comparaison",
+      "points": [
+        {
+          "title": "als et formes irrégulières",
+          "text": "Ce à quoi on compare vient après als : älter als ich. Irréguliers : gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Le thé est meilleur que le café."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Égalité : so groß wie. Pas autant : nicht so groß wie. Après -er on met als, après so on met wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Je suis aussi grand que mon père."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten : le plus",
+          "text": "Superlatif après le verbe : am schnellsten, am ältesten. Irréguliers : am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "C’est Anna qui chante le mieux."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: karşılaştırma",
+      "points": [
+        {
+          "title": "als ve özel biçimler",
+          "text": "Karşılaştırılan als’tan sonra gelir: älter als ich. Özel: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Çay kahveden daha iyi."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Eşit: so groß wie. Eşit değil: nicht so groß wie. -er’den sonra als, so’dan sonra wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Babam kadar uzunum."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: en çok",
+          "text": "Fiilden sonra en üstünlük: am schnellsten, am ältesten. Özel: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "En iyi Anna şarkı söylüyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: comparația",
+      "points": [
+        {
+          "title": "als și forme speciale",
+          "text": "Cu ce comparăm vine după als: älter als ich. Speciale: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Ceaiul e mai bun decât cafeaua."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "La fel: so groß wie. Nu la fel: nicht so groß wie. După -er vine als, după so vine wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Sunt la fel de înalt ca tata."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: cel mai",
+          "text": "Superlativul după verb: am schnellsten, am ältesten. Speciale: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna cântă cel mai bine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: qiyoslash",
+      "points": [
+        {
+          "title": "als va alohida shakllar",
+          "text": "Nima bilan solishtirsak, als dan keyin: älter als ich. Alohida: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Choy qahvadan yaxshiroq."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "Bir xil: so groß wie. Bir xil emas: nicht so groß wie. -er dan keyin als, so dan keyin wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "Men otamdek bo'yliman."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: eng",
+          "text": "Fe'ldan keyin orttirma daraja: am schnellsten, am ältesten. Alohida: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna hammadan yaxshi kuylaydi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: तुलना",
+      "points": [
+        {
+          "title": "als और खास रूप",
+          "text": "जिससे तुलना हो, वह als के बाद: älter als ich। खास: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer।",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "चाय कॉफ़ी से बेहतर है।"
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "बराबर: so groß wie। बराबर नहीं: nicht so groß wie। -er के बाद als, so के बाद wie।",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "मैं अपने पिता जितना लंबा हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: सबसे",
+          "text": "क्रिया के बाद सर्वोत्तम रूप: am schnellsten, am ältesten। खास: am besten, am meisten, am liebsten।",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "अन्ना सबसे अच्छा गाती है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: المقارنة",
+      "points": [
+        {
+          "title": "als والصيغ الخاصة",
+          "text": "ما نقارن به يأتي بعد als: älter als ich. والخاصة: gut → besser، viel → mehr، gern → lieber، hoch → höher، teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "الشاي أفضل من القهوة."
+            }
+          ]
+        },
+        {
+          "title": "so ... wie",
+          "text": "التساوي: so groß wie. وعدم التساوي: nicht so groß wie. بعد -er نستعمل als، وبعد so نستعمل wie.",
+          "examples": [
+            {
+              "de": "Ich bin so groß wie mein Vater.",
+              "tr": "أنا بطول أبي."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: الأكثر",
+          "text": "صيغة التفضيل بعد الفعل: am schnellsten، am ältesten. والخاصة: am besten، am meisten، am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "آنا تغني أفضل من الجميع."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "comparison-hills-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "-er: быстрее",
+          "text": "Сравнительная степень: + -er. schnell → schneller. Короткие слова часто с умлаутом: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Мой брат старше."
+            }
+          ]
+        },
+        {
+          "title": "als и особые формы",
+          "text": "С чем сравниваем, ставим после als: älter als ich. Особые: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Чай лучше, чем кофе."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: лучше всех",
+          "text": "Превосходная степень после глагола: am schnellsten, am ältesten. Особые: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Анна поёт лучше всех."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "-er: швидше",
+          "text": "Вищий ступінь: + -er. schnell → schneller. Короткі слова часто з умлаутом: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Мій брат старший."
+            }
+          ]
+        },
+        {
+          "title": "als і особливі форми",
+          "text": "З чим порівнюємо, ставимо після als: älter als ich. Особливі: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Чай кращий за каву."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: найкраще",
+          "text": "Найвищий ступінь після дієслова: am schnellsten, am ältesten. Особливі: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Анна співає найкраще."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "-er: faster",
+          "text": "Comparative: add -er. schnell → schneller. Short words often get an umlaut: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "My brother is older."
+            }
+          ]
+        },
+        {
+          "title": "als and irregular forms",
+          "text": "What you compare with goes after als: älter als ich. Irregular: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Tea is better than coffee."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: the most",
+          "text": "Superlative after the verb: am schnellsten, am ältesten. Irregular: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna sings best."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "-er: szybszy",
+          "text": "Stopień wyższy: + -er. schnell → schneller. Krótkie słowa często z umlautem: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Mój brat jest starszy."
+            }
+          ]
+        },
+        {
+          "title": "als i formy szczególne",
+          "text": "To, z czym porównujemy, stoi po als: älter als ich. Szczególne: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Herbata jest lepsza niż kawa."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: najbardziej",
+          "text": "Stopień najwyższy po czasowniku: am schnellsten, am ältesten. Szczególne: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna śpiewa najlepiej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "-er: más rápido",
+          "text": "Comparativo: + -er. schnell → schneller. Las palabras cortas suelen llevar diéresis: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Mi hermano es mayor."
+            }
+          ]
+        },
+        {
+          "title": "als y formas especiales",
+          "text": "Lo comparado va tras als: älter als ich. Especiales: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "El té es mejor que el café."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: lo más",
+          "text": "Superlativo tras el verbo: am schnellsten, am ältesten. Especiales: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna canta mejor que nadie."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "-er : plus rapide",
+          "text": "Comparatif : + -er. schnell → schneller. Les mots courts prennent souvent un umlaut : alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Mon frère est plus âgé."
+            }
+          ]
+        },
+        {
+          "title": "als et formes irrégulières",
+          "text": "Ce à quoi on compare vient après als : älter als ich. Irréguliers : gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Le thé est meilleur que le café."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten : le plus",
+          "text": "Superlatif après le verbe : am schnellsten, am ältesten. Irréguliers : am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "C’est Anna qui chante le mieux."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "-er: daha hızlı",
+          "text": "Karşılaştırma: + -er. schnell → schneller. Kısa kelimeler çoğu zaman umlaut alır: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Erkek kardeşim daha büyük."
+            }
+          ]
+        },
+        {
+          "title": "als ve özel biçimler",
+          "text": "Karşılaştırılan als’tan sonra gelir: älter als ich. Özel: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Çay kahveden daha iyi."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: en çok",
+          "text": "Fiilden sonra en üstünlük: am schnellsten, am ältesten. Özel: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "En iyi Anna şarkı söylüyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "-er: mai rapid",
+          "text": "Comparativul: + -er. schnell → schneller. Cuvintele scurte primesc des umlaut: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Fratele meu e mai mare."
+            }
+          ]
+        },
+        {
+          "title": "als și forme speciale",
+          "text": "Cu ce comparăm vine după als: älter als ich. Speciale: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Ceaiul e mai bun decât cafeaua."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: cel mai",
+          "text": "Superlativul după verb: am schnellsten, am ältesten. Speciale: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna cântă cel mai bine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "-er: tezroq",
+          "text": "Qiyosiy daraja: + -er. schnell → schneller. Qisqa so'zlar ko'pincha umlaut oladi: alt → älter, groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "Akam kattaroq."
+            }
+          ]
+        },
+        {
+          "title": "als va alohida shakllar",
+          "text": "Nima bilan solishtirsak, als dan keyin: älter als ich. Alohida: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "Choy qahvadan yaxshiroq."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: eng",
+          "text": "Fe'ldan keyin orttirma daraja: am schnellsten, am ältesten. Alohida: am besten, am meisten, am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "Anna hammadan yaxshi kuylaydi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "-er: ज़्यादा तेज़",
+          "text": "तुलनात्मक: + -er। schnell → schneller। छोटे शब्दों में अक्सर उमलाउट: alt → älter, groß → größer।",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "मेरा भाई बड़ा है।"
+            }
+          ]
+        },
+        {
+          "title": "als और खास रूप",
+          "text": "जिससे तुलना हो, वह als के बाद: älter als ich। खास: gut → besser, viel → mehr, gern → lieber, hoch → höher, teuer → teurer।",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "चाय कॉफ़ी से बेहतर है।"
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: सबसे",
+          "text": "क्रिया के बाद सर्वोत्तम रूप: am schnellsten, am ältesten। खास: am besten, am meisten, am liebsten।",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "अन्ना सबसे अच्छा गाती है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "-er: أسرع",
+          "text": "صيغة المقارنة: + -er. schnell → schneller. والكلمات القصيرة تأخذ غالباً أوملاوت: alt → älter، groß → größer.",
+          "examples": [
+            {
+              "de": "Mein Bruder ist älter.",
+              "tr": "أخي أكبر."
+            }
+          ]
+        },
+        {
+          "title": "als والصيغ الخاصة",
+          "text": "ما نقارن به يأتي بعد als: älter als ich. والخاصة: gut → besser، viel → mehr، gern → lieber، hoch → höher، teuer → teurer.",
+          "examples": [
+            {
+              "de": "Tee ist besser als Kaffee.",
+              "tr": "الشاي أفضل من القهوة."
+            }
+          ]
+        },
+        {
+          "title": "am ...sten: الأكثر",
+          "text": "صيغة التفضيل بعد الفعل: am schnellsten، am ältesten. والخاصة: am besten، am meisten، am liebsten.",
+          "examples": [
+            {
+              "de": "Anna singt am besten.",
+              "tr": "آنا تغني أفضل من الجميع."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

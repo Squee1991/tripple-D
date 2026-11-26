@@ -1,0 +1,2398 @@
+{
+  "regret-river-one": {
+    "ru": {
+      "title": "Я бы сделал: hätte",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Я бы сделал, но не сделал: hätte + Partizip II в конце. С движением и sein, как в Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Я бы тебе позвонил."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Я бы пришёл."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Я б зробив: hätte",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Я б зробив, але не зробив: hätte + Partizip II у кінці. З рухом і sein, як у Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Я б тобі зателефонував."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Я б прийшов."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "I would have done: hätte",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "I would have done it, but didn’t: hätte + Partizip II at the end. With movement and sein, as in Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "I would have called you."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "I would have come."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Zrobiłbym: hätte",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Zrobiłbym, ale nie zrobiłem: hätte + Partizip II na końcu. Z ruchem i sein, jak w Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Zadzwoniłbym do ciebie."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Przyszedłbym."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Lo habría hecho: hätte",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Lo habría hecho, pero no: hätte + Partizip II al final. Con movimiento y sein, como en Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Te habría llamado."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Habría venido."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Je l’aurais fait : hätte",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Je l’aurais fait, mais non : hätte + Partizip II à la fin. Avec le mouvement et sein, comme au Perfekt : wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Je t’aurais appelé."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Je serais venu."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yapardım: hätte",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Yapardım ama yapmadım: hätte + Partizip II sonda. Hareket ve sein ile, Perfekt’teki gibi: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Seni arardım."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Gelirdim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Aș fi făcut: hätte",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Aș fi făcut, dar n-am făcut: hätte + Partizip II la final. Cu mișcare și sein, ca la Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Te-aș fi sunat."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Aș fi venit."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qilgan bo'lardim: hätte",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Qilardim, lekin qilmadim: hätte + Partizip II oxirida. Harakat va sein bilan, Perfekt dagidek: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Senga qo'ng'iroq qilgan bo'lardim."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Kelgan bo'lardim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "मैं करता: hätte",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "मैं करता, पर नहीं किया: hätte + Partizip II अंत में। गति और sein के साथ, Perfekt की तरह: wäre + Partizip II।",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "मैं तुम्हें फ़ोन कर देता।"
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "मैं आ जाता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "كنت سأفعل: hätte",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "كنت سأفعل لكنني لم أفعل: hätte + Partizip II في الآخر. ومع الحركة وsein كما في Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "كنت سأتصل بك."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "كنت سآتي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "regret-river-two": {
+    "ru": {
+      "title": "Я бы пришёл: wäre",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Я бы сделал, но не сделал: hätte + Partizip II в конце. С движением и sein, как в Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Я бы тебе позвонил."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Я бы пришёл."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Я б прийшов: wäre",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Я б зробив, але не зробив: hätte + Partizip II у кінці. З рухом і sein, як у Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Я б тобі зателефонував."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Я б прийшов."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "I would have come: wäre",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "I would have done it, but didn’t: hätte + Partizip II at the end. With movement and sein, as in Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "I would have called you."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "I would have come."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Przyszedłbym: wäre",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Zrobiłbym, ale nie zrobiłem: hätte + Partizip II na końcu. Z ruchem i sein, jak w Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Zadzwoniłbym do ciebie."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Przyszedłbym."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Habría venido: wäre",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Lo habría hecho, pero no: hätte + Partizip II al final. Con movimiento y sein, como en Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Te habría llamado."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Habría venido."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Je serais venu : wäre",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Je l’aurais fait, mais non : hätte + Partizip II à la fin. Avec le mouvement et sein, comme au Perfekt : wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Je t’aurais appelé."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Je serais venu."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Gelirdim: wäre",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Yapardım ama yapmadım: hätte + Partizip II sonda. Hareket ve sein ile, Perfekt’teki gibi: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Seni arardım."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Gelirdim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Aș fi venit: wäre",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Aș fi făcut, dar n-am făcut: hätte + Partizip II la final. Cu mișcare și sein, ca la Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Te-aș fi sunat."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Aș fi venit."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kelgan bo'lardim: wäre",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Qilardim, lekin qilmadim: hätte + Partizip II oxirida. Harakat va sein bilan, Perfekt dagidek: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Senga qo'ng'iroq qilgan bo'lardim."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Kelgan bo'lardim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "मैं आता: wäre",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "मैं करता, पर नहीं किया: hätte + Partizip II अंत में। गति और sein के साथ, Perfekt की तरह: wäre + Partizip II।",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "मैं तुम्हें फ़ोन कर देता।"
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "मैं आ जाता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "كنت سآتي: wäre",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "كنت سأفعل لكنني لم أفعل: hätte + Partizip II في الآخر. ومع الحركة وsein كما في Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "كنت سأتصل بك."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "كنت سآتي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "regret-river-three": {
+    "ru": {
+      "title": "Если бы я тогда знал",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "В части с wenn hätte/wäre в самом конце. Во второй части hätte/wäre сразу, Partizip II в конце.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Если бы я это знал, я бы пришёл."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Якби я тоді знав",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "У частині з wenn hätte/wäre в самому кінці. У другій частині hätte/wäre одразу, Partizip II у кінці.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Якби я це знав, я б прийшов."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "If I had known then",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "In the wenn part hätte/wäre goes at the very end. In the other part hätte/wäre comes first, Partizip II at the end.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "If I had known that, I would have come."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Gdybym wtedy wiedział",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "W części z wenn hätte/wäre na samym końcu. W drugiej części hätte/wäre od razu, Partizip II na końcu.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Gdybym to wiedział, przyszedłbym."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Si lo hubiera sabido",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "En la parte con wenn, hätte/wäre al final. En la otra, hätte/wäre primero y Partizip II al final.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Si lo hubiera sabido, habría venido."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Si j’avais su",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "Dans la partie avec wenn, hätte/wäre tout à la fin. Dans l’autre, hätte/wäre d’abord, Partizip II à la fin.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Si j’avais su, je serais venu."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "O zaman bilseydim",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "wenn kısmında hätte/wäre en sonda. Diğer kısımda hätte/wäre başta, Partizip II sonda.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Bunu bilseydim gelirdim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Dacă aș fi știut atunci",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "În partea cu wenn, hätte/wäre la final. În cealaltă, hätte/wäre imediat, Partizip II la final.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Dacă aș fi știut, aș fi venit."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "O'shanda bilganimda",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "wenn qismida hätte/wäre eng oxirida. Ikkinchi qismda hätte/wäre darhol, Partizip II oxirida.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Buni bilganimda kelgan bo'lardim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अगर तब पता होता",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "wenn वाले हिस्से में hätte/wäre बिल्कुल अंत में। दूसरे हिस्से में hätte/wäre तुरंत, Partizip II अंत में।",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "अगर मुझे यह पता होता, तो मैं आ जाता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "لو كنت أعرف آنذاك",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "في جزء wenn تأتي hätte/wäre في الآخر تماماً. وفي الجزء الآخر hätte/wäre أولاً وPartizip II في الآخر.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "لو كنت أعرف ذلك لجئت."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "regret-river-four": {
+    "ru": {
+      "title": "Жаль, что тогда...",
+      "points": [
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "Жаль, что тогда не...: Ich wünschte + hätte/wäre + Partizip II в конце. Das wäre schön gewesen значит «было бы здорово».",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "Жаль, что я мало учился."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Шкода, що тоді...",
+      "points": [
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "Шкода, що тоді не...: Ich wünschte + hätte/wäre + Partizip II у кінці. Das wäre schön gewesen означає «було б чудово».",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "Шкода, що я мало вчився."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "I wish I had...",
+      "points": [
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "I wish I had...: Ich wünschte + hätte/wäre + Partizip II at the end. Das wäre schön gewesen means \"that would have been nice\".",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "I wish I had studied more."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Szkoda, że wtedy...",
+      "points": [
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "Szkoda, że wtedy nie...: Ich wünschte + hätte/wäre + Partizip II na końcu. Das wäre schön gewesen znaczy „byłoby fajnie”.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "Szkoda, że mało się uczyłem."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Ojalá hubiera...",
+      "points": [
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "Ojalá hubiera...: Ich wünschte + hätte/wäre + Partizip II al final. Das wäre schön gewesen significa \"habría estado bien\".",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "Ojalá hubiera estudiado más."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "J’aurais aimé...",
+      "points": [
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "J’aurais aimé... : Ich wünschte + hätte/wäre + Partizip II à la fin. Das wäre schön gewesen veut dire « ça aurait été bien ».",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "J’aurais aimé avoir plus étudié."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Keşke o zaman...",
+      "points": [
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "Keşke o zaman...: Ich wünschte + hätte/wäre + Partizip II sonda. Das wäre schön gewesen \"güzel olurdu\" demektir.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "Keşke daha çok çalışsaydım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Păcat că atunci...",
+      "points": [
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "Păcat că atunci n-am...: Ich wünschte + hätte/wäre + Partizip II la final. Das wäre schön gewesen înseamnă „ar fi fost frumos”.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "Păcat că n-am învățat mai mult."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qaniydi o'shanda...",
+      "points": [
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "Qaniydi o'shanda...: Ich wünschte + hätte/wäre + Partizip II oxirida. Das wäre schön gewesen \"zo'r bo'lardi\" degani.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "Qaniydi ko'proq o'qigan bo'lsam."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "काश तब...",
+      "points": [
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "काश तब...: Ich wünschte + hätte/wäre + Partizip II अंत में। Das wäre schön gewesen मतलब \"अच्छा होता\"।",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "काश मैंने ज़्यादा पढ़ाई की होती।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ليتني آنذاك...",
+      "points": [
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "ليتني آنذاك...: Ich wünschte + hätte/wäre + Partizip II في الآخر. وDas wäre schön gewesen تعني \"كان ذلك سيكون جميلاً\".",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "ليتني درست أكثر."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "regret-river-five": {
+    "ru": {
+      "title": "Сейчас или тогда?",
+      "points": [
+        {
+          "title": "Сейчас или тогда",
+          "text": "Сейчас: Wenn ich Zeit hätte, würde ich kommen. Тогда: Wenn ich Zeit gehabt hätte, wäre ich gekommen. В прошлом würde не нужен.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Если бы я больше тренировался, я бы сдал экзамен."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Зараз чи тоді?",
+      "points": [
+        {
+          "title": "Зараз чи тоді",
+          "text": "Зараз: Wenn ich Zeit hätte, würde ich kommen. Тоді: Wenn ich Zeit gehabt hätte, wäre ich gekommen. У минулому würde не потрібен.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Якби я більше тренувався, я б склав іспит."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Now or then?",
+      "points": [
+        {
+          "title": "Now or then",
+          "text": "Now: Wenn ich Zeit hätte, würde ich kommen. Then: Wenn ich Zeit gehabt hätte, wäre ich gekommen. No würde for the past.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "If I had practised more, I would have passed the exam."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Teraz czy wtedy?",
+      "points": [
+        {
+          "title": "Teraz czy wtedy",
+          "text": "Teraz: Wenn ich Zeit hätte, würde ich kommen. Wtedy: Wenn ich Zeit gehabt hätte, wäre ich gekommen. W przeszłości bez würde.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Gdybym więcej ćwiczył, zdałbym egzamin."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿Ahora o entonces?",
+      "points": [
+        {
+          "title": "Ahora o entonces",
+          "text": "Ahora: Wenn ich Zeit hätte, würde ich kommen. Entonces: Wenn ich Zeit gehabt hätte, wäre ich gekommen. En pasado no va würde.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Si hubiera practicado más, habría aprobado."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Maintenant ou autrefois ?",
+      "points": [
+        {
+          "title": "Maintenant ou autrefois",
+          "text": "Maintenant : Wenn ich Zeit hätte, würde ich kommen. Autrefois : Wenn ich Zeit gehabt hätte, wäre ich gekommen. Pas de würde au passé.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Si je m’étais plus entraîné, j’aurais réussi l’examen."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Şimdi mi, o zaman mı?",
+      "points": [
+        {
+          "title": "Şimdi mi, o zaman mı",
+          "text": "Şimdi: Wenn ich Zeit hätte, würde ich kommen. O zaman: Wenn ich Zeit gehabt hätte, wäre ich gekommen. Geçmişte würde yok.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Daha çok çalışsaydım sınavı geçerdim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Acum sau atunci?",
+      "points": [
+        {
+          "title": "Acum sau atunci",
+          "text": "Acum: Wenn ich Zeit hätte, würde ich kommen. Atunci: Wenn ich Zeit gehabt hätte, wäre ich gekommen. La trecut nu e würde.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Dacă aș fi exersat mai mult, aș fi trecut examenul."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Hozirmi yoki o'shanda?",
+      "points": [
+        {
+          "title": "Hozir yoki o‘shanda",
+          "text": "Hozir: Wenn ich Zeit hätte, würde ich kommen. O'shanda: Wenn ich Zeit gehabt hätte, wäre ich gekommen. O'tgan zamonda würde yo'q.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Ko'proq mashq qilganimda imtihondan o'tgan bo'lardim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभी या तब?",
+      "points": [
+        {
+          "title": "अभी या तब",
+          "text": "अभी: Wenn ich Zeit hätte, würde ich kommen। तब: Wenn ich Zeit gehabt hätte, wäre ich gekommen। भूतकाल में würde नहीं।",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "अगर मैंने ज़्यादा अभ्यास किया होता, तो परीक्षा पास कर लेता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الآن أم آنذاك؟",
+      "points": [
+        {
+          "title": "الآن أم آنذاك",
+          "text": "الآن: Wenn ich Zeit hätte, würde ich kommen. آنذاك: Wenn ich Zeit gehabt hätte, wäre ich gekommen. ولا würde في الماضي.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "لو تدربت أكثر لنجحت في الامتحان."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "regret-river-six": {
+    "ru": {
+      "title": "Упущенный шанс",
+      "points": [
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "Жаль, что тогда не...: Ich wünschte + hätte/wäre + Partizip II в конце. Das wäre schön gewesen значит «было бы здорово».",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "Жаль, что я мало учился."
+            }
+          ]
+        },
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Я бы сделал, но не сделал: hätte + Partizip II в конце. С движением и sein, как в Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Я бы тебе позвонил."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Я бы пришёл."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Втрачений шанс",
+      "points": [
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "Шкода, що тоді не...: Ich wünschte + hätte/wäre + Partizip II у кінці. Das wäre schön gewesen означає «було б чудово».",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "Шкода, що я мало вчився."
+            }
+          ]
+        },
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Я б зробив, але не зробив: hätte + Partizip II у кінці. З рухом і sein, як у Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Я б тобі зателефонував."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Я б прийшов."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "A missed chance",
+      "points": [
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "I wish I had...: Ich wünschte + hätte/wäre + Partizip II at the end. Das wäre schön gewesen means \"that would have been nice\".",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "I wish I had studied more."
+            }
+          ]
+        },
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "I would have done it, but didn’t: hätte + Partizip II at the end. With movement and sein, as in Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "I would have called you."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "I would have come."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Stracona szansa",
+      "points": [
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "Szkoda, że wtedy nie...: Ich wünschte + hätte/wäre + Partizip II na końcu. Das wäre schön gewesen znaczy „byłoby fajnie”.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "Szkoda, że mało się uczyłem."
+            }
+          ]
+        },
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Zrobiłbym, ale nie zrobiłem: hätte + Partizip II na końcu. Z ruchem i sein, jak w Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Zadzwoniłbym do ciebie."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Przyszedłbym."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Una oportunidad perdida",
+      "points": [
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "Ojalá hubiera...: Ich wünschte + hätte/wäre + Partizip II al final. Das wäre schön gewesen significa \"habría estado bien\".",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "Ojalá hubiera estudiado más."
+            }
+          ]
+        },
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Lo habría hecho, pero no: hätte + Partizip II al final. Con movimiento y sein, como en Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Te habría llamado."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Habría venido."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Une chance manquée",
+      "points": [
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "J’aurais aimé... : Ich wünschte + hätte/wäre + Partizip II à la fin. Das wäre schön gewesen veut dire « ça aurait été bien ».",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "J’aurais aimé avoir plus étudié."
+            }
+          ]
+        },
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Je l’aurais fait, mais non : hätte + Partizip II à la fin. Avec le mouvement et sein, comme au Perfekt : wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Je t’aurais appelé."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Je serais venu."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kaçırılmış fırsat",
+      "points": [
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "Keşke o zaman...: Ich wünschte + hätte/wäre + Partizip II sonda. Das wäre schön gewesen \"güzel olurdu\" demektir.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "Keşke daha çok çalışsaydım."
+            }
+          ]
+        },
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Yapardım ama yapmadım: hätte + Partizip II sonda. Hareket ve sein ile, Perfekt’teki gibi: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Seni arardım."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Gelirdim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "O șansă ratată",
+      "points": [
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "Păcat că atunci n-am...: Ich wünschte + hätte/wäre + Partizip II la final. Das wäre schön gewesen înseamnă „ar fi fost frumos”.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "Păcat că n-am învățat mai mult."
+            }
+          ]
+        },
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Aș fi făcut, dar n-am făcut: hätte + Partizip II la final. Cu mișcare și sein, ca la Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Te-aș fi sunat."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Aș fi venit."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qo'ldan boy berilgan imkoniyat",
+      "points": [
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "Qaniydi o'shanda...: Ich wünschte + hätte/wäre + Partizip II oxirida. Das wäre schön gewesen \"zo'r bo'lardi\" degani.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "Qaniydi ko'proq o'qigan bo'lsam."
+            }
+          ]
+        },
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Qilardim, lekin qilmadim: hätte + Partizip II oxirida. Harakat va sein bilan, Perfekt dagidek: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Senga qo'ng'iroq qilgan bo'lardim."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Kelgan bo'lardim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "छूटा हुआ मौका",
+      "points": [
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "काश तब...: Ich wünschte + hätte/wäre + Partizip II अंत में। Das wäre schön gewesen मतलब \"अच्छा होता\"।",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "काश मैंने ज़्यादा पढ़ाई की होती।"
+            }
+          ]
+        },
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "मैं करता, पर नहीं किया: hätte + Partizip II अंत में। गति और sein के साथ, Perfekt की तरह: wäre + Partizip II।",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "मैं तुम्हें फ़ोन कर देता।"
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "मैं आ जाता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "فرصة ضائعة",
+      "points": [
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "ليتني آنذاك...: Ich wünschte + hätte/wäre + Partizip II في الآخر. وDas wäre schön gewesen تعني \"كان ذلك سيكون جميلاً\".",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "ليتني درست أكثر."
+            }
+          ]
+        },
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "كنت سأفعل لكنني لم أفعل: hätte + Partizip II في الآخر. ومع الحركة وsein كما في Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "كنت سأتصل بك."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "كنت سآتي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "regret-river-seven": {
+    "ru": {
+      "title": "Практика: пропущенная вечеринка",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "В части с wenn hätte/wäre в самом конце. Во второй части hätte/wäre сразу, Partizip II в конце.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Если бы я это знал, я бы пришёл."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: пропущена вечірка",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "У частині з wenn hätte/wäre в самому кінці. У другій частині hätte/wäre одразу, Partizip II у кінці.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Якби я це знав, я б прийшов."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: the missed party",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "In the wenn part hätte/wäre goes at the very end. In the other part hätte/wäre comes first, Partizip II at the end.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "If I had known that, I would have come."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: przegapiona impreza",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "W części z wenn hätte/wäre na samym końcu. W drugiej części hätte/wäre od razu, Partizip II na końcu.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Gdybym to wiedział, przyszedłbym."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: la fiesta perdida",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "En la parte con wenn, hätte/wäre al final. En la otra, hätte/wäre primero y Partizip II al final.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Si lo hubiera sabido, habría venido."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : la fête ratée",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "Dans la partie avec wenn, hätte/wäre tout à la fin. Dans l’autre, hätte/wäre d’abord, Partizip II à la fin.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Si j’avais su, je serais venu."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: kaçırılan parti",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "wenn kısmında hätte/wäre en sonda. Diğer kısımda hätte/wäre başta, Partizip II sonda.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Bunu bilseydim gelirdim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: petrecerea ratată",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "În partea cu wenn, hätte/wäre la final. În cealaltă, hätte/wäre imediat, Partizip II la final.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Dacă aș fi știut, aș fi venit."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: o'tkazib yuborilgan bazm",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "wenn qismida hätte/wäre eng oxirida. Ikkinchi qismda hätte/wäre darhol, Partizip II oxirida.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Buni bilganimda kelgan bo'lardim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: छूटी हुई पार्टी",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "wenn वाले हिस्से में hätte/wäre बिल्कुल अंत में। दूसरे हिस्से में hätte/wäre तुरंत, Partizip II अंत में।",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "अगर मुझे यह पता होता, तो मैं आ जाता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: الحفلة الفائتة",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "في جزء wenn تأتي hätte/wäre في الآخر تماماً. وفي الجزء الآخر hätte/wäre أولاً وPartizip II في الآخر.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "لو كنت أعرف ذلك لجئت."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "regret-river-eight": {
+    "ru": {
+      "title": "Практика: после экзамена",
+      "points": [
+        {
+          "title": "Сейчас или тогда",
+          "text": "Сейчас: Wenn ich Zeit hätte, würde ich kommen. Тогда: Wenn ich Zeit gehabt hätte, wäre ich gekommen. В прошлом würde не нужен.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Если бы я больше тренировался, я бы сдал экзамен."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "Жаль, что тогда не...: Ich wünschte + hätte/wäre + Partizip II в конце. Das wäre schön gewesen значит «было бы здорово».",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "Жаль, что я мало учился."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: після іспиту",
+      "points": [
+        {
+          "title": "Зараз чи тоді",
+          "text": "Зараз: Wenn ich Zeit hätte, würde ich kommen. Тоді: Wenn ich Zeit gehabt hätte, wäre ich gekommen. У минулому würde не потрібен.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Якби я більше тренувався, я б склав іспит."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "Шкода, що тоді не...: Ich wünschte + hätte/wäre + Partizip II у кінці. Das wäre schön gewesen означає «було б чудово».",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "Шкода, що я мало вчився."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: after the exam",
+      "points": [
+        {
+          "title": "Now or then",
+          "text": "Now: Wenn ich Zeit hätte, würde ich kommen. Then: Wenn ich Zeit gehabt hätte, wäre ich gekommen. No würde for the past.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "If I had practised more, I would have passed the exam."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "I wish I had...: Ich wünschte + hätte/wäre + Partizip II at the end. Das wäre schön gewesen means \"that would have been nice\".",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "I wish I had studied more."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: po egzaminie",
+      "points": [
+        {
+          "title": "Teraz czy wtedy",
+          "text": "Teraz: Wenn ich Zeit hätte, würde ich kommen. Wtedy: Wenn ich Zeit gehabt hätte, wäre ich gekommen. W przeszłości bez würde.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Gdybym więcej ćwiczył, zdałbym egzamin."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "Szkoda, że wtedy nie...: Ich wünschte + hätte/wäre + Partizip II na końcu. Das wäre schön gewesen znaczy „byłoby fajnie”.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "Szkoda, że mało się uczyłem."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: después del examen",
+      "points": [
+        {
+          "title": "Ahora o entonces",
+          "text": "Ahora: Wenn ich Zeit hätte, würde ich kommen. Entonces: Wenn ich Zeit gehabt hätte, wäre ich gekommen. En pasado no va würde.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Si hubiera practicado más, habría aprobado."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "Ojalá hubiera...: Ich wünschte + hätte/wäre + Partizip II al final. Das wäre schön gewesen significa \"habría estado bien\".",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "Ojalá hubiera estudiado más."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : après l’examen",
+      "points": [
+        {
+          "title": "Maintenant ou autrefois",
+          "text": "Maintenant : Wenn ich Zeit hätte, würde ich kommen. Autrefois : Wenn ich Zeit gehabt hätte, wäre ich gekommen. Pas de würde au passé.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Si je m’étais plus entraîné, j’aurais réussi l’examen."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "J’aurais aimé... : Ich wünschte + hätte/wäre + Partizip II à la fin. Das wäre schön gewesen veut dire « ça aurait été bien ».",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "J’aurais aimé avoir plus étudié."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: sınavdan sonra",
+      "points": [
+        {
+          "title": "Şimdi mi, o zaman mı",
+          "text": "Şimdi: Wenn ich Zeit hätte, würde ich kommen. O zaman: Wenn ich Zeit gehabt hätte, wäre ich gekommen. Geçmişte würde yok.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Daha çok çalışsaydım sınavı geçerdim."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "Keşke o zaman...: Ich wünschte + hätte/wäre + Partizip II sonda. Das wäre schön gewesen \"güzel olurdu\" demektir.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "Keşke daha çok çalışsaydım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: după examen",
+      "points": [
+        {
+          "title": "Acum sau atunci",
+          "text": "Acum: Wenn ich Zeit hätte, würde ich kommen. Atunci: Wenn ich Zeit gehabt hätte, wäre ich gekommen. La trecut nu e würde.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Dacă aș fi exersat mai mult, aș fi trecut examenul."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "Păcat că atunci n-am...: Ich wünschte + hätte/wäre + Partizip II la final. Das wäre schön gewesen înseamnă „ar fi fost frumos”.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "Păcat că n-am învățat mai mult."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: imtihondan keyin",
+      "points": [
+        {
+          "title": "Hozir yoki o‘shanda",
+          "text": "Hozir: Wenn ich Zeit hätte, würde ich kommen. O'shanda: Wenn ich Zeit gehabt hätte, wäre ich gekommen. O'tgan zamonda würde yo'q.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Ko'proq mashq qilganimda imtihondan o'tgan bo'lardim."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "Qaniydi o'shanda...: Ich wünschte + hätte/wäre + Partizip II oxirida. Das wäre schön gewesen \"zo'r bo'lardi\" degani.",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "Qaniydi ko'proq o'qigan bo'lsam."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: परीक्षा के बाद",
+      "points": [
+        {
+          "title": "अभी या तब",
+          "text": "अभी: Wenn ich Zeit hätte, würde ich kommen। तब: Wenn ich Zeit gehabt hätte, wäre ich gekommen। भूतकाल में würde नहीं।",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "अगर मैंने ज़्यादा अभ्यास किया होता, तो परीक्षा पास कर लेता।"
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "काश तब...: Ich wünschte + hätte/wäre + Partizip II अंत में। Das wäre schön gewesen मतलब \"अच्छा होता\"।",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "काश मैंने ज़्यादा पढ़ाई की होती।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: بعد الامتحان",
+      "points": [
+        {
+          "title": "الآن أم آنذاك",
+          "text": "الآن: Wenn ich Zeit hätte, würde ich kommen. آنذاك: Wenn ich Zeit gehabt hätte, wäre ich gekommen. ولا würde في الماضي.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "لو تدربت أكثر لنجحت في الامتحان."
+            }
+          ]
+        },
+        {
+          "title": "Ich wünschte, ich hätte ...",
+          "text": "ليتني آنذاك...: Ich wünschte + hätte/wäre + Partizip II في الآخر. وDas wäre schön gewesen تعني \"كان ذلك سيكون جميلاً\".",
+          "examples": [
+            {
+              "de": "Ich wünschte, ich hätte mehr gelernt.",
+              "tr": "ليتني درست أكثر."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "regret-river-nine": {
+    "ru": {
+      "title": "Повторение: если бы тогда",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Я бы сделал, но не сделал: hätte + Partizip II в конце. С движением и sein, как в Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Я бы тебе позвонил."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Я бы пришёл."
+            }
+          ]
+        },
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "В части с wenn hätte/wäre в самом конце. Во второй части hätte/wäre сразу, Partizip II в конце.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Если бы я это знал, я бы пришёл."
+            }
+          ]
+        },
+        {
+          "title": "Сейчас или тогда",
+          "text": "Сейчас: Wenn ich Zeit hätte, würde ich kommen. Тогда: Wenn ich Zeit gehabt hätte, wäre ich gekommen. В прошлом würde не нужен.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Если бы я больше тренировался, я бы сдал экзамен."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: якби тоді",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Я б зробив, але не зробив: hätte + Partizip II у кінці. З рухом і sein, як у Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Я б тобі зателефонував."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Я б прийшов."
+            }
+          ]
+        },
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "У частині з wenn hätte/wäre в самому кінці. У другій частині hätte/wäre одразу, Partizip II у кінці.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Якби я це знав, я б прийшов."
+            }
+          ]
+        },
+        {
+          "title": "Зараз чи тоді",
+          "text": "Зараз: Wenn ich Zeit hätte, würde ich kommen. Тоді: Wenn ich Zeit gehabt hätte, wäre ich gekommen. У минулому würde не потрібен.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Якби я більше тренувався, я б склав іспит."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: if ... had",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "I would have done it, but didn’t: hätte + Partizip II at the end. With movement and sein, as in Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "I would have called you."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "I would have come."
+            }
+          ]
+        },
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "In the wenn part hätte/wäre goes at the very end. In the other part hätte/wäre comes first, Partizip II at the end.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "If I had known that, I would have come."
+            }
+          ]
+        },
+        {
+          "title": "Now or then",
+          "text": "Now: Wenn ich Zeit hätte, würde ich kommen. Then: Wenn ich Zeit gehabt hätte, wäre ich gekommen. No würde for the past.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "If I had practised more, I would have passed the exam."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: gdyby wtedy",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Zrobiłbym, ale nie zrobiłem: hätte + Partizip II na końcu. Z ruchem i sein, jak w Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Zadzwoniłbym do ciebie."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Przyszedłbym."
+            }
+          ]
+        },
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "W części z wenn hätte/wäre na samym końcu. W drugiej części hätte/wäre od razu, Partizip II na końcu.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Gdybym to wiedział, przyszedłbym."
+            }
+          ]
+        },
+        {
+          "title": "Teraz czy wtedy",
+          "text": "Teraz: Wenn ich Zeit hätte, würde ich kommen. Wtedy: Wenn ich Zeit gehabt hätte, wäre ich gekommen. W przeszłości bez würde.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Gdybym więcej ćwiczył, zdałbym egzamin."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: si hubiera",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Lo habría hecho, pero no: hätte + Partizip II al final. Con movimiento y sein, como en Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Te habría llamado."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Habría venido."
+            }
+          ]
+        },
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "En la parte con wenn, hätte/wäre al final. En la otra, hätte/wäre primero y Partizip II al final.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Si lo hubiera sabido, habría venido."
+            }
+          ]
+        },
+        {
+          "title": "Ahora o entonces",
+          "text": "Ahora: Wenn ich Zeit hätte, würde ich kommen. Entonces: Wenn ich Zeit gehabt hätte, wäre ich gekommen. En pasado no va würde.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Si hubiera practicado más, habría aprobado."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : si ... avait",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Je l’aurais fait, mais non : hätte + Partizip II à la fin. Avec le mouvement et sein, comme au Perfekt : wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Je t’aurais appelé."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Je serais venu."
+            }
+          ]
+        },
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "Dans la partie avec wenn, hätte/wäre tout à la fin. Dans l’autre, hätte/wäre d’abord, Partizip II à la fin.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Si j’avais su, je serais venu."
+            }
+          ]
+        },
+        {
+          "title": "Maintenant ou autrefois",
+          "text": "Maintenant : Wenn ich Zeit hätte, würde ich kommen. Autrefois : Wenn ich Zeit gehabt hätte, wäre ich gekommen. Pas de würde au passé.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Si je m’étais plus entraîné, j’aurais réussi l’examen."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: -seydi",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Yapardım ama yapmadım: hätte + Partizip II sonda. Hareket ve sein ile, Perfekt’teki gibi: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Seni arardım."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Gelirdim."
+            }
+          ]
+        },
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "wenn kısmında hätte/wäre en sonda. Diğer kısımda hätte/wäre başta, Partizip II sonda.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Bunu bilseydim gelirdim."
+            }
+          ]
+        },
+        {
+          "title": "Şimdi mi, o zaman mı",
+          "text": "Şimdi: Wenn ich Zeit hätte, würde ich kommen. O zaman: Wenn ich Zeit gehabt hätte, wäre ich gekommen. Geçmişte würde yok.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Daha çok çalışsaydım sınavı geçerdim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: dacă ar fi",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Aș fi făcut, dar n-am făcut: hätte + Partizip II la final. Cu mișcare și sein, ca la Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Te-aș fi sunat."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Aș fi venit."
+            }
+          ]
+        },
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "În partea cu wenn, hätte/wäre la final. În cealaltă, hätte/wäre imediat, Partizip II la final.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Dacă aș fi știut, aș fi venit."
+            }
+          ]
+        },
+        {
+          "title": "Acum sau atunci",
+          "text": "Acum: Wenn ich Zeit hätte, würde ich kommen. Atunci: Wenn ich Zeit gehabt hätte, wäre ich gekommen. La trecut nu e würde.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Dacă aș fi exersat mai mult, aș fi trecut examenul."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: agar o'shanda",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Qilardim, lekin qilmadim: hätte + Partizip II oxirida. Harakat va sein bilan, Perfekt dagidek: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Senga qo'ng'iroq qilgan bo'lardim."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Kelgan bo'lardim."
+            }
+          ]
+        },
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "wenn qismida hätte/wäre eng oxirida. Ikkinchi qismda hätte/wäre darhol, Partizip II oxirida.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Buni bilganimda kelgan bo'lardim."
+            }
+          ]
+        },
+        {
+          "title": "Hozir yoki o‘shanda",
+          "text": "Hozir: Wenn ich Zeit hätte, würde ich kommen. O'shanda: Wenn ich Zeit gehabt hätte, wäre ich gekommen. O'tgan zamonda würde yo'q.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Ko'proq mashq qilganimda imtihondan o'tgan bo'lardim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: अगर तब",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "मैं करता, पर नहीं किया: hätte + Partizip II अंत में। गति और sein के साथ, Perfekt की तरह: wäre + Partizip II।",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "मैं तुम्हें फ़ोन कर देता।"
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "मैं आ जाता।"
+            }
+          ]
+        },
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "wenn वाले हिस्से में hätte/wäre बिल्कुल अंत में। दूसरे हिस्से में hätte/wäre तुरंत, Partizip II अंत में।",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "अगर मुझे यह पता होता, तो मैं आ जाता।"
+            }
+          ]
+        },
+        {
+          "title": "अभी या तब",
+          "text": "अभी: Wenn ich Zeit hätte, würde ich kommen। तब: Wenn ich Zeit gehabt hätte, wäre ich gekommen। भूतकाल में würde नहीं।",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "अगर मैंने ज़्यादा अभ्यास किया होता, तो परीक्षा पास कर लेता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: لو آنذاك",
+      "points": [
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "كنت سأفعل لكنني لم أفعل: hätte + Partizip II في الآخر. ومع الحركة وsein كما في Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "كنت سأتصل بك."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "كنت سآتي."
+            }
+          ]
+        },
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "في جزء wenn تأتي hätte/wäre في الآخر تماماً. وفي الجزء الآخر hätte/wäre أولاً وPartizip II في الآخر.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "لو كنت أعرف ذلك لجئت."
+            }
+          ]
+        },
+        {
+          "title": "الآن أم آنذاك",
+          "text": "الآن: Wenn ich Zeit hätte, würde ich kommen. آنذاك: Wenn ich Zeit gehabt hätte, wäre ich gekommen. ولا würde في الماضي.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "لو تدربت أكثر لنجحت في الامتحان."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "regret-river-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "В части с wenn hätte/wäre в самом конце. Во второй части hätte/wäre сразу, Partizip II в конце.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Если бы я это знал, я бы пришёл."
+            }
+          ]
+        },
+        {
+          "title": "Сейчас или тогда",
+          "text": "Сейчас: Wenn ich Zeit hätte, würde ich kommen. Тогда: Wenn ich Zeit gehabt hätte, wäre ich gekommen. В прошлом würde не нужен.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Если бы я больше тренировался, я бы сдал экзамен."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "У частині з wenn hätte/wäre в самому кінці. У другій частині hätte/wäre одразу, Partizip II у кінці.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Якби я це знав, я б прийшов."
+            }
+          ]
+        },
+        {
+          "title": "Зараз чи тоді",
+          "text": "Зараз: Wenn ich Zeit hätte, würde ich kommen. Тоді: Wenn ich Zeit gehabt hätte, wäre ich gekommen. У минулому würde не потрібен.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Якби я більше тренувався, я б склав іспит."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "In the wenn part hätte/wäre goes at the very end. In the other part hätte/wäre comes first, Partizip II at the end.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "If I had known that, I would have come."
+            }
+          ]
+        },
+        {
+          "title": "Now or then",
+          "text": "Now: Wenn ich Zeit hätte, würde ich kommen. Then: Wenn ich Zeit gehabt hätte, wäre ich gekommen. No würde for the past.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "If I had practised more, I would have passed the exam."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "W części z wenn hätte/wäre na samym końcu. W drugiej części hätte/wäre od razu, Partizip II na końcu.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Gdybym to wiedział, przyszedłbym."
+            }
+          ]
+        },
+        {
+          "title": "Teraz czy wtedy",
+          "text": "Teraz: Wenn ich Zeit hätte, würde ich kommen. Wtedy: Wenn ich Zeit gehabt hätte, wäre ich gekommen. W przeszłości bez würde.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Gdybym więcej ćwiczył, zdałbym egzamin."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "En la parte con wenn, hätte/wäre al final. En la otra, hätte/wäre primero y Partizip II al final.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Si lo hubiera sabido, habría venido."
+            }
+          ]
+        },
+        {
+          "title": "Ahora o entonces",
+          "text": "Ahora: Wenn ich Zeit hätte, würde ich kommen. Entonces: Wenn ich Zeit gehabt hätte, wäre ich gekommen. En pasado no va würde.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Si hubiera practicado más, habría aprobado."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "Dans la partie avec wenn, hätte/wäre tout à la fin. Dans l’autre, hätte/wäre d’abord, Partizip II à la fin.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Si j’avais su, je serais venu."
+            }
+          ]
+        },
+        {
+          "title": "Maintenant ou autrefois",
+          "text": "Maintenant : Wenn ich Zeit hätte, würde ich kommen. Autrefois : Wenn ich Zeit gehabt hätte, wäre ich gekommen. Pas de würde au passé.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Si je m’étais plus entraîné, j’aurais réussi l’examen."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "wenn kısmında hätte/wäre en sonda. Diğer kısımda hätte/wäre başta, Partizip II sonda.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Bunu bilseydim gelirdim."
+            }
+          ]
+        },
+        {
+          "title": "Şimdi mi, o zaman mı",
+          "text": "Şimdi: Wenn ich Zeit hätte, würde ich kommen. O zaman: Wenn ich Zeit gehabt hätte, wäre ich gekommen. Geçmişte würde yok.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Daha çok çalışsaydım sınavı geçerdim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "În partea cu wenn, hätte/wäre la final. În cealaltă, hätte/wäre imediat, Partizip II la final.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Dacă aș fi știut, aș fi venit."
+            }
+          ]
+        },
+        {
+          "title": "Acum sau atunci",
+          "text": "Acum: Wenn ich Zeit hätte, würde ich kommen. Atunci: Wenn ich Zeit gehabt hätte, wäre ich gekommen. La trecut nu e würde.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Dacă aș fi exersat mai mult, aș fi trecut examenul."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "wenn qismida hätte/wäre eng oxirida. Ikkinchi qismda hätte/wäre darhol, Partizip II oxirida.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Buni bilganimda kelgan bo'lardim."
+            }
+          ]
+        },
+        {
+          "title": "Hozir yoki o‘shanda",
+          "text": "Hozir: Wenn ich Zeit hätte, würde ich kommen. O'shanda: Wenn ich Zeit gehabt hätte, wäre ich gekommen. O'tgan zamonda würde yo'q.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Ko'proq mashq qilganimda imtihondan o'tgan bo'lardim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "wenn वाले हिस्से में hätte/wäre बिल्कुल अंत में। दूसरे हिस्से में hätte/wäre तुरंत, Partizip II अंत में।",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "अगर मुझे यह पता होता, तो मैं आ जाता।"
+            }
+          ]
+        },
+        {
+          "title": "अभी या तब",
+          "text": "अभी: Wenn ich Zeit hätte, würde ich kommen। तब: Wenn ich Zeit gehabt hätte, wäre ich gekommen। भूतकाल में würde नहीं।",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "अगर मैंने ज़्यादा अभ्यास किया होता, तो परीक्षा पास कर लेता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "في جزء wenn تأتي hätte/wäre في الآخر تماماً. وفي الجزء الآخر hätte/wäre أولاً وPartizip II في الآخر.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "لو كنت أعرف ذلك لجئت."
+            }
+          ]
+        },
+        {
+          "title": "الآن أم آنذاك",
+          "text": "الآن: Wenn ich Zeit hätte, würde ich kommen. آنذاك: Wenn ich Zeit gehabt hätte, wäre ich gekommen. ولا würde في الماضي.",
+          "examples": [
+            {
+              "de": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "لو تدربت أكثر لنجحت في الامتحان."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

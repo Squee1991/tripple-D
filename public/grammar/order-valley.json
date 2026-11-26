@@ -1,0 +1,3634 @@
+{
+  "order-one": {
+    "ru": {
+      "title": "Глагол в конце!",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: глагол в конец",
+          "text": "После weil (потому что), dass (что), wenn (если, когда), ob (ли) глагол уходит в самый конец. Перед ними ставим запятую.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Я учу, потому что это важно."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Он говорит, что придёт."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Дієслово в кінці!",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: дієслово в кінець",
+          "text": "Після weil (бо), dass (що), wenn (якщо, коли), ob (чи) дієслово йде в самий кінець. Перед ними ставимо кому.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Я вчу, бо це важливо."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Він каже, що прийде."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Verb at the end!",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verb to the end",
+          "text": "After weil (because), dass (that), wenn (if, when), ob (whether) the verb goes to the very end. Put a comma before them.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "I study because it’s important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "He says that he’s coming."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Czasownik na końcu!",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: czasownik na koniec",
+          "text": "Po weil (bo), dass (że), wenn (jeśli, kiedy), ob (czy) czasownik idzie na sam koniec. Przed nimi stawiamy przecinek.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Uczę się, bo to ważne."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Mówi, że przyjdzie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¡El verbo al final!",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verbo al final",
+          "text": "Después de weil (porque), dass (que), wenn (si, cuando), ob (si) el verbo va al final. Antes va una coma.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Estudio porque es importante."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Dice que viene."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le verbe à la fin !",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob : verbe à la fin",
+          "text": "Après weil (parce que), dass (que), wenn (si, quand), ob (si) le verbe va tout à la fin. On met une virgule avant.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "J’apprends parce que c’est important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Il dit qu’il vient."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Fiil sonda!",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: fiil sona",
+          "text": "weil (çünkü), dass (ki), wenn (eğer, -dığında), ob (-ip -mediği) sonrası fiil en sona gider. Öncesine virgül konur.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Öğreniyorum çünkü önemli."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Geleceğini söylüyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Verbul la final!",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verbul la final",
+          "text": "După weil (pentru că), dass (că), wenn (dacă, când), ob (dacă) verbul merge la final. Înaintea lor se pune virgulă.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Învăț pentru că e important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Spune că vine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Fe'l oxirida!",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: fe'l oxiriga",
+          "text": "weil (chunki), dass (ki), wenn (agar, qachonki), ob (-mi yo'qmi) dan keyin fe'l eng oxiriga o'tadi. Ulardan oldin vergul qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "O'qiyman, chunki bu muhim."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "U kelishini aytyapti."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "क्रिया अंत में!",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: क्रिया अंत में",
+          "text": "weil (क्योंकि), dass (कि), wenn (अगर, जब), ob (कि ... या नहीं) के बाद क्रिया बिल्कुल अंत में जाती है। इनसे पहले कॉमा।",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "मैं सीखता हूँ क्योंकि यह ज़रूरी है।"
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "वह कहता है कि वह आएगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الفعل في الآخر!",
+      "points": [
+        {
+          "title": "weil وdass وwenn وob: الفعل في الآخر",
+          "text": "بعد weil (لأن) وdass (أنّ) وwenn (إذا، عندما) وob (هل) يذهب الفعل إلى آخر الجملة. ونضع قبلها فاصلة.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "أتعلم لأن ذلك مهم."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "يقول إنه سيأتي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "order-two": {
+    "ru": {
+      "title": "Короткие придаточные",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: глагол в конец",
+          "text": "После weil (потому что), dass (что), wenn (если, когда), ob (ли) глагол уходит в самый конец. Перед ними ставим запятую.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Я учу, потому что это важно."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Он говорит, что придёт."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Короткі підрядні",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: дієслово в кінець",
+          "text": "Після weil (бо), dass (що), wenn (якщо, коли), ob (чи) дієслово йде в самий кінець. Перед ними ставимо кому.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Я вчу, бо це важливо."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Він каже, що прийде."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Short subordinate clauses",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verb to the end",
+          "text": "After weil (because), dass (that), wenn (if, when), ob (whether) the verb goes to the very end. Put a comma before them.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "I study because it’s important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "He says that he’s coming."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Krótkie zdania podrzędne",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: czasownik na koniec",
+          "text": "Po weil (bo), dass (że), wenn (jeśli, kiedy), ob (czy) czasownik idzie na sam koniec. Przed nimi stawiamy przecinek.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Uczę się, bo to ważne."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Mówi, że przyjdzie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Subordinadas cortas",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verbo al final",
+          "text": "Después de weil (porque), dass (que), wenn (si, cuando), ob (si) el verbo va al final. Antes va una coma.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Estudio porque es importante."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Dice que viene."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Subordonnées courtes",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob : verbe à la fin",
+          "text": "Après weil (parce que), dass (que), wenn (si, quand), ob (si) le verbe va tout à la fin. On met une virgule avant.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "J’apprends parce que c’est important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Il dit qu’il vient."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kısa yan cümleler",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: fiil sona",
+          "text": "weil (çünkü), dass (ki), wenn (eğer, -dığında), ob (-ip -mediği) sonrası fiil en sona gider. Öncesine virgül konur.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Öğreniyorum çünkü önemli."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Geleceğini söylüyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Subordonate scurte",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verbul la final",
+          "text": "După weil (pentru că), dass (că), wenn (dacă, când), ob (dacă) verbul merge la final. Înaintea lor se pune virgulă.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Învăț pentru că e important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Spune că vine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qisqa ergash gaplar",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: fe'l oxiriga",
+          "text": "weil (chunki), dass (ki), wenn (agar, qachonki), ob (-mi yo'qmi) dan keyin fe'l eng oxiriga o'tadi. Ulardan oldin vergul qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "O'qiyman, chunki bu muhim."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "U kelishini aytyapti."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "छोटे उपवाक्य",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: क्रिया अंत में",
+          "text": "weil (क्योंकि), dass (कि), wenn (अगर, जब), ob (कि ... या नहीं) के बाद क्रिया बिल्कुल अंत में जाती है। इनसे पहले कॉमा।",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "मैं सीखता हूँ क्योंकि यह ज़रूरी है।"
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "वह कहता है कि वह आएगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "جمل فرعية قصيرة",
+      "points": [
+        {
+          "title": "weil وdass وwenn وob: الفعل في الآخر",
+          "text": "بعد weil (لأن) وdass (أنّ) وwenn (إذا، عندما) وob (هل) يذهب الفعل إلى آخر الجملة. ونضع قبلها فاصلة.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "أتعلم لأن ذلك مهم."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "يقول إنه سيأتي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "order-three": {
+    "ru": {
+      "title": "Придаточные: длиннее",
+      "points": [
+        {
+          "title": "Модальный в самом конце",
+          "text": "Если в придаточном два глагола, модальный встаёт после второго: weil ich arbeiten muss.",
+          "examples": [
+            {
+              "de": "Ich kann nicht kommen, weil ich arbeiten muss.",
+              "tr": "Я не могу прийти, потому что мне надо работать."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Підрядні: довші",
+      "points": [
+        {
+          "title": "Модальне в самому кінці",
+          "text": "Якщо в підрядному два дієслова, модальне стає після другого: weil ich arbeiten muss.",
+          "examples": [
+            {
+              "de": "Ich kann nicht kommen, weil ich arbeiten muss.",
+              "tr": "Я не можу прийти, бо мені треба працювати."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Subordinate clauses: longer",
+      "points": [
+        {
+          "title": "The modal goes last",
+          "text": "With two verbs in the clause, the modal comes after the other one: weil ich arbeiten muss.",
+          "examples": [
+            {
+              "de": "Ich kann nicht kommen, weil ich arbeiten muss.",
+              "tr": "I can’t come because I have to work."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Zdania podrzędne: dłuższe",
+      "points": [
+        {
+          "title": "Modalny na samym końcu",
+          "text": "Gdy w zdaniu podrzędnym są dwa czasowniki, modalny stoi po drugim: weil ich arbeiten muss.",
+          "examples": [
+            {
+              "de": "Ich kann nicht kommen, weil ich arbeiten muss.",
+              "tr": "Nie mogę przyjść, bo muszę pracować."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Subordinadas: más largas",
+      "points": [
+        {
+          "title": "El modal al final del todo",
+          "text": "Si hay dos verbos en la subordinada, el modal va detrás: weil ich arbeiten muss.",
+          "examples": [
+            {
+              "de": "Ich kann nicht kommen, weil ich arbeiten muss.",
+              "tr": "No puedo venir porque tengo que trabajar."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Subordonnées : plus longues",
+      "points": [
+        {
+          "title": "Le modal tout à la fin",
+          "text": "S’il y a deux verbes dans la subordonnée, le modal vient après l’autre : weil ich arbeiten muss.",
+          "examples": [
+            {
+              "de": "Ich kann nicht kommen, weil ich arbeiten muss.",
+              "tr": "Je ne peux pas venir parce que je dois travailler."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yan cümleler: daha uzun",
+      "points": [
+        {
+          "title": "Modal en sonda",
+          "text": "Yan cümlede iki fiil varsa modal ötekinden sonra gelir: weil ich arbeiten muss.",
+          "examples": [
+            {
+              "de": "Ich kann nicht kommen, weil ich arbeiten muss.",
+              "tr": "Gelemem çünkü çalışmam gerekiyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Subordonate: mai lungi",
+      "points": [
+        {
+          "title": "Modalul la final",
+          "text": "Dacă în subordonată sunt două verbe, modalul vine după celălalt: weil ich arbeiten muss.",
+          "examples": [
+            {
+              "de": "Ich kann nicht kommen, weil ich arbeiten muss.",
+              "tr": "Nu pot veni pentru că trebuie să lucrez."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ergash gaplar: uzunroq",
+      "points": [
+        {
+          "title": "Modal eng oxirida",
+          "text": "Ergash gapda ikki fe'l bo'lsa, modal ikkinchisidan keyin turadi: weil ich arbeiten muss.",
+          "examples": [
+            {
+              "de": "Ich kann nicht kommen, weil ich arbeiten muss.",
+              "tr": "Kela olmayman, chunki ishlashim kerak."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "उपवाक्य: लंबे",
+      "points": [
+        {
+          "title": "मोडल बिल्कुल अंत में",
+          "text": "अगर उपवाक्य में दो क्रियाएँ हों, तो मोडल दूसरी के बाद: weil ich arbeiten muss।",
+          "examples": [
+            {
+              "de": "Ich kann nicht kommen, weil ich arbeiten muss.",
+              "tr": "मैं नहीं आ सकता क्योंकि मुझे काम करना है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "جمل فرعية أطول",
+      "points": [
+        {
+          "title": "المساعد في آخر الجملة",
+          "text": "إذا كان في الجملة الفرعية فعلان يأتي المساعد بعد الآخر: weil ich arbeiten muss.",
+          "examples": [
+            {
+              "de": "Ich kann nicht kommen, weil ich arbeiten muss.",
+              "tr": "لا أستطيع المجيء لأن عليّ أن أعمل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "order-four": {
+    "ru": {
+      "title": "es gibt",
+      "points": [
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt значит «есть, имеется». Сама фраза не меняется, а то, что после неё, в Akkusativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Здесь есть парк."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Здесь есть интернет?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "es gibt",
+      "points": [
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt означає «є, існує». Сама фраза не змінюється, а те, що після неї, в Akkusativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Тут є парк."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Тут є інтернет?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "es gibt",
+      "points": [
+        {
+          "title": "es gibt + accusative",
+          "text": "es gibt means \"there is / there are\". The phrase never changes, and what follows is in the accusative: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "There’s a park here."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Is there internet here?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "es gibt",
+      "points": [
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt znaczy „jest, istnieje”. Samo wyrażenie się nie zmienia, a to, co po nim, jest w Akkusativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Tu jest park."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Czy jest tu internet?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "es gibt",
+      "points": [
+        {
+          "title": "es gibt + acusativo",
+          "text": "es gibt significa \"hay\". La expresión no cambia y lo que sigue va en acusativo: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Aquí hay un parque."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "¿Hay internet aquí?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "es gibt",
+      "points": [
+        {
+          "title": "es gibt + accusatif",
+          "text": "es gibt veut dire « il y a ». L’expression ne change pas, et ce qui suit est à l’accusatif : einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Il y a un parc ici."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Il y a internet ici ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "es gibt",
+      "points": [
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt \"var\" demektir. İfade değişmez, ardından gelen Akkusativ’dedir: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Burada bir park var."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Burada internet var mı?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "es gibt",
+      "points": [
+        {
+          "title": "es gibt + acuzativ",
+          "text": "es gibt înseamnă „există”. Expresia nu se schimbă, iar ce urmează e la acuzativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Aici e un parc."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Aici e internet?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "es gibt",
+      "points": [
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt \"bor\" degani. Iboraning o'zi o'zgarmaydi, undan keyingisi Akkusativda: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Bu yerda park bor."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Bu yerda internet bormi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "es gibt",
+      "points": [
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt मतलब \"है, मौजूद है\"। वाक्यांश नहीं बदलता, इसके बाद वाला Akkusativ में: einen Park, keinen Eingang।",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "यहाँ एक पार्क है।"
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "क्या यहाँ इंटरनेट है?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "es gibt",
+      "points": [
+        {
+          "title": "es gibt + المفعول",
+          "text": "es gibt تعني \"يوجد\". العبارة لا تتغير، وما بعدها في حالة المفعول: einen Park، keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "يوجد هنا حديقة."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "هل يوجد إنترنت هنا؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "order-five": {
+    "ru": {
+      "title": "es gibt: продолжение",
+      "points": [
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt значит «есть, имеется». Сама фраза не меняется, а то, что после неё, в Akkusativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Здесь есть парк."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Здесь есть интернет?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "es gibt: продовження",
+      "points": [
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt означає «є, існує». Сама фраза не змінюється, а те, що після неї, в Akkusativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Тут є парк."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Тут є інтернет?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "es gibt: continued",
+      "points": [
+        {
+          "title": "es gibt + accusative",
+          "text": "es gibt means \"there is / there are\". The phrase never changes, and what follows is in the accusative: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "There’s a park here."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Is there internet here?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "es gibt: ciąg dalszy",
+      "points": [
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt znaczy „jest, istnieje”. Samo wyrażenie się nie zmienia, a to, co po nim, jest w Akkusativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Tu jest park."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Czy jest tu internet?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "es gibt: continuación",
+      "points": [
+        {
+          "title": "es gibt + acusativo",
+          "text": "es gibt significa \"hay\". La expresión no cambia y lo que sigue va en acusativo: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Aquí hay un parque."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "¿Hay internet aquí?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "es gibt : suite",
+      "points": [
+        {
+          "title": "es gibt + accusatif",
+          "text": "es gibt veut dire « il y a ». L’expression ne change pas, et ce qui suit est à l’accusatif : einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Il y a un parc ici."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Il y a internet ici ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "es gibt: devam",
+      "points": [
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt \"var\" demektir. İfade değişmez, ardından gelen Akkusativ’dedir: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Burada bir park var."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Burada internet var mı?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "es gibt: continuare",
+      "points": [
+        {
+          "title": "es gibt + acuzativ",
+          "text": "es gibt înseamnă „există”. Expresia nu se schimbă, iar ce urmează e la acuzativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Aici e un parc."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Aici e internet?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "es gibt: davomi",
+      "points": [
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt \"bor\" degani. Iboraning o'zi o'zgarmaydi, undan keyingisi Akkusativda: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Bu yerda park bor."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Bu yerda internet bormi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "es gibt: आगे",
+      "points": [
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt मतलब \"है, मौजूद है\"। वाक्यांश नहीं बदलता, इसके बाद वाला Akkusativ में: einen Park, keinen Eingang।",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "यहाँ एक पार्क है।"
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "क्या यहाँ इंटरनेट है?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "es gibt: تابع",
+      "points": [
+        {
+          "title": "es gibt + المفعول",
+          "text": "es gibt تعني \"يوجد\". العبارة لا تتغير، وما بعدها في حالة المفعول: einen Park، keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "يوجد هنا حديقة."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "هل يوجد إنترنت هنا؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "order-six": {
+    "ru": {
+      "title": "Возвратные: mich и mir",
+      "points": [
+        {
+          "title": "mich или mir",
+          "text": "Возвратные: ich wasche mich, du wäschst dich, er wäscht sich. Если есть ещё предмет (руки, волосы), то mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "Он бреется."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Ты расчёсываешь волосы."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Зворотні: mich і mir",
+      "points": [
+        {
+          "title": "mich чи mir",
+          "text": "Зворотні: ich wasche mich, du wäschst dich, er wäscht sich. Якщо є ще предмет (руки, волосся), то mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "Він голиться."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Ти розчісуєш волосся."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Reflexive: mich and mir",
+      "points": [
+        {
+          "title": "mich or mir",
+          "text": "Reflexive: ich wasche mich, du wäschst dich, er wäscht sich. If there’s another object (hands, hair), use mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "He’s shaving."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "You’re combing your hair."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Zwrotne: mich i mir",
+      "points": [
+        {
+          "title": "mich czy mir",
+          "text": "Zwrotne: ich wasche mich, du wäschst dich, er wäscht sich. Jeśli jest jeszcze przedmiot (ręce, włosy), to mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "On się goli."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Czeszesz włosy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Reflexivos: mich y mir",
+      "points": [
+        {
+          "title": "mich o mir",
+          "text": "Reflexivos: ich wasche mich, du wäschst dich, er wäscht sich. Si hay otro objeto (manos, pelo), mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "Él se afeita."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Te peinas el pelo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pronominaux : mich et mir",
+      "points": [
+        {
+          "title": "mich ou mir",
+          "text": "Pronominaux : ich wasche mich, du wäschst dich, er wäscht sich. S’il y a un autre objet (mains, cheveux), mir, dir : Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "Il se rase."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Tu te coiffes les cheveux."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Dönüşlü: mich ve mir",
+      "points": [
+        {
+          "title": "mich mi, mir mi",
+          "text": "Dönüşlü: ich wasche mich, du wäschst dich, er wäscht sich. Başka nesne varsa (eller, saçlar) mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "O tıraş oluyor."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Saçlarını tarıyorsun."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Reflexive: mich și mir",
+      "points": [
+        {
+          "title": "mich sau mir",
+          "text": "Reflexive: ich wasche mich, du wäschst dich, er wäscht sich. Dacă mai e un obiect (mâini, păr), mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "El se bărbierește."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Îți piepteni părul."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "O'zlik: mich va mir",
+      "points": [
+        {
+          "title": "mich yoki mir",
+          "text": "O'zlik: ich wasche mich, du wäschst dich, er wäscht sich. Yana narsa bo'lsa (qo'l, soch), mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "U soqol olyapti."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Sen sochingni tarayapsan."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "निजवाचक: mich और mir",
+      "points": [
+        {
+          "title": "mich या mir",
+          "text": "निजवाचक: ich wasche mich, du wäschst dich, er wäscht sich। अगर कोई और चीज़ हो (हाथ, बाल), तो mir, dir: Ich wasche mir die Hände।",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "वह दाढ़ी बना रहा है।"
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "तुम बाल सँवार रहे हो।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الانعكاسية: mich وmir",
+      "points": [
+        {
+          "title": "mich أم mir",
+          "text": "الأفعال الانعكاسية: ich wasche mich، du wäschst dich، er wäscht sich. وإذا وُجد مفعول آخر (اليدان، الشعر) فـ mir وdir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "هو يحلق."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "أنت تمشط شعرك."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "order-seven": {
+    "ru": {
+      "title": "Всё сразу",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: глагол в конец",
+          "text": "После weil (потому что), dass (что), wenn (если, когда), ob (ли) глагол уходит в самый конец. Перед ними ставим запятую.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Я учу, потому что это важно."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Он говорит, что придёт."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt значит «есть, имеется». Сама фраза не меняется, а то, что после неё, в Akkusativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Здесь есть парк."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Здесь есть интернет?"
+            }
+          ]
+        },
+        {
+          "title": "mich или mir",
+          "text": "Возвратные: ich wasche mich, du wäschst dich, er wäscht sich. Если есть ещё предмет (руки, волосы), то mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "Он бреется."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Ты расчёсываешь волосы."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Усе одразу",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: дієслово в кінець",
+          "text": "Після weil (бо), dass (що), wenn (якщо, коли), ob (чи) дієслово йде в самий кінець. Перед ними ставимо кому.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Я вчу, бо це важливо."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Він каже, що прийде."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt означає «є, існує». Сама фраза не змінюється, а те, що після неї, в Akkusativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Тут є парк."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Тут є інтернет?"
+            }
+          ]
+        },
+        {
+          "title": "mich чи mir",
+          "text": "Зворотні: ich wasche mich, du wäschst dich, er wäscht sich. Якщо є ще предмет (руки, волосся), то mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "Він голиться."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Ти розчісуєш волосся."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Everything at once",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verb to the end",
+          "text": "After weil (because), dass (that), wenn (if, when), ob (whether) the verb goes to the very end. Put a comma before them.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "I study because it’s important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "He says that he’s coming."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + accusative",
+          "text": "es gibt means \"there is / there are\". The phrase never changes, and what follows is in the accusative: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "There’s a park here."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Is there internet here?"
+            }
+          ]
+        },
+        {
+          "title": "mich or mir",
+          "text": "Reflexive: ich wasche mich, du wäschst dich, er wäscht sich. If there’s another object (hands, hair), use mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "He’s shaving."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "You’re combing your hair."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Wszystko naraz",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: czasownik na koniec",
+          "text": "Po weil (bo), dass (że), wenn (jeśli, kiedy), ob (czy) czasownik idzie na sam koniec. Przed nimi stawiamy przecinek.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Uczę się, bo to ważne."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Mówi, że przyjdzie."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt znaczy „jest, istnieje”. Samo wyrażenie się nie zmienia, a to, co po nim, jest w Akkusativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Tu jest park."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Czy jest tu internet?"
+            }
+          ]
+        },
+        {
+          "title": "mich czy mir",
+          "text": "Zwrotne: ich wasche mich, du wäschst dich, er wäscht sich. Jeśli jest jeszcze przedmiot (ręce, włosy), to mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "On się goli."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Czeszesz włosy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Todo a la vez",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verbo al final",
+          "text": "Después de weil (porque), dass (que), wenn (si, cuando), ob (si) el verbo va al final. Antes va una coma.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Estudio porque es importante."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Dice que viene."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + acusativo",
+          "text": "es gibt significa \"hay\". La expresión no cambia y lo que sigue va en acusativo: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Aquí hay un parque."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "¿Hay internet aquí?"
+            }
+          ]
+        },
+        {
+          "title": "mich o mir",
+          "text": "Reflexivos: ich wasche mich, du wäschst dich, er wäscht sich. Si hay otro objeto (manos, pelo), mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "Él se afeita."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Te peinas el pelo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Tout à la fois",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob : verbe à la fin",
+          "text": "Après weil (parce que), dass (que), wenn (si, quand), ob (si) le verbe va tout à la fin. On met une virgule avant.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "J’apprends parce que c’est important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Il dit qu’il vient."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + accusatif",
+          "text": "es gibt veut dire « il y a ». L’expression ne change pas, et ce qui suit est à l’accusatif : einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Il y a un parc ici."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Il y a internet ici ?"
+            }
+          ]
+        },
+        {
+          "title": "mich ou mir",
+          "text": "Pronominaux : ich wasche mich, du wäschst dich, er wäscht sich. S’il y a un autre objet (mains, cheveux), mir, dir : Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "Il se rase."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Tu te coiffes les cheveux."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Hepsi bir arada",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: fiil sona",
+          "text": "weil (çünkü), dass (ki), wenn (eğer, -dığında), ob (-ip -mediği) sonrası fiil en sona gider. Öncesine virgül konur.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Öğreniyorum çünkü önemli."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Geleceğini söylüyor."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt \"var\" demektir. İfade değişmez, ardından gelen Akkusativ’dedir: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Burada bir park var."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Burada internet var mı?"
+            }
+          ]
+        },
+        {
+          "title": "mich mi, mir mi",
+          "text": "Dönüşlü: ich wasche mich, du wäschst dich, er wäscht sich. Başka nesne varsa (eller, saçlar) mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "O tıraş oluyor."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Saçlarını tarıyorsun."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Totul deodată",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verbul la final",
+          "text": "După weil (pentru că), dass (că), wenn (dacă, când), ob (dacă) verbul merge la final. Înaintea lor se pune virgulă.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Învăț pentru că e important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Spune că vine."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + acuzativ",
+          "text": "es gibt înseamnă „există”. Expresia nu se schimbă, iar ce urmează e la acuzativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Aici e un parc."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Aici e internet?"
+            }
+          ]
+        },
+        {
+          "title": "mich sau mir",
+          "text": "Reflexive: ich wasche mich, du wäschst dich, er wäscht sich. Dacă mai e un obiect (mâini, păr), mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "El se bărbierește."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Îți piepteni părul."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Hammasi birga",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: fe'l oxiriga",
+          "text": "weil (chunki), dass (ki), wenn (agar, qachonki), ob (-mi yo'qmi) dan keyin fe'l eng oxiriga o'tadi. Ulardan oldin vergul qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "O'qiyman, chunki bu muhim."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "U kelishini aytyapti."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt \"bor\" degani. Iboraning o'zi o'zgarmaydi, undan keyingisi Akkusativda: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Bu yerda park bor."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Bu yerda internet bormi?"
+            }
+          ]
+        },
+        {
+          "title": "mich yoki mir",
+          "text": "O'zlik: ich wasche mich, du wäschst dich, er wäscht sich. Yana narsa bo'lsa (qo'l, soch), mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "U soqol olyapti."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Sen sochingni tarayapsan."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "सब एक साथ",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: क्रिया अंत में",
+          "text": "weil (क्योंकि), dass (कि), wenn (अगर, जब), ob (कि ... या नहीं) के बाद क्रिया बिल्कुल अंत में जाती है। इनसे पहले कॉमा।",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "मैं सीखता हूँ क्योंकि यह ज़रूरी है।"
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "वह कहता है कि वह आएगा।"
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt मतलब \"है, मौजूद है\"। वाक्यांश नहीं बदलता, इसके बाद वाला Akkusativ में: einen Park, keinen Eingang।",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "यहाँ एक पार्क है।"
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "क्या यहाँ इंटरनेट है?"
+            }
+          ]
+        },
+        {
+          "title": "mich या mir",
+          "text": "निजवाचक: ich wasche mich, du wäschst dich, er wäscht sich। अगर कोई और चीज़ हो (हाथ, बाल), तो mir, dir: Ich wasche mir die Hände।",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "वह दाढ़ी बना रहा है।"
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "तुम बाल सँवार रहे हो।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "كل شيء معاً",
+      "points": [
+        {
+          "title": "weil وdass وwenn وob: الفعل في الآخر",
+          "text": "بعد weil (لأن) وdass (أنّ) وwenn (إذا، عندما) وob (هل) يذهب الفعل إلى آخر الجملة. ونضع قبلها فاصلة.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "أتعلم لأن ذلك مهم."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "يقول إنه سيأتي."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + المفعول",
+          "text": "es gibt تعني \"يوجد\". العبارة لا تتغير، وما بعدها في حالة المفعول: einen Park، keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "يوجد هنا حديقة."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "هل يوجد إنترنت هنا؟"
+            }
+          ]
+        },
+        {
+          "title": "mich أم mir",
+          "text": "الأفعال الانعكاسية: ich wasche mich، du wäschst dich، er wäscht sich. وإذا وُجد مفعول آخر (اليدان، الشعر) فـ mir وdir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "هو يحلق."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "أنت تمشط شعرك."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "order-eight": {
+    "ru": {
+      "title": "Путешествия",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: глагол в конец",
+          "text": "После weil (потому что), dass (что), wenn (если, когда), ob (ли) глагол уходит в самый конец. Перед ними ставим запятую.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Я учу, потому что это важно."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Он говорит, что придёт."
+            }
+          ]
+        },
+        {
+          "title": "Приставка в придаточном",
+          "text": "В придаточном отделяемый глагол в конце снова целый: Er stellt sich vor → dass er sich vorstellt.",
+          "examples": [
+            {
+              "de": "Er sagt, dass er sich jetzt ausruht.",
+              "tr": "Он говорит, что сейчас отдыхает."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Подорожі",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: дієслово в кінець",
+          "text": "Після weil (бо), dass (що), wenn (якщо, коли), ob (чи) дієслово йде в самий кінець. Перед ними ставимо кому.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Я вчу, бо це важливо."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Він каже, що прийде."
+            }
+          ]
+        },
+        {
+          "title": "Префікс у підрядному",
+          "text": "У підрядному відокремлюване дієслово в кінці знову ціле: Er stellt sich vor → dass er sich vorstellt.",
+          "examples": [
+            {
+              "de": "Er sagt, dass er sich jetzt ausruht.",
+              "tr": "Він каже, що зараз відпочиває."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Travel",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verb to the end",
+          "text": "After weil (because), dass (that), wenn (if, when), ob (whether) the verb goes to the very end. Put a comma before them.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "I study because it’s important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "He says that he’s coming."
+            }
+          ]
+        },
+        {
+          "title": "Prefix in a subordinate clause",
+          "text": "In a subordinate clause the separable verb is whole again at the end: Er stellt sich vor → dass er sich vorstellt.",
+          "examples": [
+            {
+              "de": "Er sagt, dass er sich jetzt ausruht.",
+              "tr": "He says he’s resting now."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Podróże",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: czasownik na koniec",
+          "text": "Po weil (bo), dass (że), wenn (jeśli, kiedy), ob (czy) czasownik idzie na sam koniec. Przed nimi stawiamy przecinek.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Uczę się, bo to ważne."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Mówi, że przyjdzie."
+            }
+          ]
+        },
+        {
+          "title": "Przedrostek w zdaniu podrzędnym",
+          "text": "W zdaniu podrzędnym czasownik rozdzielny na końcu znów jest cały: Er stellt sich vor → dass er sich vorstellt.",
+          "examples": [
+            {
+              "de": "Er sagt, dass er sich jetzt ausruht.",
+              "tr": "Mówi, że teraz odpoczywa."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Viajes",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verbo al final",
+          "text": "Después de weil (porque), dass (que), wenn (si, cuando), ob (si) el verbo va al final. Antes va una coma.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Estudio porque es importante."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Dice que viene."
+            }
+          ]
+        },
+        {
+          "title": "Prefijo en la subordinada",
+          "text": "En la subordinada el verbo separable vuelve a ir entero al final: Er stellt sich vor → dass er sich vorstellt.",
+          "examples": [
+            {
+              "de": "Er sagt, dass er sich jetzt ausruht.",
+              "tr": "Dice que ahora descansa."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Voyages",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob : verbe à la fin",
+          "text": "Après weil (parce que), dass (que), wenn (si, quand), ob (si) le verbe va tout à la fin. On met une virgule avant.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "J’apprends parce que c’est important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Il dit qu’il vient."
+            }
+          ]
+        },
+        {
+          "title": "Préfixe dans la subordonnée",
+          "text": "Dans la subordonnée, le verbe séparable est de nouveau entier à la fin : Er stellt sich vor → dass er sich vorstellt.",
+          "examples": [
+            {
+              "de": "Er sagt, dass er sich jetzt ausruht.",
+              "tr": "Il dit qu’il se repose maintenant."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Seyahat",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: fiil sona",
+          "text": "weil (çünkü), dass (ki), wenn (eğer, -dığında), ob (-ip -mediği) sonrası fiil en sona gider. Öncesine virgül konur.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Öğreniyorum çünkü önemli."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Geleceğini söylüyor."
+            }
+          ]
+        },
+        {
+          "title": "Yan cümlede ön ek",
+          "text": "Yan cümlede ayrılabilen fiil sonda yine bütündür: Er stellt sich vor → dass er sich vorstellt.",
+          "examples": [
+            {
+              "de": "Er sagt, dass er sich jetzt ausruht.",
+              "tr": "Şimdi dinlendiğini söylüyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Călătorii",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verbul la final",
+          "text": "După weil (pentru că), dass (că), wenn (dacă, când), ob (dacă) verbul merge la final. Înaintea lor se pune virgulă.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Învăț pentru că e important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Spune că vine."
+            }
+          ]
+        },
+        {
+          "title": "Prefixul în subordonată",
+          "text": "În subordonată verbul separabil e iar întreg la final: Er stellt sich vor → dass er sich vorstellt.",
+          "examples": [
+            {
+              "de": "Er sagt, dass er sich jetzt ausruht.",
+              "tr": "Spune că acum se odihnește."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Sayohatlar",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: fe'l oxiriga",
+          "text": "weil (chunki), dass (ki), wenn (agar, qachonki), ob (-mi yo'qmi) dan keyin fe'l eng oxiriga o'tadi. Ulardan oldin vergul qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "O'qiyman, chunki bu muhim."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "U kelishini aytyapti."
+            }
+          ]
+        },
+        {
+          "title": "Ergash gapda old qo'shimcha",
+          "text": "Ergash gapda ajraladigan fe'l oxirida yana butun: Er stellt sich vor → dass er sich vorstellt.",
+          "examples": [
+            {
+              "de": "Er sagt, dass er sich jetzt ausruht.",
+              "tr": "U hozir dam olayotganini aytyapti."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "यात्राएँ",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: क्रिया अंत में",
+          "text": "weil (क्योंकि), dass (कि), wenn (अगर, जब), ob (कि ... या नहीं) के बाद क्रिया बिल्कुल अंत में जाती है। इनसे पहले कॉमा।",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "मैं सीखता हूँ क्योंकि यह ज़रूरी है।"
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "वह कहता है कि वह आएगा।"
+            }
+          ]
+        },
+        {
+          "title": "उपवाक्य में उपसर्ग",
+          "text": "उपवाक्य में अलग होने वाली क्रिया अंत में फिर पूरी हो जाती है: Er stellt sich vor → dass er sich vorstellt।",
+          "examples": [
+            {
+              "de": "Er sagt, dass er sich jetzt ausruht.",
+              "tr": "वह कहता है कि वह अभी आराम कर रहा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "السفر",
+      "points": [
+        {
+          "title": "weil وdass وwenn وob: الفعل في الآخر",
+          "text": "بعد weil (لأن) وdass (أنّ) وwenn (إذا، عندما) وob (هل) يذهب الفعل إلى آخر الجملة. ونضع قبلها فاصلة.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "أتعلم لأن ذلك مهم."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "يقول إنه سيأتي."
+            }
+          ]
+        },
+        {
+          "title": "السابقة في الجملة الفرعية",
+          "text": "في الجملة الفرعية يعود الفعل المنفصل كاملاً في الآخر: Er stellt sich vor → dass er sich vorstellt.",
+          "examples": [
+            {
+              "de": "Er sagt, dass er sich jetzt ausruht.",
+              "tr": "يقول إنه يرتاح الآن."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "order-nine": {
+    "ru": {
+      "title": "Работа",
+      "points": [
+        {
+          "title": "Приставка в придаточном",
+          "text": "В придаточном отделяемый глагол в конце снова целый: Er stellt sich vor → dass er sich vorstellt.",
+          "examples": [
+            {
+              "de": "Er sagt, dass er sich jetzt ausruht.",
+              "tr": "Он говорит, что сейчас отдыхает."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt значит «есть, имеется». Сама фраза не меняется, а то, что после неё, в Akkusativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Здесь есть парк."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Здесь есть интернет?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Робота",
+      "points": [
+        {
+          "title": "Префікс у підрядному",
+          "text": "У підрядному відокремлюване дієслово в кінці знову ціле: Er stellt sich vor → dass er sich vorstellt.",
+          "examples": [
+            {
+              "de": "Er sagt, dass er sich jetzt ausruht.",
+              "tr": "Він каже, що зараз відпочиває."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt означає «є, існує». Сама фраза не змінюється, а те, що після неї, в Akkusativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Тут є парк."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Тут є інтернет?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Work",
+      "points": [
+        {
+          "title": "Prefix in a subordinate clause",
+          "text": "In a subordinate clause the separable verb is whole again at the end: Er stellt sich vor → dass er sich vorstellt.",
+          "examples": [
+            {
+              "de": "Er sagt, dass er sich jetzt ausruht.",
+              "tr": "He says he’s resting now."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + accusative",
+          "text": "es gibt means \"there is / there are\". The phrase never changes, and what follows is in the accusative: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "There’s a park here."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Is there internet here?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praca",
+      "points": [
+        {
+          "title": "Przedrostek w zdaniu podrzędnym",
+          "text": "W zdaniu podrzędnym czasownik rozdzielny na końcu znów jest cały: Er stellt sich vor → dass er sich vorstellt.",
+          "examples": [
+            {
+              "de": "Er sagt, dass er sich jetzt ausruht.",
+              "tr": "Mówi, że teraz odpoczywa."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt znaczy „jest, istnieje”. Samo wyrażenie się nie zmienia, a to, co po nim, jest w Akkusativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Tu jest park."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Czy jest tu internet?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Trabajo",
+      "points": [
+        {
+          "title": "Prefijo en la subordinada",
+          "text": "En la subordinada el verbo separable vuelve a ir entero al final: Er stellt sich vor → dass er sich vorstellt.",
+          "examples": [
+            {
+              "de": "Er sagt, dass er sich jetzt ausruht.",
+              "tr": "Dice que ahora descansa."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + acusativo",
+          "text": "es gibt significa \"hay\". La expresión no cambia y lo que sigue va en acusativo: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Aquí hay un parque."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "¿Hay internet aquí?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Travail",
+      "points": [
+        {
+          "title": "Préfixe dans la subordonnée",
+          "text": "Dans la subordonnée, le verbe séparable est de nouveau entier à la fin : Er stellt sich vor → dass er sich vorstellt.",
+          "examples": [
+            {
+              "de": "Er sagt, dass er sich jetzt ausruht.",
+              "tr": "Il dit qu’il se repose maintenant."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + accusatif",
+          "text": "es gibt veut dire « il y a ». L’expression ne change pas, et ce qui suit est à l’accusatif : einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Il y a un parc ici."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Il y a internet ici ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "İş",
+      "points": [
+        {
+          "title": "Yan cümlede ön ek",
+          "text": "Yan cümlede ayrılabilen fiil sonda yine bütündür: Er stellt sich vor → dass er sich vorstellt.",
+          "examples": [
+            {
+              "de": "Er sagt, dass er sich jetzt ausruht.",
+              "tr": "Şimdi dinlendiğini söylüyor."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt \"var\" demektir. İfade değişmez, ardından gelen Akkusativ’dedir: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Burada bir park var."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Burada internet var mı?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Munca",
+      "points": [
+        {
+          "title": "Prefixul în subordonată",
+          "text": "În subordonată verbul separabil e iar întreg la final: Er stellt sich vor → dass er sich vorstellt.",
+          "examples": [
+            {
+              "de": "Er sagt, dass er sich jetzt ausruht.",
+              "tr": "Spune că acum se odihnește."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + acuzativ",
+          "text": "es gibt înseamnă „există”. Expresia nu se schimbă, iar ce urmează e la acuzativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Aici e un parc."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Aici e internet?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ish",
+      "points": [
+        {
+          "title": "Ergash gapda old qo'shimcha",
+          "text": "Ergash gapda ajraladigan fe'l oxirida yana butun: Er stellt sich vor → dass er sich vorstellt.",
+          "examples": [
+            {
+              "de": "Er sagt, dass er sich jetzt ausruht.",
+              "tr": "U hozir dam olayotganini aytyapti."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt \"bor\" degani. Iboraning o'zi o'zgarmaydi, undan keyingisi Akkusativda: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Bu yerda park bor."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Bu yerda internet bormi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "काम",
+      "points": [
+        {
+          "title": "उपवाक्य में उपसर्ग",
+          "text": "उपवाक्य में अलग होने वाली क्रिया अंत में फिर पूरी हो जाती है: Er stellt sich vor → dass er sich vorstellt।",
+          "examples": [
+            {
+              "de": "Er sagt, dass er sich jetzt ausruht.",
+              "tr": "वह कहता है कि वह अभी आराम कर रहा है।"
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt मतलब \"है, मौजूद है\"। वाक्यांश नहीं बदलता, इसके बाद वाला Akkusativ में: einen Park, keinen Eingang।",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "यहाँ एक पार्क है।"
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "क्या यहाँ इंटरनेट है?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "العمل",
+      "points": [
+        {
+          "title": "السابقة في الجملة الفرعية",
+          "text": "في الجملة الفرعية يعود الفعل المنفصل كاملاً في الآخر: Er stellt sich vor → dass er sich vorstellt.",
+          "examples": [
+            {
+              "de": "Er sagt, dass er sich jetzt ausruht.",
+              "tr": "يقول إنه يرتاح الآن."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + المفعول",
+          "text": "es gibt تعني \"يوجد\". العبارة لا تتغير، وما بعدها في حالة المفعول: einen Park، keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "يوجد هنا حديقة."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "هل يوجد إنترنت هنا؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "order-ten": {
+    "ru": {
+      "title": "Работа: просто и понятно",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: глагол в конец",
+          "text": "После weil (потому что), dass (что), wenn (если, когда), ob (ли) глагол уходит в самый конец. Перед ними ставим запятую.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Я учу, потому что это важно."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Он говорит, что придёт."
+            }
+          ]
+        },
+        {
+          "title": "mich или mir",
+          "text": "Возвратные: ich wasche mich, du wäschst dich, er wäscht sich. Если есть ещё предмет (руки, волосы), то mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "Он бреется."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Ты расчёсываешь волосы."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Робота: просто й зрозуміло",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: дієслово в кінець",
+          "text": "Після weil (бо), dass (що), wenn (якщо, коли), ob (чи) дієслово йде в самий кінець. Перед ними ставимо кому.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Я вчу, бо це важливо."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Він каже, що прийде."
+            }
+          ]
+        },
+        {
+          "title": "mich чи mir",
+          "text": "Зворотні: ich wasche mich, du wäschst dich, er wäscht sich. Якщо є ще предмет (руки, волосся), то mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "Він голиться."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Ти розчісуєш волосся."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Work: simple and clear",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verb to the end",
+          "text": "After weil (because), dass (that), wenn (if, when), ob (whether) the verb goes to the very end. Put a comma before them.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "I study because it’s important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "He says that he’s coming."
+            }
+          ]
+        },
+        {
+          "title": "mich or mir",
+          "text": "Reflexive: ich wasche mich, du wäschst dich, er wäscht sich. If there’s another object (hands, hair), use mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "He’s shaving."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "You’re combing your hair."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praca: prosto i jasno",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: czasownik na koniec",
+          "text": "Po weil (bo), dass (że), wenn (jeśli, kiedy), ob (czy) czasownik idzie na sam koniec. Przed nimi stawiamy przecinek.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Uczę się, bo to ważne."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Mówi, że przyjdzie."
+            }
+          ]
+        },
+        {
+          "title": "mich czy mir",
+          "text": "Zwrotne: ich wasche mich, du wäschst dich, er wäscht sich. Jeśli jest jeszcze przedmiot (ręce, włosy), to mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "On się goli."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Czeszesz włosy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Trabajo: simple y claro",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verbo al final",
+          "text": "Después de weil (porque), dass (que), wenn (si, cuando), ob (si) el verbo va al final. Antes va una coma.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Estudio porque es importante."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Dice que viene."
+            }
+          ]
+        },
+        {
+          "title": "mich o mir",
+          "text": "Reflexivos: ich wasche mich, du wäschst dich, er wäscht sich. Si hay otro objeto (manos, pelo), mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "Él se afeita."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Te peinas el pelo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Travail : simple et clair",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob : verbe à la fin",
+          "text": "Après weil (parce que), dass (que), wenn (si, quand), ob (si) le verbe va tout à la fin. On met une virgule avant.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "J’apprends parce que c’est important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Il dit qu’il vient."
+            }
+          ]
+        },
+        {
+          "title": "mich ou mir",
+          "text": "Pronominaux : ich wasche mich, du wäschst dich, er wäscht sich. S’il y a un autre objet (mains, cheveux), mir, dir : Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "Il se rase."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Tu te coiffes les cheveux."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "İş: basit ve anlaşılır",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: fiil sona",
+          "text": "weil (çünkü), dass (ki), wenn (eğer, -dığında), ob (-ip -mediği) sonrası fiil en sona gider. Öncesine virgül konur.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Öğreniyorum çünkü önemli."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Geleceğini söylüyor."
+            }
+          ]
+        },
+        {
+          "title": "mich mi, mir mi",
+          "text": "Dönüşlü: ich wasche mich, du wäschst dich, er wäscht sich. Başka nesne varsa (eller, saçlar) mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "O tıraş oluyor."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Saçlarını tarıyorsun."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Munca: simplu și clar",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verbul la final",
+          "text": "După weil (pentru că), dass (că), wenn (dacă, când), ob (dacă) verbul merge la final. Înaintea lor se pune virgulă.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Învăț pentru că e important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Spune că vine."
+            }
+          ]
+        },
+        {
+          "title": "mich sau mir",
+          "text": "Reflexive: ich wasche mich, du wäschst dich, er wäscht sich. Dacă mai e un obiect (mâini, păr), mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "El se bărbierește."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Îți piepteni părul."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ish: oddiy va tushunarli",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: fe'l oxiriga",
+          "text": "weil (chunki), dass (ki), wenn (agar, qachonki), ob (-mi yo'qmi) dan keyin fe'l eng oxiriga o'tadi. Ulardan oldin vergul qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "O'qiyman, chunki bu muhim."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "U kelishini aytyapti."
+            }
+          ]
+        },
+        {
+          "title": "mich yoki mir",
+          "text": "O'zlik: ich wasche mich, du wäschst dich, er wäscht sich. Yana narsa bo'lsa (qo'l, soch), mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "U soqol olyapti."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Sen sochingni tarayapsan."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "काम: आसान और साफ़",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: क्रिया अंत में",
+          "text": "weil (क्योंकि), dass (कि), wenn (अगर, जब), ob (कि ... या नहीं) के बाद क्रिया बिल्कुल अंत में जाती है। इनसे पहले कॉमा।",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "मैं सीखता हूँ क्योंकि यह ज़रूरी है।"
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "वह कहता है कि वह आएगा।"
+            }
+          ]
+        },
+        {
+          "title": "mich या mir",
+          "text": "निजवाचक: ich wasche mich, du wäschst dich, er wäscht sich। अगर कोई और चीज़ हो (हाथ, बाल), तो mir, dir: Ich wasche mir die Hände।",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "वह दाढ़ी बना रहा है।"
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "तुम बाल सँवार रहे हो।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "العمل: ببساطة ووضوح",
+      "points": [
+        {
+          "title": "weil وdass وwenn وob: الفعل في الآخر",
+          "text": "بعد weil (لأن) وdass (أنّ) وwenn (إذا، عندما) وob (هل) يذهب الفعل إلى آخر الجملة. ونضع قبلها فاصلة.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "أتعلم لأن ذلك مهم."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "يقول إنه سيأتي."
+            }
+          ]
+        },
+        {
+          "title": "mich أم mir",
+          "text": "الأفعال الانعكاسية: ich wasche mich، du wäschst dich، er wäscht sich. وإذا وُجد مفعول آخر (اليدان، الشعر) فـ mir وdir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "هو يحلق."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "أنت تمشط شعرك."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "order-eleven": {
+    "ru": {
+      "title": "Еда, отдых, покупки",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: глагол в конец",
+          "text": "После weil (потому что), dass (что), wenn (если, когда), ob (ли) глагол уходит в самый конец. Перед ними ставим запятую.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Я учу, потому что это важно."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Он говорит, что придёт."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt значит «есть, имеется». Сама фраза не меняется, а то, что после неё, в Akkusativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Здесь есть парк."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Здесь есть интернет?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Їжа, відпочинок, покупки",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: дієслово в кінець",
+          "text": "Після weil (бо), dass (що), wenn (якщо, коли), ob (чи) дієслово йде в самий кінець. Перед ними ставимо кому.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Я вчу, бо це важливо."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Він каже, що прийде."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt означає «є, існує». Сама фраза не змінюється, а те, що після неї, в Akkusativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Тут є парк."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Тут є інтернет?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Food, leisure, shopping",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verb to the end",
+          "text": "After weil (because), dass (that), wenn (if, when), ob (whether) the verb goes to the very end. Put a comma before them.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "I study because it’s important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "He says that he’s coming."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + accusative",
+          "text": "es gibt means \"there is / there are\". The phrase never changes, and what follows is in the accusative: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "There’s a park here."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Is there internet here?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Jedzenie, odpoczynek, zakupy",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: czasownik na koniec",
+          "text": "Po weil (bo), dass (że), wenn (jeśli, kiedy), ob (czy) czasownik idzie na sam koniec. Przed nimi stawiamy przecinek.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Uczę się, bo to ważne."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Mówi, że przyjdzie."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt znaczy „jest, istnieje”. Samo wyrażenie się nie zmienia, a to, co po nim, jest w Akkusativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Tu jest park."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Czy jest tu internet?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Comida, ocio, compras",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verbo al final",
+          "text": "Después de weil (porque), dass (que), wenn (si, cuando), ob (si) el verbo va al final. Antes va una coma.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Estudio porque es importante."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Dice que viene."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + acusativo",
+          "text": "es gibt significa \"hay\". La expresión no cambia y lo que sigue va en acusativo: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Aquí hay un parque."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "¿Hay internet aquí?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Nourriture, loisirs, courses",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob : verbe à la fin",
+          "text": "Après weil (parce que), dass (que), wenn (si, quand), ob (si) le verbe va tout à la fin. On met une virgule avant.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "J’apprends parce que c’est important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Il dit qu’il vient."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + accusatif",
+          "text": "es gibt veut dire « il y a ». L’expression ne change pas, et ce qui suit est à l’accusatif : einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Il y a un parc ici."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Il y a internet ici ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yemek, eğlence, alışveriş",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: fiil sona",
+          "text": "weil (çünkü), dass (ki), wenn (eğer, -dığında), ob (-ip -mediği) sonrası fiil en sona gider. Öncesine virgül konur.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Öğreniyorum çünkü önemli."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Geleceğini söylüyor."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt \"var\" demektir. İfade değişmez, ardından gelen Akkusativ’dedir: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Burada bir park var."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Burada internet var mı?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Mâncare, odihnă, cumpărături",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verbul la final",
+          "text": "După weil (pentru că), dass (că), wenn (dacă, când), ob (dacă) verbul merge la final. Înaintea lor se pune virgulă.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Învăț pentru că e important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Spune că vine."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + acuzativ",
+          "text": "es gibt înseamnă „există”. Expresia nu se schimbă, iar ce urmează e la acuzativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Aici e un parc."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Aici e internet?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Taom, dam olish, xarid",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: fe'l oxiriga",
+          "text": "weil (chunki), dass (ki), wenn (agar, qachonki), ob (-mi yo'qmi) dan keyin fe'l eng oxiriga o'tadi. Ulardan oldin vergul qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "O'qiyman, chunki bu muhim."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "U kelishini aytyapti."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt \"bor\" degani. Iboraning o'zi o'zgarmaydi, undan keyingisi Akkusativda: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Bu yerda park bor."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Bu yerda internet bormi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "खाना, आराम, खरीदारी",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: क्रिया अंत में",
+          "text": "weil (क्योंकि), dass (कि), wenn (अगर, जब), ob (कि ... या नहीं) के बाद क्रिया बिल्कुल अंत में जाती है। इनसे पहले कॉमा।",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "मैं सीखता हूँ क्योंकि यह ज़रूरी है।"
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "वह कहता है कि वह आएगा।"
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt मतलब \"है, मौजूद है\"। वाक्यांश नहीं बदलता, इसके बाद वाला Akkusativ में: einen Park, keinen Eingang।",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "यहाँ एक पार्क है।"
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "क्या यहाँ इंटरनेट है?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الطعام والراحة والتسوق",
+      "points": [
+        {
+          "title": "weil وdass وwenn وob: الفعل في الآخر",
+          "text": "بعد weil (لأن) وdass (أنّ) وwenn (إذا، عندما) وob (هل) يذهب الفعل إلى آخر الجملة. ونضع قبلها فاصلة.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "أتعلم لأن ذلك مهم."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "يقول إنه سيأتي."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + المفعول",
+          "text": "es gibt تعني \"يوجد\". العبارة لا تتغير، وما بعدها في حالة المفعول: einen Park، keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "يوجد هنا حديقة."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "هل يوجد إنترنت هنا؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "order-twelve": {
+    "ru": {
+      "title": "Дом и отдых: повторение",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: глагол в конец",
+          "text": "После weil (потому что), dass (что), wenn (если, когда), ob (ли) глагол уходит в самый конец. Перед ними ставим запятую.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Я учу, потому что это важно."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Он говорит, что придёт."
+            }
+          ]
+        },
+        {
+          "title": "mich или mir",
+          "text": "Возвратные: ich wasche mich, du wäschst dich, er wäscht sich. Если есть ещё предмет (руки, волосы), то mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "Он бреется."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Ты расчёсываешь волосы."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt значит «есть, имеется». Сама фраза не меняется, а то, что после неё, в Akkusativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Здесь есть парк."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Здесь есть интернет?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Дім і відпочинок: повторення",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: дієслово в кінець",
+          "text": "Після weil (бо), dass (що), wenn (якщо, коли), ob (чи) дієслово йде в самий кінець. Перед ними ставимо кому.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Я вчу, бо це важливо."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Він каже, що прийде."
+            }
+          ]
+        },
+        {
+          "title": "mich чи mir",
+          "text": "Зворотні: ich wasche mich, du wäschst dich, er wäscht sich. Якщо є ще предмет (руки, волосся), то mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "Він голиться."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Ти розчісуєш волосся."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt означає «є, існує». Сама фраза не змінюється, а те, що після неї, в Akkusativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Тут є парк."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Тут є інтернет?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Home and leisure: review",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verb to the end",
+          "text": "After weil (because), dass (that), wenn (if, when), ob (whether) the verb goes to the very end. Put a comma before them.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "I study because it’s important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "He says that he’s coming."
+            }
+          ]
+        },
+        {
+          "title": "mich or mir",
+          "text": "Reflexive: ich wasche mich, du wäschst dich, er wäscht sich. If there’s another object (hands, hair), use mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "He’s shaving."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "You’re combing your hair."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + accusative",
+          "text": "es gibt means \"there is / there are\". The phrase never changes, and what follows is in the accusative: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "There’s a park here."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Is there internet here?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Dom i odpoczynek: powtórka",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: czasownik na koniec",
+          "text": "Po weil (bo), dass (że), wenn (jeśli, kiedy), ob (czy) czasownik idzie na sam koniec. Przed nimi stawiamy przecinek.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Uczę się, bo to ważne."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Mówi, że przyjdzie."
+            }
+          ]
+        },
+        {
+          "title": "mich czy mir",
+          "text": "Zwrotne: ich wasche mich, du wäschst dich, er wäscht sich. Jeśli jest jeszcze przedmiot (ręce, włosy), to mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "On się goli."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Czeszesz włosy."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt znaczy „jest, istnieje”. Samo wyrażenie się nie zmienia, a to, co po nim, jest w Akkusativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Tu jest park."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Czy jest tu internet?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Casa y ocio: repaso",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verbo al final",
+          "text": "Después de weil (porque), dass (que), wenn (si, cuando), ob (si) el verbo va al final. Antes va una coma.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Estudio porque es importante."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Dice que viene."
+            }
+          ]
+        },
+        {
+          "title": "mich o mir",
+          "text": "Reflexivos: ich wasche mich, du wäschst dich, er wäscht sich. Si hay otro objeto (manos, pelo), mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "Él se afeita."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Te peinas el pelo."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + acusativo",
+          "text": "es gibt significa \"hay\". La expresión no cambia y lo que sigue va en acusativo: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Aquí hay un parque."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "¿Hay internet aquí?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Maison et loisirs : révision",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob : verbe à la fin",
+          "text": "Après weil (parce que), dass (que), wenn (si, quand), ob (si) le verbe va tout à la fin. On met une virgule avant.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "J’apprends parce que c’est important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Il dit qu’il vient."
+            }
+          ]
+        },
+        {
+          "title": "mich ou mir",
+          "text": "Pronominaux : ich wasche mich, du wäschst dich, er wäscht sich. S’il y a un autre objet (mains, cheveux), mir, dir : Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "Il se rase."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Tu te coiffes les cheveux."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + accusatif",
+          "text": "es gibt veut dire « il y a ». L’expression ne change pas, et ce qui suit est à l’accusatif : einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Il y a un parc ici."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Il y a internet ici ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Ev ve eğlence: tekrar",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: fiil sona",
+          "text": "weil (çünkü), dass (ki), wenn (eğer, -dığında), ob (-ip -mediği) sonrası fiil en sona gider. Öncesine virgül konur.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Öğreniyorum çünkü önemli."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Geleceğini söylüyor."
+            }
+          ]
+        },
+        {
+          "title": "mich mi, mir mi",
+          "text": "Dönüşlü: ich wasche mich, du wäschst dich, er wäscht sich. Başka nesne varsa (eller, saçlar) mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "O tıraş oluyor."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Saçlarını tarıyorsun."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt \"var\" demektir. İfade değişmez, ardından gelen Akkusativ’dedir: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Burada bir park var."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Burada internet var mı?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Casă și odihnă: recapitulare",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: verbul la final",
+          "text": "După weil (pentru că), dass (că), wenn (dacă, când), ob (dacă) verbul merge la final. Înaintea lor se pune virgulă.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Învăț pentru că e important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Spune că vine."
+            }
+          ]
+        },
+        {
+          "title": "mich sau mir",
+          "text": "Reflexive: ich wasche mich, du wäschst dich, er wäscht sich. Dacă mai e un obiect (mâini, păr), mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "El se bărbierește."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Îți piepteni părul."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + acuzativ",
+          "text": "es gibt înseamnă „există”. Expresia nu se schimbă, iar ce urmează e la acuzativ: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Aici e un parc."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Aici e internet?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Uy va dam olish: takrorlash",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: fe'l oxiriga",
+          "text": "weil (chunki), dass (ki), wenn (agar, qachonki), ob (-mi yo'qmi) dan keyin fe'l eng oxiriga o'tadi. Ulardan oldin vergul qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "O'qiyman, chunki bu muhim."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "U kelishini aytyapti."
+            }
+          ]
+        },
+        {
+          "title": "mich yoki mir",
+          "text": "O'zlik: ich wasche mich, du wäschst dich, er wäscht sich. Yana narsa bo'lsa (qo'l, soch), mir, dir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "U soqol olyapti."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "Sen sochingni tarayapsan."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt \"bor\" degani. Iboraning o'zi o'zgarmaydi, undan keyingisi Akkusativda: einen Park, keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "Bu yerda park bor."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "Bu yerda internet bormi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "घर और आराम: दोहराव",
+      "points": [
+        {
+          "title": "weil, dass, wenn, ob: क्रिया अंत में",
+          "text": "weil (क्योंकि), dass (कि), wenn (अगर, जब), ob (कि ... या नहीं) के बाद क्रिया बिल्कुल अंत में जाती है। इनसे पहले कॉमा।",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "मैं सीखता हूँ क्योंकि यह ज़रूरी है।"
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "वह कहता है कि वह आएगा।"
+            }
+          ]
+        },
+        {
+          "title": "mich या mir",
+          "text": "निजवाचक: ich wasche mich, du wäschst dich, er wäscht sich। अगर कोई और चीज़ हो (हाथ, बाल), तो mir, dir: Ich wasche mir die Hände।",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "वह दाढ़ी बना रहा है।"
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "तुम बाल सँवार रहे हो।"
+            }
+          ]
+        },
+        {
+          "title": "es gibt + Akkusativ",
+          "text": "es gibt मतलब \"है, मौजूद है\"। वाक्यांश नहीं बदलता, इसके बाद वाला Akkusativ में: einen Park, keinen Eingang।",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "यहाँ एक पार्क है।"
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "क्या यहाँ इंटरनेट है?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "البيت والراحة: مراجعة",
+      "points": [
+        {
+          "title": "weil وdass وwenn وob: الفعل في الآخر",
+          "text": "بعد weil (لأن) وdass (أنّ) وwenn (إذا، عندما) وob (هل) يذهب الفعل إلى آخر الجملة. ونضع قبلها فاصلة.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "أتعلم لأن ذلك مهم."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "يقول إنه سيأتي."
+            }
+          ]
+        },
+        {
+          "title": "mich أم mir",
+          "text": "الأفعال الانعكاسية: ich wasche mich، du wäschst dich، er wäscht sich. وإذا وُجد مفعول آخر (اليدان، الشعر) فـ mir وdir: Ich wasche mir die Hände.",
+          "examples": [
+            {
+              "de": "Er rasiert sich.",
+              "tr": "هو يحلق."
+            },
+            {
+              "de": "Du kämmst dir die Haare.",
+              "tr": "أنت تمشط شعرك."
+            }
+          ]
+        },
+        {
+          "title": "es gibt + المفعول",
+          "text": "es gibt تعني \"يوجد\". العبارة لا تتغير، وما بعدها في حالة المفعول: einen Park، keinen Eingang.",
+          "examples": [
+            {
+              "de": "Es gibt hier einen Park.",
+              "tr": "يوجد هنا حديقة."
+            },
+            {
+              "de": "Gibt es hier Internet?",
+              "tr": "هل يوجد إنترنت هنا؟"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

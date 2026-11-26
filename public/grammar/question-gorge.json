@@ -1,0 +1,3311 @@
+{
+  "question-gorge-one": {
+    "ru": {
+      "title": "Вопрос «да или нет»",
+      "points": [
+        {
+          "title": "Глагол на первое место",
+          "text": "Чтобы из утверждения сделать вопрос, ставим глагол первым.",
+          "examples": [
+            {
+              "de": "Du wohnst hier. → Wohnst du hier?",
+              "tr": "Ты живёшь здесь. → Ты живёшь здесь?"
+            },
+            {
+              "de": "Ja, ich wohne hier.",
+              "tr": "Да, я живу здесь."
+            }
+          ]
+        },
+        {
+          "title": "oder: или",
+          "text": "oder соединяет варианты на выбор.",
+          "examples": [
+            {
+              "de": "Tee oder Kaffee?",
+              "tr": "Чай или кофе?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Питання «так чи ні»",
+      "points": [
+        {
+          "title": "Дієслово на перше місце",
+          "text": "Щоб зі ствердження зробити питання, ставимо дієслово першим.",
+          "examples": [
+            {
+              "de": "Du wohnst hier. → Wohnst du hier?",
+              "tr": "Ти живеш тут. → Ти живеш тут?"
+            },
+            {
+              "de": "Ja, ich wohne hier.",
+              "tr": "Так, я живу тут."
+            }
+          ]
+        },
+        {
+          "title": "oder: або",
+          "text": "oder поєднує варіанти на вибір.",
+          "examples": [
+            {
+              "de": "Tee oder Kaffee?",
+              "tr": "Чай чи кава?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Yes or no questions",
+      "points": [
+        {
+          "title": "Verb in first place",
+          "text": "To turn a statement into a question, put the verb first.",
+          "examples": [
+            {
+              "de": "Du wohnst hier. → Wohnst du hier?",
+              "tr": "You live here. → Do you live here?"
+            },
+            {
+              "de": "Ja, ich wohne hier.",
+              "tr": "Yes, I live here."
+            }
+          ]
+        },
+        {
+          "title": "oder: or",
+          "text": "oder joins options to choose from.",
+          "examples": [
+            {
+              "de": "Tee oder Kaffee?",
+              "tr": "Tea or coffee?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Pytanie „tak czy nie”",
+      "points": [
+        {
+          "title": "Czasownik na pierwsze miejsce",
+          "text": "Żeby ze zdania zrobić pytanie, stawiamy czasownik na początku.",
+          "examples": [
+            {
+              "de": "Du wohnst hier. → Wohnst du hier?",
+              "tr": "Mieszkasz tu. → Mieszkasz tu?"
+            },
+            {
+              "de": "Ja, ich wohne hier.",
+              "tr": "Tak, mieszkam tu."
+            }
+          ]
+        },
+        {
+          "title": "oder: czy, albo",
+          "text": "oder łączy możliwości do wyboru.",
+          "examples": [
+            {
+              "de": "Tee oder Kaffee?",
+              "tr": "Herbata czy kawa?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Preguntas de sí o no",
+      "points": [
+        {
+          "title": "El verbo en primer lugar",
+          "text": "Para convertir una afirmación en pregunta, el verbo va primero.",
+          "examples": [
+            {
+              "de": "Du wohnst hier. → Wohnst du hier?",
+              "tr": "Vives aquí. → ¿Vives aquí?"
+            },
+            {
+              "de": "Ja, ich wohne hier.",
+              "tr": "Sí, vivo aquí."
+            }
+          ]
+        },
+        {
+          "title": "oder: o",
+          "text": "oder une opciones para elegir.",
+          "examples": [
+            {
+              "de": "Tee oder Kaffee?",
+              "tr": "¿Té o café?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Questions fermées : oui ou non",
+      "points": [
+        {
+          "title": "Le verbe en premier",
+          "text": "Pour transformer une phrase en question, on met le verbe en premier.",
+          "examples": [
+            {
+              "de": "Du wohnst hier. → Wohnst du hier?",
+              "tr": "Tu habites ici. → Tu habites ici ?"
+            },
+            {
+              "de": "Ja, ich wohne hier.",
+              "tr": "Oui, j’habite ici."
+            }
+          ]
+        },
+        {
+          "title": "oder : ou",
+          "text": "oder relie des choix.",
+          "examples": [
+            {
+              "de": "Tee oder Kaffee?",
+              "tr": "Thé ou café ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Evet hayır soruları",
+      "points": [
+        {
+          "title": "Fiil başa gelir",
+          "text": "Cümleyi soru yapmak için fiil başa konur.",
+          "examples": [
+            {
+              "de": "Du wohnst hier. → Wohnst du hier?",
+              "tr": "Burada oturuyorsun. → Burada mı oturuyorsun?"
+            },
+            {
+              "de": "Ja, ich wohne hier.",
+              "tr": "Evet, burada oturuyorum."
+            }
+          ]
+        },
+        {
+          "title": "oder: veya",
+          "text": "oder seçenekleri bağlar.",
+          "examples": [
+            {
+              "de": "Tee oder Kaffee?",
+              "tr": "Çay mı kahve mi?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Întrebări „da sau nu”",
+      "points": [
+        {
+          "title": "Verbul pe primul loc",
+          "text": "Ca să faci dintr-o afirmație o întrebare, pui verbul primul.",
+          "examples": [
+            {
+              "de": "Du wohnst hier. → Wohnst du hier?",
+              "tr": "Locuiești aici. → Locuiești aici?"
+            },
+            {
+              "de": "Ja, ich wohne hier.",
+              "tr": "Da, locuiesc aici."
+            }
+          ]
+        },
+        {
+          "title": "oder: sau",
+          "text": "oder leagă variantele de ales.",
+          "examples": [
+            {
+              "de": "Tee oder Kaffee?",
+              "tr": "Ceai sau cafea?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "\"Ha yoki yo'q\" savoli",
+      "points": [
+        {
+          "title": "Fe'l birinchi o'ringa",
+          "text": "Darak gapni savolga aylantirish uchun fe'l birinchi qo'yiladi.",
+          "examples": [
+            {
+              "de": "Du wohnst hier. → Wohnst du hier?",
+              "tr": "Sen shu yerda yashaysan. → Shu yerda yashaysanmi?"
+            },
+            {
+              "de": "Ja, ich wohne hier.",
+              "tr": "Ha, shu yerda yashayman."
+            }
+          ]
+        },
+        {
+          "title": "oder: yoki",
+          "text": "oder tanlov variantlarini bog'laydi.",
+          "examples": [
+            {
+              "de": "Tee oder Kaffee?",
+              "tr": "Choymi yoki qahva?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "\"हाँ या ना\" वाले सवाल",
+      "points": [
+        {
+          "title": "क्रिया पहले स्थान पर",
+          "text": "वाक्य को सवाल बनाने के लिए क्रिया को सबसे पहले रखो।",
+          "examples": [
+            {
+              "de": "Du wohnst hier. → Wohnst du hier?",
+              "tr": "तुम यहाँ रहते हो। → क्या तुम यहाँ रहते हो?"
+            },
+            {
+              "de": "Ja, ich wohne hier.",
+              "tr": "हाँ, मैं यहाँ रहता हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "oder: या",
+          "text": "oder विकल्पों को जोड़ता है।",
+          "examples": [
+            {
+              "de": "Tee oder Kaffee?",
+              "tr": "चाय या कॉफ़ी?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "أسئلة \"نعم أو لا\"",
+      "points": [
+        {
+          "title": "الفعل في البداية",
+          "text": "لتحويل الجملة إلى سؤال نضع الفعل أولاً.",
+          "examples": [
+            {
+              "de": "Du wohnst hier. → Wohnst du hier?",
+              "tr": "أنت تسكن هنا. → هل تسكن هنا؟"
+            },
+            {
+              "de": "Ja, ich wohne hier.",
+              "tr": "نعم، أسكن هنا."
+            }
+          ]
+        },
+        {
+          "title": "oder: أو",
+          "text": "oder تربط بين الخيارات.",
+          "examples": [
+            {
+              "de": "Tee oder Kaffee?",
+              "tr": "شاي أم قهوة؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "question-gorge-two": {
+    "ru": {
+      "title": "Кто? Что? Где? Вопросительные слова",
+      "points": [
+        {
+          "title": "Слова-вопросы",
+          "text": "wer (кто), was (что), wo (где), woher (откуда), wie (как).",
+          "examples": [
+            {
+              "de": "Wer ist das?",
+              "tr": "Кто это?"
+            },
+            {
+              "de": "Was machst du?",
+              "tr": "Что ты делаешь?"
+            }
+          ]
+        },
+        {
+          "title": "Порядок слов",
+          "text": "Вопросительное слово первым, глагол вторым. На такой вопрос нельзя ответить ja или nein.",
+          "examples": [
+            {
+              "de": "Wo arbeitest du?",
+              "tr": "Где ты работаешь?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Хто? Що? Де? Питальні слова",
+      "points": [
+        {
+          "title": "Слова-питання",
+          "text": "wer (хто), was (що), wo (де), woher (звідки), wie (як).",
+          "examples": [
+            {
+              "de": "Wer ist das?",
+              "tr": "Хто це?"
+            },
+            {
+              "de": "Was machst du?",
+              "tr": "Що ти робиш?"
+            }
+          ]
+        },
+        {
+          "title": "Порядок слів",
+          "text": "Питальне слово першим, дієслово другим. На таке питання не можна відповісти ja чи nein.",
+          "examples": [
+            {
+              "de": "Wo arbeitest du?",
+              "tr": "Де ти працюєш?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Who? What? Where? Question words",
+      "points": [
+        {
+          "title": "Question words",
+          "text": "wer (who), was (what), wo (where), woher (where from), wie (how).",
+          "examples": [
+            {
+              "de": "Wer ist das?",
+              "tr": "Who is that?"
+            },
+            {
+              "de": "Was machst du?",
+              "tr": "What are you doing?"
+            }
+          ]
+        },
+        {
+          "title": "Word order",
+          "text": "Question word first, verb second. You can’t answer such a question with ja or nein.",
+          "examples": [
+            {
+              "de": "Wo arbeitest du?",
+              "tr": "Where do you work?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Kto? Co? Gdzie? Słowa pytające",
+      "points": [
+        {
+          "title": "Słowa pytające",
+          "text": "wer (kto), was (co), wo (gdzie), woher (skąd), wie (jak).",
+          "examples": [
+            {
+              "de": "Wer ist das?",
+              "tr": "Kto to jest?"
+            },
+            {
+              "de": "Was machst du?",
+              "tr": "Co robisz?"
+            }
+          ]
+        },
+        {
+          "title": "Szyk wyrazów",
+          "text": "Słowo pytające pierwsze, czasownik drugi. Na takie pytanie nie odpowiada się ja ani nein.",
+          "examples": [
+            {
+              "de": "Wo arbeitest du?",
+              "tr": "Gdzie pracujesz?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿Quién? ¿Qué? ¿Dónde? Palabras interrogativas",
+      "points": [
+        {
+          "title": "Palabras interrogativas",
+          "text": "wer (quién), was (qué), wo (dónde), woher (de dónde), wie (cómo).",
+          "examples": [
+            {
+              "de": "Wer ist das?",
+              "tr": "¿Quién es?"
+            },
+            {
+              "de": "Was machst du?",
+              "tr": "¿Qué haces?"
+            }
+          ]
+        },
+        {
+          "title": "Orden de palabras",
+          "text": "La palabra interrogativa primero, el verbo segundo. A esta pregunta no se responde con ja o nein.",
+          "examples": [
+            {
+              "de": "Wo arbeitest du?",
+              "tr": "¿Dónde trabajas?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Qui ? Quoi ? Où ? Les mots interrogatifs",
+      "points": [
+        {
+          "title": "Les mots interrogatifs",
+          "text": "wer (qui), was (quoi), wo (où), woher (d’où), wie (comment).",
+          "examples": [
+            {
+              "de": "Wer ist das?",
+              "tr": "Qui est-ce ?"
+            },
+            {
+              "de": "Was machst du?",
+              "tr": "Qu’est-ce que tu fais ?"
+            }
+          ]
+        },
+        {
+          "title": "Ordre des mots",
+          "text": "Mot interrogatif en premier, verbe en deuxième. On ne peut pas répondre par ja ou nein.",
+          "examples": [
+            {
+              "de": "Wo arbeitest du?",
+              "tr": "Où travailles-tu ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kim? Ne? Nerede? Soru kelimeleri",
+      "points": [
+        {
+          "title": "Soru kelimeleri",
+          "text": "wer (kim), was (ne), wo (nerede), woher (nereden), wie (nasıl).",
+          "examples": [
+            {
+              "de": "Wer ist das?",
+              "tr": "Bu kim?"
+            },
+            {
+              "de": "Was machst du?",
+              "tr": "Ne yapıyorsun?"
+            }
+          ]
+        },
+        {
+          "title": "Kelime sırası",
+          "text": "Önce soru kelimesi, sonra fiil. Bu soruya ja ya da nein ile cevap verilmez.",
+          "examples": [
+            {
+              "de": "Wo arbeitest du?",
+              "tr": "Nerede çalışıyorsun?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cine? Ce? Unde? Cuvinte interogative",
+      "points": [
+        {
+          "title": "Cuvinte interogative",
+          "text": "wer (cine), was (ce), wo (unde), woher (de unde), wie (cum).",
+          "examples": [
+            {
+              "de": "Wer ist das?",
+              "tr": "Cine este?"
+            },
+            {
+              "de": "Was machst du?",
+              "tr": "Ce faci?"
+            }
+          ]
+        },
+        {
+          "title": "Ordinea cuvintelor",
+          "text": "Cuvântul interogativ primul, verbul al doilea. La o astfel de întrebare nu se răspunde cu ja sau nein.",
+          "examples": [
+            {
+              "de": "Wo arbeitest du?",
+              "tr": "Unde lucrezi?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kim? Nima? Qayerda? Savol so'zlari",
+      "points": [
+        {
+          "title": "Savol so'zlari",
+          "text": "wer (kim), was (nima), wo (qayerda), woher (qayerdan), wie (qanday).",
+          "examples": [
+            {
+              "de": "Wer ist das?",
+              "tr": "Bu kim?"
+            },
+            {
+              "de": "Was machst du?",
+              "tr": "Nima qilyapsan?"
+            }
+          ]
+        },
+        {
+          "title": "So'z tartibi",
+          "text": "Avval savol so'zi, keyin fe'l. Bunday savolga ja yoki nein deb javob berilmaydi.",
+          "examples": [
+            {
+              "de": "Wo arbeitest du?",
+              "tr": "Qayerda ishlaysan?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कौन? क्या? कहाँ? प्रश्नवाचक शब्द",
+      "points": [
+        {
+          "title": "प्रश्नवाचक शब्द",
+          "text": "wer (कौन), was (क्या), wo (कहाँ), woher (कहाँ से), wie (कैसे)।",
+          "examples": [
+            {
+              "de": "Wer ist das?",
+              "tr": "यह कौन है?"
+            },
+            {
+              "de": "Was machst du?",
+              "tr": "तुम क्या कर रहे हो?"
+            }
+          ]
+        },
+        {
+          "title": "शब्द क्रम",
+          "text": "पहले प्रश्नवाचक शब्द, फिर क्रिया। ऐसे सवाल का जवाब ja या nein से नहीं दिया जाता।",
+          "examples": [
+            {
+              "de": "Wo arbeitest du?",
+              "tr": "तुम कहाँ काम करते हो?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "من؟ ماذا؟ أين؟ أدوات الاستفهام",
+      "points": [
+        {
+          "title": "أدوات الاستفهام",
+          "text": "wer (من)، was (ماذا)، wo (أين)، woher (من أين)، wie (كيف).",
+          "examples": [
+            {
+              "de": "Wer ist das?",
+              "tr": "من هذا؟"
+            },
+            {
+              "de": "Was machst du?",
+              "tr": "ماذا تفعل؟"
+            }
+          ]
+        },
+        {
+          "title": "ترتيب الكلمات",
+          "text": "أداة الاستفهام أولاً ثم الفعل ثانياً. ولا يُجاب عن هذا السؤال بـ ja أو nein.",
+          "examples": [
+            {
+              "de": "Wo arbeitest du?",
+              "tr": "أين تعمل؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "question-gorge-three": {
+    "ru": {
+      "title": "Was ist das? Wer ist das?",
+      "points": [
+        {
+          "title": "Про вещи и про людей",
+          "text": "Про вещь спрашиваем Was ist das?, про человека Wer ist das?",
+          "examples": [
+            {
+              "de": "Was ist das? Das ist ein Schrank.",
+              "tr": "Что это? Это шкаф."
+            },
+            {
+              "de": "Wer ist das? Das ist Frau Schmidt.",
+              "tr": "Кто это? Это госпожа Шмидт."
+            }
+          ]
+        },
+        {
+          "title": "Какая вещь: Wie ist...?",
+          "text": "Вопрос о том, как выглядит вещь. В ответе местоимение по роду: der Computer → er.",
+          "examples": [
+            {
+              "de": "Wie ist der Computer? Er ist neu.",
+              "tr": "Какой компьютер? Он новый."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Was ist das? Wer ist das?",
+      "points": [
+        {
+          "title": "Про речі і про людей",
+          "text": "Про річ питаємо Was ist das?, про людину Wer ist das?",
+          "examples": [
+            {
+              "de": "Was ist das? Das ist ein Schrank.",
+              "tr": "Що це? Це шафа."
+            },
+            {
+              "de": "Wer ist das? Das ist Frau Schmidt.",
+              "tr": "Хто це? Це пані Шмідт."
+            }
+          ]
+        },
+        {
+          "title": "Яка річ: Wie ist...?",
+          "text": "Питання про те, яка річ. У відповіді займенник за родом: der Computer → er.",
+          "examples": [
+            {
+              "de": "Wie ist der Computer? Er ist neu.",
+              "tr": "Який комп'ютер? Він новий."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Was ist das? Wer ist das?",
+      "points": [
+        {
+          "title": "Things and people",
+          "text": "Ask Was ist das? about a thing and Wer ist das? about a person.",
+          "examples": [
+            {
+              "de": "Was ist das? Das ist ein Schrank.",
+              "tr": "What is that? It’s a wardrobe."
+            },
+            {
+              "de": "Wer ist das? Das ist Frau Schmidt.",
+              "tr": "Who is that? It’s Ms Schmidt."
+            }
+          ]
+        },
+        {
+          "title": "What is it like: Wie ist...?",
+          "text": "Ask what a thing is like. In the answer use the pronoun by gender: der Computer → er.",
+          "examples": [
+            {
+              "de": "Wie ist der Computer? Er ist neu.",
+              "tr": "What is the computer like? It’s new."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Was ist das? Wer ist das?",
+      "points": [
+        {
+          "title": "O rzeczy i o ludzi",
+          "text": "O rzecz pytamy Was ist das?, o człowieka Wer ist das?",
+          "examples": [
+            {
+              "de": "Was ist das? Das ist ein Schrank.",
+              "tr": "Co to jest? To szafa."
+            },
+            {
+              "de": "Wer ist das? Das ist Frau Schmidt.",
+              "tr": "Kto to jest? To pani Schmidt."
+            }
+          ]
+        },
+        {
+          "title": "Jaka jest rzecz: Wie ist...?",
+          "text": "Pytanie o to, jaka jest rzecz. W odpowiedzi zaimek według rodzaju: der Computer → er.",
+          "examples": [
+            {
+              "de": "Wie ist der Computer? Er ist neu.",
+              "tr": "Jaki jest komputer? Jest nowy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Was ist das? Wer ist das?",
+      "points": [
+        {
+          "title": "Cosas y personas",
+          "text": "Por una cosa se pregunta Was ist das?, por una persona Wer ist das?",
+          "examples": [
+            {
+              "de": "Was ist das? Das ist ein Schrank.",
+              "tr": "¿Qué es esto? Es un armario."
+            },
+            {
+              "de": "Wer ist das? Das ist Frau Schmidt.",
+              "tr": "¿Quién es? Es la señora Schmidt."
+            }
+          ]
+        },
+        {
+          "title": "Cómo es: Wie ist...?",
+          "text": "Pregunta cómo es una cosa. En la respuesta, pronombre según el género: der Computer → er.",
+          "examples": [
+            {
+              "de": "Wie ist der Computer? Er ist neu.",
+              "tr": "¿Cómo es el ordenador? Es nuevo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Was ist das ? Wer ist das ?",
+      "points": [
+        {
+          "title": "Objets et personnes",
+          "text": "Pour un objet on demande Was ist das ?, pour une personne Wer ist das ?",
+          "examples": [
+            {
+              "de": "Was ist das? Das ist ein Schrank.",
+              "tr": "Qu’est-ce que c’est ? C’est une armoire."
+            },
+            {
+              "de": "Wer ist das? Das ist Frau Schmidt.",
+              "tr": "Qui est-ce ? C’est Madame Schmidt."
+            }
+          ]
+        },
+        {
+          "title": "Comment est-il : Wie ist... ?",
+          "text": "On demande comment est un objet. Dans la réponse, pronom selon le genre : der Computer → er.",
+          "examples": [
+            {
+              "de": "Wie ist der Computer? Er ist neu.",
+              "tr": "Comment est l’ordinateur ? Il est neuf."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Was ist das? Wer ist das?",
+      "points": [
+        {
+          "title": "Eşya ve insan",
+          "text": "Eşya için Was ist das?, insan için Wer ist das? diye sorulur.",
+          "examples": [
+            {
+              "de": "Was ist das? Das ist ein Schrank.",
+              "tr": "Bu ne? Bu bir dolap."
+            },
+            {
+              "de": "Wer ist das? Das ist Frau Schmidt.",
+              "tr": "Bu kim? Bu Bayan Schmidt."
+            }
+          ]
+        },
+        {
+          "title": "Nasıl: Wie ist...?",
+          "text": "Eşyanın nasıl olduğunu sorar. Cevapta cinsiyete göre zamir: der Computer → er.",
+          "examples": [
+            {
+              "de": "Wie ist der Computer? Er ist neu.",
+              "tr": "Bilgisayar nasıl? Yeni."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Was ist das? Wer ist das?",
+      "points": [
+        {
+          "title": "Lucruri și oameni",
+          "text": "Despre un lucru întrebi Was ist das?, despre un om Wer ist das?",
+          "examples": [
+            {
+              "de": "Was ist das? Das ist ein Schrank.",
+              "tr": "Ce este asta? Este un dulap."
+            },
+            {
+              "de": "Wer ist das? Das ist Frau Schmidt.",
+              "tr": "Cine este? Este doamna Schmidt."
+            }
+          ]
+        },
+        {
+          "title": "Cum este: Wie ist...?",
+          "text": "Întrebi cum este un lucru. În răspuns, pronumele după gen: der Computer → er.",
+          "examples": [
+            {
+              "de": "Wie ist der Computer? Er ist neu.",
+              "tr": "Cum este calculatorul? Este nou."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Was ist das? Wer ist das?",
+      "points": [
+        {
+          "title": "Narsa va odam haqida",
+          "text": "Narsa haqida Was ist das?, odam haqida Wer ist das? deb so'raladi.",
+          "examples": [
+            {
+              "de": "Was ist das? Das ist ein Schrank.",
+              "tr": "Bu nima? Bu shkaf."
+            },
+            {
+              "de": "Wer ist das? Das ist Frau Schmidt.",
+              "tr": "Bu kim? Bu Shmidt xonim."
+            }
+          ]
+        },
+        {
+          "title": "Qanday: Wie ist...?",
+          "text": "Narsa qandayligini so'raydi. Javobda rodga qarab olmosh: der Computer → er.",
+          "examples": [
+            {
+              "de": "Wie ist der Computer? Er ist neu.",
+              "tr": "Kompyuter qanday? U yangi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "Was ist das? Wer ist das?",
+      "points": [
+        {
+          "title": "चीज़ें और लोग",
+          "text": "चीज़ के बारे में Was ist das?, इंसान के बारे में Wer ist das? पूछते हैं।",
+          "examples": [
+            {
+              "de": "Was ist das? Das ist ein Schrank.",
+              "tr": "यह क्या है? यह अलमारी है।"
+            },
+            {
+              "de": "Wer ist das? Das ist Frau Schmidt.",
+              "tr": "यह कौन है? यह श्रीमती श्मिट हैं।"
+            }
+          ]
+        },
+        {
+          "title": "कैसा है: Wie ist...?",
+          "text": "चीज़ कैसी है, यह पूछते हैं। जवाब में लिंग के अनुसार सर्वनाम: der Computer → er।",
+          "examples": [
+            {
+              "de": "Wie ist der Computer? Er ist neu.",
+              "tr": "कंप्यूटर कैसा है? वह नया है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "Was ist das? Wer ist das?",
+      "points": [
+        {
+          "title": "الأشياء والناس",
+          "text": "عن الشيء نسأل Was ist das؟، وعن الشخص Wer ist das؟",
+          "examples": [
+            {
+              "de": "Was ist das? Das ist ein Schrank.",
+              "tr": "ما هذا؟ هذه خزانة."
+            },
+            {
+              "de": "Wer ist das? Das ist Frau Schmidt.",
+              "tr": "من هذه؟ هذه السيدة شميت."
+            }
+          ]
+        },
+        {
+          "title": "كيف هو: Wie ist...؟",
+          "text": "نسأل كيف يبدو الشيء. وفي الجواب نستعمل الضمير حسب الجنس: der Computer → er.",
+          "examples": [
+            {
+              "de": "Wie ist der Computer? Er ist neu.",
+              "tr": "كيف هو الحاسوب؟ إنه جديد."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "question-gorge-four": {
+    "ru": {
+      "title": "Отрицание nicht: где оно стоит",
+      "points": [
+        {
+          "title": "Перед признаком",
+          "text": "После sein nicht стоит перед прилагательным.",
+          "examples": [
+            {
+              "de": "Ich bin nicht müde.",
+              "tr": "Я не устал."
+            }
+          ]
+        },
+        {
+          "title": "В конце предложения",
+          "text": "С обычным глаголом nicht часто уходит в самый конец.",
+          "examples": [
+            {
+              "de": "Ich arbeite heute nicht.",
+              "tr": "Сегодня я не работаю."
+            }
+          ]
+        },
+        {
+          "title": "Перед местом и gern",
+          "text": "nicht стоит перед местом (in Berlin) и перед gern.",
+          "examples": [
+            {
+              "de": "Ich wohne nicht in Wien.",
+              "tr": "Я не живу в Вене."
+            },
+            {
+              "de": "Ich trinke nicht gern Kaffee.",
+              "tr": "Я не люблю кофе."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Заперечення nicht: де воно стоїть",
+      "points": [
+        {
+          "title": "Перед ознакою",
+          "text": "Після sein nicht стоїть перед прикметником.",
+          "examples": [
+            {
+              "de": "Ich bin nicht müde.",
+              "tr": "Я не втомився."
+            }
+          ]
+        },
+        {
+          "title": "У кінці речення",
+          "text": "Зі звичайним дієсловом nicht часто йде в самий кінець.",
+          "examples": [
+            {
+              "de": "Ich arbeite heute nicht.",
+              "tr": "Сьогодні я не працюю."
+            }
+          ]
+        },
+        {
+          "title": "Перед місцем і gern",
+          "text": "nicht стоїть перед місцем (in Berlin) і перед gern.",
+          "examples": [
+            {
+              "de": "Ich wohne nicht in Wien.",
+              "tr": "Я не живу у Відні."
+            },
+            {
+              "de": "Ich trinke nicht gern Kaffee.",
+              "tr": "Я не люблю каву."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Negation with nicht: where it goes",
+      "points": [
+        {
+          "title": "Before the adjective",
+          "text": "After sein, nicht goes before the adjective.",
+          "examples": [
+            {
+              "de": "Ich bin nicht müde.",
+              "tr": "I’m not tired."
+            }
+          ]
+        },
+        {
+          "title": "At the end of the sentence",
+          "text": "With a normal verb, nicht often goes to the very end.",
+          "examples": [
+            {
+              "de": "Ich arbeite heute nicht.",
+              "tr": "I’m not working today."
+            }
+          ]
+        },
+        {
+          "title": "Before a place and gern",
+          "text": "nicht goes before a place (in Berlin) and before gern.",
+          "examples": [
+            {
+              "de": "Ich wohne nicht in Wien.",
+              "tr": "I don’t live in Vienna."
+            },
+            {
+              "de": "Ich trinke nicht gern Kaffee.",
+              "tr": "I don’t like drinking coffee."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Przeczenie nicht: gdzie stoi",
+      "points": [
+        {
+          "title": "Przed cechą",
+          "text": "Po sein nicht stoi przed przymiotnikiem.",
+          "examples": [
+            {
+              "de": "Ich bin nicht müde.",
+              "tr": "Nie jestem zmęczony."
+            }
+          ]
+        },
+        {
+          "title": "Na końcu zdania",
+          "text": "Przy zwykłym czasowniku nicht często idzie na sam koniec.",
+          "examples": [
+            {
+              "de": "Ich arbeite heute nicht.",
+              "tr": "Dziś nie pracuję."
+            }
+          ]
+        },
+        {
+          "title": "Przed miejscem i gern",
+          "text": "nicht stoi przed miejscem (in Berlin) i przed gern.",
+          "examples": [
+            {
+              "de": "Ich wohne nicht in Wien.",
+              "tr": "Nie mieszkam w Wiedniu."
+            },
+            {
+              "de": "Ich trinke nicht gern Kaffee.",
+              "tr": "Nie lubię pić kawy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "La negación nicht: dónde va",
+      "points": [
+        {
+          "title": "Delante del adjetivo",
+          "text": "Después de sein, nicht va delante del adjetivo.",
+          "examples": [
+            {
+              "de": "Ich bin nicht müde.",
+              "tr": "No estoy cansado."
+            }
+          ]
+        },
+        {
+          "title": "Al final de la frase",
+          "text": "Con un verbo normal, nicht suele ir al final.",
+          "examples": [
+            {
+              "de": "Ich arbeite heute nicht.",
+              "tr": "Hoy no trabajo."
+            }
+          ]
+        },
+        {
+          "title": "Delante del lugar y de gern",
+          "text": "nicht va delante del lugar (in Berlin) y delante de gern.",
+          "examples": [
+            {
+              "de": "Ich wohne nicht in Wien.",
+              "tr": "No vivo en Viena."
+            },
+            {
+              "de": "Ich trinke nicht gern Kaffee.",
+              "tr": "No me gusta tomar café."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "La négation nicht : où la placer",
+      "points": [
+        {
+          "title": "Devant l’adjectif",
+          "text": "Après sein, nicht se place devant l’adjectif.",
+          "examples": [
+            {
+              "de": "Ich bin nicht müde.",
+              "tr": "Je ne suis pas fatigué."
+            }
+          ]
+        },
+        {
+          "title": "À la fin de la phrase",
+          "text": "Avec un verbe ordinaire, nicht va souvent tout à la fin.",
+          "examples": [
+            {
+              "de": "Ich arbeite heute nicht.",
+              "tr": "Aujourd’hui je ne travaille pas."
+            }
+          ]
+        },
+        {
+          "title": "Devant un lieu et gern",
+          "text": "nicht se place devant un lieu (in Berlin) et devant gern.",
+          "examples": [
+            {
+              "de": "Ich wohne nicht in Wien.",
+              "tr": "Je n’habite pas à Vienne."
+            },
+            {
+              "de": "Ich trinke nicht gern Kaffee.",
+              "tr": "Je n’aime pas boire de café."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "nicht ile olumsuzluk: nereye gelir",
+      "points": [
+        {
+          "title": "Sıfattan önce",
+          "text": "sein’dan sonra nicht sıfattan önce gelir.",
+          "examples": [
+            {
+              "de": "Ich bin nicht müde.",
+              "tr": "Yorgun değilim."
+            }
+          ]
+        },
+        {
+          "title": "Cümlenin sonunda",
+          "text": "Normal fiille nicht çoğu zaman en sona gider.",
+          "examples": [
+            {
+              "de": "Ich arbeite heute nicht.",
+              "tr": "Bugün çalışmıyorum."
+            }
+          ]
+        },
+        {
+          "title": "Yerden ve gern’den önce",
+          "text": "nicht yerden (in Berlin) ve gern’den önce gelir.",
+          "examples": [
+            {
+              "de": "Ich wohne nicht in Wien.",
+              "tr": "Viyana’da oturmuyorum."
+            },
+            {
+              "de": "Ich trinke nicht gern Kaffee.",
+              "tr": "Kahve içmeyi sevmem."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Negația nicht: unde stă",
+      "points": [
+        {
+          "title": "Înaintea adjectivului",
+          "text": "După sein, nicht stă înaintea adjectivului.",
+          "examples": [
+            {
+              "de": "Ich bin nicht müde.",
+              "tr": "Nu sunt obosit."
+            }
+          ]
+        },
+        {
+          "title": "La sfârșitul propoziției",
+          "text": "Cu un verb obișnuit, nicht merge des la final.",
+          "examples": [
+            {
+              "de": "Ich arbeite heute nicht.",
+              "tr": "Azi nu lucrez."
+            }
+          ]
+        },
+        {
+          "title": "Înaintea locului și a lui gern",
+          "text": "nicht stă înaintea locului (in Berlin) și înaintea lui gern.",
+          "examples": [
+            {
+              "de": "Ich wohne nicht in Wien.",
+              "tr": "Nu locuiesc la Viena."
+            },
+            {
+              "de": "Ich trinke nicht gern Kaffee.",
+              "tr": "Nu-mi place să beau cafea."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "nicht inkori: qayerda turadi",
+      "points": [
+        {
+          "title": "Sifatdan oldin",
+          "text": "sein dan keyin nicht sifatdan oldin turadi.",
+          "examples": [
+            {
+              "de": "Ich bin nicht müde.",
+              "tr": "Men charchamaganman."
+            }
+          ]
+        },
+        {
+          "title": "Gap oxirida",
+          "text": "Oddiy fe'l bilan nicht ko'pincha eng oxiriga o'tadi.",
+          "examples": [
+            {
+              "de": "Ich arbeite heute nicht.",
+              "tr": "Bugun ishlamayman."
+            }
+          ]
+        },
+        {
+          "title": "Joy va gern dan oldin",
+          "text": "nicht joydan (in Berlin) va gern dan oldin turadi.",
+          "examples": [
+            {
+              "de": "Ich wohne nicht in Wien.",
+              "tr": "Men Venada yashamayman."
+            },
+            {
+              "de": "Ich trinke nicht gern Kaffee.",
+              "tr": "Men qahva ichishni yoqtirmayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "nicht से नकार: कहाँ आता है",
+      "points": [
+        {
+          "title": "विशेषण से पहले",
+          "text": "sein के बाद nicht विशेषण से पहले आता है।",
+          "examples": [
+            {
+              "de": "Ich bin nicht müde.",
+              "tr": "मैं थका नहीं हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "वाक्य के अंत में",
+          "text": "सामान्य क्रिया के साथ nicht अक्सर बिल्कुल आखिर में जाता है।",
+          "examples": [
+            {
+              "de": "Ich arbeite heute nicht.",
+              "tr": "आज मैं काम नहीं कर रहा।"
+            }
+          ]
+        },
+        {
+          "title": "जगह और gern से पहले",
+          "text": "nicht जगह (in Berlin) और gern से पहले आता है।",
+          "examples": [
+            {
+              "de": "Ich wohne nicht in Wien.",
+              "tr": "मैं वियना में नहीं रहता।"
+            },
+            {
+              "de": "Ich trinke nicht gern Kaffee.",
+              "tr": "मुझे कॉफ़ी पीना पसंद नहीं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "النفي بـ nicht: أين يوضع",
+      "points": [
+        {
+          "title": "قبل الصفة",
+          "text": "بعد sein تأتي nicht قبل الصفة.",
+          "examples": [
+            {
+              "de": "Ich bin nicht müde.",
+              "tr": "لست متعباً."
+            }
+          ]
+        },
+        {
+          "title": "في آخر الجملة",
+          "text": "مع الفعل العادي تذهب nicht غالباً إلى آخر الجملة.",
+          "examples": [
+            {
+              "de": "Ich arbeite heute nicht.",
+              "tr": "لا أعمل اليوم."
+            }
+          ]
+        },
+        {
+          "title": "قبل المكان وقبل gern",
+          "text": "تأتي nicht قبل المكان (in Berlin) وقبل gern.",
+          "examples": [
+            {
+              "de": "Ich wohne nicht in Wien.",
+              "tr": "لا أسكن في فيينا."
+            },
+            {
+              "de": "Ich trinke nicht gern Kaffee.",
+              "tr": "لا أحب شرب القهوة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "question-gorge-five": {
+    "ru": {
+      "title": "kein: нет никакого",
+      "points": [
+        {
+          "title": "kein вместо ein",
+          "text": "kein отрицает предмет. Вместо ein говорим kein, вместо eine говорим keine.",
+          "examples": [
+            {
+              "de": "Das ist kein Tisch.",
+              "tr": "Это не стол."
+            },
+            {
+              "de": "Das ist keine Lampe.",
+              "tr": "Это не лампа."
+            }
+          ]
+        },
+        {
+          "title": "С haben: keinen",
+          "text": "После haben слово мужского рода меняется: einen Hund → keinen Hund. Средний и женский род не меняются.",
+          "examples": [
+            {
+              "de": "Wir haben keinen Hund.",
+              "tr": "У нас нет собаки."
+            },
+            {
+              "de": "Ich habe kein Auto.",
+              "tr": "У меня нет машины."
+            }
+          ]
+        },
+        {
+          "title": "Во множественном keine",
+          "text": "Во множественном числе всегда keine.",
+          "examples": [
+            {
+              "de": "Sie haben keine Kinder.",
+              "tr": "У них нет детей."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "kein: немає жодного",
+      "points": [
+        {
+          "title": "kein замість ein",
+          "text": "kein заперечує предмет. Замість ein кажемо kein, замість eine кажемо keine.",
+          "examples": [
+            {
+              "de": "Das ist kein Tisch.",
+              "tr": "Це не стіл."
+            },
+            {
+              "de": "Das ist keine Lampe.",
+              "tr": "Це не лампа."
+            }
+          ]
+        },
+        {
+          "title": "З haben: keinen",
+          "text": "Після haben слово чоловічого роду змінюється: einen Hund → keinen Hund. Середній і жіночий рід не змінюються.",
+          "examples": [
+            {
+              "de": "Wir haben keinen Hund.",
+              "tr": "У нас немає собаки."
+            },
+            {
+              "de": "Ich habe kein Auto.",
+              "tr": "У мене немає машини."
+            }
+          ]
+        },
+        {
+          "title": "У множині keine",
+          "text": "У множині завжди keine.",
+          "examples": [
+            {
+              "de": "Sie haben keine Kinder.",
+              "tr": "У них немає дітей."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "kein: no, not any",
+      "points": [
+        {
+          "title": "kein instead of ein",
+          "text": "kein negates a noun. Say kein instead of ein, keine instead of eine.",
+          "examples": [
+            {
+              "de": "Das ist kein Tisch.",
+              "tr": "This is not a table."
+            },
+            {
+              "de": "Das ist keine Lampe.",
+              "tr": "This is not a lamp."
+            }
+          ]
+        },
+        {
+          "title": "With haben: keinen",
+          "text": "After haben a masculine noun changes: einen Hund → keinen Hund. Feminine and neuter stay the same.",
+          "examples": [
+            {
+              "de": "Wir haben keinen Hund.",
+              "tr": "We don’t have a dog."
+            },
+            {
+              "de": "Ich habe kein Auto.",
+              "tr": "I don’t have a car."
+            }
+          ]
+        },
+        {
+          "title": "Plural: keine",
+          "text": "In the plural it is always keine.",
+          "examples": [
+            {
+              "de": "Sie haben keine Kinder.",
+              "tr": "They have no children."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "kein: żaden",
+      "points": [
+        {
+          "title": "kein zamiast ein",
+          "text": "kein zaprzecza przedmiotowi. Zamiast ein mówimy kein, zamiast eine keine.",
+          "examples": [
+            {
+              "de": "Das ist kein Tisch.",
+              "tr": "To nie jest stół."
+            },
+            {
+              "de": "Das ist keine Lampe.",
+              "tr": "To nie jest lampa."
+            }
+          ]
+        },
+        {
+          "title": "Z haben: keinen",
+          "text": "Po haben słowo rodzaju męskiego się zmienia: einen Hund → keinen Hund. Żeński i nijaki się nie zmieniają.",
+          "examples": [
+            {
+              "de": "Wir haben keinen Hund.",
+              "tr": "Nie mamy psa."
+            },
+            {
+              "de": "Ich habe kein Auto.",
+              "tr": "Nie mam samochodu."
+            }
+          ]
+        },
+        {
+          "title": "W liczbie mnogiej keine",
+          "text": "W liczbie mnogiej zawsze keine.",
+          "examples": [
+            {
+              "de": "Sie haben keine Kinder.",
+              "tr": "Nie mają dzieci."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "kein: ningún",
+      "points": [
+        {
+          "title": "kein en lugar de ein",
+          "text": "kein niega un sustantivo. En vez de ein se dice kein, en vez de eine, keine.",
+          "examples": [
+            {
+              "de": "Das ist kein Tisch.",
+              "tr": "Esto no es una mesa."
+            },
+            {
+              "de": "Das ist keine Lampe.",
+              "tr": "Esto no es una lámpara."
+            }
+          ]
+        },
+        {
+          "title": "Con haben: keinen",
+          "text": "Después de haben el masculino cambia: einen Hund → keinen Hund. Femenino y neutro no cambian.",
+          "examples": [
+            {
+              "de": "Wir haben keinen Hund.",
+              "tr": "No tenemos perro."
+            },
+            {
+              "de": "Ich habe kein Auto.",
+              "tr": "No tengo coche."
+            }
+          ]
+        },
+        {
+          "title": "En plural keine",
+          "text": "En plural siempre keine.",
+          "examples": [
+            {
+              "de": "Sie haben keine Kinder.",
+              "tr": "No tienen hijos."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "kein : pas de",
+      "points": [
+        {
+          "title": "kein à la place de ein",
+          "text": "kein nie un nom. On dit kein au lieu de ein, keine au lieu de eine.",
+          "examples": [
+            {
+              "de": "Das ist kein Tisch.",
+              "tr": "Ce n’est pas une table."
+            },
+            {
+              "de": "Das ist keine Lampe.",
+              "tr": "Ce n’est pas une lampe."
+            }
+          ]
+        },
+        {
+          "title": "Avec haben : keinen",
+          "text": "Après haben, le masculin change : einen Hund → keinen Hund. Le féminin et le neutre ne changent pas.",
+          "examples": [
+            {
+              "de": "Wir haben keinen Hund.",
+              "tr": "Nous n’avons pas de chien."
+            },
+            {
+              "de": "Ich habe kein Auto.",
+              "tr": "Je n’ai pas de voiture."
+            }
+          ]
+        },
+        {
+          "title": "Au pluriel keine",
+          "text": "Au pluriel, c’est toujours keine.",
+          "examples": [
+            {
+              "de": "Sie haben keine Kinder.",
+              "tr": "Ils n’ont pas d’enfants."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "kein: hiç yok",
+      "points": [
+        {
+          "title": "ein yerine kein",
+          "text": "kein ismi olumsuz yapar. ein yerine kein, eine yerine keine denir.",
+          "examples": [
+            {
+              "de": "Das ist kein Tisch.",
+              "tr": "Bu masa değil."
+            },
+            {
+              "de": "Das ist keine Lampe.",
+              "tr": "Bu lamba değil."
+            }
+          ]
+        },
+        {
+          "title": "haben ile: keinen",
+          "text": "haben’den sonra eril isim değişir: einen Hund → keinen Hund. Dişil ve nötr değişmez.",
+          "examples": [
+            {
+              "de": "Wir haben keinen Hund.",
+              "tr": "Köpeğimiz yok."
+            },
+            {
+              "de": "Ich habe kein Auto.",
+              "tr": "Arabam yok."
+            }
+          ]
+        },
+        {
+          "title": "Çoğulda keine",
+          "text": "Çoğulda her zaman keine.",
+          "examples": [
+            {
+              "de": "Sie haben keine Kinder.",
+              "tr": "Çocukları yok."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "kein: niciun",
+      "points": [
+        {
+          "title": "kein în loc de ein",
+          "text": "kein neagă un substantiv. În loc de ein spui kein, în loc de eine, keine.",
+          "examples": [
+            {
+              "de": "Das ist kein Tisch.",
+              "tr": "Aceasta nu este o masă."
+            },
+            {
+              "de": "Das ist keine Lampe.",
+              "tr": "Aceasta nu este o lampă."
+            }
+          ]
+        },
+        {
+          "title": "Cu haben: keinen",
+          "text": "După haben masculinul se schimbă: einen Hund → keinen Hund. Femininul și neutrul rămân la fel.",
+          "examples": [
+            {
+              "de": "Wir haben keinen Hund.",
+              "tr": "Nu avem câine."
+            },
+            {
+              "de": "Ich habe kein Auto.",
+              "tr": "Nu am mașină."
+            }
+          ]
+        },
+        {
+          "title": "La plural keine",
+          "text": "La plural mereu keine.",
+          "examples": [
+            {
+              "de": "Sie haben keine Kinder.",
+              "tr": "Nu au copii."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "kein: hech qanday yo'q",
+      "points": [
+        {
+          "title": "ein o‘rniga kein",
+          "text": "kein otni inkor qiladi. ein o'rniga kein, eine o'rniga keine.",
+          "examples": [
+            {
+              "de": "Das ist kein Tisch.",
+              "tr": "Bu stol emas."
+            },
+            {
+              "de": "Das ist keine Lampe.",
+              "tr": "Bu chiroq emas."
+            }
+          ]
+        },
+        {
+          "title": "haben bilan: keinen",
+          "text": "haben dan keyin erkak rodi o'zgaradi: einen Hund → keinen Hund. Ayol va o'rta rod o'zgarmaydi.",
+          "examples": [
+            {
+              "de": "Wir haben keinen Hund.",
+              "tr": "Bizda it yo'q."
+            },
+            {
+              "de": "Ich habe kein Auto.",
+              "tr": "Mening mashinam yo'q."
+            }
+          ]
+        },
+        {
+          "title": "Ko'plikda keine",
+          "text": "Ko'plikda doim keine.",
+          "examples": [
+            {
+              "de": "Sie haben keine Kinder.",
+              "tr": "Ularning farzandlari yo'q."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "kein: कोई नहीं",
+      "points": [
+        {
+          "title": "ein की जगह kein",
+          "text": "kein संज्ञा का नकार है। ein की जगह kein, eine की जगह keine।",
+          "examples": [
+            {
+              "de": "Das ist kein Tisch.",
+              "tr": "यह मेज़ नहीं है।"
+            },
+            {
+              "de": "Das ist keine Lampe.",
+              "tr": "यह लैंप नहीं है।"
+            }
+          ]
+        },
+        {
+          "title": "haben के साथ: keinen",
+          "text": "haben के बाद पुल्लिंग बदलता है: einen Hund → keinen Hund। स्त्रीलिंग और नपुंसकलिंग वैसे ही रहते हैं।",
+          "examples": [
+            {
+              "de": "Wir haben keinen Hund.",
+              "tr": "हमारे पास कुत्ता नहीं है।"
+            },
+            {
+              "de": "Ich habe kein Auto.",
+              "tr": "मेरे पास गाड़ी नहीं है।"
+            }
+          ]
+        },
+        {
+          "title": "बहुवचन में keine",
+          "text": "बहुवचन में हमेशा keine।",
+          "examples": [
+            {
+              "de": "Sie haben keine Kinder.",
+              "tr": "उनके बच्चे नहीं हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "kein: لا يوجد أي",
+      "points": [
+        {
+          "title": "kein بدل ein",
+          "text": "kein تنفي الاسم. نقول kein بدل ein، وkeine بدل eine.",
+          "examples": [
+            {
+              "de": "Das ist kein Tisch.",
+              "tr": "هذه ليست طاولة."
+            },
+            {
+              "de": "Das ist keine Lampe.",
+              "tr": "هذا ليس مصباحاً."
+            }
+          ]
+        },
+        {
+          "title": "مع haben: keinen",
+          "text": "بعد haben يتغير المذكر: einen Hund → keinen Hund. أما المؤنث والمحايد فلا يتغيران.",
+          "examples": [
+            {
+              "de": "Wir haben keinen Hund.",
+              "tr": "ليس عندنا كلب."
+            },
+            {
+              "de": "Ich habe kein Auto.",
+              "tr": "ليس عندي سيارة."
+            }
+          ]
+        },
+        {
+          "title": "في الجمع keine",
+          "text": "في الجمع دائماً keine.",
+          "examples": [
+            {
+              "de": "Sie haben keine Kinder.",
+              "tr": "ليس عندهم أطفال."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "question-gorge-six": {
+    "ru": {
+      "title": "nicht или kein? И Doch!",
+      "points": [
+        {
+          "title": "Как выбрать",
+          "text": "Существительное с ein или без артикля отрицаем через kein. Всё остальное через nicht: глагол, прилагательное, слово с der или mein.",
+          "examples": [
+            {
+              "de": "Ich habe kein Fahrrad.",
+              "tr": "У меня нет велосипеда."
+            },
+            {
+              "de": "Das ist nicht mein Fahrrad.",
+              "tr": "Это не мой велосипед."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "Если вопрос с отрицанием, а ответ «да», говорим не ja, а Doch!",
+          "examples": [
+            {
+              "de": "Hast du keine Zeit? Doch!",
+              "tr": "У тебя нет времени? Да нет же, есть!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "nicht чи kein? І Doch!",
+      "points": [
+        {
+          "title": "Як обрати",
+          "text": "Іменник з ein або без артикля заперечуємо через kein. Усе інше через nicht: дієслово, прикметник, слово з der чи mein.",
+          "examples": [
+            {
+              "de": "Ich habe kein Fahrrad.",
+              "tr": "У мене немає велосипеда."
+            },
+            {
+              "de": "Das ist nicht mein Fahrrad.",
+              "tr": "Це не мій велосипед."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "Якщо питання із запереченням, а відповідь «так», кажемо не ja, а Doch!",
+          "examples": [
+            {
+              "de": "Hast du keine Zeit? Doch!",
+              "tr": "У тебе немає часу? Та ні, є!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "nicht or kein? And Doch!",
+      "points": [
+        {
+          "title": "How to choose",
+          "text": "A noun with ein or with no article is negated with kein. Everything else with nicht: a verb, an adjective, a noun with der or mein.",
+          "examples": [
+            {
+              "de": "Ich habe kein Fahrrad.",
+              "tr": "I don’t have a bike."
+            },
+            {
+              "de": "Das ist nicht mein Fahrrad.",
+              "tr": "That’s not my bike."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "If the question is negative and your answer is \"yes\", say Doch! instead of ja.",
+          "examples": [
+            {
+              "de": "Hast du keine Zeit? Doch!",
+              "tr": "Don’t you have time? Yes, I do!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "nicht czy kein? I Doch!",
+      "points": [
+        {
+          "title": "Jak wybrać",
+          "text": "Rzeczownik z ein albo bez rodzajnika przeczymy przez kein. Wszystko inne przez nicht: czasownik, przymiotnik, słowo z der albo mein.",
+          "examples": [
+            {
+              "de": "Ich habe kein Fahrrad.",
+              "tr": "Nie mam roweru."
+            },
+            {
+              "de": "Das ist nicht mein Fahrrad.",
+              "tr": "To nie mój rower."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "Jeśli pytanie jest z przeczeniem, a odpowiedź „tak”, mówimy nie ja, tylko Doch!",
+          "examples": [
+            {
+              "de": "Hast du keine Zeit? Doch!",
+              "tr": "Nie masz czasu? Ależ mam!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿nicht o kein? Y Doch!",
+      "points": [
+        {
+          "title": "Cómo elegir",
+          "text": "Un sustantivo con ein o sin artículo se niega con kein. Todo lo demás con nicht: verbo, adjetivo, palabra con der o mein.",
+          "examples": [
+            {
+              "de": "Ich habe kein Fahrrad.",
+              "tr": "No tengo bicicleta."
+            },
+            {
+              "de": "Das ist nicht mein Fahrrad.",
+              "tr": "Esa no es mi bicicleta."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "Si la pregunta es negativa y la respuesta es \"sí\", se dice Doch! y no ja.",
+          "examples": [
+            {
+              "de": "Hast du keine Zeit? Doch!",
+              "tr": "¿No tienes tiempo? ¡Que sí!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "nicht ou kein ? Et Doch !",
+      "points": [
+        {
+          "title": "Comment choisir",
+          "text": "Un nom avec ein ou sans article se nie avec kein. Tout le reste avec nicht : un verbe, un adjectif, un nom avec der ou mein.",
+          "examples": [
+            {
+              "de": "Ich habe kein Fahrrad.",
+              "tr": "Je n’ai pas de vélo."
+            },
+            {
+              "de": "Das ist nicht mein Fahrrad.",
+              "tr": "Ce n’est pas mon vélo."
+            }
+          ]
+        },
+        {
+          "title": "Doch !",
+          "text": "Si la question est négative et que la réponse est « oui », on dit Doch ! et pas ja (comme « si ! » en français).",
+          "examples": [
+            {
+              "de": "Hast du keine Zeit? Doch!",
+              "tr": "Tu n’as pas le temps ? Si !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "nicht mi, kein mi? Ve Doch!",
+      "points": [
+        {
+          "title": "Nasıl seçilir",
+          "text": "ein’li ya da artikelsiz isim kein ile olumsuz olur. Geri kalan her şey nicht ile: fiil, sıfat, der ya da mein’li isim.",
+          "examples": [
+            {
+              "de": "Ich habe kein Fahrrad.",
+              "tr": "Bisikletim yok."
+            },
+            {
+              "de": "Das ist nicht mein Fahrrad.",
+              "tr": "Bu benim bisikletim değil."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "Soru olumsuzsa ve cevap \"evet\" ise ja değil Doch! denir.",
+          "examples": [
+            {
+              "de": "Hast du keine Zeit? Doch!",
+              "tr": "Vaktin yok mu? Var tabii!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "nicht sau kein? Și Doch!",
+      "points": [
+        {
+          "title": "Cum alegi",
+          "text": "Un substantiv cu ein sau fără articol se neagă cu kein. Tot restul cu nicht: verbul, adjectivul, cuvântul cu der sau mein.",
+          "examples": [
+            {
+              "de": "Ich habe kein Fahrrad.",
+              "tr": "Nu am bicicletă."
+            },
+            {
+              "de": "Das ist nicht mein Fahrrad.",
+              "tr": "Nu este bicicleta mea."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "Dacă întrebarea e negativă și răspunsul e „ba da”, spui Doch!, nu ja.",
+          "examples": [
+            {
+              "de": "Hast du keine Zeit? Doch!",
+              "tr": "Nu ai timp? Ba da!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "nicht yoki kein? Va Doch!",
+      "points": [
+        {
+          "title": "Qanday tanlash kerak",
+          "text": "ein li yoki artiklsiz ot kein bilan inkor qilinadi. Qolgan hammasi nicht bilan: fe'l, sifat, der yoki mein li so'z.",
+          "examples": [
+            {
+              "de": "Ich habe kein Fahrrad.",
+              "tr": "Mening velosipedim yo'q."
+            },
+            {
+              "de": "Das ist nicht mein Fahrrad.",
+              "tr": "Bu mening velosipedim emas."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "Savol inkor shaklida bo'lsa, javob esa \"ha\" bo'lsa, ja emas, Doch! deyiladi.",
+          "examples": [
+            {
+              "de": "Hast du keine Zeit? Doch!",
+              "tr": "Vaqting yo'qmi? Bor, albatta!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "nicht या kein? और Doch!",
+      "points": [
+        {
+          "title": "कैसे चुनें",
+          "text": "ein वाली या बिना आर्टिकल वाली संज्ञा का नकार kein से। बाकी सब nicht से: क्रिया, विशेषण, der या mein वाला शब्द।",
+          "examples": [
+            {
+              "de": "Ich habe kein Fahrrad.",
+              "tr": "मेरे पास साइकिल नहीं है।"
+            },
+            {
+              "de": "Das ist nicht mein Fahrrad.",
+              "tr": "यह मेरी साइकिल नहीं है।"
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "अगर सवाल नकारात्मक है और जवाब \"हाँ\" है, तो ja नहीं, Doch! कहते हैं।",
+          "examples": [
+            {
+              "de": "Hast du keine Zeit? Doch!",
+              "tr": "तुम्हारे पास समय नहीं है? है न!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "nicht أم kein؟ وDoch!",
+      "points": [
+        {
+          "title": "كيف تختار",
+          "text": "الاسم مع ein أو بدون أداة ننفيه بـ kein. وكل ما عدا ذلك بـ nicht: الفعل والصفة والاسم مع der أو mein.",
+          "examples": [
+            {
+              "de": "Ich habe kein Fahrrad.",
+              "tr": "ليس عندي دراجة."
+            },
+            {
+              "de": "Das ist nicht mein Fahrrad.",
+              "tr": "هذه ليست دراجتي."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "إذا كان السؤال منفياً والجواب \"بلى\" نقول Doch! وليس ja.",
+          "examples": [
+            {
+              "de": "Hast du keine Zeit? Doch!",
+              "tr": "أليس عندك وقت؟ بلى!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "question-gorge-seven": {
+    "ru": {
+      "title": "Практика: в гостях",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Задаём вопросы и отвечаем с nicht или kein, как в прошлых заданиях.",
+          "examples": [
+            {
+              "de": "Ist das deine Wohnung?",
+              "tr": "Это твоя квартира?"
+            },
+            {
+              "de": "Nein, wir haben keinen Balkon.",
+              "tr": "Нет, у нас нет балкона."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: у гостях",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Ставимо питання і відповідаємо з nicht чи kein, як у минулих завданнях.",
+          "examples": [
+            {
+              "de": "Ist das deine Wohnung?",
+              "tr": "Це твоя квартира?"
+            },
+            {
+              "de": "Nein, wir haben keinen Balkon.",
+              "tr": "Ні, у нас немає балкона."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: visiting a friend",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "Ask questions and answer with nicht or kein, like in the previous tasks.",
+          "examples": [
+            {
+              "de": "Ist das deine Wohnung?",
+              "tr": "Is this your flat?"
+            },
+            {
+              "de": "Nein, wir haben keinen Balkon.",
+              "tr": "No, we don’t have a balcony."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: w gościach",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Zadajemy pytania i odpowiadamy z nicht albo kein, jak w poprzednich zadaniach.",
+          "examples": [
+            {
+              "de": "Ist das deine Wohnung?",
+              "tr": "To twoje mieszkanie?"
+            },
+            {
+              "de": "Nein, wir haben keinen Balkon.",
+              "tr": "Nie, nie mamy balkonu."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: de visita",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Hacemos preguntas y respondemos con nicht o kein, como en las tareas anteriores.",
+          "examples": [
+            {
+              "de": "Ist das deine Wohnung?",
+              "tr": "¿Es este tu piso?"
+            },
+            {
+              "de": "Nein, wir haben keinen Balkon.",
+              "tr": "No, no tenemos balcón."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : en visite",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "On pose des questions et on répond avec nicht ou kein, comme dans les tâches précédentes.",
+          "examples": [
+            {
+              "de": "Ist das deine Wohnung?",
+              "tr": "C’est ton appartement ?"
+            },
+            {
+              "de": "Nein, wir haben keinen Balkon.",
+              "tr": "Non, nous n’avons pas de balcon."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: misafirlikte",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Önceki görevlerdeki gibi soru sorup nicht ya da kein ile cevap veriyoruz.",
+          "examples": [
+            {
+              "de": "Ist das deine Wohnung?",
+              "tr": "Bu senin dairen mi?"
+            },
+            {
+              "de": "Nein, wir haben keinen Balkon.",
+              "tr": "Hayır, balkonumuz yok."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: în vizită",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Punem întrebări și răspundem cu nicht sau kein, ca în sarcinile anterioare.",
+          "examples": [
+            {
+              "de": "Ist das deine Wohnung?",
+              "tr": "Acesta e apartamentul tău?"
+            },
+            {
+              "de": "Nein, wir haben keinen Balkon.",
+              "tr": "Nu, nu avem balcon."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: mehmonda",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Avvalgi topshiriqlardagidek savol beramiz va nicht yoki kein bilan javob beramiz.",
+          "examples": [
+            {
+              "de": "Ist das deine Wohnung?",
+              "tr": "Bu sening kvartirangmi?"
+            },
+            {
+              "de": "Nein, wir haben keinen Balkon.",
+              "tr": "Yo'q, bizda balkon yo'q."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: मेहमान बनकर",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "पिछले कार्यों की तरह सवाल पूछते हैं और nicht या kein से जवाब देते हैं।",
+          "examples": [
+            {
+              "de": "Ist das deine Wohnung?",
+              "tr": "क्या यह तुम्हारा फ़्लैट है?"
+            },
+            {
+              "de": "Nein, wir haben keinen Balkon.",
+              "tr": "नहीं, हमारे पास बालकनी नहीं है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: في زيارة",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "نطرح الأسئلة ونجيب بـ nicht أو kein كما في المهام السابقة.",
+          "examples": [
+            {
+              "de": "Ist das deine Wohnung?",
+              "tr": "هل هذه شقتك؟"
+            },
+            {
+              "de": "Nein, wir haben keinen Balkon.",
+              "tr": "لا، ليس عندنا شرفة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "question-gorge-eight": {
+    "ru": {
+      "title": "Практика: интервью",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Что любишь делать: глагол + gern. Не любишь: nicht gern.",
+          "examples": [
+            {
+              "de": "Was machst du gern?",
+              "tr": "Что ты любишь делать?"
+            },
+            {
+              "de": "Nein, ich koche nicht gern.",
+              "tr": "Нет, я не люблю готовить."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: інтерв’ю",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Що любиш робити: дієслово + gern. Не любиш: nicht gern.",
+          "examples": [
+            {
+              "de": "Was machst du gern?",
+              "tr": "Що ти любиш робити?"
+            },
+            {
+              "de": "Nein, ich koche nicht gern.",
+              "tr": "Ні, я не люблю готувати."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: an interview",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "What you like doing: verb + gern. What you don’t like: nicht gern.",
+          "examples": [
+            {
+              "de": "Was machst du gern?",
+              "tr": "What do you like doing?"
+            },
+            {
+              "de": "Nein, ich koche nicht gern.",
+              "tr": "No, I don’t like cooking."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: wywiad",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Co lubisz robić: czasownik + gern. Czego nie lubisz: nicht gern.",
+          "examples": [
+            {
+              "de": "Was machst du gern?",
+              "tr": "Co lubisz robić?"
+            },
+            {
+              "de": "Nein, ich koche nicht gern.",
+              "tr": "Nie, nie lubię gotować."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: una entrevista",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Lo que te gusta hacer: verbo + gern. Lo que no: nicht gern.",
+          "examples": [
+            {
+              "de": "Was machst du gern?",
+              "tr": "¿Qué te gusta hacer?"
+            },
+            {
+              "de": "Nein, ich koche nicht gern.",
+              "tr": "No, no me gusta cocinar."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : une interview",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "Ce que tu aimes faire : verbe + gern. Ce que tu n’aimes pas : nicht gern.",
+          "examples": [
+            {
+              "de": "Was machst du gern?",
+              "tr": "Qu’est-ce que tu aimes faire ?"
+            },
+            {
+              "de": "Nein, ich koche nicht gern.",
+              "tr": "Non, je n’aime pas cuisiner."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: röportaj",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Yapmayı sevdiğin şey: fiil + gern. Sevmediğin: nicht gern.",
+          "examples": [
+            {
+              "de": "Was machst du gern?",
+              "tr": "Ne yapmayı seversin?"
+            },
+            {
+              "de": "Nein, ich koche nicht gern.",
+              "tr": "Hayır, yemek yapmayı sevmem."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: interviu",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Ce îți place să faci: verb + gern. Ce nu-ți place: nicht gern.",
+          "examples": [
+            {
+              "de": "Was machst du gern?",
+              "tr": "Ce îți place să faci?"
+            },
+            {
+              "de": "Nein, ich koche nicht gern.",
+              "tr": "Nu, nu-mi place să gătesc."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: intervyu",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Nimani yaxshi ko'rasan: fe'l + gern. Yoqtirmasang: nicht gern.",
+          "examples": [
+            {
+              "de": "Was machst du gern?",
+              "tr": "Nima qilishni yaxshi ko'rasan?"
+            },
+            {
+              "de": "Nein, ich koche nicht gern.",
+              "tr": "Yo'q, ovqat pishirishni yoqtirmayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: साक्षात्कार",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "जो करना पसंद है: क्रिया + gern। जो पसंद नहीं: nicht gern।",
+          "examples": [
+            {
+              "de": "Was machst du gern?",
+              "tr": "तुम्हें क्या करना पसंद है?"
+            },
+            {
+              "de": "Nein, ich koche nicht gern.",
+              "tr": "नहीं, मुझे खाना बनाना पसंद नहीं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: مقابلة",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "ما تحب فعله: الفعل + gern. وما لا تحبه: nicht gern.",
+          "examples": [
+            {
+              "de": "Was machst du gern?",
+              "tr": "ماذا تحب أن تفعل؟"
+            },
+            {
+              "de": "Nein, ich koche nicht gern.",
+              "tr": "لا، لا أحب الطبخ."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "question-gorge-nine": {
+    "ru": {
+      "title": "Повторение: как часто?",
+      "points": [
+        {
+          "title": "Слова частоты",
+          "text": "immer (всегда), oft (часто), manchmal (иногда), nie (никогда). Стоят сразу после глагола.",
+          "examples": [
+            {
+              "de": "Er trinkt immer Tee mit Milch.",
+              "tr": "Он всегда пьёт чай с молоком."
+            },
+            {
+              "de": "Ich trinke nie Kaffee.",
+              "tr": "Я никогда не пью кофе."
+            }
+          ]
+        },
+        {
+          "title": "nie без второго «не»",
+          "text": "nie уже значит «никогда не». Второе nicht не нужно.",
+          "examples": []
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: як часто?",
+      "points": [
+        {
+          "title": "Слова частоти",
+          "text": "immer (завжди), oft (часто), manchmal (іноді), nie (ніколи). Стоять одразу після дієслова.",
+          "examples": [
+            {
+              "de": "Er trinkt immer Tee mit Milch.",
+              "tr": "Він завжди п’є чай з молоком."
+            },
+            {
+              "de": "Ich trinke nie Kaffee.",
+              "tr": "Я ніколи не п’ю каву."
+            }
+          ]
+        },
+        {
+          "title": "nie без другого «не»",
+          "text": "nie вже означає «ніколи не». Друге nicht не потрібне.",
+          "examples": []
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: how often?",
+      "points": [
+        {
+          "title": "Frequency words",
+          "text": "immer (always), oft (often), manchmal (sometimes), nie (never). They come right after the verb.",
+          "examples": [
+            {
+              "de": "Er trinkt immer Tee mit Milch.",
+              "tr": "He always drinks tea with milk."
+            },
+            {
+              "de": "Ich trinke nie Kaffee.",
+              "tr": "I never drink coffee."
+            }
+          ]
+        },
+        {
+          "title": "nie needs no second \"not\"",
+          "text": "nie already means \"never\". Don’t add nicht.",
+          "examples": []
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: jak często?",
+      "points": [
+        {
+          "title": "Słowa częstotliwości",
+          "text": "immer (zawsze), oft (często), manchmal (czasem), nie (nigdy). Stoją zaraz po czasowniku.",
+          "examples": [
+            {
+              "de": "Er trinkt immer Tee mit Milch.",
+              "tr": "On zawsze pije herbatę z mlekiem."
+            },
+            {
+              "de": "Ich trinke nie Kaffee.",
+              "tr": "Nigdy nie piję kawy."
+            }
+          ]
+        },
+        {
+          "title": "nie bez drugiego „nie”",
+          "text": "nie już znaczy „nigdy nie”. Drugie nicht nie jest potrzebne.",
+          "examples": []
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: ¿con qué frecuencia?",
+      "points": [
+        {
+          "title": "Palabras de frecuencia",
+          "text": "immer (siempre), oft (a menudo), manchmal (a veces), nie (nunca). Van justo después del verbo.",
+          "examples": [
+            {
+              "de": "Er trinkt immer Tee mit Milch.",
+              "tr": "Él siempre toma té con leche."
+            },
+            {
+              "de": "Ich trinke nie Kaffee.",
+              "tr": "Nunca tomo café."
+            }
+          ]
+        },
+        {
+          "title": "nie sin segundo \"no\"",
+          "text": "nie ya significa \"nunca\". No hace falta nicht.",
+          "examples": []
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : à quelle fréquence ?",
+      "points": [
+        {
+          "title": "Mots de fréquence",
+          "text": "immer (toujours), oft (souvent), manchmal (parfois), nie (jamais). Ils viennent juste après le verbe.",
+          "examples": [
+            {
+              "de": "Er trinkt immer Tee mit Milch.",
+              "tr": "Il boit toujours du thé au lait."
+            },
+            {
+              "de": "Ich trinke nie Kaffee.",
+              "tr": "Je ne bois jamais de café."
+            }
+          ]
+        },
+        {
+          "title": "nie sans deuxième négation",
+          "text": "nie veut déjà dire « ne ... jamais ». On n’ajoute pas nicht.",
+          "examples": []
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: ne sıklıkla?",
+      "points": [
+        {
+          "title": "Sıklık kelimeleri",
+          "text": "immer (her zaman), oft (sık), manchmal (bazen), nie (asla). Fiilden hemen sonra gelir.",
+          "examples": [
+            {
+              "de": "Er trinkt immer Tee mit Milch.",
+              "tr": "O hep sütlü çay içer."
+            },
+            {
+              "de": "Ich trinke nie Kaffee.",
+              "tr": "Hiç kahve içmem."
+            }
+          ]
+        },
+        {
+          "title": "nie ile ikinci olumsuzluk yok",
+          "text": "nie zaten \"asla\" demektir. Ayrıca nicht gerekmez.",
+          "examples": []
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: cât de des?",
+      "points": [
+        {
+          "title": "Cuvinte de frecvență",
+          "text": "immer (mereu), oft (des), manchmal (uneori), nie (niciodată). Vin imediat după verb.",
+          "examples": [
+            {
+              "de": "Er trinkt immer Tee mit Milch.",
+              "tr": "El bea mereu ceai cu lapte."
+            },
+            {
+              "de": "Ich trinke nie Kaffee.",
+              "tr": "Nu beau niciodată cafea."
+            }
+          ]
+        },
+        {
+          "title": "nie fără al doilea „nu”",
+          "text": "nie înseamnă deja „niciodată”. Nu mai adăugăm nicht.",
+          "examples": []
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: qanchalik tez-tez?",
+      "points": [
+        {
+          "title": "Takror so'zlari",
+          "text": "immer (doim), oft (tez-tez), manchmal (ba'zan), nie (hech qachon). Fe'ldan keyin darhol turadi.",
+          "examples": [
+            {
+              "de": "Er trinkt immer Tee mit Milch.",
+              "tr": "U doim sutli choy ichadi."
+            },
+            {
+              "de": "Ich trinke nie Kaffee.",
+              "tr": "Men hech qachon qahva ichmayman."
+            }
+          ]
+        },
+        {
+          "title": "nie bilan ikkinchi inkor kerak emas",
+          "text": "nie o'zi \"hech qachon\" degani. nicht qo'shilmaydi.",
+          "examples": []
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: कितनी बार?",
+      "points": [
+        {
+          "title": "आवृत्ति के शब्द",
+          "text": "immer (हमेशा), oft (अक्सर), manchmal (कभी-कभी), nie (कभी नहीं)। ये क्रिया के ठीक बाद आते हैं।",
+          "examples": [
+            {
+              "de": "Er trinkt immer Tee mit Milch.",
+              "tr": "वह हमेशा दूध वाली चाय पीता है।"
+            },
+            {
+              "de": "Ich trinke nie Kaffee.",
+              "tr": "मैं कभी कॉफ़ी नहीं पीता।"
+            }
+          ]
+        },
+        {
+          "title": "nie के साथ दूसरा \"नहीं\" नहीं",
+          "text": "nie का मतलब ही \"कभी नहीं\" है। nicht नहीं जोड़ते।",
+          "examples": []
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: كم مرة؟",
+      "points": [
+        {
+          "title": "كلمات التكرار",
+          "text": "immer (دائماً)، oft (غالباً)، manchmal (أحياناً)، nie (أبداً). تأتي مباشرة بعد الفعل.",
+          "examples": [
+            {
+              "de": "Er trinkt immer Tee mit Milch.",
+              "tr": "هو يشرب دائماً شاياً بالحليب."
+            },
+            {
+              "de": "Ich trinke nie Kaffee.",
+              "tr": "لا أشرب القهوة أبداً."
+            }
+          ]
+        },
+        {
+          "title": "nie بدون نفي ثانٍ",
+          "text": "nie تعني \"أبداً\" بنفسها. لا نضيف nicht.",
+          "examples": []
+        }
+      ]
+    }
+  },
+  "question-gorge-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "Порядок слов в вопросе",
+          "text": "Без вопросительного слова глагол первым. С вопросительным словом глагол вторым.",
+          "examples": [
+            {
+              "de": "Kommst du? Wo ist das Problem?",
+              "tr": "Ты придёшь? Где проблема?"
+            }
+          ]
+        },
+        {
+          "title": "nicht или kein",
+          "text": "kein для существительного с ein или без артикля, nicht для всего остального.",
+          "examples": [
+            {
+              "de": "Das ist kein Problem.",
+              "tr": "Это не проблема."
+            },
+            {
+              "de": "Ich habe leider keine Zeit.",
+              "tr": "К сожалению, у меня нет времени."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "На вопрос с отрицанием отвечаем «да» словом Doch!",
+          "examples": [
+            {
+              "de": "Hast du keinen Hunger? Doch, natürlich!",
+              "tr": "Ты не голоден? Конечно, голоден!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "Порядок слів у питанні",
+          "text": "Без питального слова дієслово першим. З питальним словом дієслово другим.",
+          "examples": [
+            {
+              "de": "Kommst du? Wo ist das Problem?",
+              "tr": "Ти прийдеш? Де проблема?"
+            }
+          ]
+        },
+        {
+          "title": "nicht чи kein",
+          "text": "kein для іменника з ein або без артикля, nicht для всього іншого.",
+          "examples": [
+            {
+              "de": "Das ist kein Problem.",
+              "tr": "Це не проблема."
+            },
+            {
+              "de": "Ich habe leider keine Zeit.",
+              "tr": "На жаль, у мене немає часу."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "На питання із запереченням відповідаємо «так» словом Doch!",
+          "examples": [
+            {
+              "de": "Hast du keinen Hunger? Doch, natürlich!",
+              "tr": "Ти не голодний? Звісно, голодний!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "Word order in questions",
+          "text": "Without a question word the verb is first. With a question word the verb is second.",
+          "examples": [
+            {
+              "de": "Kommst du? Wo ist das Problem?",
+              "tr": "Are you coming? Where is the problem?"
+            }
+          ]
+        },
+        {
+          "title": "nicht or kein",
+          "text": "kein for a noun with ein or no article, nicht for everything else.",
+          "examples": [
+            {
+              "de": "Das ist kein Problem.",
+              "tr": "That’s no problem."
+            },
+            {
+              "de": "Ich habe leider keine Zeit.",
+              "tr": "Unfortunately I have no time."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "Answer \"yes\" to a negative question with Doch!",
+          "examples": [
+            {
+              "de": "Hast du keinen Hunger? Doch, natürlich!",
+              "tr": "Aren’t you hungry? Of course I am!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "Szyk w pytaniu",
+          "text": "Bez słowa pytającego czasownik pierwszy. Ze słowem pytającym czasownik drugi.",
+          "examples": [
+            {
+              "de": "Kommst du? Wo ist das Problem?",
+              "tr": "Przyjdziesz? Gdzie jest problem?"
+            }
+          ]
+        },
+        {
+          "title": "nicht czy kein",
+          "text": "kein dla rzeczownika z ein albo bez rodzajnika, nicht dla wszystkiego innego.",
+          "examples": [
+            {
+              "de": "Das ist kein Problem.",
+              "tr": "To żaden problem."
+            },
+            {
+              "de": "Ich habe leider keine Zeit.",
+              "tr": "Niestety nie mam czasu."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "Na pytanie z przeczeniem odpowiadamy „tak” słowem Doch!",
+          "examples": [
+            {
+              "de": "Hast du keinen Hunger? Doch, natürlich!",
+              "tr": "Nie jesteś głodny? Ależ oczywiście!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "Orden en la pregunta",
+          "text": "Sin palabra interrogativa, el verbo primero. Con palabra interrogativa, el verbo segundo.",
+          "examples": [
+            {
+              "de": "Kommst du? Wo ist das Problem?",
+              "tr": "¿Vienes? ¿Dónde está el problema?"
+            }
+          ]
+        },
+        {
+          "title": "nicht o kein",
+          "text": "kein para un sustantivo con ein o sin artículo, nicht para todo lo demás.",
+          "examples": [
+            {
+              "de": "Das ist kein Problem.",
+              "tr": "No es ningún problema."
+            },
+            {
+              "de": "Ich habe leider keine Zeit.",
+              "tr": "Por desgracia no tengo tiempo."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "A una pregunta negativa se responde \"sí\" con Doch!",
+          "examples": [
+            {
+              "de": "Hast du keinen Hunger? Doch, natürlich!",
+              "tr": "¿No tienes hambre? ¡Claro que sí!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "Ordre dans la question",
+          "text": "Sans mot interrogatif, le verbe en premier. Avec un mot interrogatif, le verbe en deuxième.",
+          "examples": [
+            {
+              "de": "Kommst du? Wo ist das Problem?",
+              "tr": "Tu viens ? Où est le problème ?"
+            }
+          ]
+        },
+        {
+          "title": "nicht ou kein",
+          "text": "kein pour un nom avec ein ou sans article, nicht pour tout le reste.",
+          "examples": [
+            {
+              "de": "Das ist kein Problem.",
+              "tr": "Ce n’est pas un problème."
+            },
+            {
+              "de": "Ich habe leider keine Zeit.",
+              "tr": "Malheureusement, je n’ai pas le temps."
+            }
+          ]
+        },
+        {
+          "title": "Doch !",
+          "text": "À une question négative, on répond « oui » par Doch !",
+          "examples": [
+            {
+              "de": "Hast du keinen Hunger? Doch, natürlich!",
+              "tr": "Tu n’as pas faim ? Si, bien sûr !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "Soruda kelime sırası",
+          "text": "Soru kelimesi yoksa fiil başta. Soru kelimesi varsa fiil ikinci.",
+          "examples": [
+            {
+              "de": "Kommst du? Wo ist das Problem?",
+              "tr": "Geliyor musun? Sorun nerede?"
+            }
+          ]
+        },
+        {
+          "title": "nicht mi, kein mi",
+          "text": "ein’li ya da artikelsiz isim için kein, geri kalan her şey için nicht.",
+          "examples": [
+            {
+              "de": "Das ist kein Problem.",
+              "tr": "Sorun değil."
+            },
+            {
+              "de": "Ich habe leider keine Zeit.",
+              "tr": "Maalesef vaktim yok."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "Olumsuz soruya \"evet\" cevabı Doch! ile verilir.",
+          "examples": [
+            {
+              "de": "Hast du keinen Hunger? Doch, natürlich!",
+              "tr": "Aç değil misin? Tabii ki açım!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "Ordinea în întrebare",
+          "text": "Fără cuvânt interogativ, verbul primul. Cu cuvânt interogativ, verbul al doilea.",
+          "examples": [
+            {
+              "de": "Kommst du? Wo ist das Problem?",
+              "tr": "Vii? Unde e problema?"
+            }
+          ]
+        },
+        {
+          "title": "nicht sau kein",
+          "text": "kein pentru substantiv cu ein sau fără articol, nicht pentru restul.",
+          "examples": [
+            {
+              "de": "Das ist kein Problem.",
+              "tr": "Nu e nicio problemă."
+            },
+            {
+              "de": "Ich habe leider keine Zeit.",
+              "tr": "Din păcate nu am timp."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "La o întrebare negativă răspunzi „ba da” cu Doch!",
+          "examples": [
+            {
+              "de": "Hast du keinen Hunger? Doch, natürlich!",
+              "tr": "Nu ți-e foame? Ba da, sigur!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "Savolda so'z tartibi",
+          "text": "Savol so'zisiz fe'l birinchi. Savol so'zi bilan fe'l ikkinchi.",
+          "examples": [
+            {
+              "de": "Kommst du? Wo ist das Problem?",
+              "tr": "Kelasanmi? Muammo qayerda?"
+            }
+          ]
+        },
+        {
+          "title": "nicht yoki kein",
+          "text": "ein li yoki artiklsiz ot uchun kein, qolgan hammasi uchun nicht.",
+          "examples": [
+            {
+              "de": "Das ist kein Problem.",
+              "tr": "Bu muammo emas."
+            },
+            {
+              "de": "Ich habe leider keine Zeit.",
+              "tr": "Afsuski, vaqtim yo'q."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "Inkor savolga \"ha\" javobi Doch! bilan beriladi.",
+          "examples": [
+            {
+              "de": "Hast du keinen Hunger? Doch, natürlich!",
+              "tr": "Qorning och emasmi? Albatta och!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "सवाल में शब्द क्रम",
+          "text": "प्रश्नवाचक शब्द के बिना क्रिया पहले। प्रश्नवाचक शब्द के साथ क्रिया दूसरे स्थान पर।",
+          "examples": [
+            {
+              "de": "Kommst du? Wo ist das Problem?",
+              "tr": "क्या तुम आओगे? समस्या कहाँ है?"
+            }
+          ]
+        },
+        {
+          "title": "nicht या kein",
+          "text": "ein वाली या बिना आर्टिकल वाली संज्ञा के लिए kein, बाकी सबके लिए nicht।",
+          "examples": [
+            {
+              "de": "Das ist kein Problem.",
+              "tr": "यह कोई समस्या नहीं है।"
+            },
+            {
+              "de": "Ich habe leider keine Zeit.",
+              "tr": "माफ़ करना, मेरे पास समय नहीं है।"
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "नकारात्मक सवाल का \"हाँ\" वाला जवाब Doch! से देते हैं।",
+          "examples": [
+            {
+              "de": "Hast du keinen Hunger? Doch, natürlich!",
+              "tr": "तुम्हें भूख नहीं है? बिल्कुल है!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "ترتيب السؤال",
+          "text": "بدون أداة استفهام يأتي الفعل أولاً. ومع أداة الاستفهام يأتي الفعل ثانياً.",
+          "examples": [
+            {
+              "de": "Kommst du? Wo ist das Problem?",
+              "tr": "هل ستأتي؟ أين المشكلة؟"
+            }
+          ]
+        },
+        {
+          "title": "nicht أم kein",
+          "text": "kein للاسم مع ein أو بدون أداة، وnicht لكل ما عدا ذلك.",
+          "examples": [
+            {
+              "de": "Das ist kein Problem.",
+              "tr": "هذه ليست مشكلة."
+            },
+            {
+              "de": "Ich habe leider keine Zeit.",
+              "tr": "للأسف ليس عندي وقت."
+            }
+          ]
+        },
+        {
+          "title": "Doch!",
+          "text": "نجيب بـ \"بلى\" عن السؤال المنفي بكلمة Doch!",
+          "examples": [
+            {
+              "de": "Hast du keinen Hunger? Doch, natürlich!",
+              "tr": "ألست جائعاً؟ بلى، طبعاً!"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

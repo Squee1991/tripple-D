@@ -1,0 +1,3850 @@
+{
+  "meet-meadow-one": {
+    "ru": {
+      "title": "Глагол sein: ich bin, du bist, Sie sind",
+      "points": [
+        {
+          "title": "sein нельзя пропускать",
+          "text": "По-русски говорят «я Анна», а по-немецки глагол нужен всегда: Ich bin Anna. Формы: ich bin, du bist, Sie sind.",
+          "examples": [
+            {
+              "de": "Ich bin Anna.",
+              "tr": "Я Анна."
+            },
+            {
+              "de": "Du bist nett.",
+              "tr": "Ты милый."
+            },
+            {
+              "de": "Sie sind Herr Weber.",
+              "tr": "Вы господин Вебер."
+            }
+          ]
+        },
+        {
+          "title": "Вопрос: глагол первым",
+          "text": "В вопросе без вопросительного слова глагол ставим на первое место.",
+          "examples": [
+            {
+              "de": "Bist du Max?",
+              "tr": "Ты Макс?"
+            },
+            {
+              "de": "Sind Sie aus Österreich?",
+              "tr": "Вы из Австрии?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Дієслово sein: ich bin, du bist, Sie sind",
+      "points": [
+        {
+          "title": "sein не можна пропускати",
+          "text": "Українською кажуть «я Анна», а німецькою дієслово потрібне завжди: Ich bin Anna. Форми: ich bin, du bist, Sie sind.",
+          "examples": [
+            {
+              "de": "Ich bin Anna.",
+              "tr": "Я Анна."
+            },
+            {
+              "de": "Du bist nett.",
+              "tr": "Ти милий."
+            },
+            {
+              "de": "Sie sind Herr Weber.",
+              "tr": "Ви пан Вебер."
+            }
+          ]
+        },
+        {
+          "title": "Питання: дієслово першим",
+          "text": "У питанні без питального слова дієслово ставимо на перше місце.",
+          "examples": [
+            {
+              "de": "Bist du Max?",
+              "tr": "Ти Макс?"
+            },
+            {
+              "de": "Sind Sie aus Österreich?",
+              "tr": "Ви з Австрії?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The verb sein: ich bin, du bist, Sie sind",
+      "points": [
+        {
+          "title": "Never drop sein",
+          "text": "In German the verb is always needed: Ich bin Anna. Forms: ich bin, du bist, Sie sind.",
+          "examples": [
+            {
+              "de": "Ich bin Anna.",
+              "tr": "I am Anna."
+            },
+            {
+              "de": "Du bist nett.",
+              "tr": "You are nice."
+            },
+            {
+              "de": "Sie sind Herr Weber.",
+              "tr": "You are Mr Weber."
+            }
+          ]
+        },
+        {
+          "title": "Questions: verb first",
+          "text": "In a question without a question word, the verb goes first.",
+          "examples": [
+            {
+              "de": "Bist du Max?",
+              "tr": "Are you Max?"
+            },
+            {
+              "de": "Sind Sie aus Österreich?",
+              "tr": "Are you from Austria?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Czasownik sein: ich bin, du bist, Sie sind",
+      "points": [
+        {
+          "title": "sein nie można pominąć",
+          "text": "Po niemiecku czasownik jest zawsze potrzebny: Ich bin Anna. Formy: ich bin, du bist, Sie sind.",
+          "examples": [
+            {
+              "de": "Ich bin Anna.",
+              "tr": "Jestem Anna."
+            },
+            {
+              "de": "Du bist nett.",
+              "tr": "Jesteś miły."
+            },
+            {
+              "de": "Sie sind Herr Weber.",
+              "tr": "Pan jest panem Weberem."
+            }
+          ]
+        },
+        {
+          "title": "Pytanie: czasownik pierwszy",
+          "text": "W pytaniu bez słowa pytającego czasownik stawiamy na pierwszym miejscu.",
+          "examples": [
+            {
+              "de": "Bist du Max?",
+              "tr": "Jesteś Max?"
+            },
+            {
+              "de": "Sind Sie aus Österreich?",
+              "tr": "Czy pan jest z Austrii?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "El verbo sein: ich bin, du bist, Sie sind",
+      "points": [
+        {
+          "title": "sein nunca se omite",
+          "text": "En alemán el verbo siempre es necesario: Ich bin Anna. Formas: ich bin, du bist, Sie sind.",
+          "examples": [
+            {
+              "de": "Ich bin Anna.",
+              "tr": "Soy Anna."
+            },
+            {
+              "de": "Du bist nett.",
+              "tr": "Eres simpático."
+            },
+            {
+              "de": "Sie sind Herr Weber.",
+              "tr": "Usted es el señor Weber."
+            }
+          ]
+        },
+        {
+          "title": "Pregunta: el verbo primero",
+          "text": "En una pregunta sin palabra interrogativa, el verbo va primero.",
+          "examples": [
+            {
+              "de": "Bist du Max?",
+              "tr": "¿Eres Max?"
+            },
+            {
+              "de": "Sind Sie aus Österreich?",
+              "tr": "¿Es usted de Austria?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le verbe sein : ich bin, du bist, Sie sind",
+      "points": [
+        {
+          "title": "On ne supprime jamais sein",
+          "text": "En allemand le verbe est toujours nécessaire : Ich bin Anna. Formes : ich bin, du bist, Sie sind.",
+          "examples": [
+            {
+              "de": "Ich bin Anna.",
+              "tr": "Je suis Anna."
+            },
+            {
+              "de": "Du bist nett.",
+              "tr": "Tu es gentil."
+            },
+            {
+              "de": "Sie sind Herr Weber.",
+              "tr": "Vous êtes Monsieur Weber."
+            }
+          ]
+        },
+        {
+          "title": "Question : le verbe en premier",
+          "text": "Dans une question sans mot interrogatif, le verbe se met en première position.",
+          "examples": [
+            {
+              "de": "Bist du Max?",
+              "tr": "Tu es Max ?"
+            },
+            {
+              "de": "Sind Sie aus Österreich?",
+              "tr": "Vous venez d’Autriche ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "sein fiili: ich bin, du bist, Sie sind",
+      "points": [
+        {
+          "title": "sein atlanmaz",
+          "text": "Türkçede \"Ben Anna’yım\" denir, Almancada fiil her zaman gerekir: Ich bin Anna. Biçimler: ich bin, du bist, Sie sind.",
+          "examples": [
+            {
+              "de": "Ich bin Anna.",
+              "tr": "Ben Anna’yım."
+            },
+            {
+              "de": "Du bist nett.",
+              "tr": "Sen naziksin."
+            },
+            {
+              "de": "Sie sind Herr Weber.",
+              "tr": "Siz Bay Weber’siniz."
+            }
+          ]
+        },
+        {
+          "title": "Soru: fiil başta",
+          "text": "Soru kelimesi olmayan soruda fiil en başa gelir.",
+          "examples": [
+            {
+              "de": "Bist du Max?",
+              "tr": "Sen Max mısın?"
+            },
+            {
+              "de": "Sind Sie aus Österreich?",
+              "tr": "Avusturyalı mısınız?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Verbul sein: ich bin, du bist, Sie sind",
+      "points": [
+        {
+          "title": "sein nu se omite",
+          "text": "În germană verbul este mereu necesar: Ich bin Anna. Forme: ich bin, du bist, Sie sind.",
+          "examples": [
+            {
+              "de": "Ich bin Anna.",
+              "tr": "Sunt Anna."
+            },
+            {
+              "de": "Du bist nett.",
+              "tr": "Ești drăguț."
+            },
+            {
+              "de": "Sie sind Herr Weber.",
+              "tr": "Sunteți domnul Weber."
+            }
+          ]
+        },
+        {
+          "title": "Întrebarea: verbul primul",
+          "text": "Într-o întrebare fără cuvânt interogativ, verbul vine primul.",
+          "examples": [
+            {
+              "de": "Bist du Max?",
+              "tr": "Tu ești Max?"
+            },
+            {
+              "de": "Sind Sie aus Österreich?",
+              "tr": "Sunteți din Austria?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "sein fe'li: ich bin, du bist, Sie sind",
+      "points": [
+        {
+          "title": "sein tushirib qoldirilmaydi",
+          "text": "O'zbekchada \"Men Anna\" deyiladi, nemischa fe'l doim kerak: Ich bin Anna. Shakllar: ich bin, du bist, Sie sind.",
+          "examples": [
+            {
+              "de": "Ich bin Anna.",
+              "tr": "Men Annaman."
+            },
+            {
+              "de": "Du bist nett.",
+              "tr": "Sen yoqimlisan."
+            },
+            {
+              "de": "Sie sind Herr Weber.",
+              "tr": "Siz janob Webersiz."
+            }
+          ]
+        },
+        {
+          "title": "Savol: fe'l birinchi",
+          "text": "Savol so'zi bo'lmagan savolda fe'l birinchi o'ringa qo'yiladi.",
+          "examples": [
+            {
+              "de": "Bist du Max?",
+              "tr": "Sen Maxmisan?"
+            },
+            {
+              "de": "Sind Sie aus Österreich?",
+              "tr": "Siz Avstriyadanmisiz?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "क्रिया sein: ich bin, du bist, Sie sind",
+      "points": [
+        {
+          "title": "sein छोड़ा नहीं जाता",
+          "text": "जर्मन में क्रिया हमेशा चाहिए: Ich bin Anna. रूप: ich bin, du bist, Sie sind।",
+          "examples": [
+            {
+              "de": "Ich bin Anna.",
+              "tr": "मैं अन्ना हूँ।"
+            },
+            {
+              "de": "Du bist nett.",
+              "tr": "तुम अच्छे हो।"
+            },
+            {
+              "de": "Sie sind Herr Weber.",
+              "tr": "आप श्रीमान वेबर हैं।"
+            }
+          ]
+        },
+        {
+          "title": "सवाल: क्रिया पहले",
+          "text": "बिना प्रश्नवाचक शब्द वाले सवाल में क्रिया सबसे पहले आती है।",
+          "examples": [
+            {
+              "de": "Bist du Max?",
+              "tr": "क्या तुम मैक्स हो?"
+            },
+            {
+              "de": "Sind Sie aus Österreich?",
+              "tr": "क्या आप ऑस्ट्रिया से हैं?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الفعل sein: ich bin، du bist، Sie sind",
+      "points": [
+        {
+          "title": "لا يُحذف الفعل sein",
+          "text": "بالعربية نقول \"أنا آنا\"، أما بالألمانية فالفعل ضروري دائماً: Ich bin Anna. الصيغ: ich bin، du bist، Sie sind.",
+          "examples": [
+            {
+              "de": "Ich bin Anna.",
+              "tr": "أنا آنا."
+            },
+            {
+              "de": "Du bist nett.",
+              "tr": "أنت لطيف."
+            },
+            {
+              "de": "Sie sind Herr Weber.",
+              "tr": "أنت السيد فيبر."
+            }
+          ]
+        },
+        {
+          "title": "السؤال: الفعل أولاً",
+          "text": "في السؤال بدون أداة استفهام يأتي الفعل في أول الجملة.",
+          "examples": [
+            {
+              "de": "Bist du Max?",
+              "tr": "هل أنت ماكس؟"
+            },
+            {
+              "de": "Sind Sie aus Österreich?",
+              "tr": "هل أنت من النمسا؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meet-meadow-two": {
+    "ru": {
+      "title": "Он, она, оно: er, sie, es",
+      "points": [
+        {
+          "title": "Глагол ist",
+          "text": "С er, sie, es глагол sein всегда ist.",
+          "examples": [
+            {
+              "de": "Er ist Arzt.",
+              "tr": "Он врач."
+            },
+            {
+              "de": "Sie ist sehr nett.",
+              "tr": "Она очень милая."
+            }
+          ]
+        },
+        {
+          "title": "Местоимение по роду слова",
+          "text": "Слово с der заменяем на er, с die на sie, с das на es. Так и с вещами: der Kaffee это er, хотя по-русски «он» тут случайно совпал.",
+          "examples": [
+            {
+              "de": "der Kaffee → Er ist heiß.",
+              "tr": "Кофе горячий."
+            },
+            {
+              "de": "das Kind → Es ist nett.",
+              "tr": "Ребёнок милый."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Він, вона, воно: er, sie, es",
+      "points": [
+        {
+          "title": "Дієслово ist",
+          "text": "З er, sie, es дієслово sein завжди ist.",
+          "examples": [
+            {
+              "de": "Er ist Arzt.",
+              "tr": "Він лікар."
+            },
+            {
+              "de": "Sie ist sehr nett.",
+              "tr": "Вона дуже мила."
+            }
+          ]
+        },
+        {
+          "title": "Займенник за родом слова",
+          "text": "Слово з der замінюємо на er, з die на sie, з das на es. Так само з речами: der Kaffee це er.",
+          "examples": [
+            {
+              "de": "der Kaffee → Er ist heiß.",
+              "tr": "Кава гаряча."
+            },
+            {
+              "de": "das Kind → Es ist nett.",
+              "tr": "Дитина мила."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "He, she, it: er, sie, es",
+      "points": [
+        {
+          "title": "The verb ist",
+          "text": "With er, sie, es the verb sein is always ist.",
+          "examples": [
+            {
+              "de": "Er ist Arzt.",
+              "tr": "He is a doctor."
+            },
+            {
+              "de": "Sie ist sehr nett.",
+              "tr": "She is very nice."
+            }
+          ]
+        },
+        {
+          "title": "The pronoun follows the gender",
+          "text": "A der word becomes er, a die word becomes sie, a das word becomes es. Things too: der Kaffee is er, not \"it\".",
+          "examples": [
+            {
+              "de": "der Kaffee → Er ist heiß.",
+              "tr": "The coffee is hot."
+            },
+            {
+              "de": "das Kind → Es ist nett.",
+              "tr": "The child is nice."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "On, ona, ono: er, sie, es",
+      "points": [
+        {
+          "title": "Czasownik ist",
+          "text": "Z er, sie, es czasownik sein to zawsze ist.",
+          "examples": [
+            {
+              "de": "Er ist Arzt.",
+              "tr": "On jest lekarzem."
+            },
+            {
+              "de": "Sie ist sehr nett.",
+              "tr": "Ona jest bardzo miła."
+            }
+          ]
+        },
+        {
+          "title": "Zaimek według rodzaju",
+          "text": "Słowo z der zastępujemy er, z die sie, z das es. Tak samo z rzeczami: der Kaffee to er.",
+          "examples": [
+            {
+              "de": "der Kaffee → Er ist heiß.",
+              "tr": "Kawa jest gorąca."
+            },
+            {
+              "de": "das Kind → Es ist nett.",
+              "tr": "Dziecko jest miłe."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Él, ella, ello: er, sie, es",
+      "points": [
+        {
+          "title": "El verbo ist",
+          "text": "Con er, sie, es el verbo sein siempre es ist.",
+          "examples": [
+            {
+              "de": "Er ist Arzt.",
+              "tr": "Él es médico."
+            },
+            {
+              "de": "Sie ist sehr nett.",
+              "tr": "Ella es muy simpática."
+            }
+          ]
+        },
+        {
+          "title": "El pronombre sigue el género",
+          "text": "Una palabra con der se cambia por er, con die por sie, con das por es. También las cosas: der Kaffee es er.",
+          "examples": [
+            {
+              "de": "der Kaffee → Er ist heiß.",
+              "tr": "El café está caliente."
+            },
+            {
+              "de": "das Kind → Es ist nett.",
+              "tr": "El niño es simpático."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Il, elle : er, sie, es",
+      "points": [
+        {
+          "title": "Le verbe ist",
+          "text": "Avec er, sie, es le verbe sein est toujours ist.",
+          "examples": [
+            {
+              "de": "Er ist Arzt.",
+              "tr": "Il est médecin."
+            },
+            {
+              "de": "Sie ist sehr nett.",
+              "tr": "Elle est très gentille."
+            }
+          ]
+        },
+        {
+          "title": "Le pronom suit le genre",
+          "text": "Un mot en der devient er, en die devient sie, en das devient es. Même les objets : der Kaffee, c’est er.",
+          "examples": [
+            {
+              "de": "der Kaffee → Er ist heiß.",
+              "tr": "Le café est chaud."
+            },
+            {
+              "de": "das Kind → Es ist nett.",
+              "tr": "L’enfant est gentil."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "O: er, sie, es",
+      "points": [
+        {
+          "title": "ist fiili",
+          "text": "er, sie, es ile sein fiili her zaman ist olur.",
+          "examples": [
+            {
+              "de": "Er ist Arzt.",
+              "tr": "O doktor."
+            },
+            {
+              "de": "Sie ist sehr nett.",
+              "tr": "O çok nazik."
+            }
+          ]
+        },
+        {
+          "title": "Zamir cinsiyete göre",
+          "text": "der’li kelime er olur, die’li sie, das’lı es. Eşyalar da öyle: der Kaffee için er denir.",
+          "examples": [
+            {
+              "de": "der Kaffee → Er ist heiß.",
+              "tr": "Kahve sıcak."
+            },
+            {
+              "de": "das Kind → Es ist nett.",
+              "tr": "Çocuk tatlı."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "El, ea: er, sie, es",
+      "points": [
+        {
+          "title": "Verbul ist",
+          "text": "Cu er, sie, es verbul sein este mereu ist.",
+          "examples": [
+            {
+              "de": "Er ist Arzt.",
+              "tr": "El este medic."
+            },
+            {
+              "de": "Sie ist sehr nett.",
+              "tr": "Ea este foarte drăguță."
+            }
+          ]
+        },
+        {
+          "title": "Pronumele după gen",
+          "text": "Un cuvânt cu der devine er, cu die devine sie, cu das devine es. La fel la obiecte: der Kaffee este er.",
+          "examples": [
+            {
+              "de": "der Kaffee → Er ist heiß.",
+              "tr": "Cafeaua este fierbinte."
+            },
+            {
+              "de": "das Kind → Es ist nett.",
+              "tr": "Copilul este drăguț."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "U: er, sie, es",
+      "points": [
+        {
+          "title": "ist fe'li",
+          "text": "er, sie, es bilan sein fe'li doim ist bo'ladi.",
+          "examples": [
+            {
+              "de": "Er ist Arzt.",
+              "tr": "U shifokor."
+            },
+            {
+              "de": "Sie ist sehr nett.",
+              "tr": "U juda yoqimli."
+            }
+          ]
+        },
+        {
+          "title": "Olmosh so'z rodiga qarab",
+          "text": "der li so'z er bo'ladi, die li sie, das li es. Narsalar ham: der Kaffee uchun er deyiladi.",
+          "examples": [
+            {
+              "de": "der Kaffee → Er ist heiß.",
+              "tr": "Qahva issiq."
+            },
+            {
+              "de": "das Kind → Es ist nett.",
+              "tr": "Bola yoqimli."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "वह: er, sie, es",
+      "points": [
+        {
+          "title": "क्रिया ist",
+          "text": "er, sie, es के साथ sein हमेशा ist होता है।",
+          "examples": [
+            {
+              "de": "Er ist Arzt.",
+              "tr": "वह डॉक्टर है।"
+            },
+            {
+              "de": "Sie ist sehr nett.",
+              "tr": "वह बहुत अच्छी है।"
+            }
+          ]
+        },
+        {
+          "title": "सर्वनाम लिंग के अनुसार",
+          "text": "der वाला शब्द er बनता है, die वाला sie, das वाला es। चीज़ें भी: der Kaffee के लिए er।",
+          "examples": [
+            {
+              "de": "der Kaffee → Er ist heiß.",
+              "tr": "कॉफ़ी गरम है।"
+            },
+            {
+              "de": "das Kind → Es ist nett.",
+              "tr": "बच्चा प्यारा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "هو، هي: er وsie وes",
+      "points": [
+        {
+          "title": "الفعل ist",
+          "text": "مع er وsie وes يكون الفعل sein دائماً ist.",
+          "examples": [
+            {
+              "de": "Er ist Arzt.",
+              "tr": "هو طبيب."
+            },
+            {
+              "de": "Sie ist sehr nett.",
+              "tr": "هي لطيفة جداً."
+            }
+          ]
+        },
+        {
+          "title": "الضمير حسب جنس الكلمة",
+          "text": "الكلمة مع der تصبح er، ومع die تصبح sie، ومع das تصبح es. وكذلك الأشياء: der Kaffee يقال عنها er.",
+          "examples": [
+            {
+              "de": "der Kaffee → Er ist heiß.",
+              "tr": "القهوة ساخنة."
+            },
+            {
+              "de": "das Kind → Es ist nett.",
+              "tr": "الطفل لطيف."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meet-meadow-three": {
+    "ru": {
+      "title": "Мы, вы, они: wir sind, ihr seid",
+      "points": [
+        {
+          "title": "Формы во множественном",
+          "text": "wir sind (мы), ihr seid (вы, когда «ты» много), sie sind (они).",
+          "examples": [
+            {
+              "de": "Wir sind Freunde.",
+              "tr": "Мы друзья."
+            },
+            {
+              "de": "Seid ihr müde?",
+              "tr": "Вы устали?"
+            },
+            {
+              "de": "Sie sind aus Wien.",
+              "tr": "Они из Вены."
+            }
+          ]
+        },
+        {
+          "title": "sie или Sie",
+          "text": "sie с маленькой буквы значит «она» или «они»: смотри на глагол, sie ist или sie sind. Sie с большой буквы это вежливое «Вы», и глагол тоже sind.",
+          "examples": [
+            {
+              "de": "Sie ist müde.",
+              "tr": "Она устала."
+            },
+            {
+              "de": "Sie sind müde.",
+              "tr": "Они устали. (или: Вы устали.)"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Ми, ви, вони: wir sind, ihr seid",
+      "points": [
+        {
+          "title": "Форми в множині",
+          "text": "wir sind (ми), ihr seid (ви, коли «ти» багато), sie sind (вони).",
+          "examples": [
+            {
+              "de": "Wir sind Freunde.",
+              "tr": "Ми друзі."
+            },
+            {
+              "de": "Seid ihr müde?",
+              "tr": "Ви втомилися?"
+            },
+            {
+              "de": "Sie sind aus Wien.",
+              "tr": "Вони з Відня."
+            }
+          ]
+        },
+        {
+          "title": "sie чи Sie",
+          "text": "sie з малої літери означає «вона» або «вони»: дивись на дієслово, sie ist чи sie sind. Sie з великої літери це ввічливе «Ви», і дієслово теж sind.",
+          "examples": [
+            {
+              "de": "Sie ist müde.",
+              "tr": "Вона втомилася."
+            },
+            {
+              "de": "Sie sind müde.",
+              "tr": "Вони втомилися. (або: Ви втомилися.)"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "We, you, they: wir sind, ihr seid",
+      "points": [
+        {
+          "title": "Plural forms",
+          "text": "wir sind (we), ihr seid (you, several friends), sie sind (they).",
+          "examples": [
+            {
+              "de": "Wir sind Freunde.",
+              "tr": "We are friends."
+            },
+            {
+              "de": "Seid ihr müde?",
+              "tr": "Are you (all) tired?"
+            },
+            {
+              "de": "Sie sind aus Wien.",
+              "tr": "They are from Vienna."
+            }
+          ]
+        },
+        {
+          "title": "sie or Sie",
+          "text": "Lowercase sie means \"she\" or \"they\": look at the verb, sie ist or sie sind. Capital Sie is polite \"you\", also with sind.",
+          "examples": [
+            {
+              "de": "Sie ist müde.",
+              "tr": "She is tired."
+            },
+            {
+              "de": "Sie sind müde.",
+              "tr": "They are tired. (or: You are tired.)"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "My, wy, oni: wir sind, ihr seid",
+      "points": [
+        {
+          "title": "Formy w liczbie mnogiej",
+          "text": "wir sind (my), ihr seid (wy, kilka osób na „ty”), sie sind (oni).",
+          "examples": [
+            {
+              "de": "Wir sind Freunde.",
+              "tr": "Jesteśmy przyjaciółmi."
+            },
+            {
+              "de": "Seid ihr müde?",
+              "tr": "Jesteście zmęczeni?"
+            },
+            {
+              "de": "Sie sind aus Wien.",
+              "tr": "Oni są z Wiednia."
+            }
+          ]
+        },
+        {
+          "title": "sie czy Sie",
+          "text": "sie małą literą znaczy „ona” albo „oni”: patrz na czasownik, sie ist czy sie sind. Sie wielką literą to grzeczne „Pan/Pani”, też z sind.",
+          "examples": [
+            {
+              "de": "Sie ist müde.",
+              "tr": "Ona jest zmęczona."
+            },
+            {
+              "de": "Sie sind müde.",
+              "tr": "Oni są zmęczeni. (albo: Pan jest zmęczony.)"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Nosotros, vosotros, ellos: wir sind, ihr seid",
+      "points": [
+        {
+          "title": "Formas del plural",
+          "text": "wir sind (nosotros), ihr seid (vosotros, varios amigos), sie sind (ellos).",
+          "examples": [
+            {
+              "de": "Wir sind Freunde.",
+              "tr": "Somos amigos."
+            },
+            {
+              "de": "Seid ihr müde?",
+              "tr": "¿Estáis cansados?"
+            },
+            {
+              "de": "Sie sind aus Wien.",
+              "tr": "Ellos son de Viena."
+            }
+          ]
+        },
+        {
+          "title": "sie o Sie",
+          "text": "sie en minúscula significa \"ella\" o \"ellos\": mira el verbo, sie ist o sie sind. Sie con mayúscula es \"usted\", también con sind.",
+          "examples": [
+            {
+              "de": "Sie ist müde.",
+              "tr": "Ella está cansada."
+            },
+            {
+              "de": "Sie sind müde.",
+              "tr": "Ellos están cansados. (o: Usted está cansado.)"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Nous, vous, ils : wir sind, ihr seid",
+      "points": [
+        {
+          "title": "Formes du pluriel",
+          "text": "wir sind (nous), ihr seid (vous, plusieurs amis), sie sind (ils, elles).",
+          "examples": [
+            {
+              "de": "Wir sind Freunde.",
+              "tr": "Nous sommes amis."
+            },
+            {
+              "de": "Seid ihr müde?",
+              "tr": "Vous êtes fatigués ?"
+            },
+            {
+              "de": "Sie sind aus Wien.",
+              "tr": "Ils viennent de Vienne."
+            }
+          ]
+        },
+        {
+          "title": "sie ou Sie",
+          "text": "sie en minuscule veut dire « elle » ou « ils » : regarde le verbe, sie ist ou sie sind. Sie avec majuscule, c’est le « vous » poli, aussi avec sind.",
+          "examples": [
+            {
+              "de": "Sie ist müde.",
+              "tr": "Elle est fatiguée."
+            },
+            {
+              "de": "Sie sind müde.",
+              "tr": "Ils sont fatigués. (ou : Vous êtes fatigué.)"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Biz, siz, onlar: wir sind, ihr seid",
+      "points": [
+        {
+          "title": "Çoğul biçimler",
+          "text": "wir sind (biz), ihr seid (siz, birkaç arkadaş), sie sind (onlar).",
+          "examples": [
+            {
+              "de": "Wir sind Freunde.",
+              "tr": "Biz arkadaşız."
+            },
+            {
+              "de": "Seid ihr müde?",
+              "tr": "Yorgun musunuz?"
+            },
+            {
+              "de": "Sie sind aus Wien.",
+              "tr": "Onlar Viyanalı."
+            }
+          ]
+        },
+        {
+          "title": "sie mi, Sie mi",
+          "text": "Küçük harfle sie \"o (kadın)\" ya da \"onlar\" demektir: fiile bak, sie ist mi sie sind mi. Büyük harfle Sie kibar \"siz\"dir, o da sind ile.",
+          "examples": [
+            {
+              "de": "Sie ist müde.",
+              "tr": "O yorgun."
+            },
+            {
+              "de": "Sie sind müde.",
+              "tr": "Onlar yorgun. (ya da: Siz yorgunsunuz.)"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Noi, voi, ei: wir sind, ihr seid",
+      "points": [
+        {
+          "title": "Formele de plural",
+          "text": "wir sind (noi), ihr seid (voi, mai mulți prieteni), sie sind (ei).",
+          "examples": [
+            {
+              "de": "Wir sind Freunde.",
+              "tr": "Suntem prieteni."
+            },
+            {
+              "de": "Seid ihr müde?",
+              "tr": "Sunteți obosiți?"
+            },
+            {
+              "de": "Sie sind aus Wien.",
+              "tr": "Ei sunt din Viena."
+            }
+          ]
+        },
+        {
+          "title": "sie sau Sie",
+          "text": "sie cu literă mică înseamnă „ea” sau „ei”: uită-te la verb, sie ist sau sie sind. Sie cu majusculă este „dumneavoastră”, tot cu sind.",
+          "examples": [
+            {
+              "de": "Sie ist müde.",
+              "tr": "Ea este obosită."
+            },
+            {
+              "de": "Sie sind müde.",
+              "tr": "Ei sunt obosiți. (sau: Sunteți obosit.)"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Biz, sizlar, ular: wir sind, ihr seid",
+      "points": [
+        {
+          "title": "Ko'plik shakllari",
+          "text": "wir sind (biz), ihr seid (sizlar, bir nechta do'st), sie sind (ular).",
+          "examples": [
+            {
+              "de": "Wir sind Freunde.",
+              "tr": "Biz do'stmiz."
+            },
+            {
+              "de": "Seid ihr müde?",
+              "tr": "Charchadinglarmi?"
+            },
+            {
+              "de": "Sie sind aus Wien.",
+              "tr": "Ular Venadan."
+            }
+          ]
+        },
+        {
+          "title": "sie yoki Sie",
+          "text": "Kichik harfli sie \"u (ayol)\" yoki \"ular\" degani: fe'lga qara, sie ist yoki sie sind. Bosh harfli Sie hurmatli \"Siz\", u ham sind bilan.",
+          "examples": [
+            {
+              "de": "Sie ist müde.",
+              "tr": "U charchagan."
+            },
+            {
+              "de": "Sie sind müde.",
+              "tr": "Ular charchagan. (yoki: Siz charchagansiz.)"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "हम, तुम सब, वे: wir sind, ihr seid",
+      "points": [
+        {
+          "title": "बहुवचन रूप",
+          "text": "wir sind (हम), ihr seid (तुम सब, कई दोस्त), sie sind (वे)।",
+          "examples": [
+            {
+              "de": "Wir sind Freunde.",
+              "tr": "हम दोस्त हैं।"
+            },
+            {
+              "de": "Seid ihr müde?",
+              "tr": "क्या तुम सब थके हो?"
+            },
+            {
+              "de": "Sie sind aus Wien.",
+              "tr": "वे वियना से हैं।"
+            }
+          ]
+        },
+        {
+          "title": "sie या Sie",
+          "text": "छोटे अक्षर वाला sie मतलब \"वह (स्त्री)\" या \"वे\": क्रिया देखो, sie ist या sie sind। बड़े अक्षर वाला Sie विनम्र \"आप\" है, वह भी sind के साथ।",
+          "examples": [
+            {
+              "de": "Sie ist müde.",
+              "tr": "वह थकी है।"
+            },
+            {
+              "de": "Sie sind müde.",
+              "tr": "वे थके हैं। (या: आप थके हैं।)"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "نحن، أنتم، هم: wir sind وihr seid",
+      "points": [
+        {
+          "title": "صيغ الجمع",
+          "text": "wir sind (نحن)، ihr seid (أنتم، عدة أصدقاء)، sie sind (هم).",
+          "examples": [
+            {
+              "de": "Wir sind Freunde.",
+              "tr": "نحن أصدقاء."
+            },
+            {
+              "de": "Seid ihr müde?",
+              "tr": "هل أنتم متعبون؟"
+            },
+            {
+              "de": "Sie sind aus Wien.",
+              "tr": "هم من فيينا."
+            }
+          ]
+        },
+        {
+          "title": "sie أم Sie",
+          "text": "sie بحرف صغير تعني \"هي\" أو \"هم\": انظر إلى الفعل، sie ist أم sie sind. أما Sie بحرف كبير فهي \"حضرتك\" المهذبة، ومعها أيضاً sind.",
+          "examples": [
+            {
+              "de": "Sie ist müde.",
+              "tr": "هي متعبة."
+            },
+            {
+              "de": "Sie sind müde.",
+              "tr": "هم متعبون. (أو: حضرتك متعب.)"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meet-meadow-four": {
+    "ru": {
+      "title": "Глагол haben: у меня есть",
+      "points": [
+        {
+          "title": "Формы haben",
+          "text": "ich habe, du hast, er/sie/es hat, wir haben, ihr habt, sie/Sie haben. У du и er буква b пропадает.",
+          "examples": [
+            {
+              "de": "Ich habe einen Bruder.",
+              "tr": "У меня есть брат."
+            },
+            {
+              "de": "Tim hat einen Hund.",
+              "tr": "У Тима есть собака."
+            }
+          ]
+        },
+        {
+          "title": "Голод и жажда через haben",
+          "text": "По-немецки голод и жажду «имеют»: Ich habe Hunger, а не «я голодный».",
+          "examples": [
+            {
+              "de": "Ich habe Hunger.",
+              "tr": "Я голоден."
+            },
+            {
+              "de": "Hast du Durst?",
+              "tr": "Хочешь пить?"
+            },
+            {
+              "de": "Wir haben Zeit.",
+              "tr": "У нас есть время."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Дієслово haben: у мене є",
+      "points": [
+        {
+          "title": "Форми haben",
+          "text": "ich habe, du hast, er/sie/es hat, wir haben, ihr habt, sie/Sie haben. У du і er літера b зникає.",
+          "examples": [
+            {
+              "de": "Ich habe einen Bruder.",
+              "tr": "У мене є брат."
+            },
+            {
+              "de": "Tim hat einen Hund.",
+              "tr": "У Тіма є собака."
+            }
+          ]
+        },
+        {
+          "title": "Голод і спрага через haben",
+          "text": "Німецькою голод і спрагу «мають»: Ich habe Hunger, а не «я голодний».",
+          "examples": [
+            {
+              "de": "Ich habe Hunger.",
+              "tr": "Я голодний."
+            },
+            {
+              "de": "Hast du Durst?",
+              "tr": "Хочеш пити?"
+            },
+            {
+              "de": "Wir haben Zeit.",
+              "tr": "У нас є час."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The verb haben: I have",
+      "points": [
+        {
+          "title": "Forms of haben",
+          "text": "ich habe, du hast, er/sie/es hat, wir haben, ihr habt, sie/Sie haben. With du and er the b disappears.",
+          "examples": [
+            {
+              "de": "Ich habe einen Bruder.",
+              "tr": "I have a brother."
+            },
+            {
+              "de": "Tim hat einen Hund.",
+              "tr": "Tim has a dog."
+            }
+          ]
+        },
+        {
+          "title": "Hunger and thirst with haben",
+          "text": "In German you \"have\" hunger and thirst: Ich habe Hunger, not \"I am hungry\".",
+          "examples": [
+            {
+              "de": "Ich habe Hunger.",
+              "tr": "I’m hungry."
+            },
+            {
+              "de": "Hast du Durst?",
+              "tr": "Are you thirsty?"
+            },
+            {
+              "de": "Wir haben Zeit.",
+              "tr": "We have time."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Czasownik haben: mam",
+      "points": [
+        {
+          "title": "Formy haben",
+          "text": "ich habe, du hast, er/sie/es hat, wir haben, ihr habt, sie/Sie haben. Przy du i er znika litera b.",
+          "examples": [
+            {
+              "de": "Ich habe einen Bruder.",
+              "tr": "Mam brata."
+            },
+            {
+              "de": "Tim hat einen Hund.",
+              "tr": "Tim ma psa."
+            }
+          ]
+        },
+        {
+          "title": "Głód i pragnienie z haben",
+          "text": "Po niemiecku głód i pragnienie się „ma”: Ich habe Hunger.",
+          "examples": [
+            {
+              "de": "Ich habe Hunger.",
+              "tr": "Jestem głodny."
+            },
+            {
+              "de": "Hast du Durst?",
+              "tr": "Chce ci się pić?"
+            },
+            {
+              "de": "Wir haben Zeit.",
+              "tr": "Mamy czas."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "El verbo haben: tengo",
+      "points": [
+        {
+          "title": "Formas de haben",
+          "text": "ich habe, du hast, er/sie/es hat, wir haben, ihr habt, sie/Sie haben. Con du y er desaparece la b.",
+          "examples": [
+            {
+              "de": "Ich habe einen Bruder.",
+              "tr": "Tengo un hermano."
+            },
+            {
+              "de": "Tim hat einen Hund.",
+              "tr": "Tim tiene un perro."
+            }
+          ]
+        },
+        {
+          "title": "Hambre y sed con haben",
+          "text": "En alemán el hambre y la sed se \"tienen\", como en español: Ich habe Hunger.",
+          "examples": [
+            {
+              "de": "Ich habe Hunger.",
+              "tr": "Tengo hambre."
+            },
+            {
+              "de": "Hast du Durst?",
+              "tr": "¿Tienes sed?"
+            },
+            {
+              "de": "Wir haben Zeit.",
+              "tr": "Tenemos tiempo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le verbe haben : j’ai",
+      "points": [
+        {
+          "title": "Formes de haben",
+          "text": "ich habe, du hast, er/sie/es hat, wir haben, ihr habt, sie/Sie haben. Avec du et er, le b disparaît.",
+          "examples": [
+            {
+              "de": "Ich habe einen Bruder.",
+              "tr": "J’ai un frère."
+            },
+            {
+              "de": "Tim hat einen Hund.",
+              "tr": "Tim a un chien."
+            }
+          ]
+        },
+        {
+          "title": "Faim et soif avec haben",
+          "text": "En allemand on « a » faim et soif, comme en français : Ich habe Hunger.",
+          "examples": [
+            {
+              "de": "Ich habe Hunger.",
+              "tr": "J’ai faim."
+            },
+            {
+              "de": "Hast du Durst?",
+              "tr": "Tu as soif ?"
+            },
+            {
+              "de": "Wir haben Zeit.",
+              "tr": "Nous avons le temps."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "haben fiili: benim var",
+      "points": [
+        {
+          "title": "haben biçimleri",
+          "text": "ich habe, du hast, er/sie/es hat, wir haben, ihr habt, sie/Sie haben. du ve er ile b harfi düşer.",
+          "examples": [
+            {
+              "de": "Ich habe einen Bruder.",
+              "tr": "Bir erkek kardeşim var."
+            },
+            {
+              "de": "Tim hat einen Hund.",
+              "tr": "Tim’in bir köpeği var."
+            }
+          ]
+        },
+        {
+          "title": "Açlık ve susuzluk haben ile",
+          "text": "Almancada açlık ve susuzluk \"sahip olunan\" şeydir: Ich habe Hunger, yani \"açlığım var\".",
+          "examples": [
+            {
+              "de": "Ich habe Hunger.",
+              "tr": "Acıktım."
+            },
+            {
+              "de": "Hast du Durst?",
+              "tr": "Susadın mı?"
+            },
+            {
+              "de": "Wir haben Zeit.",
+              "tr": "Vaktimiz var."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Verbul haben: am",
+      "points": [
+        {
+          "title": "Formele lui haben",
+          "text": "ich habe, du hast, er/sie/es hat, wir haben, ihr habt, sie/Sie haben. La du și er litera b dispare.",
+          "examples": [
+            {
+              "de": "Ich habe einen Bruder.",
+              "tr": "Am un frate."
+            },
+            {
+              "de": "Tim hat einen Hund.",
+              "tr": "Tim are un câine."
+            }
+          ]
+        },
+        {
+          "title": "Foamea și setea cu haben",
+          "text": "În germană foamea și setea se „au”: Ich habe Hunger, adică „mi-e foame”.",
+          "examples": [
+            {
+              "de": "Ich habe Hunger.",
+              "tr": "Mi-e foame."
+            },
+            {
+              "de": "Hast du Durst?",
+              "tr": "Ți-e sete?"
+            },
+            {
+              "de": "Wir haben Zeit.",
+              "tr": "Avem timp."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "haben fe'li: menda bor",
+      "points": [
+        {
+          "title": "haben shakllari",
+          "text": "ich habe, du hast, er/sie/es hat, wir haben, ihr habt, sie/Sie haben. du va er da b harfi tushib qoladi.",
+          "examples": [
+            {
+              "de": "Ich habe einen Bruder.",
+              "tr": "Mening akam (ukam) bor."
+            },
+            {
+              "de": "Tim hat einen Hund.",
+              "tr": "Timning iti bor."
+            }
+          ]
+        },
+        {
+          "title": "Ochlik va chanqoq haben bilan",
+          "text": "Nemischa ochlik va chanqoq \"bor\" bo'ladi: Ich habe Hunger, ya'ni \"qornim och\".",
+          "examples": [
+            {
+              "de": "Ich habe Hunger.",
+              "tr": "Qornim och."
+            },
+            {
+              "de": "Hast du Durst?",
+              "tr": "Chanqadingmi?"
+            },
+            {
+              "de": "Wir haben Zeit.",
+              "tr": "Vaqtimiz bor."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "क्रिया haben: मेरे पास है",
+      "points": [
+        {
+          "title": "haben के रूप",
+          "text": "ich habe, du hast, er/sie/es hat, wir haben, ihr habt, sie/Sie haben। du और er के साथ b हट जाता है।",
+          "examples": [
+            {
+              "de": "Ich habe einen Bruder.",
+              "tr": "मेरा एक भाई है।"
+            },
+            {
+              "de": "Tim hat einen Hund.",
+              "tr": "टिम के पास एक कुत्ता है।"
+            }
+          ]
+        },
+        {
+          "title": "भूख और प्यास haben से",
+          "text": "जर्मन में भूख और प्यास \"होती\" है: Ich habe Hunger, यानी \"मुझे भूख है\"।",
+          "examples": [
+            {
+              "de": "Ich habe Hunger.",
+              "tr": "मुझे भूख लगी है।"
+            },
+            {
+              "de": "Hast du Durst?",
+              "tr": "क्या तुम्हें प्यास लगी है?"
+            },
+            {
+              "de": "Wir haben Zeit.",
+              "tr": "हमारे पास समय है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الفعل haben: عندي",
+      "points": [
+        {
+          "title": "صيغ haben",
+          "text": "ich habe، du hast، er/sie/es hat، wir haben، ihr habt، sie/Sie haben. مع du وer يختفي حرف b.",
+          "examples": [
+            {
+              "de": "Ich habe einen Bruder.",
+              "tr": "عندي أخ."
+            },
+            {
+              "de": "Tim hat einen Hund.",
+              "tr": "عند تيم كلب."
+            }
+          ]
+        },
+        {
+          "title": "الجوع والعطش مع haben",
+          "text": "بالألمانية \"نملك\" الجوع والعطش: Ich habe Hunger، أي \"أنا جائع\".",
+          "examples": [
+            {
+              "de": "Ich habe Hunger.",
+              "tr": "أنا جائع."
+            },
+            {
+              "de": "Hast du Durst?",
+              "tr": "هل أنت عطشان؟"
+            },
+            {
+              "de": "Wir haben Zeit.",
+              "tr": "عندنا وقت."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meet-meadow-five": {
+    "ru": {
+      "title": "Окончания глагола: ich -e, du -st, er -t",
+      "points": [
+        {
+          "title": "Основа и окончание",
+          "text": "Убираем -en: wohnen → wohn. Добавляем окончание: ich wohne, du wohnst, er/sie/es wohnt. Так же kommen, lernen, trinken.",
+          "examples": [
+            {
+              "de": "ich wohne, du wohnst, er wohnt",
+              "tr": "я живу, ты живёшь, он живёт"
+            },
+            {
+              "de": "Sie lernt Deutsch.",
+              "tr": "Она учит немецкий."
+            }
+          ]
+        },
+        {
+          "title": "Глагол на втором месте",
+          "text": "В обычном предложении и в вопросе с вопросительным словом глагол стоит на втором месте.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch in Wien.",
+              "tr": "Я учу немецкий в Вене."
+            },
+            {
+              "de": "Was trinkst du?",
+              "tr": "Что ты пьёшь?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Закінчення дієслова: ich -e, du -st, er -t",
+      "points": [
+        {
+          "title": "Основа і закінчення",
+          "text": "Прибираємо -en: wohnen → wohn. Додаємо закінчення: ich wohne, du wohnst, er/sie/es wohnt. Так само kommen, lernen, trinken.",
+          "examples": [
+            {
+              "de": "ich wohne, du wohnst, er wohnt",
+              "tr": "я живу, ти живеш, він живе"
+            },
+            {
+              "de": "Sie lernt Deutsch.",
+              "tr": "Вона вчить німецьку."
+            }
+          ]
+        },
+        {
+          "title": "Дієслово на другому місці",
+          "text": "У звичайному реченні та в питанні з питальним словом дієслово стоїть на другому місці.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch in Wien.",
+              "tr": "Я вчу німецьку у Відні."
+            },
+            {
+              "de": "Was trinkst du?",
+              "tr": "Що ти п’єш?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Verb endings: ich -e, du -st, er -t",
+      "points": [
+        {
+          "title": "Stem and ending",
+          "text": "Drop -en: wohnen → wohn. Add the ending: ich wohne, du wohnst, er/sie/es wohnt. Same with kommen, lernen, trinken.",
+          "examples": [
+            {
+              "de": "ich wohne, du wohnst, er wohnt",
+              "tr": "I live, you live, he lives"
+            },
+            {
+              "de": "Sie lernt Deutsch.",
+              "tr": "She is learning German."
+            }
+          ]
+        },
+        {
+          "title": "The verb is in second place",
+          "text": "In a normal sentence and in a question with a question word, the verb is in second place.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch in Wien.",
+              "tr": "I learn German in Vienna."
+            },
+            {
+              "de": "Was trinkst du?",
+              "tr": "What are you drinking?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Końcówki czasownika: ich -e, du -st, er -t",
+      "points": [
+        {
+          "title": "Temat i końcówka",
+          "text": "Usuwamy -en: wohnen → wohn. Dodajemy końcówkę: ich wohne, du wohnst, er/sie/es wohnt. Tak samo kommen, lernen, trinken.",
+          "examples": [
+            {
+              "de": "ich wohne, du wohnst, er wohnt",
+              "tr": "mieszkam, mieszkasz, on mieszka"
+            },
+            {
+              "de": "Sie lernt Deutsch.",
+              "tr": "Ona uczy się niemieckiego."
+            }
+          ]
+        },
+        {
+          "title": "Czasownik na drugim miejscu",
+          "text": "W zwykłym zdaniu i w pytaniu ze słowem pytającym czasownik stoi na drugim miejscu.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch in Wien.",
+              "tr": "Uczę się niemieckiego w Wiedniu."
+            },
+            {
+              "de": "Was trinkst du?",
+              "tr": "Co pijesz?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Terminaciones del verbo: ich -e, du -st, er -t",
+      "points": [
+        {
+          "title": "Raíz y terminación",
+          "text": "Quitamos -en: wohnen → wohn. Añadimos la terminación: ich wohne, du wohnst, er/sie/es wohnt. Igual con kommen, lernen, trinken.",
+          "examples": [
+            {
+              "de": "ich wohne, du wohnst, er wohnt",
+              "tr": "vivo, vives, él vive"
+            },
+            {
+              "de": "Sie lernt Deutsch.",
+              "tr": "Ella aprende alemán."
+            }
+          ]
+        },
+        {
+          "title": "El verbo en segundo lugar",
+          "text": "En una frase normal y en una pregunta con palabra interrogativa, el verbo va en segundo lugar.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch in Wien.",
+              "tr": "Aprendo alemán en Viena."
+            },
+            {
+              "de": "Was trinkst du?",
+              "tr": "¿Qué bebes?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Terminaisons du verbe : ich -e, du -st, er -t",
+      "points": [
+        {
+          "title": "Radical et terminaison",
+          "text": "On enlève -en : wohnen → wohn. On ajoute la terminaison : ich wohne, du wohnst, er/sie/es wohnt. Pareil pour kommen, lernen, trinken.",
+          "examples": [
+            {
+              "de": "ich wohne, du wohnst, er wohnt",
+              "tr": "j’habite, tu habites, il habite"
+            },
+            {
+              "de": "Sie lernt Deutsch.",
+              "tr": "Elle apprend l’allemand."
+            }
+          ]
+        },
+        {
+          "title": "Le verbe en deuxième position",
+          "text": "Dans une phrase normale et dans une question avec mot interrogatif, le verbe est en deuxième position.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch in Wien.",
+              "tr": "J’apprends l’allemand à Vienne."
+            },
+            {
+              "de": "Was trinkst du?",
+              "tr": "Qu’est-ce que tu bois ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Fiil ekleri: ich -e, du -st, er -t",
+      "points": [
+        {
+          "title": "Kök ve ek",
+          "text": "-en atılır: wohnen → wohn. Ek eklenir: ich wohne, du wohnst, er/sie/es wohnt. kommen, lernen, trinken de böyle.",
+          "examples": [
+            {
+              "de": "ich wohne, du wohnst, er wohnt",
+              "tr": "oturuyorum, oturuyorsun, oturuyor"
+            },
+            {
+              "de": "Sie lernt Deutsch.",
+              "tr": "O Almanca öğreniyor."
+            }
+          ]
+        },
+        {
+          "title": "Fiil ikinci sırada",
+          "text": "Normal cümlede ve soru kelimeli soruda fiil ikinci sıradadır.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch in Wien.",
+              "tr": "Viyana’da Almanca öğreniyorum."
+            },
+            {
+              "de": "Was trinkst du?",
+              "tr": "Ne içiyorsun?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Terminațiile verbului: ich -e, du -st, er -t",
+      "points": [
+        {
+          "title": "Rădăcina și terminația",
+          "text": "Scoatem -en: wohnen → wohn. Adăugăm terminația: ich wohne, du wohnst, er/sie/es wohnt. La fel kommen, lernen, trinken.",
+          "examples": [
+            {
+              "de": "ich wohne, du wohnst, er wohnt",
+              "tr": "locuiesc, locuiești, el locuiește"
+            },
+            {
+              "de": "Sie lernt Deutsch.",
+              "tr": "Ea învață germana."
+            }
+          ]
+        },
+        {
+          "title": "Verbul pe locul doi",
+          "text": "Într-o propoziție obișnuită și într-o întrebare cu cuvânt interogativ, verbul stă pe locul doi.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch in Wien.",
+              "tr": "Învăț germana la Viena."
+            },
+            {
+              "de": "Was trinkst du?",
+              "tr": "Ce bei?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Fe'l qo'shimchalari: ich -e, du -st, er -t",
+      "points": [
+        {
+          "title": "O'zak va qo'shimcha",
+          "text": "-en olib tashlanadi: wohnen → wohn. Qo'shimcha qo'shiladi: ich wohne, du wohnst, er/sie/es wohnt. kommen, lernen, trinken ham shunday.",
+          "examples": [
+            {
+              "de": "ich wohne, du wohnst, er wohnt",
+              "tr": "yashayman, yashaysan, yashaydi"
+            },
+            {
+              "de": "Sie lernt Deutsch.",
+              "tr": "U nemis tilini o'rganmoqda."
+            }
+          ]
+        },
+        {
+          "title": "Fe'l ikkinchi o'rinda",
+          "text": "Oddiy gapda va savol so'zli savolda fe'l ikkinchi o'rinda turadi.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch in Wien.",
+              "tr": "Men Venada nemis tilini o'rganaman."
+            },
+            {
+              "de": "Was trinkst du?",
+              "tr": "Nima ichyapsan?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "क्रिया के अंत: ich -e, du -st, er -t",
+      "points": [
+        {
+          "title": "मूल और अंत",
+          "text": "-en हटाओ: wohnen → wohn। अंत जोड़ो: ich wohne, du wohnst, er/sie/es wohnt। kommen, lernen, trinken भी ऐसे ही।",
+          "examples": [
+            {
+              "de": "ich wohne, du wohnst, er wohnt",
+              "tr": "मैं रहता हूँ, तुम रहते हो, वह रहता है"
+            },
+            {
+              "de": "Sie lernt Deutsch.",
+              "tr": "वह जर्मन सीख रही है।"
+            }
+          ]
+        },
+        {
+          "title": "क्रिया दूसरे स्थान पर",
+          "text": "सामान्य वाक्य में और प्रश्नवाचक शब्द वाले सवाल में क्रिया दूसरे स्थान पर होती है।",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch in Wien.",
+              "tr": "मैं वियना में जर्मन सीखता हूँ।"
+            },
+            {
+              "de": "Was trinkst du?",
+              "tr": "तुम क्या पी रहे हो?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "نهايات الفعل: ich -e وdu -st وer -t",
+      "points": [
+        {
+          "title": "الجذر والنهاية",
+          "text": "نحذف -en: wohnen → wohn. ونضيف النهاية: ich wohne، du wohnst، er/sie/es wohnt. وكذلك kommen وlernen وtrinken.",
+          "examples": [
+            {
+              "de": "ich wohne, du wohnst, er wohnt",
+              "tr": "أسكن، تسكن، يسكن"
+            },
+            {
+              "de": "Sie lernt Deutsch.",
+              "tr": "هي تتعلم الألمانية."
+            }
+          ]
+        },
+        {
+          "title": "الفعل في المكان الثاني",
+          "text": "في الجملة العادية وفي السؤال بأداة استفهام يأتي الفعل في المكان الثاني.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch in Wien.",
+              "tr": "أتعلم الألمانية في فيينا."
+            },
+            {
+              "de": "Was trinkst du?",
+              "tr": "ماذا تشرب؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meet-meadow-six": {
+    "ru": {
+      "title": "wir -en, ihr -t и особые глаголы",
+      "points": [
+        {
+          "title": "Множественное число",
+          "text": "wir wohnen, ihr wohnt, sie/Sie wohnen. У wir и sie окончание как в словаре: -en.",
+          "examples": [
+            {
+              "de": "Die Kinder spielen Fußball.",
+              "tr": "Дети играют в футбол."
+            }
+          ]
+        },
+        {
+          "title": "Основа на -t: вставляем -e-",
+          "text": "Чтобы было легче произнести, после t добавляем e: du arbeitest, er arbeitet, ihr arbeitet.",
+          "examples": [
+            {
+              "de": "Arbeitest du im Café?",
+              "tr": "Ты работаешь в кафе?"
+            },
+            {
+              "de": "Er arbeitet als Kellner.",
+              "tr": "Он работает официантом."
+            }
+          ]
+        },
+        {
+          "title": "Основа на -s, -ß, -z",
+          "text": "У du добавляем только -t, без s: du heißt, du tanzt.",
+          "examples": [
+            {
+              "de": "Heißt du Lena?",
+              "tr": "Тебя зовут Лена?"
+            },
+            {
+              "de": "Du tanzt gut!",
+              "tr": "Ты хорошо танцуешь!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "wir -en, ihr -t і особливі дієслова",
+      "points": [
+        {
+          "title": "Множина",
+          "text": "wir wohnen, ihr wohnt, sie/Sie wohnen. У wir і sie закінчення як у словнику: -en.",
+          "examples": [
+            {
+              "de": "Die Kinder spielen Fußball.",
+              "tr": "Діти грають у футбол."
+            }
+          ]
+        },
+        {
+          "title": "Основа на -t: вставляємо -e-",
+          "text": "Щоб легше вимовити, після t додаємо e: du arbeitest, er arbeitet, ihr arbeitet.",
+          "examples": [
+            {
+              "de": "Arbeitest du im Café?",
+              "tr": "Ти працюєш у кафе?"
+            },
+            {
+              "de": "Er arbeitet als Kellner.",
+              "tr": "Він працює офіціантом."
+            }
+          ]
+        },
+        {
+          "title": "Основа на -s, -ß, -z",
+          "text": "У du додаємо лише -t, без s: du heißt, du tanzt.",
+          "examples": [
+            {
+              "de": "Heißt du Lena?",
+              "tr": "Тебе звати Лена?"
+            },
+            {
+              "de": "Du tanzt gut!",
+              "tr": "Ти добре танцюєш!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "wir -en, ihr -t and special verbs",
+      "points": [
+        {
+          "title": "Plural",
+          "text": "wir wohnen, ihr wohnt, sie/Sie wohnen. wir and sie take the dictionary ending -en.",
+          "examples": [
+            {
+              "de": "Die Kinder spielen Fußball.",
+              "tr": "The children play football."
+            }
+          ]
+        },
+        {
+          "title": "Stem ending in -t: add -e-",
+          "text": "To make it easier to say, add e after t: du arbeitest, er arbeitet, ihr arbeitet.",
+          "examples": [
+            {
+              "de": "Arbeitest du im Café?",
+              "tr": "Do you work at the café?"
+            },
+            {
+              "de": "Er arbeitet als Kellner.",
+              "tr": "He works as a waiter."
+            }
+          ]
+        },
+        {
+          "title": "Stem ending in -s, -ß, -z",
+          "text": "With du add only -t, no s: du heißt, du tanzt.",
+          "examples": [
+            {
+              "de": "Heißt du Lena?",
+              "tr": "Is your name Lena?"
+            },
+            {
+              "de": "Du tanzt gut!",
+              "tr": "You dance well!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "wir -en, ihr -t i czasowniki szczególne",
+      "points": [
+        {
+          "title": "Liczba mnoga",
+          "text": "wir wohnen, ihr wohnt, sie/Sie wohnen. wir i sie mają końcówkę jak w słowniku: -en.",
+          "examples": [
+            {
+              "de": "Die Kinder spielen Fußball.",
+              "tr": "Dzieci grają w piłkę nożną."
+            }
+          ]
+        },
+        {
+          "title": "Temat na -t: wstawiamy -e-",
+          "text": "Żeby łatwiej wymówić, po t dodajemy e: du arbeitest, er arbeitet, ihr arbeitet.",
+          "examples": [
+            {
+              "de": "Arbeitest du im Café?",
+              "tr": "Pracujesz w kawiarni?"
+            },
+            {
+              "de": "Er arbeitet als Kellner.",
+              "tr": "On pracuje jako kelner."
+            }
+          ]
+        },
+        {
+          "title": "Temat na -s, -ß, -z",
+          "text": "Przy du dodajemy tylko -t, bez s: du heißt, du tanzt.",
+          "examples": [
+            {
+              "de": "Heißt du Lena?",
+              "tr": "Masz na imię Lena?"
+            },
+            {
+              "de": "Du tanzt gut!",
+              "tr": "Dobrze tańczysz!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "wir -en, ihr -t y verbos especiales",
+      "points": [
+        {
+          "title": "Plural",
+          "text": "wir wohnen, ihr wohnt, sie/Sie wohnen. wir y sie llevan la terminación del diccionario: -en.",
+          "examples": [
+            {
+              "de": "Die Kinder spielen Fußball.",
+              "tr": "Los niños juegan al fútbol."
+            }
+          ]
+        },
+        {
+          "title": "Raíz en -t: se añade -e-",
+          "text": "Para pronunciar mejor, después de t se añade e: du arbeitest, er arbeitet, ihr arbeitet.",
+          "examples": [
+            {
+              "de": "Arbeitest du im Café?",
+              "tr": "¿Trabajas en el café?"
+            },
+            {
+              "de": "Er arbeitet als Kellner.",
+              "tr": "Él trabaja de camarero."
+            }
+          ]
+        },
+        {
+          "title": "Raíz en -s, -ß, -z",
+          "text": "Con du se añade solo -t, sin s: du heißt, du tanzt.",
+          "examples": [
+            {
+              "de": "Heißt du Lena?",
+              "tr": "¿Te llamas Lena?"
+            },
+            {
+              "de": "Du tanzt gut!",
+              "tr": "¡Bailas bien!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "wir -en, ihr -t et verbes particuliers",
+      "points": [
+        {
+          "title": "Pluriel",
+          "text": "wir wohnen, ihr wohnt, sie/Sie wohnen. wir et sie prennent la terminaison du dictionnaire : -en.",
+          "examples": [
+            {
+              "de": "Die Kinder spielen Fußball.",
+              "tr": "Les enfants jouent au foot."
+            }
+          ]
+        },
+        {
+          "title": "Radical en -t : on ajoute -e-",
+          "text": "Pour mieux prononcer, on ajoute e après t : du arbeitest, er arbeitet, ihr arbeitet.",
+          "examples": [
+            {
+              "de": "Arbeitest du im Café?",
+              "tr": "Tu travailles au café ?"
+            },
+            {
+              "de": "Er arbeitet als Kellner.",
+              "tr": "Il travaille comme serveur."
+            }
+          ]
+        },
+        {
+          "title": "Radical en -s, -ß, -z",
+          "text": "Avec du on ajoute seulement -t, sans s : du heißt, du tanzt.",
+          "examples": [
+            {
+              "de": "Heißt du Lena?",
+              "tr": "Tu t’appelles Lena ?"
+            },
+            {
+              "de": "Du tanzt gut!",
+              "tr": "Tu danses bien !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "wir -en, ihr -t ve özel fiiller",
+      "points": [
+        {
+          "title": "Çoğul",
+          "text": "wir wohnen, ihr wohnt, sie/Sie wohnen. wir ve sie sözlükteki gibi -en alır.",
+          "examples": [
+            {
+              "de": "Die Kinder spielen Fußball.",
+              "tr": "Çocuklar futbol oynuyor."
+            }
+          ]
+        },
+        {
+          "title": "-t ile biten kök: -e- eklenir",
+          "text": "Söylemesi kolay olsun diye t’den sonra e eklenir: du arbeitest, er arbeitet, ihr arbeitet.",
+          "examples": [
+            {
+              "de": "Arbeitest du im Café?",
+              "tr": "Kafede mi çalışıyorsun?"
+            },
+            {
+              "de": "Er arbeitet als Kellner.",
+              "tr": "Garson olarak çalışıyor."
+            }
+          ]
+        },
+        {
+          "title": "-s, -ß, -z ile biten kök",
+          "text": "du ile sadece -t eklenir, s yok: du heißt, du tanzt.",
+          "examples": [
+            {
+              "de": "Heißt du Lena?",
+              "tr": "Adın Lena mı?"
+            },
+            {
+              "de": "Du tanzt gut!",
+              "tr": "İyi dans ediyorsun!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "wir -en, ihr -t și verbe speciale",
+      "points": [
+        {
+          "title": "Pluralul",
+          "text": "wir wohnen, ihr wohnt, sie/Sie wohnen. wir și sie au terminația din dicționar: -en.",
+          "examples": [
+            {
+              "de": "Die Kinder spielen Fußball.",
+              "tr": "Copiii joacă fotbal."
+            }
+          ]
+        },
+        {
+          "title": "Rădăcină în -t: adăugăm -e-",
+          "text": "Ca să se pronunțe mai ușor, după t adăugăm e: du arbeitest, er arbeitet, ihr arbeitet.",
+          "examples": [
+            {
+              "de": "Arbeitest du im Café?",
+              "tr": "Lucrezi la cafenea?"
+            },
+            {
+              "de": "Er arbeitet als Kellner.",
+              "tr": "El lucrează ca ospătar."
+            }
+          ]
+        },
+        {
+          "title": "Rădăcină în -s, -ß, -z",
+          "text": "La du adăugăm doar -t, fără s: du heißt, du tanzt.",
+          "examples": [
+            {
+              "de": "Heißt du Lena?",
+              "tr": "Te cheamă Lena?"
+            },
+            {
+              "de": "Du tanzt gut!",
+              "tr": "Dansezi bine!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "wir -en, ihr -t va alohida fe'llar",
+      "points": [
+        {
+          "title": "Ko'plik",
+          "text": "wir wohnen, ihr wohnt, sie/Sie wohnen. wir va sie lug'atdagi kabi -en oladi.",
+          "examples": [
+            {
+              "de": "Die Kinder spielen Fußball.",
+              "tr": "Bolalar futbol o'ynayapti."
+            }
+          ]
+        },
+        {
+          "title": "-t bilan tugagan o'zak: -e- qo'shiladi",
+          "text": "Aytish oson bo'lishi uchun t dan keyin e qo'shiladi: du arbeitest, er arbeitet, ihr arbeitet.",
+          "examples": [
+            {
+              "de": "Arbeitest du im Café?",
+              "tr": "Kafeda ishlaysanmi?"
+            },
+            {
+              "de": "Er arbeitet als Kellner.",
+              "tr": "U ofitsiant bo‘lib ishlaydi."
+            }
+          ]
+        },
+        {
+          "title": "-s, -ß, -z bilan tugagan o'zak",
+          "text": "du da faqat -t qo'shiladi, s siz: du heißt, du tanzt.",
+          "examples": [
+            {
+              "de": "Heißt du Lena?",
+              "tr": "Isming Lenami?"
+            },
+            {
+              "de": "Du tanzt gut!",
+              "tr": "Sen yaxshi raqs tushasan!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "wir -en, ihr -t और खास क्रियाएँ",
+      "points": [
+        {
+          "title": "बहुवचन",
+          "text": "wir wohnen, ihr wohnt, sie/Sie wohnen। wir और sie में शब्दकोश वाला अंत -en।",
+          "examples": [
+            {
+              "de": "Die Kinder spielen Fußball.",
+              "tr": "बच्चे फ़ुटबॉल खेलते हैं।"
+            }
+          ]
+        },
+        {
+          "title": "-t पर खत्म मूल: -e- जोड़ो",
+          "text": "बोलना आसान हो, इसलिए t के बाद e जोड़ते हैं: du arbeitest, er arbeitet, ihr arbeitet।",
+          "examples": [
+            {
+              "de": "Arbeitest du im Café?",
+              "tr": "क्या तुम कैफ़े में काम करते हो?"
+            },
+            {
+              "de": "Er arbeitet als Kellner.",
+              "tr": "वह वेटर का काम करता है।"
+            }
+          ]
+        },
+        {
+          "title": "-s, -ß, -z पर खत्म मूल",
+          "text": "du के साथ सिर्फ़ -t जोड़ते हैं, s नहीं: du heißt, du tanzt।",
+          "examples": [
+            {
+              "de": "Heißt du Lena?",
+              "tr": "क्या तुम्हारा नाम लेना है?"
+            },
+            {
+              "de": "Du tanzt gut!",
+              "tr": "तुम अच्छा नाचते हो!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "wir -en وihr -t وأفعال خاصة",
+      "points": [
+        {
+          "title": "الجمع",
+          "text": "wir wohnen، ihr wohnt، sie/Sie wohnen. مع wir وsie تكون النهاية كما في القاموس: -en.",
+          "examples": [
+            {
+              "de": "Die Kinder spielen Fußball.",
+              "tr": "الأطفال يلعبون كرة القدم."
+            }
+          ]
+        },
+        {
+          "title": "جذر ينتهي بـ -t: نضيف -e-",
+          "text": "لتسهيل النطق نضيف e بعد t: du arbeitest، er arbeitet، ihr arbeitet.",
+          "examples": [
+            {
+              "de": "Arbeitest du im Café?",
+              "tr": "هل تعمل في المقهى؟"
+            },
+            {
+              "de": "Er arbeitet als Kellner.",
+              "tr": "يعمل نادلاً."
+            }
+          ]
+        },
+        {
+          "title": "جذر ينتهي بـ -s أو -ß أو -z",
+          "text": "مع du نضيف -t فقط بدون s: du heißt، du tanzt.",
+          "examples": [
+            {
+              "de": "Heißt du Lena?",
+              "tr": "هل اسمك لينا؟"
+            },
+            {
+              "de": "Du tanzt gut!",
+              "tr": "أنت ترقص جيداً!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meet-meadow-seven": {
+    "ru": {
+      "title": "Практика: новый сосед",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Рассказываешь о себе всем, что уже знаешь. gern значит «с удовольствием» и стоит после глагола, auch значит «тоже».",
+          "examples": [
+            {
+              "de": "Ich spiele gern Fußball.",
+              "tr": "Я люблю играть в футбол."
+            },
+            {
+              "de": "Wir haben auch einen Hund.",
+              "tr": "У нас тоже есть собака."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: новий сусід",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Розповідаєш про себе всім, що вже знаєш. gern означає «із задоволенням» і стоїть після дієслова, auch означає «теж».",
+          "examples": [
+            {
+              "de": "Ich spiele gern Fußball.",
+              "tr": "Я люблю грати у футбол."
+            },
+            {
+              "de": "Wir haben auch einen Hund.",
+              "tr": "У нас теж є собака."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: the new neighbour",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "Talk about yourself with what you already know. gern means \"gladly, like to\" and comes after the verb, auch means \"too\".",
+          "examples": [
+            {
+              "de": "Ich spiele gern Fußball.",
+              "tr": "I like playing football."
+            },
+            {
+              "de": "Wir haben auch einen Hund.",
+              "tr": "We have a dog too."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: nowy sąsiad",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Opowiadasz o sobie tym, co już znasz. gern znaczy „chętnie” i stoi po czasowniku, auch znaczy „też”.",
+          "examples": [
+            {
+              "de": "Ich spiele gern Fußball.",
+              "tr": "Lubię grać w piłkę nożną."
+            },
+            {
+              "de": "Wir haben auch einen Hund.",
+              "tr": "My też mamy psa."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: el vecino nuevo",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Hablas de ti con lo que ya sabes. gern significa \"con gusto\" y va después del verbo, auch significa \"también\".",
+          "examples": [
+            {
+              "de": "Ich spiele gern Fußball.",
+              "tr": "Me gusta jugar al fútbol."
+            },
+            {
+              "de": "Wir haben auch einen Hund.",
+              "tr": "Nosotros también tenemos un perro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : le nouveau voisin",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "Tu parles de toi avec ce que tu sais déjà. gern veut dire « volontiers, aimer faire » et se met après le verbe, auch veut dire « aussi ».",
+          "examples": [
+            {
+              "de": "Ich spiele gern Fußball.",
+              "tr": "J’aime jouer au foot."
+            },
+            {
+              "de": "Wir haben auch einen Hund.",
+              "tr": "Nous avons aussi un chien."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: yeni komşu",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Bildiklerinle kendinden bahsedersin. gern \"severek\" demektir ve fiilden sonra gelir, auch \"de, da\" demektir.",
+          "examples": [
+            {
+              "de": "Ich spiele gern Fußball.",
+              "tr": "Futbol oynamayı severim."
+            },
+            {
+              "de": "Wir haben auch einen Hund.",
+              "tr": "Bizim de bir köpeğimiz var."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: vecinul nou",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Vorbești despre tine cu ce știi deja. gern înseamnă „cu plăcere” și vine după verb, auch înseamnă „și, de asemenea”.",
+          "examples": [
+            {
+              "de": "Ich spiele gern Fußball.",
+              "tr": "Îmi place să joc fotbal."
+            },
+            {
+              "de": "Wir haben auch einen Hund.",
+              "tr": "Și noi avem un câine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: yangi qo'shni",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Bilganlaring bilan o'zing haqingda gapirasan. gern \"jon deb\" degani va fe'ldan keyin turadi, auch \"ham\" degani.",
+          "examples": [
+            {
+              "de": "Ich spiele gern Fußball.",
+              "tr": "Men futbol o'ynashni yaxshi ko'raman."
+            },
+            {
+              "de": "Wir haben auch einen Hund.",
+              "tr": "Bizda ham it bor."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: नया पड़ोसी",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "जो पहले से जानते हो, उससे अपने बारे में बताओ। gern मतलब \"खुशी से, पसंद से\" और यह क्रिया के बाद आता है, auch मतलब \"भी\"।",
+          "examples": [
+            {
+              "de": "Ich spiele gern Fußball.",
+              "tr": "मुझे फ़ुटबॉल खेलना पसंद है।"
+            },
+            {
+              "de": "Wir haben auch einen Hund.",
+              "tr": "हमारे पास भी एक कुत्ता है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: الجار الجديد",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "تتحدث عن نفسك بما تعرفه. gern تعني \"بكل سرور، أحب أن\" وتأتي بعد الفعل، وauch تعني \"أيضاً\".",
+          "examples": [
+            {
+              "de": "Ich spiele gern Fußball.",
+              "tr": "أحب لعب كرة القدم."
+            },
+            {
+              "de": "Wir haben auch einen Hund.",
+              "tr": "عندنا كلب أيضاً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meet-meadow-eight": {
+    "ru": {
+      "title": "Практика: сколько тебе лет?",
+      "points": [
+        {
+          "title": "Возраст через sein",
+          "text": "Возраст говорят глаголом sein: Ich bin 25 Jahre alt, дословно «я 25 лет старый».",
+          "examples": [
+            {
+              "de": "Wie alt bist du?",
+              "tr": "Сколько тебе лет?"
+            },
+            {
+              "de": "Ich bin zwanzig Jahre alt.",
+              "tr": "Мне двадцать лет."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: скільки тобі років?",
+      "points": [
+        {
+          "title": "Вік через sein",
+          "text": "Вік кажуть дієсловом sein: Ich bin 25 Jahre alt, дослівно «я 25 років старий».",
+          "examples": [
+            {
+              "de": "Wie alt bist du?",
+              "tr": "Скільки тобі років?"
+            },
+            {
+              "de": "Ich bin zwanzig Jahre alt.",
+              "tr": "Мені двадцять років."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: how old are you?",
+      "points": [
+        {
+          "title": "Age with sein",
+          "text": "Age is said with sein, just like in English: Ich bin 25 Jahre alt.",
+          "examples": [
+            {
+              "de": "Wie alt bist du?",
+              "tr": "How old are you?"
+            },
+            {
+              "de": "Ich bin zwanzig Jahre alt.",
+              "tr": "I am twenty years old."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: ile masz lat?",
+      "points": [
+        {
+          "title": "Wiek z sein",
+          "text": "Wiek podajemy z czasownikiem sein: Ich bin 25 Jahre alt, dosłownie „jestem 25 lat stary”.",
+          "examples": [
+            {
+              "de": "Wie alt bist du?",
+              "tr": "Ile masz lat?"
+            },
+            {
+              "de": "Ich bin zwanzig Jahre alt.",
+              "tr": "Mam dwadzieścia lat."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: ¿cuántos años tienes?",
+      "points": [
+        {
+          "title": "La edad con sein",
+          "text": "La edad se dice con sein, no con \"tener\": Ich bin 25 Jahre alt, literalmente \"soy 25 años viejo\".",
+          "examples": [
+            {
+              "de": "Wie alt bist du?",
+              "tr": "¿Cuántos años tienes?"
+            },
+            {
+              "de": "Ich bin zwanzig Jahre alt.",
+              "tr": "Tengo veinte años."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : quel âge as-tu ?",
+      "points": [
+        {
+          "title": "L’âge avec sein",
+          "text": "L’âge se dit avec sein, pas avec « avoir » : Ich bin 25 Jahre alt, mot à mot « je suis vieux de 25 ans ».",
+          "examples": [
+            {
+              "de": "Wie alt bist du?",
+              "tr": "Quel âge as-tu ?"
+            },
+            {
+              "de": "Ich bin zwanzig Jahre alt.",
+              "tr": "J’ai vingt ans."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: kaç yaşındasın?",
+      "points": [
+        {
+          "title": "Yaş sein ile",
+          "text": "Yaş sein fiiliyle söylenir: Ich bin 25 Jahre alt, yani \"25 yaşındayım\".",
+          "examples": [
+            {
+              "de": "Wie alt bist du?",
+              "tr": "Kaç yaşındasın?"
+            },
+            {
+              "de": "Ich bin zwanzig Jahre alt.",
+              "tr": "Yirmi yaşındayım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: câți ani ai?",
+      "points": [
+        {
+          "title": "Vârsta cu sein",
+          "text": "Vârsta se spune cu sein, nu cu „a avea”: Ich bin 25 Jahre alt, cuvânt cu cuvânt „sunt bătrân de 25 de ani”.",
+          "examples": [
+            {
+              "de": "Wie alt bist du?",
+              "tr": "Câți ani ai?"
+            },
+            {
+              "de": "Ich bin zwanzig Jahre alt.",
+              "tr": "Am douăzeci de ani."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: necha yoshdasan?",
+      "points": [
+        {
+          "title": "Yosh sein bilan",
+          "text": "Yosh sein fe'li bilan aytiladi: Ich bin 25 Jahre alt, ya'ni \"men 25 yoshdaman\".",
+          "examples": [
+            {
+              "de": "Wie alt bist du?",
+              "tr": "Necha yoshdasan?"
+            },
+            {
+              "de": "Ich bin zwanzig Jahre alt.",
+              "tr": "Men yigirma yoshdaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: तुम्हारी उम्र क्या है?",
+      "points": [
+        {
+          "title": "उम्र sein से",
+          "text": "उम्र sein क्रिया से बताते हैं: Ich bin 25 Jahre alt, यानी \"मैं 25 साल का हूँ\"।",
+          "examples": [
+            {
+              "de": "Wie alt bist du?",
+              "tr": "तुम्हारी उम्र क्या है?"
+            },
+            {
+              "de": "Ich bin zwanzig Jahre alt.",
+              "tr": "मैं बीस साल का हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: كم عمرك؟",
+      "points": [
+        {
+          "title": "العمر مع sein",
+          "text": "نقول العمر بالفعل sein: Ich bin 25 Jahre alt، أي \"عمري 25 سنة\".",
+          "examples": [
+            {
+              "de": "Wie alt bist du?",
+              "tr": "كم عمرك؟"
+            },
+            {
+              "de": "Ich bin zwanzig Jahre alt.",
+              "tr": "عمري عشرون سنة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meet-meadow-nine": {
+    "ru": {
+      "title": "Повторение: формы глаголов",
+      "points": [
+        {
+          "title": "sein (быть)",
+          "text": "Неправильный глагол: формы нужно запомнить.",
+          "examples": [
+            {
+              "de": "ich bin, du bist, er ist",
+              "tr": "я, ты, он (есть)"
+            },
+            {
+              "de": "wir sind, ihr seid, sie sind",
+              "tr": "мы, вы, они (есть)"
+            }
+          ]
+        },
+        {
+          "title": "haben (иметь)",
+          "text": "Тоже неправильный: у du и er пропадает буква b.",
+          "examples": [
+            {
+              "de": "ich habe, du hast, er hat",
+              "tr": "у меня, у тебя, у него есть"
+            },
+            {
+              "de": "wir haben, ihr habt, sie haben",
+              "tr": "у нас, у вас, у них есть"
+            }
+          ]
+        },
+        {
+          "title": "Все остальные глаголы",
+          "text": "Окончания всегда одни и те же: ich -e, du -st, er -t, wir -en, ihr -t, sie -en.",
+          "examples": [
+            {
+              "de": "ich lerne, du lernst, er lernt",
+              "tr": "я учу, ты учишь, он учит"
+            },
+            {
+              "de": "wir lernen, ihr lernt, sie lernen",
+              "tr": "мы учим, вы учите, они учат"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: форми дієслів",
+      "points": [
+        {
+          "title": "sein (бути)",
+          "text": "Неправильне дієслово: форми треба запам’ятати.",
+          "examples": [
+            {
+              "de": "ich bin, du bist, er ist",
+              "tr": "я, ти, він (є)"
+            },
+            {
+              "de": "wir sind, ihr seid, sie sind",
+              "tr": "ми, ви, вони (є)"
+            }
+          ]
+        },
+        {
+          "title": "haben (мати)",
+          "text": "Теж неправильне: у du і er зникає літера b.",
+          "examples": [
+            {
+              "de": "ich habe, du hast, er hat",
+              "tr": "у мене, у тебе, у нього є"
+            },
+            {
+              "de": "wir haben, ihr habt, sie haben",
+              "tr": "у нас, у вас, у них є"
+            }
+          ]
+        },
+        {
+          "title": "Усі інші дієслова",
+          "text": "Закінчення завжди однакові: ich -e, du -st, er -t, wir -en, ihr -t, sie -en.",
+          "examples": [
+            {
+              "de": "ich lerne, du lernst, er lernt",
+              "tr": "я вчу, ти вчиш, він вчить"
+            },
+            {
+              "de": "wir lernen, ihr lernt, sie lernen",
+              "tr": "ми вчимо, ви вчите, вони вчать"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: verb forms",
+      "points": [
+        {
+          "title": "sein (to be)",
+          "text": "An irregular verb: you need to remember the forms.",
+          "examples": [
+            {
+              "de": "ich bin, du bist, er ist",
+              "tr": "I am, you are, he is"
+            },
+            {
+              "de": "wir sind, ihr seid, sie sind",
+              "tr": "we are, you are, they are"
+            }
+          ]
+        },
+        {
+          "title": "haben (to have)",
+          "text": "Also irregular: with du and er the b disappears.",
+          "examples": [
+            {
+              "de": "ich habe, du hast, er hat",
+              "tr": "I have, you have, he has"
+            },
+            {
+              "de": "wir haben, ihr habt, sie haben",
+              "tr": "we have, you have, they have"
+            }
+          ]
+        },
+        {
+          "title": "All other verbs",
+          "text": "The endings are always the same: ich -e, du -st, er -t, wir -en, ihr -t, sie -en.",
+          "examples": [
+            {
+              "de": "ich lerne, du lernst, er lernt",
+              "tr": "I learn, you learn, he learns"
+            },
+            {
+              "de": "wir lernen, ihr lernt, sie lernen",
+              "tr": "we learn, you learn, they learn"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: formy czasowników",
+      "points": [
+        {
+          "title": "sein (być)",
+          "text": "Czasownik nieregularny: formy trzeba zapamiętać.",
+          "examples": [
+            {
+              "de": "ich bin, du bist, er ist",
+              "tr": "jestem, jesteś, on jest"
+            },
+            {
+              "de": "wir sind, ihr seid, sie sind",
+              "tr": "jesteśmy, jesteście, oni są"
+            }
+          ]
+        },
+        {
+          "title": "haben (mieć)",
+          "text": "Też nieregularny: przy du i er znika litera b.",
+          "examples": [
+            {
+              "de": "ich habe, du hast, er hat",
+              "tr": "mam, masz, on ma"
+            },
+            {
+              "de": "wir haben, ihr habt, sie haben",
+              "tr": "mamy, macie, oni mają"
+            }
+          ]
+        },
+        {
+          "title": "Wszystkie inne czasowniki",
+          "text": "Końcówki są zawsze te same: ich -e, du -st, er -t, wir -en, ihr -t, sie -en.",
+          "examples": [
+            {
+              "de": "ich lerne, du lernst, er lernt",
+              "tr": "uczę się, uczysz się, on się uczy"
+            },
+            {
+              "de": "wir lernen, ihr lernt, sie lernen",
+              "tr": "uczymy się, uczycie się, oni się uczą"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: formas de los verbos",
+      "points": [
+        {
+          "title": "sein (ser, estar)",
+          "text": "Verbo irregular: hay que memorizar las formas.",
+          "examples": [
+            {
+              "de": "ich bin, du bist, er ist",
+              "tr": "yo soy, tú eres, él es"
+            },
+            {
+              "de": "wir sind, ihr seid, sie sind",
+              "tr": "somos, sois, son"
+            }
+          ]
+        },
+        {
+          "title": "haben (tener)",
+          "text": "También irregular: con du y er desaparece la b.",
+          "examples": [
+            {
+              "de": "ich habe, du hast, er hat",
+              "tr": "tengo, tienes, él tiene"
+            },
+            {
+              "de": "wir haben, ihr habt, sie haben",
+              "tr": "tenemos, tenéis, tienen"
+            }
+          ]
+        },
+        {
+          "title": "Todos los demás verbos",
+          "text": "Las terminaciones son siempre las mismas: ich -e, du -st, er -t, wir -en, ihr -t, sie -en.",
+          "examples": [
+            {
+              "de": "ich lerne, du lernst, er lernt",
+              "tr": "aprendo, aprendes, él aprende"
+            },
+            {
+              "de": "wir lernen, ihr lernt, sie lernen",
+              "tr": "aprendemos, aprendéis, aprenden"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : formes des verbes",
+      "points": [
+        {
+          "title": "sein (être)",
+          "text": "Verbe irrégulier : il faut retenir les formes.",
+          "examples": [
+            {
+              "de": "ich bin, du bist, er ist",
+              "tr": "je suis, tu es, il est"
+            },
+            {
+              "de": "wir sind, ihr seid, sie sind",
+              "tr": "nous sommes, vous êtes, ils sont"
+            }
+          ]
+        },
+        {
+          "title": "haben (avoir)",
+          "text": "Irrégulier aussi : avec du et er, le b disparaît.",
+          "examples": [
+            {
+              "de": "ich habe, du hast, er hat",
+              "tr": "j’ai, tu as, il a"
+            },
+            {
+              "de": "wir haben, ihr habt, sie haben",
+              "tr": "nous avons, vous avez, ils ont"
+            }
+          ]
+        },
+        {
+          "title": "Tous les autres verbes",
+          "text": "Les terminaisons sont toujours les mêmes : ich -e, du -st, er -t, wir -en, ihr -t, sie -en.",
+          "examples": [
+            {
+              "de": "ich lerne, du lernst, er lernt",
+              "tr": "j’apprends, tu apprends, il apprend"
+            },
+            {
+              "de": "wir lernen, ihr lernt, sie lernen",
+              "tr": "nous apprenons, vous apprenez, ils apprennent"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: fiil biçimleri",
+      "points": [
+        {
+          "title": "sein (olmak)",
+          "text": "Düzensiz fiil: biçimleri ezberlemek gerekir.",
+          "examples": [
+            {
+              "de": "ich bin, du bist, er ist",
+              "tr": "ben, sen, o (dır)"
+            },
+            {
+              "de": "wir sind, ihr seid, sie sind",
+              "tr": "biz, siz, onlar (dır)"
+            }
+          ]
+        },
+        {
+          "title": "haben (sahip olmak)",
+          "text": "Bu da düzensiz: du ve er ile b düşer.",
+          "examples": [
+            {
+              "de": "ich habe, du hast, er hat",
+              "tr": "benim, senin, onun var"
+            },
+            {
+              "de": "wir haben, ihr habt, sie haben",
+              "tr": "bizim, sizin, onların var"
+            }
+          ]
+        },
+        {
+          "title": "Diğer bütün fiiller",
+          "text": "Ekler hep aynıdır: ich -e, du -st, er -t, wir -en, ihr -t, sie -en.",
+          "examples": [
+            {
+              "de": "ich lerne, du lernst, er lernt",
+              "tr": "öğreniyorum, öğreniyorsun, öğreniyor"
+            },
+            {
+              "de": "wir lernen, ihr lernt, sie lernen",
+              "tr": "öğreniyoruz, öğreniyorsunuz, öğreniyorlar"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: formele verbelor",
+      "points": [
+        {
+          "title": "sein (a fi)",
+          "text": "Verb neregulat: formele trebuie memorate.",
+          "examples": [
+            {
+              "de": "ich bin, du bist, er ist",
+              "tr": "eu sunt, tu ești, el este"
+            },
+            {
+              "de": "wir sind, ihr seid, sie sind",
+              "tr": "suntem, sunteți, ei sunt"
+            }
+          ]
+        },
+        {
+          "title": "haben (a avea)",
+          "text": "Tot neregulat: la du și er dispare litera b.",
+          "examples": [
+            {
+              "de": "ich habe, du hast, er hat",
+              "tr": "am, ai, el are"
+            },
+            {
+              "de": "wir haben, ihr habt, sie haben",
+              "tr": "avem, aveți, ei au"
+            }
+          ]
+        },
+        {
+          "title": "Toate celelalte verbe",
+          "text": "Terminațiile sunt mereu aceleași: ich -e, du -st, er -t, wir -en, ihr -t, sie -en.",
+          "examples": [
+            {
+              "de": "ich lerne, du lernst, er lernt",
+              "tr": "învăț, înveți, el învață"
+            },
+            {
+              "de": "wir lernen, ihr lernt, sie lernen",
+              "tr": "învățăm, învățați, ei învață"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: fe'l shakllari",
+      "points": [
+        {
+          "title": "sein (bo'lmoq)",
+          "text": "Noto'g'ri fe'l: shakllarini yodlash kerak.",
+          "examples": [
+            {
+              "de": "ich bin, du bist, er ist",
+              "tr": "men, sen, u (-dir)"
+            },
+            {
+              "de": "wir sind, ihr seid, sie sind",
+              "tr": "biz, sizlar, ular (-dir)"
+            }
+          ]
+        },
+        {
+          "title": "haben (ega bo'lmoq)",
+          "text": "Bu ham noto'g'ri: du va er da b tushib qoladi.",
+          "examples": [
+            {
+              "de": "ich habe, du hast, er hat",
+              "tr": "menda, senda, unda bor"
+            },
+            {
+              "de": "wir haben, ihr habt, sie haben",
+              "tr": "bizda, sizlarda, ularda bor"
+            }
+          ]
+        },
+        {
+          "title": "Qolgan barcha fe'llar",
+          "text": "Qo'shimchalar doim bir xil: ich -e, du -st, er -t, wir -en, ihr -t, sie -en.",
+          "examples": [
+            {
+              "de": "ich lerne, du lernst, er lernt",
+              "tr": "o'rganaman, o'rganasan, o'rganadi"
+            },
+            {
+              "de": "wir lernen, ihr lernt, sie lernen",
+              "tr": "o'rganamiz, o'rganasizlar, o'rganishadi"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: क्रिया के रूप",
+      "points": [
+        {
+          "title": "sein (होना)",
+          "text": "अनियमित क्रिया: रूप याद करने होंगे।",
+          "examples": [
+            {
+              "de": "ich bin, du bist, er ist",
+              "tr": "मैं हूँ, तुम हो, वह है"
+            },
+            {
+              "de": "wir sind, ihr seid, sie sind",
+              "tr": "हम हैं, तुम सब हो, वे हैं"
+            }
+          ]
+        },
+        {
+          "title": "haben (रखना, होना)",
+          "text": "यह भी अनियमित है: du और er के साथ b हट जाता है।",
+          "examples": [
+            {
+              "de": "ich habe, du hast, er hat",
+              "tr": "मेरे, तुम्हारे, उसके पास है"
+            },
+            {
+              "de": "wir haben, ihr habt, sie haben",
+              "tr": "हमारे, तुम सबके, उनके पास है"
+            }
+          ]
+        },
+        {
+          "title": "बाकी सभी क्रियाएँ",
+          "text": "अंत हमेशा एक जैसे होते हैं: ich -e, du -st, er -t, wir -en, ihr -t, sie -en।",
+          "examples": [
+            {
+              "de": "ich lerne, du lernst, er lernt",
+              "tr": "मैं सीखता हूँ, तुम सीखते हो, वह सीखता है"
+            },
+            {
+              "de": "wir lernen, ihr lernt, sie lernen",
+              "tr": "हम सीखते हैं, तुम सब सीखते हो, वे सीखते हैं"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: صيغ الأفعال",
+      "points": [
+        {
+          "title": "sein (يكون)",
+          "text": "فعل شاذ: يجب حفظ صيغه.",
+          "examples": [
+            {
+              "de": "ich bin, du bist, er ist",
+              "tr": "أنا، أنت، هو"
+            },
+            {
+              "de": "wir sind, ihr seid, sie sind",
+              "tr": "نحن، أنتم، هم"
+            }
+          ]
+        },
+        {
+          "title": "haben (يملك)",
+          "text": "شاذ أيضاً: مع du وer يختفي حرف b.",
+          "examples": [
+            {
+              "de": "ich habe, du hast, er hat",
+              "tr": "عندي، عندك، عنده"
+            },
+            {
+              "de": "wir haben, ihr habt, sie haben",
+              "tr": "عندنا، عندكم، عندهم"
+            }
+          ]
+        },
+        {
+          "title": "جميع الأفعال الأخرى",
+          "text": "النهايات دائماً واحدة: ich -e، du -st، er -t، wir -en، ihr -t، sie -en.",
+          "examples": [
+            {
+              "de": "ich lerne, du lernst, er lernt",
+              "tr": "أتعلم، تتعلم، يتعلم"
+            },
+            {
+              "de": "wir lernen, ihr lernt, sie lernen",
+              "tr": "نتعلم، تتعلمون، يتعلمون"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meet-meadow-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "Местоимение по роду",
+          "text": "Слово с der заменяем на er, с die на sie, с das на es.",
+          "examples": [
+            {
+              "de": "Die Katze ist alt. Sie ist nett.",
+              "tr": "Кошка старая. Она милая."
+            }
+          ]
+        },
+        {
+          "title": "sein и haben",
+          "text": "Два главных глагола. Их формы не по правилу, их нужно помнить.",
+          "examples": [
+            {
+              "de": "Bist du krank?",
+              "tr": "Ты болен?"
+            },
+            {
+              "de": "Wir haben eine Katze.",
+              "tr": "У нас есть кошка."
+            }
+          ]
+        },
+        {
+          "title": "Особые глаголы",
+          "text": "Основа на -t получает лишнее e: du arbeitest. Основа на -ß у du без s: du heißt.",
+          "examples": [
+            {
+              "de": "Arbeitest du in München?",
+              "tr": "Ты работаешь в Мюнхене?"
+            },
+            {
+              "de": "Wie heißt du?",
+              "tr": "Как тебя зовут?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "Займенник за родом",
+          "text": "Слово з der замінюємо на er, з die на sie, з das на es.",
+          "examples": [
+            {
+              "de": "Die Katze ist alt. Sie ist nett.",
+              "tr": "Кішка стара. Вона мила."
+            }
+          ]
+        },
+        {
+          "title": "sein і haben",
+          "text": "Два головні дієслова. Їхні форми не за правилом, їх треба пам’ятати.",
+          "examples": [
+            {
+              "de": "Bist du krank?",
+              "tr": "Ти хворий?"
+            },
+            {
+              "de": "Wir haben eine Katze.",
+              "tr": "У нас є кішка."
+            }
+          ]
+        },
+        {
+          "title": "Особливі дієслова",
+          "text": "Основа на -t отримує зайве e: du arbeitest. Основа на -ß у du без s: du heißt.",
+          "examples": [
+            {
+              "de": "Arbeitest du in München?",
+              "tr": "Ти працюєш у Мюнхені?"
+            },
+            {
+              "de": "Wie heißt du?",
+              "tr": "Як тебе звати?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "Pronoun by gender",
+          "text": "A der word becomes er, a die word becomes sie, a das word becomes es.",
+          "examples": [
+            {
+              "de": "Die Katze ist alt. Sie ist nett.",
+              "tr": "The cat is old. It is nice."
+            }
+          ]
+        },
+        {
+          "title": "sein and haben",
+          "text": "The two main verbs. Their forms don’t follow the rule, you need to remember them.",
+          "examples": [
+            {
+              "de": "Bist du krank?",
+              "tr": "Are you ill?"
+            },
+            {
+              "de": "Wir haben eine Katze.",
+              "tr": "We have a cat."
+            }
+          ]
+        },
+        {
+          "title": "Special verbs",
+          "text": "A stem ending in -t gets an extra e: du arbeitest. A stem ending in -ß has no s with du: du heißt.",
+          "examples": [
+            {
+              "de": "Arbeitest du in München?",
+              "tr": "Do you work in Munich?"
+            },
+            {
+              "de": "Wie heißt du?",
+              "tr": "What’s your name?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "Zaimek według rodzaju",
+          "text": "Słowo z der zastępujemy er, z die sie, z das es.",
+          "examples": [
+            {
+              "de": "Die Katze ist alt. Sie ist nett.",
+              "tr": "Kot jest stary. Jest miły."
+            }
+          ]
+        },
+        {
+          "title": "sein i haben",
+          "text": "Dwa najważniejsze czasowniki. Ich formy nie są regularne, trzeba je pamiętać.",
+          "examples": [
+            {
+              "de": "Bist du krank?",
+              "tr": "Jesteś chory?"
+            },
+            {
+              "de": "Wir haben eine Katze.",
+              "tr": "Mamy kota."
+            }
+          ]
+        },
+        {
+          "title": "Czasowniki szczególne",
+          "text": "Temat na -t dostaje dodatkowe e: du arbeitest. Temat na -ß przy du nie ma s: du heißt.",
+          "examples": [
+            {
+              "de": "Arbeitest du in München?",
+              "tr": "Pracujesz w Monachium?"
+            },
+            {
+              "de": "Wie heißt du?",
+              "tr": "Jak masz na imię?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "Pronombre según el género",
+          "text": "Una palabra con der se cambia por er, con die por sie, con das por es.",
+          "examples": [
+            {
+              "de": "Die Katze ist alt. Sie ist nett.",
+              "tr": "La gata es vieja. Es simpática."
+            }
+          ]
+        },
+        {
+          "title": "sein y haben",
+          "text": "Los dos verbos principales. Sus formas no siguen la regla, hay que recordarlas.",
+          "examples": [
+            {
+              "de": "Bist du krank?",
+              "tr": "¿Estás enfermo?"
+            },
+            {
+              "de": "Wir haben eine Katze.",
+              "tr": "Tenemos una gata."
+            }
+          ]
+        },
+        {
+          "title": "Verbos especiales",
+          "text": "Una raíz en -t recibe una e extra: du arbeitest. Una raíz en -ß no lleva s con du: du heißt.",
+          "examples": [
+            {
+              "de": "Arbeitest du in München?",
+              "tr": "¿Trabajas en Múnich?"
+            },
+            {
+              "de": "Wie heißt du?",
+              "tr": "¿Cómo te llamas?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "Pronom selon le genre",
+          "text": "Un mot en der devient er, en die devient sie, en das devient es.",
+          "examples": [
+            {
+              "de": "Die Katze ist alt. Sie ist nett.",
+              "tr": "Le chat est vieux. Il est gentil."
+            }
+          ]
+        },
+        {
+          "title": "sein et haben",
+          "text": "Les deux verbes principaux. Leurs formes ne suivent pas la règle, il faut les retenir.",
+          "examples": [
+            {
+              "de": "Bist du krank?",
+              "tr": "Tu es malade ?"
+            },
+            {
+              "de": "Wir haben eine Katze.",
+              "tr": "Nous avons un chat."
+            }
+          ]
+        },
+        {
+          "title": "Verbes particuliers",
+          "text": "Un radical en -t prend un e en plus : du arbeitest. Un radical en -ß n’a pas de s avec du : du heißt.",
+          "examples": [
+            {
+              "de": "Arbeitest du in München?",
+              "tr": "Tu travailles à Munich ?"
+            },
+            {
+              "de": "Wie heißt du?",
+              "tr": "Comment tu t’appelles ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "Cinsiyete göre zamir",
+          "text": "der’li kelime er, die’li sie, das’lı es olur.",
+          "examples": [
+            {
+              "de": "Die Katze ist alt. Sie ist nett.",
+              "tr": "Kedi yaşlı. Çok tatlı."
+            }
+          ]
+        },
+        {
+          "title": "sein ve haben",
+          "text": "İki temel fiil. Biçimleri kurala uymaz, ezberlemek gerekir.",
+          "examples": [
+            {
+              "de": "Bist du krank?",
+              "tr": "Hasta mısın?"
+            },
+            {
+              "de": "Wir haben eine Katze.",
+              "tr": "Bir kedimiz var."
+            }
+          ]
+        },
+        {
+          "title": "Özel fiiller",
+          "text": "-t ile biten köke fazladan e gelir: du arbeitest. -ß ile biten kökte du ile s yok: du heißt.",
+          "examples": [
+            {
+              "de": "Arbeitest du in München?",
+              "tr": "Münih’te mi çalışıyorsun?"
+            },
+            {
+              "de": "Wie heißt du?",
+              "tr": "Adın ne?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "Pronumele după gen",
+          "text": "Un cuvânt cu der devine er, cu die devine sie, cu das devine es.",
+          "examples": [
+            {
+              "de": "Die Katze ist alt. Sie ist nett.",
+              "tr": "Pisica e bătrână. E drăguță."
+            }
+          ]
+        },
+        {
+          "title": "sein și haben",
+          "text": "Cele două verbe principale. Formele lor nu urmează regula, trebuie ținute minte.",
+          "examples": [
+            {
+              "de": "Bist du krank?",
+              "tr": "Ești bolnav?"
+            },
+            {
+              "de": "Wir haben eine Katze.",
+              "tr": "Avem o pisică."
+            }
+          ]
+        },
+        {
+          "title": "Verbe speciale",
+          "text": "O rădăcină în -t primește un e în plus: du arbeitest. O rădăcină în -ß nu are s la du: du heißt.",
+          "examples": [
+            {
+              "de": "Arbeitest du in München?",
+              "tr": "Lucrezi la München?"
+            },
+            {
+              "de": "Wie heißt du?",
+              "tr": "Cum te cheamă?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "Rodga qarab olmosh",
+          "text": "der li so'z er, die li sie, das li es bo'ladi.",
+          "examples": [
+            {
+              "de": "Die Katze ist alt. Sie ist nett.",
+              "tr": "Mushuk qari. U yoqimli."
+            }
+          ]
+        },
+        {
+          "title": "sein va haben",
+          "text": "Ikki asosiy fe'l. Shakllari qoidaga bo'ysunmaydi, ularni yodlash kerak.",
+          "examples": [
+            {
+              "de": "Bist du krank?",
+              "tr": "Kasalmisan?"
+            },
+            {
+              "de": "Wir haben eine Katze.",
+              "tr": "Bizda mushuk bor."
+            }
+          ]
+        },
+        {
+          "title": "Alohida fe'llar",
+          "text": "-t bilan tugagan o'zakka qo'shimcha e keladi: du arbeitest. -ß bilan tugagan o'zakda du da s bo'lmaydi: du heißt.",
+          "examples": [
+            {
+              "de": "Arbeitest du in München?",
+              "tr": "Myunxenda ishlaysanmi?"
+            },
+            {
+              "de": "Wie heißt du?",
+              "tr": "Isming nima?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "लिंग के अनुसार सर्वनाम",
+          "text": "der वाला शब्द er, die वाला sie, das वाला es बनता है।",
+          "examples": [
+            {
+              "de": "Die Katze ist alt. Sie ist nett.",
+              "tr": "बिल्ली बूढ़ी है। वह प्यारी है।"
+            }
+          ]
+        },
+        {
+          "title": "sein और haben",
+          "text": "दो मुख्य क्रियाएँ। इनके रूप नियम से नहीं बनते, इन्हें याद रखना होता है।",
+          "examples": [
+            {
+              "de": "Bist du krank?",
+              "tr": "क्या तुम बीमार हो?"
+            },
+            {
+              "de": "Wir haben eine Katze.",
+              "tr": "हमारे पास एक बिल्ली है।"
+            }
+          ]
+        },
+        {
+          "title": "खास क्रियाएँ",
+          "text": "-t पर खत्म मूल में एक e और लगता है: du arbeitest। -ß पर खत्म मूल में du के साथ s नहीं: du heißt।",
+          "examples": [
+            {
+              "de": "Arbeitest du in München?",
+              "tr": "क्या तुम म्यूनिख में काम करते हो?"
+            },
+            {
+              "de": "Wie heißt du?",
+              "tr": "तुम्हारा नाम क्या है?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "الضمير حسب الجنس",
+          "text": "الكلمة مع der تصبح er، ومع die تصبح sie، ومع das تصبح es.",
+          "examples": [
+            {
+              "de": "Die Katze ist alt. Sie ist nett.",
+              "tr": "القطة عجوز. إنها لطيفة."
+            }
+          ]
+        },
+        {
+          "title": "sein وhaben",
+          "text": "الفعلان الأساسيان. صيغهما لا تتبع القاعدة، ويجب حفظها.",
+          "examples": [
+            {
+              "de": "Bist du krank?",
+              "tr": "هل أنت مريض؟"
+            },
+            {
+              "de": "Wir haben eine Katze.",
+              "tr": "عندنا قطة."
+            }
+          ]
+        },
+        {
+          "title": "أفعال خاصة",
+          "text": "الجذر المنتهي بـ -t يأخذ e زائدة: du arbeitest. والجذر المنتهي بـ -ß لا يأخذ s مع du: du heißt.",
+          "examples": [
+            {
+              "de": "Arbeitest du in München?",
+              "tr": "هل تعمل في ميونخ؟"
+            },
+            {
+              "de": "Wie heißt du?",
+              "tr": "ما اسمك؟"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

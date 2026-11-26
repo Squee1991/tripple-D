@@ -1,0 +1,2112 @@
+{
+  "story-valley-one": {
+    "ru": {
+      "title": "Однажды давно: -te",
+      "points": [
+        {
+          "title": "Слабые глаголы: -te",
+          "text": "Основа + -te: ich machte, du machtest, er machte, wir machten, ihr machtet, sie machten. После -t и -d: -ete (arbeitete).",
+          "examples": [
+            {
+              "de": "Früher wohnten wir in einem Dorf.",
+              "tr": "Раньше мы жили в деревне."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Колись давно: -te",
+      "points": [
+        {
+          "title": "Слабкі дієслова: -te",
+          "text": "Основа + -te: ich machte, du machtest, er machte, wir machten, ihr machtet, sie machten. Після -t і -d: -ete (arbeitete).",
+          "examples": [
+            {
+              "de": "Früher wohnten wir in einem Dorf.",
+              "tr": "Раніше ми жили в селі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Long ago: -te",
+      "points": [
+        {
+          "title": "Weak verbs: -te",
+          "text": "Stem + -te: ich machte, du machtest, er machte, wir machten, ihr machtet, sie machten. After -t and -d: -ete (arbeitete).",
+          "examples": [
+            {
+              "de": "Früher wohnten wir in einem Dorf.",
+              "tr": "We used to live in a village."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Dawno temu: -te",
+      "points": [
+        {
+          "title": "Czasowniki słabe: -te",
+          "text": "Temat + -te: ich machte, du machtest, er machte, wir machten, ihr machtet, sie machten. Po -t i -d: -ete (arbeitete).",
+          "examples": [
+            {
+              "de": "Früher wohnten wir in einem Dorf.",
+              "tr": "Kiedyś mieszkaliśmy na wsi."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Hace mucho: -te",
+      "points": [
+        {
+          "title": "Verbos débiles: -te",
+          "text": "Raíz + -te: ich machte, du machtest, er machte, wir machten, ihr machtet, sie machten. Tras -t y -d: -ete (arbeitete).",
+          "examples": [
+            {
+              "de": "Früher wohnten wir in einem Dorf.",
+              "tr": "Antes vivíamos en un pueblo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Il y a longtemps : -te",
+      "points": [
+        {
+          "title": "Verbes faibles : -te",
+          "text": "Radical + -te : ich machte, du machtest, er machte, wir machten, ihr machtet, sie machten. Après -t et -d : -ete (arbeitete).",
+          "examples": [
+            {
+              "de": "Früher wohnten wir in einem Dorf.",
+              "tr": "Avant, nous habitions dans un village."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Bir zamanlar: -te",
+      "points": [
+        {
+          "title": "Zayıf fiiller: -te",
+          "text": "Kök + -te: ich machte, du machtest, er machte, wir machten, ihr machtet, sie machten. -t ve -d’den sonra: -ete (arbeitete).",
+          "examples": [
+            {
+              "de": "Früher wohnten wir in einem Dorf.",
+              "tr": "Eskiden bir köyde yaşıyorduk."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Demult: -te",
+      "points": [
+        {
+          "title": "Verbe slabe: -te",
+          "text": "Rădăcină + -te: ich machte, du machtest, er machte, wir machten, ihr machtet, sie machten. După -t și -d: -ete (arbeitete).",
+          "examples": [
+            {
+              "de": "Früher wohnten wir in einem Dorf.",
+              "tr": "Pe vremuri locuiam într-un sat."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Bir paytlar: -te",
+      "points": [
+        {
+          "title": "Kuchsiz fe'llar: -te",
+          "text": "O'zak + -te: ich machte, du machtest, er machte, wir machten, ihr machtet, sie machten. -t va -d dan keyin: -ete (arbeitete).",
+          "examples": [
+            {
+              "de": "Früher wohnten wir in einem Dorf.",
+              "tr": "Ilgari biz qishloqda yashardik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "बहुत पहले: -te",
+      "points": [
+        {
+          "title": "कमज़ोर क्रियाएँ: -te",
+          "text": "मूल + -te: ich machte, du machtest, er machte, wir machten, ihr machtet, sie machten। -t और -d के बाद: -ete (arbeitete)।",
+          "examples": [
+            {
+              "de": "Früher wohnten wir in einem Dorf.",
+              "tr": "पहले हम एक गाँव में रहते थे।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "منذ زمن: -te",
+      "points": [
+        {
+          "title": "الأفعال الضعيفة: -te",
+          "text": "الجذر + -te: ich machte، du machtest، er machte، wir machten، ihr machtet، sie machten. وبعد -t و-d: -ete (arbeitete).",
+          "examples": [
+            {
+              "de": "Früher wohnten wir in einem Dorf.",
+              "tr": "كنا نسكن في قرية سابقاً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "story-valley-two": {
+    "ru": {
+      "title": "Вдруг: сильные глаголы",
+      "points": [
+        {
+          "title": "Сильные глаголы: новый корень",
+          "text": "Корень меняется, а у ich и er нет окончания: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Во множественном: wir gingen, sie kamen. Эти формы учим.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Вдруг он увидел свет."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Раптом: сильні дієслова",
+      "points": [
+        {
+          "title": "Сильні дієслова: новий корінь",
+          "text": "Корінь змінюється, а в ich та er немає закінчення: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. У множині: wir gingen, sie kamen. Ці форми вчимо.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Раптом він побачив світло."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Suddenly: strong verbs",
+      "points": [
+        {
+          "title": "Strong verbs: a new stem",
+          "text": "The stem changes and ich and er have no ending: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Plural: wir gingen, sie kamen. Learn these forms.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Suddenly he saw a light."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Nagle: czasowniki mocne",
+      "points": [
+        {
+          "title": "Czasowniki mocne: nowy temat",
+          "text": "Temat się zmienia, a ich i er nie mają końcówki: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. W mnogiej: wir gingen, sie kamen. Tych form się uczymy.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Nagle zobaczył światło."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "De repente: verbos fuertes",
+      "points": [
+        {
+          "title": "Verbos fuertes: raíz nueva",
+          "text": "La raíz cambia y ich y er no tienen terminación: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Plural: wir gingen, sie kamen. Hay que aprenderlas.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "De repente vio una luz."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Soudain : verbes forts",
+      "points": [
+        {
+          "title": "Verbes forts : nouveau radical",
+          "text": "Le radical change et ich et er n’ont pas de terminaison : gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Pluriel : wir gingen, sie kamen. À apprendre.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Soudain, il vit une lumière."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Birden: güçlü fiiller",
+      "points": [
+        {
+          "title": "Güçlü fiiller: yeni kök",
+          "text": "Kök değişir, ich ve er ek almaz: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Çoğul: wir gingen, sie kamen. Bunlar ezberlenir.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Birden bir ışık gördü."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Deodată: verbe tari",
+      "points": [
+        {
+          "title": "Verbe tari: rădăcină nouă",
+          "text": "Rădăcina se schimbă, iar ich și er nu au terminație: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Plural: wir gingen, sie kamen. Se învață.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Deodată a văzut o lumină."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "To'satdan: kuchli fe'llar",
+      "points": [
+        {
+          "title": "Kuchli fe'llar: yangi o'zak",
+          "text": "O'zak o'zgaradi, ich va er da qo'shimcha yo'q: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Ko'plik: wir gingen, sie kamen. Ularni yodlaymiz.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "To'satdan u yorug'lik ko'rdi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अचानक: मज़बूत क्रियाएँ",
+      "points": [
+        {
+          "title": "मज़बूत क्रियाएँ: नया मूल",
+          "text": "मूल बदलता है और ich व er में कोई अंत नहीं: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr। बहुवचन: wir gingen, sie kamen। इन्हें याद करो।",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "अचानक उसे एक रोशनी दिखी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "فجأة: الأفعال القوية",
+      "points": [
+        {
+          "title": "الأفعال القوية: جذر جديد",
+          "text": "يتغير الجذر ولا نهاية مع ich وer: gehen → ging، kommen → kam، sehen → sah، fahren → fuhr. والجمع: wir gingen، sie kamen. نحفظها.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "فجأة رأى ضوءاً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "story-valley-three": {
+    "ru": {
+      "title": "Долгое путешествие",
+      "points": [
+        {
+          "title": "Сильные глаголы: новый корень",
+          "text": "Корень меняется, а у ich и er нет окончания: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Во множественном: wir gingen, sie kamen. Эти формы учим.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Вдруг он увидел свет."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Довга подорож",
+      "points": [
+        {
+          "title": "Сильні дієслова: новий корінь",
+          "text": "Корінь змінюється, а в ich та er немає закінчення: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. У множині: wir gingen, sie kamen. Ці форми вчимо.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Раптом він побачив світло."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "A long journey",
+      "points": [
+        {
+          "title": "Strong verbs: a new stem",
+          "text": "The stem changes and ich and er have no ending: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Plural: wir gingen, sie kamen. Learn these forms.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Suddenly he saw a light."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Długa podróż",
+      "points": [
+        {
+          "title": "Czasowniki mocne: nowy temat",
+          "text": "Temat się zmienia, a ich i er nie mają końcówki: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. W mnogiej: wir gingen, sie kamen. Tych form się uczymy.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Nagle zobaczył światło."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Un largo viaje",
+      "points": [
+        {
+          "title": "Verbos fuertes: raíz nueva",
+          "text": "La raíz cambia y ich y er no tienen terminación: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Plural: wir gingen, sie kamen. Hay que aprenderlas.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "De repente vio una luz."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Un long voyage",
+      "points": [
+        {
+          "title": "Verbes forts : nouveau radical",
+          "text": "Le radical change et ich et er n’ont pas de terminaison : gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Pluriel : wir gingen, sie kamen. À apprendre.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Soudain, il vit une lumière."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Uzun bir yolculuk",
+      "points": [
+        {
+          "title": "Güçlü fiiller: yeni kök",
+          "text": "Kök değişir, ich ve er ek almaz: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Çoğul: wir gingen, sie kamen. Bunlar ezberlenir.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Birden bir ışık gördü."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "O călătorie lungă",
+      "points": [
+        {
+          "title": "Verbe tari: rădăcină nouă",
+          "text": "Rădăcina se schimbă, iar ich și er nu au terminație: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Plural: wir gingen, sie kamen. Se învață.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Deodată a văzut o lumină."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Uzoq safar",
+      "points": [
+        {
+          "title": "Kuchli fe'llar: yangi o'zak",
+          "text": "O'zak o'zgaradi, ich va er da qo'shimcha yo'q: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Ko'plik: wir gingen, sie kamen. Ularni yodlaymiz.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "To'satdan u yorug'lik ko'rdi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "लंबी यात्रा",
+      "points": [
+        {
+          "title": "मज़बूत क्रियाएँ: नया मूल",
+          "text": "मूल बदलता है और ich व er में कोई अंत नहीं: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr। बहुवचन: wir gingen, sie kamen। इन्हें याद करो।",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "अचानक उसे एक रोशनी दिखी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "رحلة طويلة",
+      "points": [
+        {
+          "title": "الأفعال القوية: جذر جديد",
+          "text": "يتغير الجذر ولا نهاية مع ich وer: gehen → ging، kommen → kam، sehen → sah، fahren → fuhr. والجمع: wir gingen، sie kamen. نحفظها.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "فجأة رأى ضوءاً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "story-valley-four": {
+    "ru": {
+      "title": "Наконец приехали",
+      "points": [
+        {
+          "title": "Смешанные и с приставкой",
+          "text": "Смешанные меняют корень и получают -te: bringen → brachte, denken → dachte, wissen → wusste. Приставка уходит в конец: stand auf, kam an.",
+          "examples": [
+            {
+              "de": "Ich stand um sechs Uhr auf.",
+              "tr": "Я встал в шесть часов."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Нарешті приїхали",
+      "points": [
+        {
+          "title": "Змішані й з префіксом",
+          "text": "Змішані змінюють корінь і отримують -te: bringen → brachte, denken → dachte, wissen → wusste. Префікс іде в кінець: stand auf, kam an.",
+          "examples": [
+            {
+              "de": "Ich stand um sechs Uhr auf.",
+              "tr": "Я встав о шостій."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Finally arrived",
+      "points": [
+        {
+          "title": "Mixed verbs and prefixes",
+          "text": "Mixed verbs change the stem and add -te: bringen → brachte, denken → dachte, wissen → wusste. The prefix goes to the end: stand auf, kam an.",
+          "examples": [
+            {
+              "de": "Ich stand um sechs Uhr auf.",
+              "tr": "I got up at six."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Wreszcie dotarliśmy",
+      "points": [
+        {
+          "title": "Mieszane i z przedrostkiem",
+          "text": "Mieszane zmieniają temat i dostają -te: bringen → brachte, denken → dachte, wissen → wusste. Przedrostek idzie na koniec: stand auf, kam an.",
+          "examples": [
+            {
+              "de": "Ich stand um sechs Uhr auf.",
+              "tr": "Wstałem o szóstej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Por fin llegamos",
+      "points": [
+        {
+          "title": "Mixtos y con prefijo",
+          "text": "Los mixtos cambian la raíz y llevan -te: bringen → brachte, denken → dachte, wissen → wusste. El prefijo va al final: stand auf, kam an.",
+          "examples": [
+            {
+              "de": "Ich stand um sechs Uhr auf.",
+              "tr": "Me levanté a las seis."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Enfin arrivés",
+      "points": [
+        {
+          "title": "Verbes mixtes et à préfixe",
+          "text": "Les mixtes changent de radical et prennent -te : bringen → brachte, denken → dachte, wissen → wusste. Le préfixe va à la fin : stand auf, kam an.",
+          "examples": [
+            {
+              "de": "Ich stand um sechs Uhr auf.",
+              "tr": "Je me suis levé à six heures."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sonunda vardık",
+      "points": [
+        {
+          "title": "Karma ve ön ekli fiiller",
+          "text": "Karma fiiller kök değiştirir ve -te alır: bringen → brachte, denken → dachte, wissen → wusste. Ön ek sona gider: stand auf, kam an.",
+          "examples": [
+            {
+              "de": "Ich stand um sechs Uhr auf.",
+              "tr": "Saat altıda kalktım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "În sfârșit am ajuns",
+      "points": [
+        {
+          "title": "Mixte și cu prefix",
+          "text": "Mixtele își schimbă rădăcina și primesc -te: bringen → brachte, denken → dachte, wissen → wusste. Prefixul merge la final: stand auf, kam an.",
+          "examples": [
+            {
+              "de": "Ich stand um sechs Uhr auf.",
+              "tr": "M-am trezit la șase."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nihoyat yetib keldik",
+      "points": [
+        {
+          "title": "Aralash va old qo'shimchali",
+          "text": "Aralashlar o'zakni o'zgartiradi va -te oladi: bringen → brachte, denken → dachte, wissen → wusste. Old qo'shimcha oxiriga: stand auf, kam an.",
+          "examples": [
+            {
+              "de": "Ich stand um sechs Uhr auf.",
+              "tr": "Men soat oltida turdim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "आख़िरकार पहुँच गए",
+      "points": [
+        {
+          "title": "मिश्रित और उपसर्ग वाली",
+          "text": "मिश्रित क्रियाएँ मूल बदलती हैं और -te लेती हैं: bringen → brachte, denken → dachte, wissen → wusste। उपसर्ग अंत में: stand auf, kam an।",
+          "examples": [
+            {
+              "de": "Ich stand um sechs Uhr auf.",
+              "tr": "मैं छह बजे उठा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "وصلنا أخيراً",
+      "points": [
+        {
+          "title": "المختلطة وذات السابقة",
+          "text": "المختلطة تغير جذرها وتأخذ -te: bringen → brachte، denken → dachte، wissen → wusste. والسابقة في الآخر: stand auf، kam an.",
+          "examples": [
+            {
+              "de": "Ich stand um sechs Uhr auf.",
+              "tr": "استيقظت في السادسة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "story-valley-five": {
+    "ru": {
+      "title": "als и wenn",
+      "points": [
+        {
+          "title": "als или wenn",
+          "text": "als: одно событие или один период в прошлом. wenn: то, что повторялось (immer wenn). Глагол в придаточном в конце.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Когда я был ребёнком, я жил в Гамбурге."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "als і wenn",
+      "points": [
+        {
+          "title": "als чи wenn",
+          "text": "als: одна подія або один період у минулому. wenn: те, що повторювалося (immer wenn). Дієслово в підрядному в кінці.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Коли я був дитиною, я жив у Гамбурзі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "als and wenn",
+      "points": [
+        {
+          "title": "als or wenn",
+          "text": "als: one event or one period in the past. wenn: something that happened repeatedly (immer wenn). The verb goes to the end.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "When I was a child, I lived in Hamburg."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "als i wenn",
+      "points": [
+        {
+          "title": "als czy wenn",
+          "text": "als: jedno zdarzenie albo jeden okres w przeszłości. wenn: coś, co się powtarzało (immer wenn). Czasownik na końcu.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Kiedy byłem dzieckiem, mieszkałem w Hamburgu."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "als y wenn",
+      "points": [
+        {
+          "title": "als o wenn",
+          "text": "als: un hecho o un periodo en el pasado. wenn: algo que se repetía (immer wenn). El verbo va al final.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Cuando era niño, vivía en Hamburgo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "als et wenn",
+      "points": [
+        {
+          "title": "als ou wenn",
+          "text": "als : un seul événement ou une période du passé. wenn : ce qui se répétait (immer wenn). Le verbe va à la fin.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Quand j’étais enfant, j’habitais à Hambourg."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "als ve wenn",
+      "points": [
+        {
+          "title": "als mı, wenn mi",
+          "text": "als: geçmişte tek olay ya da dönem. wenn: tekrarlanan şey (immer wenn). Fiil sonda.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Çocukken Hamburg’da yaşıyordum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "als și wenn",
+      "points": [
+        {
+          "title": "als sau wenn",
+          "text": "als: un eveniment sau o perioadă în trecut. wenn: ceva ce se repeta (immer wenn). Verbul la final.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Când eram copil, locuiam în Hamburg."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "als va wenn",
+      "points": [
+        {
+          "title": "als yoki wenn",
+          "text": "als: o'tmishdagi bitta voqea yoki davr. wenn: takrorlangan narsa (immer wenn). Fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Bolaligimda Gamburgda yashardim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "als और wenn",
+      "points": [
+        {
+          "title": "als या wenn",
+          "text": "als: भूतकाल की एक घटना या एक दौर। wenn: बार-बार होने वाली बात (immer wenn)। क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "जब मैं बच्चा था, मैं हैम्बर्ग में रहता था।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "als وwenn",
+      "points": [
+        {
+          "title": "als أم wenn",
+          "text": "als: حدث واحد أو فترة واحدة في الماضي. wenn: ما كان يتكرر (immer wenn). والفعل في الآخر.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "عندما كنت طفلاً كنت أسكن في هامبورغ."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "story-valley-six": {
+    "ru": {
+      "title": "Расскажи историю",
+      "points": [
+        {
+          "title": "zuerst, dann, am Ende",
+          "text": "Рассказываем по порядку: zuerst, dann, danach, später, am Ende. После них глагол сразу, на втором месте.",
+          "examples": [
+            {
+              "de": "Später fuhren wir nach Hause.",
+              "tr": "Позже мы поехали домой."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Розкажи історію",
+      "points": [
+        {
+          "title": "zuerst, dann, am Ende",
+          "text": "Розповідаємо по черзі: zuerst, dann, danach, später, am Ende. Після них дієслово одразу, на другому місці.",
+          "examples": [
+            {
+              "de": "Später fuhren wir nach Hause.",
+              "tr": "Пізніше ми поїхали додому."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Tell a story",
+      "points": [
+        {
+          "title": "zuerst, dann, am Ende",
+          "text": "Telling events in order: zuerst, dann, danach, später, am Ende. The verb comes right after, in second place.",
+          "examples": [
+            {
+              "de": "Später fuhren wir nach Hause.",
+              "tr": "Later we drove home."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Opowiedz historię",
+      "points": [
+        {
+          "title": "zuerst, dann, am Ende",
+          "text": "Opowiadamy po kolei: zuerst, dann, danach, später, am Ende. Po nich od razu czasownik, na drugim miejscu.",
+          "examples": [
+            {
+              "de": "Später fuhren wir nach Hause.",
+              "tr": "Później pojechaliśmy do domu."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Cuenta una historia",
+      "points": [
+        {
+          "title": "zuerst, dann, am Ende",
+          "text": "Contamos en orden: zuerst, dann, danach, später, am Ende. Justo después va el verbo, en segundo lugar.",
+          "examples": [
+            {
+              "de": "Später fuhren wir nach Hause.",
+              "tr": "Más tarde volvimos a casa."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Raconte une histoire",
+      "points": [
+        {
+          "title": "zuerst, dann, am Ende",
+          "text": "On raconte dans l’ordre : zuerst, dann, danach, später, am Ende. Le verbe suit tout de suite, en deuxième position.",
+          "examples": [
+            {
+              "de": "Später fuhren wir nach Hause.",
+              "tr": "Plus tard, nous sommes rentrés."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Bir hikâye anlat",
+      "points": [
+        {
+          "title": "zuerst, dann, am Ende",
+          "text": "Sırayla anlatırız: zuerst, dann, danach, später, am Ende. Ardından hemen fiil gelir, ikinci sırada.",
+          "examples": [
+            {
+              "de": "Später fuhren wir nach Hause.",
+              "tr": "Daha sonra eve döndük."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Spune o poveste",
+      "points": [
+        {
+          "title": "zuerst, dann, am Ende",
+          "text": "Povestim în ordine: zuerst, dann, danach, später, am Ende. Imediat după vine verbul, pe locul doi.",
+          "examples": [
+            {
+              "de": "Später fuhren wir nach Hause.",
+              "tr": "Mai târziu am mers acasă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Hikoya aytib ber",
+      "points": [
+        {
+          "title": "zuerst, dann, am Ende",
+          "text": "Tartib bilan aytamiz: zuerst, dann, danach, später, am Ende. Ulardan keyin darhol fe'l, ikkinchi o'rinda.",
+          "examples": [
+            {
+              "de": "Später fuhren wir nach Hause.",
+              "tr": "Keyinroq uyga ketdik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कहानी सुनाओ",
+      "points": [
+        {
+          "title": "zuerst, dann, am Ende",
+          "text": "क्रम से बताते हैं: zuerst, dann, danach, später, am Ende। इनके तुरंत बाद क्रिया, दूसरे स्थान पर।",
+          "examples": [
+            {
+              "de": "Später fuhren wir nach Hause.",
+              "tr": "बाद में हम घर गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "احكِ قصة",
+      "points": [
+        {
+          "title": "zuerst وdann وam Ende",
+          "text": "نروي بالترتيب: zuerst، dann، danach، später، am Ende. ويأتي الفعل بعدها مباشرة في المكان الثاني.",
+          "examples": [
+            {
+              "de": "Später fuhren wir nach Hause.",
+              "tr": "لاحقاً عدنا إلى البيت."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "story-valley-seven": {
+    "ru": {
+      "title": "Встреча в парке",
+      "points": [
+        {
+          "title": "Сильные глаголы: новый корень",
+          "text": "Корень меняется, а у ich и er нет окончания: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Во множественном: wir gingen, sie kamen. Эти формы учим.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Вдруг он увидел свет."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Зустріч у парку",
+      "points": [
+        {
+          "title": "Сильні дієслова: новий корінь",
+          "text": "Корінь змінюється, а в ich та er немає закінчення: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. У множині: wir gingen, sie kamen. Ці форми вчимо.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Раптом він побачив світло."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Meeting in the park",
+      "points": [
+        {
+          "title": "Strong verbs: a new stem",
+          "text": "The stem changes and ich and er have no ending: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Plural: wir gingen, sie kamen. Learn these forms.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Suddenly he saw a light."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Spotkanie w parku",
+      "points": [
+        {
+          "title": "Czasowniki mocne: nowy temat",
+          "text": "Temat się zmienia, a ich i er nie mają końcówki: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. W mnogiej: wir gingen, sie kamen. Tych form się uczymy.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Nagle zobaczył światło."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Encuentro en el parque",
+      "points": [
+        {
+          "title": "Verbos fuertes: raíz nueva",
+          "text": "La raíz cambia y ich y er no tienen terminación: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Plural: wir gingen, sie kamen. Hay que aprenderlas.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "De repente vio una luz."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Rencontre au parc",
+      "points": [
+        {
+          "title": "Verbes forts : nouveau radical",
+          "text": "Le radical change et ich et er n’ont pas de terminaison : gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Pluriel : wir gingen, sie kamen. À apprendre.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Soudain, il vit une lumière."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Parkta buluşma",
+      "points": [
+        {
+          "title": "Güçlü fiiller: yeni kök",
+          "text": "Kök değişir, ich ve er ek almaz: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Çoğul: wir gingen, sie kamen. Bunlar ezberlenir.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Birden bir ışık gördü."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Întâlnire în parc",
+      "points": [
+        {
+          "title": "Verbe tari: rădăcină nouă",
+          "text": "Rădăcina se schimbă, iar ich și er nu au terminație: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Plural: wir gingen, sie kamen. Se învață.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Deodată a văzut o lumină."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Parkdagi uchrashuv",
+      "points": [
+        {
+          "title": "Kuchli fe'llar: yangi o'zak",
+          "text": "O'zak o'zgaradi, ich va er da qo'shimcha yo'q: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Ko'plik: wir gingen, sie kamen. Ularni yodlaymiz.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "To'satdan u yorug'lik ko'rdi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "पार्क में मुलाक़ात",
+      "points": [
+        {
+          "title": "मज़बूत क्रियाएँ: नया मूल",
+          "text": "मूल बदलता है और ich व er में कोई अंत नहीं: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr। बहुवचन: wir gingen, sie kamen। इन्हें याद करो।",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "अचानक उसे एक रोशनी दिखी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "لقاء في الحديقة",
+      "points": [
+        {
+          "title": "الأفعال القوية: جذر جديد",
+          "text": "يتغير الجذر ولا نهاية مع ich وer: gehen → ging، kommen → kam، sehen → sah، fahren → fuhr. والجمع: wir gingen، sie kamen. نحفظها.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "فجأة رأى ضوءاً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "story-valley-eight": {
+    "ru": {
+      "title": "Сказка или разговор",
+      "points": [
+        {
+          "title": "Präteritum или Perfekt",
+          "text": "В книге и сказке Präteritum, в разговоре Perfekt. Но war, hatte и модальные (konnte, musste) и в разговоре обычно в Präteritum.",
+          "examples": [
+            {
+              "de": "Ich konnte dich nicht anrufen.",
+              "tr": "Я не смог тебе позвонить."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Казка чи розмова",
+      "points": [
+        {
+          "title": "Präteritum чи Perfekt",
+          "text": "У книжці й казці Präteritum, у розмові Perfekt. Але war, hatte і модальні (konnte, musste) і в розмові зазвичай у Präteritum.",
+          "examples": [
+            {
+              "de": "Ich konnte dich nicht anrufen.",
+              "tr": "Я не зміг тобі зателефонувати."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Fairy tale or conversation",
+      "points": [
+        {
+          "title": "Präteritum or Perfekt",
+          "text": "In books and fairy tales use Präteritum, in conversation Perfekt. But war, hatte and modals (konnte, musste) are usually Präteritum even when speaking.",
+          "examples": [
+            {
+              "de": "Ich konnte dich nicht anrufen.",
+              "tr": "I couldn’t call you."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Baśń czy rozmowa",
+      "points": [
+        {
+          "title": "Präteritum czy Perfekt",
+          "text": "W książce i baśni Präteritum, w rozmowie Perfekt. Ale war, hatte i modalne (konnte, musste) także w rozmowie zwykle w Präteritum.",
+          "examples": [
+            {
+              "de": "Ich konnte dich nicht anrufen.",
+              "tr": "Nie mogłem do ciebie zadzwonić."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Cuento o conversación",
+      "points": [
+        {
+          "title": "¿Präteritum o Perfekt?",
+          "text": "En libros y cuentos, Präteritum; al hablar, Perfekt. Pero war, hatte y los modales (konnte, musste) suelen ir en Präteritum también al hablar.",
+          "examples": [
+            {
+              "de": "Ich konnte dich nicht anrufen.",
+              "tr": "No pude llamarte."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Conte ou conversation",
+      "points": [
+        {
+          "title": "Präteritum ou Perfekt",
+          "text": "Dans les livres et les contes, Präteritum ; à l’oral, Perfekt. Mais war, hatte et les modaux (konnte, musste) restent en général au Präteritum à l’oral.",
+          "examples": [
+            {
+              "de": "Ich konnte dich nicht anrufen.",
+              "tr": "Je n’ai pas pu t’appeler."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Masal mı, sohbet mi",
+      "points": [
+        {
+          "title": "Präteritum mı, Perfekt mi",
+          "text": "Kitapta ve masalda Präteritum, konuşmada Perfekt. Ama war, hatte ve modal fiiller (konnte, musste) konuşmada da genelde Präteritum.",
+          "examples": [
+            {
+              "de": "Ich konnte dich nicht anrufen.",
+              "tr": "Seni arayamadım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Basm sau conversație",
+      "points": [
+        {
+          "title": "Präteritum sau Perfekt",
+          "text": "În cărți și basme Präteritum, în conversație Perfekt. Dar war, hatte și modalele (konnte, musste) de obicei la Präteritum și în vorbire.",
+          "examples": [
+            {
+              "de": "Ich konnte dich nicht anrufen.",
+              "tr": "Nu te-am putut suna."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ertak yoki suhbat",
+      "points": [
+        {
+          "title": "Präteritum yoki Perfekt",
+          "text": "Kitob va ertakda Präteritum, suhbatda Perfekt. Lekin war, hatte va modallar (konnte, musste) suhbatda ham odatda Präteritum da.",
+          "examples": [
+            {
+              "de": "Ich konnte dich nicht anrufen.",
+              "tr": "Senga qo'ng'iroq qila olmadim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कहानी या बातचीत",
+      "points": [
+        {
+          "title": "Präteritum या Perfekt",
+          "text": "किताब और कहानी में Präteritum, बातचीत में Perfekt। लेकिन war, hatte और मोडल (konnte, musste) बातचीत में भी आमतौर पर Präteritum में।",
+          "examples": [
+            {
+              "de": "Ich konnte dich nicht anrufen.",
+              "tr": "मैं तुम्हें फ़ोन नहीं कर सका।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "حكاية أم حديث",
+      "points": [
+        {
+          "title": "Präteritum أم Perfekt",
+          "text": "في الكتب والحكايات Präteritum، وفي الكلام Perfekt. لكن war وhatte والأفعال المساعدة (konnte، musste) تأتي عادة بـ Präteritum حتى في الكلام.",
+          "examples": [
+            {
+              "de": "Ich konnte dich nicht anrufen.",
+              "tr": "لم أستطع الاتصال بك."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "story-valley-nine": {
+    "ru": {
+      "title": "Повторение: истории",
+      "points": [
+        {
+          "title": "Слабые глаголы: -te",
+          "text": "Основа + -te: ich machte, du machtest, er machte, wir machten, ihr machtet, sie machten. После -t и -d: -ete (arbeitete).",
+          "examples": [
+            {
+              "de": "Früher wohnten wir in einem Dorf.",
+              "tr": "Раньше мы жили в деревне."
+            }
+          ]
+        },
+        {
+          "title": "Сильные глаголы: новый корень",
+          "text": "Корень меняется, а у ich и er нет окончания: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Во множественном: wir gingen, sie kamen. Эти формы учим.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Вдруг он увидел свет."
+            }
+          ]
+        },
+        {
+          "title": "als или wenn",
+          "text": "als: одно событие или один период в прошлом. wenn: то, что повторялось (immer wenn). Глагол в придаточном в конце.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Когда я был ребёнком, я жил в Гамбурге."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: історії",
+      "points": [
+        {
+          "title": "Слабкі дієслова: -te",
+          "text": "Основа + -te: ich machte, du machtest, er machte, wir machten, ihr machtet, sie machten. Після -t і -d: -ete (arbeitete).",
+          "examples": [
+            {
+              "de": "Früher wohnten wir in einem Dorf.",
+              "tr": "Раніше ми жили в селі."
+            }
+          ]
+        },
+        {
+          "title": "Сильні дієслова: новий корінь",
+          "text": "Корінь змінюється, а в ich та er немає закінчення: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. У множині: wir gingen, sie kamen. Ці форми вчимо.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Раптом він побачив світло."
+            }
+          ]
+        },
+        {
+          "title": "als чи wenn",
+          "text": "als: одна подія або один період у минулому. wenn: те, що повторювалося (immer wenn). Дієслово в підрядному в кінці.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Коли я був дитиною, я жив у Гамбурзі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: stories",
+      "points": [
+        {
+          "title": "Weak verbs: -te",
+          "text": "Stem + -te: ich machte, du machtest, er machte, wir machten, ihr machtet, sie machten. After -t and -d: -ete (arbeitete).",
+          "examples": [
+            {
+              "de": "Früher wohnten wir in einem Dorf.",
+              "tr": "We used to live in a village."
+            }
+          ]
+        },
+        {
+          "title": "Strong verbs: a new stem",
+          "text": "The stem changes and ich and er have no ending: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Plural: wir gingen, sie kamen. Learn these forms.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Suddenly he saw a light."
+            }
+          ]
+        },
+        {
+          "title": "als or wenn",
+          "text": "als: one event or one period in the past. wenn: something that happened repeatedly (immer wenn). The verb goes to the end.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "When I was a child, I lived in Hamburg."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: historie",
+      "points": [
+        {
+          "title": "Czasowniki słabe: -te",
+          "text": "Temat + -te: ich machte, du machtest, er machte, wir machten, ihr machtet, sie machten. Po -t i -d: -ete (arbeitete).",
+          "examples": [
+            {
+              "de": "Früher wohnten wir in einem Dorf.",
+              "tr": "Kiedyś mieszkaliśmy na wsi."
+            }
+          ]
+        },
+        {
+          "title": "Czasowniki mocne: nowy temat",
+          "text": "Temat się zmienia, a ich i er nie mają końcówki: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. W mnogiej: wir gingen, sie kamen. Tych form się uczymy.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Nagle zobaczył światło."
+            }
+          ]
+        },
+        {
+          "title": "als czy wenn",
+          "text": "als: jedno zdarzenie albo jeden okres w przeszłości. wenn: coś, co się powtarzało (immer wenn). Czasownik na końcu.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Kiedy byłem dzieckiem, mieszkałem w Hamburgu."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: historias",
+      "points": [
+        {
+          "title": "Verbos débiles: -te",
+          "text": "Raíz + -te: ich machte, du machtest, er machte, wir machten, ihr machtet, sie machten. Tras -t y -d: -ete (arbeitete).",
+          "examples": [
+            {
+              "de": "Früher wohnten wir in einem Dorf.",
+              "tr": "Antes vivíamos en un pueblo."
+            }
+          ]
+        },
+        {
+          "title": "Verbos fuertes: raíz nueva",
+          "text": "La raíz cambia y ich y er no tienen terminación: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Plural: wir gingen, sie kamen. Hay que aprenderlas.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "De repente vio una luz."
+            }
+          ]
+        },
+        {
+          "title": "als o wenn",
+          "text": "als: un hecho o un periodo en el pasado. wenn: algo que se repetía (immer wenn). El verbo va al final.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Cuando era niño, vivía en Hamburgo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : les histoires",
+      "points": [
+        {
+          "title": "Verbes faibles : -te",
+          "text": "Radical + -te : ich machte, du machtest, er machte, wir machten, ihr machtet, sie machten. Après -t et -d : -ete (arbeitete).",
+          "examples": [
+            {
+              "de": "Früher wohnten wir in einem Dorf.",
+              "tr": "Avant, nous habitions dans un village."
+            }
+          ]
+        },
+        {
+          "title": "Verbes forts : nouveau radical",
+          "text": "Le radical change et ich et er n’ont pas de terminaison : gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Pluriel : wir gingen, sie kamen. À apprendre.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Soudain, il vit une lumière."
+            }
+          ]
+        },
+        {
+          "title": "als ou wenn",
+          "text": "als : un seul événement ou une période du passé. wenn : ce qui se répétait (immer wenn). Le verbe va à la fin.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Quand j’étais enfant, j’habitais à Hambourg."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: hikâyeler",
+      "points": [
+        {
+          "title": "Zayıf fiiller: -te",
+          "text": "Kök + -te: ich machte, du machtest, er machte, wir machten, ihr machtet, sie machten. -t ve -d’den sonra: -ete (arbeitete).",
+          "examples": [
+            {
+              "de": "Früher wohnten wir in einem Dorf.",
+              "tr": "Eskiden bir köyde yaşıyorduk."
+            }
+          ]
+        },
+        {
+          "title": "Güçlü fiiller: yeni kök",
+          "text": "Kök değişir, ich ve er ek almaz: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Çoğul: wir gingen, sie kamen. Bunlar ezberlenir.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Birden bir ışık gördü."
+            }
+          ]
+        },
+        {
+          "title": "als mı, wenn mi",
+          "text": "als: geçmişte tek olay ya da dönem. wenn: tekrarlanan şey (immer wenn). Fiil sonda.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Çocukken Hamburg’da yaşıyordum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: povești",
+      "points": [
+        {
+          "title": "Verbe slabe: -te",
+          "text": "Rădăcină + -te: ich machte, du machtest, er machte, wir machten, ihr machtet, sie machten. După -t și -d: -ete (arbeitete).",
+          "examples": [
+            {
+              "de": "Früher wohnten wir in einem Dorf.",
+              "tr": "Pe vremuri locuiam într-un sat."
+            }
+          ]
+        },
+        {
+          "title": "Verbe tari: rădăcină nouă",
+          "text": "Rădăcina se schimbă, iar ich și er nu au terminație: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Plural: wir gingen, sie kamen. Se învață.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Deodată a văzut o lumină."
+            }
+          ]
+        },
+        {
+          "title": "als sau wenn",
+          "text": "als: un eveniment sau o perioadă în trecut. wenn: ceva ce se repeta (immer wenn). Verbul la final.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Când eram copil, locuiam în Hamburg."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: hikoyalar",
+      "points": [
+        {
+          "title": "Kuchsiz fe'llar: -te",
+          "text": "O'zak + -te: ich machte, du machtest, er machte, wir machten, ihr machtet, sie machten. -t va -d dan keyin: -ete (arbeitete).",
+          "examples": [
+            {
+              "de": "Früher wohnten wir in einem Dorf.",
+              "tr": "Ilgari biz qishloqda yashardik."
+            }
+          ]
+        },
+        {
+          "title": "Kuchli fe'llar: yangi o'zak",
+          "text": "O'zak o'zgaradi, ich va er da qo'shimcha yo'q: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Ko'plik: wir gingen, sie kamen. Ularni yodlaymiz.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "To'satdan u yorug'lik ko'rdi."
+            }
+          ]
+        },
+        {
+          "title": "als yoki wenn",
+          "text": "als: o'tmishdagi bitta voqea yoki davr. wenn: takrorlangan narsa (immer wenn). Fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Bolaligimda Gamburgda yashardim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: कहानियाँ",
+      "points": [
+        {
+          "title": "कमज़ोर क्रियाएँ: -te",
+          "text": "मूल + -te: ich machte, du machtest, er machte, wir machten, ihr machtet, sie machten। -t और -d के बाद: -ete (arbeitete)।",
+          "examples": [
+            {
+              "de": "Früher wohnten wir in einem Dorf.",
+              "tr": "पहले हम एक गाँव में रहते थे।"
+            }
+          ]
+        },
+        {
+          "title": "मज़बूत क्रियाएँ: नया मूल",
+          "text": "मूल बदलता है और ich व er में कोई अंत नहीं: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr। बहुवचन: wir gingen, sie kamen। इन्हें याद करो।",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "अचानक उसे एक रोशनी दिखी।"
+            }
+          ]
+        },
+        {
+          "title": "als या wenn",
+          "text": "als: भूतकाल की एक घटना या एक दौर। wenn: बार-बार होने वाली बात (immer wenn)। क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "जब मैं बच्चा था, मैं हैम्बर्ग में रहता था।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: القصص",
+      "points": [
+        {
+          "title": "الأفعال الضعيفة: -te",
+          "text": "الجذر + -te: ich machte، du machtest، er machte، wir machten، ihr machtet، sie machten. وبعد -t و-d: -ete (arbeitete).",
+          "examples": [
+            {
+              "de": "Früher wohnten wir in einem Dorf.",
+              "tr": "كنا نسكن في قرية سابقاً."
+            }
+          ]
+        },
+        {
+          "title": "الأفعال القوية: جذر جديد",
+          "text": "يتغير الجذر ولا نهاية مع ich وer: gehen → ging، kommen → kam، sehen → sah، fahren → fuhr. والجمع: wir gingen، sie kamen. نحفظها.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "فجأة رأى ضوءاً."
+            }
+          ]
+        },
+        {
+          "title": "als أم wenn",
+          "text": "als: حدث واحد أو فترة واحدة في الماضي. wenn: ما كان يتكرر (immer wenn). والفعل في الآخر.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "عندما كنت طفلاً كنت أسكن في هامبورغ."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "story-valley-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "Сильные глаголы: новый корень",
+          "text": "Корень меняется, а у ich и er нет окончания: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Во множественном: wir gingen, sie kamen. Эти формы учим.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Вдруг он увидел свет."
+            }
+          ]
+        },
+        {
+          "title": "als или wenn",
+          "text": "als: одно событие или один период в прошлом. wenn: то, что повторялось (immer wenn). Глагол в придаточном в конце.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Когда я был ребёнком, я жил в Гамбурге."
+            }
+          ]
+        },
+        {
+          "title": "Präteritum или Perfekt",
+          "text": "В книге и сказке Präteritum, в разговоре Perfekt. Но war, hatte и модальные (konnte, musste) и в разговоре обычно в Präteritum.",
+          "examples": [
+            {
+              "de": "Ich konnte dich nicht anrufen.",
+              "tr": "Я не смог тебе позвонить."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "Сильні дієслова: новий корінь",
+          "text": "Корінь змінюється, а в ich та er немає закінчення: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. У множині: wir gingen, sie kamen. Ці форми вчимо.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Раптом він побачив світло."
+            }
+          ]
+        },
+        {
+          "title": "als чи wenn",
+          "text": "als: одна подія або один період у минулому. wenn: те, що повторювалося (immer wenn). Дієслово в підрядному в кінці.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Коли я був дитиною, я жив у Гамбурзі."
+            }
+          ]
+        },
+        {
+          "title": "Präteritum чи Perfekt",
+          "text": "У книжці й казці Präteritum, у розмові Perfekt. Але war, hatte і модальні (konnte, musste) і в розмові зазвичай у Präteritum.",
+          "examples": [
+            {
+              "de": "Ich konnte dich nicht anrufen.",
+              "tr": "Я не зміг тобі зателефонувати."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "Strong verbs: a new stem",
+          "text": "The stem changes and ich and er have no ending: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Plural: wir gingen, sie kamen. Learn these forms.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Suddenly he saw a light."
+            }
+          ]
+        },
+        {
+          "title": "als or wenn",
+          "text": "als: one event or one period in the past. wenn: something that happened repeatedly (immer wenn). The verb goes to the end.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "When I was a child, I lived in Hamburg."
+            }
+          ]
+        },
+        {
+          "title": "Präteritum or Perfekt",
+          "text": "In books and fairy tales use Präteritum, in conversation Perfekt. But war, hatte and modals (konnte, musste) are usually Präteritum even when speaking.",
+          "examples": [
+            {
+              "de": "Ich konnte dich nicht anrufen.",
+              "tr": "I couldn’t call you."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "Czasowniki mocne: nowy temat",
+          "text": "Temat się zmienia, a ich i er nie mają końcówki: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. W mnogiej: wir gingen, sie kamen. Tych form się uczymy.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Nagle zobaczył światło."
+            }
+          ]
+        },
+        {
+          "title": "als czy wenn",
+          "text": "als: jedno zdarzenie albo jeden okres w przeszłości. wenn: coś, co się powtarzało (immer wenn). Czasownik na końcu.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Kiedy byłem dzieckiem, mieszkałem w Hamburgu."
+            }
+          ]
+        },
+        {
+          "title": "Präteritum czy Perfekt",
+          "text": "W książce i baśni Präteritum, w rozmowie Perfekt. Ale war, hatte i modalne (konnte, musste) także w rozmowie zwykle w Präteritum.",
+          "examples": [
+            {
+              "de": "Ich konnte dich nicht anrufen.",
+              "tr": "Nie mogłem do ciebie zadzwonić."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "Verbos fuertes: raíz nueva",
+          "text": "La raíz cambia y ich y er no tienen terminación: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Plural: wir gingen, sie kamen. Hay que aprenderlas.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "De repente vio una luz."
+            }
+          ]
+        },
+        {
+          "title": "als o wenn",
+          "text": "als: un hecho o un periodo en el pasado. wenn: algo que se repetía (immer wenn). El verbo va al final.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Cuando era niño, vivía en Hamburgo."
+            }
+          ]
+        },
+        {
+          "title": "¿Präteritum o Perfekt?",
+          "text": "En libros y cuentos, Präteritum; al hablar, Perfekt. Pero war, hatte y los modales (konnte, musste) suelen ir en Präteritum también al hablar.",
+          "examples": [
+            {
+              "de": "Ich konnte dich nicht anrufen.",
+              "tr": "No pude llamarte."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "Verbes forts : nouveau radical",
+          "text": "Le radical change et ich et er n’ont pas de terminaison : gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Pluriel : wir gingen, sie kamen. À apprendre.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Soudain, il vit une lumière."
+            }
+          ]
+        },
+        {
+          "title": "als ou wenn",
+          "text": "als : un seul événement ou une période du passé. wenn : ce qui se répétait (immer wenn). Le verbe va à la fin.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Quand j’étais enfant, j’habitais à Hambourg."
+            }
+          ]
+        },
+        {
+          "title": "Präteritum ou Perfekt",
+          "text": "Dans les livres et les contes, Präteritum ; à l’oral, Perfekt. Mais war, hatte et les modaux (konnte, musste) restent en général au Präteritum à l’oral.",
+          "examples": [
+            {
+              "de": "Ich konnte dich nicht anrufen.",
+              "tr": "Je n’ai pas pu t’appeler."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "Güçlü fiiller: yeni kök",
+          "text": "Kök değişir, ich ve er ek almaz: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Çoğul: wir gingen, sie kamen. Bunlar ezberlenir.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Birden bir ışık gördü."
+            }
+          ]
+        },
+        {
+          "title": "als mı, wenn mi",
+          "text": "als: geçmişte tek olay ya da dönem. wenn: tekrarlanan şey (immer wenn). Fiil sonda.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Çocukken Hamburg’da yaşıyordum."
+            }
+          ]
+        },
+        {
+          "title": "Präteritum mı, Perfekt mi",
+          "text": "Kitapta ve masalda Präteritum, konuşmada Perfekt. Ama war, hatte ve modal fiiller (konnte, musste) konuşmada da genelde Präteritum.",
+          "examples": [
+            {
+              "de": "Ich konnte dich nicht anrufen.",
+              "tr": "Seni arayamadım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "Verbe tari: rădăcină nouă",
+          "text": "Rădăcina se schimbă, iar ich și er nu au terminație: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Plural: wir gingen, sie kamen. Se învață.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "Deodată a văzut o lumină."
+            }
+          ]
+        },
+        {
+          "title": "als sau wenn",
+          "text": "als: un eveniment sau o perioadă în trecut. wenn: ceva ce se repeta (immer wenn). Verbul la final.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Când eram copil, locuiam în Hamburg."
+            }
+          ]
+        },
+        {
+          "title": "Präteritum sau Perfekt",
+          "text": "În cărți și basme Präteritum, în conversație Perfekt. Dar war, hatte și modalele (konnte, musste) de obicei la Präteritum și în vorbire.",
+          "examples": [
+            {
+              "de": "Ich konnte dich nicht anrufen.",
+              "tr": "Nu te-am putut suna."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "Kuchli fe'llar: yangi o'zak",
+          "text": "O'zak o'zgaradi, ich va er da qo'shimcha yo'q: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr. Ko'plik: wir gingen, sie kamen. Ularni yodlaymiz.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "To'satdan u yorug'lik ko'rdi."
+            }
+          ]
+        },
+        {
+          "title": "als yoki wenn",
+          "text": "als: o'tmishdagi bitta voqea yoki davr. wenn: takrorlangan narsa (immer wenn). Fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "Bolaligimda Gamburgda yashardim."
+            }
+          ]
+        },
+        {
+          "title": "Präteritum yoki Perfekt",
+          "text": "Kitob va ertakda Präteritum, suhbatda Perfekt. Lekin war, hatte va modallar (konnte, musste) suhbatda ham odatda Präteritum da.",
+          "examples": [
+            {
+              "de": "Ich konnte dich nicht anrufen.",
+              "tr": "Senga qo'ng'iroq qila olmadim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "मज़बूत क्रियाएँ: नया मूल",
+          "text": "मूल बदलता है और ich व er में कोई अंत नहीं: gehen → ging, kommen → kam, sehen → sah, fahren → fuhr। बहुवचन: wir gingen, sie kamen। इन्हें याद करो।",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "अचानक उसे एक रोशनी दिखी।"
+            }
+          ]
+        },
+        {
+          "title": "als या wenn",
+          "text": "als: भूतकाल की एक घटना या एक दौर। wenn: बार-बार होने वाली बात (immer wenn)। क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "जब मैं बच्चा था, मैं हैम्बर्ग में रहता था।"
+            }
+          ]
+        },
+        {
+          "title": "Präteritum या Perfekt",
+          "text": "किताब और कहानी में Präteritum, बातचीत में Perfekt। लेकिन war, hatte और मोडल (konnte, musste) बातचीत में भी आमतौर पर Präteritum में।",
+          "examples": [
+            {
+              "de": "Ich konnte dich nicht anrufen.",
+              "tr": "मैं तुम्हें फ़ोन नहीं कर सका।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "الأفعال القوية: جذر جديد",
+          "text": "يتغير الجذر ولا نهاية مع ich وer: gehen → ging، kommen → kam، sehen → sah، fahren → fuhr. والجمع: wir gingen، sie kamen. نحفظها.",
+          "examples": [
+            {
+              "de": "Plötzlich sah er ein Licht.",
+              "tr": "فجأة رأى ضوءاً."
+            }
+          ]
+        },
+        {
+          "title": "als أم wenn",
+          "text": "als: حدث واحد أو فترة واحدة في الماضي. wenn: ما كان يتكرر (immer wenn). والفعل في الآخر.",
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Hamburg.",
+              "tr": "عندما كنت طفلاً كنت أسكن في هامبورغ."
+            }
+          ]
+        },
+        {
+          "title": "Präteritum أم Perfekt",
+          "text": "في الكتب والحكايات Präteritum، وفي الكلام Perfekt. لكن war وhatte والأفعال المساعدة (konnte، musste) تأتي عادة بـ Präteritum حتى في الكلام.",
+          "examples": [
+            {
+              "de": "Ich konnte dich nicht anrufen.",
+              "tr": "لم أستطع الاتصال بك."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

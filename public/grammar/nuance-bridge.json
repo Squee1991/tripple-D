@@ -1,0 +1,2112 @@
+{
+  "nuance-bridge-one": {
+    "ru": {
+      "title": "Хоть и..., но...",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber значит «хоть и..., но». zwar в середине первой части, aber начинает вторую, порядок слов обычный.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "Машина хоть и старая, но ездит хорошо."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Хоч і..., але...",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber означає «хоч і..., але». zwar у середині першої частини, aber починає другу, порядок слів звичайний.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "Машина хоч і стара, але їздить добре."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Admittedly ..., but",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber means \"admittedly ..., but\". zwar sits in the middle of the first part, aber starts the second, normal word order.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "The car is old, but it runs well."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Wprawdzie..., ale...",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber znaczy „wprawdzie..., ale”. zwar w środku pierwszej części, aber zaczyna drugą, szyk zwykły.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "Samochód wprawdzie jest stary, ale dobrze jeździ."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Si bien..., pero",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber significa \"si bien..., pero\". zwar va en medio de la primera parte, aber empieza la segunda, orden normal.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "El coche es viejo, pero funciona bien."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Certes..., mais",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber veut dire « certes..., mais ». zwar au milieu de la première partie, aber commence la seconde, ordre normal.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "La voiture est certes vieille, mais elle roule bien."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Gerçi ..., ama",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber \"gerçi ..., ama\" demektir. zwar ilk kısmın ortasında, aber ikinciyi başlatır, normal sıra.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "Araba gerçi eski ama iyi gidiyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Ce-i drept..., dar",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber înseamnă „ce-i drept..., dar”. zwar la mijlocul primei părți, aber începe a doua, ordine normală.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "Mașina e veche, ce-i drept, dar merge bine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Garchi..., lekin",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber \"garchi..., lekin\" degani. zwar birinchi qism o'rtasida, aber ikkinchisini boshlaydi, tartib oddiy.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "Mashina eski bo'lsa ham, yaxshi yuradi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "हालाँकि..., लेकिन",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber मतलब \"हालाँकि..., लेकिन\"। zwar पहले हिस्से के बीच में, aber दूसरे की शुरुआत, सामान्य क्रम।",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "गाड़ी पुरानी तो है, लेकिन अच्छी चलती है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "صحيح أن...، لكن",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber تعني \"صحيح أن...، لكن\". zwar في وسط الجزء الأول، وaber تبدأ الثاني، والترتيب عادي.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "السيارة قديمة لكنها تسير جيداً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nuance-bridge-two": {
+    "ru": {
+      "title": "Как..., так и...",
+      "points": [
+        {
+          "title": "sowohl ... als auch",
+          "text": "sowohl ... als auch значит «как..., так и»: верны обе части. Запятая перед als auch не нужна.",
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "tr": "Я говорю как по-немецки, так и по-английски."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Як..., так і...",
+      "points": [
+        {
+          "title": "sowohl ... als auch",
+          "text": "sowohl ... als auch означає «як..., так і»: правдиві обидві частини. Кома перед als auch не потрібна.",
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "tr": "Я говорю як німецькою, так і англійською."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Both ... and",
+      "points": [
+        {
+          "title": "sowohl ... als auch",
+          "text": "sowohl ... als auch means \"both ... and\": both parts are true. No comma before als auch.",
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "tr": "I speak both German and English."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Zarówno..., jak i...",
+      "points": [
+        {
+          "title": "sowohl ... als auch",
+          "text": "sowohl ... als auch znaczy „zarówno..., jak i”: prawdziwe obie części. Przecinek przed als auch niepotrzebny.",
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "tr": "Mówię zarówno po niemiecku, jak i po angielsku."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Tanto... como",
+      "points": [
+        {
+          "title": "sowohl ... als auch",
+          "text": "sowohl ... als auch significa \"tanto... como\": las dos partes son ciertas. Sin coma antes de als auch.",
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "tr": "Hablo tanto alemán como inglés."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Aussi bien... que",
+      "points": [
+        {
+          "title": "sowohl ... als auch",
+          "text": "sowohl ... als auch veut dire « aussi bien... que » : les deux sont vrais. Pas de virgule avant als auch.",
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "tr": "Je parle aussi bien allemand qu’anglais."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Hem ... hem de",
+      "points": [
+        {
+          "title": "sowohl ... als auch",
+          "text": "sowohl ... als auch \"hem ... hem de\": iki kısım da doğru. als auch’tan önce virgül yok.",
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "tr": "Hem Almanca hem de İngilizce konuşuyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Atât..., cât și",
+      "points": [
+        {
+          "title": "sowohl ... als auch",
+          "text": "sowohl ... als auch înseamnă „atât..., cât și”: ambele sunt adevărate. Fără virgulă înainte de als auch.",
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "tr": "Vorbesc atât germana, cât și engleza."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ham..., ham",
+      "points": [
+        {
+          "title": "sowohl ... als auch",
+          "text": "sowohl ... als auch \"ham..., ham\": ikkala qism ham to'g'ri. als auch oldidan vergul kerak emas.",
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "tr": "Men ham nemischa, ham inglizcha gapiraman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "... भी, ... भी",
+      "points": [
+        {
+          "title": "sowohl ... als auch",
+          "text": "sowohl ... als auch मतलब \"... भी और ... भी\": दोनों सही। als auch से पहले कॉमा नहीं।",
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "tr": "मैं जर्मन भी बोलता हूँ और अंग्रेज़ी भी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "كلٌّ من... و",
+      "points": [
+        {
+          "title": "sowohl ... als auch",
+          "text": "sowohl ... als auch تعني \"كلٌّ من... و\": الجزءان صحيحان. ولا فاصلة قبل als auch.",
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "tr": "أتكلم الألمانية والإنجليزية كلتيهما."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nuance-bridge-three": {
+    "ru": {
+      "title": "Тем, что: indem",
+      "points": [
+        {
+          "title": "indem: тем, что",
+          "text": "indem отвечает на вопрос Wie? (каким способом?). Глагол в конце, как после weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "Я учу слова тем, что много читаю."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Тим, що: indem",
+      "points": [
+        {
+          "title": "indem: тим, що",
+          "text": "indem відповідає на питання Wie? (яким способом?). Дієслово в кінці, як після weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "Я вчу слова тим, що багато читаю."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "By doing: indem",
+      "points": [
+        {
+          "title": "indem: by doing",
+          "text": "indem answers Wie? (in what way?). The verb goes last, as after weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "I learn words by reading a lot."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Przez to, że: indem",
+      "points": [
+        {
+          "title": "indem: przez to, że",
+          "text": "indem odpowiada na pytanie Wie? (w jaki sposób?). Czasownik na końcu, jak po weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "Uczę się słówek przez to, że dużo czytam."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Haciendo: indem",
+      "points": [
+        {
+          "title": "indem: haciendo",
+          "text": "indem responde a Wie? (¿de qué manera?). Verbo al final, como tras weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "Aprendo palabras leyendo mucho."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "En faisant : indem",
+      "points": [
+        {
+          "title": "indem : en faisant",
+          "text": "indem répond à Wie ? (de quelle manière ?). Verbe à la fin, comme après weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "J’apprends des mots en lisant beaucoup."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yaparak: indem",
+      "points": [
+        {
+          "title": "indem: -erek",
+          "text": "indem Wie? (nasıl?) sorusuna cevap verir. Fiil sonda, weil’den sonraki gibi.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "Çok okuyarak kelime öğreniyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Prin faptul că: indem",
+      "points": [
+        {
+          "title": "indem: prin faptul că",
+          "text": "indem răspunde la Wie? (în ce fel?). Verbul la final, ca după weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "Învăț cuvinte citind mult."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Orqali: indem",
+      "points": [
+        {
+          "title": "indem: ... orqali",
+          "text": "indem Wie? (qanday yo'l bilan?) savoliga javob. Fe'l oxirida, weil dan keyingidek.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "Ko'p o'qish orqali so'z o'rganaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "करके: indem",
+      "points": [
+        {
+          "title": "indem: ... करके",
+          "text": "indem Wie? (किस तरीके से?) का जवाब देता है। क्रिया अंत में, weil की तरह।",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "मैं बहुत पढ़कर शब्द सीखता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "عن طريق: indem",
+      "points": [
+        {
+          "title": "indem: عن طريق",
+          "text": "indem تجيب عن Wie؟ (بأي طريقة؟). والفعل في الآخر كما بعد weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "أتعلم الكلمات عن طريق القراءة الكثيرة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nuance-bridge-four": {
+    "ru": {
+      "title": "Пока не: bis",
+      "points": [
+        {
+          "title": "bis: пока не",
+          "text": "bis: действие идёт, пока не наступит второе событие. Глагол в конце. Не путай с bevor (перед тем как).",
+          "examples": [
+            {
+              "de": "Wir warten, bis der Bus kommt.",
+              "tr": "Мы ждём, пока не придёт автобус."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Доки не: bis",
+      "points": [
+        {
+          "title": "bis: доки не",
+          "text": "bis: дія триває, доки не настане друга подія. Дієслово в кінці. Не плутай з bevor (перед тим як).",
+          "examples": [
+            {
+              "de": "Wir warten, bis der Bus kommt.",
+              "tr": "Ми чекаємо, доки не приїде автобус."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Until: bis",
+      "points": [
+        {
+          "title": "bis: until",
+          "text": "bis: the action goes on until the second event happens. Verb at the end. Don’t confuse with bevor (before).",
+          "examples": [
+            {
+              "de": "Wir warten, bis der Bus kommt.",
+              "tr": "We wait until the bus comes."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Dopóki nie: bis",
+      "points": [
+        {
+          "title": "bis: dopóki nie",
+          "text": "bis: czynność trwa, aż nastąpi drugie zdarzenie. Czasownik na końcu. Nie myl z bevor (zanim).",
+          "examples": [
+            {
+              "de": "Wir warten, bis der Bus kommt.",
+              "tr": "Czekamy, aż przyjedzie autobus."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Hasta que: bis",
+      "points": [
+        {
+          "title": "bis: hasta que",
+          "text": "bis: la acción dura hasta que ocurre lo segundo. Verbo al final. No confundir con bevor (antes de que).",
+          "examples": [
+            {
+              "de": "Wir warten, bis der Bus kommt.",
+              "tr": "Esperamos hasta que venga el autobús."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Jusqu’à ce que : bis",
+      "points": [
+        {
+          "title": "bis : jusqu’à ce que",
+          "text": "bis : l’action dure jusqu’au second événement. Verbe à la fin. Ne confonds pas avec bevor (avant que).",
+          "examples": [
+            {
+              "de": "Wir warten, bis der Bus kommt.",
+              "tr": "Nous attendons jusqu’à ce que le bus arrive."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kadar: bis",
+      "points": [
+        {
+          "title": "bis: -ene kadar",
+          "text": "bis: eylem ikinci olay olana kadar sürer. Fiil sonda. bevor (-meden önce) ile karıştırma.",
+          "examples": [
+            {
+              "de": "Wir warten, bis der Bus kommt.",
+              "tr": "Otobüs gelene kadar bekliyoruz."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Până când: bis",
+      "points": [
+        {
+          "title": "bis: până când",
+          "text": "bis: acțiunea durează până la al doilea eveniment. Verbul la final. Nu confunda cu bevor (înainte să).",
+          "examples": [
+            {
+              "de": "Wir warten, bis der Bus kommt.",
+              "tr": "Așteptăm până vine autobuzul."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Guncha: bis",
+      "points": [
+        {
+          "title": "bis: ...guncha",
+          "text": "bis: harakat ikkinchi voqea bo'lguncha davom etadi. Fe'l oxirida. bevor (...dan oldin) bilan adashtirma.",
+          "examples": [
+            {
+              "de": "Wir warten, bis der Bus kommt.",
+              "tr": "Avtobus kelguncha kutamiz."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "जब तक: bis",
+      "points": [
+        {
+          "title": "bis: जब तक",
+          "text": "bis: काम तब तक चलता है जब तक दूसरी घटना न हो। क्रिया अंत में। bevor (पहले) से मत मिलाओ।",
+          "examples": [
+            {
+              "de": "Wir warten, bis der Bus kommt.",
+              "tr": "हम बस आने तक इंतज़ार करते हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "حتى: bis",
+      "points": [
+        {
+          "title": "bis: حتى",
+          "text": "bis: يستمر الفعل حتى يقع الحدث الثاني. والفعل في الآخر. لا تخلط مع bevor (قبل أن).",
+          "examples": [
+            {
+              "de": "Wir warten, bis der Bus kommt.",
+              "tr": "ننتظر حتى تأتي الحافلة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nuance-bridge-five": {
+    "ru": {
+      "title": "Уже сделано: ist ... worden",
+      "points": [
+        {
+          "title": "ist ... worden",
+          "text": "Passiv Perfekt: sein + Partizip II + worden. Именно worden, а не geworden.",
+          "examples": [
+            {
+              "de": "Das Auto ist repariert worden.",
+              "tr": "Машину отремонтировали."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Уже зроблено: ist ... worden",
+      "points": [
+        {
+          "title": "ist ... worden",
+          "text": "Passiv Perfekt: sein + Partizip II + worden. Саме worden, а не geworden.",
+          "examples": [
+            {
+              "de": "Das Auto ist repariert worden.",
+              "tr": "Машину відремонтували."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Already done: ist ... worden",
+      "points": [
+        {
+          "title": "ist ... worden",
+          "text": "Passive Perfekt: sein + Partizip II + worden. It’s worden, not geworden.",
+          "examples": [
+            {
+              "de": "Das Auto ist repariert worden.",
+              "tr": "The car has been repaired."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Już zrobione: ist ... worden",
+      "points": [
+        {
+          "title": "ist ... worden",
+          "text": "Passiv Perfekt: sein + Partizip II + worden. Właśnie worden, a nie geworden.",
+          "examples": [
+            {
+              "de": "Das Auto ist repariert worden.",
+              "tr": "Samochód został naprawiony."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Ya hecho: ist ... worden",
+      "points": [
+        {
+          "title": "ist ... worden",
+          "text": "Pasiva en Perfekt: sein + Partizip II + worden. Es worden, no geworden.",
+          "examples": [
+            {
+              "de": "Das Auto ist repariert worden.",
+              "tr": "El coche ha sido reparado."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Déjà fait : ist ... worden",
+      "points": [
+        {
+          "title": "ist ... worden",
+          "text": "Passif au Perfekt : sein + Partizip II + worden. C’est worden, pas geworden.",
+          "examples": [
+            {
+              "de": "Das Auto ist repariert worden.",
+              "tr": "La voiture a été réparée."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yapıldı: ist ... worden",
+      "points": [
+        {
+          "title": "ist ... worden",
+          "text": "Edilgen Perfekt: sein + Partizip II + worden. geworden değil, worden.",
+          "examples": [
+            {
+              "de": "Das Auto ist repariert worden.",
+              "tr": "Araba tamir edildi."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Deja făcut: ist ... worden",
+      "points": [
+        {
+          "title": "ist ... worden",
+          "text": "Pasiv la Perfekt: sein + Partizip II + worden. Este worden, nu geworden.",
+          "examples": [
+            {
+              "de": "Das Auto ist repariert worden.",
+              "tr": "Mașina a fost reparată."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Bajarildi: ist ... worden",
+      "points": [
+        {
+          "title": "ist ... worden",
+          "text": "Majhul Perfekt: sein + Partizip II + worden. geworden emas, aynan worden.",
+          "examples": [
+            {
+              "de": "Das Auto ist repariert worden.",
+              "tr": "Mashina ta'mirlandi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "हो चुका: ist ... worden",
+      "points": [
+        {
+          "title": "ist ... worden",
+          "text": "कर्मवाच्य Perfekt: sein + Partizip II + worden। geworden नहीं, worden।",
+          "examples": [
+            {
+              "de": "Das Auto ist repariert worden.",
+              "tr": "गाड़ी ठीक कर दी गई है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تمّ: ist ... worden",
+      "points": [
+        {
+          "title": "ist ... worden",
+          "text": "المجهول في Perfekt: sein + Partizip II + worden. والصيغة worden وليست geworden.",
+          "examples": [
+            {
+              "de": "Das Auto ist repariert worden.",
+              "tr": "تم إصلاح السيارة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nuance-bridge-six": {
+    "ru": {
+      "title": "Открытая дверь",
+      "points": [
+        {
+          "title": "die geöffnete Tür",
+          "text": "Partizip II перед существительным работает как прилагательное и получает обычные окончания: das gekochte Ei (варёное яйцо).",
+          "examples": [
+            {
+              "de": "Ich kaufe ein gebrauchtes Auto.",
+              "tr": "Я покупаю подержанную машину."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Відчинені двері",
+      "points": [
+        {
+          "title": "die geöffnete Tür",
+          "text": "Partizip II перед іменником працює як прикметник і отримує звичайні закінчення: das gekochte Ei (варене яйце).",
+          "examples": [
+            {
+              "de": "Ich kaufe ein gebrauchtes Auto.",
+              "tr": "Я купую вживану машину."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The opened door",
+      "points": [
+        {
+          "title": "die geöffnete Tür",
+          "text": "Partizip II before a noun works like an adjective and takes normal endings: das gekochte Ei (the boiled egg).",
+          "examples": [
+            {
+              "de": "Ich kaufe ein gebrauchtes Auto.",
+              "tr": "I’m buying a used car."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Otwarte drzwi",
+      "points": [
+        {
+          "title": "die geöffnete Tür",
+          "text": "Partizip II przed rzeczownikiem działa jak przymiotnik i ma zwykłe końcówki: das gekochte Ei (ugotowane jajko).",
+          "examples": [
+            {
+              "de": "Ich kaufe ein gebrauchtes Auto.",
+              "tr": "Kupuję używany samochód."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "La puerta abierta",
+      "points": [
+        {
+          "title": "die geöffnete Tür",
+          "text": "El Partizip II delante del sustantivo funciona como adjetivo y lleva las terminaciones normales: das gekochte Ei (el huevo cocido).",
+          "examples": [
+            {
+              "de": "Ich kaufe ein gebrauchtes Auto.",
+              "tr": "Compro un coche usado."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "La porte ouverte",
+      "points": [
+        {
+          "title": "die geöffnete Tür",
+          "text": "Le Partizip II devant un nom fonctionne comme un adjectif avec les terminaisons habituelles : das gekochte Ei (l’œuf cuit).",
+          "examples": [
+            {
+              "de": "Ich kaufe ein gebrauchtes Auto.",
+              "tr": "J’achète une voiture d’occasion."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Açılmış kapı",
+      "points": [
+        {
+          "title": "die geöffnete Tür",
+          "text": "İsimden önce Partizip II sıfat gibi davranır ve normal ekleri alır: das gekochte Ei (haşlanmış yumurta).",
+          "examples": [
+            {
+              "de": "Ich kaufe ein gebrauchtes Auto.",
+              "tr": "İkinci el bir araba alıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Ușa deschisă",
+      "points": [
+        {
+          "title": "die geöffnete Tür",
+          "text": "Partizip II înaintea substantivului e ca un adjectiv și ia terminațiile obișnuite: das gekochte Ei (oul fiert).",
+          "examples": [
+            {
+              "de": "Ich kaufe ein gebrauchtes Auto.",
+              "tr": "Cumpăr o mașină second-hand."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ochilgan eshik",
+      "points": [
+        {
+          "title": "die geöffnete Tür",
+          "text": "Otdan oldin Partizip II sifat kabi ishlaydi va oddiy qo'shimchalarni oladi: das gekochte Ei (qaynatilgan tuxum).",
+          "examples": [
+            {
+              "de": "Ich kaufe ein gebrauchtes Auto.",
+              "tr": "Ishlatilgan mashina sotib olyapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "खुला दरवाज़ा",
+      "points": [
+        {
+          "title": "die geöffnete Tür",
+          "text": "संज्ञा से पहले Partizip II विशेषण की तरह काम करता है और सामान्य अंत लेता है: das gekochte Ei (उबला अंडा)।",
+          "examples": [
+            {
+              "de": "Ich kaufe ein gebrauchtes Auto.",
+              "tr": "मैं पुरानी गाड़ी खरीद रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الباب المفتوح",
+      "points": [
+        {
+          "title": "die geöffnete Tür",
+          "text": "Partizip II قبل الاسم يعمل كصفة ويأخذ النهايات العادية: das gekochte Ei (البيضة المسلوقة).",
+          "examples": [
+            {
+              "de": "Ich kaufe ein gebrauchtes Auto.",
+              "tr": "أشتري سيارة مستعملة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nuance-bridge-seven": {
+    "ru": {
+      "title": "Не нужно: brauchen nicht zu",
+      "points": [
+        {
+          "title": "brauchen nicht zu",
+          "text": "brauchen + nicht/kein + zu + инфинитив значит «не нужно». Это то же, что nicht müssen, но zu обязательно.",
+          "examples": [
+            {
+              "de": "Du brauchst keine Angst zu haben.",
+              "tr": "Тебе не нужно бояться."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Не треба: brauchen nicht zu",
+      "points": [
+        {
+          "title": "brauchen nicht zu",
+          "text": "brauchen + nicht/kein + zu + інфінітив означає «не треба». Це те саме, що nicht müssen, але zu обов’язкове.",
+          "examples": [
+            {
+              "de": "Du brauchst keine Angst zu haben.",
+              "tr": "Тобі не треба боятися."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "No need: brauchen nicht zu",
+      "points": [
+        {
+          "title": "brauchen nicht zu",
+          "text": "brauchen + nicht/kein + zu + infinitive means \"don’t need to\". Same as nicht müssen, but zu is required.",
+          "examples": [
+            {
+              "de": "Du brauchst keine Angst zu haben.",
+              "tr": "You don’t need to be afraid."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Nie trzeba: brauchen nicht zu",
+      "points": [
+        {
+          "title": "brauchen nicht zu",
+          "text": "brauchen + nicht/kein + zu + bezokolicznik znaczy „nie trzeba”. To samo co nicht müssen, ale zu obowiązkowe.",
+          "examples": [
+            {
+              "de": "Du brauchst keine Angst zu haben.",
+              "tr": "Nie musisz się bać."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "No hace falta: brauchen nicht zu",
+      "points": [
+        {
+          "title": "brauchen nicht zu",
+          "text": "brauchen + nicht/kein + zu + infinitivo significa \"no hace falta\". Igual que nicht müssen, pero zu es obligatorio.",
+          "examples": [
+            {
+              "de": "Du brauchst keine Angst zu haben.",
+              "tr": "No tienes por qué tener miedo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pas besoin : brauchen nicht zu",
+      "points": [
+        {
+          "title": "brauchen nicht zu",
+          "text": "brauchen + nicht/kein + zu + infinitif veut dire « pas besoin de ». Comme nicht müssen, mais zu est obligatoire.",
+          "examples": [
+            {
+              "de": "Du brauchst keine Angst zu haben.",
+              "tr": "Tu n’as pas besoin d’avoir peur."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Gerek yok: brauchen nicht zu",
+      "points": [
+        {
+          "title": "brauchen nicht zu",
+          "text": "brauchen + nicht/kein + zu + mastar \"gerek yok\" demektir. nicht müssen ile aynı, ama zu şart.",
+          "examples": [
+            {
+              "de": "Du brauchst keine Angst zu haben.",
+              "tr": "Korkmana gerek yok."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Nu e nevoie: brauchen nicht zu",
+      "points": [
+        {
+          "title": "brauchen nicht zu",
+          "text": "brauchen + nicht/kein + zu + infinitiv înseamnă „nu e nevoie”. La fel ca nicht müssen, dar zu e obligatoriu.",
+          "examples": [
+            {
+              "de": "Du brauchst keine Angst zu haben.",
+              "tr": "Nu trebuie să-ți fie frică."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kerak emas: brauchen nicht zu",
+      "points": [
+        {
+          "title": "brauchen nicht zu",
+          "text": "brauchen + nicht/kein + zu + infinitiv \"kerak emas\" degani. nicht müssen bilan bir xil, lekin zu majburiy.",
+          "examples": [
+            {
+              "de": "Du brauchst keine Angst zu haben.",
+              "tr": "Qo'rqishing shart emas."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "ज़रूरत नहीं: brauchen nicht zu",
+      "points": [
+        {
+          "title": "brauchen nicht zu",
+          "text": "brauchen + nicht/kein + zu + इन्फ़िनिटिव मतलब \"ज़रूरत नहीं\"। nicht müssen जैसा, पर zu ज़रूरी।",
+          "examples": [
+            {
+              "de": "Du brauchst keine Angst zu haben.",
+              "tr": "तुम्हें डरने की ज़रूरत नहीं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "لا داعي: brauchen nicht zu",
+      "points": [
+        {
+          "title": "brauchen nicht zu",
+          "text": "brauchen + nicht/kein + zu + المصدر تعني \"لا داعي\". مثل nicht müssen لكن zu إلزامية.",
+          "examples": [
+            {
+              "de": "Du brauchst keine Angst zu haben.",
+              "tr": "لا داعي لأن تخاف."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nuance-bridge-eight": {
+    "ru": {
+      "title": "Где-то, кто-то, говорят",
+      "points": [
+        {
+          "title": "irgend- и sollen",
+          "text": "irgend- значит «неизвестно точно»: irgendwo (где-то), irgendwann (когда-нибудь), irgendetwas (что-нибудь). Er soll krank sein значит «говорят, он болен».",
+          "examples": [
+            {
+              "de": "Ich habe das Wort irgendwo gesehen.",
+              "tr": "Я где-то видел это слово."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Десь, хтось, кажуть",
+      "points": [
+        {
+          "title": "irgend- і sollen",
+          "text": "irgend- означає «невідомо точно»: irgendwo (десь), irgendwann (колись), irgendetwas (щось). Er soll krank sein означає «кажуть, він хворий».",
+          "examples": [
+            {
+              "de": "Ich habe das Wort irgendwo gesehen.",
+              "tr": "Я десь бачив це слово."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Somewhere, someone, they say",
+      "points": [
+        {
+          "title": "irgend- and sollen",
+          "text": "irgend- means \"some ... or other\": irgendwo (somewhere), irgendwann (sometime), irgendetwas (something). Er soll krank sein means \"he’s said to be ill\".",
+          "examples": [
+            {
+              "de": "Ich habe das Wort irgendwo gesehen.",
+              "tr": "I’ve seen the word somewhere."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Gdzieś, ktoś, podobno",
+      "points": [
+        {
+          "title": "irgend- i sollen",
+          "text": "irgend- znaczy „nie wiadomo dokładnie”: irgendwo (gdzieś), irgendwann (kiedyś), irgendetwas (coś). Er soll krank sein znaczy „podobno jest chory”.",
+          "examples": [
+            {
+              "de": "Ich habe das Wort irgendwo gesehen.",
+              "tr": "Gdzieś widziałem to słowo."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "En algún sitio, alguien, dicen",
+      "points": [
+        {
+          "title": "irgend- y sollen",
+          "text": "irgend- significa \"no se sabe exactamente\": irgendwo (en algún sitio), irgendwann (algún día), irgendetwas (algo). Er soll krank sein significa \"dicen que está enfermo\".",
+          "examples": [
+            {
+              "de": "Ich habe das Wort irgendwo gesehen.",
+              "tr": "He visto la palabra en algún sitio."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Quelque part, quelqu’un, on dit",
+      "points": [
+        {
+          "title": "irgend- et sollen",
+          "text": "irgend- veut dire « on ne sait pas exactement » : irgendwo (quelque part), irgendwann (un jour), irgendetwas (quelque chose). Er soll krank sein veut dire « il serait malade ».",
+          "examples": [
+            {
+              "de": "Ich habe das Wort irgendwo gesehen.",
+              "tr": "J’ai vu ce mot quelque part."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Bir yerde, biri, diyorlar",
+      "points": [
+        {
+          "title": "irgend- ve sollen",
+          "text": "irgend- \"tam bilinmeyen\": irgendwo (bir yerde), irgendwann (bir gün), irgendetwas (bir şey). Er soll krank sein \"hasta olduğu söyleniyor\".",
+          "examples": [
+            {
+              "de": "Ich habe das Wort irgendwo gesehen.",
+              "tr": "Bu kelimeyi bir yerde gördüm."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Undeva, cineva, se zice",
+      "points": [
+        {
+          "title": "irgend- și sollen",
+          "text": "irgend- înseamnă „nu se știe exact”: irgendwo (undeva), irgendwann (cândva), irgendetwas (ceva). Er soll krank sein înseamnă „se zice că e bolnav”.",
+          "examples": [
+            {
+              "de": "Ich habe das Wort irgendwo gesehen.",
+              "tr": "Am văzut cuvântul undeva."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qayerdadir, kimdir, aytishadi",
+      "points": [
+        {
+          "title": "irgend- va sollen",
+          "text": "irgend- \"aniq noma'lum\" degani: irgendwo (qayerdadir), irgendwann (qachondir), irgendetwas (nimadir). Er soll krank sein \"aytishlaricha, u kasal\".",
+          "examples": [
+            {
+              "de": "Ich habe das Wort irgendwo gesehen.",
+              "tr": "Bu so'zni qayerdadir ko'rganman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कहीं, कोई, कहते हैं",
+      "points": [
+        {
+          "title": "irgend- और sollen",
+          "text": "irgend- मतलब \"पक्का नहीं पता\": irgendwo (कहीं), irgendwann (कभी), irgendetwas (कुछ)। Er soll krank sein मतलब \"कहते हैं वह बीमार है\"।",
+          "examples": [
+            {
+              "de": "Ich habe das Wort irgendwo gesehen.",
+              "tr": "मैंने यह शब्द कहीं देखा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "في مكان ما، أحدهم، يُقال",
+      "points": [
+        {
+          "title": "irgend- وsollen",
+          "text": "irgend- تعني \"غير معروف بالضبط\": irgendwo (في مكان ما)، irgendwann (يوماً ما)، irgendetwas (شيء ما). وEr soll krank sein تعني \"يُقال إنه مريض\".",
+          "examples": [
+            {
+              "de": "Ich habe das Wort irgendwo gesehen.",
+              "tr": "رأيت هذه الكلمة في مكان ما."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nuance-bridge-nine": {
+    "ru": {
+      "title": "Повторение: оттенки",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber значит «хоть и..., но». zwar в середине первой части, aber начинает вторую, порядок слов обычный.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "Машина хоть и старая, но ездит хорошо."
+            }
+          ]
+        },
+        {
+          "title": "indem: тем, что",
+          "text": "indem отвечает на вопрос Wie? (каким способом?). Глагол в конце, как после weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "Я учу слова тем, что много читаю."
+            }
+          ]
+        },
+        {
+          "title": "ist ... worden",
+          "text": "Passiv Perfekt: sein + Partizip II + worden. Именно worden, а не geworden.",
+          "examples": [
+            {
+              "de": "Das Auto ist repariert worden.",
+              "tr": "Машину отремонтировали."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: відтінки",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber означає «хоч і..., але». zwar у середині першої частини, aber починає другу, порядок слів звичайний.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "Машина хоч і стара, але їздить добре."
+            }
+          ]
+        },
+        {
+          "title": "indem: тим, що",
+          "text": "indem відповідає на питання Wie? (яким способом?). Дієслово в кінці, як після weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "Я вчу слова тим, що багато читаю."
+            }
+          ]
+        },
+        {
+          "title": "ist ... worden",
+          "text": "Passiv Perfekt: sein + Partizip II + worden. Саме worden, а не geworden.",
+          "examples": [
+            {
+              "de": "Das Auto ist repariert worden.",
+              "tr": "Машину відремонтували."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: nuances",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber means \"admittedly ..., but\". zwar sits in the middle of the first part, aber starts the second, normal word order.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "The car is old, but it runs well."
+            }
+          ]
+        },
+        {
+          "title": "indem: by doing",
+          "text": "indem answers Wie? (in what way?). The verb goes last, as after weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "I learn words by reading a lot."
+            }
+          ]
+        },
+        {
+          "title": "ist ... worden",
+          "text": "Passive Perfekt: sein + Partizip II + worden. It’s worden, not geworden.",
+          "examples": [
+            {
+              "de": "Das Auto ist repariert worden.",
+              "tr": "The car has been repaired."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: niuanse",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber znaczy „wprawdzie..., ale”. zwar w środku pierwszej części, aber zaczyna drugą, szyk zwykły.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "Samochód wprawdzie jest stary, ale dobrze jeździ."
+            }
+          ]
+        },
+        {
+          "title": "indem: przez to, że",
+          "text": "indem odpowiada na pytanie Wie? (w jaki sposób?). Czasownik na końcu, jak po weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "Uczę się słówek przez to, że dużo czytam."
+            }
+          ]
+        },
+        {
+          "title": "ist ... worden",
+          "text": "Passiv Perfekt: sein + Partizip II + worden. Właśnie worden, a nie geworden.",
+          "examples": [
+            {
+              "de": "Das Auto ist repariert worden.",
+              "tr": "Samochód został naprawiony."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: matices",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber significa \"si bien..., pero\". zwar va en medio de la primera parte, aber empieza la segunda, orden normal.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "El coche es viejo, pero funciona bien."
+            }
+          ]
+        },
+        {
+          "title": "indem: haciendo",
+          "text": "indem responde a Wie? (¿de qué manera?). Verbo al final, como tras weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "Aprendo palabras leyendo mucho."
+            }
+          ]
+        },
+        {
+          "title": "ist ... worden",
+          "text": "Pasiva en Perfekt: sein + Partizip II + worden. Es worden, no geworden.",
+          "examples": [
+            {
+              "de": "Das Auto ist repariert worden.",
+              "tr": "El coche ha sido reparado."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : nuances",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber veut dire « certes..., mais ». zwar au milieu de la première partie, aber commence la seconde, ordre normal.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "La voiture est certes vieille, mais elle roule bien."
+            }
+          ]
+        },
+        {
+          "title": "indem : en faisant",
+          "text": "indem répond à Wie ? (de quelle manière ?). Verbe à la fin, comme après weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "J’apprends des mots en lisant beaucoup."
+            }
+          ]
+        },
+        {
+          "title": "ist ... worden",
+          "text": "Passif au Perfekt : sein + Partizip II + worden. C’est worden, pas geworden.",
+          "examples": [
+            {
+              "de": "Das Auto ist repariert worden.",
+              "tr": "La voiture a été réparée."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: incelikler",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber \"gerçi ..., ama\" demektir. zwar ilk kısmın ortasında, aber ikinciyi başlatır, normal sıra.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "Araba gerçi eski ama iyi gidiyor."
+            }
+          ]
+        },
+        {
+          "title": "indem: -erek",
+          "text": "indem Wie? (nasıl?) sorusuna cevap verir. Fiil sonda, weil’den sonraki gibi.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "Çok okuyarak kelime öğreniyorum."
+            }
+          ]
+        },
+        {
+          "title": "ist ... worden",
+          "text": "Edilgen Perfekt: sein + Partizip II + worden. geworden değil, worden.",
+          "examples": [
+            {
+              "de": "Das Auto ist repariert worden.",
+              "tr": "Araba tamir edildi."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: nuanțe",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber înseamnă „ce-i drept..., dar”. zwar la mijlocul primei părți, aber începe a doua, ordine normală.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "Mașina e veche, ce-i drept, dar merge bine."
+            }
+          ]
+        },
+        {
+          "title": "indem: prin faptul că",
+          "text": "indem răspunde la Wie? (în ce fel?). Verbul la final, ca după weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "Învăț cuvinte citind mult."
+            }
+          ]
+        },
+        {
+          "title": "ist ... worden",
+          "text": "Pasiv la Perfekt: sein + Partizip II + worden. Este worden, nu geworden.",
+          "examples": [
+            {
+              "de": "Das Auto ist repariert worden.",
+              "tr": "Mașina a fost reparată."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: nozikliklar",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber \"garchi..., lekin\" degani. zwar birinchi qism o'rtasida, aber ikkinchisini boshlaydi, tartib oddiy.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "Mashina eski bo'lsa ham, yaxshi yuradi."
+            }
+          ]
+        },
+        {
+          "title": "indem: ... orqali",
+          "text": "indem Wie? (qanday yo'l bilan?) savoliga javob. Fe'l oxirida, weil dan keyingidek.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "Ko'p o'qish orqali so'z o'rganaman."
+            }
+          ]
+        },
+        {
+          "title": "ist ... worden",
+          "text": "Majhul Perfekt: sein + Partizip II + worden. geworden emas, aynan worden.",
+          "examples": [
+            {
+              "de": "Das Auto ist repariert worden.",
+              "tr": "Mashina ta'mirlandi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: बारीकियाँ",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber मतलब \"हालाँकि..., लेकिन\"। zwar पहले हिस्से के बीच में, aber दूसरे की शुरुआत, सामान्य क्रम।",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "गाड़ी पुरानी तो है, लेकिन अच्छी चलती है।"
+            }
+          ]
+        },
+        {
+          "title": "indem: ... करके",
+          "text": "indem Wie? (किस तरीके से?) का जवाब देता है। क्रिया अंत में, weil की तरह।",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "मैं बहुत पढ़कर शब्द सीखता हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "ist ... worden",
+          "text": "कर्मवाच्य Perfekt: sein + Partizip II + worden। geworden नहीं, worden।",
+          "examples": [
+            {
+              "de": "Das Auto ist repariert worden.",
+              "tr": "गाड़ी ठीक कर दी गई है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الفروق الدقيقة",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber تعني \"صحيح أن...، لكن\". zwar في وسط الجزء الأول، وaber تبدأ الثاني، والترتيب عادي.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "السيارة قديمة لكنها تسير جيداً."
+            }
+          ]
+        },
+        {
+          "title": "indem: عن طريق",
+          "text": "indem تجيب عن Wie؟ (بأي طريقة؟). والفعل في الآخر كما بعد weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "أتعلم الكلمات عن طريق القراءة الكثيرة."
+            }
+          ]
+        },
+        {
+          "title": "ist ... worden",
+          "text": "المجهول في Perfekt: sein + Partizip II + worden. والصيغة worden وليست geworden.",
+          "examples": [
+            {
+              "de": "Das Auto ist repariert worden.",
+              "tr": "تم إصلاح السيارة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nuance-bridge-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber значит «хоть и..., но». zwar в середине первой части, aber начинает вторую, порядок слов обычный.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "Машина хоть и старая, но ездит хорошо."
+            }
+          ]
+        },
+        {
+          "title": "sowohl ... als auch",
+          "text": "sowohl ... als auch значит «как..., так и»: верны обе части. Запятая перед als auch не нужна.",
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "tr": "Я говорю как по-немецки, так и по-английски."
+            }
+          ]
+        },
+        {
+          "title": "brauchen nicht zu",
+          "text": "brauchen + nicht/kein + zu + инфинитив значит «не нужно». Это то же, что nicht müssen, но zu обязательно.",
+          "examples": [
+            {
+              "de": "Du brauchst keine Angst zu haben.",
+              "tr": "Тебе не нужно бояться."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber означає «хоч і..., але». zwar у середині першої частини, aber починає другу, порядок слів звичайний.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "Машина хоч і стара, але їздить добре."
+            }
+          ]
+        },
+        {
+          "title": "sowohl ... als auch",
+          "text": "sowohl ... als auch означає «як..., так і»: правдиві обидві частини. Кома перед als auch не потрібна.",
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "tr": "Я говорю як німецькою, так і англійською."
+            }
+          ]
+        },
+        {
+          "title": "brauchen nicht zu",
+          "text": "brauchen + nicht/kein + zu + інфінітив означає «не треба». Це те саме, що nicht müssen, але zu обов’язкове.",
+          "examples": [
+            {
+              "de": "Du brauchst keine Angst zu haben.",
+              "tr": "Тобі не треба боятися."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber means \"admittedly ..., but\". zwar sits in the middle of the first part, aber starts the second, normal word order.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "The car is old, but it runs well."
+            }
+          ]
+        },
+        {
+          "title": "sowohl ... als auch",
+          "text": "sowohl ... als auch means \"both ... and\": both parts are true. No comma before als auch.",
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "tr": "I speak both German and English."
+            }
+          ]
+        },
+        {
+          "title": "brauchen nicht zu",
+          "text": "brauchen + nicht/kein + zu + infinitive means \"don’t need to\". Same as nicht müssen, but zu is required.",
+          "examples": [
+            {
+              "de": "Du brauchst keine Angst zu haben.",
+              "tr": "You don’t need to be afraid."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber znaczy „wprawdzie..., ale”. zwar w środku pierwszej części, aber zaczyna drugą, szyk zwykły.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "Samochód wprawdzie jest stary, ale dobrze jeździ."
+            }
+          ]
+        },
+        {
+          "title": "sowohl ... als auch",
+          "text": "sowohl ... als auch znaczy „zarówno..., jak i”: prawdziwe obie części. Przecinek przed als auch niepotrzebny.",
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "tr": "Mówię zarówno po niemiecku, jak i po angielsku."
+            }
+          ]
+        },
+        {
+          "title": "brauchen nicht zu",
+          "text": "brauchen + nicht/kein + zu + bezokolicznik znaczy „nie trzeba”. To samo co nicht müssen, ale zu obowiązkowe.",
+          "examples": [
+            {
+              "de": "Du brauchst keine Angst zu haben.",
+              "tr": "Nie musisz się bać."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber significa \"si bien..., pero\". zwar va en medio de la primera parte, aber empieza la segunda, orden normal.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "El coche es viejo, pero funciona bien."
+            }
+          ]
+        },
+        {
+          "title": "sowohl ... als auch",
+          "text": "sowohl ... als auch significa \"tanto... como\": las dos partes son ciertas. Sin coma antes de als auch.",
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "tr": "Hablo tanto alemán como inglés."
+            }
+          ]
+        },
+        {
+          "title": "brauchen nicht zu",
+          "text": "brauchen + nicht/kein + zu + infinitivo significa \"no hace falta\". Igual que nicht müssen, pero zu es obligatorio.",
+          "examples": [
+            {
+              "de": "Du brauchst keine Angst zu haben.",
+              "tr": "No tienes por qué tener miedo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber veut dire « certes..., mais ». zwar au milieu de la première partie, aber commence la seconde, ordre normal.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "La voiture est certes vieille, mais elle roule bien."
+            }
+          ]
+        },
+        {
+          "title": "sowohl ... als auch",
+          "text": "sowohl ... als auch veut dire « aussi bien... que » : les deux sont vrais. Pas de virgule avant als auch.",
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "tr": "Je parle aussi bien allemand qu’anglais."
+            }
+          ]
+        },
+        {
+          "title": "brauchen nicht zu",
+          "text": "brauchen + nicht/kein + zu + infinitif veut dire « pas besoin de ». Comme nicht müssen, mais zu est obligatoire.",
+          "examples": [
+            {
+              "de": "Du brauchst keine Angst zu haben.",
+              "tr": "Tu n’as pas besoin d’avoir peur."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber \"gerçi ..., ama\" demektir. zwar ilk kısmın ortasında, aber ikinciyi başlatır, normal sıra.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "Araba gerçi eski ama iyi gidiyor."
+            }
+          ]
+        },
+        {
+          "title": "sowohl ... als auch",
+          "text": "sowohl ... als auch \"hem ... hem de\": iki kısım da doğru. als auch’tan önce virgül yok.",
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "tr": "Hem Almanca hem de İngilizce konuşuyorum."
+            }
+          ]
+        },
+        {
+          "title": "brauchen nicht zu",
+          "text": "brauchen + nicht/kein + zu + mastar \"gerek yok\" demektir. nicht müssen ile aynı, ama zu şart.",
+          "examples": [
+            {
+              "de": "Du brauchst keine Angst zu haben.",
+              "tr": "Korkmana gerek yok."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber înseamnă „ce-i drept..., dar”. zwar la mijlocul primei părți, aber începe a doua, ordine normală.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "Mașina e veche, ce-i drept, dar merge bine."
+            }
+          ]
+        },
+        {
+          "title": "sowohl ... als auch",
+          "text": "sowohl ... als auch înseamnă „atât..., cât și”: ambele sunt adevărate. Fără virgulă înainte de als auch.",
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "tr": "Vorbesc atât germana, cât și engleza."
+            }
+          ]
+        },
+        {
+          "title": "brauchen nicht zu",
+          "text": "brauchen + nicht/kein + zu + infinitiv înseamnă „nu e nevoie”. La fel ca nicht müssen, dar zu e obligatoriu.",
+          "examples": [
+            {
+              "de": "Du brauchst keine Angst zu haben.",
+              "tr": "Nu trebuie să-ți fie frică."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber \"garchi..., lekin\" degani. zwar birinchi qism o'rtasida, aber ikkinchisini boshlaydi, tartib oddiy.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "Mashina eski bo'lsa ham, yaxshi yuradi."
+            }
+          ]
+        },
+        {
+          "title": "sowohl ... als auch",
+          "text": "sowohl ... als auch \"ham..., ham\": ikkala qism ham to'g'ri. als auch oldidan vergul kerak emas.",
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "tr": "Men ham nemischa, ham inglizcha gapiraman."
+            }
+          ]
+        },
+        {
+          "title": "brauchen nicht zu",
+          "text": "brauchen + nicht/kein + zu + infinitiv \"kerak emas\" degani. nicht müssen bilan bir xil, lekin zu majburiy.",
+          "examples": [
+            {
+              "de": "Du brauchst keine Angst zu haben.",
+              "tr": "Qo'rqishing shart emas."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber मतलब \"हालाँकि..., लेकिन\"। zwar पहले हिस्से के बीच में, aber दूसरे की शुरुआत, सामान्य क्रम।",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "गाड़ी पुरानी तो है, लेकिन अच्छी चलती है।"
+            }
+          ]
+        },
+        {
+          "title": "sowohl ... als auch",
+          "text": "sowohl ... als auch मतलब \"... भी और ... भी\": दोनों सही। als auch से पहले कॉमा नहीं।",
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "tr": "मैं जर्मन भी बोलता हूँ और अंग्रेज़ी भी।"
+            }
+          ]
+        },
+        {
+          "title": "brauchen nicht zu",
+          "text": "brauchen + nicht/kein + zu + इन्फ़िनिटिव मतलब \"ज़रूरत नहीं\"। nicht müssen जैसा, पर zu ज़रूरी।",
+          "examples": [
+            {
+              "de": "Du brauchst keine Angst zu haben.",
+              "tr": "तुम्हें डरने की ज़रूरत नहीं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "zwar ..., aber",
+          "text": "zwar ..., aber تعني \"صحيح أن...، لكن\". zwar في وسط الجزء الأول، وaber تبدأ الثاني، والترتيب عادي.",
+          "examples": [
+            {
+              "de": "Das Auto ist zwar alt, aber es fährt gut.",
+              "tr": "السيارة قديمة لكنها تسير جيداً."
+            }
+          ]
+        },
+        {
+          "title": "sowohl ... als auch",
+          "text": "sowohl ... als auch تعني \"كلٌّ من... و\": الجزءان صحيحان. ولا فاصلة قبل als auch.",
+          "examples": [
+            {
+              "de": "Ich spreche sowohl Deutsch als auch Englisch.",
+              "tr": "أتكلم الألمانية والإنجليزية كلتيهما."
+            }
+          ]
+        },
+        {
+          "title": "brauchen nicht zu",
+          "text": "brauchen + nicht/kein + zu + المصدر تعني \"لا داعي\". مثل nicht müssen لكن zu إلزامية.",
+          "examples": [
+            {
+              "de": "Du brauchst keine Angst zu haben.",
+              "tr": "لا داعي لأن تخاف."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

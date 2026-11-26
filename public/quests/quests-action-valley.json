@@ -308,18 +308,18 @@
         "translation-ar": "يعجب"
       },
       {
-        "word": "das geht",
-        "translation-ru": "так можно, подходит",
-        "translation-en": "that works",
-        "translation-uk": "так можна, підходить",
-        "translation-pl": "to pasuje",
-        "translation-es": "eso va bien",
-        "translation-fr": "ça va",
-        "translation-tr": "olur",
-        "translation-ro": "merge",
-        "translation-uz": "bo‘ladi",
-        "translation-hi": "यह ठीक है",
-        "translation-ar": "هذا مناسب"
+        "word": "Wie geht es dir?",
+        "translation-ru": "Как у тебя дела?",
+        "translation-en": "How are you?",
+        "translation-uk": "Як у тебе справи?",
+        "translation-pl": "Jak się masz?",
+        "translation-es": "¿Cómo estás?",
+        "translation-fr": "Comment vas-tu ?",
+        "translation-tr": "Nasılsın?",
+        "translation-ro": "Ce mai faci?",
+        "translation-uz": "Ishlaring qalay?",
+        "translation-hi": "तुम कैसे हो?",
+        "translation-ar": "كيف حالك؟"
       }
     ]
   },

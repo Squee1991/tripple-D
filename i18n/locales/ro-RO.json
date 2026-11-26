@@ -19519,9 +19519,7 @@
     "descriptionThematic": "Explică cazurile și articolele direct în timpul exercițiului dacă ai nelămuriri."
   },
   "questModals": {
-    "fixMistakesTitle": "Hai să corectăm greșelile",
-    "fixMistakesText": "Refă sarcinile greșite. Corectează-le și lecția va fi finalizată.",
-    "fixMistakesBtn": "Corectează greșelile ({count})",
+    "fixForReward": "Ca să primești recompensa, rezolvă corect toate sarcinile",
     "repeat": "Revedeți greșelile",
     "next": "Următoarea sarcină ➔",
     "back": "La teme",
@@ -21082,6 +21080,7 @@
     "writing": "Scriere",
     "new": "Nou",
     "writeLocked": "Termină misiunea ca să deblochezi scrierea",
+    "questLocked": "Mai întâi termină sarcina anterioară",
     "writeAction": "Scrie frazele după auz",
     "landDone": "Ținut terminat!",
     "landGoal": "Termină toate misiunile și scrierea",

@@ -1,0 +1,3289 @@
+{
+  "village-1": {
+    "ru": {
+      "title": "Артикли: der, die, das и ein, eine",
+      "points": [
+        {
+          "title": "Три рода",
+          "text": "У каждого слова свой род: der (мужской), die (женский), das (средний). Род не всегда совпадает с русским, учи слово сразу с артиклем.",
+          "examples": [
+            {
+              "de": "der Tisch, die Lampe, das Buch",
+              "tr": "стол, лампа, книга"
+            }
+          ]
+        },
+        {
+          "title": "ein и eine",
+          "text": "ein, eine значат «один, какой-то». Для der и das говорим ein, для die говорим eine.",
+          "examples": [
+            {
+              "de": "Das ist ein Tisch.",
+              "tr": "Это стол."
+            },
+            {
+              "de": "Das ist eine Lampe.",
+              "tr": "Это лампа."
+            }
+          ]
+        },
+        {
+          "title": "Прилагательное после ist",
+          "text": "Если прилагательное стоит после ist, оно не меняется: klein, groß, neu, alt.",
+          "examples": [
+            {
+              "de": "Das Buch ist alt.",
+              "tr": "Книга старая."
+            },
+            {
+              "de": "Der Stuhl ist klein.",
+              "tr": "Стул маленький."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Артиклі: der, die, das та ein, eine",
+      "points": [
+        {
+          "title": "Три роди",
+          "text": "Кожне слово має свій рід: der (чоловічий), die (жіночий), das (середній). Рід не завжди збігається з українським, вчи слово одразу з артиклем.",
+          "examples": [
+            {
+              "de": "der Tisch, die Lampe, das Buch",
+              "tr": "стіл, лампа, книжка"
+            }
+          ]
+        },
+        {
+          "title": "ein та eine",
+          "text": "ein, eine означають «один, якийсь». Для der і das кажемо ein, для die кажемо eine.",
+          "examples": [
+            {
+              "de": "Das ist ein Tisch.",
+              "tr": "Це стіл."
+            },
+            {
+              "de": "Das ist eine Lampe.",
+              "tr": "Це лампа."
+            }
+          ]
+        },
+        {
+          "title": "Прикметник після ist",
+          "text": "Якщо прикметник стоїть після ist, він не змінюється: klein, groß, neu, alt.",
+          "examples": [
+            {
+              "de": "Das Buch ist alt.",
+              "tr": "Книжка стара."
+            },
+            {
+              "de": "Der Stuhl ist klein.",
+              "tr": "Стілець маленький."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Articles: der, die, das and ein, eine",
+      "points": [
+        {
+          "title": "Three genders",
+          "text": "Every noun has a gender: der (masculine), die (feminine), das (neuter). Learn each word together with its article.",
+          "examples": [
+            {
+              "de": "der Tisch, die Lampe, das Buch",
+              "tr": "the table, the lamp, the book"
+            }
+          ]
+        },
+        {
+          "title": "ein and eine",
+          "text": "ein, eine mean \"a, an\". Use ein for der and das words, eine for die words.",
+          "examples": [
+            {
+              "de": "Das ist ein Tisch.",
+              "tr": "This is a table."
+            },
+            {
+              "de": "Das ist eine Lampe.",
+              "tr": "This is a lamp."
+            }
+          ]
+        },
+        {
+          "title": "Adjective after ist",
+          "text": "After ist the adjective does not change: klein, groß, neu, alt.",
+          "examples": [
+            {
+              "de": "Das Buch ist alt.",
+              "tr": "The book is old."
+            },
+            {
+              "de": "Der Stuhl ist klein.",
+              "tr": "The chair is small."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Rodzajniki: der, die, das i ein, eine",
+      "points": [
+        {
+          "title": "Trzy rodzaje",
+          "text": "Każde słowo ma rodzaj: der (męski), die (żeński), das (nijaki). Rodzaj nie zawsze zgadza się z polskim, ucz się słowa od razu z rodzajnikiem.",
+          "examples": [
+            {
+              "de": "der Tisch, die Lampe, das Buch",
+              "tr": "stół, lampa, książka"
+            }
+          ]
+        },
+        {
+          "title": "ein i eine",
+          "text": "ein, eine znaczą „jakiś, jeden”. Dla der i das mówimy ein, dla die mówimy eine.",
+          "examples": [
+            {
+              "de": "Das ist ein Tisch.",
+              "tr": "To jest stół."
+            },
+            {
+              "de": "Das ist eine Lampe.",
+              "tr": "To jest lampa."
+            }
+          ]
+        },
+        {
+          "title": "Przymiotnik po ist",
+          "text": "Po ist przymiotnik się nie zmienia: klein, groß, neu, alt.",
+          "examples": [
+            {
+              "de": "Das Buch ist alt.",
+              "tr": "Książka jest stara."
+            },
+            {
+              "de": "Der Stuhl ist klein.",
+              "tr": "Krzesło jest małe."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Artículos: der, die, das y ein, eine",
+      "points": [
+        {
+          "title": "Tres géneros",
+          "text": "Cada palabra tiene género: der (masculino), die (femenino), das (neutro). No siempre coincide con el español, aprende cada palabra con su artículo.",
+          "examples": [
+            {
+              "de": "der Tisch, die Lampe, das Buch",
+              "tr": "la mesa, la lámpara, el libro"
+            }
+          ]
+        },
+        {
+          "title": "ein y eine",
+          "text": "ein, eine significan \"un, una\". Para der y das se dice ein, para die se dice eine.",
+          "examples": [
+            {
+              "de": "Das ist ein Tisch.",
+              "tr": "Esto es una mesa."
+            },
+            {
+              "de": "Das ist eine Lampe.",
+              "tr": "Esto es una lámpara."
+            }
+          ]
+        },
+        {
+          "title": "Adjetivo después de ist",
+          "text": "Después de ist el adjetivo no cambia: klein, groß, neu, alt.",
+          "examples": [
+            {
+              "de": "Das Buch ist alt.",
+              "tr": "El libro es viejo."
+            },
+            {
+              "de": "Der Stuhl ist klein.",
+              "tr": "La silla es pequeña."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Articles : der, die, das et ein, eine",
+      "points": [
+        {
+          "title": "Trois genres",
+          "text": "Chaque nom a un genre : der (masculin), die (féminin), das (neutre). Il ne correspond pas toujours au français, apprends chaque mot avec son article.",
+          "examples": [
+            {
+              "de": "der Tisch, die Lampe, das Buch",
+              "tr": "la table, la lampe, le livre"
+            }
+          ]
+        },
+        {
+          "title": "ein et eine",
+          "text": "ein, eine veulent dire « un, une ». Pour der et das on dit ein, pour die on dit eine.",
+          "examples": [
+            {
+              "de": "Das ist ein Tisch.",
+              "tr": "C’est une table."
+            },
+            {
+              "de": "Das ist eine Lampe.",
+              "tr": "C’est une lampe."
+            }
+          ]
+        },
+        {
+          "title": "Adjectif après ist",
+          "text": "Après ist, l’adjectif ne change pas : klein, groß, neu, alt.",
+          "examples": [
+            {
+              "de": "Das Buch ist alt.",
+              "tr": "Le livre est vieux."
+            },
+            {
+              "de": "Der Stuhl ist klein.",
+              "tr": "La chaise est petite."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Artikeller: der, die, das ve ein, eine",
+      "points": [
+        {
+          "title": "Üç cinsiyet",
+          "text": "Her ismin bir cinsiyeti var: der (eril), die (dişil), das (nötr). Kelimeyi hep artikeliyle birlikte öğren.",
+          "examples": [
+            {
+              "de": "der Tisch, die Lampe, das Buch",
+              "tr": "masa, lamba, kitap"
+            }
+          ]
+        },
+        {
+          "title": "ein ve eine",
+          "text": "ein, eine \"bir\" demektir. der ve das için ein, die için eine denir.",
+          "examples": [
+            {
+              "de": "Das ist ein Tisch.",
+              "tr": "Bu bir masa."
+            },
+            {
+              "de": "Das ist eine Lampe.",
+              "tr": "Bu bir lamba."
+            }
+          ]
+        },
+        {
+          "title": "ist’ten sonra sıfat",
+          "text": "ist’ten sonra sıfat değişmez: klein, groß, neu, alt.",
+          "examples": [
+            {
+              "de": "Das Buch ist alt.",
+              "tr": "Kitap eski."
+            },
+            {
+              "de": "Der Stuhl ist klein.",
+              "tr": "Sandalye küçük."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Articolele: der, die, das și ein, eine",
+      "points": [
+        {
+          "title": "Trei genuri",
+          "text": "Fiecare cuvânt are un gen: der (masculin), die (feminin), das (neutru). Nu coincide mereu cu româna, învață cuvântul direct cu articolul.",
+          "examples": [
+            {
+              "de": "der Tisch, die Lampe, das Buch",
+              "tr": "masa, lampa, cartea"
+            }
+          ]
+        },
+        {
+          "title": "ein și eine",
+          "text": "ein, eine înseamnă „un, o”. Pentru der și das spunem ein, pentru die spunem eine.",
+          "examples": [
+            {
+              "de": "Das ist ein Tisch.",
+              "tr": "Aceasta este o masă."
+            },
+            {
+              "de": "Das ist eine Lampe.",
+              "tr": "Aceasta este o lampă."
+            }
+          ]
+        },
+        {
+          "title": "Adjectivul după ist",
+          "text": "După ist adjectivul nu se schimbă: klein, groß, neu, alt.",
+          "examples": [
+            {
+              "de": "Das Buch ist alt.",
+              "tr": "Cartea este veche."
+            },
+            {
+              "de": "Der Stuhl ist klein.",
+              "tr": "Scaunul este mic."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Artikllar: der, die, das va ein, eine",
+      "points": [
+        {
+          "title": "Uch rod",
+          "text": "Har bir otning rodi bor: der (erkak), die (ayol), das (o'rta). So'zni doim artikli bilan birga o'rgan.",
+          "examples": [
+            {
+              "de": "der Tisch, die Lampe, das Buch",
+              "tr": "stol, chiroq, kitob"
+            }
+          ]
+        },
+        {
+          "title": "ein va eine",
+          "text": "ein, eine \"bitta, qandaydir\" degani. der va das uchun ein, die uchun eine.",
+          "examples": [
+            {
+              "de": "Das ist ein Tisch.",
+              "tr": "Bu stol."
+            },
+            {
+              "de": "Das ist eine Lampe.",
+              "tr": "Bu chiroq."
+            }
+          ]
+        },
+        {
+          "title": "ist dan keyin sifat",
+          "text": "ist dan keyin sifat o'zgarmaydi: klein, groß, neu, alt.",
+          "examples": [
+            {
+              "de": "Das Buch ist alt.",
+              "tr": "Kitob eski."
+            },
+            {
+              "de": "Der Stuhl ist klein.",
+              "tr": "Stul kichkina."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "आर्टिकल: der, die, das और ein, eine",
+      "points": [
+        {
+          "title": "तीन लिंग",
+          "text": "हर संज्ञा का लिंग होता है: der (पुल्लिंग), die (स्त्रीलिंग), das (नपुंसकलिंग)। हर शब्द को उसके आर्टिकल के साथ सीखो।",
+          "examples": [
+            {
+              "de": "der Tisch, die Lampe, das Buch",
+              "tr": "मेज़, लैंप, किताब"
+            }
+          ]
+        },
+        {
+          "title": "ein और eine",
+          "text": "ein, eine का मतलब \"एक, कोई\"। der और das के लिए ein, die के लिए eine।",
+          "examples": [
+            {
+              "de": "Das ist ein Tisch.",
+              "tr": "यह एक मेज़ है।"
+            },
+            {
+              "de": "Das ist eine Lampe.",
+              "tr": "यह एक लैंप है।"
+            }
+          ]
+        },
+        {
+          "title": "ist के बाद विशेषण",
+          "text": "ist के बाद विशेषण नहीं बदलता: klein, groß, neu, alt।",
+          "examples": [
+            {
+              "de": "Das Buch ist alt.",
+              "tr": "किताब पुरानी है।"
+            },
+            {
+              "de": "Der Stuhl ist klein.",
+              "tr": "कुर्सी छोटी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "أدوات التعريف: der وdie وdas وein وeine",
+      "points": [
+        {
+          "title": "ثلاثة أجناس",
+          "text": "لكل اسم جنس: der (مذكر)، die (مؤنث)، das (محايد). احفظ كل كلمة مع أداتها.",
+          "examples": [
+            {
+              "de": "der Tisch, die Lampe, das Buch",
+              "tr": "الطاولة، المصباح، الكتاب"
+            }
+          ]
+        },
+        {
+          "title": "ein وeine",
+          "text": "ein وeine تعنيان \"واحد، أحد\". مع der وdas نقول ein، ومع die نقول eine.",
+          "examples": [
+            {
+              "de": "Das ist ein Tisch.",
+              "tr": "هذه طاولة."
+            },
+            {
+              "de": "Das ist eine Lampe.",
+              "tr": "هذا مصباح."
+            }
+          ]
+        },
+        {
+          "title": "الصفة بعد ist",
+          "text": "بعد ist لا تتغير الصفة: klein، groß، neu، alt.",
+          "examples": [
+            {
+              "de": "Das Buch ist alt.",
+              "tr": "الكتاب قديم."
+            },
+            {
+              "de": "Der Stuhl ist klein.",
+              "tr": "الكرسي صغير."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "village-2": {
+    "ru": {
+      "title": "ein или der: новое и знакомое",
+      "points": [
+        {
+          "title": "Когда ein, когда der",
+          "text": "ein, eine говорим, когда предмет называем впервые. der, die, das, когда понятно, о каком именно речь.",
+          "examples": [
+            {
+              "de": "Das ist eine Küche. Die Küche ist groß.",
+              "tr": "Это кухня. Кухня большая."
+            }
+          ]
+        },
+        {
+          "title": "Комнаты из двух слов",
+          "text": "Schlafzimmer = schlafen (спать) + Zimmer (комната). Род у такого слова берётся от последней части: das Zimmer, значит das Schlafzimmer.",
+          "examples": [
+            {
+              "de": "das Schlafzimmer, das Badezimmer",
+              "tr": "спальня, ванная"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "ein чи der: нове і знайоме",
+      "points": [
+        {
+          "title": "Коли ein, коли der",
+          "text": "ein, eine кажемо, коли предмет називаємо вперше. der, die, das, коли зрозуміло, про який саме йдеться.",
+          "examples": [
+            {
+              "de": "Das ist eine Küche. Die Küche ist groß.",
+              "tr": "Це кухня. Кухня велика."
+            }
+          ]
+        },
+        {
+          "title": "Кімнати з двох слів",
+          "text": "Schlafzimmer = schlafen (спати) + Zimmer (кімната). Рід такого слова береться від останньої частини: das Zimmer, отже das Schlafzimmer.",
+          "examples": [
+            {
+              "de": "das Schlafzimmer, das Badezimmer",
+              "tr": "спальня, ванна кімната"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "ein or der: new and known",
+      "points": [
+        {
+          "title": "When ein, when der",
+          "text": "Use ein, eine when you mention something for the first time. Use der, die, das when it is clear which one.",
+          "examples": [
+            {
+              "de": "Das ist eine Küche. Die Küche ist groß.",
+              "tr": "This is a kitchen. The kitchen is big."
+            }
+          ]
+        },
+        {
+          "title": "Rooms made of two words",
+          "text": "Schlafzimmer = schlafen (to sleep) + Zimmer (room). The gender comes from the last part: das Zimmer, so das Schlafzimmer.",
+          "examples": [
+            {
+              "de": "das Schlafzimmer, das Badezimmer",
+              "tr": "bedroom, bathroom"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "ein czy der: nowe i znane",
+      "points": [
+        {
+          "title": "Kiedy ein, kiedy der",
+          "text": "ein, eine mówimy, gdy nazywamy coś pierwszy raz. der, die, das, gdy wiadomo, o które chodzi.",
+          "examples": [
+            {
+              "de": "Das ist eine Küche. Die Küche ist groß.",
+              "tr": "To jest kuchnia. Kuchnia jest duża."
+            }
+          ]
+        },
+        {
+          "title": "Pokoje z dwóch słów",
+          "text": "Schlafzimmer = schlafen (spać) + Zimmer (pokój). Rodzaj bierze się od ostatniej części: das Zimmer, więc das Schlafzimmer.",
+          "examples": [
+            {
+              "de": "das Schlafzimmer, das Badezimmer",
+              "tr": "sypialnia, łazienka"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "ein o der: nuevo y conocido",
+      "points": [
+        {
+          "title": "Cuándo ein, cuándo der",
+          "text": "ein, eine cuando nombramos algo por primera vez. der, die, das cuando está claro de cuál se trata.",
+          "examples": [
+            {
+              "de": "Das ist eine Küche. Die Küche ist groß.",
+              "tr": "Esto es una cocina. La cocina es grande."
+            }
+          ]
+        },
+        {
+          "title": "Habitaciones de dos palabras",
+          "text": "Schlafzimmer = schlafen (dormir) + Zimmer (habitación). El género viene de la última parte: das Zimmer, entonces das Schlafzimmer.",
+          "examples": [
+            {
+              "de": "das Schlafzimmer, das Badezimmer",
+              "tr": "dormitorio, baño"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "ein ou der : nouveau et connu",
+      "points": [
+        {
+          "title": "Quand ein, quand der",
+          "text": "ein, eine quand on nomme une chose pour la première fois. der, die, das quand on sait de laquelle on parle.",
+          "examples": [
+            {
+              "de": "Das ist eine Küche. Die Küche ist groß.",
+              "tr": "C’est une cuisine. La cuisine est grande."
+            }
+          ]
+        },
+        {
+          "title": "Des pièces en deux mots",
+          "text": "Schlafzimmer = schlafen (dormir) + Zimmer (pièce). Le genre vient de la dernière partie : das Zimmer, donc das Schlafzimmer.",
+          "examples": [
+            {
+              "de": "das Schlafzimmer, das Badezimmer",
+              "tr": "chambre, salle de bain"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "ein mi, der mi: yeni ve bilinen",
+      "points": [
+        {
+          "title": "Ne zaman ein, ne zaman der",
+          "text": "Bir şeyi ilk kez söylerken ein, eine. Hangisinden bahsedildiği belliyse der, die, das.",
+          "examples": [
+            {
+              "de": "Das ist eine Küche. Die Küche ist groß.",
+              "tr": "Bu bir mutfak. Mutfak büyük."
+            }
+          ]
+        },
+        {
+          "title": "İki kelimeli odalar",
+          "text": "Schlafzimmer = schlafen (uyumak) + Zimmer (oda). Cinsiyet son kelimeden gelir: das Zimmer, yani das Schlafzimmer.",
+          "examples": [
+            {
+              "de": "das Schlafzimmer, das Badezimmer",
+              "tr": "yatak odası, banyo"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "ein sau der: nou și cunoscut",
+      "points": [
+        {
+          "title": "Când ein, când der",
+          "text": "ein, eine când numim ceva prima dată. der, die, das când e clar despre care e vorba.",
+          "examples": [
+            {
+              "de": "Das ist eine Küche. Die Küche ist groß.",
+              "tr": "Aceasta este o bucătărie. Bucătăria este mare."
+            }
+          ]
+        },
+        {
+          "title": "Camere din două cuvinte",
+          "text": "Schlafzimmer = schlafen (a dormi) + Zimmer (cameră). Genul vine de la ultima parte: das Zimmer, deci das Schlafzimmer.",
+          "examples": [
+            {
+              "de": "das Schlafzimmer, das Badezimmer",
+              "tr": "dormitor, baie"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "ein yoki der: yangi va tanish",
+      "points": [
+        {
+          "title": "Qachon ein, qachon der",
+          "text": "Narsani birinchi marta aytganda ein, eine. Qaysi biri ekani aniq bo'lsa der, die, das.",
+          "examples": [
+            {
+              "de": "Das ist eine Küche. Die Küche ist groß.",
+              "tr": "Bu oshxona. Oshxona katta."
+            }
+          ]
+        },
+        {
+          "title": "Ikki so'zdan iborat xonalar",
+          "text": "Schlafzimmer = schlafen (uxlamoq) + Zimmer (xona). Rod oxirgi qismdan olinadi: das Zimmer, demak das Schlafzimmer.",
+          "examples": [
+            {
+              "de": "das Schlafzimmer, das Badezimmer",
+              "tr": "yotoqxona, hammom"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "ein या der: नया और जाना-पहचाना",
+      "points": [
+        {
+          "title": "कब ein, कब der",
+          "text": "किसी चीज़ का पहली बार ज़िक्र करते समय ein, eine। जब साफ़ हो कि कौन-सी, तब der, die, das।",
+          "examples": [
+            {
+              "de": "Das ist eine Küche. Die Küche ist groß.",
+              "tr": "यह एक रसोई है। रसोई बड़ी है।"
+            }
+          ]
+        },
+        {
+          "title": "दो शब्दों से बने कमरे",
+          "text": "Schlafzimmer = schlafen (सोना) + Zimmer (कमरा)। लिंग आखिरी हिस्से से आता है: das Zimmer, इसलिए das Schlafzimmer।",
+          "examples": [
+            {
+              "de": "das Schlafzimmer, das Badezimmer",
+              "tr": "शयनकक्ष, बाथरूम"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ein أم der: الجديد والمعروف",
+      "points": [
+        {
+          "title": "متى ein ومتى der",
+          "text": "نقول ein أو eine عندما نذكر الشيء أول مرة. ونقول der أو die أو das عندما يكون معروفاً أيّه.",
+          "examples": [
+            {
+              "de": "Das ist eine Küche. Die Küche ist groß.",
+              "tr": "هذا مطبخ. المطبخ كبير."
+            }
+          ]
+        },
+        {
+          "title": "غرف من كلمتين",
+          "text": "Schlafzimmer = schlafen (ينام) + Zimmer (غرفة). الجنس يؤخذ من الجزء الأخير: das Zimmer، إذن das Schlafzimmer.",
+          "examples": [
+            {
+              "de": "das Schlafzimmer, das Badezimmer",
+              "tr": "غرفة النوم، الحمّام"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "village-3": {
+    "ru": {
+      "title": "Цвета: когда нужно окончание",
+      "points": [
+        {
+          "title": "После ist: без окончания",
+          "text": "Если цвет стоит после ist, он не меняется.",
+          "examples": [
+            {
+              "de": "Die Lampe ist rot.",
+              "tr": "Лампа красная."
+            },
+            {
+              "de": "Der Tisch ist schwarz.",
+              "tr": "Стол чёрный."
+            }
+          ]
+        },
+        {
+          "title": "Перед словом: с окончанием",
+          "text": "Если цвет стоит перед словом, добавляем окончание. После ein: der-слово получает -er, die-слово -e, das-слово -es.",
+          "examples": [
+            {
+              "de": "ein schwarzer Tisch",
+              "tr": "чёрный стол (der)"
+            },
+            {
+              "de": "eine blaue Tasse",
+              "tr": "синяя чашка (die)"
+            },
+            {
+              "de": "ein weißes Fenster",
+              "tr": "белое окно (das)"
+            }
+          ]
+        },
+        {
+          "title": "После der, die, das",
+          "text": "После определённого артикля окончание проще: почти всегда -e.",
+          "examples": [
+            {
+              "de": "das rote Buch",
+              "tr": "красная книга"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Кольори: коли потрібне закінчення",
+      "points": [
+        {
+          "title": "Після ist: без закінчення",
+          "text": "Якщо колір стоїть після ist, він не змінюється.",
+          "examples": [
+            {
+              "de": "Die Lampe ist rot.",
+              "tr": "Лампа червона."
+            },
+            {
+              "de": "Der Tisch ist schwarz.",
+              "tr": "Стіл чорний."
+            }
+          ]
+        },
+        {
+          "title": "Перед словом: із закінченням",
+          "text": "Якщо колір стоїть перед словом, додаємо закінчення. Після ein: der-слово отримує -er, die-слово -e, das-слово -es.",
+          "examples": [
+            {
+              "de": "ein schwarzer Tisch",
+              "tr": "чорний стіл (der)"
+            },
+            {
+              "de": "eine blaue Tasse",
+              "tr": "синя чашка (die)"
+            },
+            {
+              "de": "ein weißes Fenster",
+              "tr": "біле вікно (das)"
+            }
+          ]
+        },
+        {
+          "title": "Після der, die, das",
+          "text": "Після означеного артикля закінчення простіше: майже завжди -e.",
+          "examples": [
+            {
+              "de": "das rote Buch",
+              "tr": "червона книжка"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Colours: when to add an ending",
+      "points": [
+        {
+          "title": "After ist: no ending",
+          "text": "When the colour comes after ist, it doesn’t change.",
+          "examples": [
+            {
+              "de": "Die Lampe ist rot.",
+              "tr": "The lamp is red."
+            },
+            {
+              "de": "Der Tisch ist schwarz.",
+              "tr": "The table is black."
+            }
+          ]
+        },
+        {
+          "title": "Before the noun: with an ending",
+          "text": "When the colour comes before the noun, add an ending. After ein: der words take -er, die words -e, das words -es.",
+          "examples": [
+            {
+              "de": "ein schwarzer Tisch",
+              "tr": "a black table (der)"
+            },
+            {
+              "de": "eine blaue Tasse",
+              "tr": "a blue cup (die)"
+            },
+            {
+              "de": "ein weißes Fenster",
+              "tr": "a white window (das)"
+            }
+          ]
+        },
+        {
+          "title": "After der, die, das",
+          "text": "After der, die, das the ending is simpler: almost always -e.",
+          "examples": [
+            {
+              "de": "das rote Buch",
+              "tr": "the red book"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Kolory: kiedy potrzebna końcówka",
+      "points": [
+        {
+          "title": "Po ist: bez końcówki",
+          "text": "Gdy kolor stoi po ist, nie zmienia się.",
+          "examples": [
+            {
+              "de": "Die Lampe ist rot.",
+              "tr": "Lampa jest czerwona."
+            },
+            {
+              "de": "Der Tisch ist schwarz.",
+              "tr": "Stół jest czarny."
+            }
+          ]
+        },
+        {
+          "title": "Przed słowem: z końcówką",
+          "text": "Gdy kolor stoi przed słowem, dodajemy końcówkę. Po ein: słowo z der dostaje -er, z die -e, z das -es.",
+          "examples": [
+            {
+              "de": "ein schwarzer Tisch",
+              "tr": "czarny stół (der)"
+            },
+            {
+              "de": "eine blaue Tasse",
+              "tr": "niebieska filiżanka (die)"
+            },
+            {
+              "de": "ein weißes Fenster",
+              "tr": "białe okno (das)"
+            }
+          ]
+        },
+        {
+          "title": "Po der, die, das",
+          "text": "Po rodzajniku określonym końcówka jest prostsza: prawie zawsze -e.",
+          "examples": [
+            {
+              "de": "das rote Buch",
+              "tr": "czerwona książka"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Colores: cuándo hace falta terminación",
+      "points": [
+        {
+          "title": "Después de ist: sin terminación",
+          "text": "Si el color va después de ist, no cambia.",
+          "examples": [
+            {
+              "de": "Die Lampe ist rot.",
+              "tr": "La lámpara es roja."
+            },
+            {
+              "de": "Der Tisch ist schwarz.",
+              "tr": "La mesa es negra."
+            }
+          ]
+        },
+        {
+          "title": "Delante de la palabra: con terminación",
+          "text": "Si el color va delante del sustantivo, se añade terminación. Después de ein: der lleva -er, die lleva -e, das lleva -es.",
+          "examples": [
+            {
+              "de": "ein schwarzer Tisch",
+              "tr": "una mesa negra (der)"
+            },
+            {
+              "de": "eine blaue Tasse",
+              "tr": "una taza azul (die)"
+            },
+            {
+              "de": "ein weißes Fenster",
+              "tr": "una ventana blanca (das)"
+            }
+          ]
+        },
+        {
+          "title": "Después de der, die, das",
+          "text": "Después del artículo determinado la terminación es más fácil: casi siempre -e.",
+          "examples": [
+            {
+              "de": "das rote Buch",
+              "tr": "el libro rojo"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les couleurs : quand ajouter une terminaison",
+      "points": [
+        {
+          "title": "Après ist : pas de terminaison",
+          "text": "Quand la couleur vient après ist, elle ne change pas.",
+          "examples": [
+            {
+              "de": "Die Lampe ist rot.",
+              "tr": "La lampe est rouge."
+            },
+            {
+              "de": "Der Tisch ist schwarz.",
+              "tr": "La table est noire."
+            }
+          ]
+        },
+        {
+          "title": "Devant le nom : avec terminaison",
+          "text": "Quand la couleur est devant le nom, on ajoute une terminaison. Après ein : mot en der -er, en die -e, en das -es.",
+          "examples": [
+            {
+              "de": "ein schwarzer Tisch",
+              "tr": "une table noire (der)"
+            },
+            {
+              "de": "eine blaue Tasse",
+              "tr": "une tasse bleue (die)"
+            },
+            {
+              "de": "ein weißes Fenster",
+              "tr": "une fenêtre blanche (das)"
+            }
+          ]
+        },
+        {
+          "title": "Après der, die, das",
+          "text": "Après l’article défini, la terminaison est plus simple : presque toujours -e.",
+          "examples": [
+            {
+              "de": "das rote Buch",
+              "tr": "le livre rouge"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Renkler: ne zaman ek gerekir",
+      "points": [
+        {
+          "title": "ist’ten sonra: eksiz",
+          "text": "Renk ist’ten sonra gelirse değişmez.",
+          "examples": [
+            {
+              "de": "Die Lampe ist rot.",
+              "tr": "Lamba kırmızı."
+            },
+            {
+              "de": "Der Tisch ist schwarz.",
+              "tr": "Masa siyah."
+            }
+          ]
+        },
+        {
+          "title": "İsimden önce: ekli",
+          "text": "Renk isimden önce gelirse ek alır. ein’den sonra: der’li kelime -er, die’li -e, das’lı -es.",
+          "examples": [
+            {
+              "de": "ein schwarzer Tisch",
+              "tr": "siyah bir masa (der)"
+            },
+            {
+              "de": "eine blaue Tasse",
+              "tr": "mavi bir fincan (die)"
+            },
+            {
+              "de": "ein weißes Fenster",
+              "tr": "beyaz bir pencere (das)"
+            }
+          ]
+        },
+        {
+          "title": "der, die, das’tan sonra",
+          "text": "Belirli artikelden sonra ek daha kolaydır: neredeyse her zaman -e.",
+          "examples": [
+            {
+              "de": "das rote Buch",
+              "tr": "kırmızı kitap"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Culorile: când e nevoie de terminație",
+      "points": [
+        {
+          "title": "După ist: fără terminație",
+          "text": "Când culoarea vine după ist, nu se schimbă.",
+          "examples": [
+            {
+              "de": "Die Lampe ist rot.",
+              "tr": "Lampa este roșie."
+            },
+            {
+              "de": "Der Tisch ist schwarz.",
+              "tr": "Masa este neagră."
+            }
+          ]
+        },
+        {
+          "title": "Înaintea cuvântului: cu terminație",
+          "text": "Când culoarea stă înaintea cuvântului, adăugăm terminație. După ein: cuvânt cu der -er, cu die -e, cu das -es.",
+          "examples": [
+            {
+              "de": "ein schwarzer Tisch",
+              "tr": "o masă neagră (der)"
+            },
+            {
+              "de": "eine blaue Tasse",
+              "tr": "o ceașcă albastră (die)"
+            },
+            {
+              "de": "ein weißes Fenster",
+              "tr": "o fereastră albă (das)"
+            }
+          ]
+        },
+        {
+          "title": "După der, die, das",
+          "text": "După articolul hotărât terminația e mai simplă: aproape mereu -e.",
+          "examples": [
+            {
+              "de": "das rote Buch",
+              "tr": "cartea roșie"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ranglar: qachon qo'shimcha kerak",
+      "points": [
+        {
+          "title": "ist dan keyin: qo'shimchasiz",
+          "text": "Rang ist dan keyin kelsa, o'zgarmaydi.",
+          "examples": [
+            {
+              "de": "Die Lampe ist rot.",
+              "tr": "Chiroq qizil."
+            },
+            {
+              "de": "Der Tisch ist schwarz.",
+              "tr": "Stol qora."
+            }
+          ]
+        },
+        {
+          "title": "So'zdan oldin: qo'shimcha bilan",
+          "text": "Rang so'zdan oldin kelsa, qo'shimcha qo'shiladi. ein dan keyin: der li so'z -er, die li -e, das li -es.",
+          "examples": [
+            {
+              "de": "ein schwarzer Tisch",
+              "tr": "qora stol (der)"
+            },
+            {
+              "de": "eine blaue Tasse",
+              "tr": "ko'k piyola (die)"
+            },
+            {
+              "de": "ein weißes Fenster",
+              "tr": "oq deraza (das)"
+            }
+          ]
+        },
+        {
+          "title": "der, die, das dan keyin",
+          "text": "Aniq artikldan keyin qo'shimcha osonroq: deyarli doim -e.",
+          "examples": [
+            {
+              "de": "das rote Buch",
+              "tr": "qizil kitob"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "रंग: अंत कब जुड़ता है",
+      "points": [
+        {
+          "title": "ist के बाद: कोई अंत नहीं",
+          "text": "रंग ist के बाद आए तो नहीं बदलता।",
+          "examples": [
+            {
+              "de": "Die Lampe ist rot.",
+              "tr": "लैंप लाल है।"
+            },
+            {
+              "de": "Der Tisch ist schwarz.",
+              "tr": "मेज़ काली है।"
+            }
+          ]
+        },
+        {
+          "title": "शब्द से पहले: अंत के साथ",
+          "text": "रंग संज्ञा से पहले आए तो अंत जुड़ता है। ein के बाद: der वाला -er, die वाला -e, das वाला -es।",
+          "examples": [
+            {
+              "de": "ein schwarzer Tisch",
+              "tr": "एक काली मेज़ (der)"
+            },
+            {
+              "de": "eine blaue Tasse",
+              "tr": "एक नीला कप (die)"
+            },
+            {
+              "de": "ein weißes Fenster",
+              "tr": "एक सफ़ेद खिड़की (das)"
+            }
+          ]
+        },
+        {
+          "title": "der, die, das के बाद",
+          "text": "निश्चित आर्टिकल के बाद अंत आसान है: लगभग हमेशा -e।",
+          "examples": [
+            {
+              "de": "das rote Buch",
+              "tr": "लाल किताब"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الألوان: متى نضيف نهاية",
+      "points": [
+        {
+          "title": "بعد ist: بدون نهاية",
+          "text": "إذا جاء اللون بعد ist فلا يتغير.",
+          "examples": [
+            {
+              "de": "Die Lampe ist rot.",
+              "tr": "المصباح أحمر."
+            },
+            {
+              "de": "Der Tisch ist schwarz.",
+              "tr": "الطاولة سوداء."
+            }
+          ]
+        },
+        {
+          "title": "قبل الاسم: مع نهاية",
+          "text": "إذا جاء اللون قبل الاسم نضيف نهاية. بعد ein: مع der تكون -er، ومع die تكون -e، ومع das تكون -es.",
+          "examples": [
+            {
+              "de": "ein schwarzer Tisch",
+              "tr": "طاولة سوداء (der)"
+            },
+            {
+              "de": "eine blaue Tasse",
+              "tr": "فنجان أزرق (die)"
+            },
+            {
+              "de": "ein weißes Fenster",
+              "tr": "نافذة بيضاء (das)"
+            }
+          ]
+        },
+        {
+          "title": "بعد der وdie وdas",
+          "text": "بعد أداة التعريف تكون النهاية أسهل: غالباً -e.",
+          "examples": [
+            {
+              "de": "das rote Buch",
+              "tr": "الكتاب الأحمر"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "village-4": {
+    "ru": {
+      "title": "Множественное число и kein",
+      "points": [
+        {
+          "title": "Во множественном всегда die",
+          "text": "Во множественном числе артикль у всех слов один: die. Окончание у слова разное, его учим вместе со словом.",
+          "examples": [
+            {
+              "de": "das Buch → die Bücher",
+              "tr": "книга → книги"
+            },
+            {
+              "de": "der Stuhl → die Stühle",
+              "tr": "стул → стулья"
+            },
+            {
+              "de": "die Tasse → die Tassen",
+              "tr": "чашка → чашки"
+            }
+          ]
+        },
+        {
+          "title": "Число перед словом",
+          "text": "После числа слово стоит во множественном числе, без артикля.",
+          "examples": [
+            {
+              "de": "drei Stühle",
+              "tr": "три стула"
+            }
+          ]
+        },
+        {
+          "title": "kein: ни одного",
+          "text": "kein значит «нет никакого». Он меняется как ein: kein Tisch, keine Lampe, во множественном keine Bücher.",
+          "examples": [
+            {
+              "de": "Hier sind keine Bücher.",
+              "tr": "Здесь нет книг."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Множина і kein",
+      "points": [
+        {
+          "title": "У множині завжди die",
+          "text": "У множині артикль у всіх слів однаковий: die. Закінчення слова різне, його вчимо разом зі словом.",
+          "examples": [
+            {
+              "de": "das Buch → die Bücher",
+              "tr": "книжка → книжки"
+            },
+            {
+              "de": "der Stuhl → die Stühle",
+              "tr": "стілець → стільці"
+            },
+            {
+              "de": "die Tasse → die Tassen",
+              "tr": "чашка → чашки"
+            }
+          ]
+        },
+        {
+          "title": "Число перед словом",
+          "text": "Після числа слово стоїть у множині, без артикля.",
+          "examples": [
+            {
+              "de": "drei Stühle",
+              "tr": "три стільці"
+            }
+          ]
+        },
+        {
+          "title": "kein: жодного",
+          "text": "kein означає «немає жодного». Він змінюється як ein: kein Tisch, keine Lampe, у множині keine Bücher.",
+          "examples": [
+            {
+              "de": "Hier sind keine Bücher.",
+              "tr": "Тут немає книжок."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Plural and kein",
+      "points": [
+        {
+          "title": "Plural is always die",
+          "text": "In the plural every noun takes die. The plural ending varies, so learn it with the word.",
+          "examples": [
+            {
+              "de": "das Buch → die Bücher",
+              "tr": "book → books"
+            },
+            {
+              "de": "der Stuhl → die Stühle",
+              "tr": "chair → chairs"
+            },
+            {
+              "de": "die Tasse → die Tassen",
+              "tr": "cup → cups"
+            }
+          ]
+        },
+        {
+          "title": "A number before the noun",
+          "text": "After a number the noun is plural, with no article.",
+          "examples": [
+            {
+              "de": "drei Stühle",
+              "tr": "three chairs"
+            }
+          ]
+        },
+        {
+          "title": "kein: not any",
+          "text": "kein means \"no, not a\". It changes like ein: kein Tisch, keine Lampe, plural keine Bücher.",
+          "examples": [
+            {
+              "de": "Hier sind keine Bücher.",
+              "tr": "There are no books here."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Liczba mnoga i kein",
+      "points": [
+        {
+          "title": "W liczbie mnogiej zawsze die",
+          "text": "W liczbie mnogiej rodzajnik jest jeden dla wszystkich: die. Końcówka słowa bywa różna, uczymy się jej ze słowem.",
+          "examples": [
+            {
+              "de": "das Buch → die Bücher",
+              "tr": "książka → książki"
+            },
+            {
+              "de": "der Stuhl → die Stühle",
+              "tr": "krzesło → krzesła"
+            },
+            {
+              "de": "die Tasse → die Tassen",
+              "tr": "filiżanka → filiżanki"
+            }
+          ]
+        },
+        {
+          "title": "Liczba przed słowem",
+          "text": "Po liczbie słowo jest w liczbie mnogiej, bez rodzajnika.",
+          "examples": [
+            {
+              "de": "drei Stühle",
+              "tr": "trzy krzesła"
+            }
+          ]
+        },
+        {
+          "title": "kein: żaden",
+          "text": "kein znaczy „żaden, nie ma”. Odmienia się jak ein: kein Tisch, keine Lampe, w liczbie mnogiej keine Bücher.",
+          "examples": [
+            {
+              "de": "Hier sind keine Bücher.",
+              "tr": "Tu nie ma książek."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Plural y kein",
+      "points": [
+        {
+          "title": "En plural siempre die",
+          "text": "En plural todas las palabras llevan die. La terminación del plural varía, apréndela con la palabra.",
+          "examples": [
+            {
+              "de": "das Buch → die Bücher",
+              "tr": "libro → libros"
+            },
+            {
+              "de": "der Stuhl → die Stühle",
+              "tr": "silla → sillas"
+            },
+            {
+              "de": "die Tasse → die Tassen",
+              "tr": "taza → tazas"
+            }
+          ]
+        },
+        {
+          "title": "Número delante de la palabra",
+          "text": "Después de un número la palabra va en plural, sin artículo.",
+          "examples": [
+            {
+              "de": "drei Stühle",
+              "tr": "tres sillas"
+            }
+          ]
+        },
+        {
+          "title": "kein: ningún",
+          "text": "kein significa \"ningún, no hay\". Cambia como ein: kein Tisch, keine Lampe, en plural keine Bücher.",
+          "examples": [
+            {
+              "de": "Hier sind keine Bücher.",
+              "tr": "Aquí no hay libros."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le pluriel et kein",
+      "points": [
+        {
+          "title": "Au pluriel, toujours die",
+          "text": "Au pluriel, tous les noms prennent die. La terminaison varie, apprends-la avec le mot.",
+          "examples": [
+            {
+              "de": "das Buch → die Bücher",
+              "tr": "livre → livres"
+            },
+            {
+              "de": "der Stuhl → die Stühle",
+              "tr": "chaise → chaises"
+            },
+            {
+              "de": "die Tasse → die Tassen",
+              "tr": "tasse → tasses"
+            }
+          ]
+        },
+        {
+          "title": "Un nombre devant le nom",
+          "text": "Après un nombre, le nom est au pluriel, sans article.",
+          "examples": [
+            {
+              "de": "drei Stühle",
+              "tr": "trois chaises"
+            }
+          ]
+        },
+        {
+          "title": "kein : aucun",
+          "text": "kein veut dire « pas de, aucun ». Il change comme ein : kein Tisch, keine Lampe, au pluriel keine Bücher.",
+          "examples": [
+            {
+              "de": "Hier sind keine Bücher.",
+              "tr": "Il n’y a pas de livres ici."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Çoğul ve kein",
+      "points": [
+        {
+          "title": "Çoğulda hep die",
+          "text": "Çoğulda bütün isimlerin artikeli die’dir. Çoğul eki değişir, kelimeyle birlikte öğren.",
+          "examples": [
+            {
+              "de": "das Buch → die Bücher",
+              "tr": "kitap → kitaplar"
+            },
+            {
+              "de": "der Stuhl → die Stühle",
+              "tr": "sandalye → sandalyeler"
+            },
+            {
+              "de": "die Tasse → die Tassen",
+              "tr": "fincan → fincanlar"
+            }
+          ]
+        },
+        {
+          "title": "Sayıdan sonra isim",
+          "text": "Sayıdan sonra isim çoğul olur ve artikel almaz.",
+          "examples": [
+            {
+              "de": "drei Stühle",
+              "tr": "üç sandalye"
+            }
+          ]
+        },
+        {
+          "title": "kein: hiç",
+          "text": "kein \"hiç ... yok\" demektir. ein gibi değişir: kein Tisch, keine Lampe, çoğulda keine Bücher.",
+          "examples": [
+            {
+              "de": "Hier sind keine Bücher.",
+              "tr": "Burada hiç kitap yok."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Pluralul și kein",
+      "points": [
+        {
+          "title": "La plural mereu die",
+          "text": "La plural toate cuvintele au die. Terminația diferă, o învățăm odată cu cuvântul.",
+          "examples": [
+            {
+              "de": "das Buch → die Bücher",
+              "tr": "carte → cărți"
+            },
+            {
+              "de": "der Stuhl → die Stühle",
+              "tr": "scaun → scaune"
+            },
+            {
+              "de": "die Tasse → die Tassen",
+              "tr": "ceașcă → cești"
+            }
+          ]
+        },
+        {
+          "title": "Numărul înaintea cuvântului",
+          "text": "După un număr cuvântul e la plural, fără articol.",
+          "examples": [
+            {
+              "de": "drei Stühle",
+              "tr": "trei scaune"
+            }
+          ]
+        },
+        {
+          "title": "kein: niciun",
+          "text": "kein înseamnă „niciun, nu există”. Se schimbă ca ein: kein Tisch, keine Lampe, la plural keine Bücher.",
+          "examples": [
+            {
+              "de": "Hier sind keine Bücher.",
+              "tr": "Aici nu sunt cărți."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ko'plik va kein",
+      "points": [
+        {
+          "title": "Ko'plikda doim die",
+          "text": "Ko'plikda barcha so'zlarning artikli die. Ko'plik qo'shimchasi har xil, uni so'z bilan birga o'rgan.",
+          "examples": [
+            {
+              "de": "das Buch → die Bücher",
+              "tr": "kitob → kitoblar"
+            },
+            {
+              "de": "der Stuhl → die Stühle",
+              "tr": "stul → stullar"
+            },
+            {
+              "de": "die Tasse → die Tassen",
+              "tr": "piyola → piyolalar"
+            }
+          ]
+        },
+        {
+          "title": "So'zdan oldin son",
+          "text": "Sondan keyin so'z ko'plikda, artiklsiz turadi.",
+          "examples": [
+            {
+              "de": "drei Stühle",
+              "tr": "uchta stul"
+            }
+          ]
+        },
+        {
+          "title": "kein: hech qanday",
+          "text": "kein \"hech qanday ... yo'q\" degani. U ein kabi o'zgaradi: kein Tisch, keine Lampe, ko'plikda keine Bücher.",
+          "examples": [
+            {
+              "de": "Hier sind keine Bücher.",
+              "tr": "Bu yerda kitoblar yo'q."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "बहुवचन और kein",
+      "points": [
+        {
+          "title": "बहुवचन में हमेशा die",
+          "text": "बहुवचन में हर संज्ञा के साथ die आता है। बहुवचन का अंत अलग-अलग होता है, इसे शब्द के साथ सीखो।",
+          "examples": [
+            {
+              "de": "das Buch → die Bücher",
+              "tr": "किताब → किताबें"
+            },
+            {
+              "de": "der Stuhl → die Stühle",
+              "tr": "कुर्सी → कुर्सियाँ"
+            },
+            {
+              "de": "die Tasse → die Tassen",
+              "tr": "कप → कप"
+            }
+          ]
+        },
+        {
+          "title": "संज्ञा से पहले संख्या",
+          "text": "संख्या के बाद संज्ञा बहुवचन में आती है, बिना आर्टिकल के।",
+          "examples": [
+            {
+              "de": "drei Stühle",
+              "tr": "तीन कुर्सियाँ"
+            }
+          ]
+        },
+        {
+          "title": "kein: कोई नहीं",
+          "text": "kein का मतलब \"कोई नहीं\"। यह ein की तरह बदलता है: kein Tisch, keine Lampe, बहुवचन में keine Bücher।",
+          "examples": [
+            {
+              "de": "Hier sind keine Bücher.",
+              "tr": "यहाँ कोई किताब नहीं है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الجمع وkein",
+      "points": [
+        {
+          "title": "في الجمع دائماً die",
+          "text": "في الجمع تأخذ كل الأسماء die. أما نهاية الجمع فتختلف، فاحفظها مع الكلمة.",
+          "examples": [
+            {
+              "de": "das Buch → die Bücher",
+              "tr": "كتاب → كتب"
+            },
+            {
+              "de": "der Stuhl → die Stühle",
+              "tr": "كرسي → كراسي"
+            },
+            {
+              "de": "die Tasse → die Tassen",
+              "tr": "فنجان → فناجين"
+            }
+          ]
+        },
+        {
+          "title": "العدد قبل الاسم",
+          "text": "بعد العدد يكون الاسم بصيغة الجمع وبدون أداة.",
+          "examples": [
+            {
+              "de": "drei Stühle",
+              "tr": "ثلاثة كراسي"
+            }
+          ]
+        },
+        {
+          "title": "kein: لا يوجد أي",
+          "text": "kein تعني \"لا يوجد أي\". وتتغير مثل ein: kein Tisch، keine Lampe، وفي الجمع keine Bücher.",
+          "examples": [
+            {
+              "de": "Hier sind keine Bücher.",
+              "tr": "لا توجد كتب هنا."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "village-5": {
+    "ru": {
+      "title": "ein + прилагательное: -er, -e, -es",
+      "points": [
+        {
+          "title": "Окончание показывает род",
+          "text": "После ein прилагательное «подсказывает» род: der Löffel → ein großer Löffel, die Gabel → eine neue Gabel, das Glas → ein kleines Glas.",
+          "examples": [
+            {
+              "de": "ein großer Löffel",
+              "tr": "большая ложка (der)"
+            },
+            {
+              "de": "eine neue Gabel",
+              "tr": "новая вилка (die)"
+            },
+            {
+              "de": "ein kleines Glas",
+              "tr": "маленький стакан (das)"
+            }
+          ]
+        },
+        {
+          "title": "Подсказка",
+          "text": "Окончание похоже на конец артикля: der → -er, die → -e, das → -es.",
+          "examples": []
+        }
+      ]
+    },
+    "uk": {
+      "title": "ein + прикметник: -er, -e, -es",
+      "points": [
+        {
+          "title": "Закінчення показує рід",
+          "text": "Після ein прикметник «підказує» рід: der Löffel → ein großer Löffel, die Gabel → eine neue Gabel, das Glas → ein kleines Glas.",
+          "examples": [
+            {
+              "de": "ein großer Löffel",
+              "tr": "велика ложка (der)"
+            },
+            {
+              "de": "eine neue Gabel",
+              "tr": "нова виделка (die)"
+            },
+            {
+              "de": "ein kleines Glas",
+              "tr": "маленька склянка (das)"
+            }
+          ]
+        },
+        {
+          "title": "Підказка",
+          "text": "Закінчення схоже на кінець артикля: der → -er, die → -e, das → -es.",
+          "examples": []
+        }
+      ]
+    },
+    "en": {
+      "title": "ein + adjective: -er, -e, -es",
+      "points": [
+        {
+          "title": "The ending shows the gender",
+          "text": "After ein the adjective shows the gender: der Löffel → ein großer Löffel, die Gabel → eine neue Gabel, das Glas → ein kleines Glas.",
+          "examples": [
+            {
+              "de": "ein großer Löffel",
+              "tr": "a big spoon (der)"
+            },
+            {
+              "de": "eine neue Gabel",
+              "tr": "a new fork (die)"
+            },
+            {
+              "de": "ein kleines Glas",
+              "tr": "a small glass (das)"
+            }
+          ]
+        },
+        {
+          "title": "A tip",
+          "text": "The ending looks like the end of the article: der → -er, die → -e, das → -es.",
+          "examples": []
+        }
+      ]
+    },
+    "pl": {
+      "title": "ein + przymiotnik: -er, -e, -es",
+      "points": [
+        {
+          "title": "Końcówka pokazuje rodzaj",
+          "text": "Po ein przymiotnik „podpowiada” rodzaj: der Löffel → ein großer Löffel, die Gabel → eine neue Gabel, das Glas → ein kleines Glas.",
+          "examples": [
+            {
+              "de": "ein großer Löffel",
+              "tr": "duża łyżka (der)"
+            },
+            {
+              "de": "eine neue Gabel",
+              "tr": "nowy widelec (die)"
+            },
+            {
+              "de": "ein kleines Glas",
+              "tr": "mała szklanka (das)"
+            }
+          ]
+        },
+        {
+          "title": "Podpowiedź",
+          "text": "Końcówka przypomina koniec rodzajnika: der → -er, die → -e, das → -es.",
+          "examples": []
+        }
+      ]
+    },
+    "es": {
+      "title": "ein + adjetivo: -er, -e, -es",
+      "points": [
+        {
+          "title": "La terminación muestra el género",
+          "text": "Después de ein el adjetivo muestra el género: der Löffel → ein großer Löffel, die Gabel → eine neue Gabel, das Glas → ein kleines Glas.",
+          "examples": [
+            {
+              "de": "ein großer Löffel",
+              "tr": "una cuchara grande (der)"
+            },
+            {
+              "de": "eine neue Gabel",
+              "tr": "un tenedor nuevo (die)"
+            },
+            {
+              "de": "ein kleines Glas",
+              "tr": "un vaso pequeño (das)"
+            }
+          ]
+        },
+        {
+          "title": "Un truco",
+          "text": "La terminación se parece al final del artículo: der → -er, die → -e, das → -es.",
+          "examples": []
+        }
+      ]
+    },
+    "fr": {
+      "title": "ein + adjectif : -er, -e, -es",
+      "points": [
+        {
+          "title": "La terminaison montre le genre",
+          "text": "Après ein, l’adjectif montre le genre : der Löffel → ein großer Löffel, die Gabel → eine neue Gabel, das Glas → ein kleines Glas.",
+          "examples": [
+            {
+              "de": "ein großer Löffel",
+              "tr": "une grande cuillère (der)"
+            },
+            {
+              "de": "eine neue Gabel",
+              "tr": "une nouvelle fourchette (die)"
+            },
+            {
+              "de": "ein kleines Glas",
+              "tr": "un petit verre (das)"
+            }
+          ]
+        },
+        {
+          "title": "Une astuce",
+          "text": "La terminaison ressemble à la fin de l’article : der → -er, die → -e, das → -es.",
+          "examples": []
+        }
+      ]
+    },
+    "tr": {
+      "title": "ein + sıfat: -er, -e, -es",
+      "points": [
+        {
+          "title": "Ek cinsiyeti gösterir",
+          "text": "ein’den sonra sıfat cinsiyeti gösterir: der Löffel → ein großer Löffel, die Gabel → eine neue Gabel, das Glas → ein kleines Glas.",
+          "examples": [
+            {
+              "de": "ein großer Löffel",
+              "tr": "büyük bir kaşık (der)"
+            },
+            {
+              "de": "eine neue Gabel",
+              "tr": "yeni bir çatal (die)"
+            },
+            {
+              "de": "ein kleines Glas",
+              "tr": "küçük bir bardak (das)"
+            }
+          ]
+        },
+        {
+          "title": "İpucu",
+          "text": "Ek, artikelin sonuna benzer: der → -er, die → -e, das → -es.",
+          "examples": []
+        }
+      ]
+    },
+    "ro": {
+      "title": "ein + adjectiv: -er, -e, -es",
+      "points": [
+        {
+          "title": "Terminația arată genul",
+          "text": "După ein adjectivul arată genul: der Löffel → ein großer Löffel, die Gabel → eine neue Gabel, das Glas → ein kleines Glas.",
+          "examples": [
+            {
+              "de": "ein großer Löffel",
+              "tr": "o lingură mare (der)"
+            },
+            {
+              "de": "eine neue Gabel",
+              "tr": "o furculiță nouă (die)"
+            },
+            {
+              "de": "ein kleines Glas",
+              "tr": "un pahar mic (das)"
+            }
+          ]
+        },
+        {
+          "title": "Un truc",
+          "text": "Terminația seamănă cu finalul articolului: der → -er, die → -e, das → -es.",
+          "examples": []
+        }
+      ]
+    },
+    "uz": {
+      "title": "ein + sifat: -er, -e, -es",
+      "points": [
+        {
+          "title": "Qo'shimcha rodni ko'rsatadi",
+          "text": "ein dan keyin sifat rodni ko'rsatadi: der Löffel → ein großer Löffel, die Gabel → eine neue Gabel, das Glas → ein kleines Glas.",
+          "examples": [
+            {
+              "de": "ein großer Löffel",
+              "tr": "katta qoshiq (der)"
+            },
+            {
+              "de": "eine neue Gabel",
+              "tr": "yangi vilka (die)"
+            },
+            {
+              "de": "ein kleines Glas",
+              "tr": "kichkina stakan (das)"
+            }
+          ]
+        },
+        {
+          "title": "Maslahat",
+          "text": "Qo'shimcha artiklning oxiriga o'xshaydi: der → -er, die → -e, das → -es.",
+          "examples": []
+        }
+      ]
+    },
+    "hi": {
+      "title": "ein + विशेषण: -er, -e, -es",
+      "points": [
+        {
+          "title": "अंत लिंग बताता है",
+          "text": "ein के बाद विशेषण लिंग बताता है: der Löffel → ein großer Löffel, die Gabel → eine neue Gabel, das Glas → ein kleines Glas।",
+          "examples": [
+            {
+              "de": "ein großer Löffel",
+              "tr": "एक बड़ा चम्मच (der)"
+            },
+            {
+              "de": "eine neue Gabel",
+              "tr": "एक नया काँटा (die)"
+            },
+            {
+              "de": "ein kleines Glas",
+              "tr": "एक छोटा गिलास (das)"
+            }
+          ]
+        },
+        {
+          "title": "एक संकेत",
+          "text": "अंत आर्टिकल के आखिरी हिस्से जैसा होता है: der → -er, die → -e, das → -es।",
+          "examples": []
+        }
+      ]
+    },
+    "ar": {
+      "title": "ein + صفة: -er و-e و-es",
+      "points": [
+        {
+          "title": "النهاية تُظهر الجنس",
+          "text": "بعد ein تُظهر الصفة جنس الاسم: der Löffel → ein großer Löffel، die Gabel → eine neue Gabel، das Glas → ein kleines Glas.",
+          "examples": [
+            {
+              "de": "ein großer Löffel",
+              "tr": "ملعقة كبيرة (der)"
+            },
+            {
+              "de": "eine neue Gabel",
+              "tr": "شوكة جديدة (die)"
+            },
+            {
+              "de": "ein kleines Glas",
+              "tr": "كأس صغير (das)"
+            }
+          ]
+        },
+        {
+          "title": "تلميح",
+          "text": "النهاية تشبه آخر الأداة: der → -er، die → -e، das → -es.",
+          "examples": []
+        }
+      ]
+    }
+  },
+  "village-6": {
+    "ru": {
+      "title": "Описываем комнату",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Повторяем окончания после ein: der-слово -er, das-слово -es. Das ist... значит «это».",
+          "examples": [
+            {
+              "de": "ein großer Teppich",
+              "tr": "большой ковёр"
+            },
+            {
+              "de": "Das ist ein neues Sofa.",
+              "tr": "Это новый диван."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Описуємо кімнату",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Повторюємо закінчення після ein: der-слово -er, das-слово -es. Das ist... означає «це».",
+          "examples": [
+            {
+              "de": "ein großer Teppich",
+              "tr": "великий килим"
+            },
+            {
+              "de": "Das ist ein neues Sofa.",
+              "tr": "Це новий диван."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Describing a room",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "Review the endings after ein: der words -er, das words -es. Das ist... means \"this is\".",
+          "examples": [
+            {
+              "de": "ein großer Teppich",
+              "tr": "a big carpet"
+            },
+            {
+              "de": "Das ist ein neues Sofa.",
+              "tr": "This is a new sofa."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Opisujemy pokój",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Powtarzamy końcówki po ein: słowo z der -er, z das -es. Das ist... znaczy „to jest”.",
+          "examples": [
+            {
+              "de": "ein großer Teppich",
+              "tr": "duży dywan"
+            },
+            {
+              "de": "Das ist ein neues Sofa.",
+              "tr": "To jest nowa kanapa."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Describimos una habitación",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Repasamos las terminaciones después de ein: der -er, das -es. Das ist... significa \"esto es\".",
+          "examples": [
+            {
+              "de": "ein großer Teppich",
+              "tr": "una alfombra grande"
+            },
+            {
+              "de": "Das ist ein neues Sofa.",
+              "tr": "Esto es un sofá nuevo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Décrire une pièce",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "On révise les terminaisons après ein : mot en der -er, en das -es. Das ist... veut dire « c’est ».",
+          "examples": [
+            {
+              "de": "ein großer Teppich",
+              "tr": "un grand tapis"
+            },
+            {
+              "de": "Das ist ein neues Sofa.",
+              "tr": "C’est un nouveau canapé."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Odayı anlatıyoruz",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "ein’den sonraki ekleri tekrar ediyoruz: der’li -er, das’lı -es. Das ist... \"bu\" demektir.",
+          "examples": [
+            {
+              "de": "ein großer Teppich",
+              "tr": "büyük bir halı"
+            },
+            {
+              "de": "Das ist ein neues Sofa.",
+              "tr": "Bu yeni bir kanepe."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Descriem camera",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Recapitulăm terminațiile după ein: cuvânt cu der -er, cu das -es. Das ist... înseamnă „acesta este”.",
+          "examples": [
+            {
+              "de": "ein großer Teppich",
+              "tr": "un covor mare"
+            },
+            {
+              "de": "Das ist ein neues Sofa.",
+              "tr": "Aceasta este o canapea nouă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Xonani tasvirlaymiz",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "ein dan keyingi qo'shimchalarni takrorlaymiz: der li -er, das li -es. Das ist... \"bu\" degani.",
+          "examples": [
+            {
+              "de": "ein großer Teppich",
+              "tr": "katta gilam"
+            },
+            {
+              "de": "Das ist ein neues Sofa.",
+              "tr": "Bu yangi divan."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कमरे का वर्णन",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "ein के बाद के अंत दोहराते हैं: der वाला -er, das वाला -es। Das ist... का मतलब \"यह है\"।",
+          "examples": [
+            {
+              "de": "ein großer Teppich",
+              "tr": "एक बड़ा कालीन"
+            },
+            {
+              "de": "Das ist ein neues Sofa.",
+              "tr": "यह एक नया सोफ़ा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "نصف الغرفة",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "نراجع النهايات بعد ein: مع der تكون -er، ومع das تكون -es. وDas ist... تعني \"هذا\".",
+          "examples": [
+            {
+              "de": "ein großer Teppich",
+              "tr": "سجادة كبيرة"
+            },
+            {
+              "de": "Das ist ein neues Sofa.",
+              "tr": "هذه أريكة جديدة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "village-7": {
+    "ru": {
+      "title": "Множественное с умлаутом",
+      "points": [
+        {
+          "title": "Буква меняется",
+          "text": "Во множественном a, o, u часто превращаются в ä, ö, ü: das Handtuch → die Handtücher.",
+          "examples": [
+            {
+              "de": "zwei Handtücher",
+              "tr": "два полотенца"
+            }
+          ]
+        },
+        {
+          "title": "Каким бывает предмет",
+          "text": "Качество говорим через ist, без окончания.",
+          "examples": [
+            {
+              "de": "Das Handtuch ist sauber.",
+              "tr": "Полотенце чистое."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Множина з умлаутом",
+      "points": [
+        {
+          "title": "Літера змінюється",
+          "text": "У множині a, o, u часто стають ä, ö, ü: das Handtuch → die Handtücher.",
+          "examples": [
+            {
+              "de": "zwei Handtücher",
+              "tr": "два рушники"
+            }
+          ]
+        },
+        {
+          "title": "Яким буває предмет",
+          "text": "Якість кажемо через ist, без закінчення.",
+          "examples": [
+            {
+              "de": "Das Handtuch ist sauber.",
+              "tr": "Рушник чистий."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Plural with an umlaut",
+      "points": [
+        {
+          "title": "The vowel changes",
+          "text": "In the plural a, o, u often become ä, ö, ü: das Handtuch → die Handtücher.",
+          "examples": [
+            {
+              "de": "zwei Handtücher",
+              "tr": "two towels"
+            }
+          ]
+        },
+        {
+          "title": "What a thing is like",
+          "text": "Say the quality with ist, no ending.",
+          "examples": [
+            {
+              "de": "Das Handtuch ist sauber.",
+              "tr": "The towel is clean."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Liczba mnoga z umlautem",
+      "points": [
+        {
+          "title": "Litera się zmienia",
+          "text": "W liczbie mnogiej a, o, u często zmieniają się w ä, ö, ü: das Handtuch → die Handtücher.",
+          "examples": [
+            {
+              "de": "zwei Handtücher",
+              "tr": "dwa ręczniki"
+            }
+          ]
+        },
+        {
+          "title": "Jaki jest przedmiot",
+          "text": "Cechę podajemy przez ist, bez końcówki.",
+          "examples": [
+            {
+              "de": "Das Handtuch ist sauber.",
+              "tr": "Ręcznik jest czysty."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Plural con diéresis",
+      "points": [
+        {
+          "title": "La vocal cambia",
+          "text": "En plural a, o, u a menudo pasan a ä, ö, ü: das Handtuch → die Handtücher.",
+          "examples": [
+            {
+              "de": "zwei Handtücher",
+              "tr": "dos toallas"
+            }
+          ]
+        },
+        {
+          "title": "Cómo es la cosa",
+          "text": "La cualidad se dice con ist, sin terminación.",
+          "examples": [
+            {
+              "de": "Das Handtuch ist sauber.",
+              "tr": "La toalla está limpia."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pluriel avec umlaut",
+      "points": [
+        {
+          "title": "La voyelle change",
+          "text": "Au pluriel, a, o, u deviennent souvent ä, ö, ü : das Handtuch → die Handtücher.",
+          "examples": [
+            {
+              "de": "zwei Handtücher",
+              "tr": "deux serviettes"
+            }
+          ]
+        },
+        {
+          "title": "Comment est l’objet",
+          "text": "On dit la qualité avec ist, sans terminaison.",
+          "examples": [
+            {
+              "de": "Das Handtuch ist sauber.",
+              "tr": "La serviette est propre."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Umlautlu çoğul",
+      "points": [
+        {
+          "title": "Harf değişir",
+          "text": "Çoğulda a, o, u çoğu zaman ä, ö, ü olur: das Handtuch → die Handtücher.",
+          "examples": [
+            {
+              "de": "zwei Handtücher",
+              "tr": "iki havlu"
+            }
+          ]
+        },
+        {
+          "title": "Eşya nasıl",
+          "text": "Özellik ist ile, eksiz söylenir.",
+          "examples": [
+            {
+              "de": "Das Handtuch ist sauber.",
+              "tr": "Havlu temiz."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Plural cu umlaut",
+      "points": [
+        {
+          "title": "Litera se schimbă",
+          "text": "La plural a, o, u devin des ä, ö, ü: das Handtuch → die Handtücher.",
+          "examples": [
+            {
+              "de": "zwei Handtücher",
+              "tr": "două prosoape"
+            }
+          ]
+        },
+        {
+          "title": "Cum este obiectul",
+          "text": "Calitatea o spunem cu ist, fără terminație.",
+          "examples": [
+            {
+              "de": "Das Handtuch ist sauber.",
+              "tr": "Prosopul este curat."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Umlautli ko'plik",
+      "points": [
+        {
+          "title": "Harf o'zgaradi",
+          "text": "Ko'plikda a, o, u ko'pincha ä, ö, ü ga aylanadi: das Handtuch → die Handtücher.",
+          "examples": [
+            {
+              "de": "zwei Handtücher",
+              "tr": "ikkita sochiq"
+            }
+          ]
+        },
+        {
+          "title": "Narsa qanday",
+          "text": "Sifat ist bilan, qo'shimchasiz aytiladi.",
+          "examples": [
+            {
+              "de": "Das Handtuch ist sauber.",
+              "tr": "Sochiq toza."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "उमलाउट वाला बहुवचन",
+      "points": [
+        {
+          "title": "स्वर बदलता है",
+          "text": "बहुवचन में a, o, u अक्सर ä, ö, ü बन जाते हैं: das Handtuch → die Handtücher।",
+          "examples": [
+            {
+              "de": "zwei Handtücher",
+              "tr": "दो तौलिए"
+            }
+          ]
+        },
+        {
+          "title": "चीज़ कैसी है",
+          "text": "गुण ist के साथ, बिना अंत के बताते हैं।",
+          "examples": [
+            {
+              "de": "Das Handtuch ist sauber.",
+              "tr": "तौलिया साफ़ है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الجمع مع الأوملاوت",
+      "points": [
+        {
+          "title": "يتغير الحرف",
+          "text": "في الجمع تتحول a وo وu غالباً إلى ä وö وü: das Handtuch → die Handtücher.",
+          "examples": [
+            {
+              "de": "zwei Handtücher",
+              "tr": "منشفتان"
+            }
+          ]
+        },
+        {
+          "title": "كيف هو الشيء",
+          "text": "نقول الصفة مع ist وبدون نهاية.",
+          "examples": [
+            {
+              "de": "Das Handtuch ist sauber.",
+              "tr": "المنشفة نظيفة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "village-8": {
+    "ru": {
+      "title": "В спальне: описания",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Повторяем: после ein окончание -er, -e или -es. Некоторые слова почти всегда во множественном: die Vorhänge.",
+          "examples": [
+            {
+              "de": "ein weiches Kissen",
+              "tr": "мягкая подушка (das)"
+            },
+            {
+              "de": "Die Vorhänge sind blau.",
+              "tr": "Шторы синие."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "У спальні: описи",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Повторюємо: після ein закінчення -er, -e або -es. Деякі слова майже завжди в множині: die Vorhänge.",
+          "examples": [
+            {
+              "de": "ein weiches Kissen",
+              "tr": "м'яка подушка (das)"
+            },
+            {
+              "de": "Die Vorhänge sind blau.",
+              "tr": "Штори сині."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "In the bedroom: descriptions",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "Review: after ein the ending is -er, -e or -es. Some words are almost always plural: die Vorhänge.",
+          "examples": [
+            {
+              "de": "ein weiches Kissen",
+              "tr": "a soft pillow (das)"
+            },
+            {
+              "de": "Die Vorhänge sind blau.",
+              "tr": "The curtains are blue."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "W sypialni: opisy",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Powtarzamy: po ein końcówka -er, -e albo -es. Niektóre słowa są prawie zawsze w liczbie mnogiej: die Vorhänge.",
+          "examples": [
+            {
+              "de": "ein weiches Kissen",
+              "tr": "miękka poduszka (das)"
+            },
+            {
+              "de": "Die Vorhänge sind blau.",
+              "tr": "Zasłony są niebieskie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "En el dormitorio: descripciones",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Repaso: después de ein la terminación es -er, -e o -es. Algunas palabras casi siempre van en plural: die Vorhänge.",
+          "examples": [
+            {
+              "de": "ein weiches Kissen",
+              "tr": "una almohada blanda (das)"
+            },
+            {
+              "de": "Die Vorhänge sind blau.",
+              "tr": "Las cortinas son azules."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Dans la chambre : descriptions",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "Révision : après ein, la terminaison est -er, -e ou -es. Certains mots sont presque toujours au pluriel : die Vorhänge.",
+          "examples": [
+            {
+              "de": "ein weiches Kissen",
+              "tr": "un oreiller moelleux (das)"
+            },
+            {
+              "de": "Die Vorhänge sind blau.",
+              "tr": "Les rideaux sont bleus."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yatak odasında: tarifler",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Tekrar: ein’den sonra ek -er, -e ya da -es. Bazı kelimeler neredeyse hep çoğuldur: die Vorhänge.",
+          "examples": [
+            {
+              "de": "ein weiches Kissen",
+              "tr": "yumuşak bir yastık (das)"
+            },
+            {
+              "de": "Die Vorhänge sind blau.",
+              "tr": "Perdeler mavi."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "În dormitor: descrieri",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Recapitulăm: după ein terminația este -er, -e sau -es. Unele cuvinte sunt aproape mereu la plural: die Vorhänge.",
+          "examples": [
+            {
+              "de": "ein weiches Kissen",
+              "tr": "o pernă moale (das)"
+            },
+            {
+              "de": "Die Vorhänge sind blau.",
+              "tr": "Perdelele sunt albastre."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Yotoqxonada: tasvirlar",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Takrorlaymiz: ein dan keyin -er, -e yoki -es. Ba'zi so'zlar deyarli doim ko'plikda: die Vorhänge.",
+          "examples": [
+            {
+              "de": "ein weiches Kissen",
+              "tr": "yumshoq yostiq (das)"
+            },
+            {
+              "de": "Die Vorhänge sind blau.",
+              "tr": "Pardalar ko'k."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "शयनकक्ष में: वर्णन",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "दोहराव: ein के बाद अंत -er, -e या -es। कुछ शब्द लगभग हमेशा बहुवचन में होते हैं: die Vorhänge।",
+          "examples": [
+            {
+              "de": "ein weiches Kissen",
+              "tr": "एक मुलायम तकिया (das)"
+            },
+            {
+              "de": "Die Vorhänge sind blau.",
+              "tr": "परदे नीले हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "في غرفة النوم: الوصف",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "مراجعة: بعد ein تكون النهاية -er أو -e أو -es. وبعض الكلمات تأتي غالباً بصيغة الجمع: die Vorhänge.",
+          "examples": [
+            {
+              "de": "ein weiches Kissen",
+              "tr": "وسادة ناعمة (das)"
+            },
+            {
+              "de": "Die Vorhänge sind blau.",
+              "tr": "الستائر زرقاء."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "village-9": {
+    "ru": {
+      "title": "В прихожей: вещи",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Обувь по-немецки обычно во множественном: die Schuhe, а глагол тогда sind.",
+          "examples": [
+            {
+              "de": "Die Schuhe sind neu.",
+              "tr": "Обувь новая."
+            },
+            {
+              "de": "Das ist eine Tasche.",
+              "tr": "Это сумка."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "У передпокої: речі",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Взуття німецькою зазвичай у множині: die Schuhe, а дієслово тоді sind.",
+          "examples": [
+            {
+              "de": "Die Schuhe sind neu.",
+              "tr": "Взуття нове."
+            },
+            {
+              "de": "Das ist eine Tasche.",
+              "tr": "Це сумка."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "In the hallway: things",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "Shoes are usually plural: die Schuhe, and then the verb is sind.",
+          "examples": [
+            {
+              "de": "Die Schuhe sind neu.",
+              "tr": "The shoes are new."
+            },
+            {
+              "de": "Das ist eine Tasche.",
+              "tr": "This is a bag."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "W przedpokoju: rzeczy",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Buty po niemiecku zwykle są w liczbie mnogiej: die Schuhe, a czasownik wtedy sind.",
+          "examples": [
+            {
+              "de": "Die Schuhe sind neu.",
+              "tr": "Buty są nowe."
+            },
+            {
+              "de": "Das ist eine Tasche.",
+              "tr": "To jest torba."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "En la entrada: cosas",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Los zapatos suelen ir en plural: die Schuhe, y entonces el verbo es sind.",
+          "examples": [
+            {
+              "de": "Die Schuhe sind neu.",
+              "tr": "Los zapatos son nuevos."
+            },
+            {
+              "de": "Das ist eine Tasche.",
+              "tr": "Esto es un bolso."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Dans l’entrée : les affaires",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "Les chaussures sont en général au pluriel : die Schuhe, et le verbe est alors sind.",
+          "examples": [
+            {
+              "de": "Die Schuhe sind neu.",
+              "tr": "Les chaussures sont neuves."
+            },
+            {
+              "de": "Das ist eine Tasche.",
+              "tr": "C’est un sac."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Antrede: eşyalar",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Ayakkabı genelde çoğuldur: die Schuhe, o zaman fiil sind olur.",
+          "examples": [
+            {
+              "de": "Die Schuhe sind neu.",
+              "tr": "Ayakkabılar yeni."
+            },
+            {
+              "de": "Das ist eine Tasche.",
+              "tr": "Bu bir çanta."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "În hol: lucruri",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Pantofii sunt de obicei la plural: die Schuhe, iar verbul atunci este sind.",
+          "examples": [
+            {
+              "de": "Die Schuhe sind neu.",
+              "tr": "Pantofii sunt noi."
+            },
+            {
+              "de": "Das ist eine Tasche.",
+              "tr": "Aceasta este o geantă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Dahlizda: buyumlar",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Poyabzal odatda ko'plikda: die Schuhe, unda fe'l sind bo'ladi.",
+          "examples": [
+            {
+              "de": "Die Schuhe sind neu.",
+              "tr": "Poyabzal yangi."
+            },
+            {
+              "de": "Das ist eine Tasche.",
+              "tr": "Bu sumka."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "गलियारे में: चीज़ें",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "जूते आमतौर पर बहुवचन में होते हैं: die Schuhe, तब क्रिया sind होती है।",
+          "examples": [
+            {
+              "de": "Die Schuhe sind neu.",
+              "tr": "जूते नए हैं।"
+            },
+            {
+              "de": "Das ist eine Tasche.",
+              "tr": "यह एक थैला है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "في المدخل: الأغراض",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "الأحذية تأتي عادة بصيغة الجمع: die Schuhe، وعندها يكون الفعل sind.",
+          "examples": [
+            {
+              "de": "Die Schuhe sind neu.",
+              "tr": "الحذاء جديد."
+            },
+            {
+              "de": "Das ist eine Tasche.",
+              "tr": "هذه حقيبة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "village-10": {
+    "ru": {
+      "title": "В саду: цвет и количество",
+      "points": [
+        {
+          "title": "Множественное по-разному",
+          "text": "Окончание множественного числа у каждого слова своё: der Baum → die Bäume, die Blume → die Blumen.",
+          "examples": [
+            {
+              "de": "zwei Bäume",
+              "tr": "два дерева"
+            }
+          ]
+        },
+        {
+          "title": "Цвет перед словом",
+          "text": "Как раньше: после ein окончание зависит от рода.",
+          "examples": [
+            {
+              "de": "eine rote Blume",
+              "tr": "красный цветок (die)"
+            },
+            {
+              "de": "ein großer Baum",
+              "tr": "большое дерево (der)"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "У саду: колір і кількість",
+      "points": [
+        {
+          "title": "Множина по-різному",
+          "text": "Закінчення множини в кожного слова своє: der Baum → die Bäume, die Blume → die Blumen.",
+          "examples": [
+            {
+              "de": "zwei Bäume",
+              "tr": "два дерева"
+            }
+          ]
+        },
+        {
+          "title": "Колір перед словом",
+          "text": "Як і раніше: після ein закінчення залежить від роду.",
+          "examples": [
+            {
+              "de": "eine rote Blume",
+              "tr": "червона квітка (die)"
+            },
+            {
+              "de": "ein großer Baum",
+              "tr": "велике дерево (der)"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "In the garden: colour and number",
+      "points": [
+        {
+          "title": "Different plurals",
+          "text": "Each word has its own plural: der Baum → die Bäume, die Blume → die Blumen.",
+          "examples": [
+            {
+              "de": "zwei Bäume",
+              "tr": "two trees"
+            }
+          ]
+        },
+        {
+          "title": "Colour before the noun",
+          "text": "As before: after ein the ending depends on the gender.",
+          "examples": [
+            {
+              "de": "eine rote Blume",
+              "tr": "a red flower (die)"
+            },
+            {
+              "de": "ein großer Baum",
+              "tr": "a big tree (der)"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "W ogrodzie: kolor i liczba",
+      "points": [
+        {
+          "title": "Różne liczby mnogie",
+          "text": "Każde słowo ma swoją liczbę mnogą: der Baum → die Bäume, die Blume → die Blumen.",
+          "examples": [
+            {
+              "de": "zwei Bäume",
+              "tr": "dwa drzewa"
+            }
+          ]
+        },
+        {
+          "title": "Kolor przed słowem",
+          "text": "Jak wcześniej: po ein końcówka zależy od rodzaju.",
+          "examples": [
+            {
+              "de": "eine rote Blume",
+              "tr": "czerwony kwiat (die)"
+            },
+            {
+              "de": "ein großer Baum",
+              "tr": "duże drzewo (der)"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "En el jardín: color y cantidad",
+      "points": [
+        {
+          "title": "Plurales distintos",
+          "text": "Cada palabra tiene su plural: der Baum → die Bäume, die Blume → die Blumen.",
+          "examples": [
+            {
+              "de": "zwei Bäume",
+              "tr": "dos árboles"
+            }
+          ]
+        },
+        {
+          "title": "Color delante de la palabra",
+          "text": "Como antes: después de ein la terminación depende del género.",
+          "examples": [
+            {
+              "de": "eine rote Blume",
+              "tr": "una flor roja (die)"
+            },
+            {
+              "de": "ein großer Baum",
+              "tr": "un árbol grande (der)"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Au jardin : couleur et nombre",
+      "points": [
+        {
+          "title": "Des pluriels différents",
+          "text": "Chaque mot a son pluriel : der Baum → die Bäume, die Blume → die Blumen.",
+          "examples": [
+            {
+              "de": "zwei Bäume",
+              "tr": "deux arbres"
+            }
+          ]
+        },
+        {
+          "title": "La couleur devant le nom",
+          "text": "Comme avant : après ein, la terminaison dépend du genre.",
+          "examples": [
+            {
+              "de": "eine rote Blume",
+              "tr": "une fleur rouge (die)"
+            },
+            {
+              "de": "ein großer Baum",
+              "tr": "un grand arbre (der)"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Bahçede: renk ve sayı",
+      "points": [
+        {
+          "title": "Farklı çoğullar",
+          "text": "Her kelimenin kendi çoğulu var: der Baum → die Bäume, die Blume → die Blumen.",
+          "examples": [
+            {
+              "de": "zwei Bäume",
+              "tr": "iki ağaç"
+            }
+          ]
+        },
+        {
+          "title": "İsimden önce renk",
+          "text": "Önceki gibi: ein’den sonra ek cinsiyete bağlıdır.",
+          "examples": [
+            {
+              "de": "eine rote Blume",
+              "tr": "kırmızı bir çiçek (die)"
+            },
+            {
+              "de": "ein großer Baum",
+              "tr": "büyük bir ağaç (der)"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "În grădină: culoare și număr",
+      "points": [
+        {
+          "title": "Pluraluri diferite",
+          "text": "Fiecare cuvânt are pluralul lui: der Baum → die Bäume, die Blume → die Blumen.",
+          "examples": [
+            {
+              "de": "zwei Bäume",
+              "tr": "doi copaci"
+            }
+          ]
+        },
+        {
+          "title": "Culoarea înaintea cuvântului",
+          "text": "Ca înainte: după ein terminația depinde de gen.",
+          "examples": [
+            {
+              "de": "eine rote Blume",
+              "tr": "o floare roșie (die)"
+            },
+            {
+              "de": "ein großer Baum",
+              "tr": "un copac mare (der)"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Bog'da: rang va son",
+      "points": [
+        {
+          "title": "Har xil ko'plik",
+          "text": "Har bir so'zning o'z ko'pligi bor: der Baum → die Bäume, die Blume → die Blumen.",
+          "examples": [
+            {
+              "de": "zwei Bäume",
+              "tr": "ikkita daraxt"
+            }
+          ]
+        },
+        {
+          "title": "So'zdan oldin rang",
+          "text": "Avvalgidek: ein dan keyin qo'shimcha rodga bog'liq.",
+          "examples": [
+            {
+              "de": "eine rote Blume",
+              "tr": "qizil gul (die)"
+            },
+            {
+              "de": "ein großer Baum",
+              "tr": "katta daraxt (der)"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "बगीचे में: रंग और संख्या",
+      "points": [
+        {
+          "title": "अलग-अलग बहुवचन",
+          "text": "हर शब्द का अपना बहुवचन होता है: der Baum → die Bäume, die Blume → die Blumen।",
+          "examples": [
+            {
+              "de": "zwei Bäume",
+              "tr": "दो पेड़"
+            }
+          ]
+        },
+        {
+          "title": "संज्ञा से पहले रंग",
+          "text": "पहले की तरह: ein के बाद अंत लिंग पर निर्भर करता है।",
+          "examples": [
+            {
+              "de": "eine rote Blume",
+              "tr": "एक लाल फूल (die)"
+            },
+            {
+              "de": "ein großer Baum",
+              "tr": "एक बड़ा पेड़ (der)"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "في الحديقة: اللون والعدد",
+      "points": [
+        {
+          "title": "جموع مختلفة",
+          "text": "لكل كلمة جمعها: der Baum → die Bäume، die Blume → die Blumen.",
+          "examples": [
+            {
+              "de": "zwei Bäume",
+              "tr": "شجرتان"
+            }
+          ]
+        },
+        {
+          "title": "اللون قبل الاسم",
+          "text": "كما سبق: بعد ein تعتمد النهاية على الجنس.",
+          "examples": [
+            {
+              "de": "eine rote Blume",
+              "tr": "زهرة حمراء (die)"
+            },
+            {
+              "de": "ein großer Baum",
+              "tr": "شجرة كبيرة (der)"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

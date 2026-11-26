@@ -1,0 +1,3630 @@
+{
+  "wisdom-summit-one": {
+    "ru": {
+      "title": "Повторение: если бы",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Нереальное условие: в части с wenn hätte или wäre в конце, во второй части würde + инфинитив в конце. Это мечта, а не реальность.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Если бы у меня было время, я бы путешествовал."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Если бы я был богат, я бы купил дом."
+            }
+          ]
+        },
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Я бы сделал, но не сделал: hätte + Partizip II в конце. С движением и sein, как в Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Я бы тебе позвонил."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Я бы пришёл."
+            }
+          ]
+        },
+        {
+          "title": "Совет через Konjunktiv II",
+          "text": "Совет: An deiner Stelle würde ich ... или Wenn ich du wäre, würde ich ... (на твоём месте я бы). Мягче: Du könntest ... (ты мог бы).",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mich mehr ausruhen.",
+              "tr": "На твоём месте я бы больше отдыхал."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: якби",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Нереальна умова: у частині з wenn hätte або wäre в кінці, у другій частині würde + інфінітив у кінці. Це мрія, а не реальність.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Якби в мене був час, я б подорожував."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Якби я був багатий, я б купив будинок."
+            }
+          ]
+        },
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Я б зробив, але не зробив: hätte + Partizip II у кінці. З рухом і sein, як у Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Я б тобі зателефонував."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Я б прийшов."
+            }
+          ]
+        },
+        {
+          "title": "Порада через Konjunktiv II",
+          "text": "Порада: An deiner Stelle würde ich ... або Wenn ich du wäre, würde ich ... (на твоєму місці я б). М’якше: Du könntest ... (ти міг би).",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mich mehr ausruhen.",
+              "tr": "На твоєму місці я б більше відпочивав."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: if",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Unreal condition: in the wenn part hätte or wäre at the end, in the other part würde + infinitive at the end. It’s a dream, not reality.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "If I had time, I would travel."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "If I were rich, I would buy a house."
+            }
+          ]
+        },
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "I would have done it, but didn’t: hätte + Partizip II at the end. With movement and sein, as in Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "I would have called you."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "I would have come."
+            }
+          ]
+        },
+        {
+          "title": "Advice with Konjunktiv II",
+          "text": "Advice: An deiner Stelle würde ich ... or Wenn ich du wäre, würde ich ... (if I were you, I’d). Softer: Du könntest ... (you could).",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mich mehr ausruhen.",
+              "tr": "If I were you, I’d rest more."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: gdyby",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Warunek nierzeczywisty: w części z wenn hätte albo wäre na końcu, w drugiej würde + bezokolicznik na końcu. To marzenie, nie rzeczywistość.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Gdybym miał czas, podróżowałbym."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Gdybym był bogaty, kupiłbym dom."
+            }
+          ]
+        },
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Zrobiłbym, ale nie zrobiłem: hätte + Partizip II na końcu. Z ruchem i sein, jak w Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Zadzwoniłbym do ciebie."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Przyszedłbym."
+            }
+          ]
+        },
+        {
+          "title": "Rada przez Konjunktiv II",
+          "text": "Rada: An deiner Stelle würde ich ... albo Wenn ich du wäre, würde ich ... (na twoim miejscu bym). Łagodniej: Du könntest ... (mógłbyś).",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mich mehr ausruhen.",
+              "tr": "Na twoim miejscu więcej bym odpoczywał."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: si",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Condición irreal: en la parte con wenn, hätte o wäre al final; en la otra, würde + infinitivo al final. Es un sueño, no la realidad.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Si tuviera tiempo, viajaría."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Si fuera rico, compraría una casa."
+            }
+          ]
+        },
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Lo habría hecho, pero no: hätte + Partizip II al final. Con movimiento y sein, como en Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Te habría llamado."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Habría venido."
+            }
+          ]
+        },
+        {
+          "title": "Consejo con Konjunktiv II",
+          "text": "Consejo: An deiner Stelle würde ich ... o Wenn ich du wäre, würde ich ... (yo en tu lugar). Más suave: Du könntest ... (podrías).",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mich mehr ausruhen.",
+              "tr": "Yo en tu lugar descansaría más."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : si",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Condition irréelle : dans la partie avec wenn, hätte ou wäre à la fin ; dans l’autre, würde + infinitif à la fin. C’est un rêve, pas la réalité.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Si j’avais le temps, je voyagerais."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Si j’étais riche, j’achèterais une maison."
+            }
+          ]
+        },
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Je l’aurais fait, mais non : hätte + Partizip II à la fin. Avec le mouvement et sein, comme au Perfekt : wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Je t’aurais appelé."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Je serais venu."
+            }
+          ]
+        },
+        {
+          "title": "Conseil avec le Konjunktiv II",
+          "text": "Conseil : An deiner Stelle würde ich ... ou Wenn ich du wäre, würde ich ... (à ta place, je). Plus doux : Du könntest ... (tu pourrais).",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mich mehr ausruhen.",
+              "tr": "À ta place, je me reposerais plus."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: -saydı",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Gerçek dışı koşul: wenn kısmında hätte ya da wäre sonda, diğer kısımda würde + mastar sonda. Gerçek değil, hayal.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Vaktim olsaydı seyahat ederdim."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Zengin olsaydım bir ev alırdım."
+            }
+          ]
+        },
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Yapardım ama yapmadım: hätte + Partizip II sonda. Hareket ve sein ile, Perfekt’teki gibi: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Seni arardım."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Gelirdim."
+            }
+          ]
+        },
+        {
+          "title": "Konjunktiv II ile tavsiye",
+          "text": "Tavsiye: An deiner Stelle würde ich ... ya da Wenn ich du wäre, würde ich ... (senin yerinde olsam). Daha yumuşak: Du könntest ... (-ebilirsin).",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mich mehr ausruhen.",
+              "tr": "Senin yerinde olsam daha çok dinlenirdim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: dacă",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Condiție ireală: în partea cu wenn, hätte sau wäre la final; în cealaltă, würde + infinitiv la final. E un vis, nu realitate.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Dacă aș avea timp, aș călători."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Dacă aș fi bogat, aș cumpăra o casă."
+            }
+          ]
+        },
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Aș fi făcut, dar n-am făcut: hätte + Partizip II la final. Cu mișcare și sein, ca la Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Te-aș fi sunat."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Aș fi venit."
+            }
+          ]
+        },
+        {
+          "title": "Sfat cu Konjunktiv II",
+          "text": "Sfat: An deiner Stelle würde ich ... sau Wenn ich du wäre, würde ich ... (în locul tău aș). Mai blând: Du könntest ... (ai putea).",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mich mehr ausruhen.",
+              "tr": "În locul tău m-aș odihni mai mult."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: agar",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Noreal shart: wenn qismida hätte yoki wäre oxirida, ikkinchi qismda würde + infinitiv oxirida. Bu orzu, haqiqat emas.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Vaqtim bo'lganida sayohat qilardim."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Boy bo'lganimda uy sotib olardim."
+            }
+          ]
+        },
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "Qilardim, lekin qilmadim: hätte + Partizip II oxirida. Harakat va sein bilan, Perfekt dagidek: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "Senga qo'ng'iroq qilgan bo'lardim."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "Kelgan bo'lardim."
+            }
+          ]
+        },
+        {
+          "title": "Konjunktiv II bilan maslahat",
+          "text": "Maslahat: An deiner Stelle würde ich ... yoki Wenn ich du wäre, würde ich ... (sening o'rningda men). Yumshoqroq: Du könntest ... (qila olarding).",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mich mehr ausruhen.",
+              "tr": "Sening o'rningda ko'proq dam olardim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: अगर",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "अवास्तविक शर्त: wenn वाले हिस्से में hätte या wäre अंत में, दूसरे हिस्से में würde + इन्फ़िनिटिव अंत में। यह सपना है, सच नहीं।",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "अगर मेरे पास समय होता, तो मैं घूमता।"
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "अगर मैं अमीर होता, तो एक घर खरीदता।"
+            }
+          ]
+        },
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "मैं करता, पर नहीं किया: hätte + Partizip II अंत में। गति और sein के साथ, Perfekt की तरह: wäre + Partizip II।",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "मैं तुम्हें फ़ोन कर देता।"
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "मैं आ जाता।"
+            }
+          ]
+        },
+        {
+          "title": "Konjunktiv II से सलाह",
+          "text": "सलाह: An deiner Stelle würde ich ... या Wenn ich du wäre, würde ich ... (तुम्हारी जगह मैं)। नरमी से: Du könntest ... (तुम कर सकते हो)।",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mich mehr ausruhen.",
+              "tr": "तुम्हारी जगह मैं ज़्यादा आराम करता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: لو",
+      "points": [
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "الشرط غير الواقعي: في جزء wenn تأتي hätte أو wäre في الآخر، وفي الجزء الآخر würde + المصدر في الآخر. إنه حلم لا واقع.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "لو كان عندي وقت لسافرت."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "لو كنت غنياً لاشتريت بيتاً."
+            }
+          ]
+        },
+        {
+          "title": "hätte/wäre + Partizip II",
+          "text": "كنت سأفعل لكنني لم أفعل: hätte + Partizip II في الآخر. ومع الحركة وsein كما في Perfekt: wäre + Partizip II.",
+          "examples": [
+            {
+              "de": "Ich hätte dich angerufen.",
+              "tr": "كنت سأتصل بك."
+            },
+            {
+              "de": "Ich wäre gekommen.",
+              "tr": "كنت سآتي."
+            }
+          ]
+        },
+        {
+          "title": "النصيحة بـ Konjunktiv II",
+          "text": "النصيحة: An deiner Stelle würde ich ... أو Wenn ich du wäre, würde ich ... (لو كنت مكانك). وبلطف أكثر: Du könntest ... (يمكنك).",
+          "examples": [
+            {
+              "de": "An deiner Stelle würde ich mich mehr ausruhen.",
+              "tr": "لو كنت مكانك لارتحت أكثر."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "wisdom-summit-two": {
+    "ru": {
+      "title": "Повторение: Genitiv",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv отвечает на вопрос «чей?» и стоит после слова. Мужской и средний род: des + -s/-es у слова (des Vaters). Женский и множественное: der, без -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Машина отца новая."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Сумка женщины лежит на столе."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (из-за), trotz (несмотря на), während (во время) + Genitiv. wegen des Regens короче, чем weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Из-за дождя мы остались дома."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Несмотря на дождь, мы пошли гулять."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: Genitiv",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv відповідає на питання «чий?» і стоїть після слова. Чоловічий і середній рід: des + -s/-es у слова (des Vaters). Жіночий і множина: der, без -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Машина батька нова."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Сумка жінки лежить на столі."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (через), trotz (незважаючи на), während (під час) + Genitiv. wegen des Regens коротше, ніж weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Через дощ ми залишилися вдома."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Незважаючи на дощ, ми пішли гуляти."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: genitive",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "The genitive answers \"whose?\" and comes after the noun. Masculine and neuter: des + -s/-es on the noun (des Vaters). Feminine and plural: der, no -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "The father’s car is new."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "The woman’s bag is on the table."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + genitive",
+          "text": "wegen (because of), trotz (despite), während (during) + genitive. wegen des Regens is shorter than weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Because of the rain we stayed at home."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Despite the rain we went for a walk."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: Genitiv",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv odpowiada na pytanie „czyj?” i stoi po słowie. Rodzaj męski i nijaki: des + -s/-es (des Vaters). Żeński i mnoga: der, bez -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Samochód ojca jest nowy."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Torba kobiety leży na stole."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (z powodu), trotz (mimo), während (podczas) + Genitiv. wegen des Regens jest krótsze niż weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Z powodu deszczu zostaliśmy w domu."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Mimo deszczu poszliśmy na spacer."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: genitivo",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "El genitivo responde a \"¿de quién?\" y va después del sustantivo. Masculino y neutro: des + -s/-es (des Vaters). Femenino y plural: der, sin -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "El coche del padre es nuevo."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "El bolso de la mujer está en la mesa."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + genitivo",
+          "text": "wegen (por), trotz (a pesar de), während (durante) + genitivo. wegen des Regens es más corto que weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Por la lluvia nos quedamos en casa."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "A pesar de la lluvia, fuimos a pasear."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : génitif",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Le génitif répond à « à qui ? » et vient après le nom. Masculin et neutre : des + -s/-es (des Vaters). Féminin et pluriel : der, sans -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "La voiture du père est neuve."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Le sac de la femme est sur la table."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + génitif",
+          "text": "wegen (à cause de), trotz (malgré), während (pendant) + génitif. wegen des Regens est plus court que weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "À cause de la pluie, nous sommes restés à la maison."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Malgré la pluie, nous sommes allés nous promener."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: Genitiv",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv \"kimin?\" sorusuna cevap verir ve isimden sonra gelir. Eril ve nötr: des + -s/-es (des Vaters). Dişil ve çoğul: der, -s yok (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Babanın arabası yeni."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Kadının çantası masada."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (yüzünden), trotz (rağmen), während (sırasında) + Genitiv. wegen des Regens, weil es regnet’ten daha kısadır.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Yağmur yüzünden evde kaldık."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Yağmura rağmen yürüyüşe çıktık."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: genitiv",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitivul răspunde la „al cui?” și vine după substantiv. Masculin și neutru: des + -s/-es (des Vaters). Feminin și plural: der, fără -s (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Mașina tatălui e nouă."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Geanta femeii e pe masă."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + genitiv",
+          "text": "wegen (din cauza), trotz (în ciuda), während (în timpul) + genitiv. wegen des Regens e mai scurt decât weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Din cauza ploii am rămas acasă."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "În ciuda ploii am ieșit la plimbare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: Genitiv",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv \"kimning?\" savoliga javob beradi va otdan keyin turadi. Erkak va o'rta rod: des + -s/-es (des Vaters). Ayol va ko'plik: der, -s siz (der Frau, der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "Otaning mashinasi yangi."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "Ayolning sumkasi stol ustida."
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (sababli), trotz (qaramay), während (davomida) + Genitiv. wegen des Regens weil es regnet dan qisqaroq.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "Yomg'ir sababli uyda qoldik."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "Yomg'irga qaramay sayrga chiqdik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: Genitiv",
+      "points": [
+        {
+          "title": "des + -s, der",
+          "text": "Genitiv \"किसका?\" का जवाब है और संज्ञा के बाद आता है। पुल्लिंग और नपुंसकलिंग: des + -s/-es (des Vaters)। स्त्रीलिंग और बहुवचन: der, बिना -s (der Frau, der Kinder)।",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "पिता की गाड़ी नई है।"
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "महिला का थैला मेज़ पर है।"
+            }
+          ]
+        },
+        {
+          "title": "wegen, trotz, während + Genitiv",
+          "text": "wegen (की वजह से), trotz (के बावजूद), während (के दौरान) + Genitiv। wegen des Regens, weil es regnet से छोटा है।",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "बारिश की वजह से हम घर पर रहे।"
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "बारिश के बावजूद हम टहलने गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الإضافة",
+      "points": [
+        {
+          "title": "des + -s وder",
+          "text": "الإضافة (Genitiv) تجيب عن \"لمن؟\" وتأتي بعد الاسم. المذكر والمحايد: des + -s/-es (des Vaters). والمؤنث والجمع: der بدون -s (der Frau، der Kinder).",
+          "examples": [
+            {
+              "de": "Das Auto des Vaters ist neu.",
+              "tr": "سيارة الأب جديدة."
+            },
+            {
+              "de": "Die Tasche der Frau liegt auf dem Tisch.",
+              "tr": "حقيبة المرأة على الطاولة."
+            }
+          ]
+        },
+        {
+          "title": "wegen وtrotz وwährend + الإضافة",
+          "text": "wegen (بسبب)، trotz (رغم)، während (أثناء) + الإضافة. وwegen des Regens أقصر من weil es regnet.",
+          "examples": [
+            {
+              "de": "Wegen des Regens sind wir zu Hause geblieben.",
+              "tr": "بسبب المطر بقينا في البيت."
+            },
+            {
+              "de": "Trotz des Regens sind wir spazieren gegangen.",
+              "tr": "رغم المطر خرجنا للتنزه."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "wisdom-summit-three": {
+    "ru": {
+      "title": "Повторение: слабые существительные",
+      "points": [
+        {
+          "title": "Без -n только подлежащее",
+          "text": "Без -n слабое существительное только как подлежащее в единственном числе: Der Junge spielt. Во всех других формах и во множественном -n или -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Новый коллега сразу помог клиенту."
+            }
+          ]
+        },
+        {
+          "title": "Genitiv: des Kollegen, des Namens",
+          "text": "В Genitiv слабые получают -n/-en, но без -s: des Kollegen, des Studenten. Особое слово der Name: des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "Это машина коллеги."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: слабкі іменники",
+      "points": [
+        {
+          "title": "Без -n лише підмет",
+          "text": "Без -n слабкий іменник лише як підмет в однині: Der Junge spielt. В усіх інших формах і в множині -n або -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Новий колега одразу допоміг клієнтові."
+            }
+          ]
+        },
+        {
+          "title": "Genitiv: des Kollegen, des Namens",
+          "text": "У Genitiv слабкі отримують -n/-en, але без -s: des Kollegen, des Studenten. Особливе слово der Name: des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "Це машина колеги."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: weak nouns",
+      "points": [
+        {
+          "title": "No -n only for the subject",
+          "text": "A weak noun has no -n only as a singular subject: Der Junge spielt. In all other forms and in the plural it takes -n or -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "The new colleague helped the customer straight away."
+            }
+          ]
+        },
+        {
+          "title": "Genitive: des Kollegen, des Namens",
+          "text": "In the genitive weak nouns take -n/-en, but no -s: des Kollegen, des Studenten. Special: der Name → des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "That’s the colleague’s car."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: rzeczowniki słabe",
+      "points": [
+        {
+          "title": "Bez -n tylko podmiot",
+          "text": "Bez -n rzeczownik słaby tylko jako podmiot w liczbie pojedynczej: Der Junge spielt. We wszystkich innych formach i w mnogiej -n albo -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Nowy kolega od razu pomógł klientowi."
+            }
+          ]
+        },
+        {
+          "title": "Genitiv: des Kollegen, des Namens",
+          "text": "W Genitiv słabe dostają -n/-en, ale bez -s: des Kollegen, des Studenten. Słowo szczególne der Name: des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "To samochód kolegi z pracy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: sustantivos débiles",
+      "points": [
+        {
+          "title": "Sin -n solo el sujeto",
+          "text": "Sin -n el sustantivo débil solo como sujeto singular: Der Junge spielt. En las demás formas y en plural, -n o -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "El compañero nuevo ayudó enseguida al cliente."
+            }
+          ]
+        },
+        {
+          "title": "Genitivo: des Kollegen, des Namens",
+          "text": "En genitivo los débiles llevan -n/-en, pero sin -s: des Kollegen, des Studenten. Especial: der Name → des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "Es el coche del compañero."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : noms faibles",
+      "points": [
+        {
+          "title": "Sans -n seulement pour le sujet",
+          "text": "Sans -n, le nom faible seulement comme sujet au singulier : Der Junge spielt. Dans toutes les autres formes et au pluriel, -n ou -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Le nouveau collègue a tout de suite aidé le client."
+            }
+          ]
+        },
+        {
+          "title": "Génitif : des Kollegen, des Namens",
+          "text": "Au génitif, les noms faibles prennent -n/-en, mais pas de -s : des Kollegen, des Studenten. Particulier : der Name → des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "C’est la voiture du collègue."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: zayıf isimler",
+      "points": [
+        {
+          "title": "-n almayan sadece özne",
+          "text": "Zayıf isim sadece tekil özne olarak -n almaz: Der Junge spielt. Diğer bütün biçimlerde ve çoğulda -n ya da -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Yeni iş arkadaşı müşteriye hemen yardım etti."
+            }
+          ]
+        },
+        {
+          "title": "Genitiv: des Kollegen, des Namens",
+          "text": "Genitiv’de zayıf isimler -n/-en alır ama -s almaz: des Kollegen, des Studenten. Özel: der Name → des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "Bu iş arkadaşının arabası."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: substantive slabe",
+      "points": [
+        {
+          "title": "Fără -n doar subiectul",
+          "text": "Fără -n, substantivul slab doar ca subiect la singular: Der Junge spielt. În toate celelalte forme și la plural, -n sau -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Noul coleg l-a ajutat imediat pe client."
+            }
+          ]
+        },
+        {
+          "title": "Genitiv: des Kollegen, des Namens",
+          "text": "La genitiv substantivele slabe primesc -n/-en, dar fără -s: des Kollegen, des Studenten. Special: der Name → des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "Aceasta e mașina colegului."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: kuchsiz otlar",
+      "points": [
+        {
+          "title": "-n siz faqat ega",
+          "text": "Kuchsiz ot faqat birlikdagi ega sifatida -n siz: Der Junge spielt. Qolgan barcha shakllarda va ko'plikda -n yoki -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Yangi hamkasb darhol mijozga yordam berdi."
+            }
+          ]
+        },
+        {
+          "title": "Genitiv: des Kollegen, des Namens",
+          "text": "Genitivda kuchsizlar -n/-en oladi, lekin -s siz: des Kollegen, des Studenten. Alohida: der Name → des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "Bu hamkasbning mashinasi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: कमज़ोर संज्ञाएँ",
+      "points": [
+        {
+          "title": "बिना -n सिर्फ़ कर्ता",
+          "text": "कमज़ोर संज्ञा सिर्फ़ एकवचन कर्ता के रूप में बिना -n: Der Junge spielt। बाकी सभी रूपों और बहुवचन में -n या -en।",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "नए सहकर्मी ने तुरंत ग्राहक की मदद की।"
+            }
+          ]
+        },
+        {
+          "title": "Genitiv: des Kollegen, des Namens",
+          "text": "Genitiv में कमज़ोर संज्ञाएँ -n/-en लेती हैं, पर -s नहीं: des Kollegen, des Studenten। खास: der Name → des Namens।",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "यह सहकर्मी की गाड़ी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الأسماء الضعيفة",
+      "points": [
+        {
+          "title": "بدون -n الفاعل فقط",
+          "text": "الاسم الضعيف بدون -n فقط حين يكون فاعلاً مفرداً: Der Junge spielt. وفي كل الحالات الأخرى والجمع -n أو -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "ساعد الزميل الجديد الزبون فوراً."
+            }
+          ]
+        },
+        {
+          "title": "الإضافة: des Kollegen وdes Namens",
+          "text": "في الإضافة تأخذ الأسماء الضعيفة -n/-en بدون -s: des Kollegen، des Studenten. والخاصة: der Name → des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "هذه سيارة الزميل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "wisdom-summit-four": {
+    "ru": {
+      "title": "Повторение: окончания без артикля",
+      "points": [
+        {
+          "title": "Без артикля: guter Kaffee",
+          "text": "Если артикля нет, его окончание берёт прилагательное: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (мн. ч.).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Горячий кофе вкусный."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "В Dativ: -em (мужской и средний), -er (женский), -en (множественное), как dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Я пью кофе с горячим молоком."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: закінчення без артикля",
+      "points": [
+        {
+          "title": "Без артикля: guter Kaffee",
+          "text": "Якщо артикля немає, його закінчення бере прикметник: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (множина).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Гаряча кава смачна."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "У Dativ: -em (чоловічий і середній), -er (жіночий), -en (множина), як dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Я п’ю каву з гарячим молоком."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: endings without article",
+      "points": [
+        {
+          "title": "No article: guter Kaffee",
+          "text": "With no article, the adjective takes the article’s ending: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (plural).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Hot coffee tastes good."
+            }
+          ]
+        },
+        {
+          "title": "Dative: mit heißem Wasser",
+          "text": "In the dative: -em (masculine and neuter), -er (feminine), -en (plural), like dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "I drink coffee with hot milk."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: końcówki bez rodzajnika",
+      "points": [
+        {
+          "title": "Bez rodzajnika: guter Kaffee",
+          "text": "Gdy nie ma rodzajnika, jego końcówkę bierze przymiotnik: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (mnoga).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Gorąca kawa dobrze smakuje."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "W Dativ: -em (męski i nijaki), -er (żeński), -en (mnoga), jak dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Piję kawę z gorącym mlekiem."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: terminaciones sin artículo",
+      "points": [
+        {
+          "title": "Sin artículo: guter Kaffee",
+          "text": "Sin artículo, el adjetivo toma la terminación del artículo: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (plural).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "El café caliente está rico."
+            }
+          ]
+        },
+        {
+          "title": "Dativo: mit heißem Wasser",
+          "text": "En dativo: -em (masculino y neutro), -er (femenino), -en (plural), como dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Tomo café con leche caliente."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : terminaisons sans article",
+      "points": [
+        {
+          "title": "Sans article : guter Kaffee",
+          "text": "Sans article, l’adjectif prend la terminaison de l’article : guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (pluriel).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Le café chaud est bon."
+            }
+          ]
+        },
+        {
+          "title": "Datif : mit heißem Wasser",
+          "text": "Au datif : -em (masculin et neutre), -er (féminin), -en (pluriel), comme dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Je bois du café avec du lait chaud."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: artikelsiz ekler",
+      "points": [
+        {
+          "title": "Artikelsiz: guter Kaffee",
+          "text": "Artikel yoksa onun ekini sıfat alır: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (çoğul).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Sıcak kahve güzel olur."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "Dativ’de: -em (eril ve nötr), -er (dişil), -en (çoğul), dem, der, den gibi.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Kahveyi sıcak sütle içerim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: terminații fără articol",
+      "points": [
+        {
+          "title": "Fără articol: guter Kaffee",
+          "text": "Fără articol, adjectivul ia terminația articolului: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (plural).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Cafeaua fierbinte e bună."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "La dativ: -em (masculin și neutru), -er (feminin), -en (plural), ca dem, der, den.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Beau cafea cu lapte fierbinte."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: artiklsiz qo'shimchalar",
+      "points": [
+        {
+          "title": "Artiklsiz: guter Kaffee",
+          "text": "Artikl bo'lmasa, uning qo'shimchasini sifat oladi: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (ko'plik).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "Issiq qahva mazali."
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "Dativda: -em (erkak va o'rta), -er (ayol), -en (ko'plik), dem, der, den kabi.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "Qahvani issiq sut bilan ichaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: बिना आर्टिकल अंत",
+      "points": [
+        {
+          "title": "बिना आर्टिकल: guter Kaffee",
+          "text": "आर्टिकल न हो तो उसका अंत विशेषण लेता है: guter Kaffee (der), frische Milch (die), kaltes Wasser (das), frische Brötchen (बहुवचन)।",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "गरम कॉफ़ी अच्छी लगती है।"
+            }
+          ]
+        },
+        {
+          "title": "Dativ: mit heißem Wasser",
+          "text": "Dativ में: -em (पुल्लिंग और नपुंसकलिंग), -er (स्त्रीलिंग), -en (बहुवचन), dem, der, den की तरह।",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "मैं गरम दूध के साथ कॉफ़ी पीता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: النهايات بدون أداة",
+      "points": [
+        {
+          "title": "بدون أداة: guter Kaffee",
+          "text": "إذا لم توجد أداة تأخذ الصفة نهايتها: guter Kaffee (der)، frische Milch (die)، kaltes Wasser (das)، frische Brötchen (جمع).",
+          "examples": [
+            {
+              "de": "Heißer Kaffee schmeckt gut.",
+              "tr": "القهوة الساخنة لذيذة."
+            }
+          ]
+        },
+        {
+          "title": "الجر: mit heißem Wasser",
+          "text": "في الجر: -em (المذكر والمحايد)، -er (المؤنث)، -en (الجمع)، مثل dem وder وden.",
+          "examples": [
+            {
+              "de": "Ich trinke Kaffee mit heißer Milch.",
+              "tr": "أشرب القهوة بالحليب الساخن."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "wisdom-summit-five": {
+    "ru": {
+      "title": "Повторение: предлоги",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "О человеке: предлог + wen/wem (Auf wen wartest du?). О вещи: wo + предлог (Worauf wartest du?). Перед гласной вставляем -r-: worauf, woran, но wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Чего ты ждёшь?"
+            }
+          ]
+        },
+        {
+          "title": "darauf или auf ihn",
+          "text": "В ответе вещь заменяем на da(r) + предлог: Ich warte darauf. Человека на предлог + местоимение: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Ты ждёшь автобус? Да, жду."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Ты думаешь об Анне? Да, думаю о ней."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: прийменники",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Про людину: прийменник + wen/wem (Auf wen wartest du?). Про річ: wo + прийменник (Worauf wartest du?). Перед голосною вставляємо -r-: worauf, woran, але wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "На що ти чекаєш?"
+            }
+          ]
+        },
+        {
+          "title": "darauf чи auf ihn",
+          "text": "У відповіді річ замінюємо на da(r) + прийменник: Ich warte darauf. Людину на прийменник + займенник: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Ти чекаєш на автобус? Так, чекаю."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Ти думаєш про Анну? Так, думаю про неї."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: prepositions",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "About a person: preposition + wen/wem (Auf wen wartest du?). About a thing: wo + preposition (Worauf wartest du?). Before a vowel add -r-: worauf, woran, but wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "What are you waiting for?"
+            }
+          ]
+        },
+        {
+          "title": "darauf or auf ihn",
+          "text": "In the answer, replace a thing with da(r) + preposition: Ich warte darauf. Replace a person with preposition + pronoun: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Are you waiting for the bus? Yes, I’m waiting for it."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Are you thinking of Anna? Yes, I’m thinking of her."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: przyimki",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "O osobę: przyimek + wen/wem (Auf wen wartest du?). O rzecz: wo + przyimek (Worauf wartest du?). Przed samogłoską wstawiamy -r-: worauf, woran, ale wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Na co czekasz?"
+            }
+          ]
+        },
+        {
+          "title": "darauf czy auf ihn",
+          "text": "W odpowiedzi rzecz zastępujemy da(r) + przyimek: Ich warte darauf. Osobę przyimkiem + zaimkiem: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Czekasz na autobus? Tak, czekam na niego."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Myślisz o Annie? Tak, myślę o niej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: preposiciones",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Sobre una persona: preposición + wen/wem (Auf wen wartest du?). Sobre una cosa: wo + preposición (Worauf wartest du?). Ante vocal se añade -r-: worauf, woran, pero wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "¿Qué esperas?"
+            }
+          ]
+        },
+        {
+          "title": "darauf o auf ihn",
+          "text": "En la respuesta, una cosa se sustituye por da(r) + preposición: Ich warte darauf. Una persona, por preposición + pronombre: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "¿Esperas el autobús? Sí, lo espero."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "¿Piensas en Anna? Sí, pienso en ella."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : prépositions",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Pour une personne : préposition + wen/wem (Auf wen wartest du ?). Pour une chose : wo + préposition (Worauf wartest du ?). Devant une voyelle on ajoute -r- : worauf, woran, mais wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Qu’est-ce que tu attends ?"
+            }
+          ]
+        },
+        {
+          "title": "darauf ou auf ihn",
+          "text": "Dans la réponse, une chose devient da(r) + préposition : Ich warte darauf. Une personne devient préposition + pronom : Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Tu attends le bus ? Oui, je l’attends."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Tu penses à Anna ? Oui, je pense à elle."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: edatlar",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Kişi için: edat + wen/wem (Auf wen wartest du?). Şey için: wo + edat (Worauf wartest du?). Ünlüden önce -r- eklenir: worauf, woran, ama wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Neyi bekliyorsun?"
+            }
+          ]
+        },
+        {
+          "title": "darauf mı, auf ihn mi",
+          "text": "Cevapta şey yerine da(r) + edat: Ich warte darauf. Kişi yerine edat + zamir: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Otobüsü mü bekliyorsun? Evet, onu bekliyorum."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Anna’yı mı düşünüyorsun? Evet, onu düşünüyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: prepoziții",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Despre o persoană: prepoziție + wen/wem (Auf wen wartest du?). Despre un lucru: wo + prepoziție (Worauf wartest du?). Înainte de vocală se pune -r-: worauf, woran, dar wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Ce aștepți?"
+            }
+          ]
+        },
+        {
+          "title": "darauf sau auf ihn",
+          "text": "În răspuns, lucrul devine da(r) + prepoziție: Ich warte darauf. Persoana devine prepoziție + pronume: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Aștepți autobuzul? Da, îl aștept."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Te gândești la Anna? Da, mă gândesc la ea."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: ko'makchilar",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "Odam haqida: ko'makchi + wen/wem (Auf wen wartest du?). Narsa haqida: wo + ko'makchi (Worauf wartest du?). Unli oldidan -r- qo'shiladi: worauf, woran, lekin wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "Nimani kutyapsan?"
+            }
+          ]
+        },
+        {
+          "title": "darauf yoki auf ihn",
+          "text": "Javobda narsa o'rniga da(r) + ko'makchi: Ich warte darauf. Odam o'rniga ko'makchi + olmosh: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "Avtobusni kutyapsanmi? Ha, kutyapman."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "Anna haqida o'ylayapsanmi? Ha, u haqida o'ylayapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: संबंधसूचक",
+      "points": [
+        {
+          "title": "Auf wen? Worauf?",
+          "text": "व्यक्ति के बारे में: संबंधसूचक + wen/wem (Auf wen wartest du?)। चीज़ के बारे में: wo + संबंधसूचक (Worauf wartest du?)। स्वर से पहले -r-: worauf, woran, पर wofür।",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "तुम किसका इंतज़ार कर रहे हो?"
+            }
+          ]
+        },
+        {
+          "title": "darauf या auf ihn",
+          "text": "जवाब में चीज़ की जगह da(r) + संबंधसूचक: Ich warte darauf। व्यक्ति की जगह संबंधसूचक + सर्वनाम: Ich warte auf ihn।",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "क्या तुम बस का इंतज़ार कर रहे हो? हाँ, उसी का।"
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "क्या तुम अन्ना के बारे में सोच रहे हो? हाँ, उसी के बारे में।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: حروف الجر",
+      "points": [
+        {
+          "title": "Auf wen؟ Worauf؟",
+          "text": "عن شخص: حرف الجر + wen/wem (Auf wen wartest du؟). وعن شيء: wo + حرف الجر (Worauf wartest du؟). وقبل الحرف المتحرك نضيف -r-: worauf، woran، لكن wofür.",
+          "examples": [
+            {
+              "de": "Worauf wartest du?",
+              "tr": "ماذا تنتظر؟"
+            }
+          ]
+        },
+        {
+          "title": "darauf أم auf ihn",
+          "text": "في الجواب نستبدل الشيء بـ da(r) + حرف الجر: Ich warte darauf. والشخص بحرف الجر + الضمير: Ich warte auf ihn.",
+          "examples": [
+            {
+              "de": "Wartest du auf den Bus? Ja, ich warte darauf.",
+              "tr": "هل تنتظر الحافلة؟ نعم، أنتظرها."
+            },
+            {
+              "de": "Denkst du an Anna? Ja, ich denke an sie.",
+              "tr": "هل تفكر في آنا؟ نعم، أفكر فيها."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "wisdom-summit-six": {
+    "ru": {
+      "title": "Повторение: связки",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch значит «не только..., но и». nicht ..., sondern значит «не..., а». Перед sondern всегда запятая.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Он говорит не только по-немецки, но и по-английски."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + сравнительная степень..., desto + сравнительная степень значит «чем..., тем». После je глагол в конце, после desto сразу глагол.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Чем больше я учусь, тем лучше говорю."
+            }
+          ]
+        },
+        {
+          "title": "indem: тем, что",
+          "text": "indem отвечает на вопрос Wie? (каким способом?). Глагол в конце, как после weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "Я учу слова тем, что много читаю."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: сполучники",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch означає «не тільки..., а й». nicht ..., sondern означає «не..., а». Перед sondern завжди кома.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Він говорить не тільки німецькою, а й англійською."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + вищий ступінь..., desto + вищий ступінь означає «чим..., тим». Після je дієслово в кінці, після desto одразу дієслово.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Чим більше я вчуся, тим краще говорю."
+            }
+          ]
+        },
+        {
+          "title": "indem: тим, що",
+          "text": "indem відповідає на питання Wie? (яким способом?). Дієслово в кінці, як після weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "Я вчу слова тим, що багато читаю."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: connectors",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch means \"not only ... but also\". nicht ..., sondern means \"not ... but\". Always a comma before sondern.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "He speaks not only German but also English."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + comparative..., desto + comparative means \"the more ..., the more\". After je the verb goes last, after desto the verb comes right away.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "The more I study, the better I speak."
+            }
+          ]
+        },
+        {
+          "title": "indem: by doing",
+          "text": "indem answers Wie? (in what way?). The verb goes last, as after weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "I learn words by reading a lot."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: spójniki",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch znaczy „nie tylko..., ale i”. nicht ..., sondern znaczy „nie..., lecz”. Przed sondern zawsze przecinek.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Mówi nie tylko po niemiecku, ale i po angielsku."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + stopień wyższy..., desto + stopień wyższy znaczy „im..., tym”. Po je czasownik na końcu, po desto od razu czasownik.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Im więcej się uczę, tym lepiej mówię."
+            }
+          ]
+        },
+        {
+          "title": "indem: przez to, że",
+          "text": "indem odpowiada na pytanie Wie? (w jaki sposób?). Czasownik na końcu, jak po weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "Uczę się słówek przez to, że dużo czytam."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: conectores",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch significa \"no solo..., sino también\". nicht ..., sondern significa \"no..., sino\". Siempre coma antes de sondern.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "No solo habla alemán, sino también inglés."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + comparativo..., desto + comparativo significa \"cuanto más..., más\". Tras je, verbo al final; tras desto, verbo enseguida.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Cuanto más estudio, mejor hablo."
+            }
+          ]
+        },
+        {
+          "title": "indem: haciendo",
+          "text": "indem responde a Wie? (¿de qué manera?). Verbo al final, como tras weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "Aprendo palabras leyendo mucho."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : connecteurs",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch veut dire « non seulement..., mais aussi ». nicht ..., sondern veut dire « pas..., mais ». Toujours une virgule avant sondern.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Il parle non seulement allemand, mais aussi anglais."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + comparatif..., desto + comparatif veut dire « plus..., plus ». Après je, verbe à la fin ; après desto, verbe tout de suite.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Plus j’apprends, mieux je parle."
+            }
+          ]
+        },
+        {
+          "title": "indem : en faisant",
+          "text": "indem répond à Wie ? (de quelle manière ?). Verbe à la fin, comme après weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "J’apprends des mots en lisant beaucoup."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: bağlaçlar",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch \"sadece ... değil, aynı zamanda\" demektir. nicht ..., sondern \"... değil, ...\". sondern’dan önce hep virgül.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Sadece Almanca değil, İngilizce de konuşuyor."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + üstünlük..., desto + üstünlük \"ne kadar ..., o kadar\". je’den sonra fiil sonda, desto’dan sonra fiil hemen.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Ne kadar çok çalışırsam o kadar iyi konuşurum."
+            }
+          ]
+        },
+        {
+          "title": "indem: -erek",
+          "text": "indem Wie? (nasıl?) sorusuna cevap verir. Fiil sonda, weil’den sonraki gibi.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "Çok okuyarak kelime öğreniyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: conectori",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch înseamnă „nu doar..., ci și”. nicht ..., sondern înseamnă „nu..., ci”. Înainte de sondern mereu virgulă.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "Vorbește nu doar germana, ci și engleza."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + comparativ..., desto + comparativ înseamnă „cu cât..., cu atât”. După je verbul la final, după desto verbul imediat.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Cu cât învăț mai mult, cu atât vorbesc mai bine."
+            }
+          ]
+        },
+        {
+          "title": "indem: prin faptul că",
+          "text": "indem răspunde la Wie? (în ce fel?). Verbul la final, ca după weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "Învăț cuvinte citind mult."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: bog'lovchilar",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch \"nafaqat..., balki\" degani. nicht ..., sondern \"... emas, balki\". sondern oldidan doim vergul.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "U nafaqat nemischa, balki inglizcha ham gapiradi."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + qiyosiy daraja..., desto + qiyosiy daraja \"qancha..., shuncha\". je dan keyin fe'l oxirida, desto dan keyin fe'l darhol.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "Qancha ko'p o'qisam, shuncha yaxshi gapiraman."
+            }
+          ]
+        },
+        {
+          "title": "indem: ... orqali",
+          "text": "indem Wie? (qanday yo'l bilan?) savoliga javob. Fe'l oxirida, weil dan keyingidek.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "Ko'p o'qish orqali so'z o'rganaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: योजक",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch मतलब \"न सिर्फ़..., बल्कि\"। nicht ..., sondern मतलब \"... नहीं, बल्कि\"। sondern से पहले हमेशा कॉमा।",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "वह न सिर्फ़ जर्मन, बल्कि अंग्रेज़ी भी बोलता है।"
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + तुलनात्मक..., desto + तुलनात्मक मतलब \"जितना..., उतना\"। je के बाद क्रिया अंत में, desto के बाद क्रिया तुरंत।",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "जितना ज़्यादा सीखता हूँ, उतना बेहतर बोलता हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "indem: ... करके",
+          "text": "indem Wie? (किस तरीके से?) का जवाब देता है। क्रिया अंत में, weil की तरह।",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "मैं बहुत पढ़कर शब्द सीखता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: أدوات الربط",
+      "points": [
+        {
+          "title": "nicht nur ..., sondern auch",
+          "text": "nicht nur ..., sondern auch تعني \"ليس فقط...، بل أيضاً\". وnicht ..., sondern تعني \"ليس...، بل\". وقبل sondern فاصلة دائماً.",
+          "examples": [
+            {
+              "de": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+              "tr": "يتكلم ليس الألمانية فقط بل الإنجليزية أيضاً."
+            }
+          ]
+        },
+        {
+          "title": "je ..., desto ...",
+          "text": "je + صيغة المقارنة...، desto + صيغة المقارنة تعني \"كلما...، كلما\". بعد je الفعل في الآخر، وبعد desto الفعل فوراً.",
+          "examples": [
+            {
+              "de": "Je mehr ich lerne, desto besser spreche ich.",
+              "tr": "كلما تعلمت أكثر تكلمت أفضل."
+            }
+          ]
+        },
+        {
+          "title": "indem: عن طريق",
+          "text": "indem تجيب عن Wie؟ (بأي طريقة؟). والفعل في الآخر كما بعد weil.",
+          "examples": [
+            {
+              "de": "Ich lerne Wörter, indem ich viel lese.",
+              "tr": "أتعلم الكلمات عن طريق القراءة الكثيرة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "wisdom-summit-seven": {
+    "ru": {
+      "title": "Повторение: как делают слова",
+      "points": [
+        {
+          "title": "Глагол + -ung",
+          "text": "Основа глагола + -ung даёт существительное: einladen → die Einladung. Слова на -ung всегда die, во множественном -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Спасибо за приглашение!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Прилагательное + -heit/-keit даёт существительное (всегда die): gesund → die Gesundheit. После -lich, -ig, -bar ставим -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Здоровье важнее денег."
+            }
+          ]
+        },
+        {
+          "title": "un-: наоборот",
+          "text": "un- + прилагательное даёт противоположное значение, пишется слитно: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "Это невозможно!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: як роблять слова",
+      "points": [
+        {
+          "title": "Дієслово + -ung",
+          "text": "Основа дієслова + -ung дає іменник: einladen → die Einladung. Слова на -ung завжди die, у множині -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Дякую за запрошення!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Прикметник + -heit/-keit дає іменник (завжди die): gesund → die Gesundheit. Після -lich, -ig, -bar ставимо -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Здоров’я важливіше за гроші."
+            }
+          ]
+        },
+        {
+          "title": "un-: навпаки",
+          "text": "un- + прикметник дає протилежне значення, пишеться разом: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "Це неможливо!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: word building",
+      "points": [
+        {
+          "title": "Verb + -ung",
+          "text": "Verb stem + -ung makes a noun: einladen → die Einladung. Words in -ung are always die, plural -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Thanks for the invitation!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Adjective + -heit/-keit makes a noun (always die): gesund → die Gesundheit. After -lich, -ig, -bar use -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Health is more important than money."
+            }
+          ]
+        },
+        {
+          "title": "un-: the opposite",
+          "text": "un- + adjective gives the opposite meaning, written as one word: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "That’s impossible!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: słowotwórstwo",
+      "points": [
+        {
+          "title": "Czasownik + -ung",
+          "text": "Temat czasownika + -ung daje rzeczownik: einladen → die Einladung. Słowa na -ung zawsze die, w mnogiej -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Dziękuję za zaproszenie!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Przymiotnik + -heit/-keit daje rzeczownik (zawsze die): gesund → die Gesundheit. Po -lich, -ig, -bar stawiamy -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Zdrowie jest ważniejsze niż pieniądze."
+            }
+          ]
+        },
+        {
+          "title": "un-: odwrotnie",
+          "text": "un- + przymiotnik daje przeciwne znaczenie, pisze się łącznie: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "To niemożliwe!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: formación de palabras",
+      "points": [
+        {
+          "title": "Verbo + -ung",
+          "text": "Raíz del verbo + -ung forma un sustantivo: einladen → die Einladung. Las palabras en -ung son siempre die, plural -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "¡Gracias por la invitación!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Adjetivo + -heit/-keit forma un sustantivo (siempre die): gesund → die Gesundheit. Tras -lich, -ig, -bar va -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "La salud es más importante que el dinero."
+            }
+          ]
+        },
+        {
+          "title": "un-: lo contrario",
+          "text": "un- + adjetivo da el significado contrario, se escribe junto: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "¡Es imposible!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : formation des mots",
+      "points": [
+        {
+          "title": "Verbe + -ung",
+          "text": "Radical du verbe + -ung donne un nom : einladen → die Einladung. Les mots en -ung sont toujours die, pluriel -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Merci pour l’invitation !"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Adjectif + -heit/-keit donne un nom (toujours die) : gesund → die Gesundheit. Après -lich, -ig, -bar on met -keit : möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "La santé est plus importante que l’argent."
+            }
+          ]
+        },
+        {
+          "title": "un- : le contraire",
+          "text": "un- + adjectif donne le sens contraire, en un seul mot : möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "C’est impossible !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: kelime türetme",
+      "points": [
+        {
+          "title": "Fiil + -ung",
+          "text": "Fiil kökü + -ung isim yapar: einladen → die Einladung. -ung’lu kelimeler hep die, çoğulu -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Davet için teşekkürler!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Sıfat + -heit/-keit isim yapar (hep die): gesund → die Gesundheit. -lich, -ig, -bar’dan sonra -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Sağlık paradan daha önemli."
+            }
+          ]
+        },
+        {
+          "title": "un-: tersi",
+          "text": "un- + sıfat zıt anlam verir, bitişik yazılır: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "Bu imkânsız!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: formarea cuvintelor",
+      "points": [
+        {
+          "title": "Verb + -ung",
+          "text": "Rădăcina verbului + -ung dă un substantiv: einladen → die Einladung. Cuvintele în -ung sunt mereu die, plural -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Mulțumesc pentru invitație!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Adjectiv + -heit/-keit dă un substantiv (mereu die): gesund → die Gesundheit. După -lich, -ig, -bar punem -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Sănătatea e mai importantă decât banii."
+            }
+          ]
+        },
+        {
+          "title": "un-: opusul",
+          "text": "un- + adjectiv dă sensul opus, se scrie legat: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "E imposibil!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: so'z yasalishi",
+      "points": [
+        {
+          "title": "Fe'l + -ung",
+          "text": "Fe'l o'zagi + -ung ot yasaydi: einladen → die Einladung. -ung bilan tugaganlar doim die, ko'plikda -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "Taklif uchun rahmat!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "Sifat + -heit/-keit ot yasaydi (doim die): gesund → die Gesundheit. -lich, -ig, -bar dan keyin -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "Sog'liq puldan muhimroq."
+            }
+          ]
+        },
+        {
+          "title": "un-: teskarisi",
+          "text": "un- + sifat teskari ma'no beradi, qo'shib yoziladi: möglich → unmöglich, gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "Bu mumkin emas!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: शब्द निर्माण",
+      "points": [
+        {
+          "title": "क्रिया + -ung",
+          "text": "क्रिया का मूल + -ung से संज्ञा बनती है: einladen → die Einladung। -ung वाले शब्द हमेशा die, बहुवचन -en।",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "निमंत्रण के लिए धन्यवाद!"
+            }
+          ]
+        },
+        {
+          "title": "-heit, -keit",
+          "text": "विशेषण + -heit/-keit से संज्ञा (हमेशा die): gesund → die Gesundheit। -lich, -ig, -bar के बाद -keit: möglich → die Möglichkeit।",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "सेहत पैसे से ज़्यादा ज़रूरी है।"
+            }
+          ]
+        },
+        {
+          "title": "un-: उल्टा",
+          "text": "un- + विशेषण उल्टा अर्थ देता है, जोड़कर लिखते हैं: möglich → unmöglich, gesund → ungesund।",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "यह नामुमकिन है!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: بناء الكلمات",
+      "points": [
+        {
+          "title": "الفعل + -ung",
+          "text": "جذر الفعل + -ung يصنع اسماً: einladen → die Einladung. والكلمات المنتهية بـ -ung دائماً die، وجمعها -en.",
+          "examples": [
+            {
+              "de": "Danke für die Einladung!",
+              "tr": "شكراً على الدعوة!"
+            }
+          ]
+        },
+        {
+          "title": "-heit و-keit",
+          "text": "الصفة + -heit/-keit تصنع اسماً (دائماً die): gesund → die Gesundheit. وبعد -lich و-ig و-bar نضع -keit: möglich → die Möglichkeit.",
+          "examples": [
+            {
+              "de": "Die Gesundheit ist wichtiger als Geld.",
+              "tr": "الصحة أهم من المال."
+            }
+          ]
+        },
+        {
+          "title": "un-: العكس",
+          "text": "un- + الصفة تعطي المعنى المعاكس وتُكتب متصلة: möglich → unmöglich، gesund → ungesund.",
+          "examples": [
+            {
+              "de": "Das ist unmöglich!",
+              "tr": "هذا مستحيل!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "wisdom-summit-eight": {
+    "ru": {
+      "title": "Повторение: мнение",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: после dass глагол в конце. Без dass порядок обычный: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Я считаю, что фильм интересный."
+            }
+          ]
+        },
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Предположение: werden + wohl + инфинитив (наверное). Уверенность растёт: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Он, наверное, болен."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: думка",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: після dass дієслово в кінці. Без dass порядок звичайний: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Я вважаю, що фільм цікавий."
+            }
+          ]
+        },
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Припущення: werden + wohl + інфінітив (мабуть). Упевненість зростає: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Він, мабуть, хворий."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: opinions",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: after dass the verb goes last. Without dass normal order: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "I think the film is interesting."
+            }
+          ]
+        },
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "A guess: werden + wohl + infinitive (probably). Rising certainty: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "He’s probably ill."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: opinie",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: po dass czasownik na końcu. Bez dass szyk zwykły: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Uważam, że film jest ciekawy."
+            }
+          ]
+        },
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Przypuszczenie: werden + wohl + bezokolicznik (pewnie). Pewność rośnie: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Pewnie jest chory."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: opiniones",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: tras dass, verbo al final. Sin dass, orden normal: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Creo que la película es interesante."
+            }
+          ]
+        },
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Suposición: werden + wohl + infinitivo (seguramente). La certeza sube: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Seguramente está enfermo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : opinions",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ... : après dass, verbe à la fin. Sans dass, ordre normal : Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Je trouve que le film est intéressant."
+            }
+          ]
+        },
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Supposition : werden + wohl + infinitif (sans doute). La certitude monte : vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Il est sans doute malade."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: görüşler",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: dass’tan sonra fiil sonda. dass olmadan normal sıra: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Bence film ilginç."
+            }
+          ]
+        },
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Tahmin: werden + wohl + mastar (herhalde). Emin olma artar: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Herhalde hasta."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: păreri",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: după dass verbul la final. Fără dass, ordine normală: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Cred că filmul e interesant."
+            }
+          ]
+        },
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Presupunere: werden + wohl + infinitiv (probabil). Siguranța crește: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "Probabil e bolnav."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: fikrlar",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: dass dan keyin fe'l oxirida. dass siz oddiy tartib: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "Menimcha, film qiziqarli."
+            }
+          ]
+        },
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "Taxmin: werden + wohl + infinitiv (ehtimol). Ishonch oshadi: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "U ehtimol kasaldir."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: राय",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: dass के बाद क्रिया अंत में। बिना dass सामान्य क्रम: Ich finde, der Film ist gut।",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "मुझे लगता है कि फ़िल्म दिलचस्प है।"
+            }
+          ]
+        },
+        {
+          "title": "wird wohl, wahrscheinlich, bestimmt",
+          "text": "अनुमान: werden + wohl + इन्फ़िनिटिव (शायद)। यक़ीन बढ़ता है: vielleicht < wahrscheinlich < bestimmt।",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "वह शायद बीमार है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الآراء",
+      "points": [
+        {
+          "title": "Ich finde, dass ...",
+          "text": "Ich finde/glaube/denke, dass ...: بعد dass الفعل في الآخر. وبدون dass الترتيب عادي: Ich finde, der Film ist gut.",
+          "examples": [
+            {
+              "de": "Ich finde, dass der Film interessant ist.",
+              "tr": "أرى أن الفيلم ممتع."
+            }
+          ]
+        },
+        {
+          "title": "wird wohl وwahrscheinlich وbestimmt",
+          "text": "التخمين: werden + wohl + المصدر (على الأرجح). والثقة تزداد: vielleicht < wahrscheinlich < bestimmt.",
+          "examples": [
+            {
+              "de": "Er wird wohl krank sein.",
+              "tr": "لعله مريض."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "wisdom-summit-nine": {
+    "ru": {
+      "title": "Большое повторение",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "В части с wenn hätte/wäre в самом конце. Во второй части hätte/wäre сразу, Partizip II в конце.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Если бы я это знал, я бы пришёл."
+            }
+          ]
+        },
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "В Passiv важно не кто делает, а что происходит. wird на втором месте, Partizip II в конце. Много предметов: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Машину ремонтируют."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Окна моют."
+            }
+          ]
+        },
+        {
+          "title": "um ... zu: чтобы",
+          "text": "um ... zu, когда цель у того же человека. zu и инфинитив в самом конце.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "Я учу немецкий, чтобы работать в Германии."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Велике повторення",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "У частині з wenn hätte/wäre в самому кінці. У другій частині hätte/wäre одразу, Partizip II у кінці.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Якби я це знав, я б прийшов."
+            }
+          ]
+        },
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "У Passiv важливо не хто робить, а що відбувається. wird на другому місці, Partizip II у кінці. Багато предметів: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Машину ремонтують."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Вікна миють."
+            }
+          ]
+        },
+        {
+          "title": "um ... zu: щоб",
+          "text": "um ... zu, коли мета в тієї самої людини. zu та інфінітив у самому кінці.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "Я вчу німецьку, щоб працювати в Німеччині."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Big review",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "In the wenn part hätte/wäre goes at the very end. In the other part hätte/wäre comes first, Partizip II at the end.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "If I had known that, I would have come."
+            }
+          ]
+        },
+        {
+          "title": "Passive: wird + Partizip II",
+          "text": "In the passive what matters is what happens, not who does it. wird in second place, Partizip II at the end. Several things: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "The car is being repaired."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "The windows are being cleaned."
+            }
+          ]
+        },
+        {
+          "title": "um ... zu: in order to",
+          "text": "um ... zu when the same person has the goal. zu and the infinitive go at the very end.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "I’m learning German to work in Germany."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Wielka powtórka",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "W części z wenn hätte/wäre na samym końcu. W drugiej części hätte/wäre od razu, Partizip II na końcu.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Gdybym to wiedział, przyszedłbym."
+            }
+          ]
+        },
+        {
+          "title": "Passiv: wird + Partizip II",
+          "text": "W Passiv ważne jest nie to, kto robi, ale co się dzieje. wird na drugim miejscu, Partizip II na końcu. Wiele rzeczy: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Samochód jest naprawiany."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Okna są myte."
+            }
+          ]
+        },
+        {
+          "title": "um ... zu: żeby",
+          "text": "um ... zu, gdy cel ma ta sama osoba. zu i bezokolicznik na samym końcu.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "Uczę się niemieckiego, żeby pracować w Niemczech."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Gran repaso",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "En la parte con wenn, hätte/wäre al final. En la otra, hätte/wäre primero y Partizip II al final.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Si lo hubiera sabido, habría venido."
+            }
+          ]
+        },
+        {
+          "title": "Pasiva: wird + Partizip II",
+          "text": "En pasiva importa lo que pasa, no quién lo hace. wird en segundo lugar, Partizip II al final. Varias cosas: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "El coche se está reparando."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Se limpian las ventanas."
+            }
+          ]
+        },
+        {
+          "title": "um ... zu: para",
+          "text": "um ... zu cuando el objetivo es de la misma persona. zu y el infinitivo van al final.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "Aprendo alemán para trabajar en Alemania."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Grande révision",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "Dans la partie avec wenn, hätte/wäre tout à la fin. Dans l’autre, hätte/wäre d’abord, Partizip II à la fin.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Si j’avais su, je serais venu."
+            }
+          ]
+        },
+        {
+          "title": "Passif : wird + Partizip II",
+          "text": "Au passif, ce qui compte, c’est ce qui se passe, pas qui le fait. wird en deuxième position, Partizip II à la fin. Plusieurs choses : werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "La voiture est en réparation."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "On nettoie les fenêtres."
+            }
+          ]
+        },
+        {
+          "title": "um ... zu : pour",
+          "text": "um ... zu quand le but concerne la même personne. zu et l’infinitif vont tout à la fin.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "J’apprends l’allemand pour travailler en Allemagne."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Büyük tekrar",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "wenn kısmında hätte/wäre en sonda. Diğer kısımda hätte/wäre başta, Partizip II sonda.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Bunu bilseydim gelirdim."
+            }
+          ]
+        },
+        {
+          "title": "Edilgen: wird + Partizip II",
+          "text": "Edilgende önemli olan kimin yaptığı değil, ne olduğudur. wird ikinci sırada, Partizip II sonda. Birden çok şey: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Araba tamir ediliyor."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Pencereler temizleniyor."
+            }
+          ]
+        },
+        {
+          "title": "um ... zu: -mek için",
+          "text": "Amaç aynı kişiye aitse um ... zu. zu ve mastar en sonda.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "Almanya’da çalışmak için Almanca öğreniyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Marea recapitulare",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "În partea cu wenn, hätte/wäre la final. În cealaltă, hätte/wäre imediat, Partizip II la final.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Dacă aș fi știut, aș fi venit."
+            }
+          ]
+        },
+        {
+          "title": "Pasiv: wird + Partizip II",
+          "text": "La pasiv contează ce se întâmplă, nu cine face. wird pe locul doi, Partizip II la final. Mai multe lucruri: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Mașina e reparată."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Ferestrele sunt spălate."
+            }
+          ]
+        },
+        {
+          "title": "um ... zu: ca să",
+          "text": "um ... zu când scopul e al aceleiași persoane. zu și infinitivul la final.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "Învăț germana ca să lucrez în Germania."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Katta takrorlash",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "wenn qismida hätte/wäre eng oxirida. Ikkinchi qismda hätte/wäre darhol, Partizip II oxirida.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "Buni bilganimda kelgan bo'lardim."
+            }
+          ]
+        },
+        {
+          "title": "Majhul: wird + Partizip II",
+          "text": "Majhul nisbatda kim qilgani emas, nima bo'layotgani muhim. wird ikkinchi o'rinda, Partizip II oxirida. Ko'p narsa: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Mashina ta'mirlanmoqda."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "Derazalar yuvilmoqda."
+            }
+          ]
+        },
+        {
+          "title": "um ... zu: ... uchun",
+          "text": "Maqsad o'sha odamniki bo'lsa um ... zu. zu va infinitiv eng oxirida.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "Germaniyada ishlash uchun nemis tilini o'rganyapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "बड़ा दोहराव",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "wenn वाले हिस्से में hätte/wäre बिल्कुल अंत में। दूसरे हिस्से में hätte/wäre तुरंत, Partizip II अंत में।",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "अगर मुझे यह पता होता, तो मैं आ जाता।"
+            }
+          ]
+        },
+        {
+          "title": "कर्मवाच्य: wird + Partizip II",
+          "text": "कर्मवाच्य में यह मायने रखता है कि क्या हो रहा है, कौन कर रहा है यह नहीं। wird दूसरे स्थान पर, Partizip II अंत में। कई चीज़ें: werden।",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "गाड़ी ठीक की जा रही है।"
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "खिड़कियाँ साफ़ की जा रही हैं।"
+            }
+          ]
+        },
+        {
+          "title": "um ... zu: ... के लिए",
+          "text": "जब लक्ष्य उसी व्यक्ति का हो, तब um ... zu। zu और इन्फ़िनिटिव बिल्कुल अंत में।",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "मैं जर्मनी में काम करने के लिए जर्मन सीख रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المراجعة الكبرى",
+      "points": [
+        {
+          "title": "Wenn ich das gewusst hätte, ...",
+          "text": "في جزء wenn تأتي hätte/wäre في الآخر تماماً. وفي الجزء الآخر hätte/wäre أولاً وPartizip II في الآخر.",
+          "examples": [
+            {
+              "de": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+              "tr": "لو كنت أعرف ذلك لجئت."
+            }
+          ]
+        },
+        {
+          "title": "المبني للمجهول: wird + Partizip II",
+          "text": "في المبني للمجهول المهم ما يحدث لا من يفعله. wird في المكان الثاني وPartizip II في الآخر. ولعدة أشياء: werden.",
+          "examples": [
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "السيارة تُصلَح."
+            },
+            {
+              "de": "Die Fenster werden geputzt.",
+              "tr": "النوافذ تُنظَّف."
+            }
+          ]
+        },
+        {
+          "title": "um ... zu: لكي",
+          "text": "um ... zu عندما يكون الهدف للشخص نفسه. وzu والمصدر في آخر الجملة.",
+          "examples": [
+            {
+              "de": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+              "tr": "أتعلم الألمانية لكي أعمل في ألمانيا."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "wisdom-summit-ten": {
+    "ru": {
+      "title": "Экзамен B1: как решать",
+      "points": [
+        {
+          "title": "Как решать экзамен",
+          "text": "1. Найди связку: weil, obwohl, damit, sodass, der/die/das отправляют глагол в конец, deshalb и trotzdem нет. 2. Определи время: Präteritum, Plusquamperfekt, Passiv. 3. Проверь zu: после модальных и lassen его нет.",
+          "examples": [
+            {
+              "de": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+              "tr": "Хотя экзамен был трудным, я его сдал."
+            }
+          ]
+        },
+        {
+          "title": "der, die, das: который",
+          "text": "«Который» берём по роду слова: der, die, das, во множественном die. Глагол в придаточном в конце, вокруг запятые.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Мужчина, который там стоит, мой сосед."
+            }
+          ]
+        },
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Нереальное условие: в части с wenn hätte или wäre в конце, во второй части würde + инфинитив в конце. Это мечта, а не реальность.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Если бы у меня было время, я бы путешествовал."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Если бы я был богат, я бы купил дом."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Іспит B1: як розв’язувати",
+      "points": [
+        {
+          "title": "Як розв’язувати іспит",
+          "text": "1. Знайди сполучник: weil, obwohl, damit, sodass, der/die/das відправляють дієслово в кінець, deshalb і trotzdem ні. 2. Визнач час: Präteritum, Plusquamperfekt, Passiv. 3. Перевір zu: після модальних і lassen його немає.",
+          "examples": [
+            {
+              "de": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+              "tr": "Хоча іспит був важким, я його склав."
+            }
+          ]
+        },
+        {
+          "title": "der, die, das: який",
+          "text": "«Який» беремо за родом слова: der, die, das, у множині die. Дієслово в підрядному в кінці, навколо коми.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Чоловік, який там стоїть, мій сусід."
+            }
+          ]
+        },
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Нереальна умова: у частині з wenn hätte або wäre в кінці, у другій частині würde + інфінітив у кінці. Це мрія, а не реальність.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Якби в мене був час, я б подорожував."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Якби я був багатий, я б купив будинок."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "B1 exam: how to approach it",
+      "points": [
+        {
+          "title": "How to approach the exam",
+          "text": "1. Find the connector: weil, obwohl, damit, sodass, der/die/das send the verb to the end, deshalb and trotzdem don’t. 2. Identify the tense: Präteritum, Plusquamperfekt, passive. 3. Check zu: none after modals and lassen.",
+          "examples": [
+            {
+              "de": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+              "tr": "Although the exam was hard, I passed it."
+            }
+          ]
+        },
+        {
+          "title": "der, die, das: who, which",
+          "text": "\"Who, which\" follows the noun’s gender: der, die, das, plural die. The verb goes last, with commas around the clause.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "The man who is standing there is my neighbour."
+            }
+          ]
+        },
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Unreal condition: in the wenn part hätte or wäre at the end, in the other part würde + infinitive at the end. It’s a dream, not reality.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "If I had time, I would travel."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "If I were rich, I would buy a house."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Egzamin B1: jak rozwiązywać",
+      "points": [
+        {
+          "title": "Jak rozwiązywać egzamin",
+          "text": "1. Znajdź spójnik: weil, obwohl, damit, sodass, der/die/das wysyłają czasownik na koniec, deshalb i trotzdem nie. 2. Określ czas: Präteritum, Plusquamperfekt, Passiv. 3. Sprawdź zu: po modalnych i lassen go nie ma.",
+          "examples": [
+            {
+              "de": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+              "tr": "Chociaż egzamin był trudny, zdałem go."
+            }
+          ]
+        },
+        {
+          "title": "der, die, das: który",
+          "text": "„Który” bierzemy według rodzaju słowa: der, die, das, w mnogiej die. Czasownik na końcu, wokół przecinki.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Mężczyzna, który tam stoi, to mój sąsiad."
+            }
+          ]
+        },
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Warunek nierzeczywisty: w części z wenn hätte albo wäre na końcu, w drugiej würde + bezokolicznik na końcu. To marzenie, nie rzeczywistość.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Gdybym miał czas, podróżowałbym."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Gdybym był bogaty, kupiłbym dom."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Examen B1: cómo resolverlo",
+      "points": [
+        {
+          "title": "Cómo hacer el examen",
+          "text": "1. Busca el conector: weil, obwohl, damit, sodass, der/die/das mandan el verbo al final, deshalb y trotzdem no. 2. Identifica el tiempo: Präteritum, Plusquamperfekt, pasiva. 3. Revisa zu: no va tras modales ni lassen.",
+          "examples": [
+            {
+              "de": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+              "tr": "Aunque el examen era difícil, lo aprobé."
+            }
+          ]
+        },
+        {
+          "title": "der, die, das: que",
+          "text": "El relativo sigue el género: der, die, das, en plural die. El verbo va al final y hay comas alrededor.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "El hombre que está allí es mi vecino."
+            }
+          ]
+        },
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Condición irreal: en la parte con wenn, hätte o wäre al final; en la otra, würde + infinitivo al final. Es un sueño, no la realidad.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Si tuviera tiempo, viajaría."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Si fuera rico, compraría una casa."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Examen B1 : comment s’y prendre",
+      "points": [
+        {
+          "title": "Comment aborder l’examen",
+          "text": "1. Trouve le connecteur : weil, obwohl, damit, sodass, der/die/das envoient le verbe à la fin, deshalb et trotzdem non. 2. Repère le temps : Präteritum, Plusquamperfekt, passif. 3. Vérifie zu : pas après les modaux ni lassen.",
+          "examples": [
+            {
+              "de": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+              "tr": "Bien que l’examen ait été difficile, je l’ai réussi."
+            }
+          ]
+        },
+        {
+          "title": "der, die, das : qui",
+          "text": "Le relatif suit le genre du nom : der, die, das, au pluriel die. Le verbe va à la fin, avec des virgules autour.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "L’homme qui est là-bas est mon voisin."
+            }
+          ]
+        },
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Condition irréelle : dans la partie avec wenn, hätte ou wäre à la fin ; dans l’autre, würde + infinitif à la fin. C’est un rêve, pas la réalité.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Si j’avais le temps, je voyagerais."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Si j’étais riche, j’achèterais une maison."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "B1 sınavı: nasıl çözülür",
+      "points": [
+        {
+          "title": "Sınav nasıl çözülür",
+          "text": "1. Bağlacı bul: weil, obwohl, damit, sodass, der/die/das fiili sona gönderir, deshalb ve trotzdem göndermez. 2. Zamanı belirle: Präteritum, Plusquamperfekt, edilgen. 3. zu’yu kontrol et: modal ve lassen’den sonra yok.",
+          "examples": [
+            {
+              "de": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+              "tr": "Sınav zor olmasına rağmen geçtim."
+            }
+          ]
+        },
+        {
+          "title": "der, die, das: ki o",
+          "text": "\"ki o\" ismin cinsiyetine göre seçilir: der, die, das, çoğulda die. Fiil sonda, etrafında virgüller.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Orada duran adam benim komşum."
+            }
+          ]
+        },
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Gerçek dışı koşul: wenn kısmında hätte ya da wäre sonda, diğer kısımda würde + mastar sonda. Gerçek değil, hayal.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Vaktim olsaydı seyahat ederdim."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Zengin olsaydım bir ev alırdım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Examen B1: cum rezolvi",
+      "points": [
+        {
+          "title": "Cum rezolvi examenul",
+          "text": "1. Găsește conectorul: weil, obwohl, damit, sodass, der/die/das trimit verbul la final, deshalb și trotzdem nu. 2. Stabilește timpul: Präteritum, Plusquamperfekt, pasiv. 3. Verifică zu: după modale și lassen nu există.",
+          "examples": [
+            {
+              "de": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+              "tr": "Deși examenul a fost greu, l-am trecut."
+            }
+          ]
+        },
+        {
+          "title": "der, die, das: care",
+          "text": "„Care” după genul cuvântului: der, die, das, la plural die. Verbul la final, cu virgule în jur.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Bărbatul care stă acolo e vecinul meu."
+            }
+          ]
+        },
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Condiție ireală: în partea cu wenn, hätte sau wäre la final; în cealaltă, würde + infinitiv la final. E un vis, nu realitate.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Dacă aș avea timp, aș călători."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Dacă aș fi bogat, aș cumpăra o casă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "B1 imtihoni: qanday yechish",
+      "points": [
+        {
+          "title": "Imtihonni qanday yechish",
+          "text": "1. Bog'lovchini top: weil, obwohl, damit, sodass, der/die/das fe'lni oxiriga yuboradi, deshalb va trotzdem yo'q. 2. Zamonni aniqla: Präteritum, Plusquamperfekt, majhul. 3. zu ni tekshir: modallar va lassen dan keyin yo'q.",
+          "examples": [
+            {
+              "de": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+              "tr": "Imtihon qiyin bo'lsa ham, men undan o'tdim."
+            }
+          ]
+        },
+        {
+          "title": "der, die, das: qaysiki",
+          "text": "\"Qaysiki\" so'zning rodiga qarab: der, die, das, ko'plikda die. Fe'l oxirida, atrofida vergullar.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "U yerda turgan erkak mening qo'shnim."
+            }
+          ]
+        },
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "Noreal shart: wenn qismida hätte yoki wäre oxirida, ikkinchi qismda würde + infinitiv oxirida. Bu orzu, haqiqat emas.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "Vaqtim bo'lganida sayohat qilardim."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "Boy bo'lganimda uy sotib olardim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "B1 परीक्षा: कैसे हल करें",
+      "points": [
+        {
+          "title": "परीक्षा कैसे हल करें",
+          "text": "1. योजक ढूँढो: weil, obwohl, damit, sodass, der/die/das क्रिया को अंत में भेजते हैं, deshalb और trotzdem नहीं। 2. काल पहचानो: Präteritum, Plusquamperfekt, कर्मवाच्य। 3. zu जाँचो: मोडल और lassen के बाद नहीं।",
+          "examples": [
+            {
+              "de": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+              "tr": "परीक्षा मुश्किल थी, फिर भी मैंने पास कर ली।"
+            }
+          ]
+        },
+        {
+          "title": "der, die, das: जो",
+          "text": "\"जो\" संज्ञा के लिंग के अनुसार: der, die, das, बहुवचन में die। क्रिया अंत में, चारों ओर कॉमा।",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "वहाँ खड़ा आदमी मेरा पड़ोसी है।"
+            }
+          ]
+        },
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "अवास्तविक शर्त: wenn वाले हिस्से में hätte या wäre अंत में, दूसरे हिस्से में würde + इन्फ़िनिटिव अंत में। यह सपना है, सच नहीं।",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "अगर मेरे पास समय होता, तो मैं घूमता।"
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "अगर मैं अमीर होता, तो एक घर खरीदता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "امتحان B1: كيف تحل",
+      "points": [
+        {
+          "title": "كيف تحل الامتحان",
+          "text": "1. ابحث عن أداة الربط: weil وobwohl وdamit وsodass وder/die/das ترسل الفعل إلى الآخر، وdeshalb وtrotzdem لا. 2. حدد الزمن: Präteritum أو Plusquamperfekt أو المجهول. 3. تحقق من zu: لا تأتي بعد الأفعال المساعدة ولا lassen.",
+          "examples": [
+            {
+              "de": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+              "tr": "رغم أن الامتحان كان صعباً نجحت فيه."
+            }
+          ]
+        },
+        {
+          "title": "der وdie وdas: الذي",
+          "text": "\"الذي\" حسب جنس الاسم: der وdie وdas، وفي الجمع die. والفعل في الآخر وحولها فواصل.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "الرجل الذي يقف هناك جاري."
+            }
+          ]
+        },
+        {
+          "title": "Wenn ich ... hätte, würde ich ...",
+          "text": "الشرط غير الواقعي: في جزء wenn تأتي hätte أو wäre في الآخر، وفي الجزء الآخر würde + المصدر في الآخر. إنه حلم لا واقع.",
+          "examples": [
+            {
+              "de": "Wenn ich Zeit hätte, würde ich reisen.",
+              "tr": "لو كان عندي وقت لسافرت."
+            },
+            {
+              "de": "Wenn ich reich wäre, würde ich ein Haus kaufen.",
+              "tr": "لو كنت غنياً لاشتريت بيتاً."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

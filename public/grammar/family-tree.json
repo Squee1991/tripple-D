@@ -1,0 +1,2640 @@
+{
+  "family-tree-one": {
+    "ru": {
+      "title": "mein и dein: мой и твой",
+      "points": [
+        {
+          "title": "Окончание как у ein",
+          "text": "mein и dein меняются как ein: для der и das без окончания, для die и множественного с -e.",
+          "examples": [
+            {
+              "de": "mein Vater, meine Mutter, meine Eltern",
+              "tr": "мой папа, моя мама, мои родители"
+            },
+            {
+              "de": "Ist das dein Schlüssel?",
+              "tr": "Это твой ключ?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "mein і dein: мій і твій",
+      "points": [
+        {
+          "title": "Закінчення як у ein",
+          "text": "mein і dein змінюються як ein: для der і das без закінчення, для die і множини з -e.",
+          "examples": [
+            {
+              "de": "mein Vater, meine Mutter, meine Eltern",
+              "tr": "мій тато, моя мама, мої батьки"
+            },
+            {
+              "de": "Ist das dein Schlüssel?",
+              "tr": "Це твій ключ?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "mein and dein: my and your",
+      "points": [
+        {
+          "title": "Endings like ein",
+          "text": "mein and dein change like ein: no ending for der and das, -e for die and plural.",
+          "examples": [
+            {
+              "de": "mein Vater, meine Mutter, meine Eltern",
+              "tr": "my father, my mother, my parents"
+            },
+            {
+              "de": "Ist das dein Schlüssel?",
+              "tr": "Is this your key?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "mein i dein: mój i twój",
+      "points": [
+        {
+          "title": "Końcówki jak przy ein",
+          "text": "mein i dein odmieniają się jak ein: dla der i das bez końcówki, dla die i liczby mnogiej z -e.",
+          "examples": [
+            {
+              "de": "mein Vater, meine Mutter, meine Eltern",
+              "tr": "mój tata, moja mama, moi rodzice"
+            },
+            {
+              "de": "Ist das dein Schlüssel?",
+              "tr": "Czy to twój klucz?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "mein y dein: mi y tu",
+      "points": [
+        {
+          "title": "Terminaciones como ein",
+          "text": "mein y dein cambian como ein: sin terminación para der y das, con -e para die y el plural.",
+          "examples": [
+            {
+              "de": "mein Vater, meine Mutter, meine Eltern",
+              "tr": "mi padre, mi madre, mis padres"
+            },
+            {
+              "de": "Ist das dein Schlüssel?",
+              "tr": "¿Es tu llave?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "mein et dein : mon et ton",
+      "points": [
+        {
+          "title": "Terminaisons comme ein",
+          "text": "mein et dein changent comme ein : pas de terminaison pour der et das, -e pour die et le pluriel.",
+          "examples": [
+            {
+              "de": "mein Vater, meine Mutter, meine Eltern",
+              "tr": "mon père, ma mère, mes parents"
+            },
+            {
+              "de": "Ist das dein Schlüssel?",
+              "tr": "C’est ta clé ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "mein ve dein: benim ve senin",
+      "points": [
+        {
+          "title": "ein gibi ekler",
+          "text": "mein ve dein, ein gibi değişir: der ve das için eksiz, die ve çoğul için -e.",
+          "examples": [
+            {
+              "de": "mein Vater, meine Mutter, meine Eltern",
+              "tr": "babam, annem, ailem"
+            },
+            {
+              "de": "Ist das dein Schlüssel?",
+              "tr": "Bu senin anahtarın mı?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "mein și dein: al meu și al tău",
+      "points": [
+        {
+          "title": "Terminații ca la ein",
+          "text": "mein și dein se schimbă ca ein: fără terminație pentru der și das, cu -e pentru die și plural.",
+          "examples": [
+            {
+              "de": "mein Vater, meine Mutter, meine Eltern",
+              "tr": "tatăl meu, mama mea, părinții mei"
+            },
+            {
+              "de": "Ist das dein Schlüssel?",
+              "tr": "E cheia ta?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "mein va dein: mening va sening",
+      "points": [
+        {
+          "title": "ein kabi qo'shimchalar",
+          "text": "mein va dein ein kabi o'zgaradi: der va das uchun qo'shimchasiz, die va ko'plik uchun -e.",
+          "examples": [
+            {
+              "de": "mein Vater, meine Mutter, meine Eltern",
+              "tr": "otam, onam, ota-onam"
+            },
+            {
+              "de": "Ist das dein Schlüssel?",
+              "tr": "Bu sening kalitingmi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "mein और dein: मेरा और तुम्हारा",
+      "points": [
+        {
+          "title": "ein जैसे अंत",
+          "text": "mein और dein, ein की तरह बदलते हैं: der और das के लिए कोई अंत नहीं, die और बहुवचन के लिए -e।",
+          "examples": [
+            {
+              "de": "mein Vater, meine Mutter, meine Eltern",
+              "tr": "मेरे पिता, मेरी माँ, मेरे माता-पिता"
+            },
+            {
+              "de": "Ist das dein Schlüssel?",
+              "tr": "क्या यह तुम्हारी चाबी है?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "mein وdein: لي ولك",
+      "points": [
+        {
+          "title": "نهايات مثل ein",
+          "text": "تتغير mein وdein مثل ein: بدون نهاية مع der وdas، ومع -e مع die والجمع.",
+          "examples": [
+            {
+              "de": "mein Vater, meine Mutter, meine Eltern",
+              "tr": "أبي، أمي، والداي"
+            },
+            {
+              "de": "Ist das dein Schlüssel?",
+              "tr": "هل هذا مفتاحك؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "family-tree-two": {
+    "ru": {
+      "title": "sein и ihr: его и её",
+      "points": [
+        {
+          "title": "Слово по хозяину",
+          "text": "Если хозяин он, говорим sein. Если хозяйка она, говорим ihr.",
+          "examples": [
+            {
+              "de": "Tom und sein Hund",
+              "tr": "Том и его собака"
+            },
+            {
+              "de": "Anna und ihre Katze",
+              "tr": "Анна и её кошка"
+            }
+          ]
+        },
+        {
+          "title": "Окончание по вещи",
+          "text": "Окончание зависит от вещи, а не от хозяина: sein Vater, seine Mutter.",
+          "examples": [
+            {
+              "de": "Ihre Tochter wohnt in Wien.",
+              "tr": "Её дочь живёт в Вене."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "sein і ihr: його і її",
+      "points": [
+        {
+          "title": "Слово за власником",
+          "text": "Якщо власник він, кажемо sein. Якщо власниця вона, кажемо ihr.",
+          "examples": [
+            {
+              "de": "Tom und sein Hund",
+              "tr": "Том і його собака"
+            },
+            {
+              "de": "Anna und ihre Katze",
+              "tr": "Анна і її кішка"
+            }
+          ]
+        },
+        {
+          "title": "Закінчення за річчю",
+          "text": "Закінчення залежить від речі, а не від власника: sein Vater, seine Mutter.",
+          "examples": [
+            {
+              "de": "Ihre Tochter wohnt in Wien.",
+              "tr": "Її донька живе у Відні."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "sein and ihr: his and her",
+      "points": [
+        {
+          "title": "The word depends on the owner",
+          "text": "If the owner is he, say sein. If the owner is she, say ihr.",
+          "examples": [
+            {
+              "de": "Tom und sein Hund",
+              "tr": "Tom and his dog"
+            },
+            {
+              "de": "Anna und ihre Katze",
+              "tr": "Anna and her cat"
+            }
+          ]
+        },
+        {
+          "title": "The ending depends on the thing",
+          "text": "The ending depends on the thing, not the owner: sein Vater, seine Mutter.",
+          "examples": [
+            {
+              "de": "Ihre Tochter wohnt in Wien.",
+              "tr": "Her daughter lives in Vienna."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "sein i ihr: jego i jej",
+      "points": [
+        {
+          "title": "Słowo według właściciela",
+          "text": "Jeśli właścicielem jest on, mówimy sein. Jeśli ona, mówimy ihr.",
+          "examples": [
+            {
+              "de": "Tom und sein Hund",
+              "tr": "Tom i jego pies"
+            },
+            {
+              "de": "Anna und ihre Katze",
+              "tr": "Anna i jej kot"
+            }
+          ]
+        },
+        {
+          "title": "Końcówka według rzeczy",
+          "text": "Końcówka zależy od rzeczy, a nie od właściciela: sein Vater, seine Mutter.",
+          "examples": [
+            {
+              "de": "Ihre Tochter wohnt in Wien.",
+              "tr": "Jej córka mieszka w Wiedniu."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "sein e ihr: su (de él) y su (de ella)",
+      "points": [
+        {
+          "title": "La palabra según el dueño",
+          "text": "Si el dueño es él, se dice sein. Si es ella, se dice ihr.",
+          "examples": [
+            {
+              "de": "Tom und sein Hund",
+              "tr": "Tom y su perro"
+            },
+            {
+              "de": "Anna und ihre Katze",
+              "tr": "Anna y su gata"
+            }
+          ]
+        },
+        {
+          "title": "La terminación según la cosa",
+          "text": "La terminación depende de la cosa, no del dueño: sein Vater, seine Mutter.",
+          "examples": [
+            {
+              "de": "Ihre Tochter wohnt in Wien.",
+              "tr": "Su hija vive en Viena."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "sein et ihr : son (à lui) et son (à elle)",
+      "points": [
+        {
+          "title": "Le mot dépend du propriétaire",
+          "text": "Si le propriétaire est un homme, on dit sein. Si c’est une femme, on dit ihr.",
+          "examples": [
+            {
+              "de": "Tom und sein Hund",
+              "tr": "Tom et son chien"
+            },
+            {
+              "de": "Anna und ihre Katze",
+              "tr": "Anna et son chat"
+            }
+          ]
+        },
+        {
+          "title": "La terminaison dépend de l’objet",
+          "text": "La terminaison dépend de l’objet, pas du propriétaire : sein Vater, seine Mutter.",
+          "examples": [
+            {
+              "de": "Ihre Tochter wohnt in Wien.",
+              "tr": "Sa fille habite à Vienne."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "sein ve ihr: onun (erkek) ve onun (kadın)",
+      "points": [
+        {
+          "title": "Kelime sahibine göre",
+          "text": "Sahibi erkekse sein, kadınsa ihr denir.",
+          "examples": [
+            {
+              "de": "Tom und sein Hund",
+              "tr": "Tom ve köpeği"
+            },
+            {
+              "de": "Anna und ihre Katze",
+              "tr": "Anna ve kedisi"
+            }
+          ]
+        },
+        {
+          "title": "Ek eşyaya göre",
+          "text": "Ek sahibine değil eşyaya göre değişir: sein Vater, seine Mutter.",
+          "examples": [
+            {
+              "de": "Ihre Tochter wohnt in Wien.",
+              "tr": "Kızı Viyana’da oturuyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "sein și ihr: al lui și al ei",
+      "points": [
+        {
+          "title": "Cuvântul după proprietar",
+          "text": "Dacă proprietarul e el, spui sein. Dacă e ea, spui ihr.",
+          "examples": [
+            {
+              "de": "Tom und sein Hund",
+              "tr": "Tom și câinele lui"
+            },
+            {
+              "de": "Anna und ihre Katze",
+              "tr": "Anna și pisica ei"
+            }
+          ]
+        },
+        {
+          "title": "Terminația după obiect",
+          "text": "Terminația depinde de obiect, nu de proprietar: sein Vater, seine Mutter.",
+          "examples": [
+            {
+              "de": "Ihre Tochter wohnt in Wien.",
+              "tr": "Fiica ei locuiește la Viena."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "sein va ihr: uning (erkak) va uning (ayol)",
+      "points": [
+        {
+          "title": "So'z egasiga qarab",
+          "text": "Egasi erkak bo'lsa sein, ayol bo'lsa ihr deyiladi.",
+          "examples": [
+            {
+              "de": "Tom und sein Hund",
+              "tr": "Tom va uning iti"
+            },
+            {
+              "de": "Anna und ihre Katze",
+              "tr": "Anna va uning mushugi"
+            }
+          ]
+        },
+        {
+          "title": "Qo'shimcha narsaga qarab",
+          "text": "Qo'shimcha egasiga emas, narsaga bog'liq: sein Vater, seine Mutter.",
+          "examples": [
+            {
+              "de": "Ihre Tochter wohnt in Wien.",
+              "tr": "Uning qizi Venada yashaydi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "sein और ihr: उसका और उसकी",
+      "points": [
+        {
+          "title": "शब्द मालिक के अनुसार",
+          "text": "मालिक पुरुष हो तो sein, महिला हो तो ihr।",
+          "examples": [
+            {
+              "de": "Tom und sein Hund",
+              "tr": "टॉम और उसका कुत्ता"
+            },
+            {
+              "de": "Anna und ihre Katze",
+              "tr": "अन्ना और उसकी बिल्ली"
+            }
+          ]
+        },
+        {
+          "title": "अंत चीज़ के अनुसार",
+          "text": "अंत मालिक से नहीं, चीज़ से तय होता है: sein Vater, seine Mutter।",
+          "examples": [
+            {
+              "de": "Ihre Tochter wohnt in Wien.",
+              "tr": "उसकी बेटी वियना में रहती है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "sein وihr: له ولها",
+      "points": [
+        {
+          "title": "الكلمة حسب المالك",
+          "text": "إذا كان المالك رجلاً نقول sein، وإذا كانت امرأة نقول ihr.",
+          "examples": [
+            {
+              "de": "Tom und sein Hund",
+              "tr": "توم وكلبه"
+            },
+            {
+              "de": "Anna und ihre Katze",
+              "tr": "آنا وقطتها"
+            }
+          ]
+        },
+        {
+          "title": "النهاية حسب الشيء",
+          "text": "النهاية تعتمد على الشيء لا على المالك: sein Vater، seine Mutter.",
+          "examples": [
+            {
+              "de": "Ihre Tochter wohnt in Wien.",
+              "tr": "ابنتها تسكن في فيينا."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "family-tree-three": {
+    "ru": {
+      "title": "unser, euer, Ihr",
+      "points": [
+        {
+          "title": "Наш, ваш, их",
+          "text": "unser (наш), euer (ваш, когда вас много), ihr (их), Ihr с большой буквы (Ваш, вежливо).",
+          "examples": [
+            {
+              "de": "Unser Haus ist klein.",
+              "tr": "Наш дом маленький."
+            },
+            {
+              "de": "Ist das Ihr Auto, Herr Klein?",
+              "tr": "Это Ваша машина, господин Кляйн?"
+            }
+          ]
+        },
+        {
+          "title": "euer теряет e",
+          "text": "Перед окончанием -e у euer выпадает e: euer Hund, но eure Katze.",
+          "examples": [
+            {
+              "de": "Eure Katze ist sehr nett.",
+              "tr": "Ваша кошка очень милая."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "unser, euer, Ihr",
+      "points": [
+        {
+          "title": "Наш, ваш, їхній",
+          "text": "unser (наш), euer (ваш, коли вас багато), ihr (їхній), Ihr з великої літери (Ваш, ввічливо).",
+          "examples": [
+            {
+              "de": "Unser Haus ist klein.",
+              "tr": "Наш дім маленький."
+            },
+            {
+              "de": "Ist das Ihr Auto, Herr Klein?",
+              "tr": "Це Ваша машина, пане Кляйн?"
+            }
+          ]
+        },
+        {
+          "title": "euer втрачає e",
+          "text": "Перед закінченням -e у euer випадає e: euer Hund, але eure Katze.",
+          "examples": [
+            {
+              "de": "Eure Katze ist sehr nett.",
+              "tr": "Ваша кішка дуже мила."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "unser, euer, Ihr",
+      "points": [
+        {
+          "title": "Our, your, their",
+          "text": "unser (our), euer (your, several people), ihr (their), capital Ihr (your, polite).",
+          "examples": [
+            {
+              "de": "Unser Haus ist klein.",
+              "tr": "Our house is small."
+            },
+            {
+              "de": "Ist das Ihr Auto, Herr Klein?",
+              "tr": "Is this your car, Mr Klein?"
+            }
+          ]
+        },
+        {
+          "title": "euer drops an e",
+          "text": "Before the ending -e, euer drops its e: euer Hund, but eure Katze.",
+          "examples": [
+            {
+              "de": "Eure Katze ist sehr nett.",
+              "tr": "Your cat is very nice."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "unser, euer, Ihr",
+      "points": [
+        {
+          "title": "Nasz, wasz, ich",
+          "text": "unser (nasz), euer (wasz), ihr (ich), Ihr wielką literą (Pana/Pani, grzecznie).",
+          "examples": [
+            {
+              "de": "Unser Haus ist klein.",
+              "tr": "Nasz dom jest mały."
+            },
+            {
+              "de": "Ist das Ihr Auto, Herr Klein?",
+              "tr": "Czy to pana samochód, panie Klein?"
+            }
+          ]
+        },
+        {
+          "title": "euer traci e",
+          "text": "Przed końcówką -e w euer wypada e: euer Hund, ale eure Katze.",
+          "examples": [
+            {
+              "de": "Eure Katze ist sehr nett.",
+              "tr": "Wasz kot jest bardzo miły."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "unser, euer, Ihr",
+      "points": [
+        {
+          "title": "Nuestro, vuestro, su",
+          "text": "unser (nuestro), euer (vuestro), ihr (su, de ellos), Ihr con mayúscula (su, de usted).",
+          "examples": [
+            {
+              "de": "Unser Haus ist klein.",
+              "tr": "Nuestra casa es pequeña."
+            },
+            {
+              "de": "Ist das Ihr Auto, Herr Klein?",
+              "tr": "¿Es este su coche, señor Klein?"
+            }
+          ]
+        },
+        {
+          "title": "euer pierde una e",
+          "text": "Delante de la terminación -e, euer pierde la e: euer Hund, pero eure Katze.",
+          "examples": [
+            {
+              "de": "Eure Katze ist sehr nett.",
+              "tr": "Vuestra gata es muy simpática."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "unser, euer, Ihr",
+      "points": [
+        {
+          "title": "Notre, votre, leur",
+          "text": "unser (notre), euer (votre, à plusieurs amis), ihr (leur), Ihr avec majuscule (votre, poli).",
+          "examples": [
+            {
+              "de": "Unser Haus ist klein.",
+              "tr": "Notre maison est petite."
+            },
+            {
+              "de": "Ist das Ihr Auto, Herr Klein?",
+              "tr": "C’est votre voiture, Monsieur Klein ?"
+            }
+          ]
+        },
+        {
+          "title": "euer perd un e",
+          "text": "Devant la terminaison -e, euer perd son e : euer Hund, mais eure Katze.",
+          "examples": [
+            {
+              "de": "Eure Katze ist sehr nett.",
+              "tr": "Votre chat est très gentil."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "unser, euer, Ihr",
+      "points": [
+        {
+          "title": "Bizim, sizin, onların",
+          "text": "unser (bizim), euer (sizin, birkaç kişi), ihr (onların), büyük harfle Ihr (sizin, kibar).",
+          "examples": [
+            {
+              "de": "Unser Haus ist klein.",
+              "tr": "Evimiz küçük."
+            },
+            {
+              "de": "Ist das Ihr Auto, Herr Klein?",
+              "tr": "Bu sizin arabanız mı, Bay Klein?"
+            }
+          ]
+        },
+        {
+          "title": "euer bir e kaybeder",
+          "text": "-e ekinden önce euer’deki e düşer: euer Hund, ama eure Katze.",
+          "examples": [
+            {
+              "de": "Eure Katze ist sehr nett.",
+              "tr": "Kediniz çok tatlı."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "unser, euer, Ihr",
+      "points": [
+        {
+          "title": "Nostru, vostru, lor",
+          "text": "unser (nostru), euer (vostru), ihr (lor), Ihr cu majusculă (dumneavoastră).",
+          "examples": [
+            {
+              "de": "Unser Haus ist klein.",
+              "tr": "Casa noastră este mică."
+            },
+            {
+              "de": "Ist das Ihr Auto, Herr Klein?",
+              "tr": "Este mașina dumneavoastră, domnule Klein?"
+            }
+          ]
+        },
+        {
+          "title": "euer pierde un e",
+          "text": "Înainte de terminația -e, euer pierde e-ul: euer Hund, dar eure Katze.",
+          "examples": [
+            {
+              "de": "Eure Katze ist sehr nett.",
+              "tr": "Pisica voastră e foarte drăguță."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "unser, euer, Ihr",
+      "points": [
+        {
+          "title": "Bizning, sizlarning, ularning",
+          "text": "unser (bizning), euer (sizlarning), ihr (ularning), bosh harfli Ihr (Sizning, hurmat bilan).",
+          "examples": [
+            {
+              "de": "Unser Haus ist klein.",
+              "tr": "Bizning uyimiz kichkina."
+            },
+            {
+              "de": "Ist das Ihr Auto, Herr Klein?",
+              "tr": "Bu sizning mashinangizmi, janob Klein?"
+            }
+          ]
+        },
+        {
+          "title": "euer e ni yo‘qotadi",
+          "text": "-e qo'shimchasidan oldin euer dagi e tushib qoladi: euer Hund, lekin eure Katze.",
+          "examples": [
+            {
+              "de": "Eure Katze ist sehr nett.",
+              "tr": "Sizlarning mushugingiz juda yoqimli."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "unser, euer, Ihr",
+      "points": [
+        {
+          "title": "हमारा, तुम सबका, उनका",
+          "text": "unser (हमारा), euer (तुम सबका), ihr (उनका), बड़े अक्षर वाला Ihr (आपका, विनम्र)।",
+          "examples": [
+            {
+              "de": "Unser Haus ist klein.",
+              "tr": "हमारा घर छोटा है।"
+            },
+            {
+              "de": "Ist das Ihr Auto, Herr Klein?",
+              "tr": "क्या यह आपकी गाड़ी है, श्रीमान क्लाइन?"
+            }
+          ]
+        },
+        {
+          "title": "euer का e हट जाता है",
+          "text": "-e अंत से पहले euer का e हट जाता है: euer Hund, लेकिन eure Katze।",
+          "examples": [
+            {
+              "de": "Eure Katze ist sehr nett.",
+              "tr": "तुम सबकी बिल्ली बहुत प्यारी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "unser وeuer وIhr",
+      "points": [
+        {
+          "title": "لنا، لكم، لهم",
+          "text": "unser (لنا)، euer (لكم، لعدة أشخاص)، ihr (لهم)، وIhr بحرف كبير (لحضرتك، بأدب).",
+          "examples": [
+            {
+              "de": "Unser Haus ist klein.",
+              "tr": "بيتنا صغير."
+            },
+            {
+              "de": "Ist das Ihr Auto, Herr Klein?",
+              "tr": "هل هذه سيارتك يا سيد كلاين؟"
+            }
+          ]
+        },
+        {
+          "title": "euer تفقد حرف e",
+          "text": "قبل النهاية -e يسقط حرف e من euer: euer Hund، لكن eure Katze.",
+          "examples": [
+            {
+              "de": "Eure Katze ist sehr nett.",
+              "tr": "قطتكم لطيفة جداً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "family-tree-four": {
+    "ru": {
+      "title": "meinen, seinen: в Akkusativ",
+      "points": [
+        {
+          "title": "Мужской род получает -en",
+          "text": "После suchen, besuchen, sehen, haben мужской род получает -en, как einen. Остальные не меняются.",
+          "examples": [
+            {
+              "de": "Ich suche meinen Schlüssel.",
+              "tr": "Я ищу свой ключ."
+            },
+            {
+              "de": "Sie besucht ihre Tante.",
+              "tr": "Она навещает свою тётю."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "meinen, seinen: в Akkusativ",
+      "points": [
+        {
+          "title": "Чоловічий рід отримує -en",
+          "text": "Після suchen, besuchen, sehen, haben чоловічий рід отримує -en, як einen. Решта не змінюється.",
+          "examples": [
+            {
+              "de": "Ich suche meinen Schlüssel.",
+              "tr": "Я шукаю свій ключ."
+            },
+            {
+              "de": "Sie besucht ihre Tante.",
+              "tr": "Вона відвідує свою тітку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "meinen, seinen: in the accusative",
+      "points": [
+        {
+          "title": "Masculine takes -en",
+          "text": "After suchen, besuchen, sehen, haben a masculine noun takes -en, like einen. The others don’t change.",
+          "examples": [
+            {
+              "de": "Ich suche meinen Schlüssel.",
+              "tr": "I’m looking for my key."
+            },
+            {
+              "de": "Sie besucht ihre Tante.",
+              "tr": "She visits her aunt."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "meinen, seinen: w Akkusativ",
+      "points": [
+        {
+          "title": "Rodzaj męski dostaje -en",
+          "text": "Po suchen, besuchen, sehen, haben rodzaj męski dostaje -en, jak einen. Reszta się nie zmienia.",
+          "examples": [
+            {
+              "de": "Ich suche meinen Schlüssel.",
+              "tr": "Szukam mojego klucza."
+            },
+            {
+              "de": "Sie besucht ihre Tante.",
+              "tr": "Ona odwiedza swoją ciocię."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "meinen, seinen: en acusativo",
+      "points": [
+        {
+          "title": "El masculino lleva -en",
+          "text": "Después de suchen, besuchen, sehen, haben el masculino lleva -en, como einen. Los demás no cambian.",
+          "examples": [
+            {
+              "de": "Ich suche meinen Schlüssel.",
+              "tr": "Busco mi llave."
+            },
+            {
+              "de": "Sie besucht ihre Tante.",
+              "tr": "Ella visita a su tía."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "meinen, seinen : à l’accusatif",
+      "points": [
+        {
+          "title": "Le masculin prend -en",
+          "text": "Après suchen, besuchen, sehen, haben, le masculin prend -en, comme einen. Les autres ne changent pas.",
+          "examples": [
+            {
+              "de": "Ich suche meinen Schlüssel.",
+              "tr": "Je cherche ma clé."
+            },
+            {
+              "de": "Sie besucht ihre Tante.",
+              "tr": "Elle rend visite à sa tante."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "meinen, seinen: Akkusativ’de",
+      "points": [
+        {
+          "title": "Eril -en alır",
+          "text": "suchen, besuchen, sehen, haben’den sonra eril isim einen gibi -en alır. Diğerleri değişmez.",
+          "examples": [
+            {
+              "de": "Ich suche meinen Schlüssel.",
+              "tr": "Anahtarımı arıyorum."
+            },
+            {
+              "de": "Sie besucht ihre Tante.",
+              "tr": "O teyzesini ziyaret ediyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "meinen, seinen: la acuzativ",
+      "points": [
+        {
+          "title": "Masculinul primește -en",
+          "text": "După suchen, besuchen, sehen, haben masculinul primește -en, ca einen. Celelalte nu se schimbă.",
+          "examples": [
+            {
+              "de": "Ich suche meinen Schlüssel.",
+              "tr": "Îmi caut cheia."
+            },
+            {
+              "de": "Sie besucht ihre Tante.",
+              "tr": "Ea își vizitează mătușa."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "meinen, seinen: Akkusativda",
+      "points": [
+        {
+          "title": "Erkak rodi -en oladi",
+          "text": "suchen, besuchen, sehen, haben dan keyin erkak rodi einen kabi -en oladi. Qolganlari o'zgarmaydi.",
+          "examples": [
+            {
+              "de": "Ich suche meinen Schlüssel.",
+              "tr": "Men kalitimni qidiryapman."
+            },
+            {
+              "de": "Sie besucht ihre Tante.",
+              "tr": "U xolasini ko'rgani boradi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "meinen, seinen: Akkusativ में",
+      "points": [
+        {
+          "title": "पुल्लिंग -en लेता है",
+          "text": "suchen, besuchen, sehen, haben के बाद पुल्लिंग einen की तरह -en लेता है। बाकी नहीं बदलते।",
+          "examples": [
+            {
+              "de": "Ich suche meinen Schlüssel.",
+              "tr": "मैं अपनी चाबी ढूँढ रहा हूँ।"
+            },
+            {
+              "de": "Sie besucht ihre Tante.",
+              "tr": "वह अपनी चाची से मिलने जाती है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "meinen وseinen: في حالة المفعول",
+      "points": [
+        {
+          "title": "المذكر يأخذ -en",
+          "text": "بعد suchen وbesuchen وsehen وhaben يأخذ المذكر -en مثل einen. والبقية لا تتغير.",
+          "examples": [
+            {
+              "de": "Ich suche meinen Schlüssel.",
+              "tr": "أبحث عن مفتاحي."
+            },
+            {
+              "de": "Sie besucht ihre Tante.",
+              "tr": "هي تزور خالتها."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "family-tree-five": {
+    "ru": {
+      "title": "Большая семья",
+      "points": [
+        {
+          "title": "Слова только во множественном",
+          "text": "die Großeltern (бабушка и дедушка) и die Geschwister (братья и сёстры) обычно во множественном, глагол с ними sind или haben.",
+          "examples": [
+            {
+              "de": "Hast du Geschwister?",
+              "tr": "У тебя есть братья и сёстры?"
+            }
+          ]
+        },
+        {
+          "title": "Семейное положение",
+          "text": "Ich bin verheiratet (женат, замужем) или ledig (не женат, не замужем). Одно слово для мужчин и женщин.",
+          "examples": [
+            {
+              "de": "Ich bin verheiratet.",
+              "tr": "Я женат. / Я замужем."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Велика родина",
+      "points": [
+        {
+          "title": "Слова лише в множині",
+          "text": "die Großeltern (бабуся й дідусь) і die Geschwister (брати й сестри) зазвичай у множині, дієслово з ними sind або haben.",
+          "examples": [
+            {
+              "de": "Hast du Geschwister?",
+              "tr": "У тебе є брати й сестри?"
+            }
+          ]
+        },
+        {
+          "title": "Сімейний стан",
+          "text": "Ich bin verheiratet (одружений, заміжня) або ledig (неодружений, незаміжня). Одне слово для чоловіків і жінок.",
+          "examples": [
+            {
+              "de": "Ich bin verheiratet.",
+              "tr": "Я одружений. / Я заміжня."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The extended family",
+      "points": [
+        {
+          "title": "Plural-only words",
+          "text": "die Großeltern (grandparents) and die Geschwister (siblings) are normally plural, so the verb is sind or haben.",
+          "examples": [
+            {
+              "de": "Hast du Geschwister?",
+              "tr": "Do you have siblings?"
+            }
+          ]
+        },
+        {
+          "title": "Marital status",
+          "text": "Ich bin verheiratet (married) or ledig (single). Same word for men and women.",
+          "examples": [
+            {
+              "de": "Ich bin verheiratet.",
+              "tr": "I’m married."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Duża rodzina",
+      "points": [
+        {
+          "title": "Słowa tylko w liczbie mnogiej",
+          "text": "die Großeltern (dziadkowie) i die Geschwister (rodzeństwo) są zwykle w liczbie mnogiej, czasownik z nimi sind albo haben.",
+          "examples": [
+            {
+              "de": "Hast du Geschwister?",
+              "tr": "Masz rodzeństwo?"
+            }
+          ]
+        },
+        {
+          "title": "Stan cywilny",
+          "text": "Ich bin verheiratet (żonaty, zamężna) albo ledig (kawaler, panna). To samo słowo dla mężczyzn i kobiet.",
+          "examples": [
+            {
+              "de": "Ich bin verheiratet.",
+              "tr": "Jestem żonaty. / Jestem mężatką."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "La familia grande",
+      "points": [
+        {
+          "title": "Palabras en plural",
+          "text": "die Großeltern (abuelos) y die Geschwister (hermanos) suelen ir en plural, con sind o haben.",
+          "examples": [
+            {
+              "de": "Hast du Geschwister?",
+              "tr": "¿Tienes hermanos?"
+            }
+          ]
+        },
+        {
+          "title": "Estado civil",
+          "text": "Ich bin verheiratet (casado) o ledig (soltero). La misma palabra para hombres y mujeres.",
+          "examples": [
+            {
+              "de": "Ich bin verheiratet.",
+              "tr": "Estoy casado."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "La grande famille",
+      "points": [
+        {
+          "title": "Mots au pluriel",
+          "text": "die Großeltern (grands-parents) et die Geschwister (frères et sœurs) sont en général au pluriel, avec sind ou haben.",
+          "examples": [
+            {
+              "de": "Hast du Geschwister?",
+              "tr": "Tu as des frères et sœurs ?"
+            }
+          ]
+        },
+        {
+          "title": "Situation familiale",
+          "text": "Ich bin verheiratet (marié) ou ledig (célibataire). Le même mot pour les hommes et les femmes.",
+          "examples": [
+            {
+              "de": "Ich bin verheiratet.",
+              "tr": "Je suis marié."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Geniş aile",
+      "points": [
+        {
+          "title": "Sadece çoğul kelimeler",
+          "text": "die Großeltern (büyükanne ve büyükbaba) ve die Geschwister (kardeşler) genelde çoğuldur, fiil sind ya da haben olur.",
+          "examples": [
+            {
+              "de": "Hast du Geschwister?",
+              "tr": "Kardeşin var mı?"
+            }
+          ]
+        },
+        {
+          "title": "Medeni durum",
+          "text": "Ich bin verheiratet (evli) ya da ledig (bekâr). Kadın ve erkek için aynı kelime.",
+          "examples": [
+            {
+              "de": "Ich bin verheiratet.",
+              "tr": "Evliyim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Familia mare",
+      "points": [
+        {
+          "title": "Cuvinte doar la plural",
+          "text": "die Großeltern (bunicii) și die Geschwister (frații) sunt de obicei la plural, cu sind sau haben.",
+          "examples": [
+            {
+              "de": "Hast du Geschwister?",
+              "tr": "Ai frați?"
+            }
+          ]
+        },
+        {
+          "title": "Starea civilă",
+          "text": "Ich bin verheiratet (căsătorit) sau ledig (necăsătorit). Același cuvânt pentru bărbați și femei.",
+          "examples": [
+            {
+              "de": "Ich bin verheiratet.",
+              "tr": "Sunt căsătorit."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Katta oila",
+      "points": [
+        {
+          "title": "Faqat ko'plikdagi so'zlar",
+          "text": "die Großeltern (buvi va bobo) va die Geschwister (aka-uka, opa-singillar) odatda ko'plikda, fe'l sind yoki haben.",
+          "examples": [
+            {
+              "de": "Hast du Geschwister?",
+              "tr": "Aka-uka, opa-singillaring bormi?"
+            }
+          ]
+        },
+        {
+          "title": "Oilaviy holat",
+          "text": "Ich bin verheiratet (uylangan, turmushga chiqqan) yoki ledig (bo'ydoq). Erkak va ayol uchun bir xil so'z.",
+          "examples": [
+            {
+              "de": "Ich bin verheiratet.",
+              "tr": "Men uylanganman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "बड़ा परिवार",
+      "points": [
+        {
+          "title": "सिर्फ़ बहुवचन वाले शब्द",
+          "text": "die Großeltern (दादा-दादी) और die Geschwister (भाई-बहन) आमतौर पर बहुवचन में होते हैं, क्रिया sind या haben।",
+          "examples": [
+            {
+              "de": "Hast du Geschwister?",
+              "tr": "क्या तुम्हारे भाई-बहन हैं?"
+            }
+          ]
+        },
+        {
+          "title": "वैवाहिक स्थिति",
+          "text": "Ich bin verheiratet (शादीशुदा) या ledig (अविवाहित)। पुरुष और महिला के लिए एक ही शब्द।",
+          "examples": [
+            {
+              "de": "Ich bin verheiratet.",
+              "tr": "मैं शादीशुदा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "العائلة الكبيرة",
+      "points": [
+        {
+          "title": "كلمات بصيغة الجمع فقط",
+          "text": "die Großeltern (الأجداد) وdie Geschwister (الإخوة) تأتيان عادة بصيغة الجمع، والفعل معهما sind أو haben.",
+          "examples": [
+            {
+              "de": "Hast du Geschwister?",
+              "tr": "هل عندك إخوة؟"
+            }
+          ]
+        },
+        {
+          "title": "الحالة الاجتماعية",
+          "text": "Ich bin verheiratet (متزوج) أو ledig (أعزب). الكلمة نفسها للرجال والنساء.",
+          "examples": [
+            {
+              "de": "Ich bin verheiratet.",
+              "tr": "أنا متزوج."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "family-tree-six": {
+    "ru": {
+      "title": "Чьё это? Все притяжательные",
+      "points": [
+        {
+          "title": "Два шага",
+          "text": "Сначала выбираем слово по хозяину, потом окончание по вещи.",
+          "examples": [
+            {
+              "de": "ich → mein, du → dein, er → sein, sie → ihr",
+              "tr": "я, ты, он, она"
+            },
+            {
+              "de": "wir → unser, ihr → euer, sie → ihr, Sie → Ihr",
+              "tr": "мы, вы, они, Вы"
+            },
+            {
+              "de": "Ist das deine Jacke? Nein, ihre.",
+              "tr": "Это твоя куртка? Нет, её."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Чиє це? Усі присвійні",
+      "points": [
+        {
+          "title": "Два кроки",
+          "text": "Спочатку обираємо слово за власником, потім закінчення за річчю.",
+          "examples": [
+            {
+              "de": "ich → mein, du → dein, er → sein, sie → ihr",
+              "tr": "я, ти, він, вона"
+            },
+            {
+              "de": "wir → unser, ihr → euer, sie → ihr, Sie → Ihr",
+              "tr": "ми, ви, вони, Ви"
+            },
+            {
+              "de": "Ist das deine Jacke? Nein, ihre.",
+              "tr": "Це твоя куртка? Ні, її."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Whose is it? All possessives",
+      "points": [
+        {
+          "title": "Two steps",
+          "text": "First choose the word by the owner, then the ending by the thing.",
+          "examples": [
+            {
+              "de": "ich → mein, du → dein, er → sein, sie → ihr",
+              "tr": "I, you, he, she"
+            },
+            {
+              "de": "wir → unser, ihr → euer, sie → ihr, Sie → Ihr",
+              "tr": "we, you (all), they, you (polite)"
+            },
+            {
+              "de": "Ist das deine Jacke? Nein, ihre.",
+              "tr": "Is this your jacket? No, hers."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Czyje to? Wszystkie zaimki dzierżawcze",
+      "points": [
+        {
+          "title": "Dwa kroki",
+          "text": "Najpierw wybieramy słowo według właściciela, potem końcówkę według rzeczy.",
+          "examples": [
+            {
+              "de": "ich → mein, du → dein, er → sein, sie → ihr",
+              "tr": "ja, ty, on, ona"
+            },
+            {
+              "de": "wir → unser, ihr → euer, sie → ihr, Sie → Ihr",
+              "tr": "my, wy, oni, Pan/Pani"
+            },
+            {
+              "de": "Ist das deine Jacke? Nein, ihre.",
+              "tr": "To twoja kurtka? Nie, jej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿De quién es? Todos los posesivos",
+      "points": [
+        {
+          "title": "Dos pasos",
+          "text": "Primero la palabra según el dueño, luego la terminación según la cosa.",
+          "examples": [
+            {
+              "de": "ich → mein, du → dein, er → sein, sie → ihr",
+              "tr": "yo, tú, él, ella"
+            },
+            {
+              "de": "wir → unser, ihr → euer, sie → ihr, Sie → Ihr",
+              "tr": "nosotros, vosotros, ellos, usted"
+            },
+            {
+              "de": "Ist das deine Jacke? Nein, ihre.",
+              "tr": "¿Es tu chaqueta? No, la suya."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "À qui est-ce ? Tous les possessifs",
+      "points": [
+        {
+          "title": "Deux étapes",
+          "text": "D’abord le mot selon le propriétaire, puis la terminaison selon l’objet.",
+          "examples": [
+            {
+              "de": "ich → mein, du → dein, er → sein, sie → ihr",
+              "tr": "je, tu, il, elle"
+            },
+            {
+              "de": "wir → unser, ihr → euer, sie → ihr, Sie → Ihr",
+              "tr": "nous, vous (amis), ils, vous (poli)"
+            },
+            {
+              "de": "Ist das deine Jacke? Nein, ihre.",
+              "tr": "C’est ta veste ? Non, la sienne."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kimin? Tüm iyelik sözcükleri",
+      "points": [
+        {
+          "title": "İki adım",
+          "text": "Önce sahibine göre kelime, sonra eşyaya göre ek seçilir.",
+          "examples": [
+            {
+              "de": "ich → mein, du → dein, er → sein, sie → ihr",
+              "tr": "ben, sen, o (erkek), o (kadın)"
+            },
+            {
+              "de": "wir → unser, ihr → euer, sie → ihr, Sie → Ihr",
+              "tr": "biz, siz, onlar, siz (kibar)"
+            },
+            {
+              "de": "Ist das deine Jacke? Nein, ihre.",
+              "tr": "Bu senin ceketin mi? Hayır, onun."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Al cui e? Toate posesivele",
+      "points": [
+        {
+          "title": "Doi pași",
+          "text": "Întâi alegi cuvântul după proprietar, apoi terminația după obiect.",
+          "examples": [
+            {
+              "de": "ich → mein, du → dein, er → sein, sie → ihr",
+              "tr": "eu, tu, el, ea"
+            },
+            {
+              "de": "wir → unser, ihr → euer, sie → ihr, Sie → Ihr",
+              "tr": "noi, voi, ei, dumneavoastră"
+            },
+            {
+              "de": "Ist das deine Jacke? Nein, ihre.",
+              "tr": "E geaca ta? Nu, a ei."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Bu kimniki? Barcha egalik so'zlari",
+      "points": [
+        {
+          "title": "Ikki qadam",
+          "text": "Avval egasiga qarab so'z, keyin narsaga qarab qo'shimcha tanlanadi.",
+          "examples": [
+            {
+              "de": "ich → mein, du → dein, er → sein, sie → ihr",
+              "tr": "men, sen, u (erkak), u (ayol)"
+            },
+            {
+              "de": "wir → unser, ihr → euer, sie → ihr, Sie → Ihr",
+              "tr": "biz, sizlar, ular, Siz"
+            },
+            {
+              "de": "Ist das deine Jacke? Nein, ihre.",
+              "tr": "Bu sening kurtkangmi? Yo‘q, uniki."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "यह किसका है? सभी संबंधवाचक",
+      "points": [
+        {
+          "title": "दो कदम",
+          "text": "पहले मालिक के अनुसार शब्द चुनो, फिर चीज़ के अनुसार अंत।",
+          "examples": [
+            {
+              "de": "ich → mein, du → dein, er → sein, sie → ihr",
+              "tr": "मैं, तुम, वह (पु), वह (स्त्री)"
+            },
+            {
+              "de": "wir → unser, ihr → euer, sie → ihr, Sie → Ihr",
+              "tr": "हम, तुम सब, वे, आप"
+            },
+            {
+              "de": "Ist das deine Jacke? Nein, ihre.",
+              "tr": "क्या यह तुम्हारी जैकेट है? नहीं, उसकी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "لمن هذا؟ كل ضمائر الملكية",
+      "points": [
+        {
+          "title": "خطوتان",
+          "text": "أولاً نختار الكلمة حسب المالك، ثم النهاية حسب الشيء.",
+          "examples": [
+            {
+              "de": "ich → mein, du → dein, er → sein, sie → ihr",
+              "tr": "أنا، أنت، هو، هي"
+            },
+            {
+              "de": "wir → unser, ihr → euer, sie → ihr, Sie → Ihr",
+              "tr": "نحن، أنتم، هم، حضرتك"
+            },
+            {
+              "de": "Ist das deine Jacke? Nein, ihre.",
+              "tr": "هل هذه سترتك؟ لا، سترتها."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "family-tree-seven": {
+    "ru": {
+      "title": "Практика: семейное фото",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Где на фото: links (слева), rechts (справа), in der Mitte (в центре). Если место стоит первым, глагол идёт сразу за ним.",
+          "examples": [
+            {
+              "de": "Links ist mein Onkel. Seine Frau heißt Eva.",
+              "tr": "Слева мой дядя. Его жену зовут Ева."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: сімейне фото",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Де на фото: links (ліворуч), rechts (праворуч), in der Mitte (у центрі). Якщо місце стоїть першим, дієслово йде одразу за ним.",
+          "examples": [
+            {
+              "de": "Links ist mein Onkel. Seine Frau heißt Eva.",
+              "tr": "Ліворуч мій дядько. Його дружину звати Єва."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: a family photo",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "Where in the photo: links (left), rechts (right), in der Mitte (in the middle). If the place comes first, the verb follows right after.",
+          "examples": [
+            {
+              "de": "Links ist mein Onkel. Seine Frau heißt Eva.",
+              "tr": "On the left is my uncle. His wife is called Eva."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: zdjęcie rodzinne",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Gdzie na zdjęciu: links (po lewej), rechts (po prawej), in der Mitte (w środku). Jeśli miejsce jest pierwsze, czasownik idzie zaraz po nim.",
+          "examples": [
+            {
+              "de": "Links ist mein Onkel. Seine Frau heißt Eva.",
+              "tr": "Po lewej mój wujek. Jego żona ma na imię Eva."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: una foto familiar",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Dónde en la foto: links (a la izquierda), rechts (a la derecha), in der Mitte (en el centro). Si el lugar va primero, el verbo va justo después.",
+          "examples": [
+            {
+              "de": "Links ist mein Onkel. Seine Frau heißt Eva.",
+              "tr": "A la izquierda está mi tío. Su mujer se llama Eva."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : une photo de famille",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "Où sur la photo : links (à gauche), rechts (à droite), in der Mitte (au milieu). Si le lieu est en premier, le verbe suit tout de suite.",
+          "examples": [
+            {
+              "de": "Links ist mein Onkel. Seine Frau heißt Eva.",
+              "tr": "À gauche, c’est mon oncle. Sa femme s’appelle Eva."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: aile fotoğrafı",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Fotoğrafta nerede: links (solda), rechts (sağda), in der Mitte (ortada). Yer başta olursa fiil hemen ardından gelir.",
+          "examples": [
+            {
+              "de": "Links ist mein Onkel. Seine Frau heißt Eva.",
+              "tr": "Solda amcam var. Karısının adı Eva."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: o fotografie de familie",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Unde în poză: links (în stânga), rechts (în dreapta), in der Mitte (la mijloc). Dacă locul e primul, verbul vine imediat după.",
+          "examples": [
+            {
+              "de": "Links ist mein Onkel. Seine Frau heißt Eva.",
+              "tr": "În stânga e unchiul meu. Soția lui se numește Eva."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: oilaviy surat",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Suratda qayerda: links (chapda), rechts (o'ngda), in der Mitte (o'rtada). Joy birinchi tursa, fe'l darhol undan keyin keladi.",
+          "examples": [
+            {
+              "de": "Links ist mein Onkel. Seine Frau heißt Eva.",
+              "tr": "Chapda amakim. Uning xotinining ismi Eva."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: पारिवारिक फ़ोटो",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "फ़ोटो में कहाँ: links (बाएँ), rechts (दाएँ), in der Mitte (बीच में)। अगर जगह पहले आए तो क्रिया तुरंत उसके बाद।",
+          "examples": [
+            {
+              "de": "Links ist mein Onkel. Seine Frau heißt Eva.",
+              "tr": "बाईं ओर मेरे चाचा हैं। उनकी पत्नी का नाम एवा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: صورة عائلية",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "أين في الصورة: links (يساراً)، rechts (يميناً)، in der Mitte (في الوسط). وإذا جاء المكان أولاً يأتي الفعل بعده مباشرة.",
+          "examples": [
+            {
+              "de": "Links ist mein Onkel. Seine Frau heißt Eva.",
+              "tr": "على اليسار عمي. اسم زوجته إيفا."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "family-tree-eight": {
+    "ru": {
+      "title": "Практика: гости у нас дома",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Со взрослыми гостями говорим вежливо: Ihr, Ihre с большой буквы.",
+          "examples": [
+            {
+              "de": "Ist das Ihre Jacke, Frau Lang?",
+              "tr": "Это Ваша куртка, госпожа Ланг?"
+            },
+            {
+              "de": "Unsere Kinder heißen Ben und Mia.",
+              "tr": "Наших детей зовут Бен и Мия."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: гості в нас удома",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "З дорослими гостями говоримо ввічливо: Ihr, Ihre з великої літери.",
+          "examples": [
+            {
+              "de": "Ist das Ihre Jacke, Frau Lang?",
+              "tr": "Це Ваша куртка, пані Ланг?"
+            },
+            {
+              "de": "Unsere Kinder heißen Ben und Mia.",
+              "tr": "Наших дітей звати Бен і Мія."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: guests at home",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "With adult guests be polite: Ihr, Ihre with a capital letter.",
+          "examples": [
+            {
+              "de": "Ist das Ihre Jacke, Frau Lang?",
+              "tr": "Is this your jacket, Ms Lang?"
+            },
+            {
+              "de": "Unsere Kinder heißen Ben und Mia.",
+              "tr": "Our children are called Ben and Mia."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: goście w domu",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Z dorosłymi gośćmi mówimy grzecznie: Ihr, Ihre wielką literą.",
+          "examples": [
+            {
+              "de": "Ist das Ihre Jacke, Frau Lang?",
+              "tr": "Czy to pani kurtka, pani Lang?"
+            },
+            {
+              "de": "Unsere Kinder heißen Ben und Mia.",
+              "tr": "Nasze dzieci mają na imię Ben i Mia."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: invitados en casa",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Con invitados adultos hablamos con cortesía: Ihr, Ihre con mayúscula.",
+          "examples": [
+            {
+              "de": "Ist das Ihre Jacke, Frau Lang?",
+              "tr": "¿Es esta su chaqueta, señora Lang?"
+            },
+            {
+              "de": "Unsere Kinder heißen Ben und Mia.",
+              "tr": "Nuestros hijos se llaman Ben y Mia."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : des invités à la maison",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "Avec des invités adultes, on est poli : Ihr, Ihre avec une majuscule.",
+          "examples": [
+            {
+              "de": "Ist das Ihre Jacke, Frau Lang?",
+              "tr": "C’est votre veste, Madame Lang ?"
+            },
+            {
+              "de": "Unsere Kinder heißen Ben und Mia.",
+              "tr": "Nos enfants s’appellent Ben et Mia."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: evde misafirler",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Yetişkin misafirlerle kibar konuşulur: büyük harfle Ihr, Ihre.",
+          "examples": [
+            {
+              "de": "Ist das Ihre Jacke, Frau Lang?",
+              "tr": "Bu sizin ceketiniz mi, Bayan Lang?"
+            },
+            {
+              "de": "Unsere Kinder heißen Ben und Mia.",
+              "tr": "Çocuklarımızın adı Ben ve Mia."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: oaspeți acasă",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Cu oaspeții adulți vorbim politicos: Ihr, Ihre cu majusculă.",
+          "examples": [
+            {
+              "de": "Ist das Ihre Jacke, Frau Lang?",
+              "tr": "E geaca dumneavoastră, doamnă Lang?"
+            },
+            {
+              "de": "Unsere Kinder heißen Ben und Mia.",
+              "tr": "Copiii noștri se numesc Ben și Mia."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: uyda mehmonlar",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Katta mehmonlar bilan hurmat bilan gaplashamiz: bosh harfli Ihr, Ihre.",
+          "examples": [
+            {
+              "de": "Ist das Ihre Jacke, Frau Lang?",
+              "tr": "Bu sizning kurtkangizmi, Lang xonim?"
+            },
+            {
+              "de": "Unsere Kinder heißen Ben und Mia.",
+              "tr": "Bolalarimizning ismi Ben va Miya."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: घर पर मेहमान",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "बड़े मेहमानों से विनम्रता से: बड़े अक्षर वाला Ihr, Ihre।",
+          "examples": [
+            {
+              "de": "Ist das Ihre Jacke, Frau Lang?",
+              "tr": "क्या यह आपकी जैकेट है, श्रीमती लांग?"
+            },
+            {
+              "de": "Unsere Kinder heißen Ben und Mia.",
+              "tr": "हमारे बच्चों के नाम बेन और मिया हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: ضيوف في البيت",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "مع الضيوف البالغين نتكلم بأدب: Ihr وIhre بحرف كبير.",
+          "examples": [
+            {
+              "de": "Ist das Ihre Jacke, Frau Lang?",
+              "tr": "هل هذه سترتك يا سيدة لانغ؟"
+            },
+            {
+              "de": "Unsere Kinder heißen Ben und Mia.",
+              "tr": "اسما طفلينا بن وميا."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "family-tree-nine": {
+    "ru": {
+      "title": "Повторение: притяжательные",
+      "points": [
+        {
+          "title": "Слово по хозяину",
+          "text": "его: sein, её: ihr, наш: unser.",
+          "examples": [
+            {
+              "de": "Ihr Mann ist Koch.",
+              "tr": "Её муж повар."
+            }
+          ]
+        },
+        {
+          "title": "Окончание по вещи",
+          "text": "Для der и das без окончания, для die и множественного -e.",
+          "examples": [
+            {
+              "de": "Seine Frau ist Lehrerin.",
+              "tr": "Его жена учительница."
+            }
+          ]
+        },
+        {
+          "title": "В Akkusativ мужской род -en",
+          "text": "После besuchen, suchen и других: meinen, seinen, unseren.",
+          "examples": [
+            {
+              "de": "Ich besuche meinen Onkel.",
+              "tr": "Я навещаю своего дядю."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: присвійні",
+      "points": [
+        {
+          "title": "Слово за власником",
+          "text": "його: sein, її: ihr, наш: unser.",
+          "examples": [
+            {
+              "de": "Ihr Mann ist Koch.",
+              "tr": "Її чоловік кухар."
+            }
+          ]
+        },
+        {
+          "title": "Закінчення за річчю",
+          "text": "Для der і das без закінчення, для die і множини -e.",
+          "examples": [
+            {
+              "de": "Seine Frau ist Lehrerin.",
+              "tr": "Його дружина вчителька."
+            }
+          ]
+        },
+        {
+          "title": "В Akkusativ чоловічий рід -en",
+          "text": "Після besuchen, suchen та інших: meinen, seinen, unseren.",
+          "examples": [
+            {
+              "de": "Ich besuche meinen Onkel.",
+              "tr": "Я відвідую свого дядька."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: possessives",
+      "points": [
+        {
+          "title": "Word by the owner",
+          "text": "his: sein, her: ihr, our: unser.",
+          "examples": [
+            {
+              "de": "Ihr Mann ist Koch.",
+              "tr": "Her husband is a cook."
+            }
+          ]
+        },
+        {
+          "title": "Ending by the thing",
+          "text": "No ending for der and das, -e for die and plural.",
+          "examples": [
+            {
+              "de": "Seine Frau ist Lehrerin.",
+              "tr": "His wife is a teacher."
+            }
+          ]
+        },
+        {
+          "title": "Accusative masculine -en",
+          "text": "After besuchen, suchen and others: meinen, seinen, unseren.",
+          "examples": [
+            {
+              "de": "Ich besuche meinen Onkel.",
+              "tr": "I’m visiting my uncle."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: zaimki dzierżawcze",
+      "points": [
+        {
+          "title": "Słowo według właściciela",
+          "text": "jego: sein, jej: ihr, nasz: unser.",
+          "examples": [
+            {
+              "de": "Ihr Mann ist Koch.",
+              "tr": "Jej mąż jest kucharzem."
+            }
+          ]
+        },
+        {
+          "title": "Końcówka według rzeczy",
+          "text": "Dla der i das bez końcówki, dla die i liczby mnogiej -e.",
+          "examples": [
+            {
+              "de": "Seine Frau ist Lehrerin.",
+              "tr": "Jego żona jest nauczycielką."
+            }
+          ]
+        },
+        {
+          "title": "W Akkusativ rodzaj męski -en",
+          "text": "Po besuchen, suchen i innych: meinen, seinen, unseren.",
+          "examples": [
+            {
+              "de": "Ich besuche meinen Onkel.",
+              "tr": "Odwiedzam mojego wujka."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: posesivos",
+      "points": [
+        {
+          "title": "Palabra según el dueño",
+          "text": "de él: sein, de ella: ihr, nuestro: unser.",
+          "examples": [
+            {
+              "de": "Ihr Mann ist Koch.",
+              "tr": "Su marido es cocinero."
+            }
+          ]
+        },
+        {
+          "title": "Terminación según la cosa",
+          "text": "Sin terminación para der y das, -e para die y plural.",
+          "examples": [
+            {
+              "de": "Seine Frau ist Lehrerin.",
+              "tr": "Su mujer es profesora."
+            }
+          ]
+        },
+        {
+          "title": "Masculino en acusativo -en",
+          "text": "Después de besuchen, suchen y otros: meinen, seinen, unseren.",
+          "examples": [
+            {
+              "de": "Ich besuche meinen Onkel.",
+              "tr": "Visito a mi tío."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : les possessifs",
+      "points": [
+        {
+          "title": "Le mot selon le propriétaire",
+          "text": "à lui : sein, à elle : ihr, notre : unser.",
+          "examples": [
+            {
+              "de": "Ihr Mann ist Koch.",
+              "tr": "Son mari est cuisinier."
+            }
+          ]
+        },
+        {
+          "title": "Terminaison selon l’objet",
+          "text": "Pas de terminaison pour der et das, -e pour die et le pluriel.",
+          "examples": [
+            {
+              "de": "Seine Frau ist Lehrerin.",
+              "tr": "Sa femme est professeure."
+            }
+          ]
+        },
+        {
+          "title": "Masculin à l’accusatif -en",
+          "text": "Après besuchen, suchen et d’autres : meinen, seinen, unseren.",
+          "examples": [
+            {
+              "de": "Ich besuche meinen Onkel.",
+              "tr": "Je rends visite à mon oncle."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: iyelik sözcükleri",
+      "points": [
+        {
+          "title": "Sahibine göre kelime",
+          "text": "onun (erkek): sein, onun (kadın): ihr, bizim: unser.",
+          "examples": [
+            {
+              "de": "Ihr Mann ist Koch.",
+              "tr": "Kocası aşçı."
+            }
+          ]
+        },
+        {
+          "title": "Eşyaya göre ek",
+          "text": "der ve das için eksiz, die ve çoğul için -e.",
+          "examples": [
+            {
+              "de": "Seine Frau ist Lehrerin.",
+              "tr": "Karısı öğretmen."
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ’de eril -en",
+          "text": "besuchen, suchen ve diğerlerinden sonra: meinen, seinen, unseren.",
+          "examples": [
+            {
+              "de": "Ich besuche meinen Onkel.",
+              "tr": "Amcamı ziyaret ediyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: posesivele",
+      "points": [
+        {
+          "title": "Cuvântul după proprietar",
+          "text": "al lui: sein, al ei: ihr, al nostru: unser.",
+          "examples": [
+            {
+              "de": "Ihr Mann ist Koch.",
+              "tr": "Soțul ei este bucătar."
+            }
+          ]
+        },
+        {
+          "title": "Terminația după obiect",
+          "text": "Pentru der și das fără terminație, pentru die și plural -e.",
+          "examples": [
+            {
+              "de": "Seine Frau ist Lehrerin.",
+              "tr": "Soția lui este profesoară."
+            }
+          ]
+        },
+        {
+          "title": "Masculin la acuzativ -en",
+          "text": "După besuchen, suchen și altele: meinen, seinen, unseren.",
+          "examples": [
+            {
+              "de": "Ich besuche meinen Onkel.",
+              "tr": "Îl vizitez pe unchiul meu."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: egalik so'zlari",
+      "points": [
+        {
+          "title": "Egasiga qarab so'z",
+          "text": "uning (erkak): sein, uning (ayol): ihr, bizning: unser.",
+          "examples": [
+            {
+              "de": "Ihr Mann ist Koch.",
+              "tr": "Uning eri oshpaz."
+            }
+          ]
+        },
+        {
+          "title": "Narsaga qarab qo'shimcha",
+          "text": "der va das uchun qo'shimchasiz, die va ko'plik uchun -e.",
+          "examples": [
+            {
+              "de": "Seine Frau ist Lehrerin.",
+              "tr": "Uning xotini o'qituvchi."
+            }
+          ]
+        },
+        {
+          "title": "Akkusativda erkak rodi -en",
+          "text": "besuchen, suchen va boshqalardan keyin: meinen, seinen, unseren.",
+          "examples": [
+            {
+              "de": "Ich besuche meinen Onkel.",
+              "tr": "Amakimni ko'rgani boraman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: संबंधवाचक",
+      "points": [
+        {
+          "title": "मालिक के अनुसार शब्द",
+          "text": "उसका (पु): sein, उसकी (स्त्री): ihr, हमारा: unser।",
+          "examples": [
+            {
+              "de": "Ihr Mann ist Koch.",
+              "tr": "उसका पति रसोइया है।"
+            }
+          ]
+        },
+        {
+          "title": "चीज़ के अनुसार अंत",
+          "text": "der और das के लिए कोई अंत नहीं, die और बहुवचन के लिए -e।",
+          "examples": [
+            {
+              "de": "Seine Frau ist Lehrerin.",
+              "tr": "उसकी पत्नी शिक्षिका है।"
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ में पुल्लिंग -en",
+          "text": "besuchen, suchen आदि के बाद: meinen, seinen, unseren।",
+          "examples": [
+            {
+              "de": "Ich besuche meinen Onkel.",
+              "tr": "मैं अपने चाचा से मिलने जा रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: ضمائر الملكية",
+      "points": [
+        {
+          "title": "الكلمة حسب المالك",
+          "text": "له: sein، لها: ihr، لنا: unser.",
+          "examples": [
+            {
+              "de": "Ihr Mann ist Koch.",
+              "tr": "زوجها طباخ."
+            }
+          ]
+        },
+        {
+          "title": "النهاية حسب الشيء",
+          "text": "بدون نهاية مع der وdas، و-e مع die والجمع.",
+          "examples": [
+            {
+              "de": "Seine Frau ist Lehrerin.",
+              "tr": "زوجته معلمة."
+            }
+          ]
+        },
+        {
+          "title": "المذكر في حالة المفعول -en",
+          "text": "بعد besuchen وsuchen وغيرهما: meinen، seinen، unseren.",
+          "examples": [
+            {
+              "de": "Ich besuche meinen Onkel.",
+              "tr": "أزور عمي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "family-tree-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "Хозяин и вещь",
+          "text": "Слово выбираем по хозяину, окончание по вещи.",
+          "examples": [
+            {
+              "de": "Seine Nichte ist sehr jung.",
+              "tr": "Его племянница очень молодая."
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ: -en у мужского рода",
+          "text": "После глагола мужской род получает -en.",
+          "examples": [
+            {
+              "de": "Wir besuchen unseren Onkel.",
+              "tr": "Мы навещаем нашего дядю."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "Власник і річ",
+          "text": "Слово обираємо за власником, закінчення за річчю.",
+          "examples": [
+            {
+              "de": "Seine Nichte ist sehr jung.",
+              "tr": "Його племінниця дуже молода."
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ: -en у чоловічого роду",
+          "text": "Після дієслова чоловічий рід отримує -en.",
+          "examples": [
+            {
+              "de": "Wir besuchen unseren Onkel.",
+              "tr": "Ми відвідуємо нашого дядька."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "Owner and thing",
+          "text": "Choose the word by the owner and the ending by the thing.",
+          "examples": [
+            {
+              "de": "Seine Nichte ist sehr jung.",
+              "tr": "His niece is very young."
+            }
+          ]
+        },
+        {
+          "title": "Accusative: -en for masculine",
+          "text": "After the verb a masculine noun takes -en.",
+          "examples": [
+            {
+              "de": "Wir besuchen unseren Onkel.",
+              "tr": "We’re visiting our uncle."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "Właściciel i rzecz",
+          "text": "Słowo wybieramy według właściciela, końcówkę według rzeczy.",
+          "examples": [
+            {
+              "de": "Seine Nichte ist sehr jung.",
+              "tr": "Jego siostrzenica jest bardzo młoda."
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ: -en w rodzaju męskim",
+          "text": "Po czasowniku rodzaj męski dostaje -en.",
+          "examples": [
+            {
+              "de": "Wir besuchen unseren Onkel.",
+              "tr": "Odwiedzamy naszego wujka."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "Dueño y cosa",
+          "text": "La palabra según el dueño, la terminación según la cosa.",
+          "examples": [
+            {
+              "de": "Seine Nichte ist sehr jung.",
+              "tr": "Su sobrina es muy joven."
+            }
+          ]
+        },
+        {
+          "title": "Acusativo: -en en masculino",
+          "text": "Después del verbo el masculino lleva -en.",
+          "examples": [
+            {
+              "de": "Wir besuchen unseren Onkel.",
+              "tr": "Visitamos a nuestro tío."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "Propriétaire et objet",
+          "text": "Le mot selon le propriétaire, la terminaison selon l’objet.",
+          "examples": [
+            {
+              "de": "Seine Nichte ist sehr jung.",
+              "tr": "Sa nièce est très jeune."
+            }
+          ]
+        },
+        {
+          "title": "Accusatif : -en au masculin",
+          "text": "Après le verbe, le masculin prend -en.",
+          "examples": [
+            {
+              "de": "Wir besuchen unseren Onkel.",
+              "tr": "Nous rendons visite à notre oncle."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "Sahip ve eşya",
+          "text": "Kelime sahibine, ek eşyaya göre seçilir.",
+          "examples": [
+            {
+              "de": "Seine Nichte ist sehr jung.",
+              "tr": "Yeğeni çok genç."
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ: erilde -en",
+          "text": "Fiilden sonra eril -en alır.",
+          "examples": [
+            {
+              "de": "Wir besuchen unseren Onkel.",
+              "tr": "Amcamızı ziyaret ediyoruz."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "Proprietar și obiect",
+          "text": "Cuvântul după proprietar, terminația după obiect.",
+          "examples": [
+            {
+              "de": "Seine Nichte ist sehr jung.",
+              "tr": "Nepoata lui este foarte tânără."
+            }
+          ]
+        },
+        {
+          "title": "Acuzativ: -en la masculin",
+          "text": "După verb masculinul primește -en.",
+          "examples": [
+            {
+              "de": "Wir besuchen unseren Onkel.",
+              "tr": "Îl vizităm pe unchiul nostru."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "Ega va narsa",
+          "text": "So'z egasiga, qo'shimcha narsaga qarab tanlanadi.",
+          "examples": [
+            {
+              "de": "Seine Nichte ist sehr jung.",
+              "tr": "Uning jiyani juda yosh."
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ: erkak rodida -en",
+          "text": "Fe'ldan keyin erkak rodi -en oladi.",
+          "examples": [
+            {
+              "de": "Wir besuchen unseren Onkel.",
+              "tr": "Amakimizni ko'rgani boramiz."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "मालिक और चीज़",
+          "text": "शब्द मालिक से, अंत चीज़ से चुनो।",
+          "examples": [
+            {
+              "de": "Seine Nichte ist sehr jung.",
+              "tr": "उसकी भतीजी बहुत छोटी है।"
+            }
+          ]
+        },
+        {
+          "title": "Akkusativ: पुल्लिंग में -en",
+          "text": "क्रिया के बाद पुल्लिंग -en लेता है।",
+          "examples": [
+            {
+              "de": "Wir besuchen unseren Onkel.",
+              "tr": "हम अपने चाचा से मिलने जा रहे हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "المالك والشيء",
+          "text": "نختار الكلمة حسب المالك، والنهاية حسب الشيء.",
+          "examples": [
+            {
+              "de": "Seine Nichte ist sehr jung.",
+              "tr": "ابنة أخيه صغيرة جداً."
+            }
+          ]
+        },
+        {
+          "title": "حالة المفعول: -en للمذكر",
+          "text": "بعد الفعل يأخذ المذكر -en.",
+          "examples": [
+            {
+              "de": "Wir besuchen unseren Onkel.",
+              "tr": "نزور عمنا."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

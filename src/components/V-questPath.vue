@@ -35,23 +35,24 @@
               <button
                   type="button"
                   class="guidebook"
+                  :class="{ 'guidebook--locked': node.state === 'locked' }"
                   :data-track="'region_wordsLearn_clicked_' + node.quest.questId"
                   :aria-label="t('questPath.materials')"
-                  @click="$emit('learn', node.quest)"
+                  @click="openMaterials(node)"
               >
                 <span class="guidebook__pages"></span>
                 <span class="guidebook__cover">
                   <span class="guidebook__badge">A</span>
                 </span>
               </button>
-              <span class="passport__label passport__label--learn">{{ t('questPath.materials') }}</span>
+              <span class="passport__label" :class="node.state === 'locked' ? 'passport__label--locked' : 'passport__label--learn'">{{ t('questPath.materials') }}</span>
             </div>
             <div class="passport__center">
               <button
                   :ref="el => { if (node.isCurrent) currentEl = el }"
                   type="button"
                   class="visa"
-                  :class="['visa--' + node.state, { 'visa--active': node.isCurrent }]"
+                  :class="['visa--' + node.state, { 'visa--active': node.isCurrent, 'visa--shake': shakingId === 'quest-' + node.quest.questId }]"
                   :data-track="'region_node_clicked_' + node.quest.questId"
                   @click="openQuest(node.quest, index)"
               >
@@ -67,7 +68,17 @@
                 </span>
                 <span v-else-if="node.state === 'mistakes'" class="visa__badge"
                       :aria-label="t('locationQuests.mistakes')">!</span>
+                <span v-else-if="node.state === 'locked'" class="visa__badge visa__badge--lock">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 0 1 6 0v3H9z"/>
+                  </svg>
+                </span>
               </button>
+              <transition name="passport-pop">
+                <span v-if="hintId === 'quest-' + node.quest.questId" class="passport__hint passport__hint--quest">
+                  {{ t('questPath.questLocked') }}
+                </span>
+              </transition>
               <span class="passport__title">{{ t(node.quest.title) }}</span>
               <!-- место под кнопку есть в каждом ряду, чтобы расстояния между квестами были одинаковыми -->
               <div class="passport__action">
@@ -287,6 +298,8 @@ const nodes = computed(() => props.quests.map((quest, index) => {
   // ошибки бывают и у незасчитанного квеста — их тоже показываем, а не «текущим» синим
   else if (quest.isSuccess || quest.hasMistakes) state = 'mistakes'
   else if (index === currentIndex.value) state = 'current'
+  // через задания не перескакиваем: дальше первого непройденного закрыто
+  else if (currentIndex.value !== -1 && index > currentIndex.value) state = 'locked'
   return {
     quest,
     state,
@@ -394,12 +407,40 @@ function closeChest() {
 }
 
 function openQuest(quest, index) {
+  if (nodes.value[index]?.state === 'locked') {
+    showLockedHint('quest-' + quest.questId)
+    return
+  }
   vibrateTap()
   openedIndex.value = index
   openedQuest.value = quest
 }
 
+// материал закрыт так же, как само задание: дальше первого непройденного не открываем
+function openMaterials(node) {
+  if (node.state === 'locked') {
+    showLockedHint('quest-' + node.quest.questId)
+    return
+  }
+  vibrateTap()
+  emit('learn', node.quest)
+}
+
+function showLockedHint(id) {
+  vibrateError()
+  shakingId.value = ''
+  nextTick(() => { shakingId.value = id })
+  clearTimeout(hintTimer)
+  hintId.value = id
+  hintTimer = setTimeout(() => { hintId.value = '' }, HINT_MS)
+}
+
 function startQuest(quest) {
+  const index = props.quests.findIndex(item => item.questId === quest.questId)
+  if (nodes.value[index]?.state === 'locked') {
+    showLockedHint('quest-' + quest.questId)
+    return
+  }
   vibrateTap()
   emit('start', quest)
 }
@@ -851,6 +892,31 @@ onBeforeUnmount(() => {
   --stamp-dark: #cc6f00;
 }
 
+.visa--locked {
+  cursor: default;
+}
+
+.visa--locked .visa__img {
+  filter: grayscale(1);
+  opacity: 0.35;
+}
+
+.visa__badge--lock {
+  background: #8a8f98;
+}
+
+.visa--shake {
+  animation: passport-shake 0.4s ease;
+}
+
+/* подсказка о закрытом задании — под кружком, по центру */
+.passport__hint--quest {
+  top: 104px;
+  inset-inline-end: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 /* актуальный квест слегка парит в воздухе, размер тот же */
 .visa--active {
   animation: visa-float 3s ease-in-out infinite;
@@ -888,6 +954,11 @@ onBeforeUnmount(() => {
   cursor: pointer;
   transform: rotate(-6deg);
   transition: transform 0.12s ease;
+}
+
+.guidebook--locked {
+  filter: grayscale(1);
+  opacity: 0.6;
 }
 
 .guidebook:focus {
@@ -1664,6 +1735,7 @@ onBeforeUnmount(() => {
 
 @media (prefers-reduced-motion: reduce) {
   .visa--active,
+  .visa--shake,
   .postcard--shake,
   .land-chest--ready .land-chest__btn,
   .land-chest__shine,

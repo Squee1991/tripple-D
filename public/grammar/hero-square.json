@@ -1,0 +1,2222 @@
+{
+  "hero-square-one": {
+    "ru": {
+      "title": "Мальчик, коллега, клиент",
+      "points": [
+        {
+          "title": "Слабые существительные: -n",
+          "text": "Некоторые слова мужского рода получают -n во всех формах, кроме подлежащего в единственном числе: der Kollege → den, dem, des Kollegen. Часто на -e: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Я вижу мальчика."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Хлопчик, колега, клієнт",
+      "points": [
+        {
+          "title": "Слабкі іменники: -n",
+          "text": "Деякі слова чоловічого роду отримують -n в усіх формах, крім підмета в однині: der Kollege → den, dem, des Kollegen. Часто на -e: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Я бачу хлопчика."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Boy, colleague, customer",
+      "points": [
+        {
+          "title": "Weak nouns: -n",
+          "text": "Some masculine nouns add -n in every form except the singular subject: der Kollege → den, dem, des Kollegen. Often they end in -e: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "I see the boy."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Chłopiec, kolega, klient",
+      "points": [
+        {
+          "title": "Rzeczowniki słabe: -n",
+          "text": "Niektóre słowa rodzaju męskiego dostają -n we wszystkich formach poza podmiotem w liczbie pojedynczej: der Kollege → den, dem, des Kollegen. Często na -e: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Widzę chłopca."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Chico, compañero, cliente",
+      "points": [
+        {
+          "title": "Sustantivos débiles: -n",
+          "text": "Algunos sustantivos masculinos añaden -n en todas las formas salvo el sujeto singular: der Kollege → den, dem, des Kollegen. A menudo acaban en -e: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Veo al chico."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Garçon, collègue, client",
+      "points": [
+        {
+          "title": "Noms faibles : -n",
+          "text": "Certains noms masculins prennent -n à toutes les formes sauf le sujet au singulier : der Kollege → den, dem, des Kollegen. Souvent en -e : der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Je vois le garçon."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Çocuk, iş arkadaşı, müşteri",
+      "points": [
+        {
+          "title": "Zayıf isimler: -n",
+          "text": "Bazı eril isimler tekil özne dışında her biçimde -n alır: der Kollege → den, dem, des Kollegen. Çoğu -e ile biter: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Çocuğu görüyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Băiat, coleg, client",
+      "points": [
+        {
+          "title": "Substantive slabe: -n",
+          "text": "Unele substantive masculine primesc -n în toate formele, în afară de subiectul la singular: der Kollege → den, dem, des Kollegen. Des în -e: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Îl văd pe băiat."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Bola, hamkasb, mijoz",
+      "points": [
+        {
+          "title": "Kuchsiz otlar: -n",
+          "text": "Ba'zi erkak rodidagi otlar birlikdagi egadan boshqa barcha shakllarda -n oladi: der Kollege → den, dem, des Kollegen. Ko'pincha -e bilan: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Men bolani ko'ryapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "लड़का, सहकर्मी, ग्राहक",
+      "points": [
+        {
+          "title": "कमज़ोर संज्ञाएँ: -n",
+          "text": "कुछ पुल्लिंग संज्ञाएँ एकवचन कर्ता को छोड़कर हर रूप में -n लेती हैं: der Kollege → den, dem, des Kollegen। अक्सर -e पर: der Junge, der Kunde, der Löwe।",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "मुझे लड़का दिख रहा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الولد، الزميل، الزبون",
+      "points": [
+        {
+          "title": "الأسماء الضعيفة: -n",
+          "text": "بعض الأسماء المذكرة تأخذ -n في كل الحالات ما عدا الفاعل المفرد: der Kollege → den، dem، des Kollegen. وغالباً تنتهي بـ -e: der Junge، der Kunde، der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "أرى الولد."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "hero-square-two": {
+    "ru": {
+      "title": "Человек, сосед, господин",
+      "points": [
+        {
+          "title": "der Mensch, der Nachbar, der Herr",
+          "text": "Слабыми бывают и слова без -e: den Menschen, den Nachbarn. der Herr в единственном числе получает -n: Ich kenne Herrn Braun.",
+          "examples": [
+            {
+              "de": "Ich kenne Herrn Braun.",
+              "tr": "Я знаю господина Брауна."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Людина, сусід, пан",
+      "points": [
+        {
+          "title": "der Mensch, der Nachbar, der Herr",
+          "text": "Слабкими бувають і слова без -e: den Menschen, den Nachbarn. der Herr в однині отримує -n: Ich kenne Herrn Braun.",
+          "examples": [
+            {
+              "de": "Ich kenne Herrn Braun.",
+              "tr": "Я знаю пана Брауна."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Person, neighbour, Mr",
+      "points": [
+        {
+          "title": "der Mensch, der Nachbar, der Herr",
+          "text": "Some weak nouns don’t end in -e: den Menschen, den Nachbarn. der Herr in the singular takes -n: Ich kenne Herrn Braun.",
+          "examples": [
+            {
+              "de": "Ich kenne Herrn Braun.",
+              "tr": "I know Mr Braun."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Człowiek, sąsiad, pan",
+      "points": [
+        {
+          "title": "der Mensch, der Nachbar, der Herr",
+          "text": "Słabe bywają też słowa bez -e: den Menschen, den Nachbarn. der Herr w liczbie pojedynczej dostaje -n: Ich kenne Herrn Braun.",
+          "examples": [
+            {
+              "de": "Ich kenne Herrn Braun.",
+              "tr": "Znam pana Brauna."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Persona, vecino, señor",
+      "points": [
+        {
+          "title": "der Mensch, der Nachbar, der Herr",
+          "text": "También hay débiles sin -e: den Menschen, den Nachbarn. der Herr en singular lleva -n: Ich kenne Herrn Braun.",
+          "examples": [
+            {
+              "de": "Ich kenne Herrn Braun.",
+              "tr": "Conozco al señor Braun."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Personne, voisin, monsieur",
+      "points": [
+        {
+          "title": "der Mensch, der Nachbar, der Herr",
+          "text": "Il y a aussi des noms faibles sans -e : den Menschen, den Nachbarn. der Herr au singulier prend -n : Ich kenne Herrn Braun.",
+          "examples": [
+            {
+              "de": "Ich kenne Herrn Braun.",
+              "tr": "Je connais Monsieur Braun."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "İnsan, komşu, bay",
+      "points": [
+        {
+          "title": "der Mensch, der Nachbar, der Herr",
+          "text": "-e ile bitmeyen zayıf isimler de var: den Menschen, den Nachbarn. der Herr tekilde -n alır: Ich kenne Herrn Braun.",
+          "examples": [
+            {
+              "de": "Ich kenne Herrn Braun.",
+              "tr": "Bay Braun’u tanıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Om, vecin, domn",
+      "points": [
+        {
+          "title": "der Mensch, der Nachbar, der Herr",
+          "text": "Există și substantive slabe fără -e: den Menschen, den Nachbarn. der Herr la singular primește -n: Ich kenne Herrn Braun.",
+          "examples": [
+            {
+              "de": "Ich kenne Herrn Braun.",
+              "tr": "Îl cunosc pe domnul Braun."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Inson, qo'shni, janob",
+      "points": [
+        {
+          "title": "der Mensch, der Nachbar, der Herr",
+          "text": "-e siz kuchsiz otlar ham bor: den Menschen, den Nachbarn. der Herr birlikda -n oladi: Ich kenne Herrn Braun.",
+          "examples": [
+            {
+              "de": "Ich kenne Herrn Braun.",
+              "tr": "Men janob Braunni taniyman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "इंसान, पड़ोसी, श्रीमान",
+      "points": [
+        {
+          "title": "der Mensch, der Nachbar, der Herr",
+          "text": "बिना -e वाली कमज़ोर संज्ञाएँ भी हैं: den Menschen, den Nachbarn। der Herr एकवचन में -n लेता है: Ich kenne Herrn Braun।",
+          "examples": [
+            {
+              "de": "Ich kenne Herrn Braun.",
+              "tr": "मैं श्रीमान ब्राउन को जानता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الإنسان، الجار، السيد",
+      "points": [
+        {
+          "title": "der Mensch وder Nachbar وder Herr",
+          "text": "توجد أسماء ضعيفة بدون -e أيضاً: den Menschen، den Nachbarn. وder Herr في المفرد يأخذ -n: Ich kenne Herrn Braun.",
+          "examples": [
+            {
+              "de": "Ich kenne Herrn Braun.",
+              "tr": "أعرف السيد براون."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "hero-square-three": {
+    "ru": {
+      "title": "Студент, турист, полицейский",
+      "points": [
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Слова мужского рода на -ent, -ant, -ist получают -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Я спросил полицейского."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Студент, турист, поліцейський",
+      "points": [
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Слова чоловічого роду на -ent, -ant, -ist отримують -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Я запитав поліцейського."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Student, tourist, police officer",
+      "points": [
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Masculine nouns in -ent, -ant, -ist take -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "I asked the police officer."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Student, turysta, policjant",
+      "points": [
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Słowa rodzaju męskiego na -ent, -ant, -ist dostają -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Zapytałem policjanta."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Estudiante, turista, policía",
+      "points": [
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Los masculinos en -ent, -ant, -ist llevan -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Le pregunté al policía."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Étudiant, touriste, policier",
+      "points": [
+        {
+          "title": "-ent, -ant, -ist : -en",
+          "text": "Les noms masculins en -ent, -ant, -ist prennent -en : den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "J’ai demandé au policier."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Öğrenci, turist, polis",
+      "points": [
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "-ent, -ant, -ist ile biten eril isimler -en alır: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Polise sordum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Student, turist, polițist",
+      "points": [
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Substantivele masculine în -ent, -ant, -ist primesc -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "L-am întrebat pe polițist."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Talaba, turist, politsiyachi",
+      "points": [
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "-ent, -ant, -ist bilan tugagan erkak rodidagi otlar -en oladi: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Men politsiyachidan so'radim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "छात्र, पर्यटक, पुलिसवाला",
+      "points": [
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "-ent, -ant, -ist पर खत्म पुल्लिंग संज्ञाएँ -en लेती हैं: den Studenten, dem Polizisten, die Touristen।",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "मैंने पुलिसवाले से पूछा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الطالب، السائح، الشرطي",
+      "points": [
+        {
+          "title": "-ent و-ant و-ist: -en",
+          "text": "الأسماء المذكرة المنتهية بـ -ent و-ant و-ist تأخذ -en: den Studenten، dem Polizisten، die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "سألت الشرطي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "hero-square-four": {
+    "ru": {
+      "title": "Чьё это? Genitiv",
+      "points": [
+        {
+          "title": "Genitiv: des Kollegen, des Namens",
+          "text": "В Genitiv слабые получают -n/-en, но без -s: des Kollegen, des Studenten. Особое слово der Name: des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "Это машина коллеги."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Чиє це? Genitiv",
+      "points": [
+        {
+          "title": "Genitiv: des Kollegen, des Namens",
+          "text": "У Genitiv слабкі отримують -n/-en, але без -s: des Kollegen, des Studenten. Особливе слово der Name: des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "Це машина колеги."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Whose? Genitive",
+      "points": [
+        {
+          "title": "Genitive: des Kollegen, des Namens",
+          "text": "In the genitive weak nouns take -n/-en, but no -s: des Kollegen, des Studenten. Special: der Name → des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "That’s the colleague’s car."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Czyje to? Genitiv",
+      "points": [
+        {
+          "title": "Genitiv: des Kollegen, des Namens",
+          "text": "W Genitiv słabe dostają -n/-en, ale bez -s: des Kollegen, des Studenten. Słowo szczególne der Name: des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "To samochód kolegi z pracy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿De quién? Genitivo",
+      "points": [
+        {
+          "title": "Genitivo: des Kollegen, des Namens",
+          "text": "En genitivo los débiles llevan -n/-en, pero sin -s: des Kollegen, des Studenten. Especial: der Name → des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "Es el coche del compañero."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "À qui ? Génitif",
+      "points": [
+        {
+          "title": "Génitif : des Kollegen, des Namens",
+          "text": "Au génitif, les noms faibles prennent -n/-en, mais pas de -s : des Kollegen, des Studenten. Particulier : der Name → des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "C’est la voiture du collègue."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kimin? Genitiv",
+      "points": [
+        {
+          "title": "Genitiv: des Kollegen, des Namens",
+          "text": "Genitiv’de zayıf isimler -n/-en alır ama -s almaz: des Kollegen, des Studenten. Özel: der Name → des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "Bu iş arkadaşının arabası."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Al cui? Genitiv",
+      "points": [
+        {
+          "title": "Genitiv: des Kollegen, des Namens",
+          "text": "La genitiv substantivele slabe primesc -n/-en, dar fără -s: des Kollegen, des Studenten. Special: der Name → des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "Aceasta e mașina colegului."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kimniki? Genitiv",
+      "points": [
+        {
+          "title": "Genitiv: des Kollegen, des Namens",
+          "text": "Genitivda kuchsizlar -n/-en oladi, lekin -s siz: des Kollegen, des Studenten. Alohida: der Name → des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "Bu hamkasbning mashinasi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "किसका? Genitiv",
+      "points": [
+        {
+          "title": "Genitiv: des Kollegen, des Namens",
+          "text": "Genitiv में कमज़ोर संज्ञाएँ -n/-en लेती हैं, पर -s नहीं: des Kollegen, des Studenten। खास: der Name → des Namens।",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "यह सहकर्मी की गाड़ी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "لمن؟ الإضافة",
+      "points": [
+        {
+          "title": "الإضافة: des Kollegen وdes Namens",
+          "text": "في الإضافة تأخذ الأسماء الضعيفة -n/-en بدون -s: des Kollegen، des Studenten. والخاصة: der Name → des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "هذه سيارة الزميل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "hero-square-five": {
+    "ru": {
+      "title": "С -n или без?",
+      "points": [
+        {
+          "title": "Без -n только подлежащее",
+          "text": "Без -n слабое существительное только как подлежащее в единственном числе: Der Junge spielt. Во всех других формах и во множественном -n или -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Новый коллега сразу помог клиенту."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "З -n чи без?",
+      "points": [
+        {
+          "title": "Без -n лише підмет",
+          "text": "Без -n слабкий іменник лише як підмет в однині: Der Junge spielt. В усіх інших формах і в множині -n або -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Новий колега одразу допоміг клієнтові."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "With -n or without?",
+      "points": [
+        {
+          "title": "No -n only for the subject",
+          "text": "A weak noun has no -n only as a singular subject: Der Junge spielt. In all other forms and in the plural it takes -n or -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "The new colleague helped the customer straight away."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Z -n czy bez?",
+      "points": [
+        {
+          "title": "Bez -n tylko podmiot",
+          "text": "Bez -n rzeczownik słaby tylko jako podmiot w liczbie pojedynczej: Der Junge spielt. We wszystkich innych formach i w mnogiej -n albo -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Nowy kolega od razu pomógł klientowi."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿Con -n o sin?",
+      "points": [
+        {
+          "title": "Sin -n solo el sujeto",
+          "text": "Sin -n el sustantivo débil solo como sujeto singular: Der Junge spielt. En las demás formas y en plural, -n o -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "El compañero nuevo ayudó enseguida al cliente."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Avec -n ou sans ?",
+      "points": [
+        {
+          "title": "Sans -n seulement pour le sujet",
+          "text": "Sans -n, le nom faible seulement comme sujet au singulier : Der Junge spielt. Dans toutes les autres formes et au pluriel, -n ou -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Le nouveau collègue a tout de suite aidé le client."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "-n ile mi, -n’siz mi?",
+      "points": [
+        {
+          "title": "-n almayan sadece özne",
+          "text": "Zayıf isim sadece tekil özne olarak -n almaz: Der Junge spielt. Diğer bütün biçimlerde ve çoğulda -n ya da -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Yeni iş arkadaşı müşteriye hemen yardım etti."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cu -n sau fără?",
+      "points": [
+        {
+          "title": "Fără -n doar subiectul",
+          "text": "Fără -n, substantivul slab doar ca subiect la singular: Der Junge spielt. În toate celelalte forme și la plural, -n sau -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Noul coleg l-a ajutat imediat pe client."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "-n bilan yoki -n siz?",
+      "points": [
+        {
+          "title": "-n siz faqat ega",
+          "text": "Kuchsiz ot faqat birlikdagi ega sifatida -n siz: Der Junge spielt. Qolgan barcha shakllarda va ko'plikda -n yoki -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Yangi hamkasb darhol mijozga yordam berdi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "-n के साथ या बिना?",
+      "points": [
+        {
+          "title": "बिना -n सिर्फ़ कर्ता",
+          "text": "कमज़ोर संज्ञा सिर्फ़ एकवचन कर्ता के रूप में बिना -n: Der Junge spielt। बाकी सभी रूपों और बहुवचन में -n या -en।",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "नए सहकर्मी ने तुरंत ग्राहक की मदद की।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مع -n أم بدونها؟",
+      "points": [
+        {
+          "title": "بدون -n الفاعل فقط",
+          "text": "الاسم الضعيف بدون -n فقط حين يكون فاعلاً مفرداً: Der Junge spielt. وفي كل الحالات الأخرى والجمع -n أو -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "ساعد الزميل الجديد الزبون فوراً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "hero-square-six": {
+    "ru": {
+      "title": "Новый практикант",
+      "points": [
+        {
+          "title": "Без -n только подлежащее",
+          "text": "Без -n слабое существительное только как подлежащее в единственном числе: Der Junge spielt. Во всех других формах и во множественном -n или -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Новый коллега сразу помог клиенту."
+            }
+          ]
+        },
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Слова мужского рода на -ent, -ant, -ist получают -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Я спросил полицейского."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Новий практикант",
+      "points": [
+        {
+          "title": "Без -n лише підмет",
+          "text": "Без -n слабкий іменник лише як підмет в однині: Der Junge spielt. В усіх інших формах і в множині -n або -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Новий колега одразу допоміг клієнтові."
+            }
+          ]
+        },
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Слова чоловічого роду на -ent, -ant, -ist отримують -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Я запитав поліцейського."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The new intern",
+      "points": [
+        {
+          "title": "No -n only for the subject",
+          "text": "A weak noun has no -n only as a singular subject: Der Junge spielt. In all other forms and in the plural it takes -n or -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "The new colleague helped the customer straight away."
+            }
+          ]
+        },
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Masculine nouns in -ent, -ant, -ist take -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "I asked the police officer."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Nowy praktykant",
+      "points": [
+        {
+          "title": "Bez -n tylko podmiot",
+          "text": "Bez -n rzeczownik słaby tylko jako podmiot w liczbie pojedynczej: Der Junge spielt. We wszystkich innych formach i w mnogiej -n albo -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Nowy kolega od razu pomógł klientowi."
+            }
+          ]
+        },
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Słowa rodzaju męskiego na -ent, -ant, -ist dostają -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Zapytałem policjanta."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "El nuevo becario",
+      "points": [
+        {
+          "title": "Sin -n solo el sujeto",
+          "text": "Sin -n el sustantivo débil solo como sujeto singular: Der Junge spielt. En las demás formas y en plural, -n o -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "El compañero nuevo ayudó enseguida al cliente."
+            }
+          ]
+        },
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Los masculinos en -ent, -ant, -ist llevan -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Le pregunté al policía."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le nouveau stagiaire",
+      "points": [
+        {
+          "title": "Sans -n seulement pour le sujet",
+          "text": "Sans -n, le nom faible seulement comme sujet au singulier : Der Junge spielt. Dans toutes les autres formes et au pluriel, -n ou -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Le nouveau collègue a tout de suite aidé le client."
+            }
+          ]
+        },
+        {
+          "title": "-ent, -ant, -ist : -en",
+          "text": "Les noms masculins en -ent, -ant, -ist prennent -en : den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "J’ai demandé au policier."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yeni stajyer",
+      "points": [
+        {
+          "title": "-n almayan sadece özne",
+          "text": "Zayıf isim sadece tekil özne olarak -n almaz: Der Junge spielt. Diğer bütün biçimlerde ve çoğulda -n ya da -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Yeni iş arkadaşı müşteriye hemen yardım etti."
+            }
+          ]
+        },
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "-ent, -ant, -ist ile biten eril isimler -en alır: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Polise sordum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Noul practicant",
+      "points": [
+        {
+          "title": "Fără -n doar subiectul",
+          "text": "Fără -n, substantivul slab doar ca subiect la singular: Der Junge spielt. În toate celelalte forme și la plural, -n sau -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Noul coleg l-a ajutat imediat pe client."
+            }
+          ]
+        },
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Substantivele masculine în -ent, -ant, -ist primesc -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "L-am întrebat pe polițist."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Yangi amaliyotchi",
+      "points": [
+        {
+          "title": "-n siz faqat ega",
+          "text": "Kuchsiz ot faqat birlikdagi ega sifatida -n siz: Der Junge spielt. Qolgan barcha shakllarda va ko'plikda -n yoki -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Yangi hamkasb darhol mijozga yordam berdi."
+            }
+          ]
+        },
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "-ent, -ant, -ist bilan tugagan erkak rodidagi otlar -en oladi: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Men politsiyachidan so'radim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "नया इंटर्न",
+      "points": [
+        {
+          "title": "बिना -n सिर्फ़ कर्ता",
+          "text": "कमज़ोर संज्ञा सिर्फ़ एकवचन कर्ता के रूप में बिना -n: Der Junge spielt। बाकी सभी रूपों और बहुवचन में -n या -en।",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "नए सहकर्मी ने तुरंत ग्राहक की मदद की।"
+            }
+          ]
+        },
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "-ent, -ant, -ist पर खत्म पुल्लिंग संज्ञाएँ -en लेती हैं: den Studenten, dem Polizisten, die Touristen।",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "मैंने पुलिसवाले से पूछा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المتدرب الجديد",
+      "points": [
+        {
+          "title": "بدون -n الفاعل فقط",
+          "text": "الاسم الضعيف بدون -n فقط حين يكون فاعلاً مفرداً: Der Junge spielt. وفي كل الحالات الأخرى والجمع -n أو -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "ساعد الزميل الجديد الزبون فوراً."
+            }
+          ]
+        },
+        {
+          "title": "-ent و-ant و-ist: -en",
+          "text": "الأسماء المذكرة المنتهية بـ -ent و-ant و-ist تأخذ -en: den Studenten، dem Polizisten، die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "سألت الشرطي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "hero-square-seven": {
+    "ru": {
+      "title": "Практика: в больнице",
+      "points": [
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Слова мужского рода на -ent, -ant, -ist получают -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Я спросил полицейского."
+            }
+          ]
+        },
+        {
+          "title": "Без -n только подлежащее",
+          "text": "Без -n слабое существительное только как подлежащее в единственном числе: Der Junge spielt. Во всех других формах и во множественном -n или -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Новый коллега сразу помог клиенту."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: у лікарні",
+      "points": [
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Слова чоловічого роду на -ent, -ant, -ist отримують -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Я запитав поліцейського."
+            }
+          ]
+        },
+        {
+          "title": "Без -n лише підмет",
+          "text": "Без -n слабкий іменник лише як підмет в однині: Der Junge spielt. В усіх інших формах і в множині -n або -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Новий колега одразу допоміг клієнтові."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: at the hospital",
+      "points": [
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Masculine nouns in -ent, -ant, -ist take -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "I asked the police officer."
+            }
+          ]
+        },
+        {
+          "title": "No -n only for the subject",
+          "text": "A weak noun has no -n only as a singular subject: Der Junge spielt. In all other forms and in the plural it takes -n or -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "The new colleague helped the customer straight away."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: w szpitalu",
+      "points": [
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Słowa rodzaju męskiego na -ent, -ant, -ist dostają -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Zapytałem policjanta."
+            }
+          ]
+        },
+        {
+          "title": "Bez -n tylko podmiot",
+          "text": "Bez -n rzeczownik słaby tylko jako podmiot w liczbie pojedynczej: Der Junge spielt. We wszystkich innych formach i w mnogiej -n albo -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Nowy kolega od razu pomógł klientowi."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: en el hospital",
+      "points": [
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Los masculinos en -ent, -ant, -ist llevan -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Le pregunté al policía."
+            }
+          ]
+        },
+        {
+          "title": "Sin -n solo el sujeto",
+          "text": "Sin -n el sustantivo débil solo como sujeto singular: Der Junge spielt. En las demás formas y en plural, -n o -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "El compañero nuevo ayudó enseguida al cliente."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : à l’hôpital",
+      "points": [
+        {
+          "title": "-ent, -ant, -ist : -en",
+          "text": "Les noms masculins en -ent, -ant, -ist prennent -en : den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "J’ai demandé au policier."
+            }
+          ]
+        },
+        {
+          "title": "Sans -n seulement pour le sujet",
+          "text": "Sans -n, le nom faible seulement comme sujet au singulier : Der Junge spielt. Dans toutes les autres formes et au pluriel, -n ou -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Le nouveau collègue a tout de suite aidé le client."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: hastanede",
+      "points": [
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "-ent, -ant, -ist ile biten eril isimler -en alır: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Polise sordum."
+            }
+          ]
+        },
+        {
+          "title": "-n almayan sadece özne",
+          "text": "Zayıf isim sadece tekil özne olarak -n almaz: Der Junge spielt. Diğer bütün biçimlerde ve çoğulda -n ya da -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Yeni iş arkadaşı müşteriye hemen yardım etti."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: la spital",
+      "points": [
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Substantivele masculine în -ent, -ant, -ist primesc -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "L-am întrebat pe polițist."
+            }
+          ]
+        },
+        {
+          "title": "Fără -n doar subiectul",
+          "text": "Fără -n, substantivul slab doar ca subiect la singular: Der Junge spielt. În toate celelalte forme și la plural, -n sau -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Noul coleg l-a ajutat imediat pe client."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: kasalxonada",
+      "points": [
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "-ent, -ant, -ist bilan tugagan erkak rodidagi otlar -en oladi: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Men politsiyachidan so'radim."
+            }
+          ]
+        },
+        {
+          "title": "-n siz faqat ega",
+          "text": "Kuchsiz ot faqat birlikdagi ega sifatida -n siz: Der Junge spielt. Qolgan barcha shakllarda va ko'plikda -n yoki -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Yangi hamkasb darhol mijozga yordam berdi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: अस्पताल में",
+      "points": [
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "-ent, -ant, -ist पर खत्म पुल्लिंग संज्ञाएँ -en लेती हैं: den Studenten, dem Polizisten, die Touristen।",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "मैंने पुलिसवाले से पूछा।"
+            }
+          ]
+        },
+        {
+          "title": "बिना -n सिर्फ़ कर्ता",
+          "text": "कमज़ोर संज्ञा सिर्फ़ एकवचन कर्ता के रूप में बिना -n: Der Junge spielt। बाकी सभी रूपों और बहुवचन में -n या -en।",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "नए सहकर्मी ने तुरंत ग्राहक की मदद की।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: في المستشفى",
+      "points": [
+        {
+          "title": "-ent و-ant و-ist: -en",
+          "text": "الأسماء المذكرة المنتهية بـ -ent و-ant و-ist تأخذ -en: den Studenten، dem Polizisten، die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "سألت الشرطي."
+            }
+          ]
+        },
+        {
+          "title": "بدون -n الفاعل فقط",
+          "text": "الاسم الضعيف بدون -n فقط حين يكون فاعلاً مفرداً: Der Junge spielt. وفي كل الحالات الأخرى والجمع -n أو -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "ساعد الزميل الجديد الزبون فوراً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "hero-square-eight": {
+    "ru": {
+      "title": "Практика: в зоопарке",
+      "points": [
+        {
+          "title": "Слабые существительные: -n",
+          "text": "Некоторые слова мужского рода получают -n во всех формах, кроме подлежащего в единственном числе: der Kollege → den, dem, des Kollegen. Часто на -e: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Я вижу мальчика."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: у зоопарку",
+      "points": [
+        {
+          "title": "Слабкі іменники: -n",
+          "text": "Деякі слова чоловічого роду отримують -n в усіх формах, крім підмета в однині: der Kollege → den, dem, des Kollegen. Часто на -e: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Я бачу хлопчика."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: at the zoo",
+      "points": [
+        {
+          "title": "Weak nouns: -n",
+          "text": "Some masculine nouns add -n in every form except the singular subject: der Kollege → den, dem, des Kollegen. Often they end in -e: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "I see the boy."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: w zoo",
+      "points": [
+        {
+          "title": "Rzeczowniki słabe: -n",
+          "text": "Niektóre słowa rodzaju męskiego dostają -n we wszystkich formach poza podmiotem w liczbie pojedynczej: der Kollege → den, dem, des Kollegen. Często na -e: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Widzę chłopca."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: en el zoo",
+      "points": [
+        {
+          "title": "Sustantivos débiles: -n",
+          "text": "Algunos sustantivos masculinos añaden -n en todas las formas salvo el sujeto singular: der Kollege → den, dem, des Kollegen. A menudo acaban en -e: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Veo al chico."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : au zoo",
+      "points": [
+        {
+          "title": "Noms faibles : -n",
+          "text": "Certains noms masculins prennent -n à toutes les formes sauf le sujet au singulier : der Kollege → den, dem, des Kollegen. Souvent en -e : der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Je vois le garçon."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: hayvanat bahçesinde",
+      "points": [
+        {
+          "title": "Zayıf isimler: -n",
+          "text": "Bazı eril isimler tekil özne dışında her biçimde -n alır: der Kollege → den, dem, des Kollegen. Çoğu -e ile biter: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Çocuğu görüyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: la grădina zoologică",
+      "points": [
+        {
+          "title": "Substantive slabe: -n",
+          "text": "Unele substantive masculine primesc -n în toate formele, în afară de subiectul la singular: der Kollege → den, dem, des Kollegen. Des în -e: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Îl văd pe băiat."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: hayvonot bog'ida",
+      "points": [
+        {
+          "title": "Kuchsiz otlar: -n",
+          "text": "Ba'zi erkak rodidagi otlar birlikdagi egadan boshqa barcha shakllarda -n oladi: der Kollege → den, dem, des Kollegen. Ko'pincha -e bilan: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Men bolani ko'ryapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: चिड़ियाघर में",
+      "points": [
+        {
+          "title": "कमज़ोर संज्ञाएँ: -n",
+          "text": "कुछ पुल्लिंग संज्ञाएँ एकवचन कर्ता को छोड़कर हर रूप में -n लेती हैं: der Kollege → den, dem, des Kollegen। अक्सर -e पर: der Junge, der Kunde, der Löwe।",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "मुझे लड़का दिख रहा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: في حديقة الحيوان",
+      "points": [
+        {
+          "title": "الأسماء الضعيفة: -n",
+          "text": "بعض الأسماء المذكرة تأخذ -n في كل الحالات ما عدا الفاعل المفرد: der Kollege → den، dem، des Kollegen. وغالباً تنتهي بـ -e: der Junge، der Kunde، der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "أرى الولد."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "hero-square-nine": {
+    "ru": {
+      "title": "Повторение: слабые существительные",
+      "points": [
+        {
+          "title": "Слабые существительные: -n",
+          "text": "Некоторые слова мужского рода получают -n во всех формах, кроме подлежащего в единственном числе: der Kollege → den, dem, des Kollegen. Часто на -e: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Я вижу мальчика."
+            }
+          ]
+        },
+        {
+          "title": "der Mensch, der Nachbar, der Herr",
+          "text": "Слабыми бывают и слова без -e: den Menschen, den Nachbarn. der Herr в единственном числе получает -n: Ich kenne Herrn Braun.",
+          "examples": [
+            {
+              "de": "Ich kenne Herrn Braun.",
+              "tr": "Я знаю господина Брауна."
+            }
+          ]
+        },
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Слова мужского рода на -ent, -ant, -ist получают -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Я спросил полицейского."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: слабкі іменники",
+      "points": [
+        {
+          "title": "Слабкі іменники: -n",
+          "text": "Деякі слова чоловічого роду отримують -n в усіх формах, крім підмета в однині: der Kollege → den, dem, des Kollegen. Часто на -e: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Я бачу хлопчика."
+            }
+          ]
+        },
+        {
+          "title": "der Mensch, der Nachbar, der Herr",
+          "text": "Слабкими бувають і слова без -e: den Menschen, den Nachbarn. der Herr в однині отримує -n: Ich kenne Herrn Braun.",
+          "examples": [
+            {
+              "de": "Ich kenne Herrn Braun.",
+              "tr": "Я знаю пана Брауна."
+            }
+          ]
+        },
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Слова чоловічого роду на -ent, -ant, -ist отримують -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Я запитав поліцейського."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: weak nouns",
+      "points": [
+        {
+          "title": "Weak nouns: -n",
+          "text": "Some masculine nouns add -n in every form except the singular subject: der Kollege → den, dem, des Kollegen. Often they end in -e: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "I see the boy."
+            }
+          ]
+        },
+        {
+          "title": "der Mensch, der Nachbar, der Herr",
+          "text": "Some weak nouns don’t end in -e: den Menschen, den Nachbarn. der Herr in the singular takes -n: Ich kenne Herrn Braun.",
+          "examples": [
+            {
+              "de": "Ich kenne Herrn Braun.",
+              "tr": "I know Mr Braun."
+            }
+          ]
+        },
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Masculine nouns in -ent, -ant, -ist take -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "I asked the police officer."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: rzeczowniki słabe",
+      "points": [
+        {
+          "title": "Rzeczowniki słabe: -n",
+          "text": "Niektóre słowa rodzaju męskiego dostają -n we wszystkich formach poza podmiotem w liczbie pojedynczej: der Kollege → den, dem, des Kollegen. Często na -e: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Widzę chłopca."
+            }
+          ]
+        },
+        {
+          "title": "der Mensch, der Nachbar, der Herr",
+          "text": "Słabe bywają też słowa bez -e: den Menschen, den Nachbarn. der Herr w liczbie pojedynczej dostaje -n: Ich kenne Herrn Braun.",
+          "examples": [
+            {
+              "de": "Ich kenne Herrn Braun.",
+              "tr": "Znam pana Brauna."
+            }
+          ]
+        },
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Słowa rodzaju męskiego na -ent, -ant, -ist dostają -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Zapytałem policjanta."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: sustantivos débiles",
+      "points": [
+        {
+          "title": "Sustantivos débiles: -n",
+          "text": "Algunos sustantivos masculinos añaden -n en todas las formas salvo el sujeto singular: der Kollege → den, dem, des Kollegen. A menudo acaban en -e: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Veo al chico."
+            }
+          ]
+        },
+        {
+          "title": "der Mensch, der Nachbar, der Herr",
+          "text": "También hay débiles sin -e: den Menschen, den Nachbarn. der Herr en singular lleva -n: Ich kenne Herrn Braun.",
+          "examples": [
+            {
+              "de": "Ich kenne Herrn Braun.",
+              "tr": "Conozco al señor Braun."
+            }
+          ]
+        },
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Los masculinos en -ent, -ant, -ist llevan -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Le pregunté al policía."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : noms faibles",
+      "points": [
+        {
+          "title": "Noms faibles : -n",
+          "text": "Certains noms masculins prennent -n à toutes les formes sauf le sujet au singulier : der Kollege → den, dem, des Kollegen. Souvent en -e : der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Je vois le garçon."
+            }
+          ]
+        },
+        {
+          "title": "der Mensch, der Nachbar, der Herr",
+          "text": "Il y a aussi des noms faibles sans -e : den Menschen, den Nachbarn. der Herr au singulier prend -n : Ich kenne Herrn Braun.",
+          "examples": [
+            {
+              "de": "Ich kenne Herrn Braun.",
+              "tr": "Je connais Monsieur Braun."
+            }
+          ]
+        },
+        {
+          "title": "-ent, -ant, -ist : -en",
+          "text": "Les noms masculins en -ent, -ant, -ist prennent -en : den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "J’ai demandé au policier."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: zayıf isimler",
+      "points": [
+        {
+          "title": "Zayıf isimler: -n",
+          "text": "Bazı eril isimler tekil özne dışında her biçimde -n alır: der Kollege → den, dem, des Kollegen. Çoğu -e ile biter: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Çocuğu görüyorum."
+            }
+          ]
+        },
+        {
+          "title": "der Mensch, der Nachbar, der Herr",
+          "text": "-e ile bitmeyen zayıf isimler de var: den Menschen, den Nachbarn. der Herr tekilde -n alır: Ich kenne Herrn Braun.",
+          "examples": [
+            {
+              "de": "Ich kenne Herrn Braun.",
+              "tr": "Bay Braun’u tanıyorum."
+            }
+          ]
+        },
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "-ent, -ant, -ist ile biten eril isimler -en alır: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Polise sordum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: substantive slabe",
+      "points": [
+        {
+          "title": "Substantive slabe: -n",
+          "text": "Unele substantive masculine primesc -n în toate formele, în afară de subiectul la singular: der Kollege → den, dem, des Kollegen. Des în -e: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Îl văd pe băiat."
+            }
+          ]
+        },
+        {
+          "title": "der Mensch, der Nachbar, der Herr",
+          "text": "Există și substantive slabe fără -e: den Menschen, den Nachbarn. der Herr la singular primește -n: Ich kenne Herrn Braun.",
+          "examples": [
+            {
+              "de": "Ich kenne Herrn Braun.",
+              "tr": "Îl cunosc pe domnul Braun."
+            }
+          ]
+        },
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "Substantivele masculine în -ent, -ant, -ist primesc -en: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "L-am întrebat pe polițist."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: kuchsiz otlar",
+      "points": [
+        {
+          "title": "Kuchsiz otlar: -n",
+          "text": "Ba'zi erkak rodidagi otlar birlikdagi egadan boshqa barcha shakllarda -n oladi: der Kollege → den, dem, des Kollegen. Ko'pincha -e bilan: der Junge, der Kunde, der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "Men bolani ko'ryapman."
+            }
+          ]
+        },
+        {
+          "title": "der Mensch, der Nachbar, der Herr",
+          "text": "-e siz kuchsiz otlar ham bor: den Menschen, den Nachbarn. der Herr birlikda -n oladi: Ich kenne Herrn Braun.",
+          "examples": [
+            {
+              "de": "Ich kenne Herrn Braun.",
+              "tr": "Men janob Braunni taniyman."
+            }
+          ]
+        },
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "-ent, -ant, -ist bilan tugagan erkak rodidagi otlar -en oladi: den Studenten, dem Polizisten, die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "Men politsiyachidan so'radim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: कमज़ोर संज्ञाएँ",
+      "points": [
+        {
+          "title": "कमज़ोर संज्ञाएँ: -n",
+          "text": "कुछ पुल्लिंग संज्ञाएँ एकवचन कर्ता को छोड़कर हर रूप में -n लेती हैं: der Kollege → den, dem, des Kollegen। अक्सर -e पर: der Junge, der Kunde, der Löwe।",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "मुझे लड़का दिख रहा है।"
+            }
+          ]
+        },
+        {
+          "title": "der Mensch, der Nachbar, der Herr",
+          "text": "बिना -e वाली कमज़ोर संज्ञाएँ भी हैं: den Menschen, den Nachbarn। der Herr एकवचन में -n लेता है: Ich kenne Herrn Braun।",
+          "examples": [
+            {
+              "de": "Ich kenne Herrn Braun.",
+              "tr": "मैं श्रीमान ब्राउन को जानता हूँ।"
+            }
+          ]
+        },
+        {
+          "title": "-ent, -ant, -ist: -en",
+          "text": "-ent, -ant, -ist पर खत्म पुल्लिंग संज्ञाएँ -en लेती हैं: den Studenten, dem Polizisten, die Touristen।",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "मैंने पुलिसवाले से पूछा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الأسماء الضعيفة",
+      "points": [
+        {
+          "title": "الأسماء الضعيفة: -n",
+          "text": "بعض الأسماء المذكرة تأخذ -n في كل الحالات ما عدا الفاعل المفرد: der Kollege → den، dem، des Kollegen. وغالباً تنتهي بـ -e: der Junge، der Kunde، der Löwe.",
+          "examples": [
+            {
+              "de": "Ich sehe den Jungen.",
+              "tr": "أرى الولد."
+            }
+          ]
+        },
+        {
+          "title": "der Mensch وder Nachbar وder Herr",
+          "text": "توجد أسماء ضعيفة بدون -e أيضاً: den Menschen، den Nachbarn. وder Herr في المفرد يأخذ -n: Ich kenne Herrn Braun.",
+          "examples": [
+            {
+              "de": "Ich kenne Herrn Braun.",
+              "tr": "أعرف السيد براون."
+            }
+          ]
+        },
+        {
+          "title": "-ent و-ant و-ist: -en",
+          "text": "الأسماء المذكرة المنتهية بـ -ent و-ant و-ist تأخذ -en: den Studenten، dem Polizisten، die Touristen.",
+          "examples": [
+            {
+              "de": "Ich habe den Polizisten gefragt.",
+              "tr": "سألت الشرطي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "hero-square-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "Без -n только подлежащее",
+          "text": "Без -n слабое существительное только как подлежащее в единственном числе: Der Junge spielt. Во всех других формах и во множественном -n или -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Новый коллега сразу помог клиенту."
+            }
+          ]
+        },
+        {
+          "title": "Genitiv: des Kollegen, des Namens",
+          "text": "В Genitiv слабые получают -n/-en, но без -s: des Kollegen, des Studenten. Особое слово der Name: des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "Это машина коллеги."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "Без -n лише підмет",
+          "text": "Без -n слабкий іменник лише як підмет в однині: Der Junge spielt. В усіх інших формах і в множині -n або -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Новий колега одразу допоміг клієнтові."
+            }
+          ]
+        },
+        {
+          "title": "Genitiv: des Kollegen, des Namens",
+          "text": "У Genitiv слабкі отримують -n/-en, але без -s: des Kollegen, des Studenten. Особливе слово der Name: des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "Це машина колеги."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "No -n only for the subject",
+          "text": "A weak noun has no -n only as a singular subject: Der Junge spielt. In all other forms and in the plural it takes -n or -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "The new colleague helped the customer straight away."
+            }
+          ]
+        },
+        {
+          "title": "Genitive: des Kollegen, des Namens",
+          "text": "In the genitive weak nouns take -n/-en, but no -s: des Kollegen, des Studenten. Special: der Name → des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "That’s the colleague’s car."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "Bez -n tylko podmiot",
+          "text": "Bez -n rzeczownik słaby tylko jako podmiot w liczbie pojedynczej: Der Junge spielt. We wszystkich innych formach i w mnogiej -n albo -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Nowy kolega od razu pomógł klientowi."
+            }
+          ]
+        },
+        {
+          "title": "Genitiv: des Kollegen, des Namens",
+          "text": "W Genitiv słabe dostają -n/-en, ale bez -s: des Kollegen, des Studenten. Słowo szczególne der Name: des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "To samochód kolegi z pracy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "Sin -n solo el sujeto",
+          "text": "Sin -n el sustantivo débil solo como sujeto singular: Der Junge spielt. En las demás formas y en plural, -n o -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "El compañero nuevo ayudó enseguida al cliente."
+            }
+          ]
+        },
+        {
+          "title": "Genitivo: des Kollegen, des Namens",
+          "text": "En genitivo los débiles llevan -n/-en, pero sin -s: des Kollegen, des Studenten. Especial: der Name → des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "Es el coche del compañero."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "Sans -n seulement pour le sujet",
+          "text": "Sans -n, le nom faible seulement comme sujet au singulier : Der Junge spielt. Dans toutes les autres formes et au pluriel, -n ou -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Le nouveau collègue a tout de suite aidé le client."
+            }
+          ]
+        },
+        {
+          "title": "Génitif : des Kollegen, des Namens",
+          "text": "Au génitif, les noms faibles prennent -n/-en, mais pas de -s : des Kollegen, des Studenten. Particulier : der Name → des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "C’est la voiture du collègue."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "-n almayan sadece özne",
+          "text": "Zayıf isim sadece tekil özne olarak -n almaz: Der Junge spielt. Diğer bütün biçimlerde ve çoğulda -n ya da -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Yeni iş arkadaşı müşteriye hemen yardım etti."
+            }
+          ]
+        },
+        {
+          "title": "Genitiv: des Kollegen, des Namens",
+          "text": "Genitiv’de zayıf isimler -n/-en alır ama -s almaz: des Kollegen, des Studenten. Özel: der Name → des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "Bu iş arkadaşının arabası."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "Fără -n doar subiectul",
+          "text": "Fără -n, substantivul slab doar ca subiect la singular: Der Junge spielt. În toate celelalte forme și la plural, -n sau -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Noul coleg l-a ajutat imediat pe client."
+            }
+          ]
+        },
+        {
+          "title": "Genitiv: des Kollegen, des Namens",
+          "text": "La genitiv substantivele slabe primesc -n/-en, dar fără -s: des Kollegen, des Studenten. Special: der Name → des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "Aceasta e mașina colegului."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "-n siz faqat ega",
+          "text": "Kuchsiz ot faqat birlikdagi ega sifatida -n siz: Der Junge spielt. Qolgan barcha shakllarda va ko'plikda -n yoki -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "Yangi hamkasb darhol mijozga yordam berdi."
+            }
+          ]
+        },
+        {
+          "title": "Genitiv: des Kollegen, des Namens",
+          "text": "Genitivda kuchsizlar -n/-en oladi, lekin -s siz: des Kollegen, des Studenten. Alohida: der Name → des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "Bu hamkasbning mashinasi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "बिना -n सिर्फ़ कर्ता",
+          "text": "कमज़ोर संज्ञा सिर्फ़ एकवचन कर्ता के रूप में बिना -n: Der Junge spielt। बाकी सभी रूपों और बहुवचन में -n या -en।",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "नए सहकर्मी ने तुरंत ग्राहक की मदद की।"
+            }
+          ]
+        },
+        {
+          "title": "Genitiv: des Kollegen, des Namens",
+          "text": "Genitiv में कमज़ोर संज्ञाएँ -n/-en लेती हैं, पर -s नहीं: des Kollegen, des Studenten। खास: der Name → des Namens।",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "यह सहकर्मी की गाड़ी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "بدون -n الفاعل فقط",
+          "text": "الاسم الضعيف بدون -n فقط حين يكون فاعلاً مفرداً: Der Junge spielt. وفي كل الحالات الأخرى والجمع -n أو -en.",
+          "examples": [
+            {
+              "de": "Der neue Kollege half sofort dem Kunden.",
+              "tr": "ساعد الزميل الجديد الزبون فوراً."
+            }
+          ]
+        },
+        {
+          "title": "الإضافة: des Kollegen وdes Namens",
+          "text": "في الإضافة تأخذ الأسماء الضعيفة -n/-en بدون -s: des Kollegen، des Studenten. والخاصة: der Name → des Namens.",
+          "examples": [
+            {
+              "de": "Das ist das Auto des Kollegen.",
+              "tr": "هذه سيارة الزميل."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

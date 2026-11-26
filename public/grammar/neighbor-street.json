@@ -1,0 +1,2552 @@
+{
+  "neighbor-street-one": {
+    "ru": {
+      "title": "Человек, который...",
+      "points": [
+        {
+          "title": "der, die, das: который",
+          "text": "«Который» берём по роду слова: der, die, das, во множественном die. Глагол в придаточном в конце, вокруг запятые.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Мужчина, который там стоит, мой сосед."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Людина, яка...",
+      "points": [
+        {
+          "title": "der, die, das: який",
+          "text": "«Який» беремо за родом слова: der, die, das, у множині die. Дієслово в підрядному в кінці, навколо коми.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Чоловік, який там стоїть, мій сусід."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The person who...",
+      "points": [
+        {
+          "title": "der, die, das: who, which",
+          "text": "\"Who, which\" follows the noun’s gender: der, die, das, plural die. The verb goes last, with commas around the clause.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "The man who is standing there is my neighbour."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Człowiek, który...",
+      "points": [
+        {
+          "title": "der, die, das: który",
+          "text": "„Który” bierzemy według rodzaju słowa: der, die, das, w mnogiej die. Czasownik na końcu, wokół przecinki.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Mężczyzna, który tam stoi, to mój sąsiad."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "La persona que...",
+      "points": [
+        {
+          "title": "der, die, das: que",
+          "text": "El relativo sigue el género: der, die, das, en plural die. El verbo va al final y hay comas alrededor.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "El hombre que está allí es mi vecino."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "La personne qui...",
+      "points": [
+        {
+          "title": "der, die, das : qui",
+          "text": "Le relatif suit le genre du nom : der, die, das, au pluriel die. Le verbe va à la fin, avec des virgules autour.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "L’homme qui est là-bas est mon voisin."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "... olan kişi",
+      "points": [
+        {
+          "title": "der, die, das: ki o",
+          "text": "\"ki o\" ismin cinsiyetine göre seçilir: der, die, das, çoğulda die. Fiil sonda, etrafında virgüller.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Orada duran adam benim komşum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Omul care...",
+      "points": [
+        {
+          "title": "der, die, das: care",
+          "text": "„Care” după genul cuvântului: der, die, das, la plural die. Verbul la final, cu virgule în jur.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Bărbatul care stă acolo e vecinul meu."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "... qiladigan odam",
+      "points": [
+        {
+          "title": "der, die, das: qaysiki",
+          "text": "\"Qaysiki\" so'zning rodiga qarab: der, die, das, ko'plikda die. Fe'l oxirida, atrofida vergullar.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "U yerda turgan erkak mening qo'shnim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "वह व्यक्ति जो...",
+      "points": [
+        {
+          "title": "der, die, das: जो",
+          "text": "\"जो\" संज्ञा के लिंग के अनुसार: der, die, das, बहुवचन में die। क्रिया अंत में, चारों ओर कॉमा।",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "वहाँ खड़ा आदमी मेरा पड़ोसी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الشخص الذي...",
+      "points": [
+        {
+          "title": "der وdie وdas: الذي",
+          "text": "\"الذي\" حسب جنس الاسم: der وdie وdas، وفي الجمع die. والفعل في الآخر وحولها فواصل.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "الرجل الذي يقف هناك جاري."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "neighbor-street-two": {
+    "ru": {
+      "title": "Которого я знаю: den",
+      "points": [
+        {
+          "title": "den: которого",
+          "text": "Если в придаточном «который» отвечает на вопрос кого? что?, это Akkusativ. Меняется только мужской род: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Фильм, который я вчера посмотрел, был отличный."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Якого я знаю: den",
+      "points": [
+        {
+          "title": "den: якого",
+          "text": "Якщо в підрядному «який» відповідає на питання кого? що?, це Akkusativ. Змінюється лише чоловічий рід: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Фільм, який я вчора подивився, був чудовий."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Whom I know: den",
+      "points": [
+        {
+          "title": "den: whom (masculine)",
+          "text": "If the relative pronoun is the object (whom? what?), it’s accusative. Only masculine changes: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "The film I saw yesterday was great."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Którego znam: den",
+      "points": [
+        {
+          "title": "den: którego",
+          "text": "Jeśli w zdaniu podrzędnym „który” odpowiada na pytanie kogo? co?, to Akkusativ. Zmienia się tylko rodzaj męski: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Film, który wczoraj obejrzałem, był świetny."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Al que conozco: den",
+      "points": [
+        {
+          "title": "den: al que",
+          "text": "Si el relativo es el objeto (¿a quién? ¿qué?), va en acusativo. Solo cambia el masculino: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "La película que vi ayer era genial."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Que je connais : den",
+      "points": [
+        {
+          "title": "den : que (masculin)",
+          "text": "Si le relatif est complément (qui ? quoi ?), c’est l’accusatif. Seul le masculin change : der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Le film que j’ai vu hier était génial."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tanıdığım: den",
+      "points": [
+        {
+          "title": "den: -dığı (eril)",
+          "text": "Zamir nesne ise (kimi? neyi?) Akkusativ’dir. Sadece eril değişir: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Dün izlediğim film harikaydı."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Pe care îl cunosc: den",
+      "points": [
+        {
+          "title": "den: pe care",
+          "text": "Dacă relativul e complement (pe cine? ce?), e acuzativ. Doar masculinul se schimbă: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Filmul pe care l-am văzut ieri a fost grozav."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Men taniydigan: den",
+      "points": [
+        {
+          "title": "den: kimni",
+          "text": "Agar nisbiy olmosh to'ldiruvchi bo'lsa (kimni? nimani?), bu Akkusativ. Faqat erkak rodi o'zgaradi: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Kecha ko'rgan filmim ajoyib edi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "जिसे मैं जानता हूँ: den",
+      "points": [
+        {
+          "title": "den: जिसे (पु)",
+          "text": "अगर \"जो\" कर्म है (किसे? क्या?), तो Akkusativ। सिर्फ़ पुल्लिंग बदलता है: der → den।",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "कल जो फ़िल्म मैंने देखी, वह शानदार थी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الذي أعرفه: den",
+      "points": [
+        {
+          "title": "den: الذي (مفعول مذكر)",
+          "text": "إذا كان الضمير مفعولاً به (من؟ ماذا؟) فهو في حالة المفعول. ويتغير المذكر فقط: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "الفيلم الذي شاهدته أمس كان رائعاً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "neighbor-street-three": {
+    "ru": {
+      "title": "Которому я помогаю: dem",
+      "points": [
+        {
+          "title": "dem, der, denen: которому",
+          "text": "С глаголами на Dativ (helfen, danken, gehören): dem для мужского и среднего, der для женского, denen во множественном.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "Женщина, которой я помогаю, моя соседка."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Якому я допомагаю: dem",
+      "points": [
+        {
+          "title": "dem, der, denen: якому",
+          "text": "З дієсловами на Dativ (helfen, danken, gehören): dem для чоловічого й середнього, der для жіночого, denen у множині.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "Жінка, якій я допомагаю, моя сусідка."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Whom I help: dem",
+      "points": [
+        {
+          "title": "dem, der, denen: to whom",
+          "text": "With dative verbs (helfen, danken, gehören): dem for masculine and neuter, der for feminine, denen in the plural.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "The woman I’m helping is my neighbour."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Któremu pomagam: dem",
+      "points": [
+        {
+          "title": "dem, der, denen: któremu",
+          "text": "Z czasownikami z Dativ (helfen, danken, gehören): dem dla męskiego i nijakiego, der dla żeńskiego, denen w mnogiej.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "Kobieta, której pomagam, to moja sąsiadka."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Al que ayudo: dem",
+      "points": [
+        {
+          "title": "dem, der, denen: a quien",
+          "text": "Con verbos de dativo (helfen, danken, gehören): dem para masculino y neutro, der para femenino, denen en plural.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "La mujer a la que ayudo es mi vecina."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Que j’aide : dem",
+      "points": [
+        {
+          "title": "dem, der, denen : à qui",
+          "text": "Avec les verbes au datif (helfen, danken, gehören) : dem pour le masculin et le neutre, der pour le féminin, denen au pluriel.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "La femme que j’aide est ma voisine."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yardım ettiğim: dem",
+      "points": [
+        {
+          "title": "dem, der, denen: kime",
+          "text": "Dativ alan fiillerle (helfen, danken, gehören): eril ve nötr için dem, dişil için der, çoğulda denen.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "Yardım ettiğim kadın komşum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Pe care îl ajut: dem",
+      "points": [
+        {
+          "title": "dem, der, denen: căruia",
+          "text": "Cu verbe la dativ (helfen, danken, gehören): dem pentru masculin și neutru, der pentru feminin, denen la plural.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "Femeia pe care o ajut e vecina mea."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Men yordam beradigan: dem",
+      "points": [
+        {
+          "title": "dem, der, denen: kimga",
+          "text": "Dativ talab qiluvchi fe'llar bilan (helfen, danken, gehören): erkak va o'rta rod uchun dem, ayol uchun der, ko'plikda denen.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "Men yordam beradigan ayol mening qo'shnim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "जिसकी मैं मदद करता हूँ: dem",
+      "points": [
+        {
+          "title": "dem, der, denen: जिसे (Dativ)",
+          "text": "Dativ वाली क्रियाओं के साथ (helfen, danken, gehören): पुल्लिंग और नपुंसकलिंग के लिए dem, स्त्रीलिंग के लिए der, बहुवचन में denen।",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "जिस महिला की मैं मदद करता हूँ, वह मेरी पड़ोसन है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الذي أساعده: dem",
+      "points": [
+        {
+          "title": "dem وder وdenen: لمن",
+          "text": "مع أفعال الجر (helfen، danken، gehören): dem للمذكر والمحايد، وder للمؤنث، وdenen في الجمع.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "المرأة التي أساعدها جارتي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "neighbor-street-four": {
+    "ru": {
+      "title": "Дом, в котором...",
+      "points": [
+        {
+          "title": "Предлог перед который",
+          "text": "Предлог стоит перед der/den/dem, а падеж задаёт предлог: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Дом, в котором я живу, старый."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Будинок, у якому...",
+      "points": [
+        {
+          "title": "Прийменник перед який",
+          "text": "Прийменник стоїть перед der/den/dem, а відмінок задає прийменник: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Будинок, у якому я живу, старий."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The house in which...",
+      "points": [
+        {
+          "title": "Preposition before the relative",
+          "text": "The preposition comes before der/den/dem, and it decides the case: in dem, mit dem (dative), für den (accusative).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "The house I live in is old."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Dom, w którym...",
+      "points": [
+        {
+          "title": "Przyimek przed który",
+          "text": "Przyimek stoi przed der/den/dem, a przypadek wyznacza przyimek: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Dom, w którym mieszkam, jest stary."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "La casa en la que...",
+      "points": [
+        {
+          "title": "Preposición antes del relativo",
+          "text": "La preposición va delante de der/den/dem y ella decide el caso: in dem, mit dem (dativo), für den (acusativo).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "La casa en la que vivo es vieja."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "La maison dans laquelle...",
+      "points": [
+        {
+          "title": "La préposition avant le relatif",
+          "text": "La préposition se place avant der/den/dem et décide du cas : in dem, mit dem (datif), für den (accusatif).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "La maison dans laquelle j’habite est vieille."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "... olduğu ev",
+      "points": [
+        {
+          "title": "Edat zamirden önce",
+          "text": "Edat der/den/dem’den önce gelir ve hâli belirler: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Oturduğum ev eski."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Casa în care...",
+      "points": [
+        {
+          "title": "Prepoziția înaintea relativului",
+          "text": "Prepoziția stă înaintea lui der/den/dem și ea decide cazul: in dem, mit dem (dativ), für den (acuzativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Casa în care locuiesc e veche."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "... uy",
+      "points": [
+        {
+          "title": "Ko'makchi olmoshdan oldin",
+          "text": "Ko'makchi der/den/dem dan oldin turadi va kelishikni belgilaydi: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Men yashayotgan uy eski."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "वह घर जिसमें...",
+      "points": [
+        {
+          "title": "संबंधसूचक \"जो\" से पहले",
+          "text": "संबंधसूचक der/den/dem से पहले आता है और वही कारक तय करता है: in dem, mit dem (Dativ), für den (Akkusativ)।",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "जिस घर में मैं रहता हूँ, वह पुराना है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "البيت الذي فيه...",
+      "points": [
+        {
+          "title": "حرف الجر قبل الضمير",
+          "text": "يأتي حرف الجر قبل der/den/dem وهو الذي يحدد الحالة: in dem، mit dem (جر)، für den (مفعول).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "البيت الذي أسكن فيه قديم."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "neighbor-street-five": {
+    "ru": {
+      "title": "Всё, что...",
+      "points": [
+        {
+          "title": "alles, was",
+          "text": "После alles, nichts, etwas, vieles и das вместо der/die/das ставим was.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "Это всё, что я знаю."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Усе, що...",
+      "points": [
+        {
+          "title": "alles, was",
+          "text": "Після alles, nichts, etwas, vieles і das замість der/die/das ставимо was.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "Це все, що я знаю."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Everything that...",
+      "points": [
+        {
+          "title": "alles, was",
+          "text": "After alles, nichts, etwas, vieles and das, use was instead of der/die/das.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "That’s all I know."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Wszystko, co...",
+      "points": [
+        {
+          "title": "alles, was",
+          "text": "Po alles, nichts, etwas, vieles i das zamiast der/die/das stawiamy was.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "To wszystko, co wiem."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Todo lo que...",
+      "points": [
+        {
+          "title": "alles, was",
+          "text": "Después de alles, nichts, etwas, vieles y das, se usa was en vez de der/die/das.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "Es todo lo que sé."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Tout ce que...",
+      "points": [
+        {
+          "title": "alles, was",
+          "text": "Après alles, nichts, etwas, vieles et das, on met was au lieu de der/die/das.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "C’est tout ce que je sais."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "... her şey",
+      "points": [
+        {
+          "title": "alles, was",
+          "text": "alles, nichts, etwas, vieles ve das’tan sonra der/die/das yerine was kullanılır.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "Bildiğim her şey bu."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Tot ce...",
+      "points": [
+        {
+          "title": "alles, was",
+          "text": "După alles, nichts, etwas, vieles și das, în loc de der/die/das punem was.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "Asta e tot ce știu."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "... hamma narsa",
+      "points": [
+        {
+          "title": "alles, was",
+          "text": "alles, nichts, etwas, vieles va das dan keyin der/die/das o'rniga was qo'yiladi.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "Bilganlarim shu."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "सब कुछ जो...",
+      "points": [
+        {
+          "title": "alles, was",
+          "text": "alles, nichts, etwas, vieles और das के बाद der/die/das की जगह was।",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "मैं बस इतना ही जानता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "كل ما...",
+      "points": [
+        {
+          "title": "alles, was",
+          "text": "بعد alles وnichts وetwas وvieles وdas نستعمل was بدل der/die/das.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "هذا كل ما أعرفه."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "neighbor-street-six": {
+    "ru": {
+      "title": "Ищем квартиру",
+      "points": [
+        {
+          "title": "der, die, das: который",
+          "text": "«Который» берём по роду слова: der, die, das, во множественном die. Глагол в придаточном в конце, вокруг запятые.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Мужчина, который там стоит, мой сосед."
+            }
+          ]
+        },
+        {
+          "title": "Предлог перед который",
+          "text": "Предлог стоит перед der/den/dem, а падеж задаёт предлог: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Дом, в котором я живу, старый."
+            }
+          ]
+        },
+        {
+          "title": "alles, was",
+          "text": "После alles, nichts, etwas, vieles и das вместо der/die/das ставим was.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "Это всё, что я знаю."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Шукаємо квартиру",
+      "points": [
+        {
+          "title": "der, die, das: який",
+          "text": "«Який» беремо за родом слова: der, die, das, у множині die. Дієслово в підрядному в кінці, навколо коми.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Чоловік, який там стоїть, мій сусід."
+            }
+          ]
+        },
+        {
+          "title": "Прийменник перед який",
+          "text": "Прийменник стоїть перед der/den/dem, а відмінок задає прийменник: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Будинок, у якому я живу, старий."
+            }
+          ]
+        },
+        {
+          "title": "alles, was",
+          "text": "Після alles, nichts, etwas, vieles і das замість der/die/das ставимо was.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "Це все, що я знаю."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Looking for a flat",
+      "points": [
+        {
+          "title": "der, die, das: who, which",
+          "text": "\"Who, which\" follows the noun’s gender: der, die, das, plural die. The verb goes last, with commas around the clause.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "The man who is standing there is my neighbour."
+            }
+          ]
+        },
+        {
+          "title": "Preposition before the relative",
+          "text": "The preposition comes before der/den/dem, and it decides the case: in dem, mit dem (dative), für den (accusative).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "The house I live in is old."
+            }
+          ]
+        },
+        {
+          "title": "alles, was",
+          "text": "After alles, nichts, etwas, vieles and das, use was instead of der/die/das.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "That’s all I know."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Szukamy mieszkania",
+      "points": [
+        {
+          "title": "der, die, das: który",
+          "text": "„Który” bierzemy według rodzaju słowa: der, die, das, w mnogiej die. Czasownik na końcu, wokół przecinki.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Mężczyzna, który tam stoi, to mój sąsiad."
+            }
+          ]
+        },
+        {
+          "title": "Przyimek przed który",
+          "text": "Przyimek stoi przed der/den/dem, a przypadek wyznacza przyimek: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Dom, w którym mieszkam, jest stary."
+            }
+          ]
+        },
+        {
+          "title": "alles, was",
+          "text": "Po alles, nichts, etwas, vieles i das zamiast der/die/das stawiamy was.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "To wszystko, co wiem."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Buscamos piso",
+      "points": [
+        {
+          "title": "der, die, das: que",
+          "text": "El relativo sigue el género: der, die, das, en plural die. El verbo va al final y hay comas alrededor.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "El hombre que está allí es mi vecino."
+            }
+          ]
+        },
+        {
+          "title": "Preposición antes del relativo",
+          "text": "La preposición va delante de der/den/dem y ella decide el caso: in dem, mit dem (dativo), für den (acusativo).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "La casa en la que vivo es vieja."
+            }
+          ]
+        },
+        {
+          "title": "alles, was",
+          "text": "Después de alles, nichts, etwas, vieles y das, se usa was en vez de der/die/das.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "Es todo lo que sé."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "On cherche un appartement",
+      "points": [
+        {
+          "title": "der, die, das : qui",
+          "text": "Le relatif suit le genre du nom : der, die, das, au pluriel die. Le verbe va à la fin, avec des virgules autour.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "L’homme qui est là-bas est mon voisin."
+            }
+          ]
+        },
+        {
+          "title": "La préposition avant le relatif",
+          "text": "La préposition se place avant der/den/dem et décide du cas : in dem, mit dem (datif), für den (accusatif).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "La maison dans laquelle j’habite est vieille."
+            }
+          ]
+        },
+        {
+          "title": "alles, was",
+          "text": "Après alles, nichts, etwas, vieles et das, on met was au lieu de der/die/das.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "C’est tout ce que je sais."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Daire arıyoruz",
+      "points": [
+        {
+          "title": "der, die, das: ki o",
+          "text": "\"ki o\" ismin cinsiyetine göre seçilir: der, die, das, çoğulda die. Fiil sonda, etrafında virgüller.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Orada duran adam benim komşum."
+            }
+          ]
+        },
+        {
+          "title": "Edat zamirden önce",
+          "text": "Edat der/den/dem’den önce gelir ve hâli belirler: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Oturduğum ev eski."
+            }
+          ]
+        },
+        {
+          "title": "alles, was",
+          "text": "alles, nichts, etwas, vieles ve das’tan sonra der/die/das yerine was kullanılır.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "Bildiğim her şey bu."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Căutăm un apartament",
+      "points": [
+        {
+          "title": "der, die, das: care",
+          "text": "„Care” după genul cuvântului: der, die, das, la plural die. Verbul la final, cu virgule în jur.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Bărbatul care stă acolo e vecinul meu."
+            }
+          ]
+        },
+        {
+          "title": "Prepoziția înaintea relativului",
+          "text": "Prepoziția stă înaintea lui der/den/dem și ea decide cazul: in dem, mit dem (dativ), für den (acuzativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Casa în care locuiesc e veche."
+            }
+          ]
+        },
+        {
+          "title": "alles, was",
+          "text": "După alles, nichts, etwas, vieles și das, în loc de der/die/das punem was.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "Asta e tot ce știu."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kvartira qidiramiz",
+      "points": [
+        {
+          "title": "der, die, das: qaysiki",
+          "text": "\"Qaysiki\" so'zning rodiga qarab: der, die, das, ko'plikda die. Fe'l oxirida, atrofida vergullar.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "U yerda turgan erkak mening qo'shnim."
+            }
+          ]
+        },
+        {
+          "title": "Ko'makchi olmoshdan oldin",
+          "text": "Ko'makchi der/den/dem dan oldin turadi va kelishikni belgilaydi: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Men yashayotgan uy eski."
+            }
+          ]
+        },
+        {
+          "title": "alles, was",
+          "text": "alles, nichts, etwas, vieles va das dan keyin der/die/das o'rniga was qo'yiladi.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "Bilganlarim shu."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "फ़्लैट ढूँढ रहे हैं",
+      "points": [
+        {
+          "title": "der, die, das: जो",
+          "text": "\"जो\" संज्ञा के लिंग के अनुसार: der, die, das, बहुवचन में die। क्रिया अंत में, चारों ओर कॉमा।",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "वहाँ खड़ा आदमी मेरा पड़ोसी है।"
+            }
+          ]
+        },
+        {
+          "title": "संबंधसूचक \"जो\" से पहले",
+          "text": "संबंधसूचक der/den/dem से पहले आता है और वही कारक तय करता है: in dem, mit dem (Dativ), für den (Akkusativ)।",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "जिस घर में मैं रहता हूँ, वह पुराना है।"
+            }
+          ]
+        },
+        {
+          "title": "alles, was",
+          "text": "alles, nichts, etwas, vieles और das के बाद der/die/das की जगह was।",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "मैं बस इतना ही जानता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "نبحث عن شقة",
+      "points": [
+        {
+          "title": "der وdie وdas: الذي",
+          "text": "\"الذي\" حسب جنس الاسم: der وdie وdas، وفي الجمع die. والفعل في الآخر وحولها فواصل.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "الرجل الذي يقف هناك جاري."
+            }
+          ]
+        },
+        {
+          "title": "حرف الجر قبل الضمير",
+          "text": "يأتي حرف الجر قبل der/den/dem وهو الذي يحدد الحالة: in dem، mit dem (جر)، für den (مفعول).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "البيت الذي أسكن فيه قديم."
+            }
+          ]
+        },
+        {
+          "title": "alles, was",
+          "text": "بعد alles وnichts وetwas وvieles وdas نستعمل was بدل der/die/das.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "هذا كل ما أعرفه."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "neighbor-street-seven": {
+    "ru": {
+      "title": "Практика: прогулка по городу",
+      "points": [
+        {
+          "title": "der, die, das: который",
+          "text": "«Который» берём по роду слова: der, die, das, во множественном die. Глагол в придаточном в конце, вокруг запятые.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Мужчина, который там стоит, мой сосед."
+            }
+          ]
+        },
+        {
+          "title": "Предлог перед который",
+          "text": "Предлог стоит перед der/den/dem, а падеж задаёт предлог: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Дом, в котором я живу, старый."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: прогулянка містом",
+      "points": [
+        {
+          "title": "der, die, das: який",
+          "text": "«Який» беремо за родом слова: der, die, das, у множині die. Дієслово в підрядному в кінці, навколо коми.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Чоловік, який там стоїть, мій сусід."
+            }
+          ]
+        },
+        {
+          "title": "Прийменник перед який",
+          "text": "Прийменник стоїть перед der/den/dem, а відмінок задає прийменник: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Будинок, у якому я живу, старий."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: a walk through town",
+      "points": [
+        {
+          "title": "der, die, das: who, which",
+          "text": "\"Who, which\" follows the noun’s gender: der, die, das, plural die. The verb goes last, with commas around the clause.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "The man who is standing there is my neighbour."
+            }
+          ]
+        },
+        {
+          "title": "Preposition before the relative",
+          "text": "The preposition comes before der/den/dem, and it decides the case: in dem, mit dem (dative), für den (accusative).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "The house I live in is old."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: spacer po mieście",
+      "points": [
+        {
+          "title": "der, die, das: który",
+          "text": "„Który” bierzemy według rodzaju słowa: der, die, das, w mnogiej die. Czasownik na końcu, wokół przecinki.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Mężczyzna, który tam stoi, to mój sąsiad."
+            }
+          ]
+        },
+        {
+          "title": "Przyimek przed który",
+          "text": "Przyimek stoi przed der/den/dem, a przypadek wyznacza przyimek: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Dom, w którym mieszkam, jest stary."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: paseo por la ciudad",
+      "points": [
+        {
+          "title": "der, die, das: que",
+          "text": "El relativo sigue el género: der, die, das, en plural die. El verbo va al final y hay comas alrededor.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "El hombre que está allí es mi vecino."
+            }
+          ]
+        },
+        {
+          "title": "Preposición antes del relativo",
+          "text": "La preposición va delante de der/den/dem y ella decide el caso: in dem, mit dem (dativo), für den (acusativo).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "La casa en la que vivo es vieja."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : promenade en ville",
+      "points": [
+        {
+          "title": "der, die, das : qui",
+          "text": "Le relatif suit le genre du nom : der, die, das, au pluriel die. Le verbe va à la fin, avec des virgules autour.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "L’homme qui est là-bas est mon voisin."
+            }
+          ]
+        },
+        {
+          "title": "La préposition avant le relatif",
+          "text": "La préposition se place avant der/den/dem et décide du cas : in dem, mit dem (datif), für den (accusatif).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "La maison dans laquelle j’habite est vieille."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: şehir gezisi",
+      "points": [
+        {
+          "title": "der, die, das: ki o",
+          "text": "\"ki o\" ismin cinsiyetine göre seçilir: der, die, das, çoğulda die. Fiil sonda, etrafında virgüller.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Orada duran adam benim komşum."
+            }
+          ]
+        },
+        {
+          "title": "Edat zamirden önce",
+          "text": "Edat der/den/dem’den önce gelir ve hâli belirler: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Oturduğum ev eski."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: plimbare prin oraș",
+      "points": [
+        {
+          "title": "der, die, das: care",
+          "text": "„Care” după genul cuvântului: der, die, das, la plural die. Verbul la final, cu virgule în jur.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Bărbatul care stă acolo e vecinul meu."
+            }
+          ]
+        },
+        {
+          "title": "Prepoziția înaintea relativului",
+          "text": "Prepoziția stă înaintea lui der/den/dem și ea decide cazul: in dem, mit dem (dativ), für den (acuzativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Casa în care locuiesc e veche."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: shahar bo'ylab sayr",
+      "points": [
+        {
+          "title": "der, die, das: qaysiki",
+          "text": "\"Qaysiki\" so'zning rodiga qarab: der, die, das, ko'plikda die. Fe'l oxirida, atrofida vergullar.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "U yerda turgan erkak mening qo'shnim."
+            }
+          ]
+        },
+        {
+          "title": "Ko'makchi olmoshdan oldin",
+          "text": "Ko'makchi der/den/dem dan oldin turadi va kelishikni belgilaydi: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Men yashayotgan uy eski."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: शहर की सैर",
+      "points": [
+        {
+          "title": "der, die, das: जो",
+          "text": "\"जो\" संज्ञा के लिंग के अनुसार: der, die, das, बहुवचन में die। क्रिया अंत में, चारों ओर कॉमा।",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "वहाँ खड़ा आदमी मेरा पड़ोसी है।"
+            }
+          ]
+        },
+        {
+          "title": "संबंधसूचक \"जो\" से पहले",
+          "text": "संबंधसूचक der/den/dem से पहले आता है और वही कारक तय करता है: in dem, mit dem (Dativ), für den (Akkusativ)।",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "जिस घर में मैं रहता हूँ, वह पुराना है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: جولة في المدينة",
+      "points": [
+        {
+          "title": "der وdie وdas: الذي",
+          "text": "\"الذي\" حسب جنس الاسم: der وdie وdas، وفي الجمع die. والفعل في الآخر وحولها فواصل.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "الرجل الذي يقف هناك جاري."
+            }
+          ]
+        },
+        {
+          "title": "حرف الجر قبل الضمير",
+          "text": "يأتي حرف الجر قبل der/den/dem وهو الذي يحدد الحالة: in dem، mit dem (جر)، für den (مفعول).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "البيت الذي أسكن فيه قديم."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "neighbor-street-eight": {
+    "ru": {
+      "title": "Практика: люди на работе",
+      "points": [
+        {
+          "title": "den: которого",
+          "text": "Если в придаточном «который» отвечает на вопрос кого? что?, это Akkusativ. Меняется только мужской род: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Фильм, который я вчера посмотрел, был отличный."
+            }
+          ]
+        },
+        {
+          "title": "dem, der, denen: которому",
+          "text": "С глаголами на Dativ (helfen, danken, gehören): dem для мужского и среднего, der для женского, denen во множественном.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "Женщина, которой я помогаю, моя соседка."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: люди на роботі",
+      "points": [
+        {
+          "title": "den: якого",
+          "text": "Якщо в підрядному «який» відповідає на питання кого? що?, це Akkusativ. Змінюється лише чоловічий рід: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Фільм, який я вчора подивився, був чудовий."
+            }
+          ]
+        },
+        {
+          "title": "dem, der, denen: якому",
+          "text": "З дієсловами на Dativ (helfen, danken, gehören): dem для чоловічого й середнього, der для жіночого, denen у множині.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "Жінка, якій я допомагаю, моя сусідка."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: people at work",
+      "points": [
+        {
+          "title": "den: whom (masculine)",
+          "text": "If the relative pronoun is the object (whom? what?), it’s accusative. Only masculine changes: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "The film I saw yesterday was great."
+            }
+          ]
+        },
+        {
+          "title": "dem, der, denen: to whom",
+          "text": "With dative verbs (helfen, danken, gehören): dem for masculine and neuter, der for feminine, denen in the plural.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "The woman I’m helping is my neighbour."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: ludzie w pracy",
+      "points": [
+        {
+          "title": "den: którego",
+          "text": "Jeśli w zdaniu podrzędnym „który” odpowiada na pytanie kogo? co?, to Akkusativ. Zmienia się tylko rodzaj męski: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Film, który wczoraj obejrzałem, był świetny."
+            }
+          ]
+        },
+        {
+          "title": "dem, der, denen: któremu",
+          "text": "Z czasownikami z Dativ (helfen, danken, gehören): dem dla męskiego i nijakiego, der dla żeńskiego, denen w mnogiej.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "Kobieta, której pomagam, to moja sąsiadka."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: gente en el trabajo",
+      "points": [
+        {
+          "title": "den: al que",
+          "text": "Si el relativo es el objeto (¿a quién? ¿qué?), va en acusativo. Solo cambia el masculino: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "La película que vi ayer era genial."
+            }
+          ]
+        },
+        {
+          "title": "dem, der, denen: a quien",
+          "text": "Con verbos de dativo (helfen, danken, gehören): dem para masculino y neutro, der para femenino, denen en plural.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "La mujer a la que ayudo es mi vecina."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : les gens au travail",
+      "points": [
+        {
+          "title": "den : que (masculin)",
+          "text": "Si le relatif est complément (qui ? quoi ?), c’est l’accusatif. Seul le masculin change : der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Le film que j’ai vu hier était génial."
+            }
+          ]
+        },
+        {
+          "title": "dem, der, denen : à qui",
+          "text": "Avec les verbes au datif (helfen, danken, gehören) : dem pour le masculin et le neutre, der pour le féminin, denen au pluriel.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "La femme que j’aide est ma voisine."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: iş yerindeki insanlar",
+      "points": [
+        {
+          "title": "den: -dığı (eril)",
+          "text": "Zamir nesne ise (kimi? neyi?) Akkusativ’dir. Sadece eril değişir: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Dün izlediğim film harikaydı."
+            }
+          ]
+        },
+        {
+          "title": "dem, der, denen: kime",
+          "text": "Dativ alan fiillerle (helfen, danken, gehören): eril ve nötr için dem, dişil için der, çoğulda denen.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "Yardım ettiğim kadın komşum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: oameni la muncă",
+      "points": [
+        {
+          "title": "den: pe care",
+          "text": "Dacă relativul e complement (pe cine? ce?), e acuzativ. Doar masculinul se schimbă: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Filmul pe care l-am văzut ieri a fost grozav."
+            }
+          ]
+        },
+        {
+          "title": "dem, der, denen: căruia",
+          "text": "Cu verbe la dativ (helfen, danken, gehören): dem pentru masculin și neutru, der pentru feminin, denen la plural.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "Femeia pe care o ajut e vecina mea."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: ishdagi odamlar",
+      "points": [
+        {
+          "title": "den: kimni",
+          "text": "Agar nisbiy olmosh to'ldiruvchi bo'lsa (kimni? nimani?), bu Akkusativ. Faqat erkak rodi o'zgaradi: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Kecha ko'rgan filmim ajoyib edi."
+            }
+          ]
+        },
+        {
+          "title": "dem, der, denen: kimga",
+          "text": "Dativ talab qiluvchi fe'llar bilan (helfen, danken, gehören): erkak va o'rta rod uchun dem, ayol uchun der, ko'plikda denen.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "Men yordam beradigan ayol mening qo'shnim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: काम पर लोग",
+      "points": [
+        {
+          "title": "den: जिसे (पु)",
+          "text": "अगर \"जो\" कर्म है (किसे? क्या?), तो Akkusativ। सिर्फ़ पुल्लिंग बदलता है: der → den।",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "कल जो फ़िल्म मैंने देखी, वह शानदार थी।"
+            }
+          ]
+        },
+        {
+          "title": "dem, der, denen: जिसे (Dativ)",
+          "text": "Dativ वाली क्रियाओं के साथ (helfen, danken, gehören): पुल्लिंग और नपुंसकलिंग के लिए dem, स्त्रीलिंग के लिए der, बहुवचन में denen।",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "जिस महिला की मैं मदद करता हूँ, वह मेरी पड़ोसन है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: الناس في العمل",
+      "points": [
+        {
+          "title": "den: الذي (مفعول مذكر)",
+          "text": "إذا كان الضمير مفعولاً به (من؟ ماذا؟) فهو في حالة المفعول. ويتغير المذكر فقط: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "الفيلم الذي شاهدته أمس كان رائعاً."
+            }
+          ]
+        },
+        {
+          "title": "dem وder وdenen: لمن",
+          "text": "مع أفعال الجر (helfen، danken، gehören): dem للمذكر والمحايد، وder للمؤنث، وdenen في الجمع.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "المرأة التي أساعدها جارتي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "neighbor-street-nine": {
+    "ru": {
+      "title": "Повторение: который",
+      "points": [
+        {
+          "title": "der, die, das: который",
+          "text": "«Который» берём по роду слова: der, die, das, во множественном die. Глагол в придаточном в конце, вокруг запятые.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Мужчина, который там стоит, мой сосед."
+            }
+          ]
+        },
+        {
+          "title": "den: которого",
+          "text": "Если в придаточном «который» отвечает на вопрос кого? что?, это Akkusativ. Меняется только мужской род: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Фильм, который я вчера посмотрел, был отличный."
+            }
+          ]
+        },
+        {
+          "title": "dem, der, denen: которому",
+          "text": "С глаголами на Dativ (helfen, danken, gehören): dem для мужского и среднего, der для женского, denen во множественном.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "Женщина, которой я помогаю, моя соседка."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: який",
+      "points": [
+        {
+          "title": "der, die, das: який",
+          "text": "«Який» беремо за родом слова: der, die, das, у множині die. Дієслово в підрядному в кінці, навколо коми.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Чоловік, який там стоїть, мій сусід."
+            }
+          ]
+        },
+        {
+          "title": "den: якого",
+          "text": "Якщо в підрядному «який» відповідає на питання кого? що?, це Akkusativ. Змінюється лише чоловічий рід: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Фільм, який я вчора подивився, був чудовий."
+            }
+          ]
+        },
+        {
+          "title": "dem, der, denen: якому",
+          "text": "З дієсловами на Dativ (helfen, danken, gehören): dem для чоловічого й середнього, der для жіночого, denen у множині.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "Жінка, якій я допомагаю, моя сусідка."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: relative clauses",
+      "points": [
+        {
+          "title": "der, die, das: who, which",
+          "text": "\"Who, which\" follows the noun’s gender: der, die, das, plural die. The verb goes last, with commas around the clause.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "The man who is standing there is my neighbour."
+            }
+          ]
+        },
+        {
+          "title": "den: whom (masculine)",
+          "text": "If the relative pronoun is the object (whom? what?), it’s accusative. Only masculine changes: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "The film I saw yesterday was great."
+            }
+          ]
+        },
+        {
+          "title": "dem, der, denen: to whom",
+          "text": "With dative verbs (helfen, danken, gehören): dem for masculine and neuter, der for feminine, denen in the plural.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "The woman I’m helping is my neighbour."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: który",
+      "points": [
+        {
+          "title": "der, die, das: który",
+          "text": "„Który” bierzemy według rodzaju słowa: der, die, das, w mnogiej die. Czasownik na końcu, wokół przecinki.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Mężczyzna, który tam stoi, to mój sąsiad."
+            }
+          ]
+        },
+        {
+          "title": "den: którego",
+          "text": "Jeśli w zdaniu podrzędnym „który” odpowiada na pytanie kogo? co?, to Akkusativ. Zmienia się tylko rodzaj męski: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Film, który wczoraj obejrzałem, był świetny."
+            }
+          ]
+        },
+        {
+          "title": "dem, der, denen: któremu",
+          "text": "Z czasownikami z Dativ (helfen, danken, gehören): dem dla męskiego i nijakiego, der dla żeńskiego, denen w mnogiej.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "Kobieta, której pomagam, to moja sąsiadka."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: relativas",
+      "points": [
+        {
+          "title": "der, die, das: que",
+          "text": "El relativo sigue el género: der, die, das, en plural die. El verbo va al final y hay comas alrededor.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "El hombre que está allí es mi vecino."
+            }
+          ]
+        },
+        {
+          "title": "den: al que",
+          "text": "Si el relativo es el objeto (¿a quién? ¿qué?), va en acusativo. Solo cambia el masculino: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "La película que vi ayer era genial."
+            }
+          ]
+        },
+        {
+          "title": "dem, der, denen: a quien",
+          "text": "Con verbos de dativo (helfen, danken, gehören): dem para masculino y neutro, der para femenino, denen en plural.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "La mujer a la que ayudo es mi vecina."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : les relatives",
+      "points": [
+        {
+          "title": "der, die, das : qui",
+          "text": "Le relatif suit le genre du nom : der, die, das, au pluriel die. Le verbe va à la fin, avec des virgules autour.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "L’homme qui est là-bas est mon voisin."
+            }
+          ]
+        },
+        {
+          "title": "den : que (masculin)",
+          "text": "Si le relatif est complément (qui ? quoi ?), c’est l’accusatif. Seul le masculin change : der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Le film que j’ai vu hier était génial."
+            }
+          ]
+        },
+        {
+          "title": "dem, der, denen : à qui",
+          "text": "Avec les verbes au datif (helfen, danken, gehören) : dem pour le masculin et le neutre, der pour le féminin, denen au pluriel.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "La femme que j’aide est ma voisine."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: ilgi cümleleri",
+      "points": [
+        {
+          "title": "der, die, das: ki o",
+          "text": "\"ki o\" ismin cinsiyetine göre seçilir: der, die, das, çoğulda die. Fiil sonda, etrafında virgüller.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Orada duran adam benim komşum."
+            }
+          ]
+        },
+        {
+          "title": "den: -dığı (eril)",
+          "text": "Zamir nesne ise (kimi? neyi?) Akkusativ’dir. Sadece eril değişir: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Dün izlediğim film harikaydı."
+            }
+          ]
+        },
+        {
+          "title": "dem, der, denen: kime",
+          "text": "Dativ alan fiillerle (helfen, danken, gehören): eril ve nötr için dem, dişil için der, çoğulda denen.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "Yardım ettiğim kadın komşum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: relative",
+      "points": [
+        {
+          "title": "der, die, das: care",
+          "text": "„Care” după genul cuvântului: der, die, das, la plural die. Verbul la final, cu virgule în jur.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "Bărbatul care stă acolo e vecinul meu."
+            }
+          ]
+        },
+        {
+          "title": "den: pe care",
+          "text": "Dacă relativul e complement (pe cine? ce?), e acuzativ. Doar masculinul se schimbă: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Filmul pe care l-am văzut ieri a fost grozav."
+            }
+          ]
+        },
+        {
+          "title": "dem, der, denen: căruia",
+          "text": "Cu verbe la dativ (helfen, danken, gehören): dem pentru masculin și neutru, der pentru feminin, denen la plural.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "Femeia pe care o ajut e vecina mea."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: nisbiy gaplar",
+      "points": [
+        {
+          "title": "der, die, das: qaysiki",
+          "text": "\"Qaysiki\" so'zning rodiga qarab: der, die, das, ko'plikda die. Fe'l oxirida, atrofida vergullar.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "U yerda turgan erkak mening qo'shnim."
+            }
+          ]
+        },
+        {
+          "title": "den: kimni",
+          "text": "Agar nisbiy olmosh to'ldiruvchi bo'lsa (kimni? nimani?), bu Akkusativ. Faqat erkak rodi o'zgaradi: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Kecha ko'rgan filmim ajoyib edi."
+            }
+          ]
+        },
+        {
+          "title": "dem, der, denen: kimga",
+          "text": "Dativ talab qiluvchi fe'llar bilan (helfen, danken, gehören): erkak va o'rta rod uchun dem, ayol uchun der, ko'plikda denen.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "Men yordam beradigan ayol mening qo'shnim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: संबंधवाचक",
+      "points": [
+        {
+          "title": "der, die, das: जो",
+          "text": "\"जो\" संज्ञा के लिंग के अनुसार: der, die, das, बहुवचन में die। क्रिया अंत में, चारों ओर कॉमा।",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "वहाँ खड़ा आदमी मेरा पड़ोसी है।"
+            }
+          ]
+        },
+        {
+          "title": "den: जिसे (पु)",
+          "text": "अगर \"जो\" कर्म है (किसे? क्या?), तो Akkusativ। सिर्फ़ पुल्लिंग बदलता है: der → den।",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "कल जो फ़िल्म मैंने देखी, वह शानदार थी।"
+            }
+          ]
+        },
+        {
+          "title": "dem, der, denen: जिसे (Dativ)",
+          "text": "Dativ वाली क्रियाओं के साथ (helfen, danken, gehören): पुल्लिंग और नपुंसकलिंग के लिए dem, स्त्रीलिंग के लिए der, बहुवचन में denen।",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "जिस महिला की मैं मदद करता हूँ, वह मेरी पड़ोसन है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: جمل الصلة",
+      "points": [
+        {
+          "title": "der وdie وdas: الذي",
+          "text": "\"الذي\" حسب جنس الاسم: der وdie وdas، وفي الجمع die. والفعل في الآخر وحولها فواصل.",
+          "examples": [
+            {
+              "de": "Der Mann, der dort steht, ist mein Nachbar.",
+              "tr": "الرجل الذي يقف هناك جاري."
+            }
+          ]
+        },
+        {
+          "title": "den: الذي (مفعول مذكر)",
+          "text": "إذا كان الضمير مفعولاً به (من؟ ماذا؟) فهو في حالة المفعول. ويتغير المذكر فقط: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "الفيلم الذي شاهدته أمس كان رائعاً."
+            }
+          ]
+        },
+        {
+          "title": "dem وder وdenen: لمن",
+          "text": "مع أفعال الجر (helfen، danken، gehören): dem للمذكر والمحايد، وder للمؤنث، وdenen في الجمع.",
+          "examples": [
+            {
+              "de": "Die Frau, der ich helfe, ist meine Nachbarin.",
+              "tr": "المرأة التي أساعدها جارتي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "neighbor-street-ten": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "den: которого",
+          "text": "Если в придаточном «который» отвечает на вопрос кого? что?, это Akkusativ. Меняется только мужской род: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Фильм, который я вчера посмотрел, был отличный."
+            }
+          ]
+        },
+        {
+          "title": "Предлог перед который",
+          "text": "Предлог стоит перед der/den/dem, а падеж задаёт предлог: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Дом, в котором я живу, старый."
+            }
+          ]
+        },
+        {
+          "title": "alles, was",
+          "text": "После alles, nichts, etwas, vieles и das вместо der/die/das ставим was.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "Это всё, что я знаю."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "den: якого",
+          "text": "Якщо в підрядному «який» відповідає на питання кого? що?, це Akkusativ. Змінюється лише чоловічий рід: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Фільм, який я вчора подивився, був чудовий."
+            }
+          ]
+        },
+        {
+          "title": "Прийменник перед який",
+          "text": "Прийменник стоїть перед der/den/dem, а відмінок задає прийменник: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Будинок, у якому я живу, старий."
+            }
+          ]
+        },
+        {
+          "title": "alles, was",
+          "text": "Після alles, nichts, etwas, vieles і das замість der/die/das ставимо was.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "Це все, що я знаю."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "den: whom (masculine)",
+          "text": "If the relative pronoun is the object (whom? what?), it’s accusative. Only masculine changes: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "The film I saw yesterday was great."
+            }
+          ]
+        },
+        {
+          "title": "Preposition before the relative",
+          "text": "The preposition comes before der/den/dem, and it decides the case: in dem, mit dem (dative), für den (accusative).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "The house I live in is old."
+            }
+          ]
+        },
+        {
+          "title": "alles, was",
+          "text": "After alles, nichts, etwas, vieles and das, use was instead of der/die/das.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "That’s all I know."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "den: którego",
+          "text": "Jeśli w zdaniu podrzędnym „który” odpowiada na pytanie kogo? co?, to Akkusativ. Zmienia się tylko rodzaj męski: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Film, który wczoraj obejrzałem, był świetny."
+            }
+          ]
+        },
+        {
+          "title": "Przyimek przed który",
+          "text": "Przyimek stoi przed der/den/dem, a przypadek wyznacza przyimek: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Dom, w którym mieszkam, jest stary."
+            }
+          ]
+        },
+        {
+          "title": "alles, was",
+          "text": "Po alles, nichts, etwas, vieles i das zamiast der/die/das stawiamy was.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "To wszystko, co wiem."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "den: al que",
+          "text": "Si el relativo es el objeto (¿a quién? ¿qué?), va en acusativo. Solo cambia el masculino: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "La película que vi ayer era genial."
+            }
+          ]
+        },
+        {
+          "title": "Preposición antes del relativo",
+          "text": "La preposición va delante de der/den/dem y ella decide el caso: in dem, mit dem (dativo), für den (acusativo).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "La casa en la que vivo es vieja."
+            }
+          ]
+        },
+        {
+          "title": "alles, was",
+          "text": "Después de alles, nichts, etwas, vieles y das, se usa was en vez de der/die/das.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "Es todo lo que sé."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "den : que (masculin)",
+          "text": "Si le relatif est complément (qui ? quoi ?), c’est l’accusatif. Seul le masculin change : der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Le film que j’ai vu hier était génial."
+            }
+          ]
+        },
+        {
+          "title": "La préposition avant le relatif",
+          "text": "La préposition se place avant der/den/dem et décide du cas : in dem, mit dem (datif), für den (accusatif).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "La maison dans laquelle j’habite est vieille."
+            }
+          ]
+        },
+        {
+          "title": "alles, was",
+          "text": "Après alles, nichts, etwas, vieles et das, on met was au lieu de der/die/das.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "C’est tout ce que je sais."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "den: -dığı (eril)",
+          "text": "Zamir nesne ise (kimi? neyi?) Akkusativ’dir. Sadece eril değişir: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Dün izlediğim film harikaydı."
+            }
+          ]
+        },
+        {
+          "title": "Edat zamirden önce",
+          "text": "Edat der/den/dem’den önce gelir ve hâli belirler: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Oturduğum ev eski."
+            }
+          ]
+        },
+        {
+          "title": "alles, was",
+          "text": "alles, nichts, etwas, vieles ve das’tan sonra der/die/das yerine was kullanılır.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "Bildiğim her şey bu."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "den: pe care",
+          "text": "Dacă relativul e complement (pe cine? ce?), e acuzativ. Doar masculinul se schimbă: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Filmul pe care l-am văzut ieri a fost grozav."
+            }
+          ]
+        },
+        {
+          "title": "Prepoziția înaintea relativului",
+          "text": "Prepoziția stă înaintea lui der/den/dem și ea decide cazul: in dem, mit dem (dativ), für den (acuzativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Casa în care locuiesc e veche."
+            }
+          ]
+        },
+        {
+          "title": "alles, was",
+          "text": "După alles, nichts, etwas, vieles și das, în loc de der/die/das punem was.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "Asta e tot ce știu."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "den: kimni",
+          "text": "Agar nisbiy olmosh to'ldiruvchi bo'lsa (kimni? nimani?), bu Akkusativ. Faqat erkak rodi o'zgaradi: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "Kecha ko'rgan filmim ajoyib edi."
+            }
+          ]
+        },
+        {
+          "title": "Ko'makchi olmoshdan oldin",
+          "text": "Ko'makchi der/den/dem dan oldin turadi va kelishikni belgilaydi: in dem, mit dem (Dativ), für den (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "Men yashayotgan uy eski."
+            }
+          ]
+        },
+        {
+          "title": "alles, was",
+          "text": "alles, nichts, etwas, vieles va das dan keyin der/die/das o'rniga was qo'yiladi.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "Bilganlarim shu."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "den: जिसे (पु)",
+          "text": "अगर \"जो\" कर्म है (किसे? क्या?), तो Akkusativ। सिर्फ़ पुल्लिंग बदलता है: der → den।",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "कल जो फ़िल्म मैंने देखी, वह शानदार थी।"
+            }
+          ]
+        },
+        {
+          "title": "संबंधसूचक \"जो\" से पहले",
+          "text": "संबंधसूचक der/den/dem से पहले आता है और वही कारक तय करता है: in dem, mit dem (Dativ), für den (Akkusativ)।",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "जिस घर में मैं रहता हूँ, वह पुराना है।"
+            }
+          ]
+        },
+        {
+          "title": "alles, was",
+          "text": "alles, nichts, etwas, vieles और das के बाद der/die/das की जगह was।",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "मैं बस इतना ही जानता हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "den: الذي (مفعول مذكر)",
+          "text": "إذا كان الضمير مفعولاً به (من؟ ماذا؟) فهو في حالة المفعول. ويتغير المذكر فقط: der → den.",
+          "examples": [
+            {
+              "de": "Der Film, den ich gestern gesehen habe, war toll.",
+              "tr": "الفيلم الذي شاهدته أمس كان رائعاً."
+            }
+          ]
+        },
+        {
+          "title": "حرف الجر قبل الضمير",
+          "text": "يأتي حرف الجر قبل der/den/dem وهو الذي يحدد الحالة: in dem، mit dem (جر)، für den (مفعول).",
+          "examples": [
+            {
+              "de": "Das Haus, in dem ich wohne, ist alt.",
+              "tr": "البيت الذي أسكن فيه قديم."
+            }
+          ]
+        },
+        {
+          "title": "alles, was",
+          "text": "بعد alles وnichts وetwas وvieles وdas نستعمل was بدل der/die/das.",
+          "examples": [
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "هذا كل ما أعرفه."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

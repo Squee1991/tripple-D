@@ -1,0 +1,2882 @@
+{
+  "past-simple-1": {
+    "ru": {
+      "title": "war: я был",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. У ich и er одинаково, без окончания.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Вчера мы были в кино."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Где вы были?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "war: я був",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. У ich та er однаково, без закінчення.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Учора ми були в кіно."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Де ви були?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "war: I was",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich and er are the same, with no ending.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Yesterday we were at the cinema."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Where were you (all)?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "war: byłem",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich i er tak samo, bez końcówki.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Wczoraj byliśmy w kinie."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Gdzie byliście?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "war: estaba, era",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich y er son iguales, sin terminación.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Ayer estuvimos en el cine."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "¿Dónde estabais?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "war : j’étais",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich et er sont identiques, sans terminaison.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Hier, nous étions au cinéma."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Où étiez-vous ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "war: idim",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich ve er aynı, eksiz.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Dün sinemadaydık."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Neredeydiniz?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "war: am fost",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich și er la fel, fără terminație.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Ieri am fost la cinema."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Unde ați fost?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "war: edim",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich va er bir xil, qo'shimchasiz.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Kecha biz kinoda edik."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Qayerda edinglar?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "war: मैं था",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren। ich और er एक जैसे, बिना अंत के।",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "कल हम सिनेमा में थे।"
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "तुम सब कहाँ थे?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "war: كنتُ",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war، du warst، er war، wir waren، ihr wart، sie waren. ich وer متشابهتان وبدون نهاية.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "أمس كنا في السينما."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "أين كنتم؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "past-simple-2": {
+    "ru": {
+      "title": "hatte: у меня было",
+      "points": [
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Вчера у меня не было времени."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "hatte: у мене було",
+      "points": [
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Учора в мене не було часу."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "hatte: I had",
+      "points": [
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Yesterday I had no time."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "hatte: miałem",
+      "points": [
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Wczoraj nie miałem czasu."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "hatte: tenía",
+      "points": [
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Ayer no tenía tiempo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "hatte : j’avais",
+      "points": [
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Hier, je n’avais pas le temps."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "hatte: vardı",
+      "points": [
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Dün vaktim yoktu."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "hatte: am avut",
+      "points": [
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Ieri nu am avut timp."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "hatte: menda bor edi",
+      "points": [
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Kecha vaqtim yo'q edi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "hatte: मेरे पास था",
+      "points": [
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten।",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "कल मेरे पास समय नहीं था।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "hatte: كان عندي",
+      "points": [
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte، du hattest، er hatte، wir hatten، ihr hattet، sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "أمس لم يكن عندي وقت."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "past-simple-3": {
+    "ru": {
+      "title": "war или hatte?",
+      "points": [
+        {
+          "title": "Как выбрать",
+          "text": "Как в настоящем: müde sein → war müde, Stress haben → hatte Stress. Слова времени: gestern, letzte Woche, letztes Jahr.",
+          "examples": [
+            {
+              "de": "Gestern war ich müde.",
+              "tr": "Вчера я был уставшим."
+            },
+            {
+              "de": "Gestern hatte ich Stress.",
+              "tr": "Вчера у меня был стресс."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "war чи hatte?",
+      "points": [
+        {
+          "title": "Як обрати",
+          "text": "Як у теперішньому: müde sein → war müde, Stress haben → hatte Stress. Слова часу: gestern, letzte Woche, letztes Jahr.",
+          "examples": [
+            {
+              "de": "Gestern war ich müde.",
+              "tr": "Учора я був втомлений."
+            },
+            {
+              "de": "Gestern hatte ich Stress.",
+              "tr": "Учора в мене був стрес."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "war or hatte?",
+      "points": [
+        {
+          "title": "How to choose",
+          "text": "Same as in the present: müde sein → war müde, Stress haben → hatte Stress. Time words: gestern, letzte Woche, letztes Jahr.",
+          "examples": [
+            {
+              "de": "Gestern war ich müde.",
+              "tr": "Yesterday I was tired."
+            },
+            {
+              "de": "Gestern hatte ich Stress.",
+              "tr": "Yesterday I was stressed."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "war czy hatte?",
+      "points": [
+        {
+          "title": "Jak wybrać",
+          "text": "Jak w teraźniejszym: müde sein → war müde, Stress haben → hatte Stress. Słowa czasu: gestern, letzte Woche, letztes Jahr.",
+          "examples": [
+            {
+              "de": "Gestern war ich müde.",
+              "tr": "Wczoraj byłem zmęczony."
+            },
+            {
+              "de": "Gestern hatte ich Stress.",
+              "tr": "Wczoraj miałem stres."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "¿war o hatte?",
+      "points": [
+        {
+          "title": "Cómo elegir",
+          "text": "Como en presente: müde sein → war müde, Stress haben → hatte Stress. Palabras de tiempo: gestern, letzte Woche, letztes Jahr.",
+          "examples": [
+            {
+              "de": "Gestern war ich müde.",
+              "tr": "Ayer estaba cansado."
+            },
+            {
+              "de": "Gestern hatte ich Stress.",
+              "tr": "Ayer tuve estrés."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "war ou hatte ?",
+      "points": [
+        {
+          "title": "Comment choisir",
+          "text": "Comme au présent : müde sein → war müde, Stress haben → hatte Stress. Mots de temps : gestern, letzte Woche, letztes Jahr.",
+          "examples": [
+            {
+              "de": "Gestern war ich müde.",
+              "tr": "Hier, j’étais fatigué."
+            },
+            {
+              "de": "Gestern hatte ich Stress.",
+              "tr": "Hier, j’étais stressé."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "war mı, hatte mi?",
+      "points": [
+        {
+          "title": "Nasıl seçilir",
+          "text": "Şimdiki zamandaki gibi: müde sein → war müde, Stress haben → hatte Stress. Zaman kelimeleri: gestern, letzte Woche, letztes Jahr.",
+          "examples": [
+            {
+              "de": "Gestern war ich müde.",
+              "tr": "Dün yorgundum."
+            },
+            {
+              "de": "Gestern hatte ich Stress.",
+              "tr": "Dün stresliydim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "war sau hatte?",
+      "points": [
+        {
+          "title": "Cum alegi",
+          "text": "Ca la prezent: müde sein → war müde, Stress haben → hatte Stress. Cuvinte de timp: gestern, letzte Woche, letztes Jahr.",
+          "examples": [
+            {
+              "de": "Gestern war ich müde.",
+              "tr": "Ieri am fost obosit."
+            },
+            {
+              "de": "Gestern hatte ich Stress.",
+              "tr": "Ieri am avut stres."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "war yoki hatte?",
+      "points": [
+        {
+          "title": "Qanday tanlash",
+          "text": "Hozirgi zamondagidek: müde sein → war müde, Stress haben → hatte Stress. Vaqt so'zlari: gestern, letzte Woche, letztes Jahr.",
+          "examples": [
+            {
+              "de": "Gestern war ich müde.",
+              "tr": "Kecha charchagan edim."
+            },
+            {
+              "de": "Gestern hatte ich Stress.",
+              "tr": "Kecha stressda edim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "war या hatte?",
+      "points": [
+        {
+          "title": "कैसे चुनें",
+          "text": "वर्तमान की तरह: müde sein → war müde, Stress haben → hatte Stress। समय के शब्द: gestern, letzte Woche, letztes Jahr।",
+          "examples": [
+            {
+              "de": "Gestern war ich müde.",
+              "tr": "कल मैं थका हुआ था।"
+            },
+            {
+              "de": "Gestern hatte ich Stress.",
+              "tr": "कल मुझे तनाव था।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "war أم hatte؟",
+      "points": [
+        {
+          "title": "كيف تختار",
+          "text": "كما في المضارع: müde sein → war müde، Stress haben → hatte Stress. وكلمات الزمن: gestern، letzte Woche، letztes Jahr.",
+          "examples": [
+            {
+              "de": "Gestern war ich müde.",
+              "tr": "أمس كنت متعباً."
+            },
+            {
+              "de": "Gestern hatte ich Stress.",
+              "tr": "أمس كنت متوتراً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "past-simple-4": {
+    "ru": {
+      "title": "konnte и musste",
+      "points": [
+        {
+          "title": "Модальные в прошлом без умлаута",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Умлаут пропадает.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Вчера я не смог прийти."
+            }
+          ]
+        },
+        {
+          "title": "Второй глагол в конце",
+          "text": "Как и в настоящем: модальный глагол на втором месте, второй глагол в конце.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Вчера мне пришлось работать."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "konnte і musste",
+      "points": [
+        {
+          "title": "Модальні в минулому без умлаута",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Умлаут зникає.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Учора я не зміг прийти."
+            }
+          ]
+        },
+        {
+          "title": "Друге дієслово в кінці",
+          "text": "Як і в теперішньому: модальне дієслово на другому місці, друге дієслово в кінці.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Учора мені довелося працювати."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "konnte and musste",
+      "points": [
+        {
+          "title": "Past modals have no umlaut",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. The umlaut disappears.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Yesterday I couldn’t come."
+            }
+          ]
+        },
+        {
+          "title": "The second verb goes to the end",
+          "text": "Just like in the present: the modal is in second place, the other verb at the end.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "I had to work yesterday."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "konnte i musste",
+      "points": [
+        {
+          "title": "Modalne w przeszłości bez umlautu",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlaut znika.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Wczoraj nie mogłem przyjść."
+            }
+          ]
+        },
+        {
+          "title": "Drugi czasownik na końcu",
+          "text": "Jak w czasie teraźniejszym: czasownik modalny na drugim miejscu, drugi czasownik na końcu.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Wczoraj musiałem pracować."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "konnte y musste",
+      "points": [
+        {
+          "title": "Modales en pasado sin diéresis",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. La diéresis desaparece.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Ayer no pude venir."
+            }
+          ]
+        },
+        {
+          "title": "El segundo verbo al final",
+          "text": "Igual que en presente: el modal en segundo lugar, el otro verbo al final.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Ayer tuve que trabajar."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "konnte et musste",
+      "points": [
+        {
+          "title": "Modaux au passé sans umlaut",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. L’umlaut disparaît.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Hier, je n’ai pas pu venir."
+            }
+          ]
+        },
+        {
+          "title": "Le deuxième verbe à la fin",
+          "text": "Comme au présent : le verbe de modalité en deuxième position, l’autre verbe à la fin.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Hier, j’ai dû travailler."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "konnte ve musste",
+      "points": [
+        {
+          "title": "Geçmiş modal fiillerde umlaut yok",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlaut düşer.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Dün gelemedim."
+            }
+          ]
+        },
+        {
+          "title": "İkinci fiil sonda",
+          "text": "Şimdiki zamandaki gibi: modal fiil ikinci sırada, diğer fiil sonda.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Dün çalışmak zorundaydım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "konnte și musste",
+      "points": [
+        {
+          "title": "Modale la trecut fără umlaut",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlautul dispare.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Ieri nu am putut veni."
+            }
+          ]
+        },
+        {
+          "title": "Al doilea verb la final",
+          "text": "Ca la prezent: verbul modal pe locul doi, celălalt verb la final.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Ieri a trebuit să lucrez."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "konnte va musste",
+      "points": [
+        {
+          "title": "O'tgan zamon modallari umlautsiz",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlaut tushib qoladi.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Kecha kela olmadim."
+            }
+          ]
+        },
+        {
+          "title": "Ikkinchi fe'l oxirida",
+          "text": "Hozirgi zamondagidek: modal fe'l ikkinchi o'rinda, boshqa fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Kecha ishlashim kerak edi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "konnte और musste",
+      "points": [
+        {
+          "title": "भूतकाल मोडल बिना उमलाउट",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte। उमलाउट हट जाता है।",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "कल मैं नहीं आ सका।"
+            }
+          ]
+        },
+        {
+          "title": "दूसरी क्रिया अंत में",
+          "text": "वर्तमान की तरह: मोडल क्रिया दूसरे स्थान पर, दूसरी क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "कल मुझे काम करना पड़ा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "konnte وmusste",
+      "points": [
+        {
+          "title": "الأفعال المساعدة في الماضي بدون أوملاوت",
+          "text": "können → konnte، müssen → musste، dürfen → durfte، wollen → wollte، sollen → sollte. يختفي الأوملاوت.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "أمس لم أستطع المجيء."
+            }
+          ]
+        },
+        {
+          "title": "الفعل الثاني في الآخر",
+          "text": "كما في المضارع: الفعل المساعد في المكان الثاني والفعل الآخر في الآخر.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "أمس اضطررت للعمل."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "past-simple-5": {
+    "ru": {
+      "title": "wollte, durfte, sollte",
+      "points": [
+        {
+          "title": "Модальные в прошлом без умлаута",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Умлаут пропадает.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Вчера я не смог прийти."
+            }
+          ]
+        },
+        {
+          "title": "sollte",
+          "text": "sollte значит «нужно было», когда кто-то другой попросил.",
+          "examples": [
+            {
+              "de": "Ich sollte Brot mitbringen.",
+              "tr": "Мне нужно было принести хлеб."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "wollte, durfte, sollte",
+      "points": [
+        {
+          "title": "Модальні в минулому без умлаута",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Умлаут зникає.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Учора я не зміг прийти."
+            }
+          ]
+        },
+        {
+          "title": "sollte",
+          "text": "sollte означає «треба було», коли хтось інший попросив.",
+          "examples": [
+            {
+              "de": "Ich sollte Brot mitbringen.",
+              "tr": "Мені треба було принести хліб."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "wollte, durfte, sollte",
+      "points": [
+        {
+          "title": "Past modals have no umlaut",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. The umlaut disappears.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Yesterday I couldn’t come."
+            }
+          ]
+        },
+        {
+          "title": "sollte",
+          "text": "sollte means \"was supposed to\", when someone else asked you to.",
+          "examples": [
+            {
+              "de": "Ich sollte Brot mitbringen.",
+              "tr": "I was supposed to bring bread."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "wollte, durfte, sollte",
+      "points": [
+        {
+          "title": "Modalne w przeszłości bez umlautu",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlaut znika.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Wczoraj nie mogłem przyjść."
+            }
+          ]
+        },
+        {
+          "title": "sollte",
+          "text": "sollte znaczy „miałem”, gdy ktoś inny o to poprosił.",
+          "examples": [
+            {
+              "de": "Ich sollte Brot mitbringen.",
+              "tr": "Miałem przynieść chleb."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "wollte, durfte, sollte",
+      "points": [
+        {
+          "title": "Modales en pasado sin diéresis",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. La diéresis desaparece.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Ayer no pude venir."
+            }
+          ]
+        },
+        {
+          "title": "sollte",
+          "text": "sollte significa \"tenía que\", cuando otra persona lo pidió.",
+          "examples": [
+            {
+              "de": "Ich sollte Brot mitbringen.",
+              "tr": "Tenía que traer pan."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "wollte, durfte, sollte",
+      "points": [
+        {
+          "title": "Modaux au passé sans umlaut",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. L’umlaut disparaît.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Hier, je n’ai pas pu venir."
+            }
+          ]
+        },
+        {
+          "title": "sollte",
+          "text": "sollte veut dire « je devais », quand quelqu’un d’autre l’a demandé.",
+          "examples": [
+            {
+              "de": "Ich sollte Brot mitbringen.",
+              "tr": "Je devais apporter du pain."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "wollte, durfte, sollte",
+      "points": [
+        {
+          "title": "Geçmiş modal fiillerde umlaut yok",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlaut düşer.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Dün gelemedim."
+            }
+          ]
+        },
+        {
+          "title": "sollte",
+          "text": "sollte, başkası istediğinde \"yapmam gerekiyordu\" demektir.",
+          "examples": [
+            {
+              "de": "Ich sollte Brot mitbringen.",
+              "tr": "Ekmek getirmem gerekiyordu."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "wollte, durfte, sollte",
+      "points": [
+        {
+          "title": "Modale la trecut fără umlaut",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlautul dispare.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Ieri nu am putut veni."
+            }
+          ]
+        },
+        {
+          "title": "sollte",
+          "text": "sollte înseamnă „trebuia”, când altcineva a cerut.",
+          "examples": [
+            {
+              "de": "Ich sollte Brot mitbringen.",
+              "tr": "Trebuia să aduc pâine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "wollte, durfte, sollte",
+      "points": [
+        {
+          "title": "O'tgan zamon modallari umlautsiz",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlaut tushib qoladi.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Kecha kela olmadim."
+            }
+          ]
+        },
+        {
+          "title": "sollte",
+          "text": "sollte boshqa birov so'raganda \"qilishim kerak edi\" degani.",
+          "examples": [
+            {
+              "de": "Ich sollte Brot mitbringen.",
+              "tr": "Non olib kelishim kerak edi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "wollte, durfte, sollte",
+      "points": [
+        {
+          "title": "भूतकाल मोडल बिना उमलाउट",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte। उमलाउट हट जाता है।",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "कल मैं नहीं आ सका।"
+            }
+          ]
+        },
+        {
+          "title": "sollte",
+          "text": "sollte मतलब \"करना था\", जब किसी और ने कहा हो।",
+          "examples": [
+            {
+              "de": "Ich sollte Brot mitbringen.",
+              "tr": "मुझे रोटी लानी थी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "wollte وdurfte وsollte",
+      "points": [
+        {
+          "title": "الأفعال المساعدة في الماضي بدون أوملاوت",
+          "text": "können → konnte، müssen → musste، dürfen → durfte، wollen → wollte، sollen → sollte. يختفي الأوملاوت.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "أمس لم أستطع المجيء."
+            }
+          ]
+        },
+        {
+          "title": "sollte",
+          "text": "sollte تعني \"كان عليّ\"، عندما يطلب ذلك شخص آخر.",
+          "examples": [
+            {
+              "de": "Ich sollte Brot mitbringen.",
+              "tr": "كان عليّ إحضار الخبز."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "past-simple-6": {
+    "ru": {
+      "title": "Модальные в прошлом: порядок слов",
+      "points": [
+        {
+          "title": "Второй глагол в конце",
+          "text": "Как и в настоящем: модальный глагол на втором месте, второй глагол в конце.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Вчера мне пришлось работать."
+            }
+          ]
+        },
+        {
+          "title": "В вопросе модальный первым",
+          "text": "Wolltest du ins Kino gehen? Второй глагол всё равно в конце.",
+          "examples": [
+            {
+              "de": "Wolltest du ins Kino gehen?",
+              "tr": "Ты хотел пойти в кино?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Модальні в минулому: порядок слів",
+      "points": [
+        {
+          "title": "Друге дієслово в кінці",
+          "text": "Як і в теперішньому: модальне дієслово на другому місці, друге дієслово в кінці.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Учора мені довелося працювати."
+            }
+          ]
+        },
+        {
+          "title": "У питанні модальне першим",
+          "text": "Wolltest du ins Kino gehen? Друге дієслово однаково в кінці.",
+          "examples": [
+            {
+              "de": "Wolltest du ins Kino gehen?",
+              "tr": "Ти хотів піти в кіно?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Past modals: word order",
+      "points": [
+        {
+          "title": "The second verb goes to the end",
+          "text": "Just like in the present: the modal is in second place, the other verb at the end.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "I had to work yesterday."
+            }
+          ]
+        },
+        {
+          "title": "In a question the modal comes first",
+          "text": "Wolltest du ins Kino gehen? The second verb is still at the end.",
+          "examples": [
+            {
+              "de": "Wolltest du ins Kino gehen?",
+              "tr": "Did you want to go to the cinema?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Modalne w przeszłości: szyk",
+      "points": [
+        {
+          "title": "Drugi czasownik na końcu",
+          "text": "Jak w czasie teraźniejszym: czasownik modalny na drugim miejscu, drugi czasownik na końcu.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Wczoraj musiałem pracować."
+            }
+          ]
+        },
+        {
+          "title": "W pytaniu modalny pierwszy",
+          "text": "Wolltest du ins Kino gehen? Drugi czasownik i tak na końcu.",
+          "examples": [
+            {
+              "de": "Wolltest du ins Kino gehen?",
+              "tr": "Chciałeś iść do kina?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Modales en pasado: orden",
+      "points": [
+        {
+          "title": "El segundo verbo al final",
+          "text": "Igual que en presente: el modal en segundo lugar, el otro verbo al final.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Ayer tuve que trabajar."
+            }
+          ]
+        },
+        {
+          "title": "En la pregunta el modal va primero",
+          "text": "Wolltest du ins Kino gehen? El segundo verbo sigue al final.",
+          "examples": [
+            {
+              "de": "Wolltest du ins Kino gehen?",
+              "tr": "¿Querías ir al cine?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Modaux au passé : ordre des mots",
+      "points": [
+        {
+          "title": "Le deuxième verbe à la fin",
+          "text": "Comme au présent : le verbe de modalité en deuxième position, l’autre verbe à la fin.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Hier, j’ai dû travailler."
+            }
+          ]
+        },
+        {
+          "title": "Dans une question, le modal en premier",
+          "text": "Wolltest du ins Kino gehen ? Le deuxième verbe reste à la fin.",
+          "examples": [
+            {
+              "de": "Wolltest du ins Kino gehen?",
+              "tr": "Tu voulais aller au cinéma ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Geçmiş modal: kelime sırası",
+      "points": [
+        {
+          "title": "İkinci fiil sonda",
+          "text": "Şimdiki zamandaki gibi: modal fiil ikinci sırada, diğer fiil sonda.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Dün çalışmak zorundaydım."
+            }
+          ]
+        },
+        {
+          "title": "Soruda modal başta",
+          "text": "Wolltest du ins Kino gehen? İkinci fiil yine sonda.",
+          "examples": [
+            {
+              "de": "Wolltest du ins Kino gehen?",
+              "tr": "Sinemaya gitmek mi istiyordun?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Modale la trecut: ordinea",
+      "points": [
+        {
+          "title": "Al doilea verb la final",
+          "text": "Ca la prezent: verbul modal pe locul doi, celălalt verb la final.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Ieri a trebuit să lucrez."
+            }
+          ]
+        },
+        {
+          "title": "În întrebare modalul primul",
+          "text": "Wolltest du ins Kino gehen? Al doilea verb tot la final.",
+          "examples": [
+            {
+              "de": "Wolltest du ins Kino gehen?",
+              "tr": "Voiai să mergi la cinema?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "O'tgan modallar: so'z tartibi",
+      "points": [
+        {
+          "title": "Ikkinchi fe'l oxirida",
+          "text": "Hozirgi zamondagidek: modal fe'l ikkinchi o'rinda, boshqa fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Kecha ishlashim kerak edi."
+            }
+          ]
+        },
+        {
+          "title": "Savolda modal birinchi",
+          "text": "Wolltest du ins Kino gehen? Ikkinchi fe'l baribir oxirida.",
+          "examples": [
+            {
+              "de": "Wolltest du ins Kino gehen?",
+              "tr": "Kinoga bormoqchi edingmi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "भूतकाल मोडल: शब्द क्रम",
+      "points": [
+        {
+          "title": "दूसरी क्रिया अंत में",
+          "text": "वर्तमान की तरह: मोडल क्रिया दूसरे स्थान पर, दूसरी क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "कल मुझे काम करना पड़ा।"
+            }
+          ]
+        },
+        {
+          "title": "सवाल में मोडल पहले",
+          "text": "Wolltest du ins Kino gehen? दूसरी क्रिया फिर भी अंत में।",
+          "examples": [
+            {
+              "de": "Wolltest du ins Kino gehen?",
+              "tr": "क्या तुम सिनेमा जाना चाहते थे?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الأفعال المساعدة في الماضي: الترتيب",
+      "points": [
+        {
+          "title": "الفعل الثاني في الآخر",
+          "text": "كما في المضارع: الفعل المساعد في المكان الثاني والفعل الآخر في الآخر.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "أمس اضطررت للعمل."
+            }
+          ]
+        },
+        {
+          "title": "في السؤال يأتي المساعد أولاً",
+          "text": "Wolltest du ins Kino gehen؟ والفعل الثاني يبقى في الآخر.",
+          "examples": [
+            {
+              "de": "Wolltest du ins Kino gehen?",
+              "tr": "هل أردت الذهاب إلى السينما؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "past-simple-9": {
+    "ru": {
+      "title": "Практика: вчерашний вечер",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. У ich и er одинаково, без окончания.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Вчера мы были в кино."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Где вы были?"
+            }
+          ]
+        },
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Вчера у меня не было времени."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: учорашній вечір",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. У ich та er однаково, без закінчення.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Учора ми були в кіно."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Де ви були?"
+            }
+          ]
+        },
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Учора в мене не було часу."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: last night",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich and er are the same, with no ending.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Yesterday we were at the cinema."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Where were you (all)?"
+            }
+          ]
+        },
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Yesterday I had no time."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: wczorajszy wieczór",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich i er tak samo, bez końcówki.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Wczoraj byliśmy w kinie."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Gdzie byliście?"
+            }
+          ]
+        },
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Wczoraj nie miałem czasu."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: anoche",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich y er son iguales, sin terminación.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Ayer estuvimos en el cine."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "¿Dónde estabais?"
+            }
+          ]
+        },
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Ayer no tenía tiempo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : hier soir",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich et er sont identiques, sans terminaison.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Hier, nous étions au cinéma."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Où étiez-vous ?"
+            }
+          ]
+        },
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Hier, je n’avais pas le temps."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: dün akşam",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich ve er aynı, eksiz.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Dün sinemadaydık."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Neredeydiniz?"
+            }
+          ]
+        },
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Dün vaktim yoktu."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: aseară",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich și er la fel, fără terminație.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Ieri am fost la cinema."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Unde ați fost?"
+            }
+          ]
+        },
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Ieri nu am avut timp."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: kechagi oqshom",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich va er bir xil, qo'shimchasiz.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Kecha biz kinoda edik."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Qayerda edinglar?"
+            }
+          ]
+        },
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Kecha vaqtim yo'q edi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: कल शाम",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren। ich और er एक जैसे, बिना अंत के।",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "कल हम सिनेमा में थे।"
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "तुम सब कहाँ थे?"
+            }
+          ]
+        },
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten।",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "कल मेरे पास समय नहीं था।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: مساء أمس",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war، du warst، er war، wir waren، ihr wart، sie waren. ich وer متشابهتان وبدون نهاية.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "أمس كنا في السينما."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "أين كنتم؟"
+            }
+          ]
+        },
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte، du hattest، er hatte، wir hatten، ihr hattet، sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "أمس لم يكن عندي وقت."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "past-simple-10": {
+    "ru": {
+      "title": "Практика: когда я был маленьким",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Als Kind значит «в детстве». После него сразу глагол: Als Kind wollte ich...",
+          "examples": [
+            {
+              "de": "Als Kind wollte ich Pilot werden.",
+              "tr": "В детстве я хотел стать пилотом."
+            }
+          ]
+        },
+        {
+          "title": "Модальные в прошлом без умлаута",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Умлаут пропадает.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Вчера я не смог прийти."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: коли я був маленьким",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Als Kind означає «у дитинстві». Після нього одразу дієслово: Als Kind wollte ich...",
+          "examples": [
+            {
+              "de": "Als Kind wollte ich Pilot werden.",
+              "tr": "У дитинстві я хотів стати пілотом."
+            }
+          ]
+        },
+        {
+          "title": "Модальні в минулому без умлаута",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Умлаут зникає.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Учора я не зміг прийти."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: when I was little",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "Als Kind means \"as a child\". The verb follows straight after: Als Kind wollte ich...",
+          "examples": [
+            {
+              "de": "Als Kind wollte ich Pilot werden.",
+              "tr": "As a child I wanted to be a pilot."
+            }
+          ]
+        },
+        {
+          "title": "Past modals have no umlaut",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. The umlaut disappears.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Yesterday I couldn’t come."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: kiedy byłem mały",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Als Kind znaczy „w dzieciństwie”. Zaraz po nim czasownik: Als Kind wollte ich...",
+          "examples": [
+            {
+              "de": "Als Kind wollte ich Pilot werden.",
+              "tr": "W dzieciństwie chciałem zostać pilotem."
+            }
+          ]
+        },
+        {
+          "title": "Modalne w przeszłości bez umlautu",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlaut znika.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Wczoraj nie mogłem przyjść."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: cuando era pequeño",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Als Kind significa \"de niño\". Justo después va el verbo: Als Kind wollte ich...",
+          "examples": [
+            {
+              "de": "Als Kind wollte ich Pilot werden.",
+              "tr": "De niño quería ser piloto."
+            }
+          ]
+        },
+        {
+          "title": "Modales en pasado sin diéresis",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. La diéresis desaparece.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Ayer no pude venir."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : quand j’étais petit",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "Als Kind veut dire « enfant, quand j’étais petit ». Le verbe suit tout de suite : Als Kind wollte ich...",
+          "examples": [
+            {
+              "de": "Als Kind wollte ich Pilot werden.",
+              "tr": "Enfant, je voulais devenir pilote."
+            }
+          ]
+        },
+        {
+          "title": "Modaux au passé sans umlaut",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. L’umlaut disparaît.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Hier, je n’ai pas pu venir."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: küçükken",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Als Kind \"çocukken\" demektir. Hemen ardından fiil gelir: Als Kind wollte ich...",
+          "examples": [
+            {
+              "de": "Als Kind wollte ich Pilot werden.",
+              "tr": "Çocukken pilot olmak istiyordum."
+            }
+          ]
+        },
+        {
+          "title": "Geçmiş modal fiillerde umlaut yok",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlaut düşer.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Dün gelemedim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: când eram mic",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Als Kind înseamnă „în copilărie”. Imediat după vine verbul: Als Kind wollte ich...",
+          "examples": [
+            {
+              "de": "Als Kind wollte ich Pilot werden.",
+              "tr": "În copilărie voiam să devin pilot."
+            }
+          ]
+        },
+        {
+          "title": "Modale la trecut fără umlaut",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlautul dispare.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Ieri nu am putut veni."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: kichkinaligimda",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Als Kind \"bolaligimda\" degani. Undan keyin darhol fe'l: Als Kind wollte ich...",
+          "examples": [
+            {
+              "de": "Als Kind wollte ich Pilot werden.",
+              "tr": "Bolaligimda uchuvchi bo'lmoqchi edim."
+            }
+          ]
+        },
+        {
+          "title": "O'tgan zamon modallari umlautsiz",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlaut tushib qoladi.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Kecha kela olmadim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: जब मैं छोटा था",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "Als Kind मतलब \"बचपन में\"। इसके ठीक बाद क्रिया: Als Kind wollte ich...",
+          "examples": [
+            {
+              "de": "Als Kind wollte ich Pilot werden.",
+              "tr": "बचपन में मैं पायलट बनना चाहता था।"
+            }
+          ]
+        },
+        {
+          "title": "भूतकाल मोडल बिना उमलाउट",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte। उमलाउट हट जाता है।",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "कल मैं नहीं आ सका।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: عندما كنت صغيراً",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "Als Kind تعني \"في طفولتي\". ويأتي الفعل بعدها مباشرة: Als Kind wollte ich...",
+          "examples": [
+            {
+              "de": "Als Kind wollte ich Pilot werden.",
+              "tr": "في طفولتي أردت أن أصبح طياراً."
+            }
+          ]
+        },
+        {
+          "title": "الأفعال المساعدة في الماضي بدون أوملاوت",
+          "text": "können → konnte، müssen → musste، dürfen → durfte، wollen → wollte، sollen → sollte. يختفي الأوملاوت.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "أمس لم أستطع المجيء."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "past-simple-7": {
+    "ru": {
+      "title": "Повторение: прошлое",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. У ich и er одинаково, без окончания.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Вчера мы были в кино."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Где вы были?"
+            }
+          ]
+        },
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Вчера у меня не было времени."
+            }
+          ]
+        },
+        {
+          "title": "Модальные в прошлом без умлаута",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Умлаут пропадает.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Вчера я не смог прийти."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: минуле",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. У ich та er однаково, без закінчення.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Учора ми були в кіно."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Де ви були?"
+            }
+          ]
+        },
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Учора в мене не було часу."
+            }
+          ]
+        },
+        {
+          "title": "Модальні в минулому без умлаута",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Умлаут зникає.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Учора я не зміг прийти."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: the past",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich and er are the same, with no ending.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Yesterday we were at the cinema."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Where were you (all)?"
+            }
+          ]
+        },
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Yesterday I had no time."
+            }
+          ]
+        },
+        {
+          "title": "Past modals have no umlaut",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. The umlaut disappears.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Yesterday I couldn’t come."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: przeszłość",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich i er tak samo, bez końcówki.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Wczoraj byliśmy w kinie."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Gdzie byliście?"
+            }
+          ]
+        },
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Wczoraj nie miałem czasu."
+            }
+          ]
+        },
+        {
+          "title": "Modalne w przeszłości bez umlautu",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlaut znika.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Wczoraj nie mogłem przyjść."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: el pasado",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich y er son iguales, sin terminación.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Ayer estuvimos en el cine."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "¿Dónde estabais?"
+            }
+          ]
+        },
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Ayer no tenía tiempo."
+            }
+          ]
+        },
+        {
+          "title": "Modales en pasado sin diéresis",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. La diéresis desaparece.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Ayer no pude venir."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : le passé",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich et er sont identiques, sans terminaison.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Hier, nous étions au cinéma."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Où étiez-vous ?"
+            }
+          ]
+        },
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Hier, je n’avais pas le temps."
+            }
+          ]
+        },
+        {
+          "title": "Modaux au passé sans umlaut",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. L’umlaut disparaît.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Hier, je n’ai pas pu venir."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: geçmiş",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich ve er aynı, eksiz.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Dün sinemadaydık."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Neredeydiniz?"
+            }
+          ]
+        },
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Dün vaktim yoktu."
+            }
+          ]
+        },
+        {
+          "title": "Geçmiş modal fiillerde umlaut yok",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlaut düşer.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Dün gelemedim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: trecutul",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich și er la fel, fără terminație.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Ieri am fost la cinema."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Unde ați fost?"
+            }
+          ]
+        },
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Ieri nu am avut timp."
+            }
+          ]
+        },
+        {
+          "title": "Modale la trecut fără umlaut",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlautul dispare.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Ieri nu am putut veni."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: o'tgan zamon",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich va er bir xil, qo'shimchasiz.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Kecha biz kinoda edik."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Qayerda edinglar?"
+            }
+          ]
+        },
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "Kecha vaqtim yo'q edi."
+            }
+          ]
+        },
+        {
+          "title": "O'tgan zamon modallari umlautsiz",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlaut tushib qoladi.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Kecha kela olmadim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: भूतकाल",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren। ich और er एक जैसे, बिना अंत के।",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "कल हम सिनेमा में थे।"
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "तुम सब कहाँ थे?"
+            }
+          ]
+        },
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten।",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "कल मेरे पास समय नहीं था।"
+            }
+          ]
+        },
+        {
+          "title": "भूतकाल मोडल बिना उमलाउट",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte। उमलाउट हट जाता है।",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "कल मैं नहीं आ सका।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: الماضي",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war، du warst، er war، wir waren، ihr wart، sie waren. ich وer متشابهتان وبدون نهاية.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "أمس كنا في السينما."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "أين كنتم؟"
+            }
+          ]
+        },
+        {
+          "title": "haben → hatte",
+          "text": "ich hatte، du hattest، er hatte، wir hatten، ihr hattet، sie hatten.",
+          "examples": [
+            {
+              "de": "Gestern hatte ich keine Zeit.",
+              "tr": "أمس لم يكن عندي وقت."
+            }
+          ]
+        },
+        {
+          "title": "الأفعال المساعدة في الماضي بدون أوملاوت",
+          "text": "können → konnte، müssen → musste، dürfen → durfte، wollen → wollte، sollen → sollte. يختفي الأوملاوت.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "أمس لم أستطع المجيء."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "past-simple-8": {
+    "ru": {
+      "title": "Контрольный: что повторить",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. У ich и er одинаково, без окончания.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Вчера мы были в кино."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Где вы были?"
+            }
+          ]
+        },
+        {
+          "title": "Модальные в прошлом без умлаута",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Умлаут пропадает.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Вчера я не смог прийти."
+            }
+          ]
+        },
+        {
+          "title": "Второй глагол в конце",
+          "text": "Как и в настоящем: модальный глагол на втором месте, второй глагол в конце.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Вчера мне пришлось работать."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Контрольне: що повторити",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. У ich та er однаково, без закінчення.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Учора ми були в кіно."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Де ви були?"
+            }
+          ]
+        },
+        {
+          "title": "Модальні в минулому без умлаута",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Умлаут зникає.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Учора я не зміг прийти."
+            }
+          ]
+        },
+        {
+          "title": "Друге дієслово в кінці",
+          "text": "Як і в теперішньому: модальне дієслово на другому місці, друге дієслово в кінці.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Учора мені довелося працювати."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final test: what to review",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich and er are the same, with no ending.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Yesterday we were at the cinema."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Where were you (all)?"
+            }
+          ]
+        },
+        {
+          "title": "Past modals have no umlaut",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. The umlaut disappears.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Yesterday I couldn’t come."
+            }
+          ]
+        },
+        {
+          "title": "The second verb goes to the end",
+          "text": "Just like in the present: the modal is in second place, the other verb at the end.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "I had to work yesterday."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sprawdzian: co powtórzyć",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich i er tak samo, bez końcówki.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Wczoraj byliśmy w kinie."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Gdzie byliście?"
+            }
+          ]
+        },
+        {
+          "title": "Modalne w przeszłości bez umlautu",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlaut znika.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Wczoraj nie mogłem przyjść."
+            }
+          ]
+        },
+        {
+          "title": "Drugi czasownik na końcu",
+          "text": "Jak w czasie teraźniejszym: czasownik modalny na drugim miejscu, drugi czasownik na końcu.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Wczoraj musiałem pracować."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prueba final: qué repasar",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich y er son iguales, sin terminación.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Ayer estuvimos en el cine."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "¿Dónde estabais?"
+            }
+          ]
+        },
+        {
+          "title": "Modales en pasado sin diéresis",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. La diéresis desaparece.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Ayer no pude venir."
+            }
+          ]
+        },
+        {
+          "title": "El segundo verbo al final",
+          "text": "Igual que en presente: el modal en segundo lugar, el otro verbo al final.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Ayer tuve que trabajar."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrôle : quoi réviser",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich et er sont identiques, sans terminaison.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Hier, nous étions au cinéma."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Où étiez-vous ?"
+            }
+          ]
+        },
+        {
+          "title": "Modaux au passé sans umlaut",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. L’umlaut disparaît.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Hier, je n’ai pas pu venir."
+            }
+          ]
+        },
+        {
+          "title": "Le deuxième verbe à la fin",
+          "text": "Comme au présent : le verbe de modalité en deuxième position, l’autre verbe à la fin.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Hier, j’ai dû travailler."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sınav: neleri tekrar etmeli",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich ve er aynı, eksiz.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Dün sinemadaydık."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Neredeydiniz?"
+            }
+          ]
+        },
+        {
+          "title": "Geçmiş modal fiillerde umlaut yok",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlaut düşer.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Dün gelemedim."
+            }
+          ]
+        },
+        {
+          "title": "İkinci fiil sonda",
+          "text": "Şimdiki zamandaki gibi: modal fiil ikinci sırada, diğer fiil sonda.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Dün çalışmak zorundaydım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Test: ce să recapitulezi",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich și er la fel, fără terminație.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Ieri am fost la cinema."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Unde ați fost?"
+            }
+          ]
+        },
+        {
+          "title": "Modale la trecut fără umlaut",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlautul dispare.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Ieri nu am putut veni."
+            }
+          ]
+        },
+        {
+          "title": "Al doilea verb la final",
+          "text": "Ca la prezent: verbul modal pe locul doi, celălalt verb la final.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Ieri a trebuit să lucrez."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Nazorat: nimani takrorlash kerak",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren. ich va er bir xil, qo'shimchasiz.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "Kecha biz kinoda edik."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "Qayerda edinglar?"
+            }
+          ]
+        },
+        {
+          "title": "O'tgan zamon modallari umlautsiz",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte. Umlaut tushib qoladi.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "Kecha kela olmadim."
+            }
+          ]
+        },
+        {
+          "title": "Ikkinchi fe'l oxirida",
+          "text": "Hozirgi zamondagidek: modal fe'l ikkinchi o'rinda, boshqa fe'l oxirida.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "Kecha ishlashim kerak edi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "टेस्ट: क्या दोहराएँ",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war, du warst, er war, wir waren, ihr wart, sie waren। ich और er एक जैसे, बिना अंत के।",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "कल हम सिनेमा में थे।"
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "तुम सब कहाँ थे?"
+            }
+          ]
+        },
+        {
+          "title": "भूतकाल मोडल बिना उमलाउट",
+          "text": "können → konnte, müssen → musste, dürfen → durfte, wollen → wollte, sollen → sollte। उमलाउट हट जाता है।",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "कल मैं नहीं आ सका।"
+            }
+          ]
+        },
+        {
+          "title": "दूसरी क्रिया अंत में",
+          "text": "वर्तमान की तरह: मोडल क्रिया दूसरे स्थान पर, दूसरी क्रिया अंत में।",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "कल मुझे काम करना पड़ा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الاختبار: ماذا تراجع",
+      "points": [
+        {
+          "title": "sein → war",
+          "text": "ich war، du warst، er war، wir waren، ihr wart، sie waren. ich وer متشابهتان وبدون نهاية.",
+          "examples": [
+            {
+              "de": "Gestern waren wir im Kino.",
+              "tr": "أمس كنا في السينما."
+            },
+            {
+              "de": "Wo wart ihr?",
+              "tr": "أين كنتم؟"
+            }
+          ]
+        },
+        {
+          "title": "الأفعال المساعدة في الماضي بدون أوملاوت",
+          "text": "können → konnte، müssen → musste، dürfen → durfte، wollen → wollte، sollen → sollte. يختفي الأوملاوت.",
+          "examples": [
+            {
+              "de": "Gestern konnte ich nicht kommen.",
+              "tr": "أمس لم أستطع المجيء."
+            }
+          ]
+        },
+        {
+          "title": "الفعل الثاني في الآخر",
+          "text": "كما في المضارع: الفعل المساعد في المكان الثاني والفعل الآخر في الآخر.",
+          "examples": [
+            {
+              "de": "Ich musste gestern arbeiten.",
+              "tr": "أمس اضطررت للعمل."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

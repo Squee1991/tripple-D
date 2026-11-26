@@ -1,0 +1,3057 @@
+{
+  "adjective-one": {
+    "ru": {
+      "title": "Прилагательное после der: старт",
+      "points": [
+        {
+          "title": "После der, die, das: -e",
+          "text": "Подлежащее в единственном числе получает -e: der alte Mann, die kleine Katze, das neue Haus. Так же die (Akkusativ) и das (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Новый дом большой."
+            }
+          ]
+        },
+        {
+          "title": "Во всех остальных случаях: -en",
+          "text": "den (Akkusativ мужского рода), dem и der (Dativ) и множественное получают -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Я вижу старую собаку."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Прикметник після der: старт",
+      "points": [
+        {
+          "title": "Після der, die, das: -e",
+          "text": "Підмет в однині отримує -e: der alte Mann, die kleine Katze, das neue Haus. Так само die і das в Akkusativ.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Новий будинок великий."
+            }
+          ]
+        },
+        {
+          "title": "В усіх інших випадках: -en",
+          "text": "den (Akkusativ чоловічого роду), dem і der (Dativ) та множина отримують -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Я бачу старого собаку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Adjectives after der: start",
+      "points": [
+        {
+          "title": "After der, die, das: -e",
+          "text": "The singular subject takes -e: der alte Mann, die kleine Katze, das neue Haus. Same for die and das in the accusative.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "The new house is big."
+            }
+          ]
+        },
+        {
+          "title": "Everywhere else: -en",
+          "text": "den (masculine accusative), dem and der (dative) and all plurals take -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "I see the old dog."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Przymiotnik po der: start",
+      "points": [
+        {
+          "title": "Po der, die, das: -e",
+          "text": "Podmiot w liczbie pojedynczej dostaje -e: der alte Mann, die kleine Katze, das neue Haus. Tak samo die i das w Akkusativ.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Nowy dom jest duży."
+            }
+          ]
+        },
+        {
+          "title": "W pozostałych przypadkach: -en",
+          "text": "den (Akkusativ rodzaju męskiego), dem i der (Dativ) oraz liczba mnoga dostają -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Widzę starego psa."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Adjetivo tras der: inicio",
+      "points": [
+        {
+          "title": "Tras der, die, das: -e",
+          "text": "El sujeto en singular lleva -e: der alte Mann, die kleine Katze, das neue Haus. Igual die y das en acusativo.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "La casa nueva es grande."
+            }
+          ]
+        },
+        {
+          "title": "En los demás casos: -en",
+          "text": "den (acusativo masculino), dem y der (dativo) y el plural llevan -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Veo al perro viejo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "L’adjectif après der : début",
+      "points": [
+        {
+          "title": "Après der, die, das : -e",
+          "text": "Le sujet au singulier prend -e : der alte Mann, die kleine Katze, das neue Haus. Pareil pour die et das à l’accusatif.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "La nouvelle maison est grande."
+            }
+          ]
+        },
+        {
+          "title": "Dans tous les autres cas : -en",
+          "text": "den (accusatif masculin), dem et der (datif) et le pluriel prennent -en : den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Je vois le vieux chien."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "der’den sonra sıfat: başlangıç",
+      "points": [
+        {
+          "title": "der, die, das’tan sonra: -e",
+          "text": "Tekil özne -e alır: der alte Mann, die kleine Katze, das neue Haus. Akkusativ’de die ve das da böyle.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Yeni ev büyük."
+            }
+          ]
+        },
+        {
+          "title": "Diğer bütün durumlarda: -en",
+          "text": "den (eril Akkusativ), dem ve der (Dativ) ve çoğul -en alır: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Yaşlı köpeği görüyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Adjectivul după der: start",
+      "points": [
+        {
+          "title": "După der, die, das: -e",
+          "text": "Subiectul la singular primește -e: der alte Mann, die kleine Katze, das neue Haus. La fel die și das la acuzativ.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Casa nouă e mare."
+            }
+          ]
+        },
+        {
+          "title": "În toate celelalte cazuri: -en",
+          "text": "den (acuzativ masculin), dem și der (dativ) și pluralul primesc -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Văd câinele bătrân."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "der dan keyin sifat: boshlanish",
+      "points": [
+        {
+          "title": "der, die, das dan keyin: -e",
+          "text": "Birlikdagi ega -e oladi: der alte Mann, die kleine Katze, das neue Haus. Akkusativda die va das ham shunday.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "Yangi uy katta."
+            }
+          ]
+        },
+        {
+          "title": "Qolgan barcha holatlarda: -en",
+          "text": "den (erkak rodi Akkusativ), dem va der (Dativ) hamda ko'plik -en oladi: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "Men qari itni ko'ryapman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "der के बाद विशेषण: शुरुआत",
+      "points": [
+        {
+          "title": "der, die, das के बाद: -e",
+          "text": "एकवचन कर्ता -e लेता है: der alte Mann, die kleine Katze, das neue Haus। Akkusativ में die और das भी ऐसे ही।",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "नया घर बड़ा है।"
+            }
+          ]
+        },
+        {
+          "title": "बाकी सब जगह: -en",
+          "text": "den (पुल्लिंग Akkusativ), dem और der (Dativ) और बहुवचन -en लेते हैं: den alten Hund, mit dem netten Freund, die netten Kollegen।",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "मुझे बूढ़ा कुत्ता दिख रहा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الصفة بعد der: البداية",
+      "points": [
+        {
+          "title": "بعد der وdie وdas: -e",
+          "text": "الفاعل المفرد يأخذ -e: der alte Mann، die kleine Katze، das neue Haus. وكذلك die وdas في المفعول.",
+          "examples": [
+            {
+              "de": "Das neue Haus ist groß.",
+              "tr": "البيت الجديد كبير."
+            }
+          ]
+        },
+        {
+          "title": "في كل الحالات الأخرى: -en",
+          "text": "den (المذكر في المفعول) وdem وder (الجر) والجمع تأخذ -en: den alten Hund، mit dem netten Freund، die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich sehe den alten Hund.",
+              "tr": "أرى الكلب العجوز."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "adjective-two": {
+    "ru": {
+      "title": "Все роды и падежи",
+      "points": [
+        {
+          "title": "После der, die, das: -e",
+          "text": "Подлежащее в единственном числе получает -e: der alte Mann, die kleine Katze, das neue Haus. Так же die (Akkusativ) и das (Akkusativ).",
+          "examples": [
+            {
+              "de": "Die kleine Katze schläft.",
+              "tr": "Маленькая кошка спит."
+            }
+          ]
+        },
+        {
+          "title": "Во всех остальных случаях: -en",
+          "text": "den (Akkusativ мужского рода), dem и der (Dativ) и множественное получают -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich kaufe den neuen Computer.",
+              "tr": "Я покупаю новый компьютер."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Усі роди й відмінки",
+      "points": [
+        {
+          "title": "Після der, die, das: -e",
+          "text": "Підмет в однині отримує -e: der alte Mann, die kleine Katze, das neue Haus. Так само die і das в Akkusativ.",
+          "examples": [
+            {
+              "de": "Die kleine Katze schläft.",
+              "tr": "Маленька кішка спить."
+            }
+          ]
+        },
+        {
+          "title": "В усіх інших випадках: -en",
+          "text": "den (Akkusativ чоловічого роду), dem і der (Dativ) та множина отримують -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich kaufe den neuen Computer.",
+              "tr": "Я купую новий комп’ютер."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "All genders and cases",
+      "points": [
+        {
+          "title": "After der, die, das: -e",
+          "text": "The singular subject takes -e: der alte Mann, die kleine Katze, das neue Haus. Same for die and das in the accusative.",
+          "examples": [
+            {
+              "de": "Die kleine Katze schläft.",
+              "tr": "The little cat is sleeping."
+            }
+          ]
+        },
+        {
+          "title": "Everywhere else: -en",
+          "text": "den (masculine accusative), dem and der (dative) and all plurals take -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich kaufe den neuen Computer.",
+              "tr": "I’m buying the new computer."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Wszystkie rodzaje i przypadki",
+      "points": [
+        {
+          "title": "Po der, die, das: -e",
+          "text": "Podmiot w liczbie pojedynczej dostaje -e: der alte Mann, die kleine Katze, das neue Haus. Tak samo die i das w Akkusativ.",
+          "examples": [
+            {
+              "de": "Die kleine Katze schläft.",
+              "tr": "Mały kot śpi."
+            }
+          ]
+        },
+        {
+          "title": "W pozostałych przypadkach: -en",
+          "text": "den (Akkusativ rodzaju męskiego), dem i der (Dativ) oraz liczba mnoga dostają -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich kaufe den neuen Computer.",
+              "tr": "Kupuję nowy komputer."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Todos los géneros y casos",
+      "points": [
+        {
+          "title": "Tras der, die, das: -e",
+          "text": "El sujeto en singular lleva -e: der alte Mann, die kleine Katze, das neue Haus. Igual die y das en acusativo.",
+          "examples": [
+            {
+              "de": "Die kleine Katze schläft.",
+              "tr": "El gatito duerme."
+            }
+          ]
+        },
+        {
+          "title": "En los demás casos: -en",
+          "text": "den (acusativo masculino), dem y der (dativo) y el plural llevan -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich kaufe den neuen Computer.",
+              "tr": "Compro el ordenador nuevo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Tous les genres et cas",
+      "points": [
+        {
+          "title": "Après der, die, das : -e",
+          "text": "Le sujet au singulier prend -e : der alte Mann, die kleine Katze, das neue Haus. Pareil pour die et das à l’accusatif.",
+          "examples": [
+            {
+              "de": "Die kleine Katze schläft.",
+              "tr": "Le petit chat dort."
+            }
+          ]
+        },
+        {
+          "title": "Dans tous les autres cas : -en",
+          "text": "den (accusatif masculin), dem et der (datif) et le pluriel prennent -en : den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich kaufe den neuen Computer.",
+              "tr": "J’achète le nouvel ordinateur."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Bütün cinsiyetler ve hâller",
+      "points": [
+        {
+          "title": "der, die, das’tan sonra: -e",
+          "text": "Tekil özne -e alır: der alte Mann, die kleine Katze, das neue Haus. Akkusativ’de die ve das da böyle.",
+          "examples": [
+            {
+              "de": "Die kleine Katze schläft.",
+              "tr": "Küçük kedi uyuyor."
+            }
+          ]
+        },
+        {
+          "title": "Diğer bütün durumlarda: -en",
+          "text": "den (eril Akkusativ), dem ve der (Dativ) ve çoğul -en alır: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich kaufe den neuen Computer.",
+              "tr": "Yeni bilgisayarı alıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Toate genurile și cazurile",
+      "points": [
+        {
+          "title": "După der, die, das: -e",
+          "text": "Subiectul la singular primește -e: der alte Mann, die kleine Katze, das neue Haus. La fel die și das la acuzativ.",
+          "examples": [
+            {
+              "de": "Die kleine Katze schläft.",
+              "tr": "Pisica mică doarme."
+            }
+          ]
+        },
+        {
+          "title": "În toate celelalte cazuri: -en",
+          "text": "den (acuzativ masculin), dem și der (dativ) și pluralul primesc -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich kaufe den neuen Computer.",
+              "tr": "Cumpăr calculatorul nou."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Barcha rodlar va kelishiklar",
+      "points": [
+        {
+          "title": "der, die, das dan keyin: -e",
+          "text": "Birlikdagi ega -e oladi: der alte Mann, die kleine Katze, das neue Haus. Akkusativda die va das ham shunday.",
+          "examples": [
+            {
+              "de": "Die kleine Katze schläft.",
+              "tr": "Kichkina mushuk uxlayapti."
+            }
+          ]
+        },
+        {
+          "title": "Qolgan barcha holatlarda: -en",
+          "text": "den (erkak rodi Akkusativ), dem va der (Dativ) hamda ko'plik -en oladi: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich kaufe den neuen Computer.",
+              "tr": "Yangi kompyuterni sotib olaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "सभी लिंग और कारक",
+      "points": [
+        {
+          "title": "der, die, das के बाद: -e",
+          "text": "एकवचन कर्ता -e लेता है: der alte Mann, die kleine Katze, das neue Haus। Akkusativ में die और das भी ऐसे ही।",
+          "examples": [
+            {
+              "de": "Die kleine Katze schläft.",
+              "tr": "छोटी बिल्ली सो रही है।"
+            }
+          ]
+        },
+        {
+          "title": "बाकी सब जगह: -en",
+          "text": "den (पुल्लिंग Akkusativ), dem और der (Dativ) और बहुवचन -en लेते हैं: den alten Hund, mit dem netten Freund, die netten Kollegen।",
+          "examples": [
+            {
+              "de": "Ich kaufe den neuen Computer.",
+              "tr": "मैं नया कंप्यूटर खरीद रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "كل الأجناس والحالات",
+      "points": [
+        {
+          "title": "بعد der وdie وdas: -e",
+          "text": "الفاعل المفرد يأخذ -e: der alte Mann، die kleine Katze، das neue Haus. وكذلك die وdas في المفعول.",
+          "examples": [
+            {
+              "de": "Die kleine Katze schläft.",
+              "tr": "القطة الصغيرة نائمة."
+            }
+          ]
+        },
+        {
+          "title": "في كل الحالات الأخرى: -en",
+          "text": "den (المذكر في المفعول) وdem وder (الجر) والجمع تأخذ -en: den alten Hund، mit dem netten Freund، die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich kaufe den neuen Computer.",
+              "tr": "أشتري الحاسوب الجديد."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "adjective-three": {
+    "ru": {
+      "title": "Практика: -e или -en",
+      "points": [
+        {
+          "title": "Во всех остальных случаях: -en",
+          "text": "den (Akkusativ мужского рода), dem и der (Dativ) и множественное получают -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich liebe den grünen Tee.",
+              "tr": "Я люблю зелёный чай."
+            }
+          ]
+        },
+        {
+          "title": "После der, die, das: -e",
+          "text": "Подлежащее в единственном числе получает -e: der alte Mann, die kleine Katze, das neue Haus. Так же die (Akkusativ) и das (Akkusativ).",
+          "examples": [
+            {
+              "de": "Sie sieht das schöne Bild.",
+              "tr": "Она видит красивую картину."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Практика: -e чи -en",
+      "points": [
+        {
+          "title": "В усіх інших випадках: -en",
+          "text": "den (Akkusativ чоловічого роду), dem і der (Dativ) та множина отримують -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich liebe den grünen Tee.",
+              "tr": "Я люблю зелений чай."
+            }
+          ]
+        },
+        {
+          "title": "Після der, die, das: -e",
+          "text": "Підмет в однині отримує -e: der alte Mann, die kleine Katze, das neue Haus. Так само die і das в Akkusativ.",
+          "examples": [
+            {
+              "de": "Sie sieht das schöne Bild.",
+              "tr": "Вона бачить гарну картину."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Practice: -e or -en",
+      "points": [
+        {
+          "title": "Everywhere else: -en",
+          "text": "den (masculine accusative), dem and der (dative) and all plurals take -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich liebe den grünen Tee.",
+              "tr": "I love green tea."
+            }
+          ]
+        },
+        {
+          "title": "After der, die, das: -e",
+          "text": "The singular subject takes -e: der alte Mann, die kleine Katze, das neue Haus. Same for die and das in the accusative.",
+          "examples": [
+            {
+              "de": "Sie sieht das schöne Bild.",
+              "tr": "She sees the beautiful picture."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka: -e czy -en",
+      "points": [
+        {
+          "title": "W pozostałych przypadkach: -en",
+          "text": "den (Akkusativ rodzaju męskiego), dem i der (Dativ) oraz liczba mnoga dostają -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich liebe den grünen Tee.",
+              "tr": "Uwielbiam zieloną herbatę."
+            }
+          ]
+        },
+        {
+          "title": "Po der, die, das: -e",
+          "text": "Podmiot w liczbie pojedynczej dostaje -e: der alte Mann, die kleine Katze, das neue Haus. Tak samo die i das w Akkusativ.",
+          "examples": [
+            {
+              "de": "Sie sieht das schöne Bild.",
+              "tr": "Ona widzi piękny obraz."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica: -e o -en",
+      "points": [
+        {
+          "title": "En los demás casos: -en",
+          "text": "den (acusativo masculino), dem y der (dativo) y el plural llevan -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich liebe den grünen Tee.",
+              "tr": "Me encanta el té verde."
+            }
+          ]
+        },
+        {
+          "title": "Tras der, die, das: -e",
+          "text": "El sujeto en singular lleva -e: der alte Mann, die kleine Katze, das neue Haus. Igual die y das en acusativo.",
+          "examples": [
+            {
+              "de": "Sie sieht das schöne Bild.",
+              "tr": "Ella ve el cuadro bonito."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique : -e ou -en",
+      "points": [
+        {
+          "title": "Dans tous les autres cas : -en",
+          "text": "den (accusatif masculin), dem et der (datif) et le pluriel prennent -en : den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich liebe den grünen Tee.",
+              "tr": "J’adore le thé vert."
+            }
+          ]
+        },
+        {
+          "title": "Après der, die, das : -e",
+          "text": "Le sujet au singulier prend -e : der alte Mann, die kleine Katze, das neue Haus. Pareil pour die et das à l’accusatif.",
+          "examples": [
+            {
+              "de": "Sie sieht das schöne Bild.",
+              "tr": "Elle voit le beau tableau."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pratik: -e mi, -en mi",
+      "points": [
+        {
+          "title": "Diğer bütün durumlarda: -en",
+          "text": "den (eril Akkusativ), dem ve der (Dativ) ve çoğul -en alır: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich liebe den grünen Tee.",
+              "tr": "Yeşil çayı severim."
+            }
+          ]
+        },
+        {
+          "title": "der, die, das’tan sonra: -e",
+          "text": "Tekil özne -e alır: der alte Mann, die kleine Katze, das neue Haus. Akkusativ’de die ve das da böyle.",
+          "examples": [
+            {
+              "de": "Sie sieht das schöne Bild.",
+              "tr": "O güzel resmi görüyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică: -e sau -en",
+      "points": [
+        {
+          "title": "În toate celelalte cazuri: -en",
+          "text": "den (acuzativ masculin), dem și der (dativ) și pluralul primesc -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich liebe den grünen Tee.",
+              "tr": "Ador ceaiul verde."
+            }
+          ]
+        },
+        {
+          "title": "După der, die, das: -e",
+          "text": "Subiectul la singular primește -e: der alte Mann, die kleine Katze, das neue Haus. La fel die și das la acuzativ.",
+          "examples": [
+            {
+              "de": "Sie sieht das schöne Bild.",
+              "tr": "Ea vede tabloul frumos."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mashq: -e yoki -en",
+      "points": [
+        {
+          "title": "Qolgan barcha holatlarda: -en",
+          "text": "den (erkak rodi Akkusativ), dem va der (Dativ) hamda ko'plik -en oladi: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich liebe den grünen Tee.",
+              "tr": "Men ko'k choyni yaxshi ko'raman."
+            }
+          ]
+        },
+        {
+          "title": "der, die, das dan keyin: -e",
+          "text": "Birlikdagi ega -e oladi: der alte Mann, die kleine Katze, das neue Haus. Akkusativda die va das ham shunday.",
+          "examples": [
+            {
+              "de": "Sie sieht das schöne Bild.",
+              "tr": "U chiroyli rasmni ko'ryapti."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अभ्यास: -e या -en",
+      "points": [
+        {
+          "title": "बाकी सब जगह: -en",
+          "text": "den (पुल्लिंग Akkusativ), dem और der (Dativ) और बहुवचन -en लेते हैं: den alten Hund, mit dem netten Freund, die netten Kollegen।",
+          "examples": [
+            {
+              "de": "Ich liebe den grünen Tee.",
+              "tr": "मुझे हरी चाय पसंद है।"
+            }
+          ]
+        },
+        {
+          "title": "der, die, das के बाद: -e",
+          "text": "एकवचन कर्ता -e लेता है: der alte Mann, die kleine Katze, das neue Haus। Akkusativ में die और das भी ऐसे ही।",
+          "examples": [
+            {
+              "de": "Sie sieht das schöne Bild.",
+              "tr": "उसे सुंदर तस्वीर दिख रही है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تدريب: -e أم -en",
+      "points": [
+        {
+          "title": "في كل الحالات الأخرى: -en",
+          "text": "den (المذكر في المفعول) وdem وder (الجر) والجمع تأخذ -en: den alten Hund، mit dem netten Freund، die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich liebe den grünen Tee.",
+              "tr": "أحب الشاي الأخضر."
+            }
+          ]
+        },
+        {
+          "title": "بعد der وdie وdas: -e",
+          "text": "الفاعل المفرد يأخذ -e: der alte Mann، die kleine Katze، das neue Haus. وكذلك die وdas في المفعول.",
+          "examples": [
+            {
+              "de": "Sie sieht das schöne Bild.",
+              "tr": "هي ترى اللوحة الجميلة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "adjective-four": {
+    "ru": {
+      "title": "В Perfekt и Futur",
+      "points": [
+        {
+          "title": "Время не влияет на окончание",
+          "text": "Окончание зависит только от артикля и падежа, а не от времени: das alte Auto и в Perfekt, и в Futur.",
+          "examples": [
+            {
+              "de": "Ich habe das alte Auto verkauft.",
+              "tr": "Я продал старую машину."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "У Perfekt і Futur",
+      "points": [
+        {
+          "title": "Час не впливає на закінчення",
+          "text": "Закінчення залежить лише від артикля й відмінка, а не від часу: das alte Auto і в Perfekt, і в Futur.",
+          "examples": [
+            {
+              "de": "Ich habe das alte Auto verkauft.",
+              "tr": "Я продав стару машину."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "In Perfekt and Futur",
+      "points": [
+        {
+          "title": "The tense doesn’t change the ending",
+          "text": "The ending depends only on the article and case, not the tense: das alte Auto in Perfekt and in Futur alike.",
+          "examples": [
+            {
+              "de": "Ich habe das alte Auto verkauft.",
+              "tr": "I sold the old car."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "W Perfekt i Futur",
+      "points": [
+        {
+          "title": "Czas nie wpływa na końcówkę",
+          "text": "Końcówka zależy tylko od rodzajnika i przypadku, nie od czasu: das alte Auto i w Perfekt, i w Futur.",
+          "examples": [
+            {
+              "de": "Ich habe das alte Auto verkauft.",
+              "tr": "Sprzedałem stary samochód."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "En Perfekt y Futur",
+      "points": [
+        {
+          "title": "El tiempo no cambia la terminación",
+          "text": "La terminación depende solo del artículo y el caso, no del tiempo: das alte Auto en Perfekt y en Futur.",
+          "examples": [
+            {
+              "de": "Ich habe das alte Auto verkauft.",
+              "tr": "Vendí el coche viejo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Au Perfekt et au Futur",
+      "points": [
+        {
+          "title": "Le temps ne change pas la terminaison",
+          "text": "La terminaison dépend seulement de l’article et du cas, pas du temps : das alte Auto au Perfekt comme au Futur.",
+          "examples": [
+            {
+              "de": "Ich habe das alte Auto verkauft.",
+              "tr": "J’ai vendu la vieille voiture."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Perfekt ve Futur’da",
+      "points": [
+        {
+          "title": "Zaman eki değiştirmez",
+          "text": "Ek sadece artikel ve hâle bağlıdır, zamana değil: das alte Auto hem Perfekt’te hem Futur’da.",
+          "examples": [
+            {
+              "de": "Ich habe das alte Auto verkauft.",
+              "tr": "Eski arabayı sattım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "În Perfekt și Futur",
+      "points": [
+        {
+          "title": "Timpul nu schimbă terminația",
+          "text": "Terminația depinde doar de articol și caz, nu de timp: das alte Auto și în Perfekt, și în Futur.",
+          "examples": [
+            {
+              "de": "Ich habe das alte Auto verkauft.",
+              "tr": "Am vândut mașina veche."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Perfekt va Futur da",
+      "points": [
+        {
+          "title": "Zamon qo'shimchaga ta'sir qilmaydi",
+          "text": "Qo'shimcha faqat artikl va kelishikka bog'liq, zamonga emas: das alte Auto Perfekt da ham, Futur da ham.",
+          "examples": [
+            {
+              "de": "Ich habe das alte Auto verkauft.",
+              "tr": "Men eski mashinani sotdim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "Perfekt और Futur में",
+      "points": [
+        {
+          "title": "काल से अंत नहीं बदलता",
+          "text": "अंत सिर्फ़ आर्टिकल और कारक पर निर्भर है, काल पर नहीं: das alte Auto, Perfekt में भी और Futur में भी।",
+          "examples": [
+            {
+              "de": "Ich habe das alte Auto verkauft.",
+              "tr": "मैंने पुरानी गाड़ी बेच दी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "في Perfekt وFutur",
+      "points": [
+        {
+          "title": "الزمن لا يغير النهاية",
+          "text": "تعتمد النهاية على الأداة والحالة فقط لا على الزمن: das alte Auto في Perfekt وفي Futur.",
+          "examples": [
+            {
+              "de": "Ich habe das alte Auto verkauft.",
+              "tr": "بعت السيارة القديمة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "adjective-five": {
+    "ru": {
+      "title": "der, die, das + Adjektiv",
+      "points": [
+        {
+          "title": "После der, die, das: -e",
+          "text": "Подлежащее в единственном числе получает -e: der alte Mann, die kleine Katze, das neue Haus. Так же die (Akkusativ) и das (Akkusativ).",
+          "examples": [
+            {
+              "de": "Die junge Frau hat gelacht.",
+              "tr": "Молодая женщина засмеялась."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "der, die, das + Adjektiv",
+      "points": [
+        {
+          "title": "Після der, die, das: -e",
+          "text": "Підмет в однині отримує -e: der alte Mann, die kleine Katze, das neue Haus. Так само die і das в Akkusativ.",
+          "examples": [
+            {
+              "de": "Die junge Frau hat gelacht.",
+              "tr": "Молода жінка засміялася."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "der, die, das + Adjektiv",
+      "points": [
+        {
+          "title": "After der, die, das: -e",
+          "text": "The singular subject takes -e: der alte Mann, die kleine Katze, das neue Haus. Same for die and das in the accusative.",
+          "examples": [
+            {
+              "de": "Die junge Frau hat gelacht.",
+              "tr": "The young woman laughed."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "der, die, das + Adjektiv",
+      "points": [
+        {
+          "title": "Po der, die, das: -e",
+          "text": "Podmiot w liczbie pojedynczej dostaje -e: der alte Mann, die kleine Katze, das neue Haus. Tak samo die i das w Akkusativ.",
+          "examples": [
+            {
+              "de": "Die junge Frau hat gelacht.",
+              "tr": "Młoda kobieta się zaśmiała."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "der, die, das + Adjektiv",
+      "points": [
+        {
+          "title": "Tras der, die, das: -e",
+          "text": "El sujeto en singular lleva -e: der alte Mann, die kleine Katze, das neue Haus. Igual die y das en acusativo.",
+          "examples": [
+            {
+              "de": "Die junge Frau hat gelacht.",
+              "tr": "La joven se rió."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "der, die, das + Adjektiv",
+      "points": [
+        {
+          "title": "Après der, die, das : -e",
+          "text": "Le sujet au singulier prend -e : der alte Mann, die kleine Katze, das neue Haus. Pareil pour die et das à l’accusatif.",
+          "examples": [
+            {
+              "de": "Die junge Frau hat gelacht.",
+              "tr": "La jeune femme a ri."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "der, die, das + Adjektiv",
+      "points": [
+        {
+          "title": "der, die, das’tan sonra: -e",
+          "text": "Tekil özne -e alır: der alte Mann, die kleine Katze, das neue Haus. Akkusativ’de die ve das da böyle.",
+          "examples": [
+            {
+              "de": "Die junge Frau hat gelacht.",
+              "tr": "Genç kadın güldü."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "der, die, das + Adjektiv",
+      "points": [
+        {
+          "title": "După der, die, das: -e",
+          "text": "Subiectul la singular primește -e: der alte Mann, die kleine Katze, das neue Haus. La fel die și das la acuzativ.",
+          "examples": [
+            {
+              "de": "Die junge Frau hat gelacht.",
+              "tr": "Tânăra a râs."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "der, die, das + Adjektiv",
+      "points": [
+        {
+          "title": "der, die, das dan keyin: -e",
+          "text": "Birlikdagi ega -e oladi: der alte Mann, die kleine Katze, das neue Haus. Akkusativda die va das ham shunday.",
+          "examples": [
+            {
+              "de": "Die junge Frau hat gelacht.",
+              "tr": "Yosh ayol kuldi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "der, die, das + Adjektiv",
+      "points": [
+        {
+          "title": "der, die, das के बाद: -e",
+          "text": "एकवचन कर्ता -e लेता है: der alte Mann, die kleine Katze, das neue Haus। Akkusativ में die और das भी ऐसे ही।",
+          "examples": [
+            {
+              "de": "Die junge Frau hat gelacht.",
+              "tr": "युवा महिला हँसी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "der, die, das + Adjektiv",
+      "points": [
+        {
+          "title": "بعد der وdie وdas: -e",
+          "text": "الفاعل المفرد يأخذ -e: der alte Mann، die kleine Katze، das neue Haus. وكذلك die وdas في المفعول.",
+          "examples": [
+            {
+              "de": "Die junge Frau hat gelacht.",
+              "tr": "ضحكت الشابة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "adjective-six": {
+    "ru": {
+      "title": "der, die, das + Adjektiv",
+      "points": [
+        {
+          "title": "Во всех остальных случаях: -en",
+          "text": "den (Akkusativ мужского рода), dem и der (Dativ) и множественное получают -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich werde den guten Freund treffen.",
+              "tr": "Я встречусь с хорошим другом."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "der, die, das + Adjektiv",
+      "points": [
+        {
+          "title": "В усіх інших випадках: -en",
+          "text": "den (Akkusativ чоловічого роду), dem і der (Dativ) та множина отримують -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich werde den guten Freund treffen.",
+              "tr": "Я зустрінуся з добрим другом."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "der, die, das + Adjektiv",
+      "points": [
+        {
+          "title": "Everywhere else: -en",
+          "text": "den (masculine accusative), dem and der (dative) and all plurals take -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich werde den guten Freund treffen.",
+              "tr": "I’ll meet the good friend."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "der, die, das + Adjektiv",
+      "points": [
+        {
+          "title": "W pozostałych przypadkach: -en",
+          "text": "den (Akkusativ rodzaju męskiego), dem i der (Dativ) oraz liczba mnoga dostają -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich werde den guten Freund treffen.",
+              "tr": "Spotkam się z dobrym przyjacielem."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "der, die, das + Adjektiv",
+      "points": [
+        {
+          "title": "En los demás casos: -en",
+          "text": "den (acusativo masculino), dem y der (dativo) y el plural llevan -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich werde den guten Freund treffen.",
+              "tr": "Veré al buen amigo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "der, die, das + Adjektiv",
+      "points": [
+        {
+          "title": "Dans tous les autres cas : -en",
+          "text": "den (accusatif masculin), dem et der (datif) et le pluriel prennent -en : den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich werde den guten Freund treffen.",
+              "tr": "Je vais retrouver le bon ami."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "der, die, das + Adjektiv",
+      "points": [
+        {
+          "title": "Diğer bütün durumlarda: -en",
+          "text": "den (eril Akkusativ), dem ve der (Dativ) ve çoğul -en alır: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich werde den guten Freund treffen.",
+              "tr": "İyi arkadaşla buluşacağım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "der, die, das + Adjektiv",
+      "points": [
+        {
+          "title": "În toate celelalte cazuri: -en",
+          "text": "den (acuzativ masculin), dem și der (dativ) și pluralul primesc -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich werde den guten Freund treffen.",
+              "tr": "Mă voi întâlni cu prietenul cel bun."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "der, die, das + Adjektiv",
+      "points": [
+        {
+          "title": "Qolgan barcha holatlarda: -en",
+          "text": "den (erkak rodi Akkusativ), dem va der (Dativ) hamda ko'plik -en oladi: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich werde den guten Freund treffen.",
+              "tr": "Yaxshi do'st bilan uchrashaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "der, die, das + Adjektiv",
+      "points": [
+        {
+          "title": "बाकी सब जगह: -en",
+          "text": "den (पुल्लिंग Akkusativ), dem और der (Dativ) और बहुवचन -en लेते हैं: den alten Hund, mit dem netten Freund, die netten Kollegen।",
+          "examples": [
+            {
+              "de": "Ich werde den guten Freund treffen.",
+              "tr": "मैं अच्छे दोस्त से मिलूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "der, die, das + Adjektiv",
+      "points": [
+        {
+          "title": "في كل الحالات الأخرى: -en",
+          "text": "den (المذكر في المفعول) وdem وder (الجر) والجمع تأخذ -en: den alten Hund، mit dem netten Freund، die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich werde den guten Freund treffen.",
+              "tr": "سألتقي بالصديق الطيب."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "adjective-seven": {
+    "ru": {
+      "title": "Закрепляем",
+      "points": [
+        {
+          "title": "После der, die, das: -e",
+          "text": "Подлежащее в единственном числе получает -e: der alte Mann, die kleine Katze, das neue Haus. Так же die (Akkusativ) и das (Akkusativ).",
+          "examples": [
+            {
+              "de": "Der neue Plan wird funktionieren.",
+              "tr": "Новый план сработает."
+            }
+          ]
+        },
+        {
+          "title": "Во всех остальных случаях: -en",
+          "text": "den (Akkusativ мужского рода), dem и der (Dativ) и множественное получают -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich habe den schwarzen Hund gesehen.",
+              "tr": "Я видел чёрную собаку."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Закріплюємо",
+      "points": [
+        {
+          "title": "Після der, die, das: -e",
+          "text": "Підмет в однині отримує -e: der alte Mann, die kleine Katze, das neue Haus. Так само die і das в Akkusativ.",
+          "examples": [
+            {
+              "de": "Der neue Plan wird funktionieren.",
+              "tr": "Новий план спрацює."
+            }
+          ]
+        },
+        {
+          "title": "В усіх інших випадках: -en",
+          "text": "den (Akkusativ чоловічого роду), dem і der (Dativ) та множина отримують -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich habe den schwarzen Hund gesehen.",
+              "tr": "Я бачив чорного собаку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Consolidating",
+      "points": [
+        {
+          "title": "After der, die, das: -e",
+          "text": "The singular subject takes -e: der alte Mann, die kleine Katze, das neue Haus. Same for die and das in the accusative.",
+          "examples": [
+            {
+              "de": "Der neue Plan wird funktionieren.",
+              "tr": "The new plan will work."
+            }
+          ]
+        },
+        {
+          "title": "Everywhere else: -en",
+          "text": "den (masculine accusative), dem and der (dative) and all plurals take -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich habe den schwarzen Hund gesehen.",
+              "tr": "I saw the black dog."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Utrwalamy",
+      "points": [
+        {
+          "title": "Po der, die, das: -e",
+          "text": "Podmiot w liczbie pojedynczej dostaje -e: der alte Mann, die kleine Katze, das neue Haus. Tak samo die i das w Akkusativ.",
+          "examples": [
+            {
+              "de": "Der neue Plan wird funktionieren.",
+              "tr": "Nowy plan zadziała."
+            }
+          ]
+        },
+        {
+          "title": "W pozostałych przypadkach: -en",
+          "text": "den (Akkusativ rodzaju męskiego), dem i der (Dativ) oraz liczba mnoga dostają -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich habe den schwarzen Hund gesehen.",
+              "tr": "Widziałem czarnego psa."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Consolidamos",
+      "points": [
+        {
+          "title": "Tras der, die, das: -e",
+          "text": "El sujeto en singular lleva -e: der alte Mann, die kleine Katze, das neue Haus. Igual die y das en acusativo.",
+          "examples": [
+            {
+              "de": "Der neue Plan wird funktionieren.",
+              "tr": "El plan nuevo funcionará."
+            }
+          ]
+        },
+        {
+          "title": "En los demás casos: -en",
+          "text": "den (acusativo masculino), dem y der (dativo) y el plural llevan -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich habe den schwarzen Hund gesehen.",
+              "tr": "Vi al perro negro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "On consolide",
+      "points": [
+        {
+          "title": "Après der, die, das : -e",
+          "text": "Le sujet au singulier prend -e : der alte Mann, die kleine Katze, das neue Haus. Pareil pour die et das à l’accusatif.",
+          "examples": [
+            {
+              "de": "Der neue Plan wird funktionieren.",
+              "tr": "Le nouveau plan va marcher."
+            }
+          ]
+        },
+        {
+          "title": "Dans tous les autres cas : -en",
+          "text": "den (accusatif masculin), dem et der (datif) et le pluriel prennent -en : den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich habe den schwarzen Hund gesehen.",
+              "tr": "J’ai vu le chien noir."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Pekiştiriyoruz",
+      "points": [
+        {
+          "title": "der, die, das’tan sonra: -e",
+          "text": "Tekil özne -e alır: der alte Mann, die kleine Katze, das neue Haus. Akkusativ’de die ve das da böyle.",
+          "examples": [
+            {
+              "de": "Der neue Plan wird funktionieren.",
+              "tr": "Yeni plan işe yarayacak."
+            }
+          ]
+        },
+        {
+          "title": "Diğer bütün durumlarda: -en",
+          "text": "den (eril Akkusativ), dem ve der (Dativ) ve çoğul -en alır: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich habe den schwarzen Hund gesehen.",
+              "tr": "Siyah köpeği gördüm."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Consolidăm",
+      "points": [
+        {
+          "title": "După der, die, das: -e",
+          "text": "Subiectul la singular primește -e: der alte Mann, die kleine Katze, das neue Haus. La fel die și das la acuzativ.",
+          "examples": [
+            {
+              "de": "Der neue Plan wird funktionieren.",
+              "tr": "Noul plan va funcționa."
+            }
+          ]
+        },
+        {
+          "title": "În toate celelalte cazuri: -en",
+          "text": "den (acuzativ masculin), dem și der (dativ) și pluralul primesc -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich habe den schwarzen Hund gesehen.",
+              "tr": "Am văzut câinele negru."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Mustahkamlaymiz",
+      "points": [
+        {
+          "title": "der, die, das dan keyin: -e",
+          "text": "Birlikdagi ega -e oladi: der alte Mann, die kleine Katze, das neue Haus. Akkusativda die va das ham shunday.",
+          "examples": [
+            {
+              "de": "Der neue Plan wird funktionieren.",
+              "tr": "Yangi reja ishlaydi."
+            }
+          ]
+        },
+        {
+          "title": "Qolgan barcha holatlarda: -en",
+          "text": "den (erkak rodi Akkusativ), dem va der (Dativ) hamda ko'plik -en oladi: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich habe den schwarzen Hund gesehen.",
+              "tr": "Men qora itni ko'rdim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "पक्का करते हैं",
+      "points": [
+        {
+          "title": "der, die, das के बाद: -e",
+          "text": "एकवचन कर्ता -e लेता है: der alte Mann, die kleine Katze, das neue Haus। Akkusativ में die और das भी ऐसे ही।",
+          "examples": [
+            {
+              "de": "Der neue Plan wird funktionieren.",
+              "tr": "नई योजना काम करेगी।"
+            }
+          ]
+        },
+        {
+          "title": "बाकी सब जगह: -en",
+          "text": "den (पुल्लिंग Akkusativ), dem और der (Dativ) और बहुवचन -en लेते हैं: den alten Hund, mit dem netten Freund, die netten Kollegen।",
+          "examples": [
+            {
+              "de": "Ich habe den schwarzen Hund gesehen.",
+              "tr": "मैंने काला कुत्ता देखा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "نثبّت",
+      "points": [
+        {
+          "title": "بعد der وdie وdas: -e",
+          "text": "الفاعل المفرد يأخذ -e: der alte Mann، die kleine Katze، das neue Haus. وكذلك die وdas في المفعول.",
+          "examples": [
+            {
+              "de": "Der neue Plan wird funktionieren.",
+              "tr": "ستنجح الخطة الجديدة."
+            }
+          ]
+        },
+        {
+          "title": "في كل الحالات الأخرى: -en",
+          "text": "den (المذكر في المفعول) وdem وder (الجر) والجمع تأخذ -en: den alten Hund، mit dem netten Freund، die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich habe den schwarzen Hund gesehen.",
+              "tr": "رأيت الكلب الأسود."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "adjective-eight": {
+    "ru": {
+      "title": "Множественное: -en",
+      "points": [
+        {
+          "title": "Во всех остальных случаях: -en",
+          "text": "den (Akkusativ мужского рода), dem и der (Dativ) и множественное получают -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Die netten Kollegen haben uns geholfen.",
+              "tr": "Милые коллеги нам помогли."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Множина: -en",
+      "points": [
+        {
+          "title": "В усіх інших випадках: -en",
+          "text": "den (Akkusativ чоловічого роду), dem і der (Dativ) та множина отримують -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Die netten Kollegen haben uns geholfen.",
+              "tr": "Милі колеги нам допомогли."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Plural: -en",
+      "points": [
+        {
+          "title": "Everywhere else: -en",
+          "text": "den (masculine accusative), dem and der (dative) and all plurals take -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Die netten Kollegen haben uns geholfen.",
+              "tr": "The nice colleagues helped us."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Liczba mnoga: -en",
+      "points": [
+        {
+          "title": "W pozostałych przypadkach: -en",
+          "text": "den (Akkusativ rodzaju męskiego), dem i der (Dativ) oraz liczba mnoga dostają -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Die netten Kollegen haben uns geholfen.",
+              "tr": "Mili koledzy nam pomogli."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Plural: -en",
+      "points": [
+        {
+          "title": "En los demás casos: -en",
+          "text": "den (acusativo masculino), dem y der (dativo) y el plural llevan -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Die netten Kollegen haben uns geholfen.",
+              "tr": "Los compañeros simpáticos nos ayudaron."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pluriel : -en",
+      "points": [
+        {
+          "title": "Dans tous les autres cas : -en",
+          "text": "den (accusatif masculin), dem et der (datif) et le pluriel prennent -en : den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Die netten Kollegen haben uns geholfen.",
+              "tr": "Les collègues sympas nous ont aidés."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Çoğul: -en",
+      "points": [
+        {
+          "title": "Diğer bütün durumlarda: -en",
+          "text": "den (eril Akkusativ), dem ve der (Dativ) ve çoğul -en alır: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Die netten Kollegen haben uns geholfen.",
+              "tr": "Nazik iş arkadaşları bize yardım etti."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Plural: -en",
+      "points": [
+        {
+          "title": "În toate celelalte cazuri: -en",
+          "text": "den (acuzativ masculin), dem și der (dativ) și pluralul primesc -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Die netten Kollegen haben uns geholfen.",
+              "tr": "Colegii drăguți ne-au ajutat."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ko'plik: -en",
+      "points": [
+        {
+          "title": "Qolgan barcha holatlarda: -en",
+          "text": "den (erkak rodi Akkusativ), dem va der (Dativ) hamda ko'plik -en oladi: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Die netten Kollegen haben uns geholfen.",
+              "tr": "Yoqimli hamkasblar bizga yordam berishdi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "बहुवचन: -en",
+      "points": [
+        {
+          "title": "बाकी सब जगह: -en",
+          "text": "den (पुल्लिंग Akkusativ), dem और der (Dativ) और बहुवचन -en लेते हैं: den alten Hund, mit dem netten Freund, die netten Kollegen।",
+          "examples": [
+            {
+              "de": "Die netten Kollegen haben uns geholfen.",
+              "tr": "अच्छे सहकर्मियों ने हमारी मदद की।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الجمع: -en",
+      "points": [
+        {
+          "title": "في كل الحالات الأخرى: -en",
+          "text": "den (المذكر في المفعول) وdem وder (الجر) والجمع تأخذ -en: den alten Hund، mit dem netten Freund، die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Die netten Kollegen haben uns geholfen.",
+              "tr": "ساعدنا الزملاء اللطفاء."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "adjective-nine": {
+    "ru": {
+      "title": "Расширяем словарь",
+      "points": [
+        {
+          "title": "После der, die, das: -e",
+          "text": "Подлежащее в единственном числе получает -e: der alte Mann, die kleine Katze, das neue Haus. Так же die (Akkusativ) и das (Akkusativ).",
+          "examples": [
+            {
+              "de": "Die junge Künstlerin hat gemalt.",
+              "tr": "Молодая художница рисовала."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Розширюємо словник",
+      "points": [
+        {
+          "title": "Після der, die, das: -e",
+          "text": "Підмет в однині отримує -e: der alte Mann, die kleine Katze, das neue Haus. Так само die і das в Akkusativ.",
+          "examples": [
+            {
+              "de": "Die junge Künstlerin hat gemalt.",
+              "tr": "Молода художниця малювала."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Expanding vocabulary",
+      "points": [
+        {
+          "title": "After der, die, das: -e",
+          "text": "The singular subject takes -e: der alte Mann, die kleine Katze, das neue Haus. Same for die and das in the accusative.",
+          "examples": [
+            {
+              "de": "Die junge Künstlerin hat gemalt.",
+              "tr": "The young artist painted."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Poszerzamy słownictwo",
+      "points": [
+        {
+          "title": "Po der, die, das: -e",
+          "text": "Podmiot w liczbie pojedynczej dostaje -e: der alte Mann, die kleine Katze, das neue Haus. Tak samo die i das w Akkusativ.",
+          "examples": [
+            {
+              "de": "Die junge Künstlerin hat gemalt.",
+              "tr": "Młoda artystka malowała."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Ampliamos vocabulario",
+      "points": [
+        {
+          "title": "Tras der, die, das: -e",
+          "text": "El sujeto en singular lleva -e: der alte Mann, die kleine Katze, das neue Haus. Igual die y das en acusativo.",
+          "examples": [
+            {
+              "de": "Die junge Künstlerin hat gemalt.",
+              "tr": "La joven artista pintó."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "On enrichit le vocabulaire",
+      "points": [
+        {
+          "title": "Après der, die, das : -e",
+          "text": "Le sujet au singulier prend -e : der alte Mann, die kleine Katze, das neue Haus. Pareil pour die et das à l’accusatif.",
+          "examples": [
+            {
+              "de": "Die junge Künstlerin hat gemalt.",
+              "tr": "La jeune artiste a peint."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kelime dağarcığını genişletiyoruz",
+      "points": [
+        {
+          "title": "der, die, das’tan sonra: -e",
+          "text": "Tekil özne -e alır: der alte Mann, die kleine Katze, das neue Haus. Akkusativ’de die ve das da böyle.",
+          "examples": [
+            {
+              "de": "Die junge Künstlerin hat gemalt.",
+              "tr": "Genç sanatçı resim yaptı."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Ne îmbogățim vocabularul",
+      "points": [
+        {
+          "title": "După der, die, das: -e",
+          "text": "Subiectul la singular primește -e: der alte Mann, die kleine Katze, das neue Haus. La fel die și das la acuzativ.",
+          "examples": [
+            {
+              "de": "Die junge Künstlerin hat gemalt.",
+              "tr": "Tânăra artistă a pictat."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Lug'atni kengaytiramiz",
+      "points": [
+        {
+          "title": "der, die, das dan keyin: -e",
+          "text": "Birlikdagi ega -e oladi: der alte Mann, die kleine Katze, das neue Haus. Akkusativda die va das ham shunday.",
+          "examples": [
+            {
+              "de": "Die junge Künstlerin hat gemalt.",
+              "tr": "Yosh rassom ayol rasm chizdi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "शब्द-भंडार बढ़ाते हैं",
+      "points": [
+        {
+          "title": "der, die, das के बाद: -e",
+          "text": "एकवचन कर्ता -e लेता है: der alte Mann, die kleine Katze, das neue Haus। Akkusativ में die और das भी ऐसे ही।",
+          "examples": [
+            {
+              "de": "Die junge Künstlerin hat gemalt.",
+              "tr": "युवा कलाकार ने चित्र बनाया।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "نوسّع المفردات",
+      "points": [
+        {
+          "title": "بعد der وdie وdas: -e",
+          "text": "الفاعل المفرد يأخذ -e: der alte Mann، die kleine Katze، das neue Haus. وكذلك die وdas في المفعول.",
+          "examples": [
+            {
+              "de": "Die junge Künstlerin hat gemalt.",
+              "tr": "رسمت الفنانة الشابة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "adjective-ten": {
+    "ru": {
+      "title": "Город, транспорт, еда",
+      "points": [
+        {
+          "title": "После der, die, das: -e",
+          "text": "Подлежащее в единственном числе получает -e: der alte Mann, die kleine Katze, das neue Haus. Так же die (Akkusativ) и das (Akkusativ).",
+          "examples": [
+            {
+              "de": "Die neue Brücke wird fertig sein.",
+              "tr": "Новый мост будет готов."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Місто, транспорт, їжа",
+      "points": [
+        {
+          "title": "Після der, die, das: -e",
+          "text": "Підмет в однині отримує -e: der alte Mann, die kleine Katze, das neue Haus. Так само die і das в Akkusativ.",
+          "examples": [
+            {
+              "de": "Die neue Brücke wird fertig sein.",
+              "tr": "Новий міст буде готовий."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "City, transport, food",
+      "points": [
+        {
+          "title": "After der, die, das: -e",
+          "text": "The singular subject takes -e: der alte Mann, die kleine Katze, das neue Haus. Same for die and das in the accusative.",
+          "examples": [
+            {
+              "de": "Die neue Brücke wird fertig sein.",
+              "tr": "The new bridge will be finished."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Miasto, transport, jedzenie",
+      "points": [
+        {
+          "title": "Po der, die, das: -e",
+          "text": "Podmiot w liczbie pojedynczej dostaje -e: der alte Mann, die kleine Katze, das neue Haus. Tak samo die i das w Akkusativ.",
+          "examples": [
+            {
+              "de": "Die neue Brücke wird fertig sein.",
+              "tr": "Nowy most będzie gotowy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Ciudad, transporte, comida",
+      "points": [
+        {
+          "title": "Tras der, die, das: -e",
+          "text": "El sujeto en singular lleva -e: der alte Mann, die kleine Katze, das neue Haus. Igual die y das en acusativo.",
+          "examples": [
+            {
+              "de": "Die neue Brücke wird fertig sein.",
+              "tr": "El puente nuevo estará terminado."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Ville, transports, nourriture",
+      "points": [
+        {
+          "title": "Après der, die, das : -e",
+          "text": "Le sujet au singulier prend -e : der alte Mann, die kleine Katze, das neue Haus. Pareil pour die et das à l’accusatif.",
+          "examples": [
+            {
+              "de": "Die neue Brücke wird fertig sein.",
+              "tr": "Le nouveau pont sera terminé."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Şehir, ulaşım, yemek",
+      "points": [
+        {
+          "title": "der, die, das’tan sonra: -e",
+          "text": "Tekil özne -e alır: der alte Mann, die kleine Katze, das neue Haus. Akkusativ’de die ve das da böyle.",
+          "examples": [
+            {
+              "de": "Die neue Brücke wird fertig sein.",
+              "tr": "Yeni köprü bitmiş olacak."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Oraș, transport, mâncare",
+      "points": [
+        {
+          "title": "După der, die, das: -e",
+          "text": "Subiectul la singular primește -e: der alte Mann, die kleine Katze, das neue Haus. La fel die și das la acuzativ.",
+          "examples": [
+            {
+              "de": "Die neue Brücke wird fertig sein.",
+              "tr": "Podul nou va fi gata."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Shahar, transport, taom",
+      "points": [
+        {
+          "title": "der, die, das dan keyin: -e",
+          "text": "Birlikdagi ega -e oladi: der alte Mann, die kleine Katze, das neue Haus. Akkusativda die va das ham shunday.",
+          "examples": [
+            {
+              "de": "Die neue Brücke wird fertig sein.",
+              "tr": "Yangi ko'prik tayyor bo'ladi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "शहर, परिवहन, खाना",
+      "points": [
+        {
+          "title": "der, die, das के बाद: -e",
+          "text": "एकवचन कर्ता -e लेता है: der alte Mann, die kleine Katze, das neue Haus। Akkusativ में die और das भी ऐसे ही।",
+          "examples": [
+            {
+              "de": "Die neue Brücke wird fertig sein.",
+              "tr": "नया पुल तैयार हो जाएगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المدينة والنقل والطعام",
+      "points": [
+        {
+          "title": "بعد der وdie وdas: -e",
+          "text": "الفاعل المفرد يأخذ -e: der alte Mann، die kleine Katze، das neue Haus. وكذلك die وdas في المفعول.",
+          "examples": [
+            {
+              "de": "Die neue Brücke wird fertig sein.",
+              "tr": "سيكون الجسر الجديد جاهزاً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "adjective-eleven": {
+    "ru": {
+      "title": "Путешествия и природа",
+      "points": [
+        {
+          "title": "Во всех остальных случаях: -en",
+          "text": "den (Akkusativ мужского рода), dem и der (Dativ) и множественное получают -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Wir werden den blauen Himmel sehen.",
+              "tr": "Мы увидим голубое небо."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Подорожі й природа",
+      "points": [
+        {
+          "title": "В усіх інших випадках: -en",
+          "text": "den (Akkusativ чоловічого роду), dem і der (Dativ) та множина отримують -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Wir werden den blauen Himmel sehen.",
+              "tr": "Ми побачимо блакитне небо."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Travel and nature",
+      "points": [
+        {
+          "title": "Everywhere else: -en",
+          "text": "den (masculine accusative), dem and der (dative) and all plurals take -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Wir werden den blauen Himmel sehen.",
+              "tr": "We’ll see the blue sky."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Podróże i przyroda",
+      "points": [
+        {
+          "title": "W pozostałych przypadkach: -en",
+          "text": "den (Akkusativ rodzaju męskiego), dem i der (Dativ) oraz liczba mnoga dostają -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Wir werden den blauen Himmel sehen.",
+              "tr": "Zobaczymy błękitne niebo."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Viajes y naturaleza",
+      "points": [
+        {
+          "title": "En los demás casos: -en",
+          "text": "den (acusativo masculino), dem y der (dativo) y el plural llevan -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Wir werden den blauen Himmel sehen.",
+              "tr": "Veremos el cielo azul."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Voyages et nature",
+      "points": [
+        {
+          "title": "Dans tous les autres cas : -en",
+          "text": "den (accusatif masculin), dem et der (datif) et le pluriel prennent -en : den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Wir werden den blauen Himmel sehen.",
+              "tr": "Nous verrons le ciel bleu."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Seyahat ve doğa",
+      "points": [
+        {
+          "title": "Diğer bütün durumlarda: -en",
+          "text": "den (eril Akkusativ), dem ve der (Dativ) ve çoğul -en alır: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Wir werden den blauen Himmel sehen.",
+              "tr": "Mavi gökyüzünü göreceğiz."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Călătorii și natură",
+      "points": [
+        {
+          "title": "În toate celelalte cazuri: -en",
+          "text": "den (acuzativ masculin), dem și der (dativ) și pluralul primesc -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Wir werden den blauen Himmel sehen.",
+              "tr": "Vom vedea cerul albastru."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Sayohat va tabiat",
+      "points": [
+        {
+          "title": "Qolgan barcha holatlarda: -en",
+          "text": "den (erkak rodi Akkusativ), dem va der (Dativ) hamda ko'plik -en oladi: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Wir werden den blauen Himmel sehen.",
+              "tr": "Biz moviy osmonni ko'ramiz."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "यात्रा और प्रकृति",
+      "points": [
+        {
+          "title": "बाकी सब जगह: -en",
+          "text": "den (पुल्लिंग Akkusativ), dem और der (Dativ) और बहुवचन -en लेते हैं: den alten Hund, mit dem netten Freund, die netten Kollegen।",
+          "examples": [
+            {
+              "de": "Wir werden den blauen Himmel sehen.",
+              "tr": "हम नीला आसमान देखेंगे।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "السفر والطبيعة",
+      "points": [
+        {
+          "title": "في كل الحالات الأخرى: -en",
+          "text": "den (المذكر في المفعول) وdem وder (الجر) والجمع تأخذ -en: den alten Hund، mit dem netten Freund، die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Wir werden den blauen Himmel sehen.",
+              "tr": "سنرى السماء الزرقاء."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "adjective-twelve": {
+    "ru": {
+      "title": "Учёба и работа",
+      "points": [
+        {
+          "title": "После der, die, das: -e",
+          "text": "Подлежащее в единственном числе получает -e: der alte Mann, die kleine Katze, das neue Haus. Так же die (Akkusativ) и das (Akkusativ).",
+          "examples": [
+            {
+              "de": "Der Student wird die schwere Prüfung bestehen.",
+              "tr": "Студент сдаст трудный экзамен."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Навчання й робота",
+      "points": [
+        {
+          "title": "Після der, die, das: -e",
+          "text": "Підмет в однині отримує -e: der alte Mann, die kleine Katze, das neue Haus. Так само die і das в Akkusativ.",
+          "examples": [
+            {
+              "de": "Der Student wird die schwere Prüfung bestehen.",
+              "tr": "Студент складе важкий іспит."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Study and work",
+      "points": [
+        {
+          "title": "After der, die, das: -e",
+          "text": "The singular subject takes -e: der alte Mann, die kleine Katze, das neue Haus. Same for die and das in the accusative.",
+          "examples": [
+            {
+              "de": "Der Student wird die schwere Prüfung bestehen.",
+              "tr": "The student will pass the hard exam."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Nauka i praca",
+      "points": [
+        {
+          "title": "Po der, die, das: -e",
+          "text": "Podmiot w liczbie pojedynczej dostaje -e: der alte Mann, die kleine Katze, das neue Haus. Tak samo die i das w Akkusativ.",
+          "examples": [
+            {
+              "de": "Der Student wird die schwere Prüfung bestehen.",
+              "tr": "Student zda trudny egzamin."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Estudios y trabajo",
+      "points": [
+        {
+          "title": "Tras der, die, das: -e",
+          "text": "El sujeto en singular lleva -e: der alte Mann, die kleine Katze, das neue Haus. Igual die y das en acusativo.",
+          "examples": [
+            {
+              "de": "Der Student wird die schwere Prüfung bestehen.",
+              "tr": "El estudiante aprobará el examen difícil."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Études et travail",
+      "points": [
+        {
+          "title": "Après der, die, das : -e",
+          "text": "Le sujet au singulier prend -e : der alte Mann, die kleine Katze, das neue Haus. Pareil pour die et das à l’accusatif.",
+          "examples": [
+            {
+              "de": "Der Student wird die schwere Prüfung bestehen.",
+              "tr": "L’étudiant réussira l’examen difficile."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Eğitim ve iş",
+      "points": [
+        {
+          "title": "der, die, das’tan sonra: -e",
+          "text": "Tekil özne -e alır: der alte Mann, die kleine Katze, das neue Haus. Akkusativ’de die ve das da böyle.",
+          "examples": [
+            {
+              "de": "Der Student wird die schwere Prüfung bestehen.",
+              "tr": "Öğrenci zor sınavı geçecek."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Studiu și muncă",
+      "points": [
+        {
+          "title": "După der, die, das: -e",
+          "text": "Subiectul la singular primește -e: der alte Mann, die kleine Katze, das neue Haus. La fel die și das la acuzativ.",
+          "examples": [
+            {
+              "de": "Der Student wird die schwere Prüfung bestehen.",
+              "tr": "Studentul va trece examenul greu."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "O'qish va ish",
+      "points": [
+        {
+          "title": "der, die, das dan keyin: -e",
+          "text": "Birlikdagi ega -e oladi: der alte Mann, die kleine Katze, das neue Haus. Akkusativda die va das ham shunday.",
+          "examples": [
+            {
+              "de": "Der Student wird die schwere Prüfung bestehen.",
+              "tr": "Talaba qiyin imtihondan o'tadi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "पढ़ाई और काम",
+      "points": [
+        {
+          "title": "der, die, das के बाद: -e",
+          "text": "एकवचन कर्ता -e लेता है: der alte Mann, die kleine Katze, das neue Haus। Akkusativ में die और das भी ऐसे ही।",
+          "examples": [
+            {
+              "de": "Der Student wird die schwere Prüfung bestehen.",
+              "tr": "छात्र कठिन परीक्षा पास करेगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الدراسة والعمل",
+      "points": [
+        {
+          "title": "بعد der وdie وdas: -e",
+          "text": "الفاعل المفرد يأخذ -e: der alte Mann، die kleine Katze، das neue Haus. وكذلك die وdas في المفعول.",
+          "examples": [
+            {
+              "de": "Der Student wird die schwere Prüfung bestehen.",
+              "tr": "سينجح الطالب في الامتحان الصعب."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "adjective-thirteen": {
+    "ru": {
+      "title": "Покупки и здоровье",
+      "points": [
+        {
+          "title": "После der, die, das: -e",
+          "text": "Подлежащее в единственном числе получает -e: der alte Mann, die kleine Katze, das neue Haus. Так же die (Akkusativ) и das (Akkusativ).",
+          "examples": [
+            {
+              "de": "Ich werde die blaue Jacke kaufen.",
+              "tr": "Я куплю синюю куртку."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Покупки й здоров’я",
+      "points": [
+        {
+          "title": "Після der, die, das: -e",
+          "text": "Підмет в однині отримує -e: der alte Mann, die kleine Katze, das neue Haus. Так само die і das в Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich werde die blaue Jacke kaufen.",
+              "tr": "Я куплю синю куртку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Shopping and health",
+      "points": [
+        {
+          "title": "After der, die, das: -e",
+          "text": "The singular subject takes -e: der alte Mann, die kleine Katze, das neue Haus. Same for die and das in the accusative.",
+          "examples": [
+            {
+              "de": "Ich werde die blaue Jacke kaufen.",
+              "tr": "I’ll buy the blue jacket."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Zakupy i zdrowie",
+      "points": [
+        {
+          "title": "Po der, die, das: -e",
+          "text": "Podmiot w liczbie pojedynczej dostaje -e: der alte Mann, die kleine Katze, das neue Haus. Tak samo die i das w Akkusativ.",
+          "examples": [
+            {
+              "de": "Ich werde die blaue Jacke kaufen.",
+              "tr": "Kupię niebieską kurtkę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Compras y salud",
+      "points": [
+        {
+          "title": "Tras der, die, das: -e",
+          "text": "El sujeto en singular lleva -e: der alte Mann, die kleine Katze, das neue Haus. Igual die y das en acusativo.",
+          "examples": [
+            {
+              "de": "Ich werde die blaue Jacke kaufen.",
+              "tr": "Compraré la chaqueta azul."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Courses et santé",
+      "points": [
+        {
+          "title": "Après der, die, das : -e",
+          "text": "Le sujet au singulier prend -e : der alte Mann, die kleine Katze, das neue Haus. Pareil pour die et das à l’accusatif.",
+          "examples": [
+            {
+              "de": "Ich werde die blaue Jacke kaufen.",
+              "tr": "Je vais acheter la veste bleue."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Alışveriş ve sağlık",
+      "points": [
+        {
+          "title": "der, die, das’tan sonra: -e",
+          "text": "Tekil özne -e alır: der alte Mann, die kleine Katze, das neue Haus. Akkusativ’de die ve das da böyle.",
+          "examples": [
+            {
+              "de": "Ich werde die blaue Jacke kaufen.",
+              "tr": "Mavi ceketi alacağım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cumpărături și sănătate",
+      "points": [
+        {
+          "title": "După der, die, das: -e",
+          "text": "Subiectul la singular primește -e: der alte Mann, die kleine Katze, das neue Haus. La fel die și das la acuzativ.",
+          "examples": [
+            {
+              "de": "Ich werde die blaue Jacke kaufen.",
+              "tr": "Voi cumpăra geaca albastră."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Xarid va sog'liq",
+      "points": [
+        {
+          "title": "der, die, das dan keyin: -e",
+          "text": "Birlikdagi ega -e oladi: der alte Mann, die kleine Katze, das neue Haus. Akkusativda die va das ham shunday.",
+          "examples": [
+            {
+              "de": "Ich werde die blaue Jacke kaufen.",
+              "tr": "Ko'k kurtkani sotib olaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "खरीदारी और स्वास्थ्य",
+      "points": [
+        {
+          "title": "der, die, das के बाद: -e",
+          "text": "एकवचन कर्ता -e लेता है: der alte Mann, die kleine Katze, das neue Haus। Akkusativ में die और das भी ऐसे ही।",
+          "examples": [
+            {
+              "de": "Ich werde die blaue Jacke kaufen.",
+              "tr": "मैं नीली जैकेट खरीदूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "التسوق والصحة",
+      "points": [
+        {
+          "title": "بعد der وdie وdas: -e",
+          "text": "الفاعل المفرد يأخذ -e: der alte Mann، die kleine Katze، das neue Haus. وكذلك die وdas في المفعول.",
+          "examples": [
+            {
+              "de": "Ich werde die blaue Jacke kaufen.",
+              "tr": "سأشتري السترة الزرقاء."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "adjective-fourteen": {
+    "ru": {
+      "title": "Офис и путешествия",
+      "points": [
+        {
+          "title": "Во всех остальных случаях: -en",
+          "text": "den (Akkusativ мужского рода), dem и der (Dativ) и множественное получают -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Sie wird den heißen Tee trinken.",
+              "tr": "Она выпьет горячий чай."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Офіс і подорожі",
+      "points": [
+        {
+          "title": "В усіх інших випадках: -en",
+          "text": "den (Akkusativ чоловічого роду), dem і der (Dativ) та множина отримують -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Sie wird den heißen Tee trinken.",
+              "tr": "Вона вип’є гарячий чай."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Office and travel",
+      "points": [
+        {
+          "title": "Everywhere else: -en",
+          "text": "den (masculine accusative), dem and der (dative) and all plurals take -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Sie wird den heißen Tee trinken.",
+              "tr": "She’ll drink the hot tea."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Biuro i podróże",
+      "points": [
+        {
+          "title": "W pozostałych przypadkach: -en",
+          "text": "den (Akkusativ rodzaju męskiego), dem i der (Dativ) oraz liczba mnoga dostają -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Sie wird den heißen Tee trinken.",
+              "tr": "Ona wypije gorącą herbatę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Oficina y viajes",
+      "points": [
+        {
+          "title": "En los demás casos: -en",
+          "text": "den (acusativo masculino), dem y der (dativo) y el plural llevan -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Sie wird den heißen Tee trinken.",
+              "tr": "Ella tomará el té caliente."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Bureau et voyages",
+      "points": [
+        {
+          "title": "Dans tous les autres cas : -en",
+          "text": "den (accusatif masculin), dem et der (datif) et le pluriel prennent -en : den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Sie wird den heißen Tee trinken.",
+              "tr": "Elle boira le thé chaud."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Ofis ve seyahat",
+      "points": [
+        {
+          "title": "Diğer bütün durumlarda: -en",
+          "text": "den (eril Akkusativ), dem ve der (Dativ) ve çoğul -en alır: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Sie wird den heißen Tee trinken.",
+              "tr": "Sıcak çayı içecek."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Birou și călătorii",
+      "points": [
+        {
+          "title": "În toate celelalte cazuri: -en",
+          "text": "den (acuzativ masculin), dem și der (dativ) și pluralul primesc -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Sie wird den heißen Tee trinken.",
+              "tr": "Ea va bea ceaiul fierbinte."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ofis va sayohat",
+      "points": [
+        {
+          "title": "Qolgan barcha holatlarda: -en",
+          "text": "den (erkak rodi Akkusativ), dem va der (Dativ) hamda ko'plik -en oladi: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Sie wird den heißen Tee trinken.",
+              "tr": "U issiq choyni ichadi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दफ़्तर और यात्रा",
+      "points": [
+        {
+          "title": "बाकी सब जगह: -en",
+          "text": "den (पुल्लिंग Akkusativ), dem और der (Dativ) और बहुवचन -en लेते हैं: den alten Hund, mit dem netten Freund, die netten Kollegen।",
+          "examples": [
+            {
+              "de": "Sie wird den heißen Tee trinken.",
+              "tr": "वह गरम चाय पिएगी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المكتب والسفر",
+      "points": [
+        {
+          "title": "في كل الحالات الأخرى: -en",
+          "text": "den (المذكر في المفعول) وdem وder (الجر) والجمع تأخذ -en: den alten Hund، mit dem netten Freund، die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Sie wird den heißen Tee trinken.",
+              "tr": "ستشرب الشاي الساخن."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "adjective-fifteen": {
+    "ru": {
+      "title": "Повторение: -e и -en",
+      "points": [
+        {
+          "title": "После der, die, das: -e",
+          "text": "Подлежащее в единственном числе получает -e: der alte Mann, die kleine Katze, das neue Haus. Так же die (Akkusativ) и das (Akkusativ).",
+          "examples": [
+            {
+              "de": "Das kleine Bild hat dort gehangen.",
+              "tr": "Там висела маленькая картина."
+            }
+          ]
+        },
+        {
+          "title": "Во всех остальных случаях: -en",
+          "text": "den (Akkusativ мужского рода), dem и der (Dativ) и множественное получают -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich werde den richtigen Weg finden.",
+              "tr": "Я найду правильный путь."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Повторення: -e і -en",
+      "points": [
+        {
+          "title": "Після der, die, das: -e",
+          "text": "Підмет в однині отримує -e: der alte Mann, die kleine Katze, das neue Haus. Так само die і das в Akkusativ.",
+          "examples": [
+            {
+              "de": "Das kleine Bild hat dort gehangen.",
+              "tr": "Там висіла маленька картина."
+            }
+          ]
+        },
+        {
+          "title": "В усіх інших випадках: -en",
+          "text": "den (Akkusativ чоловічого роду), dem і der (Dativ) та множина отримують -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich werde den richtigen Weg finden.",
+              "tr": "Я знайду правильний шлях."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Review: -e and -en",
+      "points": [
+        {
+          "title": "After der, die, das: -e",
+          "text": "The singular subject takes -e: der alte Mann, die kleine Katze, das neue Haus. Same for die and das in the accusative.",
+          "examples": [
+            {
+              "de": "Das kleine Bild hat dort gehangen.",
+              "tr": "The small picture hung there."
+            }
+          ]
+        },
+        {
+          "title": "Everywhere else: -en",
+          "text": "den (masculine accusative), dem and der (dative) and all plurals take -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich werde den richtigen Weg finden.",
+              "tr": "I’ll find the right way."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Powtórka: -e i -en",
+      "points": [
+        {
+          "title": "Po der, die, das: -e",
+          "text": "Podmiot w liczbie pojedynczej dostaje -e: der alte Mann, die kleine Katze, das neue Haus. Tak samo die i das w Akkusativ.",
+          "examples": [
+            {
+              "de": "Das kleine Bild hat dort gehangen.",
+              "tr": "Tam wisiał mały obraz."
+            }
+          ]
+        },
+        {
+          "title": "W pozostałych przypadkach: -en",
+          "text": "den (Akkusativ rodzaju męskiego), dem i der (Dativ) oraz liczba mnoga dostają -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich werde den richtigen Weg finden.",
+              "tr": "Znajdę właściwą drogę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Repaso: -e y -en",
+      "points": [
+        {
+          "title": "Tras der, die, das: -e",
+          "text": "El sujeto en singular lleva -e: der alte Mann, die kleine Katze, das neue Haus. Igual die y das en acusativo.",
+          "examples": [
+            {
+              "de": "Das kleine Bild hat dort gehangen.",
+              "tr": "Allí colgaba el cuadro pequeño."
+            }
+          ]
+        },
+        {
+          "title": "En los demás casos: -en",
+          "text": "den (acusativo masculino), dem y der (dativo) y el plural llevan -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich werde den richtigen Weg finden.",
+              "tr": "Encontraré el camino correcto."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Révision : -e et -en",
+      "points": [
+        {
+          "title": "Après der, die, das : -e",
+          "text": "Le sujet au singulier prend -e : der alte Mann, die kleine Katze, das neue Haus. Pareil pour die et das à l’accusatif.",
+          "examples": [
+            {
+              "de": "Das kleine Bild hat dort gehangen.",
+              "tr": "Le petit tableau était accroché là."
+            }
+          ]
+        },
+        {
+          "title": "Dans tous les autres cas : -en",
+          "text": "den (accusatif masculin), dem et der (datif) et le pluriel prennent -en : den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich werde den richtigen Weg finden.",
+              "tr": "Je trouverai le bon chemin."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tekrar: -e ve -en",
+      "points": [
+        {
+          "title": "der, die, das’tan sonra: -e",
+          "text": "Tekil özne -e alır: der alte Mann, die kleine Katze, das neue Haus. Akkusativ’de die ve das da böyle.",
+          "examples": [
+            {
+              "de": "Das kleine Bild hat dort gehangen.",
+              "tr": "Küçük resim orada asılıydı."
+            }
+          ]
+        },
+        {
+          "title": "Diğer bütün durumlarda: -en",
+          "text": "den (eril Akkusativ), dem ve der (Dativ) ve çoğul -en alır: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich werde den richtigen Weg finden.",
+              "tr": "Doğru yolu bulacağım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Recapitulare: -e și -en",
+      "points": [
+        {
+          "title": "După der, die, das: -e",
+          "text": "Subiectul la singular primește -e: der alte Mann, die kleine Katze, das neue Haus. La fel die și das la acuzativ.",
+          "examples": [
+            {
+              "de": "Das kleine Bild hat dort gehangen.",
+              "tr": "Tabloul mic atârna acolo."
+            }
+          ]
+        },
+        {
+          "title": "În toate celelalte cazuri: -en",
+          "text": "den (acuzativ masculin), dem și der (dativ) și pluralul primesc -en: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich werde den richtigen Weg finden.",
+              "tr": "Voi găsi drumul cel bun."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Takrorlash: -e va -en",
+      "points": [
+        {
+          "title": "der, die, das dan keyin: -e",
+          "text": "Birlikdagi ega -e oladi: der alte Mann, die kleine Katze, das neue Haus. Akkusativda die va das ham shunday.",
+          "examples": [
+            {
+              "de": "Das kleine Bild hat dort gehangen.",
+              "tr": "U yerda kichkina rasm osilib turardi."
+            }
+          ]
+        },
+        {
+          "title": "Qolgan barcha holatlarda: -en",
+          "text": "den (erkak rodi Akkusativ), dem va der (Dativ) hamda ko'plik -en oladi: den alten Hund, mit dem netten Freund, die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich werde den richtigen Weg finden.",
+              "tr": "To'g'ri yo'lni topaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "दोहराव: -e और -en",
+      "points": [
+        {
+          "title": "der, die, das के बाद: -e",
+          "text": "एकवचन कर्ता -e लेता है: der alte Mann, die kleine Katze, das neue Haus। Akkusativ में die और das भी ऐसे ही।",
+          "examples": [
+            {
+              "de": "Das kleine Bild hat dort gehangen.",
+              "tr": "छोटी तस्वीर वहाँ टँगी थी।"
+            }
+          ]
+        },
+        {
+          "title": "बाकी सब जगह: -en",
+          "text": "den (पुल्लिंग Akkusativ), dem और der (Dativ) और बहुवचन -en लेते हैं: den alten Hund, mit dem netten Freund, die netten Kollegen।",
+          "examples": [
+            {
+              "de": "Ich werde den richtigen Weg finden.",
+              "tr": "मैं सही रास्ता ढूँढ लूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "مراجعة: -e و-en",
+      "points": [
+        {
+          "title": "بعد der وdie وdas: -e",
+          "text": "الفاعل المفرد يأخذ -e: der alte Mann، die kleine Katze، das neue Haus. وكذلك die وdas في المفعول.",
+          "examples": [
+            {
+              "de": "Das kleine Bild hat dort gehangen.",
+              "tr": "كانت اللوحة الصغيرة معلقة هناك."
+            }
+          ]
+        },
+        {
+          "title": "في كل الحالات الأخرى: -en",
+          "text": "den (المذكر في المفعول) وdem وder (الجر) والجمع تأخذ -en: den alten Hund، mit dem netten Freund، die netten Kollegen.",
+          "examples": [
+            {
+              "de": "Ich werde den richtigen Weg finden.",
+              "tr": "سأجد الطريق الصحيح."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

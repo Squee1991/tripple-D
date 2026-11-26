@@ -1,0 +1,2343 @@
+{
+  "feier-1": {
+    "ru": {
+      "title": "Приглашение: когда и во сколько",
+      "points": [
+        {
+          "title": "am + день, um + время",
+          "text": "Повторяем: am Samstag (в субботу), um 18 Uhr (в шесть вечера).",
+          "examples": [
+            {
+              "de": "Die Party beginnt um 18 Uhr.",
+              "tr": "Вечеринка начинается в шесть вечера."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Запрошення: коли й о котрій",
+      "points": [
+        {
+          "title": "am + день, um + час",
+          "text": "Повторюємо: am Samstag (у суботу), um 18 Uhr (о шостій вечора).",
+          "examples": [
+            {
+              "de": "Die Party beginnt um 18 Uhr.",
+              "tr": "Вечірка починається о шостій вечора."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Invitation: when and what time",
+      "points": [
+        {
+          "title": "am + day, um + time",
+          "text": "Review: am Samstag (on Saturday), um 18 Uhr (at 6 p.m.).",
+          "examples": [
+            {
+              "de": "Die Party beginnt um 18 Uhr.",
+              "tr": "The party starts at 6 p.m."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Zaproszenie: kiedy i o której",
+      "points": [
+        {
+          "title": "am + dzień, um + godzina",
+          "text": "Powtarzamy: am Samstag (w sobotę), um 18 Uhr (o osiemnastej).",
+          "examples": [
+            {
+              "de": "Die Party beginnt um 18 Uhr.",
+              "tr": "Impreza zaczyna się o osiemnastej."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Invitación: cuándo y a qué hora",
+      "points": [
+        {
+          "title": "am + día, um + hora",
+          "text": "Repaso: am Samstag (el sábado), um 18 Uhr (a las seis de la tarde).",
+          "examples": [
+            {
+              "de": "Die Party beginnt um 18 Uhr.",
+              "tr": "La fiesta empieza a las seis de la tarde."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Invitation : quand et à quelle heure",
+      "points": [
+        {
+          "title": "am + jour, um + heure",
+          "text": "Révision : am Samstag (samedi), um 18 Uhr (à 18 heures).",
+          "examples": [
+            {
+              "de": "Die Party beginnt um 18 Uhr.",
+              "tr": "La fête commence à 18 heures."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Davet: ne zaman ve saat kaçta",
+      "points": [
+        {
+          "title": "am + gün, um + saat",
+          "text": "Tekrar: am Samstag (cumartesi), um 18 Uhr (saat 18’de).",
+          "examples": [
+            {
+              "de": "Die Party beginnt um 18 Uhr.",
+              "tr": "Parti saat 18’de başlıyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Invitația: când și la ce oră",
+      "points": [
+        {
+          "title": "am + zi, um + oră",
+          "text": "Recapitulăm: am Samstag (sâmbătă), um 18 Uhr (la ora 18).",
+          "examples": [
+            {
+              "de": "Die Party beginnt um 18 Uhr.",
+              "tr": "Petrecerea începe la ora 18."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Taklif: qachon va soat nechada",
+      "points": [
+        {
+          "title": "am + kun, um + vaqt",
+          "text": "Takrorlaymiz: am Samstag (shanba kuni), um 18 Uhr (soat 18 da).",
+          "examples": [
+            {
+              "de": "Die Party beginnt um 18 Uhr.",
+              "tr": "Bazm soat 18 da boshlanadi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "निमंत्रण: कब और कितने बजे",
+      "points": [
+        {
+          "title": "am + दिन, um + समय",
+          "text": "दोहराव: am Samstag (शनिवार को), um 18 Uhr (शाम छह बजे)।",
+          "examples": [
+            {
+              "de": "Die Party beginnt um 18 Uhr.",
+              "tr": "पार्टी शाम छह बजे शुरू होती है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الدعوة: متى وفي أي ساعة",
+      "points": [
+        {
+          "title": "am + يوم، um + ساعة",
+          "text": "مراجعة: am Samstag (يوم السبت)، um 18 Uhr (في السادسة مساءً).",
+          "examples": [
+            {
+              "de": "Die Party beginnt um 18 Uhr.",
+              "tr": "تبدأ الحفلة في السادسة مساءً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "feier-2": {
+    "ru": {
+      "title": "Поздравления и подарки",
+      "points": [
+        {
+          "title": "Готовые фразы",
+          "text": "Herzlichen Glückwunsch! и Alles Gute! учим целиком. К чему поздравляем: zum Geburtstag.",
+          "examples": [
+            {
+              "de": "Alles Gute zum Geburtstag!",
+              "tr": "С днём рождения!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Привітання і подарунки",
+      "points": [
+        {
+          "title": "Готові фрази",
+          "text": "Herzlichen Glückwunsch! і Alles Gute! вчимо цілком. З чим вітаємо: zum Geburtstag.",
+          "examples": [
+            {
+              "de": "Alles Gute zum Geburtstag!",
+              "tr": "З днем народження!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Congratulations and presents",
+      "points": [
+        {
+          "title": "Set phrases",
+          "text": "Learn Herzlichen Glückwunsch! and Alles Gute! as whole phrases. For what: zum Geburtstag.",
+          "examples": [
+            {
+              "de": "Alles Gute zum Geburtstag!",
+              "tr": "Happy birthday!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Życzenia i prezenty",
+      "points": [
+        {
+          "title": "Gotowe zwroty",
+          "text": "Herzlichen Glückwunsch! i Alles Gute! uczymy się w całości. Z jakiej okazji: zum Geburtstag.",
+          "examples": [
+            {
+              "de": "Alles Gute zum Geburtstag!",
+              "tr": "Wszystkiego najlepszego z okazji urodzin!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Felicitaciones y regalos",
+      "points": [
+        {
+          "title": "Frases hechas",
+          "text": "Herzlichen Glückwunsch! y Alles Gute! se aprenden enteras. Por qué: zum Geburtstag.",
+          "examples": [
+            {
+              "de": "Alles Gute zum Geburtstag!",
+              "tr": "¡Feliz cumpleaños!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Vœux et cadeaux",
+      "points": [
+        {
+          "title": "Expressions toutes faites",
+          "text": "Herzlichen Glückwunsch ! et Alles Gute ! s’apprennent en bloc. Pour quoi : zum Geburtstag.",
+          "examples": [
+            {
+              "de": "Alles Gute zum Geburtstag!",
+              "tr": "Joyeux anniversaire !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tebrikler ve hediyeler",
+      "points": [
+        {
+          "title": "Kalıp ifadeler",
+          "text": "Herzlichen Glückwunsch! ve Alles Gute! kalıp olarak öğrenilir. Ne için: zum Geburtstag.",
+          "examples": [
+            {
+              "de": "Alles Gute zum Geburtstag!",
+              "tr": "Doğum günün kutlu olsun!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Felicitări și cadouri",
+      "points": [
+        {
+          "title": "Expresii fixe",
+          "text": "Herzlichen Glückwunsch! și Alles Gute! se învață întregi. Pentru ce: zum Geburtstag.",
+          "examples": [
+            {
+              "de": "Alles Gute zum Geburtstag!",
+              "tr": "La mulți ani!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Tabriklar va sovg'alar",
+      "points": [
+        {
+          "title": "Tayyor iboralar",
+          "text": "Herzlichen Glückwunsch! va Alles Gute! butunligicha o'rganiladi. Nima munosabati bilan: zum Geburtstag.",
+          "examples": [
+            {
+              "de": "Alles Gute zum Geburtstag!",
+              "tr": "Tug'ilgan kuning muborak!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "बधाई और तोहफ़े",
+      "points": [
+        {
+          "title": "तैयार वाक्यांश",
+          "text": "Herzlichen Glückwunsch! और Alles Gute! पूरे वाक्यांश की तरह सीखो। किस बात पर: zum Geburtstag।",
+          "examples": [
+            {
+              "de": "Alles Gute zum Geburtstag!",
+              "tr": "जन्मदिन मुबारक!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "التهاني والهدايا",
+      "points": [
+        {
+          "title": "عبارات جاهزة",
+          "text": "نحفظ Herzlichen Glückwunsch! وAlles Gute! كاملتين. وبمناسبة ماذا: zum Geburtstag.",
+          "examples": [
+            {
+              "de": "Alles Gute zum Geburtstag!",
+              "tr": "عيد ميلاد سعيد!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "feier-3": {
+    "ru": {
+      "title": "Организация праздника",
+      "points": [
+        {
+          "title": "mitbringen: приставка в конце",
+          "text": "mitbringen (приносить с собой) отделяемый: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "Я принесу салаты и напитки."
+            }
+          ]
+        },
+        {
+          "title": "vorbereiten тоже отделяемый",
+          "text": "vorbereiten (готовить заранее): Ich bereite den Kuchen vor.",
+          "examples": [
+            {
+              "de": "Ich bereite den Kuchen vor.",
+              "tr": "Я готовлю торт."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Організація свята",
+      "points": [
+        {
+          "title": "mitbringen: префікс у кінці",
+          "text": "mitbringen (приносити з собою) відокремлюване: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "Я принесу салати й напої."
+            }
+          ]
+        },
+        {
+          "title": "vorbereiten теж відокремлюване",
+          "text": "vorbereiten (готувати заздалегідь): Ich bereite den Kuchen vor.",
+          "examples": [
+            {
+              "de": "Ich bereite den Kuchen vor.",
+              "tr": "Я готую торт."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Planning the party",
+      "points": [
+        {
+          "title": "mitbringen: prefix at the end",
+          "text": "mitbringen (to bring along) is separable: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "I’ll bring salads and drinks."
+            }
+          ]
+        },
+        {
+          "title": "vorbereiten is separable too",
+          "text": "vorbereiten (to prepare): Ich bereite den Kuchen vor.",
+          "examples": [
+            {
+              "de": "Ich bereite den Kuchen vor.",
+              "tr": "I’m preparing the cake."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Organizacja przyjęcia",
+      "points": [
+        {
+          "title": "mitbringen: przedrostek na końcu",
+          "text": "mitbringen (przynieść ze sobą) jest rozdzielny: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "Przyniosę sałatki i napoje."
+            }
+          ]
+        },
+        {
+          "title": "vorbereiten też rozdzielny",
+          "text": "vorbereiten (przygotować): Ich bereite den Kuchen vor.",
+          "examples": [
+            {
+              "de": "Ich bereite den Kuchen vor.",
+              "tr": "Przygotowuję ciasto."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Organizar la fiesta",
+      "points": [
+        {
+          "title": "mitbringen: prefijo al final",
+          "text": "mitbringen (traer) es separable: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "Traigo ensaladas y bebidas."
+            }
+          ]
+        },
+        {
+          "title": "vorbereiten también es separable",
+          "text": "vorbereiten (preparar): Ich bereite den Kuchen vor.",
+          "examples": [
+            {
+              "de": "Ich bereite den Kuchen vor.",
+              "tr": "Preparo la tarta."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Organiser la fête",
+      "points": [
+        {
+          "title": "mitbringen : préfixe à la fin",
+          "text": "mitbringen (apporter) est séparable : Ich bringe Getränke mit. Bringst du die Musik mit ?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "J’apporte des salades et des boissons."
+            }
+          ]
+        },
+        {
+          "title": "vorbereiten est aussi séparable",
+          "text": "vorbereiten (préparer) : Ich bereite den Kuchen vor.",
+          "examples": [
+            {
+              "de": "Ich bereite den Kuchen vor.",
+              "tr": "Je prépare le gâteau."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Partiyi düzenlemek",
+      "points": [
+        {
+          "title": "mitbringen: ön ek sonda",
+          "text": "mitbringen (yanında getirmek) ayrılabilen fiildir: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "Salata ve içecek getiriyorum."
+            }
+          ]
+        },
+        {
+          "title": "vorbereiten de ayrılabilen",
+          "text": "vorbereiten (hazırlamak): Ich bereite den Kuchen vor.",
+          "examples": [
+            {
+              "de": "Ich bereite den Kuchen vor.",
+              "tr": "Pastayı hazırlıyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Organizarea petrecerii",
+      "points": [
+        {
+          "title": "mitbringen: prefixul la final",
+          "text": "mitbringen (a aduce) e separabil: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "Aduc salate și băuturi."
+            }
+          ]
+        },
+        {
+          "title": "vorbereiten e tot separabil",
+          "text": "vorbereiten (a pregăti): Ich bereite den Kuchen vor.",
+          "examples": [
+            {
+              "de": "Ich bereite den Kuchen vor.",
+              "tr": "Pregătesc tortul."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Bayramni tashkil qilish",
+      "points": [
+        {
+          "title": "mitbringen: old qo'shimcha oxirida",
+          "text": "mitbringen (o'zi bilan olib kelmoq) ajraladigan: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "Salat va ichimlik olib kelaman."
+            }
+          ]
+        },
+        {
+          "title": "vorbereiten ham ajraladigan",
+          "text": "vorbereiten (tayyorlamoq): Ich bereite den Kuchen vor.",
+          "examples": [
+            {
+              "de": "Ich bereite den Kuchen vor.",
+              "tr": "Men tortni tayyorlayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "पार्टी की तैयारी",
+      "points": [
+        {
+          "title": "mitbringen: उपसर्ग अंत में",
+          "text": "mitbringen (साथ लाना) अलग होने वाली क्रिया: Ich bringe Getränke mit। Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "मैं सलाद और पेय लाऊँगा।"
+            }
+          ]
+        },
+        {
+          "title": "vorbereiten भी अलग होने वाला",
+          "text": "vorbereiten (तैयार करना): Ich bereite den Kuchen vor।",
+          "examples": [
+            {
+              "de": "Ich bereite den Kuchen vor.",
+              "tr": "मैं केक तैयार कर रहा हूँ।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "تنظيم الحفلة",
+      "points": [
+        {
+          "title": "mitbringen: السابقة في الآخر",
+          "text": "mitbringen (يُحضر معه) فعل منفصل: Ich bringe Getränke mit. Bringst du die Musik mit؟",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "سأحضر سلطات ومشروبات."
+            }
+          ]
+        },
+        {
+          "title": "vorbereiten منفصل أيضاً",
+          "text": "vorbereiten (يُحضّر): Ich bereite den Kuchen vor.",
+          "examples": [
+            {
+              "de": "Ich bereite den Kuchen vor.",
+              "tr": "أحضّر الكعكة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "feier-4": {
+    "ru": {
+      "title": "Праздники в течение года",
+      "points": [
+        {
+          "title": "Даты: am dritten April",
+          "text": "Число в дате говорят порядковым: am 1. Januar = am ersten Januar, am 3. April = am dritten April. Точка после цифры значит порядковое число.",
+          "examples": [
+            {
+              "de": "Die Party ist am 3. April.",
+              "tr": "Вечеринка третьего апреля."
+            }
+          ]
+        },
+        {
+          "title": "Поздравления к праздникам",
+          "text": "Frohe Weihnachten! (с Рождеством), Frohe Ostern! (с Пасхой), Frohes neues Jahr! (с Новым годом).",
+          "examples": []
+        }
+      ]
+    },
+    "uk": {
+      "title": "Свята протягом року",
+      "points": [
+        {
+          "title": "Дати: am dritten April",
+          "text": "Число в даті кажуть порядковим: am 1. Januar = am ersten Januar, am 3. April = am dritten April. Крапка після цифри означає порядкове число.",
+          "examples": [
+            {
+              "de": "Die Party ist am 3. April.",
+              "tr": "Вечірка третього квітня."
+            }
+          ]
+        },
+        {
+          "title": "Привітання зі святами",
+          "text": "Frohe Weihnachten! (з Різдвом), Frohe Ostern! (з Великоднем), Frohes neues Jahr! (з Новим роком).",
+          "examples": []
+        }
+      ]
+    },
+    "en": {
+      "title": "Holidays through the year",
+      "points": [
+        {
+          "title": "Dates: am dritten April",
+          "text": "Dates use ordinal numbers: am 1. Januar = am ersten Januar, am 3. April = am dritten April. The dot after the number marks it as ordinal.",
+          "examples": [
+            {
+              "de": "Die Party ist am 3. April.",
+              "tr": "The party is on the 3rd of April."
+            }
+          ]
+        },
+        {
+          "title": "Holiday greetings",
+          "text": "Frohe Weihnachten! (Merry Christmas), Frohe Ostern! (Happy Easter), Frohes neues Jahr! (Happy New Year).",
+          "examples": []
+        }
+      ]
+    },
+    "pl": {
+      "title": "Święta w ciągu roku",
+      "points": [
+        {
+          "title": "Daty: am dritten April",
+          "text": "W dacie mówimy liczebnik porządkowy: am 1. Januar = am ersten Januar, am 3. April = am dritten April. Kropka po cyfrze oznacza liczebnik porządkowy.",
+          "examples": [
+            {
+              "de": "Die Party ist am 3. April.",
+              "tr": "Impreza jest trzeciego kwietnia."
+            }
+          ]
+        },
+        {
+          "title": "Życzenia świąteczne",
+          "text": "Frohe Weihnachten! (Wesołych Świąt), Frohe Ostern! (Wesołej Wielkanocy), Frohes neues Jahr! (Szczęśliwego Nowego Roku).",
+          "examples": []
+        }
+      ]
+    },
+    "es": {
+      "title": "Fiestas durante el año",
+      "points": [
+        {
+          "title": "Fechas: am dritten April",
+          "text": "En las fechas se usa el ordinal: am 1. Januar = am ersten Januar, am 3. April = am dritten April. El punto tras el número indica ordinal.",
+          "examples": [
+            {
+              "de": "Die Party ist am 3. April.",
+              "tr": "La fiesta es el 3 de abril."
+            }
+          ]
+        },
+        {
+          "title": "Felicitaciones de fiestas",
+          "text": "Frohe Weihnachten! (Feliz Navidad), Frohe Ostern! (Felices Pascuas), Frohes neues Jahr! (Feliz Año Nuevo).",
+          "examples": []
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les fêtes de l’année",
+      "points": [
+        {
+          "title": "Dates : am dritten April",
+          "text": "Pour la date, on utilise l’ordinal : am 1. Januar = am ersten Januar, am 3. April = am dritten April. Le point après le chiffre indique l’ordinal.",
+          "examples": [
+            {
+              "de": "Die Party ist am 3. April.",
+              "tr": "La fête est le 3 avril."
+            }
+          ]
+        },
+        {
+          "title": "Vœux de fêtes",
+          "text": "Frohe Weihnachten ! (Joyeux Noël), Frohe Ostern ! (Joyeuses Pâques), Frohes neues Jahr ! (Bonne année).",
+          "examples": []
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yıl boyunca bayramlar",
+      "points": [
+        {
+          "title": "Tarihler: am dritten April",
+          "text": "Tarihte sıra sayısı kullanılır: am 1. Januar = am ersten Januar, am 3. April = am dritten April. Rakamdan sonraki nokta sıra sayısını gösterir.",
+          "examples": [
+            {
+              "de": "Die Party ist am 3. April.",
+              "tr": "Parti 3 Nisan’da."
+            }
+          ]
+        },
+        {
+          "title": "Bayram tebrikleri",
+          "text": "Frohe Weihnachten! (Mutlu Noeller), Frohe Ostern! (Mutlu Paskalyalar), Frohes neues Jahr! (Mutlu yıllar).",
+          "examples": []
+        }
+      ]
+    },
+    "ro": {
+      "title": "Sărbătorile anului",
+      "points": [
+        {
+          "title": "Date: am dritten April",
+          "text": "În dată se folosește numeralul ordinal: am 1. Januar = am ersten Januar, am 3. April = am dritten April. Punctul după cifră arată ordinalul.",
+          "examples": [
+            {
+              "de": "Die Party ist am 3. April.",
+              "tr": "Petrecerea e pe 3 aprilie."
+            }
+          ]
+        },
+        {
+          "title": "Urări de sărbători",
+          "text": "Frohe Weihnachten! (Crăciun fericit), Frohe Ostern! (Paște fericit), Frohes neues Jahr! (La mulți ani, an nou fericit).",
+          "examples": []
+        }
+      ]
+    },
+    "uz": {
+      "title": "Yil davomidagi bayramlar",
+      "points": [
+        {
+          "title": "Sanalar: am dritten April",
+          "text": "Sanada tartib son ishlatiladi: am 1. Januar = am ersten Januar, am 3. April = am dritten April. Raqamdan keyingi nuqta tartib sonni bildiradi.",
+          "examples": [
+            {
+              "de": "Die Party ist am 3. April.",
+              "tr": "Bazm 3-aprelda."
+            }
+          ]
+        },
+        {
+          "title": "Bayram tabriklari",
+          "text": "Frohe Weihnachten! (Rojdestvo muborak), Frohe Ostern! (Pasxa muborak), Frohes neues Jahr! (Yangi yil muborak).",
+          "examples": []
+        }
+      ]
+    },
+    "hi": {
+      "title": "साल भर के त्योहार",
+      "points": [
+        {
+          "title": "तारीखें: am dritten April",
+          "text": "तारीख में क्रमसूचक संख्या: am 1. Januar = am ersten Januar, am 3. April = am dritten April। अंक के बाद बिंदु का मतलब क्रमसूचक।",
+          "examples": [
+            {
+              "de": "Die Party ist am 3. April.",
+              "tr": "पार्टी 3 अप्रैल को है।"
+            }
+          ]
+        },
+        {
+          "title": "त्योहार की बधाई",
+          "text": "Frohe Weihnachten! (क्रिसमस मुबारक), Frohe Ostern! (ईस्टर मुबारक), Frohes neues Jahr! (नया साल मुबारक)।",
+          "examples": []
+        }
+      ]
+    },
+    "ar": {
+      "title": "الأعياد خلال السنة",
+      "points": [
+        {
+          "title": "التواريخ: am dritten April",
+          "text": "في التاريخ نستعمل العدد الترتيبي: am 1. Januar = am ersten Januar، am 3. April = am dritten April. والنقطة بعد الرقم تعني عدداً ترتيبياً.",
+          "examples": [
+            {
+              "de": "Die Party ist am 3. April.",
+              "tr": "الحفلة في الثالث من أبريل."
+            }
+          ]
+        },
+        {
+          "title": "تهاني الأعياد",
+          "text": "Frohe Weihnachten! (عيد ميلاد مجيد)، Frohe Ostern! (فصح سعيد)، Frohes neues Jahr! (سنة جديدة سعيدة).",
+          "examples": []
+        }
+      ]
+    }
+  },
+  "feier-5": {
+    "ru": {
+      "title": "Мини-диалоги",
+      "points": [
+        {
+          "title": "Да или нет на приглашение",
+          "text": "Согласиться: Ich komme gern! Отказаться вежливо: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "С удовольствием приду!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "К сожалению, не могу."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Міні-діалоги",
+      "points": [
+        {
+          "title": "Так чи ні на запрошення",
+          "text": "Погодитися: Ich komme gern! Відмовитися ввічливо: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "Із задоволенням прийду!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "На жаль, не можу."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Mini-dialogues",
+      "points": [
+        {
+          "title": "Yes or no to an invitation",
+          "text": "Accept: Ich komme gern! Decline politely: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "I’d love to come!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "Unfortunately I can’t."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Minidialogi",
+      "points": [
+        {
+          "title": "Tak czy nie na zaproszenie",
+          "text": "Przyjąć: Ich komme gern! Grzecznie odmówić: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "Chętnie przyjdę!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "Niestety nie mogę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Minidiálogos",
+      "points": [
+        {
+          "title": "Sí o no a una invitación",
+          "text": "Aceptar: Ich komme gern! Rechazar con educación: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "¡Voy con gusto!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "Lo siento, no puedo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Mini-dialogues",
+      "points": [
+        {
+          "title": "Oui ou non à une invitation",
+          "text": "Accepter : Ich komme gern ! Refuser poliment : Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "Je viens avec plaisir !"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "Malheureusement, je ne peux pas."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kısa diyaloglar",
+      "points": [
+        {
+          "title": "Davete evet ya da hayır",
+          "text": "Kabul: Ich komme gern! Kibarca reddetmek: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "Memnuniyetle gelirim!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "Maalesef gelemem."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Minidialoguri",
+      "points": [
+        {
+          "title": "Da sau nu la o invitație",
+          "text": "Accepți: Ich komme gern! Refuzi politicos: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "Vin cu plăcere!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "Din păcate nu pot."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qisqa suhbatlar",
+      "points": [
+        {
+          "title": "Taklifga ha yoki yo'q",
+          "text": "Rozi bo'lish: Ich komme gern! Muloyim rad etish: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "Jon deb kelaman!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "Afsuski, kela olmayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "छोटे संवाद",
+      "points": [
+        {
+          "title": "निमंत्रण पर हाँ या ना",
+          "text": "हाँ: Ich komme gern! विनम्रता से ना: Ich kann leider nicht।",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "मैं ज़रूर आऊँगा!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "माफ़ करना, मैं नहीं आ सकता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "حوارات قصيرة",
+      "points": [
+        {
+          "title": "نعم أو لا على الدعوة",
+          "text": "للقبول: Ich komme gern! وللرفض بأدب: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "سآتي بكل سرور!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "للأسف لا أستطيع."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "feier-6": {
+    "ru": {
+      "title": "Дата, время и ответ",
+      "points": [
+        {
+          "title": "Даты: am dritten April",
+          "text": "Число в дате говорят порядковым: am 1. Januar = am ersten Januar, am 3. April = am dritten April. Точка после цифры значит порядковое число.",
+          "examples": [
+            {
+              "de": "Die Party ist am 3. April.",
+              "tr": "Вечеринка третьего апреля."
+            }
+          ]
+        },
+        {
+          "title": "Да или нет на приглашение",
+          "text": "Согласиться: Ich komme gern! Отказаться вежливо: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "С удовольствием приду!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "К сожалению, не могу."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Дата, час і відповідь",
+      "points": [
+        {
+          "title": "Дати: am dritten April",
+          "text": "Число в даті кажуть порядковим: am 1. Januar = am ersten Januar, am 3. April = am dritten April. Крапка після цифри означає порядкове число.",
+          "examples": [
+            {
+              "de": "Die Party ist am 3. April.",
+              "tr": "Вечірка третього квітня."
+            }
+          ]
+        },
+        {
+          "title": "Так чи ні на запрошення",
+          "text": "Погодитися: Ich komme gern! Відмовитися ввічливо: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "Із задоволенням прийду!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "На жаль, не можу."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Date, time and reply",
+      "points": [
+        {
+          "title": "Dates: am dritten April",
+          "text": "Dates use ordinal numbers: am 1. Januar = am ersten Januar, am 3. April = am dritten April. The dot after the number marks it as ordinal.",
+          "examples": [
+            {
+              "de": "Die Party ist am 3. April.",
+              "tr": "The party is on the 3rd of April."
+            }
+          ]
+        },
+        {
+          "title": "Yes or no to an invitation",
+          "text": "Accept: Ich komme gern! Decline politely: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "I’d love to come!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "Unfortunately I can’t."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Data, godzina i odpowiedź",
+      "points": [
+        {
+          "title": "Daty: am dritten April",
+          "text": "W dacie mówimy liczebnik porządkowy: am 1. Januar = am ersten Januar, am 3. April = am dritten April. Kropka po cyfrze oznacza liczebnik porządkowy.",
+          "examples": [
+            {
+              "de": "Die Party ist am 3. April.",
+              "tr": "Impreza jest trzeciego kwietnia."
+            }
+          ]
+        },
+        {
+          "title": "Tak czy nie na zaproszenie",
+          "text": "Przyjąć: Ich komme gern! Grzecznie odmówić: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "Chętnie przyjdę!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "Niestety nie mogę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Fecha, hora y respuesta",
+      "points": [
+        {
+          "title": "Fechas: am dritten April",
+          "text": "En las fechas se usa el ordinal: am 1. Januar = am ersten Januar, am 3. April = am dritten April. El punto tras el número indica ordinal.",
+          "examples": [
+            {
+              "de": "Die Party ist am 3. April.",
+              "tr": "La fiesta es el 3 de abril."
+            }
+          ]
+        },
+        {
+          "title": "Sí o no a una invitación",
+          "text": "Aceptar: Ich komme gern! Rechazar con educación: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "¡Voy con gusto!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "Lo siento, no puedo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Date, heure et réponse",
+      "points": [
+        {
+          "title": "Dates : am dritten April",
+          "text": "Pour la date, on utilise l’ordinal : am 1. Januar = am ersten Januar, am 3. April = am dritten April. Le point après le chiffre indique l’ordinal.",
+          "examples": [
+            {
+              "de": "Die Party ist am 3. April.",
+              "tr": "La fête est le 3 avril."
+            }
+          ]
+        },
+        {
+          "title": "Oui ou non à une invitation",
+          "text": "Accepter : Ich komme gern ! Refuser poliment : Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "Je viens avec plaisir !"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "Malheureusement, je ne peux pas."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tarih, saat ve cevap",
+      "points": [
+        {
+          "title": "Tarihler: am dritten April",
+          "text": "Tarihte sıra sayısı kullanılır: am 1. Januar = am ersten Januar, am 3. April = am dritten April. Rakamdan sonraki nokta sıra sayısını gösterir.",
+          "examples": [
+            {
+              "de": "Die Party ist am 3. April.",
+              "tr": "Parti 3 Nisan’da."
+            }
+          ]
+        },
+        {
+          "title": "Davete evet ya da hayır",
+          "text": "Kabul: Ich komme gern! Kibarca reddetmek: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "Memnuniyetle gelirim!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "Maalesef gelemem."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Data, ora și răspunsul",
+      "points": [
+        {
+          "title": "Date: am dritten April",
+          "text": "În dată se folosește numeralul ordinal: am 1. Januar = am ersten Januar, am 3. April = am dritten April. Punctul după cifră arată ordinalul.",
+          "examples": [
+            {
+              "de": "Die Party ist am 3. April.",
+              "tr": "Petrecerea e pe 3 aprilie."
+            }
+          ]
+        },
+        {
+          "title": "Da sau nu la o invitație",
+          "text": "Accepți: Ich komme gern! Refuzi politicos: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "Vin cu plăcere!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "Din păcate nu pot."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Sana, vaqt va javob",
+      "points": [
+        {
+          "title": "Sanalar: am dritten April",
+          "text": "Sanada tartib son ishlatiladi: am 1. Januar = am ersten Januar, am 3. April = am dritten April. Raqamdan keyingi nuqta tartib sonni bildiradi.",
+          "examples": [
+            {
+              "de": "Die Party ist am 3. April.",
+              "tr": "Bazm 3-aprelda."
+            }
+          ]
+        },
+        {
+          "title": "Taklifga ha yoki yo'q",
+          "text": "Rozi bo'lish: Ich komme gern! Muloyim rad etish: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "Jon deb kelaman!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "Afsuski, kela olmayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "तारीख, समय और जवाब",
+      "points": [
+        {
+          "title": "तारीखें: am dritten April",
+          "text": "तारीख में क्रमसूचक संख्या: am 1. Januar = am ersten Januar, am 3. April = am dritten April। अंक के बाद बिंदु का मतलब क्रमसूचक।",
+          "examples": [
+            {
+              "de": "Die Party ist am 3. April.",
+              "tr": "पार्टी 3 अप्रैल को है।"
+            }
+          ]
+        },
+        {
+          "title": "निमंत्रण पर हाँ या ना",
+          "text": "हाँ: Ich komme gern! विनम्रता से ना: Ich kann leider nicht।",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "मैं ज़रूर आऊँगा!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "माफ़ करना, मैं नहीं आ सकता।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "التاريخ والوقت والرد",
+      "points": [
+        {
+          "title": "التواريخ: am dritten April",
+          "text": "في التاريخ نستعمل العدد الترتيبي: am 1. Januar = am ersten Januar، am 3. April = am dritten April. والنقطة بعد الرقم تعني عدداً ترتيبياً.",
+          "examples": [
+            {
+              "de": "Die Party ist am 3. April.",
+              "tr": "الحفلة في الثالث من أبريل."
+            }
+          ]
+        },
+        {
+          "title": "نعم أو لا على الدعوة",
+          "text": "للقبول: Ich komme gern! وللرفض بأدب: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "سآتي بكل سرور!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "للأسف لا أستطيع."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "feier-7": {
+    "ru": {
+      "title": "Еда и напитки: mit и ohne",
+      "points": [
+        {
+          "title": "mit и ohne",
+          "text": "mit значит «с», ohne значит «без». Часто без артикля: mit Zucker, ohne Alkohol.",
+          "examples": [
+            {
+              "de": "Ohne Alkohol, bitte.",
+              "tr": "Без алкоголя, пожалуйста."
+            }
+          ]
+        },
+        {
+          "title": "mitbringen: приставка в конце",
+          "text": "mitbringen (приносить с собой) отделяемый: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "Я принесу салаты и напитки."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Їжа і напої: mit і ohne",
+      "points": [
+        {
+          "title": "mit і ohne",
+          "text": "mit означає «з», ohne означає «без». Часто без артикля: mit Zucker, ohne Alkohol.",
+          "examples": [
+            {
+              "de": "Ohne Alkohol, bitte.",
+              "tr": "Без алкоголю, будь ласка."
+            }
+          ]
+        },
+        {
+          "title": "mitbringen: префікс у кінці",
+          "text": "mitbringen (приносити з собою) відокремлюване: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "Я принесу салати й напої."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Food and drinks: mit and ohne",
+      "points": [
+        {
+          "title": "mit and ohne",
+          "text": "mit means \"with\", ohne means \"without\". Often with no article: mit Zucker, ohne Alkohol.",
+          "examples": [
+            {
+              "de": "Ohne Alkohol, bitte.",
+              "tr": "Without alcohol, please."
+            }
+          ]
+        },
+        {
+          "title": "mitbringen: prefix at the end",
+          "text": "mitbringen (to bring along) is separable: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "I’ll bring salads and drinks."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Jedzenie i napoje: mit i ohne",
+      "points": [
+        {
+          "title": "mit i ohne",
+          "text": "mit znaczy „z”, ohne znaczy „bez”. Często bez rodzajnika: mit Zucker, ohne Alkohol.",
+          "examples": [
+            {
+              "de": "Ohne Alkohol, bitte.",
+              "tr": "Bez alkoholu, proszę."
+            }
+          ]
+        },
+        {
+          "title": "mitbringen: przedrostek na końcu",
+          "text": "mitbringen (przynieść ze sobą) jest rozdzielny: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "Przyniosę sałatki i napoje."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Comida y bebida: mit y ohne",
+      "points": [
+        {
+          "title": "mit y ohne",
+          "text": "mit significa \"con\", ohne significa \"sin\". A menudo sin artículo: mit Zucker, ohne Alkohol.",
+          "examples": [
+            {
+              "de": "Ohne Alkohol, bitte.",
+              "tr": "Sin alcohol, por favor."
+            }
+          ]
+        },
+        {
+          "title": "mitbringen: prefijo al final",
+          "text": "mitbringen (traer) es separable: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "Traigo ensaladas y bebidas."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Nourriture et boissons : mit et ohne",
+      "points": [
+        {
+          "title": "mit et ohne",
+          "text": "mit veut dire « avec », ohne veut dire « sans ». Souvent sans article : mit Zucker, ohne Alkohol.",
+          "examples": [
+            {
+              "de": "Ohne Alkohol, bitte.",
+              "tr": "Sans alcool, s’il vous plaît."
+            }
+          ]
+        },
+        {
+          "title": "mitbringen : préfixe à la fin",
+          "text": "mitbringen (apporter) est séparable : Ich bringe Getränke mit. Bringst du die Musik mit ?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "J’apporte des salades et des boissons."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yiyecek ve içecek: mit ve ohne",
+      "points": [
+        {
+          "title": "mit ve ohne",
+          "text": "mit \"ile\", ohne \"-sız\" demektir. Çoğu zaman artikelsiz: mit Zucker, ohne Alkohol.",
+          "examples": [
+            {
+              "de": "Ohne Alkohol, bitte.",
+              "tr": "Alkolsüz, lütfen."
+            }
+          ]
+        },
+        {
+          "title": "mitbringen: ön ek sonda",
+          "text": "mitbringen (yanında getirmek) ayrılabilen fiildir: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "Salata ve içecek getiriyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Mâncare și băuturi: mit și ohne",
+      "points": [
+        {
+          "title": "mit și ohne",
+          "text": "mit înseamnă „cu”, ohne înseamnă „fără”. Des fără articol: mit Zucker, ohne Alkohol.",
+          "examples": [
+            {
+              "de": "Ohne Alkohol, bitte.",
+              "tr": "Fără alcool, vă rog."
+            }
+          ]
+        },
+        {
+          "title": "mitbringen: prefixul la final",
+          "text": "mitbringen (a aduce) e separabil: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "Aduc salate și băuturi."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Taom va ichimlik: mit va ohne",
+      "points": [
+        {
+          "title": "mit va ohne",
+          "text": "mit \"bilan\", ohne \"-siz\" degani. Ko'pincha artiklsiz: mit Zucker, ohne Alkohol.",
+          "examples": [
+            {
+              "de": "Ohne Alkohol, bitte.",
+              "tr": "Spirtsiz, iltimos."
+            }
+          ]
+        },
+        {
+          "title": "mitbringen: old qo'shimcha oxirida",
+          "text": "mitbringen (o'zi bilan olib kelmoq) ajraladigan: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "Salat va ichimlik olib kelaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "खाना और पेय: mit और ohne",
+      "points": [
+        {
+          "title": "mit और ohne",
+          "text": "mit मतलब \"के साथ\", ohne मतलब \"के बिना\"। अक्सर बिना आर्टिकल: mit Zucker, ohne Alkohol।",
+          "examples": [
+            {
+              "de": "Ohne Alkohol, bitte.",
+              "tr": "बिना शराब के, कृपया।"
+            }
+          ]
+        },
+        {
+          "title": "mitbringen: उपसर्ग अंत में",
+          "text": "mitbringen (साथ लाना) अलग होने वाली क्रिया: Ich bringe Getränke mit। Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "मैं सलाद और पेय लाऊँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الطعام والمشروبات: mit وohne",
+      "points": [
+        {
+          "title": "mit وohne",
+          "text": "mit تعني \"مع\"، وohne تعني \"بدون\". وغالباً بدون أداة: mit Zucker، ohne Alkohol.",
+          "examples": [
+            {
+              "de": "Ohne Alkohol, bitte.",
+              "tr": "بدون كحول من فضلك."
+            }
+          ]
+        },
+        {
+          "title": "mitbringen: السابقة في الآخر",
+          "text": "mitbringen (يُحضر معه) فعل منفصل: Ich bringe Getränke mit. Bringst du die Musik mit؟",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "سأحضر سلطات ومشروبات."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "feier-8": {
+    "ru": {
+      "title": "Программа праздника",
+      "points": [
+        {
+          "title": "Lass uns...!",
+          "text": "Lass uns ... значит «давай ...»: Lass uns ein Foto machen! Тише или громче: leiser, lauter.",
+          "examples": [
+            {
+              "de": "Lass uns ein Foto machen!",
+              "tr": "Давай сфотографируемся!"
+            },
+            {
+              "de": "Kannst du die Musik leiser machen?",
+              "tr": "Можешь сделать музыку тише?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Програма свята",
+      "points": [
+        {
+          "title": "Lass uns...!",
+          "text": "Lass uns ... означає «давай ...»: Lass uns ein Foto machen! Тихіше чи голосніше: leiser, lauter.",
+          "examples": [
+            {
+              "de": "Lass uns ein Foto machen!",
+              "tr": "Давай сфотографуємося!"
+            },
+            {
+              "de": "Kannst du die Musik leiser machen?",
+              "tr": "Можеш зробити музику тихіше?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The party programme",
+      "points": [
+        {
+          "title": "Lass uns...!",
+          "text": "Lass uns ... means \"let’s ...\": Lass uns ein Foto machen! Quieter or louder: leiser, lauter.",
+          "examples": [
+            {
+              "de": "Lass uns ein Foto machen!",
+              "tr": "Let’s take a photo!"
+            },
+            {
+              "de": "Kannst du die Musik leiser machen?",
+              "tr": "Can you turn the music down?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Program przyjęcia",
+      "points": [
+        {
+          "title": "Lass uns...!",
+          "text": "Lass uns ... znaczy „zróbmy ...”: Lass uns ein Foto machen! Ciszej lub głośniej: leiser, lauter.",
+          "examples": [
+            {
+              "de": "Lass uns ein Foto machen!",
+              "tr": "Zróbmy zdjęcie!"
+            },
+            {
+              "de": "Kannst du die Musik leiser machen?",
+              "tr": "Możesz ściszyć muzykę?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "El programa de la fiesta",
+      "points": [
+        {
+          "title": "Lass uns...!",
+          "text": "Lass uns ... significa \"vamos a ...\": Lass uns ein Foto machen! Más bajo o más alto: leiser, lauter.",
+          "examples": [
+            {
+              "de": "Lass uns ein Foto machen!",
+              "tr": "¡Hagamos una foto!"
+            },
+            {
+              "de": "Kannst du die Musik leiser machen?",
+              "tr": "¿Puedes bajar la música?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le programme de la fête",
+      "points": [
+        {
+          "title": "Lass uns... !",
+          "text": "Lass uns ... veut dire « faisons ... » : Lass uns ein Foto machen ! Moins fort ou plus fort : leiser, lauter.",
+          "examples": [
+            {
+              "de": "Lass uns ein Foto machen!",
+              "tr": "Prenons une photo !"
+            },
+            {
+              "de": "Kannst du die Musik leiser machen?",
+              "tr": "Tu peux baisser la musique ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Parti programı",
+      "points": [
+        {
+          "title": "Lass uns...!",
+          "text": "Lass uns ... \"hadi ...\" demektir: Lass uns ein Foto machen! Daha kısık ya da yüksek: leiser, lauter.",
+          "examples": [
+            {
+              "de": "Lass uns ein Foto machen!",
+              "tr": "Hadi fotoğraf çekelim!"
+            },
+            {
+              "de": "Kannst du die Musik leiser machen?",
+              "tr": "Müziğin sesini kısabilir misin?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Programul petrecerii",
+      "points": [
+        {
+          "title": "Lass uns...!",
+          "text": "Lass uns ... înseamnă „hai să ...”: Lass uns ein Foto machen! Mai încet sau mai tare: leiser, lauter.",
+          "examples": [
+            {
+              "de": "Lass uns ein Foto machen!",
+              "tr": "Hai să facem o poză!"
+            },
+            {
+              "de": "Kannst du die Musik leiser machen?",
+              "tr": "Poți da muzica mai încet?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Bayram dasturi",
+      "points": [
+        {
+          "title": "Lass uns...!",
+          "text": "Lass uns ... \"keling ...\" degani: Lass uns ein Foto machen! Pastroq yoki balandroq: leiser, lauter.",
+          "examples": [
+            {
+              "de": "Lass uns ein Foto machen!",
+              "tr": "Keling, suratga tushamiz!"
+            },
+            {
+              "de": "Kannst du die Musik leiser machen?",
+              "tr": "Musiqani pastroq qila olasanmi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "पार्टी का कार्यक्रम",
+      "points": [
+        {
+          "title": "Lass uns...!",
+          "text": "Lass uns ... मतलब \"चलो ...\": Lass uns ein Foto machen! धीमा या तेज़: leiser, lauter।",
+          "examples": [
+            {
+              "de": "Lass uns ein Foto machen!",
+              "tr": "चलो फ़ोटो लेते हैं!"
+            },
+            {
+              "de": "Kannst du die Musik leiser machen?",
+              "tr": "क्या तुम संगीत धीमा कर सकते हो?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "برنامج الحفلة",
+      "points": [
+        {
+          "title": "Lass uns...!",
+          "text": "Lass uns ... تعني \"هيا ...\": Lass uns ein Foto machen! وأخفض أو أعلى: leiser، lauter.",
+          "examples": [
+            {
+              "de": "Lass uns ein Foto machen!",
+              "tr": "هيا نلتقط صورة!"
+            },
+            {
+              "de": "Kannst du die Musik leiser machen?",
+              "tr": "هل يمكنك خفض صوت الموسيقى؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "feier-9": {
+    "ru": {
+      "title": "Семейные события: zum и zur",
+      "points": [
+        {
+          "title": "zum или zur",
+          "text": "В поздравлениях: zum для der и das (zum Geburtstag, zum Jubiläum), zur для die (zur Hochzeit).",
+          "examples": [
+            {
+              "de": "Herzlichen Glückwunsch zur Hochzeit!",
+              "tr": "Поздравляю со свадьбой!"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Сімейні події: zum і zur",
+      "points": [
+        {
+          "title": "zum чи zur",
+          "text": "У привітаннях: zum для der і das (zum Geburtstag, zum Jubiläum), zur для die (zur Hochzeit).",
+          "examples": [
+            {
+              "de": "Herzlichen Glückwunsch zur Hochzeit!",
+              "tr": "Вітаю з весіллям!"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Family events: zum and zur",
+      "points": [
+        {
+          "title": "zum or zur",
+          "text": "In greetings: zum for der and das (zum Geburtstag, zum Jubiläum), zur for die (zur Hochzeit).",
+          "examples": [
+            {
+              "de": "Herzlichen Glückwunsch zur Hochzeit!",
+              "tr": "Congratulations on your wedding!"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Uroczystości rodzinne: zum i zur",
+      "points": [
+        {
+          "title": "zum czy zur",
+          "text": "W życzeniach: zum dla der i das (zum Geburtstag, zum Jubiläum), zur dla die (zur Hochzeit).",
+          "examples": [
+            {
+              "de": "Herzlichen Glückwunsch zur Hochzeit!",
+              "tr": "Gratulacje z okazji ślubu!"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Celebraciones familiares: zum y zur",
+      "points": [
+        {
+          "title": "zum o zur",
+          "text": "En las felicitaciones: zum para der y das (zum Geburtstag, zum Jubiläum), zur para die (zur Hochzeit).",
+          "examples": [
+            {
+              "de": "Herzlichen Glückwunsch zur Hochzeit!",
+              "tr": "¡Enhorabuena por la boda!"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Fêtes de famille : zum et zur",
+      "points": [
+        {
+          "title": "zum ou zur",
+          "text": "Dans les vœux : zum pour der et das (zum Geburtstag, zum Jubiläum), zur pour die (zur Hochzeit).",
+          "examples": [
+            {
+              "de": "Herzlichen Glückwunsch zur Hochzeit!",
+              "tr": "Félicitations pour votre mariage !"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Aile kutlamaları: zum ve zur",
+      "points": [
+        {
+          "title": "zum mu, zur mu",
+          "text": "Tebriklerde: der ve das için zum (zum Geburtstag, zum Jubiläum), die için zur (zur Hochzeit).",
+          "examples": [
+            {
+              "de": "Herzlichen Glückwunsch zur Hochzeit!",
+              "tr": "Düğününüz kutlu olsun!"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Evenimente de familie: zum și zur",
+      "points": [
+        {
+          "title": "zum sau zur",
+          "text": "În felicitări: zum pentru der și das (zum Geburtstag, zum Jubiläum), zur pentru die (zur Hochzeit).",
+          "examples": [
+            {
+              "de": "Herzlichen Glückwunsch zur Hochzeit!",
+              "tr": "Felicitări pentru nuntă!"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Oilaviy tadbirlar: zum va zur",
+      "points": [
+        {
+          "title": "zum yoki zur",
+          "text": "Tabriklarda: der va das uchun zum (zum Geburtstag, zum Jubiläum), die uchun zur (zur Hochzeit).",
+          "examples": [
+            {
+              "de": "Herzlichen Glückwunsch zur Hochzeit!",
+              "tr": "To‘yingiz muborak!"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "पारिवारिक समारोह: zum और zur",
+      "points": [
+        {
+          "title": "zum या zur",
+          "text": "बधाई में: der और das के लिए zum (zum Geburtstag, zum Jubiläum), die के लिए zur (zur Hochzeit)।",
+          "examples": [
+            {
+              "de": "Herzlichen Glückwunsch zur Hochzeit!",
+              "tr": "शादी की बहुत बधाई!"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المناسبات العائلية: zum وzur",
+      "points": [
+        {
+          "title": "zum أم zur",
+          "text": "في التهاني: zum مع der وdas (zum Geburtstag، zum Jubiläum)، وzur مع die (zur Hochzeit).",
+          "examples": [
+            {
+              "de": "Herzlichen Glückwunsch zur Hochzeit!",
+              "tr": "مبارك الزفاف!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "feier-10": {
+    "ru": {
+      "title": "Итоговая практика",
+      "points": [
+        {
+          "title": "Да или нет на приглашение",
+          "text": "Согласиться: Ich komme gern! Отказаться вежливо: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "С удовольствием приду!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "К сожалению, не могу."
+            }
+          ]
+        },
+        {
+          "title": "mitbringen: приставка в конце",
+          "text": "mitbringen (приносить с собой) отделяемый: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "Я принесу салаты и напитки."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Підсумкова практика",
+      "points": [
+        {
+          "title": "Так чи ні на запрошення",
+          "text": "Погодитися: Ich komme gern! Відмовитися ввічливо: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "Із задоволенням прийду!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "На жаль, не можу."
+            }
+          ]
+        },
+        {
+          "title": "mitbringen: префікс у кінці",
+          "text": "mitbringen (приносити з собою) відокремлюване: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "Я принесу салати й напої."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Final practice",
+      "points": [
+        {
+          "title": "Yes or no to an invitation",
+          "text": "Accept: Ich komme gern! Decline politely: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "I’d love to come!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "Unfortunately I can’t."
+            }
+          ]
+        },
+        {
+          "title": "mitbringen: prefix at the end",
+          "text": "mitbringen (to bring along) is separable: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "I’ll bring salads and drinks."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praktyka końcowa",
+      "points": [
+        {
+          "title": "Tak czy nie na zaproszenie",
+          "text": "Przyjąć: Ich komme gern! Grzecznie odmówić: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "Chętnie przyjdę!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "Niestety nie mogę."
+            }
+          ]
+        },
+        {
+          "title": "mitbringen: przedrostek na końcu",
+          "text": "mitbringen (przynieść ze sobą) jest rozdzielny: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "Przyniosę sałatki i napoje."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Práctica final",
+      "points": [
+        {
+          "title": "Sí o no a una invitación",
+          "text": "Aceptar: Ich komme gern! Rechazar con educación: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "¡Voy con gusto!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "Lo siento, no puedo."
+            }
+          ]
+        },
+        {
+          "title": "mitbringen: prefijo al final",
+          "text": "mitbringen (traer) es separable: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "Traigo ensaladas y bebidas."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Pratique finale",
+      "points": [
+        {
+          "title": "Oui ou non à une invitation",
+          "text": "Accepter : Ich komme gern ! Refuser poliment : Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "Je viens avec plaisir !"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "Malheureusement, je ne peux pas."
+            }
+          ]
+        },
+        {
+          "title": "mitbringen : préfixe à la fin",
+          "text": "mitbringen (apporter) est séparable : Ich bringe Getränke mit. Bringst du die Musik mit ?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "J’apporte des salades et des boissons."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Son pratik",
+      "points": [
+        {
+          "title": "Davete evet ya da hayır",
+          "text": "Kabul: Ich komme gern! Kibarca reddetmek: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "Memnuniyetle gelirim!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "Maalesef gelemem."
+            }
+          ]
+        },
+        {
+          "title": "mitbringen: ön ek sonda",
+          "text": "mitbringen (yanında getirmek) ayrılabilen fiildir: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "Salata ve içecek getiriyorum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Practică finală",
+      "points": [
+        {
+          "title": "Da sau nu la o invitație",
+          "text": "Accepți: Ich komme gern! Refuzi politicos: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "Vin cu plăcere!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "Din păcate nu pot."
+            }
+          ]
+        },
+        {
+          "title": "mitbringen: prefixul la final",
+          "text": "mitbringen (a aduce) e separabil: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "Aduc salate și băuturi."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Yakuniy mashq",
+      "points": [
+        {
+          "title": "Taklifga ha yoki yo'q",
+          "text": "Rozi bo'lish: Ich komme gern! Muloyim rad etish: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "Jon deb kelaman!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "Afsuski, kela olmayman."
+            }
+          ]
+        },
+        {
+          "title": "mitbringen: old qo'shimcha oxirida",
+          "text": "mitbringen (o'zi bilan olib kelmoq) ajraladigan: Ich bringe Getränke mit. Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "Salat va ichimlik olib kelaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अंतिम अभ्यास",
+      "points": [
+        {
+          "title": "निमंत्रण पर हाँ या ना",
+          "text": "हाँ: Ich komme gern! विनम्रता से ना: Ich kann leider nicht।",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "मैं ज़रूर आऊँगा!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "माफ़ करना, मैं नहीं आ सकता।"
+            }
+          ]
+        },
+        {
+          "title": "mitbringen: उपसर्ग अंत में",
+          "text": "mitbringen (साथ लाना) अलग होने वाली क्रिया: Ich bringe Getränke mit। Bringst du die Musik mit?",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "मैं सलाद और पेय लाऊँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "التدريب النهائي",
+      "points": [
+        {
+          "title": "نعم أو لا على الدعوة",
+          "text": "للقبول: Ich komme gern! وللرفض بأدب: Ich kann leider nicht.",
+          "examples": [
+            {
+              "de": "Ich komme gern!",
+              "tr": "سآتي بكل سرور!"
+            },
+            {
+              "de": "Ich kann leider nicht.",
+              "tr": "للأسف لا أستطيع."
+            }
+          ]
+        },
+        {
+          "title": "mitbringen: السابقة في الآخر",
+          "text": "mitbringen (يُحضر معه) فعل منفصل: Ich bringe Getränke mit. Bringst du die Musik mit؟",
+          "examples": [
+            {
+              "de": "Ich bringe Salate und Getränke mit.",
+              "tr": "سأحضر سلطات ومشروبات."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

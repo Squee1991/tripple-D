@@ -19516,9 +19516,7 @@
     "descriptionThematic": "Ikkilanib qolsangiz, mashq davomida kelishiklar va artikllarni tushuntirib beradi."
   },
   "questModals": {
-    "fixMistakesTitle": "Xatolarni tuzatamiz",
-    "fixMistakesText": "Xato qilgan vazifalarni qayta bajaring. Tuzatsangiz, dars yakunlanadi.",
-    "fixMistakesBtn": "Xatolarni tuzatish ({count})",
+    "fixForReward": "Mukofotni olish uchun barcha topshiriqlarni to'g'ri bajar",
     "repeat": "Xatolarni takrorlash",
     "next": "Keyingi vazifa ➔",
     "back": "Mavzularga",
@@ -21081,6 +21079,7 @@
     "writing": "Yozish",
     "new": "Yangi",
     "writeLocked": "Yozishni ochish uchun topshiriqni bajaring",
+    "questLocked": "Avval oldingi topshiriqni bajar",
     "writeAction": "Iboralarni eshitib yoz",
     "landDone": "Yer bosib o‘tildi!",
     "landGoal": "Barcha topshiriqlar va yozishni tugat",

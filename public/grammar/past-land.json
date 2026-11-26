@@ -1,0 +1,3722 @@
+{
+  "past-one": {
+    "ru": {
+      "title": "Основы Perfekt",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Прошедшее в разговоре: haben на втором месте, а глагол в форме ge...t уходит в конец: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Я играл в футбол."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Мы учили немецкий."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Основи Perfekt",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Минуле в розмові: haben на другому місці, а дієслово у формі ge...t іде в кінець: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Я грав у футбол."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Ми вчили німецьку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Perfekt basics",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Spoken past: haben in second place, and the verb in its ge...t form at the end: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "I played football."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "We learned German."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Podstawy Perfekt",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Przeszłość w mowie: haben na drugim miejscu, a czasownik w formie ge...t na końcu: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Grałem w piłkę nożną."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Uczyliśmy się niemieckiego."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Bases del Perfekt",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "El pasado hablado: haben en segundo lugar y el verbo en forma ge...t al final: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Jugué al fútbol."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Aprendimos alemán."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les bases du Perfekt",
+      "points": [
+        {
+          "title": "Perfekt : haben + ge...t",
+          "text": "Le passé à l’oral : haben en deuxième position, et le verbe en ge...t à la fin : spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "J’ai joué au foot."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Nous avons appris l’allemand."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Perfekt temelleri",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Konuşmada geçmiş: haben ikinci sırada, fiil ge...t biçiminde sonda: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Futbol oynadım."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Almanca öğrendik."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Bazele Perfekt",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Trecutul vorbit: haben pe locul doi, iar verbul în forma ge...t la final: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Am jucat fotbal."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Am învățat germana."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Perfekt asoslari",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Og'zaki o'tgan zamon: haben ikkinchi o'rinda, fe'l ge...t shaklida oxirida: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Men futbol o'ynadim."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Biz nemis tilini o'rgandik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "Perfekt की बुनियाद",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "बोलचाल का भूतकाल: haben दूसरे स्थान पर, और क्रिया ge...t रूप में अंत में: spielen → gespielt।",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "मैंने फ़ुटबॉल खेला।"
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "हमने जर्मन सीखी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "أساسيات Perfekt",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "الماضي في الكلام: haben في المكان الثاني، والفعل بصيغة ge...t في الآخر: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "لعبت كرة القدم."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "تعلمنا الألمانية."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "past-two": {
+    "ru": {
+      "title": "Perfekt с sein",
+      "points": [
+        {
+          "title": "sein для движения",
+          "text": "Если человек перемещается (gehen, fahren, kommen) или меняет состояние (aufwachen), вместо haben ставим sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходил в кино."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Мы поехали в аэропорт."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Perfekt із sein",
+      "points": [
+        {
+          "title": "sein для руху",
+          "text": "Якщо людина переміщується (gehen, fahren, kommen) або змінює стан (aufwachen), замість haben ставимо sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходив у кіно."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Ми поїхали в аеропорт."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Perfekt with sein",
+      "points": [
+        {
+          "title": "sein for movement",
+          "text": "If you move from place to place (gehen, fahren, kommen) or change state (aufwachen), use sein instead of haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "I went to the cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "We drove to the airport."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Perfekt z sein",
+      "points": [
+        {
+          "title": "sein przy ruchu",
+          "text": "Jeśli ktoś się przemieszcza (gehen, fahren, kommen) albo zmienia stan (aufwachen), zamiast haben stawiamy sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Poszedłem do kina."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Pojechaliśmy na lotnisko."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Perfekt con sein",
+      "points": [
+        {
+          "title": "sein para el movimiento",
+          "text": "Si alguien se desplaza (gehen, fahren, kommen) o cambia de estado (aufwachen), se usa sein en lugar de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Fui al cine."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Fuimos al aeropuerto."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le Perfekt avec sein",
+      "points": [
+        {
+          "title": "sein pour le mouvement",
+          "text": "Si on se déplace (gehen, fahren, kommen) ou si on change d’état (aufwachen), on met sein au lieu de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Je suis allé au cinéma."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Nous sommes allés à l’aéroport."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "sein ile Perfekt",
+      "points": [
+        {
+          "title": "Hareket için sein",
+          "text": "Biri yer değiştiriyorsa (gehen, fahren, kommen) ya da durum değiştiriyorsa (aufwachen), haben yerine sein kullanılır.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Sinemaya gittim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Havalimanına gittik."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Perfekt cu sein",
+      "points": [
+        {
+          "title": "sein pentru mișcare",
+          "text": "Dacă cineva se deplasează (gehen, fahren, kommen) sau își schimbă starea (aufwachen), în loc de haben punem sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Am mers la cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Am mers la aeroport."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "sein bilan Perfekt",
+      "points": [
+        {
+          "title": "Harakat uchun sein",
+          "text": "Odam bir joydan boshqasiga o'tsa (gehen, fahren, kommen) yoki holatini o'zgartirsa (aufwachen), haben o'rniga sein qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Men kinoga bordim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Biz aeroportga bordik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "sein के साथ Perfekt",
+      "points": [
+        {
+          "title": "गति के लिए sein",
+          "text": "अगर कोई जगह बदलता है (gehen, fahren, kommen) या उसकी हालत बदलती है (aufwachen), तो haben की जगह sein।",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "मैं सिनेमा गया।"
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "हम हवाई अड्डे गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "Perfekt مع sein",
+      "points": [
+        {
+          "title": "sein للحركة",
+          "text": "إذا تنقل الشخص من مكان إلى آخر (gehen، fahren، kommen) أو تغيرت حالته (aufwachen) نستعمل sein بدل haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "ذهبت إلى السينما."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "ذهبنا إلى المطار."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "past-three": {
+    "ru": {
+      "title": "Мой день в Perfekt",
+      "points": [
+        {
+          "title": "ge в середине",
+          "text": "У отделяемых глаголов ge встаёт между приставкой и основой: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Он позвонил начальнику."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Мы принесли пиво."
+            }
+          ]
+        },
+        {
+          "title": "Неправильные: ge...en",
+          "text": "У многих частых глаголов форма на -en, часто с другой гласной: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Их учим.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Я выпил кофе."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Я прочитал книгу."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Мій день у Perfekt",
+      "points": [
+        {
+          "title": "ge всередині",
+          "text": "У відокремлюваних дієслів ge стає між префіксом і основою: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Він зателефонував начальнику."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Ми принесли пиво."
+            }
+          ]
+        },
+        {
+          "title": "Неправильні: ge...en",
+          "text": "У багатьох частих дієслів форма на -en, часто з іншою голосною: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Їх вчимо.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Я випив каву."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Я прочитав книжку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "My day in Perfekt",
+      "points": [
+        {
+          "title": "ge in the middle",
+          "text": "With separable verbs ge goes between the prefix and the stem: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "He called the boss."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "We brought beer."
+            }
+          ]
+        },
+        {
+          "title": "Irregular: ge...en",
+          "text": "Many common verbs end in -en, often with a different vowel: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Learn them.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "I drank a coffee."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "I read the book."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Mój dzień w Perfekt",
+      "points": [
+        {
+          "title": "ge w środku",
+          "text": "W czasownikach rozdzielnych ge stoi między przedrostkiem a tematem: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Zadzwonił do szefa."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Przynieśliśmy piwo."
+            }
+          ]
+        },
+        {
+          "title": "Nieregularne: ge...en",
+          "text": "Wiele częstych czasowników kończy się na -en, często z inną samogłoską: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Trzeba je znać.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Wypiłem kawę."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Przeczytałem książkę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Mi día en Perfekt",
+      "points": [
+        {
+          "title": "ge en medio",
+          "text": "En los verbos separables ge va entre el prefijo y la raíz: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Llamó al jefe."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Trajimos cerveza."
+            }
+          ]
+        },
+        {
+          "title": "Irregulares: ge...en",
+          "text": "Muchos verbos frecuentes terminan en -en, a menudo con otra vocal: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Hay que aprenderlos.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Me tomé un café."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Leí el libro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Ma journée au Perfekt",
+      "points": [
+        {
+          "title": "ge au milieu",
+          "text": "Avec les verbes séparables, ge se place entre le préfixe et le radical : aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Il a appelé le chef."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Nous avons apporté de la bière."
+            }
+          ]
+        },
+        {
+          "title": "Irréguliers : ge...en",
+          "text": "Beaucoup de verbes courants finissent en -en, souvent avec une autre voyelle : trinken → getrunken, lesen → gelesen, schreiben → geschrieben. À apprendre.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "J’ai bu un café."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "J’ai lu le livre."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Günüm Perfekt ile",
+      "points": [
+        {
+          "title": "ge ortada",
+          "text": "Ayrılabilen fiillerde ge ön ek ile kök arasına girer: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Şefi aradı."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Bira getirdik."
+            }
+          ]
+        },
+        {
+          "title": "Düzensiz: ge...en",
+          "text": "Sık kullanılan birçok fiil -en ile biter, çoğu zaman ünlüsü de değişir: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Ezberlenir.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Bir kahve içtim."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Kitabı okudum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Ziua mea în Perfekt",
+      "points": [
+        {
+          "title": "ge la mijloc",
+          "text": "La verbele separabile ge stă între prefix și rădăcină: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "L-a sunat pe șef."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Am adus bere."
+            }
+          ]
+        },
+        {
+          "title": "Neregulate: ge...en",
+          "text": "Multe verbe frecvente se termină în -en, des cu altă vocală: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Se învață.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Am băut o cafea."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Am citit cartea."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kunim Perfekt da",
+      "points": [
+        {
+          "title": "ge o'rtada",
+          "text": "Ajraladigan fe'llarda ge old qo'shimcha va o'zak orasiga kiradi: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "U boshliqqa qo'ng'iroq qildi."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Biz pivo olib keldik."
+            }
+          ]
+        },
+        {
+          "title": "Noto'g'ri: ge...en",
+          "text": "Ko'p ishlatiladigan fe'llar -en bilan tugaydi, ko'pincha unlisi ham o'zgaradi: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Ularni yodlaymiz.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Men qahva ichdim."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Men kitobni o'qidim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "Perfekt में मेरा दिन",
+      "points": [
+        {
+          "title": "ge बीच में",
+          "text": "अलग होने वाली क्रियाओं में ge उपसर्ग और मूल के बीच आता है: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen।",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "उसने बॉस को फ़ोन किया।"
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "हम बियर लाए।"
+            }
+          ]
+        },
+        {
+          "title": "अनियमित: ge...en",
+          "text": "कई आम क्रियाएँ -en पर खत्म होती हैं, अक्सर स्वर भी बदलता है: trinken → getrunken, lesen → gelesen, schreiben → geschrieben। इन्हें याद करो।",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "मैंने एक कॉफ़ी पी।"
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "मैंने किताब पढ़ी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "يومي في Perfekt",
+      "points": [
+        {
+          "title": "ge في الوسط",
+          "text": "في الأفعال المنفصلة تقع ge بين السابقة والجذر: aufwachen → aufgewacht، anrufen → angerufen، einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "اتصل بالمدير."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "أحضرنا البيرة."
+            }
+          ]
+        },
+        {
+          "title": "الشاذة: ge...en",
+          "text": "كثير من الأفعال الشائعة تنتهي بـ -en، وغالباً يتغير حرفها: trinken → getrunken، lesen → gelesen، schreiben → geschrieben. نحفظها.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "شربت قهوة."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "قرأت الكتاب."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "past-four": {
+    "ru": {
+      "title": "Неотделяемые приставки",
+      "points": [
+        {
+          "title": "Без ge: be-, ver-, er-",
+          "text": "Если приставка не отделяется (be-, ver-, er-, ent-), ge не добавляем: besuchen → besucht, verstehen → verstanden. Никакого ge-ge.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Я навестил бабушку."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Ты всё понял?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Невідокремлювані префікси",
+      "points": [
+        {
+          "title": "Без ge: be-, ver-, er-",
+          "text": "Якщо префікс не відокремлюється (be-, ver-, er-, ent-), ge не додаємо: besuchen → besucht, verstehen → verstanden. Ніякого ge-ge.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Я відвідав бабусю."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Ти все зрозумів?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Inseparable prefixes",
+      "points": [
+        {
+          "title": "No ge: be-, ver-, er-",
+          "text": "If the prefix doesn’t separate (be-, ver-, er-, ent-), don’t add ge: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "I visited my grandma."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Did you understand everything?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Przedrostki nierozdzielne",
+      "points": [
+        {
+          "title": "Bez ge: be-, ver-, er-",
+          "text": "Jeśli przedrostek się nie odrywa (be-, ver-, er-, ent-), nie dodajemy ge: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Odwiedziłem babcię."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Zrozumiałeś wszystko?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Prefijos inseparables",
+      "points": [
+        {
+          "title": "Sin ge: be-, ver-, er-",
+          "text": "Si el prefijo no se separa (be-, ver-, er-, ent-), no se añade ge: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Visité a mi abuela."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "¿Lo has entendido todo?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Préfixes inséparables",
+      "points": [
+        {
+          "title": "Sans ge : be-, ver-, er-",
+          "text": "Si le préfixe ne se sépare pas (be-, ver-, er-, ent-), on n’ajoute pas ge : besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "J’ai rendu visite à ma grand-mère."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Tu as tout compris ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Ayrılmayan ön ekler",
+      "points": [
+        {
+          "title": "ge yok: be-, ver-, er-",
+          "text": "Ön ek ayrılmıyorsa (be-, ver-, er-, ent-) ge eklenmez: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Büyükannemi ziyaret ettim."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Her şeyi anladın mı?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Prefixe neseparabile",
+      "points": [
+        {
+          "title": "Fără ge: be-, ver-, er-",
+          "text": "Dacă prefixul nu se desparte (be-, ver-, er-, ent-), nu adăugăm ge: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Am vizitat-o pe bunica."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Ai înțeles tot?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ajralmaydigan old qo'shimchalar",
+      "points": [
+        {
+          "title": "ge siz: be-, ver-, er-",
+          "text": "Old qo'shimcha ajralmasa (be-, ver-, er-, ent-), ge qo'shilmaydi: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Buvimni ko'rgani bordim."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Hammasini tushundingmi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "अलग न होने वाले उपसर्ग",
+      "points": [
+        {
+          "title": "बिना ge: be-, ver-, er-",
+          "text": "अगर उपसर्ग अलग नहीं होता (be-, ver-, er-, ent-), तो ge नहीं जोड़ते: besuchen → besucht, verstehen → verstanden।",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "मैं अपनी दादी से मिलने गया।"
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "क्या तुमने सब समझ लिया?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "السوابق غير المنفصلة",
+      "points": [
+        {
+          "title": "بدون ge: be- وver- وer-",
+          "text": "إذا كانت السابقة لا تنفصل (be- وver- وer- وent-) لا نضيف ge: besuchen → besucht، verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "زرت جدتي."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "هل فهمت كل شيء؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "past-five": {
+    "ru": {
+      "title": "Ресторан в Perfekt",
+      "points": [
+        {
+          "title": "Без ge: be-, ver-, er-",
+          "text": "Если приставка не отделяется (be-, ver-, er-, ent-), ge не добавляем: besuchen → besucht, verstehen → verstanden. Никакого ge-ge.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Я навестил бабушку."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Ты всё понял?"
+            }
+          ]
+        },
+        {
+          "title": "Неправильные: ge...en",
+          "text": "У многих частых глаголов форма на -en, часто с другой гласной: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Их учим.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Я выпил кофе."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Я прочитал книгу."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Ресторан у Perfekt",
+      "points": [
+        {
+          "title": "Без ge: be-, ver-, er-",
+          "text": "Якщо префікс не відокремлюється (be-, ver-, er-, ent-), ge не додаємо: besuchen → besucht, verstehen → verstanden. Ніякого ge-ge.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Я відвідав бабусю."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Ти все зрозумів?"
+            }
+          ]
+        },
+        {
+          "title": "Неправильні: ge...en",
+          "text": "У багатьох частих дієслів форма на -en, часто з іншою голосною: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Їх вчимо.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Я випив каву."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Я прочитав книжку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "At the restaurant in Perfekt",
+      "points": [
+        {
+          "title": "No ge: be-, ver-, er-",
+          "text": "If the prefix doesn’t separate (be-, ver-, er-, ent-), don’t add ge: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "I visited my grandma."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Did you understand everything?"
+            }
+          ]
+        },
+        {
+          "title": "Irregular: ge...en",
+          "text": "Many common verbs end in -en, often with a different vowel: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Learn them.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "I drank a coffee."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "I read the book."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Restauracja w Perfekt",
+      "points": [
+        {
+          "title": "Bez ge: be-, ver-, er-",
+          "text": "Jeśli przedrostek się nie odrywa (be-, ver-, er-, ent-), nie dodajemy ge: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Odwiedziłem babcię."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Zrozumiałeś wszystko?"
+            }
+          ]
+        },
+        {
+          "title": "Nieregularne: ge...en",
+          "text": "Wiele częstych czasowników kończy się na -en, często z inną samogłoską: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Trzeba je znać.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Wypiłem kawę."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Przeczytałem książkę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "El restaurante en Perfekt",
+      "points": [
+        {
+          "title": "Sin ge: be-, ver-, er-",
+          "text": "Si el prefijo no se separa (be-, ver-, er-, ent-), no se añade ge: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Visité a mi abuela."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "¿Lo has entendido todo?"
+            }
+          ]
+        },
+        {
+          "title": "Irregulares: ge...en",
+          "text": "Muchos verbos frecuentes terminan en -en, a menudo con otra vocal: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Hay que aprenderlos.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Me tomé un café."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Leí el libro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Au restaurant au Perfekt",
+      "points": [
+        {
+          "title": "Sans ge : be-, ver-, er-",
+          "text": "Si le préfixe ne se sépare pas (be-, ver-, er-, ent-), on n’ajoute pas ge : besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "J’ai rendu visite à ma grand-mère."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Tu as tout compris ?"
+            }
+          ]
+        },
+        {
+          "title": "Irréguliers : ge...en",
+          "text": "Beaucoup de verbes courants finissent en -en, souvent avec une autre voyelle : trinken → getrunken, lesen → gelesen, schreiben → geschrieben. À apprendre.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "J’ai bu un café."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "J’ai lu le livre."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Perfekt ile restoran",
+      "points": [
+        {
+          "title": "ge yok: be-, ver-, er-",
+          "text": "Ön ek ayrılmıyorsa (be-, ver-, er-, ent-) ge eklenmez: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Büyükannemi ziyaret ettim."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Her şeyi anladın mı?"
+            }
+          ]
+        },
+        {
+          "title": "Düzensiz: ge...en",
+          "text": "Sık kullanılan birçok fiil -en ile biter, çoğu zaman ünlüsü de değişir: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Ezberlenir.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Bir kahve içtim."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Kitabı okudum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Restaurantul în Perfekt",
+      "points": [
+        {
+          "title": "Fără ge: be-, ver-, er-",
+          "text": "Dacă prefixul nu se desparte (be-, ver-, er-, ent-), nu adăugăm ge: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Am vizitat-o pe bunica."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Ai înțeles tot?"
+            }
+          ]
+        },
+        {
+          "title": "Neregulate: ge...en",
+          "text": "Multe verbe frecvente se termină în -en, des cu altă vocală: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Se învață.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Am băut o cafea."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Am citit cartea."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Perfekt da restoran",
+      "points": [
+        {
+          "title": "ge siz: be-, ver-, er-",
+          "text": "Old qo'shimcha ajralmasa (be-, ver-, er-, ent-), ge qo'shilmaydi: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Buvimni ko'rgani bordim."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Hammasini tushundingmi?"
+            }
+          ]
+        },
+        {
+          "title": "Noto'g'ri: ge...en",
+          "text": "Ko'p ishlatiladigan fe'llar -en bilan tugaydi, ko'pincha unlisi ham o'zgaradi: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Ularni yodlaymiz.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Men qahva ichdim."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Men kitobni o'qidim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "Perfekt में रेस्टोरेंट",
+      "points": [
+        {
+          "title": "बिना ge: be-, ver-, er-",
+          "text": "अगर उपसर्ग अलग नहीं होता (be-, ver-, er-, ent-), तो ge नहीं जोड़ते: besuchen → besucht, verstehen → verstanden।",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "मैं अपनी दादी से मिलने गया।"
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "क्या तुमने सब समझ लिया?"
+            }
+          ]
+        },
+        {
+          "title": "अनियमित: ge...en",
+          "text": "कई आम क्रियाएँ -en पर खत्म होती हैं, अक्सर स्वर भी बदलता है: trinken → getrunken, lesen → gelesen, schreiben → geschrieben। इन्हें याद करो।",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "मैंने एक कॉफ़ी पी।"
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "मैंने किताब पढ़ी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المطعم في Perfekt",
+      "points": [
+        {
+          "title": "بدون ge: be- وver- وer-",
+          "text": "إذا كانت السابقة لا تنفصل (be- وver- وer- وent-) لا نضيف ge: besuchen → besucht، verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "زرت جدتي."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "هل فهمت كل شيء؟"
+            }
+          ]
+        },
+        {
+          "title": "الشاذة: ge...en",
+          "text": "كثير من الأفعال الشائعة تنتهي بـ -en، وغالباً يتغير حرفها: trinken → getrunken، lesen → gelesen، schreiben → geschrieben. نحفظها.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "شربت قهوة."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "قرأت الكتاب."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "past-six": {
+    "ru": {
+      "title": "Путешествие в Perfekt",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Прошедшее в разговоре: haben на втором месте, а глагол в форме ge...t уходит в конец: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Я играл в футбол."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Мы учили немецкий."
+            }
+          ]
+        },
+        {
+          "title": "sein для движения",
+          "text": "Если человек перемещается (gehen, fahren, kommen) или меняет состояние (aufwachen), вместо haben ставим sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходил в кино."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Мы поехали в аэропорт."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Подорож у Perfekt",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Минуле в розмові: haben на другому місці, а дієслово у формі ge...t іде в кінець: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Я грав у футбол."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Ми вчили німецьку."
+            }
+          ]
+        },
+        {
+          "title": "sein для руху",
+          "text": "Якщо людина переміщується (gehen, fahren, kommen) або змінює стан (aufwachen), замість haben ставимо sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходив у кіно."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Ми поїхали в аеропорт."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Travel in Perfekt",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Spoken past: haben in second place, and the verb in its ge...t form at the end: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "I played football."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "We learned German."
+            }
+          ]
+        },
+        {
+          "title": "sein for movement",
+          "text": "If you move from place to place (gehen, fahren, kommen) or change state (aufwachen), use sein instead of haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "I went to the cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "We drove to the airport."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Podróż w Perfekt",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Przeszłość w mowie: haben na drugim miejscu, a czasownik w formie ge...t na końcu: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Grałem w piłkę nożną."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Uczyliśmy się niemieckiego."
+            }
+          ]
+        },
+        {
+          "title": "sein przy ruchu",
+          "text": "Jeśli ktoś się przemieszcza (gehen, fahren, kommen) albo zmienia stan (aufwachen), zamiast haben stawiamy sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Poszedłem do kina."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Pojechaliśmy na lotnisko."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "El viaje en Perfekt",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "El pasado hablado: haben en segundo lugar y el verbo en forma ge...t al final: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Jugué al fútbol."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Aprendimos alemán."
+            }
+          ]
+        },
+        {
+          "title": "sein para el movimiento",
+          "text": "Si alguien se desplaza (gehen, fahren, kommen) o cambia de estado (aufwachen), se usa sein en lugar de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Fui al cine."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Fuimos al aeropuerto."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le voyage au Perfekt",
+      "points": [
+        {
+          "title": "Perfekt : haben + ge...t",
+          "text": "Le passé à l’oral : haben en deuxième position, et le verbe en ge...t à la fin : spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "J’ai joué au foot."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Nous avons appris l’allemand."
+            }
+          ]
+        },
+        {
+          "title": "sein pour le mouvement",
+          "text": "Si on se déplace (gehen, fahren, kommen) ou si on change d’état (aufwachen), on met sein au lieu de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Je suis allé au cinéma."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Nous sommes allés à l’aéroport."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Perfekt ile seyahat",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Konuşmada geçmiş: haben ikinci sırada, fiil ge...t biçiminde sonda: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Futbol oynadım."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Almanca öğrendik."
+            }
+          ]
+        },
+        {
+          "title": "Hareket için sein",
+          "text": "Biri yer değiştiriyorsa (gehen, fahren, kommen) ya da durum değiştiriyorsa (aufwachen), haben yerine sein kullanılır.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Sinemaya gittim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Havalimanına gittik."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Călătoria în Perfekt",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Trecutul vorbit: haben pe locul doi, iar verbul în forma ge...t la final: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Am jucat fotbal."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Am învățat germana."
+            }
+          ]
+        },
+        {
+          "title": "sein pentru mișcare",
+          "text": "Dacă cineva se deplasează (gehen, fahren, kommen) sau își schimbă starea (aufwachen), în loc de haben punem sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Am mers la cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Am mers la aeroport."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Perfekt da sayohat",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Og'zaki o'tgan zamon: haben ikkinchi o'rinda, fe'l ge...t shaklida oxirida: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Men futbol o'ynadim."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Biz nemis tilini o'rgandik."
+            }
+          ]
+        },
+        {
+          "title": "Harakat uchun sein",
+          "text": "Odam bir joydan boshqasiga o'tsa (gehen, fahren, kommen) yoki holatini o'zgartirsa (aufwachen), haben o'rniga sein qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Men kinoga bordim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Biz aeroportga bordik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "Perfekt में यात्रा",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "बोलचाल का भूतकाल: haben दूसरे स्थान पर, और क्रिया ge...t रूप में अंत में: spielen → gespielt।",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "मैंने फ़ुटबॉल खेला।"
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "हमने जर्मन सीखी।"
+            }
+          ]
+        },
+        {
+          "title": "गति के लिए sein",
+          "text": "अगर कोई जगह बदलता है (gehen, fahren, kommen) या उसकी हालत बदलती है (aufwachen), तो haben की जगह sein।",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "मैं सिनेमा गया।"
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "हम हवाई अड्डे गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "السفر في Perfekt",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "الماضي في الكلام: haben في المكان الثاني، والفعل بصيغة ge...t في الآخر: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "لعبت كرة القدم."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "تعلمنا الألمانية."
+            }
+          ]
+        },
+        {
+          "title": "sein للحركة",
+          "text": "إذا تنقل الشخص من مكان إلى آخر (gehen، fahren، kommen) أو تغيرت حالته (aufwachen) نستعمل sein بدل haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "ذهبت إلى السينما."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "ذهبنا إلى المطار."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "past-seven": {
+    "ru": {
+      "title": "Офис в Perfekt",
+      "points": [
+        {
+          "title": "Неправильные: ge...en",
+          "text": "У многих частых глаголов форма на -en, часто с другой гласной: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Их учим.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Я выпил кофе."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Я прочитал книгу."
+            }
+          ]
+        },
+        {
+          "title": "ge в середине",
+          "text": "У отделяемых глаголов ge встаёт между приставкой и основой: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Он позвонил начальнику."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Мы принесли пиво."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Офіс у Perfekt",
+      "points": [
+        {
+          "title": "Неправильні: ge...en",
+          "text": "У багатьох частих дієслів форма на -en, часто з іншою голосною: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Їх вчимо.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Я випив каву."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Я прочитав книжку."
+            }
+          ]
+        },
+        {
+          "title": "ge всередині",
+          "text": "У відокремлюваних дієслів ge стає між префіксом і основою: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Він зателефонував начальнику."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Ми принесли пиво."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The office in Perfekt",
+      "points": [
+        {
+          "title": "Irregular: ge...en",
+          "text": "Many common verbs end in -en, often with a different vowel: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Learn them.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "I drank a coffee."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "I read the book."
+            }
+          ]
+        },
+        {
+          "title": "ge in the middle",
+          "text": "With separable verbs ge goes between the prefix and the stem: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "He called the boss."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "We brought beer."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Biuro w Perfekt",
+      "points": [
+        {
+          "title": "Nieregularne: ge...en",
+          "text": "Wiele częstych czasowników kończy się na -en, często z inną samogłoską: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Trzeba je znać.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Wypiłem kawę."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Przeczytałem książkę."
+            }
+          ]
+        },
+        {
+          "title": "ge w środku",
+          "text": "W czasownikach rozdzielnych ge stoi między przedrostkiem a tematem: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Zadzwonił do szefa."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Przynieśliśmy piwo."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "La oficina en Perfekt",
+      "points": [
+        {
+          "title": "Irregulares: ge...en",
+          "text": "Muchos verbos frecuentes terminan en -en, a menudo con otra vocal: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Hay que aprenderlos.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Me tomé un café."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Leí el libro."
+            }
+          ]
+        },
+        {
+          "title": "ge en medio",
+          "text": "En los verbos separables ge va entre el prefijo y la raíz: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Llamó al jefe."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Trajimos cerveza."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le bureau au Perfekt",
+      "points": [
+        {
+          "title": "Irréguliers : ge...en",
+          "text": "Beaucoup de verbes courants finissent en -en, souvent avec une autre voyelle : trinken → getrunken, lesen → gelesen, schreiben → geschrieben. À apprendre.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "J’ai bu un café."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "J’ai lu le livre."
+            }
+          ]
+        },
+        {
+          "title": "ge au milieu",
+          "text": "Avec les verbes séparables, ge se place entre le préfixe et le radical : aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Il a appelé le chef."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Nous avons apporté de la bière."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Perfekt ile ofis",
+      "points": [
+        {
+          "title": "Düzensiz: ge...en",
+          "text": "Sık kullanılan birçok fiil -en ile biter, çoğu zaman ünlüsü de değişir: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Ezberlenir.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Bir kahve içtim."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Kitabı okudum."
+            }
+          ]
+        },
+        {
+          "title": "ge ortada",
+          "text": "Ayrılabilen fiillerde ge ön ek ile kök arasına girer: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Şefi aradı."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Bira getirdik."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Biroul în Perfekt",
+      "points": [
+        {
+          "title": "Neregulate: ge...en",
+          "text": "Multe verbe frecvente se termină în -en, des cu altă vocală: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Se învață.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Am băut o cafea."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Am citit cartea."
+            }
+          ]
+        },
+        {
+          "title": "ge la mijloc",
+          "text": "La verbele separabile ge stă între prefix și rădăcină: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "L-a sunat pe șef."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Am adus bere."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Perfekt da ofis",
+      "points": [
+        {
+          "title": "Noto'g'ri: ge...en",
+          "text": "Ko'p ishlatiladigan fe'llar -en bilan tugaydi, ko'pincha unlisi ham o'zgaradi: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Ularni yodlaymiz.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Men qahva ichdim."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Men kitobni o'qidim."
+            }
+          ]
+        },
+        {
+          "title": "ge o'rtada",
+          "text": "Ajraladigan fe'llarda ge old qo'shimcha va o'zak orasiga kiradi: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "U boshliqqa qo'ng'iroq qildi."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Biz pivo olib keldik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "Perfekt में दफ़्तर",
+      "points": [
+        {
+          "title": "अनियमित: ge...en",
+          "text": "कई आम क्रियाएँ -en पर खत्म होती हैं, अक्सर स्वर भी बदलता है: trinken → getrunken, lesen → gelesen, schreiben → geschrieben। इन्हें याद करो।",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "मैंने एक कॉफ़ी पी।"
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "मैंने किताब पढ़ी।"
+            }
+          ]
+        },
+        {
+          "title": "ge बीच में",
+          "text": "अलग होने वाली क्रियाओं में ge उपसर्ग और मूल के बीच आता है: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen।",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "उसने बॉस को फ़ोन किया।"
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "हम बियर लाए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المكتب في Perfekt",
+      "points": [
+        {
+          "title": "الشاذة: ge...en",
+          "text": "كثير من الأفعال الشائعة تنتهي بـ -en، وغالباً يتغير حرفها: trinken → getrunken، lesen → gelesen، schreiben → geschrieben. نحفظها.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "شربت قهوة."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "قرأت الكتاب."
+            }
+          ]
+        },
+        {
+          "title": "ge في الوسط",
+          "text": "في الأفعال المنفصلة تقع ge بين السابقة والجذر: aufwachen → aufgewacht، anrufen → angerufen، einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "اتصل بالمدير."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "أحضرنا البيرة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "past-eight": {
+    "ru": {
+      "title": "Учёба в Perfekt",
+      "points": [
+        {
+          "title": "Без ge: be-, ver-, er-",
+          "text": "Если приставка не отделяется (be-, ver-, er-, ent-), ge не добавляем: besuchen → besucht, verstehen → verstanden. Никакого ge-ge.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Я навестил бабушку."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Ты всё понял?"
+            }
+          ]
+        },
+        {
+          "title": "Неправильные: ge...en",
+          "text": "У многих частых глаголов форма на -en, часто с другой гласной: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Их учим.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Я выпил кофе."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Я прочитал книгу."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Навчання у Perfekt",
+      "points": [
+        {
+          "title": "Без ge: be-, ver-, er-",
+          "text": "Якщо префікс не відокремлюється (be-, ver-, er-, ent-), ge не додаємо: besuchen → besucht, verstehen → verstanden. Ніякого ge-ge.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Я відвідав бабусю."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Ти все зрозумів?"
+            }
+          ]
+        },
+        {
+          "title": "Неправильні: ge...en",
+          "text": "У багатьох частих дієслів форма на -en, часто з іншою голосною: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Їх вчимо.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Я випив каву."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Я прочитав книжку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Studying in Perfekt",
+      "points": [
+        {
+          "title": "No ge: be-, ver-, er-",
+          "text": "If the prefix doesn’t separate (be-, ver-, er-, ent-), don’t add ge: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "I visited my grandma."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Did you understand everything?"
+            }
+          ]
+        },
+        {
+          "title": "Irregular: ge...en",
+          "text": "Many common verbs end in -en, often with a different vowel: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Learn them.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "I drank a coffee."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "I read the book."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Nauka w Perfekt",
+      "points": [
+        {
+          "title": "Bez ge: be-, ver-, er-",
+          "text": "Jeśli przedrostek się nie odrywa (be-, ver-, er-, ent-), nie dodajemy ge: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Odwiedziłem babcię."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Zrozumiałeś wszystko?"
+            }
+          ]
+        },
+        {
+          "title": "Nieregularne: ge...en",
+          "text": "Wiele częstych czasowników kończy się na -en, często z inną samogłoską: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Trzeba je znać.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Wypiłem kawę."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Przeczytałem książkę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Los estudios en Perfekt",
+      "points": [
+        {
+          "title": "Sin ge: be-, ver-, er-",
+          "text": "Si el prefijo no se separa (be-, ver-, er-, ent-), no se añade ge: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Visité a mi abuela."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "¿Lo has entendido todo?"
+            }
+          ]
+        },
+        {
+          "title": "Irregulares: ge...en",
+          "text": "Muchos verbos frecuentes terminan en -en, a menudo con otra vocal: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Hay que aprenderlos.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Me tomé un café."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Leí el libro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les études au Perfekt",
+      "points": [
+        {
+          "title": "Sans ge : be-, ver-, er-",
+          "text": "Si le préfixe ne se sépare pas (be-, ver-, er-, ent-), on n’ajoute pas ge : besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "J’ai rendu visite à ma grand-mère."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Tu as tout compris ?"
+            }
+          ]
+        },
+        {
+          "title": "Irréguliers : ge...en",
+          "text": "Beaucoup de verbes courants finissent en -en, souvent avec une autre voyelle : trinken → getrunken, lesen → gelesen, schreiben → geschrieben. À apprendre.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "J’ai bu un café."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "J’ai lu le livre."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Perfekt ile ders",
+      "points": [
+        {
+          "title": "ge yok: be-, ver-, er-",
+          "text": "Ön ek ayrılmıyorsa (be-, ver-, er-, ent-) ge eklenmez: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Büyükannemi ziyaret ettim."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Her şeyi anladın mı?"
+            }
+          ]
+        },
+        {
+          "title": "Düzensiz: ge...en",
+          "text": "Sık kullanılan birçok fiil -en ile biter, çoğu zaman ünlüsü de değişir: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Ezberlenir.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Bir kahve içtim."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Kitabı okudum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Studiul în Perfekt",
+      "points": [
+        {
+          "title": "Fără ge: be-, ver-, er-",
+          "text": "Dacă prefixul nu se desparte (be-, ver-, er-, ent-), nu adăugăm ge: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Am vizitat-o pe bunica."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Ai înțeles tot?"
+            }
+          ]
+        },
+        {
+          "title": "Neregulate: ge...en",
+          "text": "Multe verbe frecvente se termină în -en, des cu altă vocală: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Se învață.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Am băut o cafea."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Am citit cartea."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Perfekt da o'qish",
+      "points": [
+        {
+          "title": "ge siz: be-, ver-, er-",
+          "text": "Old qo'shimcha ajralmasa (be-, ver-, er-, ent-), ge qo'shilmaydi: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Buvimni ko'rgani bordim."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Hammasini tushundingmi?"
+            }
+          ]
+        },
+        {
+          "title": "Noto'g'ri: ge...en",
+          "text": "Ko'p ishlatiladigan fe'llar -en bilan tugaydi, ko'pincha unlisi ham o'zgaradi: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Ularni yodlaymiz.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Men qahva ichdim."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Men kitobni o'qidim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "Perfekt में पढ़ाई",
+      "points": [
+        {
+          "title": "बिना ge: be-, ver-, er-",
+          "text": "अगर उपसर्ग अलग नहीं होता (be-, ver-, er-, ent-), तो ge नहीं जोड़ते: besuchen → besucht, verstehen → verstanden।",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "मैं अपनी दादी से मिलने गया।"
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "क्या तुमने सब समझ लिया?"
+            }
+          ]
+        },
+        {
+          "title": "अनियमित: ge...en",
+          "text": "कई आम क्रियाएँ -en पर खत्म होती हैं, अक्सर स्वर भी बदलता है: trinken → getrunken, lesen → gelesen, schreiben → geschrieben। इन्हें याद करो।",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "मैंने एक कॉफ़ी पी।"
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "मैंने किताब पढ़ी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الدراسة في Perfekt",
+      "points": [
+        {
+          "title": "بدون ge: be- وver- وer-",
+          "text": "إذا كانت السابقة لا تنفصل (be- وver- وer- وent-) لا نضيف ge: besuchen → besucht، verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "زرت جدتي."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "هل فهمت كل شيء؟"
+            }
+          ]
+        },
+        {
+          "title": "الشاذة: ge...en",
+          "text": "كثير من الأفعال الشائعة تنتهي بـ -en، وغالباً يتغير حرفها: trinken → getrunken، lesen → gelesen، schreiben → geschrieben. نحفظها.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "شربت قهوة."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "قرأت الكتاب."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "past-nine": {
+    "ru": {
+      "title": "Вечеринка в Perfekt",
+      "points": [
+        {
+          "title": "ge в середине",
+          "text": "У отделяемых глаголов ge встаёт между приставкой и основой: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Он позвонил начальнику."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Мы принесли пиво."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Вечірка у Perfekt",
+      "points": [
+        {
+          "title": "ge всередині",
+          "text": "У відокремлюваних дієслів ge стає між префіксом і основою: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Він зателефонував начальнику."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Ми принесли пиво."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The party in Perfekt",
+      "points": [
+        {
+          "title": "ge in the middle",
+          "text": "With separable verbs ge goes between the prefix and the stem: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "He called the boss."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "We brought beer."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Impreza w Perfekt",
+      "points": [
+        {
+          "title": "ge w środku",
+          "text": "W czasownikach rozdzielnych ge stoi między przedrostkiem a tematem: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Zadzwonił do szefa."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Przynieśliśmy piwo."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "La fiesta en Perfekt",
+      "points": [
+        {
+          "title": "ge en medio",
+          "text": "En los verbos separables ge va entre el prefijo y la raíz: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Llamó al jefe."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Trajimos cerveza."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "La fête au Perfekt",
+      "points": [
+        {
+          "title": "ge au milieu",
+          "text": "Avec les verbes séparables, ge se place entre le préfixe et le radical : aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Il a appelé le chef."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Nous avons apporté de la bière."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Perfekt ile parti",
+      "points": [
+        {
+          "title": "ge ortada",
+          "text": "Ayrılabilen fiillerde ge ön ek ile kök arasına girer: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Şefi aradı."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Bira getirdik."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Petrecerea în Perfekt",
+      "points": [
+        {
+          "title": "ge la mijloc",
+          "text": "La verbele separabile ge stă între prefix și rădăcină: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "L-a sunat pe șef."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Am adus bere."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Perfekt da bazm",
+      "points": [
+        {
+          "title": "ge o'rtada",
+          "text": "Ajraladigan fe'llarda ge old qo'shimcha va o'zak orasiga kiradi: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "U boshliqqa qo'ng'iroq qildi."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Biz pivo olib keldik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "Perfekt में पार्टी",
+      "points": [
+        {
+          "title": "ge बीच में",
+          "text": "अलग होने वाली क्रियाओं में ge उपसर्ग और मूल के बीच आता है: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen।",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "उसने बॉस को फ़ोन किया।"
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "हम बियर लाए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الحفلة في Perfekt",
+      "points": [
+        {
+          "title": "ge في الوسط",
+          "text": "في الأفعال المنفصلة تقع ge بين السابقة والجذر: aufwachen → aufgewacht، anrufen → angerufen، einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "اتصل بالمدير."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "أحضرنا البيرة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "past-ten": {
+    "ru": {
+      "title": "Город в Perfekt",
+      "points": [
+        {
+          "title": "sein для движения",
+          "text": "Если человек перемещается (gehen, fahren, kommen) или меняет состояние (aufwachen), вместо haben ставим sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходил в кино."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Мы поехали в аэропорт."
+            }
+          ]
+        },
+        {
+          "title": "Без ge: be-, ver-, er-",
+          "text": "Если приставка не отделяется (be-, ver-, er-, ent-), ge не добавляем: besuchen → besucht, verstehen → verstanden. Никакого ge-ge.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Я навестил бабушку."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Ты всё понял?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Місто у Perfekt",
+      "points": [
+        {
+          "title": "sein для руху",
+          "text": "Якщо людина переміщується (gehen, fahren, kommen) або змінює стан (aufwachen), замість haben ставимо sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходив у кіно."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Ми поїхали в аеропорт."
+            }
+          ]
+        },
+        {
+          "title": "Без ge: be-, ver-, er-",
+          "text": "Якщо префікс не відокремлюється (be-, ver-, er-, ent-), ge не додаємо: besuchen → besucht, verstehen → verstanden. Ніякого ge-ge.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Я відвідав бабусю."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Ти все зрозумів?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The city in Perfekt",
+      "points": [
+        {
+          "title": "sein for movement",
+          "text": "If you move from place to place (gehen, fahren, kommen) or change state (aufwachen), use sein instead of haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "I went to the cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "We drove to the airport."
+            }
+          ]
+        },
+        {
+          "title": "No ge: be-, ver-, er-",
+          "text": "If the prefix doesn’t separate (be-, ver-, er-, ent-), don’t add ge: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "I visited my grandma."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Did you understand everything?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Miasto w Perfekt",
+      "points": [
+        {
+          "title": "sein przy ruchu",
+          "text": "Jeśli ktoś się przemieszcza (gehen, fahren, kommen) albo zmienia stan (aufwachen), zamiast haben stawiamy sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Poszedłem do kina."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Pojechaliśmy na lotnisko."
+            }
+          ]
+        },
+        {
+          "title": "Bez ge: be-, ver-, er-",
+          "text": "Jeśli przedrostek się nie odrywa (be-, ver-, er-, ent-), nie dodajemy ge: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Odwiedziłem babcię."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Zrozumiałeś wszystko?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "La ciudad en Perfekt",
+      "points": [
+        {
+          "title": "sein para el movimiento",
+          "text": "Si alguien se desplaza (gehen, fahren, kommen) o cambia de estado (aufwachen), se usa sein en lugar de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Fui al cine."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Fuimos al aeropuerto."
+            }
+          ]
+        },
+        {
+          "title": "Sin ge: be-, ver-, er-",
+          "text": "Si el prefijo no se separa (be-, ver-, er-, ent-), no se añade ge: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Visité a mi abuela."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "¿Lo has entendido todo?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "La ville au Perfekt",
+      "points": [
+        {
+          "title": "sein pour le mouvement",
+          "text": "Si on se déplace (gehen, fahren, kommen) ou si on change d’état (aufwachen), on met sein au lieu de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Je suis allé au cinéma."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Nous sommes allés à l’aéroport."
+            }
+          ]
+        },
+        {
+          "title": "Sans ge : be-, ver-, er-",
+          "text": "Si le préfixe ne se sépare pas (be-, ver-, er-, ent-), on n’ajoute pas ge : besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "J’ai rendu visite à ma grand-mère."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Tu as tout compris ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Perfekt ile şehir",
+      "points": [
+        {
+          "title": "Hareket için sein",
+          "text": "Biri yer değiştiriyorsa (gehen, fahren, kommen) ya da durum değiştiriyorsa (aufwachen), haben yerine sein kullanılır.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Sinemaya gittim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Havalimanına gittik."
+            }
+          ]
+        },
+        {
+          "title": "ge yok: be-, ver-, er-",
+          "text": "Ön ek ayrılmıyorsa (be-, ver-, er-, ent-) ge eklenmez: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Büyükannemi ziyaret ettim."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Her şeyi anladın mı?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Orașul în Perfekt",
+      "points": [
+        {
+          "title": "sein pentru mișcare",
+          "text": "Dacă cineva se deplasează (gehen, fahren, kommen) sau își schimbă starea (aufwachen), în loc de haben punem sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Am mers la cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Am mers la aeroport."
+            }
+          ]
+        },
+        {
+          "title": "Fără ge: be-, ver-, er-",
+          "text": "Dacă prefixul nu se desparte (be-, ver-, er-, ent-), nu adăugăm ge: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Am vizitat-o pe bunica."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Ai înțeles tot?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Perfekt da shahar",
+      "points": [
+        {
+          "title": "Harakat uchun sein",
+          "text": "Odam bir joydan boshqasiga o'tsa (gehen, fahren, kommen) yoki holatini o'zgartirsa (aufwachen), haben o'rniga sein qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Men kinoga bordim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Biz aeroportga bordik."
+            }
+          ]
+        },
+        {
+          "title": "ge siz: be-, ver-, er-",
+          "text": "Old qo'shimcha ajralmasa (be-, ver-, er-, ent-), ge qo'shilmaydi: besuchen → besucht, verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "Buvimni ko'rgani bordim."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "Hammasini tushundingmi?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "Perfekt में शहर",
+      "points": [
+        {
+          "title": "गति के लिए sein",
+          "text": "अगर कोई जगह बदलता है (gehen, fahren, kommen) या उसकी हालत बदलती है (aufwachen), तो haben की जगह sein।",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "मैं सिनेमा गया।"
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "हम हवाई अड्डे गए।"
+            }
+          ]
+        },
+        {
+          "title": "बिना ge: be-, ver-, er-",
+          "text": "अगर उपसर्ग अलग नहीं होता (be-, ver-, er-, ent-), तो ge नहीं जोड़ते: besuchen → besucht, verstehen → verstanden।",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "मैं अपनी दादी से मिलने गया।"
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "क्या तुमने सब समझ लिया?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المدينة في Perfekt",
+      "points": [
+        {
+          "title": "sein للحركة",
+          "text": "إذا تنقل الشخص من مكان إلى آخر (gehen، fahren، kommen) أو تغيرت حالته (aufwachen) نستعمل sein بدل haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "ذهبت إلى السينما."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "ذهبنا إلى المطار."
+            }
+          ]
+        },
+        {
+          "title": "بدون ge: be- وver- وer-",
+          "text": "إذا كانت السابقة لا تنفصل (be- وver- وer- وent-) لا نضيف ge: besuchen → besucht، verstehen → verstanden.",
+          "examples": [
+            {
+              "de": "Ich habe meine Oma besucht.",
+              "tr": "زرت جدتي."
+            },
+            {
+              "de": "Hast du alles verstanden?",
+              "tr": "هل فهمت كل شيء؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "past-eleven": {
+    "ru": {
+      "title": "Семья в Perfekt",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Повторяем все три случая: besucht (без ge), gesehen (ge...en), mitgebracht (ge в середине).",
+          "examples": [
+            {
+              "de": "Wir haben alte Fotos gesehen.",
+              "tr": "Мы смотрели старые фотографии."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Сім’я у Perfekt",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Повторюємо всі три випадки: besucht (без ge), gesehen (ge...en), mitgebracht (ge всередині).",
+          "examples": [
+            {
+              "de": "Wir haben alte Fotos gesehen.",
+              "tr": "Ми дивилися старі фотографії."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Family in Perfekt",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "Review all three cases: besucht (no ge), gesehen (ge...en), mitgebracht (ge in the middle).",
+          "examples": [
+            {
+              "de": "Wir haben alte Fotos gesehen.",
+              "tr": "We looked at old photos."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Rodzina w Perfekt",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Powtarzamy wszystkie trzy przypadki: besucht (bez ge), gesehen (ge...en), mitgebracht (ge w środku).",
+          "examples": [
+            {
+              "de": "Wir haben alte Fotos gesehen.",
+              "tr": "Oglądaliśmy stare zdjęcia."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "La familia en Perfekt",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "Repasamos los tres casos: besucht (sin ge), gesehen (ge...en), mitgebracht (ge en medio).",
+          "examples": [
+            {
+              "de": "Wir haben alte Fotos gesehen.",
+              "tr": "Vimos fotos antiguas."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "La famille au Perfekt",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "On révise les trois cas : besucht (sans ge), gesehen (ge...en), mitgebracht (ge au milieu).",
+          "examples": [
+            {
+              "de": "Wir haben alte Fotos gesehen.",
+              "tr": "Nous avons regardé de vieilles photos."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Perfekt ile aile",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "Üç durumu tekrar ediyoruz: besucht (ge yok), gesehen (ge...en), mitgebracht (ge ortada).",
+          "examples": [
+            {
+              "de": "Wir haben alte Fotos gesehen.",
+              "tr": "Eski fotoğraflara baktık."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Familia în Perfekt",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Recapitulăm cele trei cazuri: besucht (fără ge), gesehen (ge...en), mitgebracht (ge la mijloc).",
+          "examples": [
+            {
+              "de": "Wir haben alte Fotos gesehen.",
+              "tr": "Ne-am uitat la poze vechi."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Perfekt da oila",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Uchala holatni takrorlaymiz: besucht (ge siz), gesehen (ge...en), mitgebracht (ge o'rtada).",
+          "examples": [
+            {
+              "de": "Wir haben alte Fotos gesehen.",
+              "tr": "Biz eski suratlarni ko'rdik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "Perfekt में परिवार",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "तीनों हालात दोहराते हैं: besucht (बिना ge), gesehen (ge...en), mitgebracht (ge बीच में)।",
+          "examples": [
+            {
+              "de": "Wir haben alte Fotos gesehen.",
+              "tr": "हमने पुरानी तस्वीरें देखीं।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "العائلة في Perfekt",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "نراجع الحالات الثلاث: besucht (بدون ge)، gesehen (ge...en)، mitgebracht (ge في الوسط).",
+          "examples": [
+            {
+              "de": "Wir haben alte Fotos gesehen.",
+              "tr": "شاهدنا صوراً قديمة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "past-twelve": {
+    "ru": {
+      "title": "Выходные: повторение Perfekt",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Прошедшее в разговоре: haben на втором месте, а глагол в форме ge...t уходит в конец: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Я играл в футбол."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Мы учили немецкий."
+            }
+          ]
+        },
+        {
+          "title": "sein для движения",
+          "text": "Если человек перемещается (gehen, fahren, kommen) или меняет состояние (aufwachen), вместо haben ставим sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходил в кино."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Мы поехали в аэропорт."
+            }
+          ]
+        },
+        {
+          "title": "Неправильные: ge...en",
+          "text": "У многих частых глаголов форма на -en, часто с другой гласной: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Их учим.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Я выпил кофе."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Я прочитал книгу."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Вихідні: повторення Perfekt",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Минуле в розмові: haben на другому місці, а дієслово у формі ge...t іде в кінець: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Я грав у футбол."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Ми вчили німецьку."
+            }
+          ]
+        },
+        {
+          "title": "sein для руху",
+          "text": "Якщо людина переміщується (gehen, fahren, kommen) або змінює стан (aufwachen), замість haben ставимо sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходив у кіно."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Ми поїхали в аеропорт."
+            }
+          ]
+        },
+        {
+          "title": "Неправильні: ge...en",
+          "text": "У багатьох частих дієслів форма на -en, часто з іншою голосною: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Їх вчимо.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Я випив каву."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Я прочитав книжку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The weekend: Perfekt review",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Spoken past: haben in second place, and the verb in its ge...t form at the end: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "I played football."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "We learned German."
+            }
+          ]
+        },
+        {
+          "title": "sein for movement",
+          "text": "If you move from place to place (gehen, fahren, kommen) or change state (aufwachen), use sein instead of haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "I went to the cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "We drove to the airport."
+            }
+          ]
+        },
+        {
+          "title": "Irregular: ge...en",
+          "text": "Many common verbs end in -en, often with a different vowel: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Learn them.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "I drank a coffee."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "I read the book."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Weekend: powtórka Perfekt",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Przeszłość w mowie: haben na drugim miejscu, a czasownik w formie ge...t na końcu: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Grałem w piłkę nożną."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Uczyliśmy się niemieckiego."
+            }
+          ]
+        },
+        {
+          "title": "sein przy ruchu",
+          "text": "Jeśli ktoś się przemieszcza (gehen, fahren, kommen) albo zmienia stan (aufwachen), zamiast haben stawiamy sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Poszedłem do kina."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Pojechaliśmy na lotnisko."
+            }
+          ]
+        },
+        {
+          "title": "Nieregularne: ge...en",
+          "text": "Wiele częstych czasowników kończy się na -en, często z inną samogłoską: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Trzeba je znać.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Wypiłem kawę."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Przeczytałem książkę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "El fin de semana: repaso del Perfekt",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "El pasado hablado: haben en segundo lugar y el verbo en forma ge...t al final: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Jugué al fútbol."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Aprendimos alemán."
+            }
+          ]
+        },
+        {
+          "title": "sein para el movimiento",
+          "text": "Si alguien se desplaza (gehen, fahren, kommen) o cambia de estado (aufwachen), se usa sein en lugar de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Fui al cine."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Fuimos al aeropuerto."
+            }
+          ]
+        },
+        {
+          "title": "Irregulares: ge...en",
+          "text": "Muchos verbos frecuentes terminan en -en, a menudo con otra vocal: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Hay que aprenderlos.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Me tomé un café."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Leí el libro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le week-end : révision du Perfekt",
+      "points": [
+        {
+          "title": "Perfekt : haben + ge...t",
+          "text": "Le passé à l’oral : haben en deuxième position, et le verbe en ge...t à la fin : spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "J’ai joué au foot."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Nous avons appris l’allemand."
+            }
+          ]
+        },
+        {
+          "title": "sein pour le mouvement",
+          "text": "Si on se déplace (gehen, fahren, kommen) ou si on change d’état (aufwachen), on met sein au lieu de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Je suis allé au cinéma."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Nous sommes allés à l’aéroport."
+            }
+          ]
+        },
+        {
+          "title": "Irréguliers : ge...en",
+          "text": "Beaucoup de verbes courants finissent en -en, souvent avec une autre voyelle : trinken → getrunken, lesen → gelesen, schreiben → geschrieben. À apprendre.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "J’ai bu un café."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "J’ai lu le livre."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Hafta sonu: Perfekt tekrarı",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Konuşmada geçmiş: haben ikinci sırada, fiil ge...t biçiminde sonda: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Futbol oynadım."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Almanca öğrendik."
+            }
+          ]
+        },
+        {
+          "title": "Hareket için sein",
+          "text": "Biri yer değiştiriyorsa (gehen, fahren, kommen) ya da durum değiştiriyorsa (aufwachen), haben yerine sein kullanılır.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Sinemaya gittim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Havalimanına gittik."
+            }
+          ]
+        },
+        {
+          "title": "Düzensiz: ge...en",
+          "text": "Sık kullanılan birçok fiil -en ile biter, çoğu zaman ünlüsü de değişir: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Ezberlenir.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Bir kahve içtim."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Kitabı okudum."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Weekendul: recapitulare Perfekt",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Trecutul vorbit: haben pe locul doi, iar verbul în forma ge...t la final: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Am jucat fotbal."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Am învățat germana."
+            }
+          ]
+        },
+        {
+          "title": "sein pentru mișcare",
+          "text": "Dacă cineva se deplasează (gehen, fahren, kommen) sau își schimbă starea (aufwachen), în loc de haben punem sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Am mers la cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Am mers la aeroport."
+            }
+          ]
+        },
+        {
+          "title": "Neregulate: ge...en",
+          "text": "Multe verbe frecvente se termină în -en, des cu altă vocală: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Se învață.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Am băut o cafea."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Am citit cartea."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Dam olish: Perfekt takrori",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Og'zaki o'tgan zamon: haben ikkinchi o'rinda, fe'l ge...t shaklida oxirida: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Men futbol o'ynadim."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Biz nemis tilini o'rgandik."
+            }
+          ]
+        },
+        {
+          "title": "Harakat uchun sein",
+          "text": "Odam bir joydan boshqasiga o'tsa (gehen, fahren, kommen) yoki holatini o'zgartirsa (aufwachen), haben o'rniga sein qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Men kinoga bordim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Biz aeroportga bordik."
+            }
+          ]
+        },
+        {
+          "title": "Noto'g'ri: ge...en",
+          "text": "Ko'p ishlatiladigan fe'llar -en bilan tugaydi, ko'pincha unlisi ham o'zgaradi: trinken → getrunken, lesen → gelesen, schreiben → geschrieben. Ularni yodlaymiz.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "Men qahva ichdim."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "Men kitobni o'qidim."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "सप्ताहांत: Perfekt का दोहराव",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "बोलचाल का भूतकाल: haben दूसरे स्थान पर, और क्रिया ge...t रूप में अंत में: spielen → gespielt।",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "मैंने फ़ुटबॉल खेला।"
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "हमने जर्मन सीखी।"
+            }
+          ]
+        },
+        {
+          "title": "गति के लिए sein",
+          "text": "अगर कोई जगह बदलता है (gehen, fahren, kommen) या उसकी हालत बदलती है (aufwachen), तो haben की जगह sein।",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "मैं सिनेमा गया।"
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "हम हवाई अड्डे गए।"
+            }
+          ]
+        },
+        {
+          "title": "अनियमित: ge...en",
+          "text": "कई आम क्रियाएँ -en पर खत्म होती हैं, अक्सर स्वर भी बदलता है: trinken → getrunken, lesen → gelesen, schreiben → geschrieben। इन्हें याद करो।",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "मैंने एक कॉफ़ी पी।"
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "मैंने किताब पढ़ी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "عطلة نهاية الأسبوع: مراجعة Perfekt",
+      "points": [
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "الماضي في الكلام: haben في المكان الثاني، والفعل بصيغة ge...t في الآخر: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "لعبت كرة القدم."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "تعلمنا الألمانية."
+            }
+          ]
+        },
+        {
+          "title": "sein للحركة",
+          "text": "إذا تنقل الشخص من مكان إلى آخر (gehen، fahren، kommen) أو تغيرت حالته (aufwachen) نستعمل sein بدل haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "ذهبت إلى السينما."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "ذهبنا إلى المطار."
+            }
+          ]
+        },
+        {
+          "title": "الشاذة: ge...en",
+          "text": "كثير من الأفعال الشائعة تنتهي بـ -en، وغالباً يتغير حرفها: trinken → getrunken، lesen → gelesen، schreiben → geschrieben. نحفظها.",
+          "examples": [
+            {
+              "de": "Ich habe einen Kaffee getrunken.",
+              "tr": "شربت قهوة."
+            },
+            {
+              "de": "Ich habe das Buch gelesen.",
+              "tr": "قرأت الكتاب."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

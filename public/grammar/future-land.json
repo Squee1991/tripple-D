@@ -1,0 +1,2782 @@
+{
+  "future-one": {
+    "ru": {
+      "title": "Futur I: путешествие",
+      "points": [
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я соберу чемодан."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Futur I: подорож",
+      "points": [
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я зберу валізу."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Futur I: a trip",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "I’ll pack a suitcase."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Futur I: podróż",
+      "points": [
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Spakuję walizkę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Futur I: un viaje",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Haré la maleta."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Futur I : un voyage",
+      "points": [
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Je vais faire ma valise."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Futur I: seyahat",
+      "points": [
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Bavul hazırlayacağım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Futur I: o călătorie",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Îmi voi face bagajul."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Futur I: sayohat",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Chamadon yig'aman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "Futur I: यात्रा",
+      "points": [
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "मैं सूटकेस पैक करूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "Futur I: رحلة",
+      "points": [
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "سأحزم حقيبة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "future-two": {
+    "ru": {
+      "title": "Цели и обещания",
+      "points": [
+        {
+          "title": "Когда нужен Futur",
+          "text": "Futur нужен для обещаний, прогнозов и планов. Если ясно, что речь о будущем (morgen, nächste Woche), немцы часто говорят просто в настоящем.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Er wird dich morgen anrufen.",
+              "tr": "Он позвонит тебе завтра."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Цілі й обіцянки",
+      "points": [
+        {
+          "title": "Коли потрібен Futur",
+          "text": "Futur потрібен для обіцянок, прогнозів і планів. Якщо ясно, що йдеться про майбутнє (morgen, nächste Woche), німці часто кажуть просто в теперішньому.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Er wird dich morgen anrufen.",
+              "tr": "Він зателефонує тобі завтра."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Goals and promises",
+      "points": [
+        {
+          "title": "When to use Futur",
+          "text": "Futur is used for promises, predictions and plans. When it’s clear it’s about the future (morgen, nächste Woche), Germans often just use the present.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Er wird dich morgen anrufen.",
+              "tr": "He’ll call you tomorrow."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Cele i obietnice",
+      "points": [
+        {
+          "title": "Kiedy Futur",
+          "text": "Futur służy do obietnic, prognoz i planów. Gdy jasne, że chodzi o przyszłość (morgen, nächste Woche), Niemcy często mówią po prostu w teraźniejszym.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Er wird dich morgen anrufen.",
+              "tr": "Zadzwoni do ciebie jutro."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Metas y promesas",
+      "points": [
+        {
+          "title": "Cuándo usar el Futur",
+          "text": "El Futur sirve para promesas, pronósticos y planes. Si está claro que es futuro (morgen, nächste Woche), los alemanes suelen usar el presente.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Er wird dich morgen anrufen.",
+              "tr": "Te llamará mañana."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Objectifs et promesses",
+      "points": [
+        {
+          "title": "Quand utiliser le Futur",
+          "text": "Le Futur sert pour les promesses, les prévisions et les projets. Quand c’est clair que c’est le futur (morgen, nächste Woche), on utilise souvent le présent.",
+          "examples": []
+        },
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Er wird dich morgen anrufen.",
+              "tr": "Il t’appellera demain."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Hedefler ve sözler",
+      "points": [
+        {
+          "title": "Futur ne zaman kullanılır",
+          "text": "Futur söz, tahmin ve planlar için kullanılır. Gelecek olduğu belliyse (morgen, nächste Woche) Almanlar çoğu zaman şimdiki zamanı kullanır.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Er wird dich morgen anrufen.",
+              "tr": "Seni yarın arayacak."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Obiective și promisiuni",
+      "points": [
+        {
+          "title": "Când folosim Futur",
+          "text": "Futur se folosește pentru promisiuni, prognoze și planuri. Dacă e clar că e viitor (morgen, nächste Woche), nemții spun des la prezent.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Er wird dich morgen anrufen.",
+              "tr": "Te va suna mâine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Maqsadlar va va'dalar",
+      "points": [
+        {
+          "title": "Futur qachon kerak",
+          "text": "Futur va'dalar, bashoratlar va rejalar uchun kerak. Kelajak ekani aniq bo'lsa (morgen, nächste Woche), nemislar ko'pincha hozirgi zamonni ishlatadi.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Er wird dich morgen anrufen.",
+              "tr": "U ertaga senga qo'ng'iroq qiladi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "लक्ष्य और वादे",
+      "points": [
+        {
+          "title": "Futur कब",
+          "text": "Futur वादों, पूर्वानुमानों और योजनाओं के लिए है। अगर साफ़ हो कि भविष्य की बात है (morgen, nächste Woche), तो जर्मन लोग अक्सर वर्तमान में ही बोलते हैं।",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Er wird dich morgen anrufen.",
+              "tr": "वह कल तुम्हें फ़ोन करेगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الأهداف والوعود",
+      "points": [
+        {
+          "title": "متى نستعمل Futur",
+          "text": "نستعمل Futur للوعود والتوقعات والخطط. وإذا كان المستقبل واضحاً (morgen، nächste Woche) يكتفي الألمان غالباً بالمضارع.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Er wird dich morgen anrufen.",
+              "tr": "سيتصل بك غداً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "future-three": {
+    "ru": {
+      "title": "Общие планы: wir, ihr, sie",
+      "points": [
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wann werdet ihr nach Berlin fahren?",
+              "tr": "Когда вы поедете в Берлин?"
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Спільні плани: wir, ihr, sie",
+      "points": [
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wann werdet ihr nach Berlin fahren?",
+              "tr": "Коли ви поїдете до Берліна?"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Joint plans: wir, ihr, sie",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wann werdet ihr nach Berlin fahren?",
+              "tr": "When will you go to Berlin?"
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Wspólne plany: wir, ihr, sie",
+      "points": [
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wann werdet ihr nach Berlin fahren?",
+              "tr": "Kiedy pojedziecie do Berlina?"
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Planes comunes: wir, ihr, sie",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wann werdet ihr nach Berlin fahren?",
+              "tr": "¿Cuándo iréis a Berlín?"
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Projets communs : wir, ihr, sie",
+      "points": [
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wann werdet ihr nach Berlin fahren?",
+              "tr": "Quand irez-vous à Berlin ?"
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Ortak planlar: wir, ihr, sie",
+      "points": [
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wann werdet ihr nach Berlin fahren?",
+              "tr": "Berlin’e ne zaman gideceksiniz?"
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Planuri comune: wir, ihr, sie",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wann werdet ihr nach Berlin fahren?",
+              "tr": "Când veți merge la Berlin?"
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Umumiy rejalar: wir, ihr, sie",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wann werdet ihr nach Berlin fahren?",
+              "tr": "Berlinga qachon borasizlar?"
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "साझा योजनाएँ: wir, ihr, sie",
+      "points": [
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Wann werdet ihr nach Berlin fahren?",
+              "tr": "तुम सब बर्लिन कब जाओगे?"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "خطط مشتركة: wir وihr وsie",
+      "points": [
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Wann werdet ihr nach Berlin fahren?",
+              "tr": "متى ستسافرون إلى برلين؟"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "future-four": {
+    "ru": {
+      "title": "Устраиваем вечеринку",
+      "points": [
+        {
+          "title": "Приставка не отрывается",
+          "text": "Отделяемый глагол в конце стоит целиком: Wir werden alle Freunde einladen.",
+          "examples": [
+            {
+              "de": "Die Gäste werden Geschenke mitbringen.",
+              "tr": "Гости принесут подарки."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Влаштовуємо вечірку",
+      "points": [
+        {
+          "title": "Префікс не відривається",
+          "text": "Відокремлюване дієслово в кінці стоїть цілим: Wir werden alle Freunde einladen.",
+          "examples": [
+            {
+              "de": "Die Gäste werden Geschenke mitbringen.",
+              "tr": "Гості принесуть подарунки."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Throwing a party",
+      "points": [
+        {
+          "title": "The prefix stays on",
+          "text": "A separable verb stays whole at the end: Wir werden alle Freunde einladen.",
+          "examples": [
+            {
+              "de": "Die Gäste werden Geschenke mitbringen.",
+              "tr": "The guests will bring presents."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Urządzamy imprezę",
+      "points": [
+        {
+          "title": "Przedrostek się nie odrywa",
+          "text": "Czasownik rozdzielny stoi na końcu w całości: Wir werden alle Freunde einladen.",
+          "examples": [
+            {
+              "de": "Die Gäste werden Geschenke mitbringen.",
+              "tr": "Goście przyniosą prezenty."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Organizamos una fiesta",
+      "points": [
+        {
+          "title": "El prefijo no se separa",
+          "text": "El verbo separable va entero al final: Wir werden alle Freunde einladen.",
+          "examples": [
+            {
+              "de": "Die Gäste werden Geschenke mitbringen.",
+              "tr": "Los invitados traerán regalos."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "On organise une fête",
+      "points": [
+        {
+          "title": "Le préfixe reste attaché",
+          "text": "Le verbe séparable reste entier à la fin : Wir werden alle Freunde einladen.",
+          "examples": [
+            {
+              "de": "Die Gäste werden Geschenke mitbringen.",
+              "tr": "Les invités apporteront des cadeaux."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Parti veriyoruz",
+      "points": [
+        {
+          "title": "Ön ek ayrılmaz",
+          "text": "Ayrılabilen fiil sonda bütün kalır: Wir werden alle Freunde einladen.",
+          "examples": [
+            {
+              "de": "Die Gäste werden Geschenke mitbringen.",
+              "tr": "Misafirler hediye getirecek."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Organizăm o petrecere",
+      "points": [
+        {
+          "title": "Prefixul nu se desparte",
+          "text": "Verbul separabil stă întreg la final: Wir werden alle Freunde einladen.",
+          "examples": [
+            {
+              "de": "Die Gäste werden Geschenke mitbringen.",
+              "tr": "Oaspeții vor aduce cadouri."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Bazm uyushtiramiz",
+      "points": [
+        {
+          "title": "Old qo'shimcha ajralmaydi",
+          "text": "Ajraladigan fe'l oxirida butun turadi: Wir werden alle Freunde einladen.",
+          "examples": [
+            {
+              "de": "Die Gäste werden Geschenke mitbringen.",
+              "tr": "Mehmonlar sovg'alar olib kelishadi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "पार्टी करते हैं",
+      "points": [
+        {
+          "title": "उपसर्ग अलग नहीं होता",
+          "text": "अलग होने वाली क्रिया अंत में पूरी रहती है: Wir werden alle Freunde einladen।",
+          "examples": [
+            {
+              "de": "Die Gäste werden Geschenke mitbringen.",
+              "tr": "मेहमान तोहफ़े लाएँगे।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "ننظم حفلة",
+      "points": [
+        {
+          "title": "السابقة لا تنفصل",
+          "text": "الفعل ذو السابقة يبقى كاملاً في الآخر: Wir werden alle Freunde einladen.",
+          "examples": [
+            {
+              "de": "Die Gäste werden Geschenke mitbringen.",
+              "tr": "سيحضر الضيوف هدايا."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "future-five": {
+    "ru": {
+      "title": "Спорт и победы",
+      "points": [
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Die Mannschaft wird gut spielen.",
+              "tr": "Команда сыграет хорошо."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Спорт і перемоги",
+      "points": [
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Die Mannschaft wird gut spielen.",
+              "tr": "Команда зіграє добре."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Sport and victories",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Die Mannschaft wird gut spielen.",
+              "tr": "The team will play well."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Sport i zwycięstwa",
+      "points": [
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Die Mannschaft wird gut spielen.",
+              "tr": "Drużyna zagra dobrze."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Deporte y victorias",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Die Mannschaft wird gut spielen.",
+              "tr": "El equipo jugará bien."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Sport et victoires",
+      "points": [
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Die Mannschaft wird gut spielen.",
+              "tr": "L’équipe jouera bien."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Spor ve zaferler",
+      "points": [
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Die Mannschaft wird gut spielen.",
+              "tr": "Takım iyi oynayacak."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Sport și victorii",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Die Mannschaft wird gut spielen.",
+              "tr": "Echipa va juca bine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Sport va g'alabalar",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Die Mannschaft wird gut spielen.",
+              "tr": "Jamoa yaxshi o'ynaydi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "खेल और जीत",
+      "points": [
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Die Mannschaft wird gut spielen.",
+              "tr": "टीम अच्छा खेलेगी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الرياضة والانتصارات",
+      "points": [
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Die Mannschaft wird gut spielen.",
+              "tr": "سيلعب الفريق جيداً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "future-six": {
+    "ru": {
+      "title": "Планы на выходные",
+      "points": [
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde am Samstag lange schlafen.",
+              "tr": "В субботу я буду долго спать."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Плани на вихідні",
+      "points": [
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde am Samstag lange schlafen.",
+              "tr": "У суботу я довго спатиму."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Weekend plans",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde am Samstag lange schlafen.",
+              "tr": "On Saturday I’ll sleep in."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Plany na weekend",
+      "points": [
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde am Samstag lange schlafen.",
+              "tr": "W sobotę będę długo spać."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Planes para el fin de semana",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde am Samstag lange schlafen.",
+              "tr": "El sábado dormiré mucho."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Projets pour le week-end",
+      "points": [
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde am Samstag lange schlafen.",
+              "tr": "Samedi, je ferai la grasse matinée."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Hafta sonu planları",
+      "points": [
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde am Samstag lange schlafen.",
+              "tr": "Cumartesi uzun uzun uyuyacağım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Planuri de weekend",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde am Samstag lange schlafen.",
+              "tr": "Sâmbătă voi dormi mult."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Dam olish rejalari",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde am Samstag lange schlafen.",
+              "tr": "Shanba kuni uzoq uxlayman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "सप्ताहांत की योजनाएँ",
+      "points": [
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Ich werde am Samstag lange schlafen.",
+              "tr": "शनिवार को मैं देर तक सोऊँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "خطط عطلة نهاية الأسبوع",
+      "points": [
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde am Samstag lange schlafen.",
+              "tr": "سأنام طويلاً يوم السبت."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "future-seven": {
+    "ru": {
+      "title": "Переезд",
+      "points": [
+        {
+          "title": "Приставка не отрывается",
+          "text": "Отделяемый глагол в конце стоит целиком: Wir werden alle Freunde einladen.",
+          "examples": [
+            {
+              "de": "Die Gäste werden Geschenke mitbringen.",
+              "tr": "Гости принесут подарки."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde nächste Woche umziehen.",
+              "tr": "На следующей неделе я перееду."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Переїзд",
+      "points": [
+        {
+          "title": "Префікс не відривається",
+          "text": "Відокремлюване дієслово в кінці стоїть цілим: Wir werden alle Freunde einladen.",
+          "examples": [
+            {
+              "de": "Die Gäste werden Geschenke mitbringen.",
+              "tr": "Гості принесуть подарунки."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde nächste Woche umziehen.",
+              "tr": "Наступного тижня я переїду."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Moving house",
+      "points": [
+        {
+          "title": "The prefix stays on",
+          "text": "A separable verb stays whole at the end: Wir werden alle Freunde einladen.",
+          "examples": [
+            {
+              "de": "Die Gäste werden Geschenke mitbringen.",
+              "tr": "The guests will bring presents."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde nächste Woche umziehen.",
+              "tr": "I’ll move next week."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Przeprowadzka",
+      "points": [
+        {
+          "title": "Przedrostek się nie odrywa",
+          "text": "Czasownik rozdzielny stoi na końcu w całości: Wir werden alle Freunde einladen.",
+          "examples": [
+            {
+              "de": "Die Gäste werden Geschenke mitbringen.",
+              "tr": "Goście przyniosą prezenty."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde nächste Woche umziehen.",
+              "tr": "W przyszłym tygodniu się przeprowadzę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "La mudanza",
+      "points": [
+        {
+          "title": "El prefijo no se separa",
+          "text": "El verbo separable va entero al final: Wir werden alle Freunde einladen.",
+          "examples": [
+            {
+              "de": "Die Gäste werden Geschenke mitbringen.",
+              "tr": "Los invitados traerán regalos."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde nächste Woche umziehen.",
+              "tr": "La semana que viene me mudaré."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le déménagement",
+      "points": [
+        {
+          "title": "Le préfixe reste attaché",
+          "text": "Le verbe séparable reste entier à la fin : Wir werden alle Freunde einladen.",
+          "examples": [
+            {
+              "de": "Die Gäste werden Geschenke mitbringen.",
+              "tr": "Les invités apporteront des cadeaux."
+            }
+          ]
+        },
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde nächste Woche umziehen.",
+              "tr": "Je vais déménager la semaine prochaine."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Taşınma",
+      "points": [
+        {
+          "title": "Ön ek ayrılmaz",
+          "text": "Ayrılabilen fiil sonda bütün kalır: Wir werden alle Freunde einladen.",
+          "examples": [
+            {
+              "de": "Die Gäste werden Geschenke mitbringen.",
+              "tr": "Misafirler hediye getirecek."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde nächste Woche umziehen.",
+              "tr": "Gelecek hafta taşınacağım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Mutarea",
+      "points": [
+        {
+          "title": "Prefixul nu se desparte",
+          "text": "Verbul separabil stă întreg la final: Wir werden alle Freunde einladen.",
+          "examples": [
+            {
+              "de": "Die Gäste werden Geschenke mitbringen.",
+              "tr": "Oaspeții vor aduce cadouri."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde nächste Woche umziehen.",
+              "tr": "Săptămâna viitoare mă voi muta."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ko'chish",
+      "points": [
+        {
+          "title": "Old qo'shimcha ajralmaydi",
+          "text": "Ajraladigan fe'l oxirida butun turadi: Wir werden alle Freunde einladen.",
+          "examples": [
+            {
+              "de": "Die Gäste werden Geschenke mitbringen.",
+              "tr": "Mehmonlar sovg'alar olib kelishadi."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde nächste Woche umziehen.",
+              "tr": "Kelasi hafta ko'chaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "घर बदलना",
+      "points": [
+        {
+          "title": "उपसर्ग अलग नहीं होता",
+          "text": "अलग होने वाली क्रिया अंत में पूरी रहती है: Wir werden alle Freunde einladen।",
+          "examples": [
+            {
+              "de": "Die Gäste werden Geschenke mitbringen.",
+              "tr": "मेहमान तोहफ़े लाएँगे।"
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Ich werde nächste Woche umziehen.",
+              "tr": "मैं अगले हफ़्ते घर बदलूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الانتقال",
+      "points": [
+        {
+          "title": "السابقة لا تنفصل",
+          "text": "الفعل ذو السابقة يبقى كاملاً في الآخر: Wir werden alle Freunde einladen.",
+          "examples": [
+            {
+              "de": "Die Gäste werden Geschenke mitbringen.",
+              "tr": "سيحضر الضيوف هدايا."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde nächste Woche umziehen.",
+              "tr": "سأنتقل الأسبوع القادم."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "future-eight": {
+    "ru": {
+      "title": "Прогноз погоды",
+      "points": [
+        {
+          "title": "Когда нужен Futur",
+          "text": "Futur нужен для обещаний, прогнозов и планов. Если ясно, что речь о будущем (morgen, nächste Woche), немцы часто говорят просто в настоящем.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Es wird morgen regnen.",
+              "tr": "Завтра будет дождь."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Прогноз погоди",
+      "points": [
+        {
+          "title": "Коли потрібен Futur",
+          "text": "Futur потрібен для обіцянок, прогнозів і планів. Якщо ясно, що йдеться про майбутнє (morgen, nächste Woche), німці часто кажуть просто в теперішньому.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Es wird morgen regnen.",
+              "tr": "Завтра буде дощ."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Weather forecast",
+      "points": [
+        {
+          "title": "When to use Futur",
+          "text": "Futur is used for promises, predictions and plans. When it’s clear it’s about the future (morgen, nächste Woche), Germans often just use the present.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Es wird morgen regnen.",
+              "tr": "It will rain tomorrow."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Prognoza pogody",
+      "points": [
+        {
+          "title": "Kiedy Futur",
+          "text": "Futur służy do obietnic, prognoz i planów. Gdy jasne, że chodzi o przyszłość (morgen, nächste Woche), Niemcy często mówią po prostu w teraźniejszym.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Es wird morgen regnen.",
+              "tr": "Jutro będzie padać."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "El pronóstico del tiempo",
+      "points": [
+        {
+          "title": "Cuándo usar el Futur",
+          "text": "El Futur sirve para promesas, pronósticos y planes. Si está claro que es futuro (morgen, nächste Woche), los alemanes suelen usar el presente.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Es wird morgen regnen.",
+              "tr": "Mañana lloverá."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "La météo",
+      "points": [
+        {
+          "title": "Quand utiliser le Futur",
+          "text": "Le Futur sert pour les promesses, les prévisions et les projets. Quand c’est clair que c’est le futur (morgen, nächste Woche), on utilise souvent le présent.",
+          "examples": []
+        },
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Es wird morgen regnen.",
+              "tr": "Il pleuvra demain."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Hava tahmini",
+      "points": [
+        {
+          "title": "Futur ne zaman kullanılır",
+          "text": "Futur söz, tahmin ve planlar için kullanılır. Gelecek olduğu belliyse (morgen, nächste Woche) Almanlar çoğu zaman şimdiki zamanı kullanır.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Es wird morgen regnen.",
+              "tr": "Yarın yağmur yağacak."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Prognoza meteo",
+      "points": [
+        {
+          "title": "Când folosim Futur",
+          "text": "Futur se folosește pentru promisiuni, prognoze și planuri. Dacă e clar că e viitor (morgen, nächste Woche), nemții spun des la prezent.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Es wird morgen regnen.",
+              "tr": "Mâine va ploua."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ob-havo prognozi",
+      "points": [
+        {
+          "title": "Futur qachon kerak",
+          "text": "Futur va'dalar, bashoratlar va rejalar uchun kerak. Kelajak ekani aniq bo'lsa (morgen, nächste Woche), nemislar ko'pincha hozirgi zamonni ishlatadi.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Es wird morgen regnen.",
+              "tr": "Ertaga yomg'ir yog'adi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "मौसम का पूर्वानुमान",
+      "points": [
+        {
+          "title": "Futur कब",
+          "text": "Futur वादों, पूर्वानुमानों और योजनाओं के लिए है। अगर साफ़ हो कि भविष्य की बात है (morgen, nächste Woche), तो जर्मन लोग अक्सर वर्तमान में ही बोलते हैं।",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Es wird morgen regnen.",
+              "tr": "कल बारिश होगी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "توقعات الطقس",
+      "points": [
+        {
+          "title": "متى نستعمل Futur",
+          "text": "نستعمل Futur للوعود والتوقعات والخطط. وإذا كان المستقبل واضحاً (morgen، nächste Woche) يكتفي الألمان غالباً بالمضارع.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Es wird morgen regnen.",
+              "tr": "ستمطر غداً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "future-nine": {
+    "ru": {
+      "title": "Здоровье",
+      "points": [
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Der Arzt wird mich untersuchen.",
+              "tr": "Врач меня осмотрит."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Здоров’я",
+      "points": [
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Der Arzt wird mich untersuchen.",
+              "tr": "Лікар мене огляне."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Health",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Der Arzt wird mich untersuchen.",
+              "tr": "The doctor will examine me."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Zdrowie",
+      "points": [
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Der Arzt wird mich untersuchen.",
+              "tr": "Lekarz mnie zbada."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "La salud",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Der Arzt wird mich untersuchen.",
+              "tr": "El médico me examinará."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "La santé",
+      "points": [
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Der Arzt wird mich untersuchen.",
+              "tr": "Le médecin va m’examiner."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sağlık",
+      "points": [
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Der Arzt wird mich untersuchen.",
+              "tr": "Doktor beni muayene edecek."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Sănătatea",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Der Arzt wird mich untersuchen.",
+              "tr": "Medicul mă va consulta."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Sog'liq",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Der Arzt wird mich untersuchen.",
+              "tr": "Shifokor meni ko'rikdan o'tkazadi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "स्वास्थ्य",
+      "points": [
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Der Arzt wird mich untersuchen.",
+              "tr": "डॉक्टर मेरी जाँच करेंगे।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الصحة",
+      "points": [
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Der Arzt wird mich untersuchen.",
+              "tr": "سيفحصني الطبيب."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "future-ten": {
+    "ru": {
+      "title": "Шопинг",
+      "points": [
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde ein neues Kleid kaufen.",
+              "tr": "Я куплю новое платье."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Шопінг",
+      "points": [
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde ein neues Kleid kaufen.",
+              "tr": "Я куплю нову сукню."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Shopping",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde ein neues Kleid kaufen.",
+              "tr": "I’ll buy a new dress."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Zakupy",
+      "points": [
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde ein neues Kleid kaufen.",
+              "tr": "Kupię nową sukienkę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "De compras",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde ein neues Kleid kaufen.",
+              "tr": "Me compraré un vestido nuevo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le shopping",
+      "points": [
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde ein neues Kleid kaufen.",
+              "tr": "Je vais acheter une nouvelle robe."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Alışveriş",
+      "points": [
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde ein neues Kleid kaufen.",
+              "tr": "Yeni bir elbise alacağım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cumpărături",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde ein neues Kleid kaufen.",
+              "tr": "Îmi voi cumpăra o rochie nouă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Xarid",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde ein neues Kleid kaufen.",
+              "tr": "Yangi ko'ylak sotib olaman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "खरीदारी",
+      "points": [
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Ich werde ein neues Kleid kaufen.",
+              "tr": "मैं एक नई ड्रेस खरीदूँगी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "التسوق",
+      "points": [
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde ein neues Kleid kaufen.",
+              "tr": "سأشتري فستاناً جديداً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "future-eleven": {
+    "ru": {
+      "title": "В ресторане",
+      "points": [
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wir werden einen Tisch reservieren.",
+              "tr": "Мы забронируем столик."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "У ресторані",
+      "points": [
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wir werden einen Tisch reservieren.",
+              "tr": "Ми забронюємо столик."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "At the restaurant",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wir werden einen Tisch reservieren.",
+              "tr": "We’ll book a table."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "W restauracji",
+      "points": [
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wir werden einen Tisch reservieren.",
+              "tr": "Zarezerwujemy stolik."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "En el restaurante",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wir werden einen Tisch reservieren.",
+              "tr": "Reservaremos una mesa."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Au restaurant",
+      "points": [
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wir werden einen Tisch reservieren.",
+              "tr": "Nous allons réserver une table."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Restoranda",
+      "points": [
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wir werden einen Tisch reservieren.",
+              "tr": "Bir masa ayırtacağız."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "La restaurant",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wir werden einen Tisch reservieren.",
+              "tr": "Vom rezerva o masă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Restoranda",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wir werden einen Tisch reservieren.",
+              "tr": "Biz stol bron qilamiz."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "रेस्टोरेंट में",
+      "points": [
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Wir werden einen Tisch reservieren.",
+              "tr": "हम एक मेज़ बुक करेंगे।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "في المطعم",
+      "points": [
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Wir werden einen Tisch reservieren.",
+              "tr": "سنحجز طاولة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "future-twelve": {
+    "ru": {
+      "title": "Кино",
+      "points": [
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Der Film wird spannend sein.",
+              "tr": "Фильм будет захватывающим."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Кіно",
+      "points": [
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Der Film wird spannend sein.",
+              "tr": "Фільм буде захопливим."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The cinema",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Der Film wird spannend sein.",
+              "tr": "The film will be exciting."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Kino",
+      "points": [
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Der Film wird spannend sein.",
+              "tr": "Film będzie ciekawy."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "El cine",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Der Film wird spannend sein.",
+              "tr": "La película será emocionante."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le cinéma",
+      "points": [
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Der Film wird spannend sein.",
+              "tr": "Le film sera passionnant."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sinema",
+      "points": [
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Der Film wird spannend sein.",
+              "tr": "Film heyecanlı olacak."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cinema",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Der Film wird spannend sein.",
+              "tr": "Filmul va fi captivant."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Kino",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Der Film wird spannend sein.",
+              "tr": "Film qiziqarli bo'ladi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "सिनेमा",
+      "points": [
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Der Film wird spannend sein.",
+              "tr": "फ़िल्म रोमांचक होगी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "السينما",
+      "points": [
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Der Film wird spannend sein.",
+              "tr": "سيكون الفيلم مشوقاً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "future-thirteen": {
+    "ru": {
+      "title": "Животные",
+      "points": [
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wir werden in den Zoo gehen.",
+              "tr": "Мы пойдём в зоопарк."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Тварини",
+      "points": [
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wir werden in den Zoo gehen.",
+              "tr": "Ми підемо в зоопарк."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Animals",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wir werden in den Zoo gehen.",
+              "tr": "We’ll go to the zoo."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Zwierzęta",
+      "points": [
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wir werden in den Zoo gehen.",
+              "tr": "Pójdziemy do zoo."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Animales",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wir werden in den Zoo gehen.",
+              "tr": "Iremos al zoo."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les animaux",
+      "points": [
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wir werden in den Zoo gehen.",
+              "tr": "Nous irons au zoo."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Hayvanlar",
+      "points": [
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wir werden in den Zoo gehen.",
+              "tr": "Hayvanat bahçesine gideceğiz."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Animalele",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wir werden in den Zoo gehen.",
+              "tr": "Vom merge la grădina zoologică."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Hayvonlar",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Wir werden in den Zoo gehen.",
+              "tr": "Biz hayvonot bog'iga boramiz."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "जानवर",
+      "points": [
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Wir werden in den Zoo gehen.",
+              "tr": "हम चिड़ियाघर जाएँगे।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الحيوانات",
+      "points": [
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Wir werden in den Zoo gehen.",
+              "tr": "سنذهب إلى حديقة الحيوانات."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "future-fourteen": {
+    "ru": {
+      "title": "Экология",
+      "points": [
+        {
+          "title": "sich в Futur",
+          "text": "Возвратное sich стоит сразу после werden, а инфинитив в конце: Das Klima wird sich ändern.",
+          "examples": [
+            {
+              "de": "Das Klima wird sich schnell ändern.",
+              "tr": "Климат быстро изменится."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Екологія",
+      "points": [
+        {
+          "title": "sich у Futur",
+          "text": "Зворотне sich стоїть одразу після werden, а інфінітив у кінці: Das Klima wird sich ändern.",
+          "examples": [
+            {
+              "de": "Das Klima wird sich schnell ändern.",
+              "tr": "Клімат швидко зміниться."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Ecology",
+      "points": [
+        {
+          "title": "sich in Futur",
+          "text": "Reflexive sich comes right after werden, the infinitive at the end: Das Klima wird sich ändern.",
+          "examples": [
+            {
+              "de": "Das Klima wird sich schnell ändern.",
+              "tr": "The climate will change quickly."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Ekologia",
+      "points": [
+        {
+          "title": "sich w Futur",
+          "text": "Zwrotne sich stoi zaraz po werden, a bezokolicznik na końcu: Das Klima wird sich ändern.",
+          "examples": [
+            {
+              "de": "Das Klima wird sich schnell ändern.",
+              "tr": "Klimat szybko się zmieni."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Ecología",
+      "points": [
+        {
+          "title": "sich en Futur",
+          "text": "El reflexivo sich va justo después de werden y el infinitivo al final: Das Klima wird sich ändern.",
+          "examples": [
+            {
+              "de": "Das Klima wird sich schnell ändern.",
+              "tr": "El clima cambiará rápido."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "L’écologie",
+      "points": [
+        {
+          "title": "sich au Futur",
+          "text": "Le pronom sich vient juste après werden, l’infinitif à la fin : Das Klima wird sich ändern.",
+          "examples": [
+            {
+              "de": "Das Klima wird sich schnell ändern.",
+              "tr": "Le climat va changer vite."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Ekoloji",
+      "points": [
+        {
+          "title": "Futur’da sich",
+          "text": "Dönüşlü sich werden’dan hemen sonra, mastar sonda: Das Klima wird sich ändern.",
+          "examples": [
+            {
+              "de": "Das Klima wird sich schnell ändern.",
+              "tr": "İklim hızla değişecek."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Ecologia",
+      "points": [
+        {
+          "title": "sich la Futur",
+          "text": "Reflexivul sich vine imediat după werden, infinitivul la final: Das Klima wird sich ändern.",
+          "examples": [
+            {
+              "de": "Das Klima wird sich schnell ändern.",
+              "tr": "Clima se va schimba repede."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ekologiya",
+      "points": [
+        {
+          "title": "Futur da sich",
+          "text": "O'zlik sich werden dan keyin darhol, infinitiv oxirida: Das Klima wird sich ändern.",
+          "examples": [
+            {
+              "de": "Das Klima wird sich schnell ändern.",
+              "tr": "Iqlim tez o'zgaradi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "पर्यावरण",
+      "points": [
+        {
+          "title": "Futur में sich",
+          "text": "निजवाचक sich, werden के ठीक बाद, इन्फ़िनिटिव अंत में: Das Klima wird sich ändern।",
+          "examples": [
+            {
+              "de": "Das Klima wird sich schnell ändern.",
+              "tr": "जलवायु तेज़ी से बदलेगी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "البيئة",
+      "points": [
+        {
+          "title": "sich في Futur",
+          "text": "الضمير الانعكاسي sich يأتي بعد werden مباشرة والمصدر في الآخر: Das Klima wird sich ändern.",
+          "examples": [
+            {
+              "de": "Das Klima wird sich schnell ändern.",
+              "tr": "سيتغير المناخ بسرعة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "future-fifteen": {
+    "ru": {
+      "title": "Праздники",
+      "points": [
+        {
+          "title": "Когда нужен Futur",
+          "text": "Futur нужен для обещаний, прогнозов и планов. Если ясно, что речь о будущем (morgen, nächste Woche), немцы часто говорят просто в настоящем.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Kuchen backen.",
+              "tr": "Я испеку торт."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Свята",
+      "points": [
+        {
+          "title": "Коли потрібен Futur",
+          "text": "Futur потрібен для обіцянок, прогнозів і планів. Якщо ясно, що йдеться про майбутнє (morgen, nächste Woche), німці часто кажуть просто в теперішньому.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Kuchen backen.",
+              "tr": "Я спечу торт."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Holidays",
+      "points": [
+        {
+          "title": "When to use Futur",
+          "text": "Futur is used for promises, predictions and plans. When it’s clear it’s about the future (morgen, nächste Woche), Germans often just use the present.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Kuchen backen.",
+              "tr": "I’ll bake a cake."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Święta",
+      "points": [
+        {
+          "title": "Kiedy Futur",
+          "text": "Futur służy do obietnic, prognoz i planów. Gdy jasne, że chodzi o przyszłość (morgen, nächste Woche), Niemcy często mówią po prostu w teraźniejszym.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Kuchen backen.",
+              "tr": "Upiekę ciasto."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Las fiestas",
+      "points": [
+        {
+          "title": "Cuándo usar el Futur",
+          "text": "El Futur sirve para promesas, pronósticos y planes. Si está claro que es futuro (morgen, nächste Woche), los alemanes suelen usar el presente.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Kuchen backen.",
+              "tr": "Haré un pastel."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les fêtes",
+      "points": [
+        {
+          "title": "Quand utiliser le Futur",
+          "text": "Le Futur sert pour les promesses, les prévisions et les projets. Quand c’est clair que c’est le futur (morgen, nächste Woche), on utilise souvent le présent.",
+          "examples": []
+        },
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Kuchen backen.",
+              "tr": "Je vais faire un gâteau."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Bayramlar",
+      "points": [
+        {
+          "title": "Futur ne zaman kullanılır",
+          "text": "Futur söz, tahmin ve planlar için kullanılır. Gelecek olduğu belliyse (morgen, nächste Woche) Almanlar çoğu zaman şimdiki zamanı kullanır.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Kuchen backen.",
+              "tr": "Bir kek pişireceğim."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Sărbătorile",
+      "points": [
+        {
+          "title": "Când folosim Futur",
+          "text": "Futur se folosește pentru promisiuni, prognoze și planuri. Dacă e clar că e viitor (morgen, nächste Woche), nemții spun des la prezent.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Kuchen backen.",
+              "tr": "Voi coace o prăjitură."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Bayramlar",
+      "points": [
+        {
+          "title": "Futur qachon kerak",
+          "text": "Futur va'dalar, bashoratlar va rejalar uchun kerak. Kelajak ekani aniq bo'lsa (morgen, nächste Woche), nemislar ko'pincha hozirgi zamonni ishlatadi.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Kuchen backen.",
+              "tr": "Men pirog pishiraman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "त्योहार",
+      "points": [
+        {
+          "title": "Futur कब",
+          "text": "Futur वादों, पूर्वानुमानों और योजनाओं के लिए है। अगर साफ़ हो कि भविष्य की बात है (morgen, nächste Woche), तो जर्मन लोग अक्सर वर्तमान में ही बोलते हैं।",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Ich werde einen Kuchen backen.",
+              "tr": "मैं केक बनाऊँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الأعياد",
+      "points": [
+        {
+          "title": "متى نستعمل Futur",
+          "text": "نستعمل Futur للوعود والتوقعات والخطط. وإذا كان المستقبل واضحاً (morgen، nächste Woche) يكتفي الألمان غالباً بالمضارع.",
+          "examples": []
+        },
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Kuchen backen.",
+              "tr": "سأخبز كعكة."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

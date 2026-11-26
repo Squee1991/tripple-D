@@ -1,0 +1,2947 @@
+{
+  "env": {
+    "ru": {
+      "title": "Природа вокруг",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Признак после ist не меняется. Два признака соединяем через und.",
+          "examples": [
+            {
+              "de": "Die Natur ist schön.",
+              "tr": "Природа красивая."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Природа навколо",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Ознака після ist не змінюється. Дві ознаки поєднуємо через und.",
+          "examples": [
+            {
+              "de": "Die Natur ist schön.",
+              "tr": "Природа гарна."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Nature around us",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "An adjective after ist doesn’t change. Join two adjectives with und.",
+          "examples": [
+            {
+              "de": "Die Natur ist schön.",
+              "tr": "Nature is beautiful."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Przyroda wokół",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Cecha po ist się nie zmienia. Dwie cechy łączymy przez und.",
+          "examples": [
+            {
+              "de": "Die Natur ist schön.",
+              "tr": "Przyroda jest piękna."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "La naturaleza",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "El adjetivo tras ist no cambia. Dos adjetivos se unen con und.",
+          "examples": [
+            {
+              "de": "Die Natur ist schön.",
+              "tr": "La naturaleza es bonita."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "La nature autour",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "L’adjectif après ist ne change pas. On relie deux adjectifs avec und.",
+          "examples": [
+            {
+              "de": "Die Natur ist schön.",
+              "tr": "La nature est belle."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Etraftaki doğa",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "ist’ten sonra sıfat değişmez. İki sıfat und ile bağlanır.",
+          "examples": [
+            {
+              "de": "Die Natur ist schön.",
+              "tr": "Doğa güzel."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Natura din jur",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Adjectivul după ist nu se schimbă. Două adjective le legăm cu und.",
+          "examples": [
+            {
+              "de": "Die Natur ist schön.",
+              "tr": "Natura e frumoasă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Atrofdagi tabiat",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "ist dan keyin sifat o'zgarmaydi. Ikki sifat und bilan bog'lanadi.",
+          "examples": [
+            {
+              "de": "Die Natur ist schön.",
+              "tr": "Tabiat chiroyli."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "आसपास की प्रकृति",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "ist के बाद विशेषण नहीं बदलता। दो विशेषणों को und से जोड़ते हैं।",
+          "examples": [
+            {
+              "de": "Die Natur ist schön.",
+              "tr": "प्रकृति सुंदर है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الطبيعة من حولنا",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "الصفة بعد ist لا تتغير. ونربط صفتين بـ und.",
+          "examples": [
+            {
+              "de": "Die Natur ist schön.",
+              "tr": "الطبيعة جميلة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "animals": {
+    "ru": {
+      "title": "Животные: im Wald",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Где находится: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Волк в лесу."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Цветок растёт на лугу."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Тварини: im Wald",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Де знаходиться: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Вовк у лісі."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Квітка росте на лузі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Animals: im Wald",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Where something is: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "The wolf is in the forest."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "The flower grows in the meadow."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Zwierzęta: im Wald",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Gdzie coś jest: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Wilk jest w lesie."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Kwiat rośnie na łące."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Animales: im Wald",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Dónde está algo: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "El lobo está en el bosque."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "La flor crece en el prado."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les animaux : im Wald",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Où se trouve quelque chose : im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Le loup est dans la forêt."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "La fleur pousse dans le pré."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Hayvanlar: im Wald",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Bir şey nerede: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Kurt ormanda."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Çiçek çayırda büyüyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Animalele: im Wald",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Unde se află ceva: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Lupul e în pădure."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Floarea crește pe pajiște."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Hayvonlar: im Wald",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Narsa qayerda: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Bo'ri o'rmonda."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Gul o'tloqda o'sadi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "जानवर: im Wald",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "कोई चीज़ कहाँ है: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der)।",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "भेड़िया जंगल में है।"
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "फूल घास के मैदान में उगता है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الحيوانات: im Wald",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "أين يوجد الشيء: im Wald (in + dem)، am Meer (an + dem)، auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "الذئب في الغابة."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "الزهرة تنمو في المرج."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nature": {
+    "ru": {
+      "title": "Высоты",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Признак после ist не меняется. Два признака соединяем через und.",
+          "examples": [
+            {
+              "de": "Der Berg ist groß.",
+              "tr": "Гора большая."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Висоти",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Ознака після ist не змінюється. Дві ознаки поєднуємо через und.",
+          "examples": [
+            {
+              "de": "Der Berg ist groß.",
+              "tr": "Гора велика."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Heights",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "An adjective after ist doesn’t change. Join two adjectives with und.",
+          "examples": [
+            {
+              "de": "Der Berg ist groß.",
+              "tr": "The mountain is big."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Wysokości",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Cecha po ist się nie zmienia. Dwie cechy łączymy przez und.",
+          "examples": [
+            {
+              "de": "Der Berg ist groß.",
+              "tr": "Góra jest duża."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Las alturas",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "El adjetivo tras ist no cambia. Dos adjetivos se unen con und.",
+          "examples": [
+            {
+              "de": "Der Berg ist groß.",
+              "tr": "La montaña es grande."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les hauteurs",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "L’adjectif après ist ne change pas. On relie deux adjectifs avec und.",
+          "examples": [
+            {
+              "de": "Der Berg ist groß.",
+              "tr": "La montagne est grande."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Yükseklikler",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "ist’ten sonra sıfat değişmez. İki sıfat und ile bağlanır.",
+          "examples": [
+            {
+              "de": "Der Berg ist groß.",
+              "tr": "Dağ büyük."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Înălțimile",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Adjectivul după ist nu se schimbă. Două adjective le legăm cu und.",
+          "examples": [
+            {
+              "de": "Der Berg ist groß.",
+              "tr": "Muntele e mare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Balandliklar",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "ist dan keyin sifat o'zgarmaydi. Ikki sifat und bilan bog'lanadi.",
+          "examples": [
+            {
+              "de": "Der Berg ist groß.",
+              "tr": "Tog‘ katta."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "ऊँचाइयाँ",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "ist के बाद विशेषण नहीं बदलता। दो विशेषणों को und से जोड़ते हैं।",
+          "examples": [
+            {
+              "de": "Der Berg ist groß.",
+              "tr": "पहाड़ बड़ा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المرتفعات",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "الصفة بعد ist لا تتغير. ونربط صفتين بـ und.",
+          "examples": [
+            {
+              "de": "Der Berg ist groß.",
+              "tr": "الجبل كبير."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fauna": {
+    "ru": {
+      "title": "Горное озеро: der See",
+      "points": [
+        {
+          "title": "der See или die See",
+          "text": "der See значит озеро, die See значит море. Для моря чаще говорят das Meer.",
+          "examples": [
+            {
+              "de": "Der See ist sehr groß.",
+              "tr": "Озеро очень большое."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Гірське озеро: der See",
+      "points": [
+        {
+          "title": "der See чи die See",
+          "text": "der See означає озеро, die See означає море. Для моря частіше кажуть das Meer.",
+          "examples": [
+            {
+              "de": "Der See ist sehr groß.",
+              "tr": "Озеро дуже велике."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Mountain lake: der See",
+      "points": [
+        {
+          "title": "der See or die See",
+          "text": "der See means a lake, die See means the sea. For the sea people usually say das Meer.",
+          "examples": [
+            {
+              "de": "Der See ist sehr groß.",
+              "tr": "The lake is very big."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Górskie jezioro: der See",
+      "points": [
+        {
+          "title": "der See czy die See",
+          "text": "der See to jezioro, die See to morze. O morzu mówi się zwykle das Meer.",
+          "examples": [
+            {
+              "de": "Der See ist sehr groß.",
+              "tr": "Jezioro jest bardzo duże."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Lago de montaña: der See",
+      "points": [
+        {
+          "title": "der See o die See",
+          "text": "der See es un lago, die See es el mar. Para el mar se suele decir das Meer.",
+          "examples": [
+            {
+              "de": "Der See ist sehr groß.",
+              "tr": "El lago es muy grande."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Lac de montagne : der See",
+      "points": [
+        {
+          "title": "der See ou die See",
+          "text": "der See veut dire un lac, die See veut dire la mer. Pour la mer, on dit plutôt das Meer.",
+          "examples": [
+            {
+              "de": "Der See ist sehr groß.",
+              "tr": "Le lac est très grand."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Dağ gölü: der See",
+      "points": [
+        {
+          "title": "der See mi, die See mi",
+          "text": "der See göl, die See deniz demektir. Deniz için genelde das Meer denir.",
+          "examples": [
+            {
+              "de": "Der See ist sehr groß.",
+              "tr": "Göl çok büyük."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Lacul de munte: der See",
+      "points": [
+        {
+          "title": "der See sau die See",
+          "text": "der See înseamnă lac, die See înseamnă mare. Pentru mare se spune de obicei das Meer.",
+          "examples": [
+            {
+              "de": "Der See ist sehr groß.",
+              "tr": "Lacul e foarte mare."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Tog' ko'li: der See",
+      "points": [
+        {
+          "title": "der See yoki die See",
+          "text": "der See ko'l, die See dengiz degani. Dengiz uchun odatda das Meer deyiladi.",
+          "examples": [
+            {
+              "de": "Der See ist sehr groß.",
+              "tr": "Ko'l juda katta."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "पहाड़ी झील: der See",
+      "points": [
+        {
+          "title": "der See या die See",
+          "text": "der See मतलब झील, die See मतलब समुद्र। समुद्र के लिए आमतौर पर das Meer कहते हैं।",
+          "examples": [
+            {
+              "de": "Der See ist sehr groß.",
+              "tr": "झील बहुत बड़ी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "بحيرة الجبل: der See",
+      "points": [
+        {
+          "title": "der See أم die See",
+          "text": "der See تعني البحيرة، وdie See تعني البحر. وللبحر نقول غالباً das Meer.",
+          "examples": [
+            {
+              "de": "Der See ist sehr groß.",
+              "tr": "البحيرة كبيرة جداً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "weather": {
+    "ru": {
+      "title": "Стихии",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Признак после ist не меняется. Два признака соединяем через und.",
+          "examples": [
+            {
+              "de": "Der Wind ist kalt.",
+              "tr": "Ветер холодный."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Стихії",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Ознака після ist не змінюється. Дві ознаки поєднуємо через und.",
+          "examples": [
+            {
+              "de": "Der Wind ist kalt.",
+              "tr": "Вітер холодний."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The elements",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "An adjective after ist doesn’t change. Join two adjectives with und.",
+          "examples": [
+            {
+              "de": "Der Wind ist kalt.",
+              "tr": "The wind is cold."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Żywioły",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Cecha po ist się nie zmienia. Dwie cechy łączymy przez und.",
+          "examples": [
+            {
+              "de": "Der Wind ist kalt.",
+              "tr": "Wiatr jest zimny."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Los elementos",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "El adjetivo tras ist no cambia. Dos adjetivos se unen con und.",
+          "examples": [
+            {
+              "de": "Der Wind ist kalt.",
+              "tr": "El viento es frío."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les éléments",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "L’adjectif après ist ne change pas. On relie deux adjectifs avec und.",
+          "examples": [
+            {
+              "de": "Der Wind ist kalt.",
+              "tr": "Le vent est froid."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Doğa olayları",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "ist’ten sonra sıfat değişmez. İki sıfat und ile bağlanır.",
+          "examples": [
+            {
+              "de": "Der Wind ist kalt.",
+              "tr": "Rüzgâr soğuk."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Stihiile",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Adjectivul după ist nu se schimbă. Două adjective le legăm cu und.",
+          "examples": [
+            {
+              "de": "Der Wind ist kalt.",
+              "tr": "Vântul e rece."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Tabiat hodisalari",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "ist dan keyin sifat o'zgarmaydi. Ikki sifat und bilan bog'lanadi.",
+          "examples": [
+            {
+              "de": "Der Wind ist kalt.",
+              "tr": "Shamol sovuq."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "प्रकृति की शक्तियाँ",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "ist के बाद विशेषण नहीं बदलता। दो विशेषणों को und से जोड़ते हैं।",
+          "examples": [
+            {
+              "de": "Der Wind ist kalt.",
+              "tr": "हवा ठंडी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "عناصر الطبيعة",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "الصفة بعد ist لا تتغير. ونربط صفتين بـ und.",
+          "examples": [
+            {
+              "de": "Der Wind ist kalt.",
+              "tr": "الريح باردة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "winter": {
+    "ru": {
+      "title": "Зима: im Winter",
+      "points": [
+        {
+          "title": "im Winter",
+          "text": "Время года с im: im Winter (зимой), im Sommer (летом).",
+          "examples": [
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "Зимой холодно."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Зима: im Winter",
+      "points": [
+        {
+          "title": "im Winter",
+          "text": "Пора року з im: im Winter (узимку), im Sommer (улітку).",
+          "examples": [
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "Взимку холодно."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Winter: im Winter",
+      "points": [
+        {
+          "title": "im Winter",
+          "text": "Seasons take im: im Winter (in winter), im Sommer (in summer).",
+          "examples": [
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "It’s cold in winter."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Zima: im Winter",
+      "points": [
+        {
+          "title": "im Winter",
+          "text": "Pory roku z im: im Winter (zimą), im Sommer (latem).",
+          "examples": [
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "Zimą jest zimno."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Invierno: im Winter",
+      "points": [
+        {
+          "title": "im Winter",
+          "text": "Las estaciones con im: im Winter (en invierno), im Sommer (en verano).",
+          "examples": [
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "En invierno hace frío."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "L’hiver : im Winter",
+      "points": [
+        {
+          "title": "im Winter",
+          "text": "Les saisons avec im : im Winter (en hiver), im Sommer (en été).",
+          "examples": [
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "En hiver, il fait froid."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kış: im Winter",
+      "points": [
+        {
+          "title": "im Winter",
+          "text": "Mevsimler im ile: im Winter (kışın), im Sommer (yazın).",
+          "examples": [
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "Kışın hava soğuk."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Iarna: im Winter",
+      "points": [
+        {
+          "title": "im Winter",
+          "text": "Anotimpurile cu im: im Winter (iarna), im Sommer (vara).",
+          "examples": [
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "Iarna e frig."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qish: im Winter",
+      "points": [
+        {
+          "title": "im Winter",
+          "text": "Fasllar im bilan: im Winter (qishda), im Sommer (yozda).",
+          "examples": [
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "Qishda sovuq."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "सर्दी: im Winter",
+      "points": [
+        {
+          "title": "im Winter",
+          "text": "मौसम im के साथ: im Winter (सर्दियों में), im Sommer (गर्मियों में)।",
+          "examples": [
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "सर्दियों में ठंड होती है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الشتاء: im Winter",
+      "points": [
+        {
+          "title": "im Winter",
+          "text": "الفصول مع im: im Winter (في الشتاء)، im Sommer (في الصيف).",
+          "examples": [
+            {
+              "de": "Im Winter ist es kalt.",
+              "tr": "في الشتاء يكون الجو بارداً."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "night-sky": {
+    "ru": {
+      "title": "Ночное небо",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Признак после ist не меняется. Два признака соединяем через und.",
+          "examples": [
+            {
+              "de": "Die Nacht ist dunkel und kalt.",
+              "tr": "Ночь тёмная и холодная."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Нічне небо",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Ознака після ist не змінюється. Дві ознаки поєднуємо через und.",
+          "examples": [
+            {
+              "de": "Die Nacht ist dunkel und kalt.",
+              "tr": "Ніч темна й холодна."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The night sky",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "An adjective after ist doesn’t change. Join two adjectives with und.",
+          "examples": [
+            {
+              "de": "Die Nacht ist dunkel und kalt.",
+              "tr": "The night is dark and cold."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Nocne niebo",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Cecha po ist się nie zmienia. Dwie cechy łączymy przez und.",
+          "examples": [
+            {
+              "de": "Die Nacht ist dunkel und kalt.",
+              "tr": "Noc jest ciemna i zimna."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "El cielo nocturno",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "El adjetivo tras ist no cambia. Dos adjetivos se unen con und.",
+          "examples": [
+            {
+              "de": "Die Nacht ist dunkel und kalt.",
+              "tr": "La noche es oscura y fría."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le ciel de nuit",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "L’adjectif après ist ne change pas. On relie deux adjectifs avec und.",
+          "examples": [
+            {
+              "de": "Die Nacht ist dunkel und kalt.",
+              "tr": "La nuit est sombre et froide."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Gece göğü",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "ist’ten sonra sıfat değişmez. İki sıfat und ile bağlanır.",
+          "examples": [
+            {
+              "de": "Die Nacht ist dunkel und kalt.",
+              "tr": "Gece karanlık ve soğuk."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cerul nopții",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Adjectivul după ist nu se schimbă. Două adjective le legăm cu und.",
+          "examples": [
+            {
+              "de": "Die Nacht ist dunkel und kalt.",
+              "tr": "Noaptea e întunecată și rece."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Tungi osmon",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "ist dan keyin sifat o'zgarmaydi. Ikki sifat und bilan bog'lanadi.",
+          "examples": [
+            {
+              "de": "Die Nacht ist dunkel und kalt.",
+              "tr": "Tun qorong'i va sovuq."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "रात का आसमान",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "ist के बाद विशेषण नहीं बदलता। दो विशेषणों को und से जोड़ते हैं।",
+          "examples": [
+            {
+              "de": "Die Nacht ist dunkel und kalt.",
+              "tr": "रात अँधेरी और ठंडी है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "سماء الليل",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "الصفة بعد ist لا تتغير. ونربط صفتين بـ und.",
+          "examples": [
+            {
+              "de": "Die Nacht ist dunkel und kalt.",
+              "tr": "الليل مظلم وبارد."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nature-walk": {
+    "ru": {
+      "title": "Лиса и природа",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Где находится: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Волк в лесу."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Цветок растёт на лугу."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Лисиця і природа",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Де знаходиться: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Вовк у лісі."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Квітка росте на лузі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The fox and nature",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Where something is: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "The wolf is in the forest."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "The flower grows in the meadow."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Lis i przyroda",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Gdzie coś jest: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Wilk jest w lesie."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Kwiat rośnie na łące."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "El zorro y la naturaleza",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Dónde está algo: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "El lobo está en el bosque."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "La flor crece en el prado."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le renard et la nature",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Où se trouve quelque chose : im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Le loup est dans la forêt."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "La fleur pousse dans le pré."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tilki ve doğa",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Bir şey nerede: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Kurt ormanda."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Çiçek çayırda büyüyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Vulpea și natura",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Unde se află ceva: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Lupul e în pădure."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Floarea crește pe pajiște."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Tulki va tabiat",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Narsa qayerda: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Bo'ri o'rmonda."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Gul o'tloqda o'sadi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "लोमड़ी और प्रकृति",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "कोई चीज़ कहाँ है: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der)।",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "भेड़िया जंगल में है।"
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "फूल घास के मैदान में उगता है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الثعلب والطبيعة",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "أين يوجد الشيء: im Wald (in + dem)، am Meer (an + dem)، auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "الذئب في الغابة."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "الزهرة تنمو في المرج."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "mountains": {
+    "ru": {
+      "title": "Горы",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Признак после ist не меняется. Два признака соединяем через und.",
+          "examples": [
+            {
+              "de": "Der Berg ist hoch.",
+              "tr": "Гора высокая."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Гори",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Ознака після ist не змінюється. Дві ознаки поєднуємо через und.",
+          "examples": [
+            {
+              "de": "Der Berg ist hoch.",
+              "tr": "Гора висока."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Mountains",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "An adjective after ist doesn’t change. Join two adjectives with und.",
+          "examples": [
+            {
+              "de": "Der Berg ist hoch.",
+              "tr": "The mountain is high."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Góry",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Cecha po ist się nie zmienia. Dwie cechy łączymy przez und.",
+          "examples": [
+            {
+              "de": "Der Berg ist hoch.",
+              "tr": "Góra jest wysoka."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Las montañas",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "El adjetivo tras ist no cambia. Dos adjetivos se unen con und.",
+          "examples": [
+            {
+              "de": "Der Berg ist hoch.",
+              "tr": "La montaña es alta."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les montagnes",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "L’adjectif après ist ne change pas. On relie deux adjectifs avec und.",
+          "examples": [
+            {
+              "de": "Der Berg ist hoch.",
+              "tr": "La montagne est haute."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Dağlar",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "ist’ten sonra sıfat değişmez. İki sıfat und ile bağlanır.",
+          "examples": [
+            {
+              "de": "Der Berg ist hoch.",
+              "tr": "Dağ yüksek."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Munții",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Adjectivul după ist nu se schimbă. Două adjective le legăm cu und.",
+          "examples": [
+            {
+              "de": "Der Berg ist hoch.",
+              "tr": "Muntele e înalt."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Tog'lar",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "ist dan keyin sifat o'zgarmaydi. Ikki sifat und bilan bog'lanadi.",
+          "examples": [
+            {
+              "de": "Der Berg ist hoch.",
+              "tr": "Tog' baland."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "पहाड़",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "ist के बाद विशेषण नहीं बदलता। दो विशेषणों को und से जोड़ते हैं।",
+          "examples": [
+            {
+              "de": "Der Berg ist hoch.",
+              "tr": "पहाड़ ऊँचा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الجبال",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "الصفة بعد ist لا تتغير. ونربط صفتين بـ und.",
+          "examples": [
+            {
+              "de": "Der Berg ist hoch.",
+              "tr": "الجبل عالٍ."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fog": {
+    "ru": {
+      "title": "Туман и трава",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Признак после ist не меняется. Два признака соединяем через und.",
+          "examples": [
+            {
+              "de": "Der Nebel ist dicht.",
+              "tr": "Туман густой."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Туман і трава",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Ознака після ist не змінюється. Дві ознаки поєднуємо через und.",
+          "examples": [
+            {
+              "de": "Der Nebel ist dicht.",
+              "tr": "Туман густий."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Fog and grass",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "An adjective after ist doesn’t change. Join two adjectives with und.",
+          "examples": [
+            {
+              "de": "Der Nebel ist dicht.",
+              "tr": "The fog is thick."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Mgła i trawa",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Cecha po ist się nie zmienia. Dwie cechy łączymy przez und.",
+          "examples": [
+            {
+              "de": "Der Nebel ist dicht.",
+              "tr": "Mgła jest gęsta."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Niebla y hierba",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "El adjetivo tras ist no cambia. Dos adjetivos se unen con und.",
+          "examples": [
+            {
+              "de": "Der Nebel ist dicht.",
+              "tr": "La niebla es espesa."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Brouillard et herbe",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "L’adjectif après ist ne change pas. On relie deux adjectifs avec und.",
+          "examples": [
+            {
+              "de": "Der Nebel ist dicht.",
+              "tr": "Le brouillard est épais."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sis ve çimen",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "ist’ten sonra sıfat değişmez. İki sıfat und ile bağlanır.",
+          "examples": [
+            {
+              "de": "Der Nebel ist dicht.",
+              "tr": "Sis yoğun."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Ceață și iarbă",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Adjectivul după ist nu se schimbă. Două adjective le legăm cu und.",
+          "examples": [
+            {
+              "de": "Der Nebel ist dicht.",
+              "tr": "Ceața e deasă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Tuman va o't",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "ist dan keyin sifat o'zgarmaydi. Ikki sifat und bilan bog'lanadi.",
+          "examples": [
+            {
+              "de": "Der Nebel ist dicht.",
+              "tr": "Tuman quyuq."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "कोहरा और घास",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "ist के बाद विशेषण नहीं बदलता। दो विशेषणों को und से जोड़ते हैं।",
+          "examples": [
+            {
+              "de": "Der Nebel ist dicht.",
+              "tr": "कोहरा घना है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الضباب والعشب",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "الصفة بعد ist لا تتغير. ونربط صفتين بـ und.",
+          "examples": [
+            {
+              "de": "Der Nebel ist dicht.",
+              "tr": "الضباب كثيف."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "morning": {
+    "ru": {
+      "title": "Утро",
+      "points": [
+        {
+          "title": "Время первым, глагол вторым",
+          "text": "Если am Morgen стоит в начале, глагол идёт сразу за ним.",
+          "examples": [
+            {
+              "de": "Am Morgen liegt Nebel im Wald.",
+              "tr": "Утром в лесу туман."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Ранок",
+      "points": [
+        {
+          "title": "Час першим, дієслово другим",
+          "text": "Якщо am Morgen стоїть на початку, дієслово йде одразу за ним.",
+          "examples": [
+            {
+              "de": "Am Morgen liegt Nebel im Wald.",
+              "tr": "Уранці в лісі туман."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Morning",
+      "points": [
+        {
+          "title": "Time first, verb second",
+          "text": "If am Morgen comes first, the verb follows straight after.",
+          "examples": [
+            {
+              "de": "Am Morgen liegt Nebel im Wald.",
+              "tr": "In the morning there’s fog in the forest."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Poranek",
+      "points": [
+        {
+          "title": "Czas pierwszy, czasownik drugi",
+          "text": "Jeśli am Morgen jest na początku, czasownik idzie zaraz po nim.",
+          "examples": [
+            {
+              "de": "Am Morgen liegt Nebel im Wald.",
+              "tr": "Rano w lesie jest mgła."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "La mañana",
+      "points": [
+        {
+          "title": "Tiempo primero, verbo segundo",
+          "text": "Si am Morgen va al principio, el verbo va justo después.",
+          "examples": [
+            {
+              "de": "Am Morgen liegt Nebel im Wald.",
+              "tr": "Por la mañana hay niebla en el bosque."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le matin",
+      "points": [
+        {
+          "title": "Le temps d’abord, le verbe ensuite",
+          "text": "Si am Morgen est en premier, le verbe suit tout de suite.",
+          "examples": [
+            {
+              "de": "Am Morgen liegt Nebel im Wald.",
+              "tr": "Le matin, il y a du brouillard dans la forêt."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sabah",
+      "points": [
+        {
+          "title": "Önce zaman, sonra fiil",
+          "text": "am Morgen başta olursa fiil hemen ardından gelir.",
+          "examples": [
+            {
+              "de": "Am Morgen liegt Nebel im Wald.",
+              "tr": "Sabah ormanda sis var."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Dimineața",
+      "points": [
+        {
+          "title": "Timpul primul, verbul al doilea",
+          "text": "Dacă am Morgen e la început, verbul vine imediat după.",
+          "examples": [
+            {
+              "de": "Am Morgen liegt Nebel im Wald.",
+              "tr": "Dimineața e ceață în pădure."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Tong",
+      "points": [
+        {
+          "title": "Avval vaqt, keyin fe'l",
+          "text": "am Morgen boshida tursa, fe'l darhol undan keyin keladi.",
+          "examples": [
+            {
+              "de": "Am Morgen liegt Nebel im Wald.",
+              "tr": "Ertalab o'rmonda tuman bor."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "सुबह",
+      "points": [
+        {
+          "title": "पहले समय, फिर क्रिया",
+          "text": "अगर am Morgen पहले आए, तो क्रिया तुरंत उसके बाद।",
+          "examples": [
+            {
+              "de": "Am Morgen liegt Nebel im Wald.",
+              "tr": "सुबह जंगल में कोहरा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الصباح",
+      "points": [
+        {
+          "title": "الزمن أولاً والفعل ثانياً",
+          "text": "إذا جاءت am Morgen أولاً يأتي الفعل بعدها مباشرة.",
+          "examples": [
+            {
+              "de": "Am Morgen liegt Nebel im Wald.",
+              "tr": "في الصباح يوجد ضباب في الغابة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "sea": {
+    "ru": {
+      "title": "Берег: am Meer",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Где находится: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Волк в лесу."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Цветок растёт на лугу."
+            }
+          ]
+        },
+        {
+          "title": "Новых правил нет",
+          "text": "Про погоду у моря тоже через es: Am Meer ist es windig.",
+          "examples": [
+            {
+              "de": "Am Meer ist es windig.",
+              "tr": "У моря ветрено."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Берег: am Meer",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Де знаходиться: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Вовк у лісі."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Квітка росте на лузі."
+            }
+          ]
+        },
+        {
+          "title": "Нових правил немає",
+          "text": "Про погоду біля моря теж через es: Am Meer ist es windig.",
+          "examples": [
+            {
+              "de": "Am Meer ist es windig.",
+              "tr": "Біля моря вітряно."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The coast: am Meer",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Where something is: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "The wolf is in the forest."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "The flower grows in the meadow."
+            }
+          ]
+        },
+        {
+          "title": "No new rules",
+          "text": "Weather at the sea also uses es: Am Meer ist es windig.",
+          "examples": [
+            {
+              "de": "Am Meer ist es windig.",
+              "tr": "It’s windy by the sea."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Wybrzeże: am Meer",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Gdzie coś jest: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Wilk jest w lesie."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Kwiat rośnie na łące."
+            }
+          ]
+        },
+        {
+          "title": "Bez nowych reguł",
+          "text": "O pogodzie nad morzem też przez es: Am Meer ist es windig.",
+          "examples": [
+            {
+              "de": "Am Meer ist es windig.",
+              "tr": "Nad morzem wieje."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "La costa: am Meer",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Dónde está algo: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "El lobo está en el bosque."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "La flor crece en el prado."
+            }
+          ]
+        },
+        {
+          "title": "Sin reglas nuevas",
+          "text": "El tiempo en el mar también con es: Am Meer ist es windig.",
+          "examples": [
+            {
+              "de": "Am Meer ist es windig.",
+              "tr": "En el mar hace viento."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "La côte : am Meer",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Où se trouve quelque chose : im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Le loup est dans la forêt."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "La fleur pousse dans le pré."
+            }
+          ]
+        },
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "La météo au bord de la mer aussi avec es : Am Meer ist es windig.",
+          "examples": [
+            {
+              "de": "Am Meer ist es windig.",
+              "tr": "Au bord de la mer, il y a du vent."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kıyı: am Meer",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Bir şey nerede: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Kurt ormanda."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Çiçek çayırda büyüyor."
+            }
+          ]
+        },
+        {
+          "title": "Yeni kural yok",
+          "text": "Denizdeki hava da es ile: Am Meer ist es windig.",
+          "examples": [
+            {
+              "de": "Am Meer ist es windig.",
+              "tr": "Deniz kenarında rüzgâr var."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Coasta: am Meer",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Unde se află ceva: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Lupul e în pădure."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Floarea crește pe pajiște."
+            }
+          ]
+        },
+        {
+          "title": "Fără reguli noi",
+          "text": "Vremea la mare tot cu es: Am Meer ist es windig.",
+          "examples": [
+            {
+              "de": "Am Meer ist es windig.",
+              "tr": "La mare e vânt."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Qirg'oq: am Meer",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Narsa qayerda: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Bo'ri o'rmonda."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Gul o'tloqda o'sadi."
+            }
+          ]
+        },
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "Dengizdagi ob-havo ham es bilan: Am Meer ist es windig.",
+          "examples": [
+            {
+              "de": "Am Meer ist es windig.",
+              "tr": "Dengiz bo'yida shamol."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "तट: am Meer",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "कोई चीज़ कहाँ है: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der)।",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "भेड़िया जंगल में है।"
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "फूल घास के मैदान में उगता है।"
+            }
+          ]
+        },
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "समुद्र पर मौसम भी es से: Am Meer ist es windig।",
+          "examples": [
+            {
+              "de": "Am Meer ist es windig.",
+              "tr": "समुद्र पर हवा चल रही है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الساحل: am Meer",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "أين يوجد الشيء: im Wald (in + dem)، am Meer (an + dem)، auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "الذئب في الغابة."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "الزهرة تنمو في المرج."
+            }
+          ]
+        },
+        {
+          "title": "لا قواعد جديدة",
+          "text": "الطقس عند البحر أيضاً مع es: Am Meer ist es windig.",
+          "examples": [
+            {
+              "de": "Am Meer ist es windig.",
+              "tr": "الجو عاصف عند البحر."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "storm": {
+    "ru": {
+      "title": "Гроза",
+      "points": [
+        {
+          "title": "Новых правил нет",
+          "text": "Признак после ist не меняется. Два признака соединяем через und.",
+          "examples": [
+            {
+              "de": "Der Himmel ist schwarz.",
+              "tr": "Небо чёрное."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Гроза",
+      "points": [
+        {
+          "title": "Нових правил немає",
+          "text": "Ознака після ist не змінюється. Дві ознаки поєднуємо через und.",
+          "examples": [
+            {
+              "de": "Der Himmel ist schwarz.",
+              "tr": "Небо чорне."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Thunderstorm",
+      "points": [
+        {
+          "title": "No new rules",
+          "text": "An adjective after ist doesn’t change. Join two adjectives with und.",
+          "examples": [
+            {
+              "de": "Der Himmel ist schwarz.",
+              "tr": "The sky is black."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Burza",
+      "points": [
+        {
+          "title": "Bez nowych reguł",
+          "text": "Cecha po ist się nie zmienia. Dwie cechy łączymy przez und.",
+          "examples": [
+            {
+              "de": "Der Himmel ist schwarz.",
+              "tr": "Niebo jest czarne."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Tormenta",
+      "points": [
+        {
+          "title": "Sin reglas nuevas",
+          "text": "El adjetivo tras ist no cambia. Dos adjetivos se unen con und.",
+          "examples": [
+            {
+              "de": "Der Himmel ist schwarz.",
+              "tr": "El cielo está negro."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "L’orage",
+      "points": [
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "L’adjectif après ist ne change pas. On relie deux adjectifs avec und.",
+          "examples": [
+            {
+              "de": "Der Himmel ist schwarz.",
+              "tr": "Le ciel est noir."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Fırtına",
+      "points": [
+        {
+          "title": "Yeni kural yok",
+          "text": "ist’ten sonra sıfat değişmez. İki sıfat und ile bağlanır.",
+          "examples": [
+            {
+              "de": "Der Himmel ist schwarz.",
+              "tr": "Gökyüzü kara."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Furtuna",
+      "points": [
+        {
+          "title": "Fără reguli noi",
+          "text": "Adjectivul după ist nu se schimbă. Două adjective le legăm cu und.",
+          "examples": [
+            {
+              "de": "Der Himmel ist schwarz.",
+              "tr": "Cerul e negru."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Momaqaldiroq",
+      "points": [
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "ist dan keyin sifat o'zgarmaydi. Ikki sifat und bilan bog'lanadi.",
+          "examples": [
+            {
+              "de": "Der Himmel ist schwarz.",
+              "tr": "Osmon qora."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "आँधी-तूफ़ान",
+      "points": [
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "ist के बाद विशेषण नहीं बदलता। दो विशेषणों को und से जोड़ते हैं।",
+          "examples": [
+            {
+              "de": "Der Himmel ist schwarz.",
+              "tr": "आसमान काला है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "العاصفة الرعدية",
+      "points": [
+        {
+          "title": "لا قواعد جديدة",
+          "text": "الصفة بعد ist لا تتغير. ونربط صفتين بـ und.",
+          "examples": [
+            {
+              "de": "Der Himmel ist schwarz.",
+              "tr": "السماء سوداء."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meadow": {
+    "ru": {
+      "title": "Поляна: auf der Wiese",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Где находится: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Волк в лесу."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Цветок растёт на лугу."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Галявина: auf der Wiese",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Де знаходиться: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Вовк у лісі."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Квітка росте на лузі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The meadow: auf der Wiese",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Where something is: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "The wolf is in the forest."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "The flower grows in the meadow."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Polana: auf der Wiese",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Gdzie coś jest: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Wilk jest w lesie."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Kwiat rośnie na łące."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "El prado: auf der Wiese",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Dónde está algo: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "El lobo está en el bosque."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "La flor crece en el prado."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "La prairie : auf der Wiese",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Où se trouve quelque chose : im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Le loup est dans la forêt."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "La fleur pousse dans le pré."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Çayır: auf der Wiese",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Bir şey nerede: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Kurt ormanda."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Çiçek çayırda büyüyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Pajiștea: auf der Wiese",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Unde se află ceva: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Lupul e în pădure."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Floarea crește pe pajiște."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "O'tloq: auf der Wiese",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Narsa qayerda: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Bo'ri o'rmonda."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Gul o'tloqda o'sadi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "घास का मैदान: auf der Wiese",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "कोई चीज़ कहाँ है: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der)।",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "भेड़िया जंगल में है।"
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "फूल घास के मैदान में उगता है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "المرج: auf der Wiese",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "أين يوجد الشيء: im Wald (in + dem)، am Meer (an + dem)، auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "الذئب في الغابة."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "الزهرة تنمو في المرج."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nature-final": {
+    "ru": {
+      "title": "Живая природа: повторение",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Где находится: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Волк в лесу."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Цветок растёт на лугу."
+            }
+          ]
+        },
+        {
+          "title": "Новых правил нет",
+          "text": "Признак после ist не меняется. Два признака соединяем через und.",
+          "examples": [
+            {
+              "de": "Die Wiese ist grün.",
+              "tr": "Луг зелёный."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Жива природа: повторення",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Де знаходиться: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Вовк у лісі."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Квітка росте на лузі."
+            }
+          ]
+        },
+        {
+          "title": "Нових правил немає",
+          "text": "Ознака після ist не змінюється. Дві ознаки поєднуємо через und.",
+          "examples": [
+            {
+              "de": "Die Wiese ist grün.",
+              "tr": "Луг зелений."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Living nature: review",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Where something is: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "The wolf is in the forest."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "The flower grows in the meadow."
+            }
+          ]
+        },
+        {
+          "title": "No new rules",
+          "text": "An adjective after ist doesn’t change. Join two adjectives with und.",
+          "examples": [
+            {
+              "de": "Die Wiese ist grün.",
+              "tr": "The meadow is green."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Żywa przyroda: powtórka",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Gdzie coś jest: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Wilk jest w lesie."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Kwiat rośnie na łące."
+            }
+          ]
+        },
+        {
+          "title": "Bez nowych reguł",
+          "text": "Cecha po ist się nie zmienia. Dwie cechy łączymy przez und.",
+          "examples": [
+            {
+              "de": "Die Wiese ist grün.",
+              "tr": "Łąka jest zielona."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Naturaleza viva: repaso",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Dónde está algo: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "El lobo está en el bosque."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "La flor crece en el prado."
+            }
+          ]
+        },
+        {
+          "title": "Sin reglas nuevas",
+          "text": "El adjetivo tras ist no cambia. Dos adjetivos se unen con und.",
+          "examples": [
+            {
+              "de": "Die Wiese ist grün.",
+              "tr": "El prado es verde."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Nature vivante : révision",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Où se trouve quelque chose : im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Le loup est dans la forêt."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "La fleur pousse dans le pré."
+            }
+          ]
+        },
+        {
+          "title": "Pas de nouvelle règle",
+          "text": "L’adjectif après ist ne change pas. On relie deux adjectifs avec und.",
+          "examples": [
+            {
+              "de": "Die Wiese ist grün.",
+              "tr": "La prairie est verte."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Canlı doğa: tekrar",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Bir şey nerede: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Kurt ormanda."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Çiçek çayırda büyüyor."
+            }
+          ]
+        },
+        {
+          "title": "Yeni kural yok",
+          "text": "ist’ten sonra sıfat değişmez. İki sıfat und ile bağlanır.",
+          "examples": [
+            {
+              "de": "Die Wiese ist grün.",
+              "tr": "Çayır yeşil."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Natura vie: recapitulare",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Unde se află ceva: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Lupul e în pădure."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Floarea crește pe pajiște."
+            }
+          ]
+        },
+        {
+          "title": "Fără reguli noi",
+          "text": "Adjectivul după ist nu se schimbă. Două adjective le legăm cu und.",
+          "examples": [
+            {
+              "de": "Die Wiese ist grün.",
+              "tr": "Pajiștea e verde."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Jonli tabiat: takrorlash",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "Narsa qayerda: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "Bo'ri o'rmonda."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "Gul o'tloqda o'sadi."
+            }
+          ]
+        },
+        {
+          "title": "Yangi qoida yo'q",
+          "text": "ist dan keyin sifat o'zgarmaydi. Ikki sifat und bilan bog'lanadi.",
+          "examples": [
+            {
+              "de": "Die Wiese ist grün.",
+              "tr": "O'tloq yashil."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "जीवित प्रकृति: दोहराव",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "कोई चीज़ कहाँ है: im Wald (in + dem), am Meer (an + dem), auf der Wiese (auf + der)।",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "भेड़िया जंगल में है।"
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "फूल घास के मैदान में उगता है।"
+            }
+          ]
+        },
+        {
+          "title": "कोई नया नियम नहीं",
+          "text": "ist के बाद विशेषण नहीं बदलता। दो विशेषणों को und से जोड़ते हैं।",
+          "examples": [
+            {
+              "de": "Die Wiese ist grün.",
+              "tr": "मैदान हरा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الطبيعة الحية: مراجعة",
+      "points": [
+        {
+          "title": "im, am, auf der",
+          "text": "أين يوجد الشيء: im Wald (in + dem)، am Meer (an + dem)، auf der Wiese (auf + der).",
+          "examples": [
+            {
+              "de": "Der Wolf ist im Wald.",
+              "tr": "الذئب في الغابة."
+            },
+            {
+              "de": "Die Blume wächst auf der Wiese.",
+              "tr": "الزهرة تنمو في المرج."
+            }
+          ]
+        },
+        {
+          "title": "لا قواعد جديدة",
+          "text": "الصفة بعد ist لا تتغير. ونربط صفتين بـ und.",
+          "examples": [
+            {
+              "de": "Die Wiese ist grün.",
+              "tr": "المرج أخضر."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

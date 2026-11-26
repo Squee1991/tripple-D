@@ -1,0 +1,5191 @@
+{
+  "time-one": {
+    "ru": {
+      "title": "Знакомство и общение",
+      "points": [
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я соберу чемодан."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Прошедшее в разговоре: haben на втором месте, а глагол в форме ge...t уходит в конец: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Я играл в футбол."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Мы учили немецкий."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Знайомство і спілкування",
+      "points": [
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я зберу валізу."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Минуле в розмові: haben на другому місці, а дієслово у формі ge...t іде в кінець: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Я грав у футбол."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Ми вчили німецьку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Meeting and talking",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "I’ll pack a suitcase."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Spoken past: haben in second place, and the verb in its ge...t form at the end: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "I played football."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "We learned German."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Poznawanie się i rozmowa",
+      "points": [
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Spakuję walizkę."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Przeszłość w mowie: haben na drugim miejscu, a czasownik w formie ge...t na końcu: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Grałem w piłkę nożną."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Uczyliśmy się niemieckiego."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Conocerse y hablar",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Haré la maleta."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "El pasado hablado: haben en segundo lugar y el verbo en forma ge...t al final: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Jugué al fútbol."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Aprendimos alemán."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Rencontres et échanges",
+      "points": [
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Je vais faire ma valise."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt : haben + ge...t",
+          "text": "Le passé à l’oral : haben en deuxième position, et le verbe en ge...t à la fin : spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "J’ai joué au foot."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Nous avons appris l’allemand."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tanışma ve sohbet",
+      "points": [
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Bavul hazırlayacağım."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Konuşmada geçmiş: haben ikinci sırada, fiil ge...t biçiminde sonda: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Futbol oynadım."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Almanca öğrendik."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cunoaștere și comunicare",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Îmi voi face bagajul."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Trecutul vorbit: haben pe locul doi, iar verbul în forma ge...t la final: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Am jucat fotbal."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Am învățat germana."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Tanishuv va muloqot",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Chamadon yig'aman."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Og'zaki o'tgan zamon: haben ikkinchi o'rinda, fe'l ge...t shaklida oxirida: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Men futbol o'ynadim."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Biz nemis tilini o'rgandik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "मिलना और बातचीत",
+      "points": [
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "मैं सूटकेस पैक करूँगा।"
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "बोलचाल का भूतकाल: haben दूसरे स्थान पर, और क्रिया ge...t रूप में अंत में: spielen → gespielt।",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "मैंने फ़ुटबॉल खेला।"
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "हमने जर्मन सीखी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "التعارف والتواصل",
+      "points": [
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "سأحزم حقيبة."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "الماضي في الكلام: haben في المكان الثاني، والفعل بصيغة ge...t في الآخر: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "لعبت كرة القدم."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "تعلمنا الألمانية."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-two": {
+    "ru": {
+      "title": "Futur, Perfekt, падежи",
+      "points": [
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я соберу чемодан."
+            }
+          ]
+        },
+        {
+          "title": "sein для движения",
+          "text": "Если человек перемещается (gehen, fahren, kommen) или меняет состояние (aufwachen), вместо haben ставим sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходил в кино."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Мы поехали в аэропорт."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Futur, Perfekt, відмінки",
+      "points": [
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я зберу валізу."
+            }
+          ]
+        },
+        {
+          "title": "sein для руху",
+          "text": "Якщо людина переміщується (gehen, fahren, kommen) або змінює стан (aufwachen), замість haben ставимо sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходив у кіно."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Ми поїхали в аеропорт."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Futur, Perfekt, cases",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "I’ll pack a suitcase."
+            }
+          ]
+        },
+        {
+          "title": "sein for movement",
+          "text": "If you move from place to place (gehen, fahren, kommen) or change state (aufwachen), use sein instead of haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "I went to the cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "We drove to the airport."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Futur, Perfekt, przypadki",
+      "points": [
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Spakuję walizkę."
+            }
+          ]
+        },
+        {
+          "title": "sein przy ruchu",
+          "text": "Jeśli ktoś się przemieszcza (gehen, fahren, kommen) albo zmienia stan (aufwachen), zamiast haben stawiamy sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Poszedłem do kina."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Pojechaliśmy na lotnisko."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Futur, Perfekt, casos",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Haré la maleta."
+            }
+          ]
+        },
+        {
+          "title": "sein para el movimiento",
+          "text": "Si alguien se desplaza (gehen, fahren, kommen) o cambia de estado (aufwachen), se usa sein en lugar de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Fui al cine."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Fuimos al aeropuerto."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Futur, Perfekt, cas",
+      "points": [
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Je vais faire ma valise."
+            }
+          ]
+        },
+        {
+          "title": "sein pour le mouvement",
+          "text": "Si on se déplace (gehen, fahren, kommen) ou si on change d’état (aufwachen), on met sein au lieu de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Je suis allé au cinéma."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Nous sommes allés à l’aéroport."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Futur, Perfekt, hâller",
+      "points": [
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Bavul hazırlayacağım."
+            }
+          ]
+        },
+        {
+          "title": "Hareket için sein",
+          "text": "Biri yer değiştiriyorsa (gehen, fahren, kommen) ya da durum değiştiriyorsa (aufwachen), haben yerine sein kullanılır.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Sinemaya gittim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Havalimanına gittik."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Futur, Perfekt, cazuri",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Îmi voi face bagajul."
+            }
+          ]
+        },
+        {
+          "title": "sein pentru mișcare",
+          "text": "Dacă cineva se deplasează (gehen, fahren, kommen) sau își schimbă starea (aufwachen), în loc de haben punem sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Am mers la cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Am mers la aeroport."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Futur, Perfekt, kelishiklar",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Chamadon yig'aman."
+            }
+          ]
+        },
+        {
+          "title": "Harakat uchun sein",
+          "text": "Odam bir joydan boshqasiga o'tsa (gehen, fahren, kommen) yoki holatini o'zgartirsa (aufwachen), haben o'rniga sein qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Men kinoga bordim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Biz aeroportga bordik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "Futur, Perfekt, कारक",
+      "points": [
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "मैं सूटकेस पैक करूँगा।"
+            }
+          ]
+        },
+        {
+          "title": "गति के लिए sein",
+          "text": "अगर कोई जगह बदलता है (gehen, fahren, kommen) या उसकी हालत बदलती है (aufwachen), तो haben की जगह sein।",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "मैं सिनेमा गया।"
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "हम हवाई अड्डे गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "Futur وPerfekt والحالات",
+      "points": [
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "سأحزم حقيبة."
+            }
+          ]
+        },
+        {
+          "title": "sein للحركة",
+          "text": "إذا تنقل الشخص من مكان إلى آخر (gehen، fahren، kommen) أو تغيرت حالته (aufwachen) نستعمل sein بدل haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "ذهبت إلى السينما."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "ذهبنا إلى المطار."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-three": {
+    "ru": {
+      "title": "День в городе",
+      "points": [
+        {
+          "title": "Wohin? или Wo?",
+          "text": "in, an, auf, hinter, neben и другие: если движение «куда?», то Akkusativ (auf den Tisch). Если место «где?», то Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Я ставлю вазу на стол."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Ваза стоит на столе."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Прошедшее в разговоре: haben на втором месте, а глагол в форме ge...t уходит в конец: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Я играл в футбол."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Мы учили немецкий."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "День у місті",
+      "points": [
+        {
+          "title": "Wohin? чи Wo?",
+          "text": "in, an, auf, hinter, neben та інші: якщо рух «куди?», то Akkusativ (auf den Tisch). Якщо місце «де?», то Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Я ставлю вазу на стіл."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Ваза стоїть на столі."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Минуле в розмові: haben на другому місці, а дієслово у формі ge...t іде в кінець: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Я грав у футбол."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Ми вчили німецьку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "A day in town",
+      "points": [
+        {
+          "title": "Wohin? or Wo?",
+          "text": "in, an, auf, hinter, neben and others: movement \"where to?\" takes the accusative (auf den Tisch). Location \"where?\" takes the dative (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "I put the vase on the table."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "The vase is on the table."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Spoken past: haben in second place, and the verb in its ge...t form at the end: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "I played football."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "We learned German."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Dzień w mieście",
+      "points": [
+        {
+          "title": "Wohin? czy Wo?",
+          "text": "in, an, auf, hinter, neben i inne: ruch „dokąd?” to Akkusativ (auf den Tisch). Miejsce „gdzie?” to Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Stawiam wazon na stół."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Wazon stoi na stole."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Przeszłość w mowie: haben na drugim miejscu, a czasownik w formie ge...t na końcu: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Grałem w piłkę nożną."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Uczyliśmy się niemieckiego."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Un día en la ciudad",
+      "points": [
+        {
+          "title": "¿Wohin? o Wo?",
+          "text": "in, an, auf, hinter, neben y otras: movimiento \"¿adónde?\" lleva acusativo (auf den Tisch). Lugar \"¿dónde?\" lleva dativo (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Pongo el jarrón en la mesa."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "El jarrón está en la mesa."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "El pasado hablado: haben en segundo lugar y el verbo en forma ge...t al final: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Jugué al fútbol."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Aprendimos alemán."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Une journée en ville",
+      "points": [
+        {
+          "title": "Wohin ? ou Wo ?",
+          "text": "in, an, auf, hinter, neben et d’autres : un mouvement « vers où ? » prend l’accusatif (auf den Tisch). Un lieu « où ? » prend le datif (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Je pose le vase sur la table."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Le vase est sur la table."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt : haben + ge...t",
+          "text": "Le passé à l’oral : haben en deuxième position, et le verbe en ge...t à la fin : spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "J’ai joué au foot."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Nous avons appris l’allemand."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Şehirde bir gün",
+      "points": [
+        {
+          "title": "Wohin? mi, Wo? mu",
+          "text": "in, an, auf, hinter, neben ve diğerleri: \"nereye?\" hareketi Akkusativ (auf den Tisch), \"nerede?\" yeri Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Vazoyu masaya koyuyorum."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Vazo masada duruyor."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Konuşmada geçmiş: haben ikinci sırada, fiil ge...t biçiminde sonda: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Futbol oynadım."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Almanca öğrendik."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "O zi în oraș",
+      "points": [
+        {
+          "title": "Wohin? sau Wo?",
+          "text": "in, an, auf, hinter, neben și altele: mișcarea „încotro?” cere acuzativ (auf den Tisch). Locul „unde?” cere dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Pun vaza pe masă."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Vaza stă pe masă."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Trecutul vorbit: haben pe locul doi, iar verbul în forma ge...t la final: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Am jucat fotbal."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Am învățat germana."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Shahardagi bir kun",
+      "points": [
+        {
+          "title": "Wohin? yoki Wo?",
+          "text": "in, an, auf, hinter, neben va boshqalar: \"qayerga?\" harakat Akkusativ (auf den Tisch), \"qayerda?\" joy Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Vazani stolga qo'yaman."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Vaza stol ustida turibdi."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Og'zaki o'tgan zamon: haben ikkinchi o'rinda, fe'l ge...t shaklida oxirida: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Men futbol o'ynadim."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Biz nemis tilini o'rgandik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "शहर में एक दिन",
+      "points": [
+        {
+          "title": "Wohin? या Wo?",
+          "text": "in, an, auf, hinter, neben आदि: \"किधर?\" गति हो तो Akkusativ (auf den Tisch), \"कहाँ?\" जगह हो तो Dativ (auf dem Tisch)।",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "मैं फूलदान मेज़ पर रखता हूँ।"
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "फूलदान मेज़ पर रखा है।"
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "बोलचाल का भूतकाल: haben दूसरे स्थान पर, और क्रिया ge...t रूप में अंत में: spielen → gespielt।",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "मैंने फ़ुटबॉल खेला।"
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "हमने जर्मन सीखी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "يوم في المدينة",
+      "points": [
+        {
+          "title": "Wohin؟ أم Wo؟",
+          "text": "in وan وauf وhinter وneben وغيرها: الحركة \"إلى أين؟\" تأخذ المفعول (auf den Tisch)، والمكان \"أين؟\" يأخذ الجر (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "أضع المزهرية على الطاولة."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "المزهرية على الطاولة."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "الماضي في الكلام: haben في المكان الثاني، والفعل بصيغة ge...t في الآخر: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "لعبت كرة القدم."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "تعلمنا الألمانية."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-four": {
+    "ru": {
+      "title": "Работа и карьера",
+      "points": [
+        {
+          "title": "sein для движения",
+          "text": "Если человек перемещается (gehen, fahren, kommen) или меняет состояние (aufwachen), вместо haben ставим sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходил в кино."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Мы поехали в аэропорт."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: глагол в конец",
+          "text": "После weil (потому что), dass (что), wenn (если, когда), ob (ли) глагол уходит в самый конец. Перед ними ставим запятую.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Я учу, потому что это важно."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Он говорит, что придёт."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Робота й кар’єра",
+      "points": [
+        {
+          "title": "sein для руху",
+          "text": "Якщо людина переміщується (gehen, fahren, kommen) або змінює стан (aufwachen), замість haben ставимо sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходив у кіно."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Ми поїхали в аеропорт."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: дієслово в кінець",
+          "text": "Після weil (бо), dass (що), wenn (якщо, коли), ob (чи) дієслово йде в самий кінець. Перед ними ставимо кому.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Я вчу, бо це важливо."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Він каже, що прийде."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Work and career",
+      "points": [
+        {
+          "title": "sein for movement",
+          "text": "If you move from place to place (gehen, fahren, kommen) or change state (aufwachen), use sein instead of haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "I went to the cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "We drove to the airport."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: verb to the end",
+          "text": "After weil (because), dass (that), wenn (if, when), ob (whether) the verb goes to the very end. Put a comma before them.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "I study because it’s important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "He says that he’s coming."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Praca i kariera",
+      "points": [
+        {
+          "title": "sein przy ruchu",
+          "text": "Jeśli ktoś się przemieszcza (gehen, fahren, kommen) albo zmienia stan (aufwachen), zamiast haben stawiamy sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Poszedłem do kina."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Pojechaliśmy na lotnisko."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: czasownik na koniec",
+          "text": "Po weil (bo), dass (że), wenn (jeśli, kiedy), ob (czy) czasownik idzie na sam koniec. Przed nimi stawiamy przecinek.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Uczę się, bo to ważne."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Mówi, że przyjdzie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Trabajo y carrera",
+      "points": [
+        {
+          "title": "sein para el movimiento",
+          "text": "Si alguien se desplaza (gehen, fahren, kommen) o cambia de estado (aufwachen), se usa sein en lugar de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Fui al cine."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Fuimos al aeropuerto."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: verbo al final",
+          "text": "Después de weil (porque), dass (que), wenn (si, cuando), ob (si) el verbo va al final. Antes va una coma.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Estudio porque es importante."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Dice que viene."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Travail et carrière",
+      "points": [
+        {
+          "title": "sein pour le mouvement",
+          "text": "Si on se déplace (gehen, fahren, kommen) ou si on change d’état (aufwachen), on met sein au lieu de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Je suis allé au cinéma."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Nous sommes allés à l’aéroport."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob : verbe à la fin",
+          "text": "Après weil (parce que), dass (que), wenn (si, quand), ob (si) le verbe va tout à la fin. On met une virgule avant.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "J’apprends parce que c’est important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Il dit qu’il vient."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "İş ve kariyer",
+      "points": [
+        {
+          "title": "Hareket için sein",
+          "text": "Biri yer değiştiriyorsa (gehen, fahren, kommen) ya da durum değiştiriyorsa (aufwachen), haben yerine sein kullanılır.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Sinemaya gittim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Havalimanına gittik."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: fiil sona",
+          "text": "weil (çünkü), dass (ki), wenn (eğer, -dığında), ob (-ip -mediği) sonrası fiil en sona gider. Öncesine virgül konur.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Öğreniyorum çünkü önemli."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Geleceğini söylüyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Muncă și carieră",
+      "points": [
+        {
+          "title": "sein pentru mișcare",
+          "text": "Dacă cineva se deplasează (gehen, fahren, kommen) sau își schimbă starea (aufwachen), în loc de haben punem sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Am mers la cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Am mers la aeroport."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: verbul la final",
+          "text": "După weil (pentru că), dass (că), wenn (dacă, când), ob (dacă) verbul merge la final. Înaintea lor se pune virgulă.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Învăț pentru că e important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Spune că vine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ish va martaba",
+      "points": [
+        {
+          "title": "Harakat uchun sein",
+          "text": "Odam bir joydan boshqasiga o'tsa (gehen, fahren, kommen) yoki holatini o'zgartirsa (aufwachen), haben o'rniga sein qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Men kinoga bordim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Biz aeroportga bordik."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: fe'l oxiriga",
+          "text": "weil (chunki), dass (ki), wenn (agar, qachonki), ob (-mi yo'qmi) dan keyin fe'l eng oxiriga o'tadi. Ulardan oldin vergul qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "O'qiyman, chunki bu muhim."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "U kelishini aytyapti."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "काम और करियर",
+      "points": [
+        {
+          "title": "गति के लिए sein",
+          "text": "अगर कोई जगह बदलता है (gehen, fahren, kommen) या उसकी हालत बदलती है (aufwachen), तो haben की जगह sein।",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "मैं सिनेमा गया।"
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "हम हवाई अड्डे गए।"
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: क्रिया अंत में",
+          "text": "weil (क्योंकि), dass (कि), wenn (अगर, जब), ob (कि ... या नहीं) के बाद क्रिया बिल्कुल अंत में जाती है। इनसे पहले कॉमा।",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "मैं सीखता हूँ क्योंकि यह ज़रूरी है।"
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "वह कहता है कि वह आएगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "العمل والمهنة",
+      "points": [
+        {
+          "title": "sein للحركة",
+          "text": "إذا تنقل الشخص من مكان إلى آخر (gehen، fahren، kommen) أو تغيرت حالته (aufwachen) نستعمل sein بدل haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "ذهبت إلى السينما."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "ذهبنا إلى المطار."
+            }
+          ]
+        },
+        {
+          "title": "weil وdass وwenn وob: الفعل في الآخر",
+          "text": "بعد weil (لأن) وdass (أنّ) وwenn (إذا، عندما) وob (هل) يذهب الفعل إلى آخر الجملة. ونضع قبلها فاصلة.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "أتعلم لأن ذلك مهم."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "يقول إنه سيأتي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-five": {
+    "ru": {
+      "title": "Время отпуска",
+      "points": [
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я соберу чемодан."
+            }
+          ]
+        },
+        {
+          "title": "sein для движения",
+          "text": "Если человек перемещается (gehen, fahren, kommen) или меняет состояние (aufwachen), вместо haben ставим sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходил в кино."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Мы поехали в аэропорт."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Час відпустки",
+      "points": [
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я зберу валізу."
+            }
+          ]
+        },
+        {
+          "title": "sein для руху",
+          "text": "Якщо людина переміщується (gehen, fahren, kommen) або змінює стан (aufwachen), замість haben ставимо sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходив у кіно."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Ми поїхали в аеропорт."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Holiday time",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "I’ll pack a suitcase."
+            }
+          ]
+        },
+        {
+          "title": "sein for movement",
+          "text": "If you move from place to place (gehen, fahren, kommen) or change state (aufwachen), use sein instead of haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "I went to the cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "We drove to the airport."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Czas urlopu",
+      "points": [
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Spakuję walizkę."
+            }
+          ]
+        },
+        {
+          "title": "sein przy ruchu",
+          "text": "Jeśli ktoś się przemieszcza (gehen, fahren, kommen) albo zmienia stan (aufwachen), zamiast haben stawiamy sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Poszedłem do kina."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Pojechaliśmy na lotnisko."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Tiempo de vacaciones",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Haré la maleta."
+            }
+          ]
+        },
+        {
+          "title": "sein para el movimiento",
+          "text": "Si alguien se desplaza (gehen, fahren, kommen) o cambia de estado (aufwachen), se usa sein en lugar de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Fui al cine."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Fuimos al aeropuerto."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le temps des vacances",
+      "points": [
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Je vais faire ma valise."
+            }
+          ]
+        },
+        {
+          "title": "sein pour le mouvement",
+          "text": "Si on se déplace (gehen, fahren, kommen) ou si on change d’état (aufwachen), on met sein au lieu de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Je suis allé au cinéma."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Nous sommes allés à l’aéroport."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Tatil zamanı",
+      "points": [
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Bavul hazırlayacağım."
+            }
+          ]
+        },
+        {
+          "title": "Hareket için sein",
+          "text": "Biri yer değiştiriyorsa (gehen, fahren, kommen) ya da durum değiştiriyorsa (aufwachen), haben yerine sein kullanılır.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Sinemaya gittim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Havalimanına gittik."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Timpul concediului",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Îmi voi face bagajul."
+            }
+          ]
+        },
+        {
+          "title": "sein pentru mișcare",
+          "text": "Dacă cineva se deplasează (gehen, fahren, kommen) sau își schimbă starea (aufwachen), în loc de haben punem sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Am mers la cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Am mers la aeroport."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Ta'til vaqti",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Chamadon yig'aman."
+            }
+          ]
+        },
+        {
+          "title": "Harakat uchun sein",
+          "text": "Odam bir joydan boshqasiga o'tsa (gehen, fahren, kommen) yoki holatini o'zgartirsa (aufwachen), haben o'rniga sein qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Men kinoga bordim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Biz aeroportga bordik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "छुट्टी का समय",
+      "points": [
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "मैं सूटकेस पैक करूँगा।"
+            }
+          ]
+        },
+        {
+          "title": "गति के लिए sein",
+          "text": "अगर कोई जगह बदलता है (gehen, fahren, kommen) या उसकी हालत बदलती है (aufwachen), तो haben की जगह sein।",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "मैं सिनेमा गया।"
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "हम हवाई अड्डे गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "وقت الإجازة",
+      "points": [
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "سأحزم حقيبة."
+            }
+          ]
+        },
+        {
+          "title": "sein للحركة",
+          "text": "إذا تنقل الشخص من مكان إلى آخر (gehen، fahren، kommen) أو تغيرت حالته (aufwachen) نستعمل sein بدل haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "ذهبت إلى السينما."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "ذهبنا إلى المطار."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-six": {
+    "ru": {
+      "title": "Ужин в ресторане",
+      "points": [
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я соберу чемодан."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Прошедшее в разговоре: haben на втором месте, а глагол в форме ge...t уходит в конец: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Я играл в футбол."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Мы учили немецкий."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Вечеря в ресторані",
+      "points": [
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я зберу валізу."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Минуле в розмові: haben на другому місці, а дієслово у формі ge...t іде в кінець: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Я грав у футбол."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Ми вчили німецьку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Dinner at a restaurant",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "I’ll pack a suitcase."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Spoken past: haben in second place, and the verb in its ge...t form at the end: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "I played football."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "We learned German."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Kolacja w restauracji",
+      "points": [
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Spakuję walizkę."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Przeszłość w mowie: haben na drugim miejscu, a czasownik w formie ge...t na końcu: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Grałem w piłkę nożną."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Uczyliśmy się niemieckiego."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Cena en el restaurante",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Haré la maleta."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "El pasado hablado: haben en segundo lugar y el verbo en forma ge...t al final: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Jugué al fútbol."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Aprendimos alemán."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Dîner au restaurant",
+      "points": [
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Je vais faire ma valise."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt : haben + ge...t",
+          "text": "Le passé à l’oral : haben en deuxième position, et le verbe en ge...t à la fin : spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "J’ai joué au foot."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Nous avons appris l’allemand."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Restoranda akşam yemeği",
+      "points": [
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Bavul hazırlayacağım."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Konuşmada geçmiş: haben ikinci sırada, fiil ge...t biçiminde sonda: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Futbol oynadım."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Almanca öğrendik."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cina la restaurant",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Îmi voi face bagajul."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Trecutul vorbit: haben pe locul doi, iar verbul în forma ge...t la final: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Am jucat fotbal."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Am învățat germana."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Restoranda kechki ovqat",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Chamadon yig'aman."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Og'zaki o'tgan zamon: haben ikkinchi o'rinda, fe'l ge...t shaklida oxirida: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Men futbol o'ynadim."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Biz nemis tilini o'rgandik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "रेस्टोरेंट में रात का खाना",
+      "points": [
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "मैं सूटकेस पैक करूँगा।"
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "बोलचाल का भूतकाल: haben दूसरे स्थान पर, और क्रिया ge...t रूप में अंत में: spielen → gespielt।",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "मैंने फ़ुटबॉल खेला।"
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "हमने जर्मन सीखी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "العشاء في المطعم",
+      "points": [
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "سأحزم حقيبة."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "الماضي في الكلام: haben في المكان الثاني، والفعل بصيغة ge...t في الآخر: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "لعبت كرة القدم."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "تعلمنا الألمانية."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-seven": {
+    "ru": {
+      "title": "Хобби и досуг",
+      "points": [
+        {
+          "title": "sein для движения",
+          "text": "Если человек перемещается (gehen, fahren, kommen) или меняет состояние (aufwachen), вместо haben ставим sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходил в кино."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Мы поехали в аэропорт."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: глагол в конец",
+          "text": "После weil (потому что), dass (что), wenn (если, когда), ob (ли) глагол уходит в самый конец. Перед ними ставим запятую.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Я учу, потому что это важно."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Он говорит, что придёт."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Хобі й дозвілля",
+      "points": [
+        {
+          "title": "sein для руху",
+          "text": "Якщо людина переміщується (gehen, fahren, kommen) або змінює стан (aufwachen), замість haben ставимо sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходив у кіно."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Ми поїхали в аеропорт."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: дієслово в кінець",
+          "text": "Після weil (бо), dass (що), wenn (якщо, коли), ob (чи) дієслово йде в самий кінець. Перед ними ставимо кому.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Я вчу, бо це важливо."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Він каже, що прийде."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Hobbies and leisure",
+      "points": [
+        {
+          "title": "sein for movement",
+          "text": "If you move from place to place (gehen, fahren, kommen) or change state (aufwachen), use sein instead of haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "I went to the cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "We drove to the airport."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: verb to the end",
+          "text": "After weil (because), dass (that), wenn (if, when), ob (whether) the verb goes to the very end. Put a comma before them.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "I study because it’s important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "He says that he’s coming."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Hobby i czas wolny",
+      "points": [
+        {
+          "title": "sein przy ruchu",
+          "text": "Jeśli ktoś się przemieszcza (gehen, fahren, kommen) albo zmienia stan (aufwachen), zamiast haben stawiamy sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Poszedłem do kina."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Pojechaliśmy na lotnisko."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: czasownik na koniec",
+          "text": "Po weil (bo), dass (że), wenn (jeśli, kiedy), ob (czy) czasownik idzie na sam koniec. Przed nimi stawiamy przecinek.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Uczę się, bo to ważne."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Mówi, że przyjdzie."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Aficiones y ocio",
+      "points": [
+        {
+          "title": "sein para el movimiento",
+          "text": "Si alguien se desplaza (gehen, fahren, kommen) o cambia de estado (aufwachen), se usa sein en lugar de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Fui al cine."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Fuimos al aeropuerto."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: verbo al final",
+          "text": "Después de weil (porque), dass (que), wenn (si, cuando), ob (si) el verbo va al final. Antes va una coma.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Estudio porque es importante."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Dice que viene."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Loisirs",
+      "points": [
+        {
+          "title": "sein pour le mouvement",
+          "text": "Si on se déplace (gehen, fahren, kommen) ou si on change d’état (aufwachen), on met sein au lieu de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Je suis allé au cinéma."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Nous sommes allés à l’aéroport."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob : verbe à la fin",
+          "text": "Après weil (parce que), dass (que), wenn (si, quand), ob (si) le verbe va tout à la fin. On met une virgule avant.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "J’apprends parce que c’est important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Il dit qu’il vient."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Hobi ve boş zaman",
+      "points": [
+        {
+          "title": "Hareket için sein",
+          "text": "Biri yer değiştiriyorsa (gehen, fahren, kommen) ya da durum değiştiriyorsa (aufwachen), haben yerine sein kullanılır.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Sinemaya gittim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Havalimanına gittik."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: fiil sona",
+          "text": "weil (çünkü), dass (ki), wenn (eğer, -dığında), ob (-ip -mediği) sonrası fiil en sona gider. Öncesine virgül konur.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Öğreniyorum çünkü önemli."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Geleceğini söylüyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Hobby și timp liber",
+      "points": [
+        {
+          "title": "sein pentru mișcare",
+          "text": "Dacă cineva se deplasează (gehen, fahren, kommen) sau își schimbă starea (aufwachen), în loc de haben punem sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Am mers la cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Am mers la aeroport."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: verbul la final",
+          "text": "După weil (pentru că), dass (că), wenn (dacă, când), ob (dacă) verbul merge la final. Înaintea lor se pune virgulă.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "Învăț pentru că e important."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "Spune că vine."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Xobbi va bo'sh vaqt",
+      "points": [
+        {
+          "title": "Harakat uchun sein",
+          "text": "Odam bir joydan boshqasiga o'tsa (gehen, fahren, kommen) yoki holatini o'zgartirsa (aufwachen), haben o'rniga sein qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Men kinoga bordim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Biz aeroportga bordik."
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: fe'l oxiriga",
+          "text": "weil (chunki), dass (ki), wenn (agar, qachonki), ob (-mi yo'qmi) dan keyin fe'l eng oxiriga o'tadi. Ulardan oldin vergul qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "O'qiyman, chunki bu muhim."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "U kelishini aytyapti."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "शौक और फ़ुर्सत",
+      "points": [
+        {
+          "title": "गति के लिए sein",
+          "text": "अगर कोई जगह बदलता है (gehen, fahren, kommen) या उसकी हालत बदलती है (aufwachen), तो haben की जगह sein।",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "मैं सिनेमा गया।"
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "हम हवाई अड्डे गए।"
+            }
+          ]
+        },
+        {
+          "title": "weil, dass, wenn, ob: क्रिया अंत में",
+          "text": "weil (क्योंकि), dass (कि), wenn (अगर, जब), ob (कि ... या नहीं) के बाद क्रिया बिल्कुल अंत में जाती है। इनसे पहले कॉमा।",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "मैं सीखता हूँ क्योंकि यह ज़रूरी है।"
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "वह कहता है कि वह आएगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الهوايات ووقت الفراغ",
+      "points": [
+        {
+          "title": "sein للحركة",
+          "text": "إذا تنقل الشخص من مكان إلى آخر (gehen، fahren، kommen) أو تغيرت حالته (aufwachen) نستعمل sein بدل haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "ذهبت إلى السينما."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "ذهبنا إلى المطار."
+            }
+          ]
+        },
+        {
+          "title": "weil وdass وwenn وob: الفعل في الآخر",
+          "text": "بعد weil (لأن) وdass (أنّ) وwenn (إذا، عندما) وob (هل) يذهب الفعل إلى آخر الجملة. ونضع قبلها فاصلة.",
+          "examples": [
+            {
+              "de": "Ich lerne, weil es wichtig ist.",
+              "tr": "أتعلم لأن ذلك مهم."
+            },
+            {
+              "de": "Er sagt, dass er kommt.",
+              "tr": "يقول إنه سيأتي."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-eight": {
+    "ru": {
+      "title": "Покупки и мода",
+      "points": [
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я соберу чемодан."
+            }
+          ]
+        },
+        {
+          "title": "Wohin? или Wo?",
+          "text": "in, an, auf, hinter, neben и другие: если движение «куда?», то Akkusativ (auf den Tisch). Если место «где?», то Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Я ставлю вазу на стол."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Ваза стоит на столе."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Покупки й мода",
+      "points": [
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я зберу валізу."
+            }
+          ]
+        },
+        {
+          "title": "Wohin? чи Wo?",
+          "text": "in, an, auf, hinter, neben та інші: якщо рух «куди?», то Akkusativ (auf den Tisch). Якщо місце «де?», то Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Я ставлю вазу на стіл."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Ваза стоїть на столі."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Shopping and fashion",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "I’ll pack a suitcase."
+            }
+          ]
+        },
+        {
+          "title": "Wohin? or Wo?",
+          "text": "in, an, auf, hinter, neben and others: movement \"where to?\" takes the accusative (auf den Tisch). Location \"where?\" takes the dative (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "I put the vase on the table."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "The vase is on the table."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Zakupy i moda",
+      "points": [
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Spakuję walizkę."
+            }
+          ]
+        },
+        {
+          "title": "Wohin? czy Wo?",
+          "text": "in, an, auf, hinter, neben i inne: ruch „dokąd?” to Akkusativ (auf den Tisch). Miejsce „gdzie?” to Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Stawiam wazon na stół."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Wazon stoi na stole."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Compras y moda",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Haré la maleta."
+            }
+          ]
+        },
+        {
+          "title": "¿Wohin? o Wo?",
+          "text": "in, an, auf, hinter, neben y otras: movimiento \"¿adónde?\" lleva acusativo (auf den Tisch). Lugar \"¿dónde?\" lleva dativo (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Pongo el jarrón en la mesa."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "El jarrón está en la mesa."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Courses et mode",
+      "points": [
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Je vais faire ma valise."
+            }
+          ]
+        },
+        {
+          "title": "Wohin ? ou Wo ?",
+          "text": "in, an, auf, hinter, neben et d’autres : un mouvement « vers où ? » prend l’accusatif (auf den Tisch). Un lieu « où ? » prend le datif (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Je pose le vase sur la table."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Le vase est sur la table."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Alışveriş ve moda",
+      "points": [
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Bavul hazırlayacağım."
+            }
+          ]
+        },
+        {
+          "title": "Wohin? mi, Wo? mu",
+          "text": "in, an, auf, hinter, neben ve diğerleri: \"nereye?\" hareketi Akkusativ (auf den Tisch), \"nerede?\" yeri Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Vazoyu masaya koyuyorum."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Vazo masada duruyor."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cumpărături și modă",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Îmi voi face bagajul."
+            }
+          ]
+        },
+        {
+          "title": "Wohin? sau Wo?",
+          "text": "in, an, auf, hinter, neben și altele: mișcarea „încotro?” cere acuzativ (auf den Tisch). Locul „unde?” cere dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Pun vaza pe masă."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Vaza stă pe masă."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Xarid va moda",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Chamadon yig'aman."
+            }
+          ]
+        },
+        {
+          "title": "Wohin? yoki Wo?",
+          "text": "in, an, auf, hinter, neben va boshqalar: \"qayerga?\" harakat Akkusativ (auf den Tisch), \"qayerda?\" joy Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Vazani stolga qo'yaman."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Vaza stol ustida turibdi."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "खरीदारी और फ़ैशन",
+      "points": [
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "मैं सूटकेस पैक करूँगा।"
+            }
+          ]
+        },
+        {
+          "title": "Wohin? या Wo?",
+          "text": "in, an, auf, hinter, neben आदि: \"किधर?\" गति हो तो Akkusativ (auf den Tisch), \"कहाँ?\" जगह हो तो Dativ (auf dem Tisch)।",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "मैं फूलदान मेज़ पर रखता हूँ।"
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "फूलदान मेज़ पर रखा है।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "التسوق والموضة",
+      "points": [
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "سأحزم حقيبة."
+            }
+          ]
+        },
+        {
+          "title": "Wohin؟ أم Wo؟",
+          "text": "in وan وauf وhinter وneben وغيرها: الحركة \"إلى أين؟\" تأخذ المفعول (auf den Tisch)، والمكان \"أين؟\" يأخذ الجر (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "أضع المزهرية على الطاولة."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "المزهرية على الطاولة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-nine": {
+    "ru": {
+      "title": "Здоровье и спорт",
+      "points": [
+        {
+          "title": "Wohin? или Wo?",
+          "text": "in, an, auf, hinter, neben и другие: если движение «куда?», то Akkusativ (auf den Tisch). Если место «где?», то Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Я ставлю вазу на стол."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Ваза стоит на столе."
+            }
+          ]
+        },
+        {
+          "title": "sein для движения",
+          "text": "Если человек перемещается (gehen, fahren, kommen) или меняет состояние (aufwachen), вместо haben ставим sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходил в кино."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Мы поехали в аэропорт."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Здоров’я і спорт",
+      "points": [
+        {
+          "title": "Wohin? чи Wo?",
+          "text": "in, an, auf, hinter, neben та інші: якщо рух «куди?», то Akkusativ (auf den Tisch). Якщо місце «де?», то Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Я ставлю вазу на стіл."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Ваза стоїть на столі."
+            }
+          ]
+        },
+        {
+          "title": "sein для руху",
+          "text": "Якщо людина переміщується (gehen, fahren, kommen) або змінює стан (aufwachen), замість haben ставимо sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходив у кіно."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Ми поїхали в аеропорт."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Health and sport",
+      "points": [
+        {
+          "title": "Wohin? or Wo?",
+          "text": "in, an, auf, hinter, neben and others: movement \"where to?\" takes the accusative (auf den Tisch). Location \"where?\" takes the dative (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "I put the vase on the table."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "The vase is on the table."
+            }
+          ]
+        },
+        {
+          "title": "sein for movement",
+          "text": "If you move from place to place (gehen, fahren, kommen) or change state (aufwachen), use sein instead of haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "I went to the cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "We drove to the airport."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Zdrowie i sport",
+      "points": [
+        {
+          "title": "Wohin? czy Wo?",
+          "text": "in, an, auf, hinter, neben i inne: ruch „dokąd?” to Akkusativ (auf den Tisch). Miejsce „gdzie?” to Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Stawiam wazon na stół."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Wazon stoi na stole."
+            }
+          ]
+        },
+        {
+          "title": "sein przy ruchu",
+          "text": "Jeśli ktoś się przemieszcza (gehen, fahren, kommen) albo zmienia stan (aufwachen), zamiast haben stawiamy sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Poszedłem do kina."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Pojechaliśmy na lotnisko."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Salud y deporte",
+      "points": [
+        {
+          "title": "¿Wohin? o Wo?",
+          "text": "in, an, auf, hinter, neben y otras: movimiento \"¿adónde?\" lleva acusativo (auf den Tisch). Lugar \"¿dónde?\" lleva dativo (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Pongo el jarrón en la mesa."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "El jarrón está en la mesa."
+            }
+          ]
+        },
+        {
+          "title": "sein para el movimiento",
+          "text": "Si alguien se desplaza (gehen, fahren, kommen) o cambia de estado (aufwachen), se usa sein en lugar de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Fui al cine."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Fuimos al aeropuerto."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Santé et sport",
+      "points": [
+        {
+          "title": "Wohin ? ou Wo ?",
+          "text": "in, an, auf, hinter, neben et d’autres : un mouvement « vers où ? » prend l’accusatif (auf den Tisch). Un lieu « où ? » prend le datif (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Je pose le vase sur la table."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Le vase est sur la table."
+            }
+          ]
+        },
+        {
+          "title": "sein pour le mouvement",
+          "text": "Si on se déplace (gehen, fahren, kommen) ou si on change d’état (aufwachen), on met sein au lieu de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Je suis allé au cinéma."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Nous sommes allés à l’aéroport."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Sağlık ve spor",
+      "points": [
+        {
+          "title": "Wohin? mi, Wo? mu",
+          "text": "in, an, auf, hinter, neben ve diğerleri: \"nereye?\" hareketi Akkusativ (auf den Tisch), \"nerede?\" yeri Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Vazoyu masaya koyuyorum."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Vazo masada duruyor."
+            }
+          ]
+        },
+        {
+          "title": "Hareket için sein",
+          "text": "Biri yer değiştiriyorsa (gehen, fahren, kommen) ya da durum değiştiriyorsa (aufwachen), haben yerine sein kullanılır.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Sinemaya gittim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Havalimanına gittik."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Sănătate și sport",
+      "points": [
+        {
+          "title": "Wohin? sau Wo?",
+          "text": "in, an, auf, hinter, neben și altele: mișcarea „încotro?” cere acuzativ (auf den Tisch). Locul „unde?” cere dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Pun vaza pe masă."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Vaza stă pe masă."
+            }
+          ]
+        },
+        {
+          "title": "sein pentru mișcare",
+          "text": "Dacă cineva se deplasează (gehen, fahren, kommen) sau își schimbă starea (aufwachen), în loc de haben punem sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Am mers la cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Am mers la aeroport."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Sog'liq va sport",
+      "points": [
+        {
+          "title": "Wohin? yoki Wo?",
+          "text": "in, an, auf, hinter, neben va boshqalar: \"qayerga?\" harakat Akkusativ (auf den Tisch), \"qayerda?\" joy Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Vazani stolga qo'yaman."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Vaza stol ustida turibdi."
+            }
+          ]
+        },
+        {
+          "title": "Harakat uchun sein",
+          "text": "Odam bir joydan boshqasiga o'tsa (gehen, fahren, kommen) yoki holatini o'zgartirsa (aufwachen), haben o'rniga sein qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Men kinoga bordim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Biz aeroportga bordik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "स्वास्थ्य और खेल",
+      "points": [
+        {
+          "title": "Wohin? या Wo?",
+          "text": "in, an, auf, hinter, neben आदि: \"किधर?\" गति हो तो Akkusativ (auf den Tisch), \"कहाँ?\" जगह हो तो Dativ (auf dem Tisch)।",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "मैं फूलदान मेज़ पर रखता हूँ।"
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "फूलदान मेज़ पर रखा है।"
+            }
+          ]
+        },
+        {
+          "title": "गति के लिए sein",
+          "text": "अगर कोई जगह बदलता है (gehen, fahren, kommen) या उसकी हालत बदलती है (aufwachen), तो haben की जगह sein।",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "मैं सिनेमा गया।"
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "हम हवाई अड्डे गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الصحة والرياضة",
+      "points": [
+        {
+          "title": "Wohin؟ أم Wo؟",
+          "text": "in وan وauf وhinter وneben وغيرها: الحركة \"إلى أين؟\" تأخذ المفعول (auf den Tisch)، والمكان \"أين؟\" يأخذ الجر (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "أضع المزهرية على الطاولة."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "المزهرية على الطاولة."
+            }
+          ]
+        },
+        {
+          "title": "sein للحركة",
+          "text": "إذا تنقل الشخص من مكان إلى آخر (gehen، fahren، kommen) أو تغيرت حالته (aufwachen) نستعمل sein بدل haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "ذهبت إلى السينما."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "ذهبنا إلى المطار."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-ten": {
+    "ru": {
+      "title": "Дом и быт",
+      "points": [
+        {
+          "title": "ge в середине",
+          "text": "У отделяемых глаголов ge встаёт между приставкой и основой: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Он позвонил начальнику."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Мы принесли пиво."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я соберу чемодан."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Дім і побут",
+      "points": [
+        {
+          "title": "ge всередині",
+          "text": "У відокремлюваних дієслів ge стає між префіксом і основою: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Він зателефонував начальнику."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Ми принесли пиво."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я зберу валізу."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Home and household",
+      "points": [
+        {
+          "title": "ge in the middle",
+          "text": "With separable verbs ge goes between the prefix and the stem: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "He called the boss."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "We brought beer."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "I’ll pack a suitcase."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Dom i codzienność",
+      "points": [
+        {
+          "title": "ge w środku",
+          "text": "W czasownikach rozdzielnych ge stoi między przedrostkiem a tematem: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Zadzwonił do szefa."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Przynieśliśmy piwo."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Spakuję walizkę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Casa y hogar",
+      "points": [
+        {
+          "title": "ge en medio",
+          "text": "En los verbos separables ge va entre el prefijo y la raíz: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Llamó al jefe."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Trajimos cerveza."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Haré la maleta."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Maison et quotidien",
+      "points": [
+        {
+          "title": "ge au milieu",
+          "text": "Avec les verbes séparables, ge se place entre le préfixe et le radical : aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Il a appelé le chef."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Nous avons apporté de la bière."
+            }
+          ]
+        },
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Je vais faire ma valise."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Ev ve gündelik hayat",
+      "points": [
+        {
+          "title": "ge ortada",
+          "text": "Ayrılabilen fiillerde ge ön ek ile kök arasına girer: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "Şefi aradı."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Bira getirdik."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Bavul hazırlayacağım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Casă și gospodărie",
+      "points": [
+        {
+          "title": "ge la mijloc",
+          "text": "La verbele separabile ge stă între prefix și rădăcină: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "L-a sunat pe șef."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Am adus bere."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Îmi voi face bagajul."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Uy va ro'zg'or",
+      "points": [
+        {
+          "title": "ge o'rtada",
+          "text": "Ajraladigan fe'llarda ge old qo'shimcha va o'zak orasiga kiradi: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "U boshliqqa qo'ng'iroq qildi."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "Biz pivo olib keldik."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Chamadon yig'aman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "घर और रोज़मर्रा",
+      "points": [
+        {
+          "title": "ge बीच में",
+          "text": "अलग होने वाली क्रियाओं में ge उपसर्ग और मूल के बीच आता है: aufwachen → aufgewacht, anrufen → angerufen, einladen → eingeladen।",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "उसने बॉस को फ़ोन किया।"
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "हम बियर लाए।"
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "मैं सूटकेस पैक करूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "البيت والحياة اليومية",
+      "points": [
+        {
+          "title": "ge في الوسط",
+          "text": "في الأفعال المنفصلة تقع ge بين السابقة والجذر: aufwachen → aufgewacht، anrufen → angerufen، einladen → eingeladen.",
+          "examples": [
+            {
+              "de": "Er hat den Chef angerufen.",
+              "tr": "اتصل بالمدير."
+            },
+            {
+              "de": "Wir haben Bier mitgebracht.",
+              "tr": "أحضرنا البيرة."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "سأحزم حقيبة."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-eleven": {
+    "ru": {
+      "title": "Учёба и языки",
+      "points": [
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я соберу чемодан."
+            }
+          ]
+        },
+        {
+          "title": "sein для движения",
+          "text": "Если человек перемещается (gehen, fahren, kommen) или меняет состояние (aufwachen), вместо haben ставим sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходил в кино."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Мы поехали в аэропорт."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Навчання й мови",
+      "points": [
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я зберу валізу."
+            }
+          ]
+        },
+        {
+          "title": "sein для руху",
+          "text": "Якщо людина переміщується (gehen, fahren, kommen) або змінює стан (aufwachen), замість haben ставимо sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходив у кіно."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Ми поїхали в аеропорт."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Study and languages",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "I’ll pack a suitcase."
+            }
+          ]
+        },
+        {
+          "title": "sein for movement",
+          "text": "If you move from place to place (gehen, fahren, kommen) or change state (aufwachen), use sein instead of haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "I went to the cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "We drove to the airport."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Nauka i języki",
+      "points": [
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Spakuję walizkę."
+            }
+          ]
+        },
+        {
+          "title": "sein przy ruchu",
+          "text": "Jeśli ktoś się przemieszcza (gehen, fahren, kommen) albo zmienia stan (aufwachen), zamiast haben stawiamy sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Poszedłem do kina."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Pojechaliśmy na lotnisko."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Estudios e idiomas",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Haré la maleta."
+            }
+          ]
+        },
+        {
+          "title": "sein para el movimiento",
+          "text": "Si alguien se desplaza (gehen, fahren, kommen) o cambia de estado (aufwachen), se usa sein en lugar de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Fui al cine."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Fuimos al aeropuerto."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Études et langues",
+      "points": [
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Je vais faire ma valise."
+            }
+          ]
+        },
+        {
+          "title": "sein pour le mouvement",
+          "text": "Si on se déplace (gehen, fahren, kommen) ou si on change d’état (aufwachen), on met sein au lieu de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Je suis allé au cinéma."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Nous sommes allés à l’aéroport."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Eğitim ve diller",
+      "points": [
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Bavul hazırlayacağım."
+            }
+          ]
+        },
+        {
+          "title": "Hareket için sein",
+          "text": "Biri yer değiştiriyorsa (gehen, fahren, kommen) ya da durum değiştiriyorsa (aufwachen), haben yerine sein kullanılır.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Sinemaya gittim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Havalimanına gittik."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Studii și limbi",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Îmi voi face bagajul."
+            }
+          ]
+        },
+        {
+          "title": "sein pentru mișcare",
+          "text": "Dacă cineva se deplasează (gehen, fahren, kommen) sau își schimbă starea (aufwachen), în loc de haben punem sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Am mers la cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Am mers la aeroport."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "O'qish va tillar",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Chamadon yig'aman."
+            }
+          ]
+        },
+        {
+          "title": "Harakat uchun sein",
+          "text": "Odam bir joydan boshqasiga o'tsa (gehen, fahren, kommen) yoki holatini o'zgartirsa (aufwachen), haben o'rniga sein qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Men kinoga bordim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Biz aeroportga bordik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "पढ़ाई और भाषाएँ",
+      "points": [
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "मैं सूटकेस पैक करूँगा।"
+            }
+          ]
+        },
+        {
+          "title": "गति के लिए sein",
+          "text": "अगर कोई जगह बदलता है (gehen, fahren, kommen) या उसकी हालत बदलती है (aufwachen), तो haben की जगह sein।",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "मैं सिनेमा गया।"
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "हम हवाई अड्डे गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الدراسة واللغات",
+      "points": [
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "سأحزم حقيبة."
+            }
+          ]
+        },
+        {
+          "title": "sein للحركة",
+          "text": "إذا تنقل الشخص من مكان إلى آخر (gehen، fahren، kommen) أو تغيرت حالته (aufwachen) نستعمل sein بدل haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "ذهبت إلى السينما."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "ذهبنا إلى المطار."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-twelve": {
+    "ru": {
+      "title": "Природа и погода",
+      "points": [
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я соберу чемодан."
+            }
+          ]
+        },
+        {
+          "title": "sein для движения",
+          "text": "Если человек перемещается (gehen, fahren, kommen) или меняет состояние (aufwachen), вместо haben ставим sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходил в кино."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Мы поехали в аэропорт."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Природа й погода",
+      "points": [
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я зберу валізу."
+            }
+          ]
+        },
+        {
+          "title": "sein для руху",
+          "text": "Якщо людина переміщується (gehen, fahren, kommen) або змінює стан (aufwachen), замість haben ставимо sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходив у кіно."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Ми поїхали в аеропорт."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Nature and weather",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "I’ll pack a suitcase."
+            }
+          ]
+        },
+        {
+          "title": "sein for movement",
+          "text": "If you move from place to place (gehen, fahren, kommen) or change state (aufwachen), use sein instead of haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "I went to the cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "We drove to the airport."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Przyroda i pogoda",
+      "points": [
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Spakuję walizkę."
+            }
+          ]
+        },
+        {
+          "title": "sein przy ruchu",
+          "text": "Jeśli ktoś się przemieszcza (gehen, fahren, kommen) albo zmienia stan (aufwachen), zamiast haben stawiamy sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Poszedłem do kina."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Pojechaliśmy na lotnisko."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Naturaleza y tiempo",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Haré la maleta."
+            }
+          ]
+        },
+        {
+          "title": "sein para el movimiento",
+          "text": "Si alguien se desplaza (gehen, fahren, kommen) o cambia de estado (aufwachen), se usa sein en lugar de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Fui al cine."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Fuimos al aeropuerto."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Nature et météo",
+      "points": [
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Je vais faire ma valise."
+            }
+          ]
+        },
+        {
+          "title": "sein pour le mouvement",
+          "text": "Si on se déplace (gehen, fahren, kommen) ou si on change d’état (aufwachen), on met sein au lieu de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Je suis allé au cinéma."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Nous sommes allés à l’aéroport."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Doğa ve hava",
+      "points": [
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Bavul hazırlayacağım."
+            }
+          ]
+        },
+        {
+          "title": "Hareket için sein",
+          "text": "Biri yer değiştiriyorsa (gehen, fahren, kommen) ya da durum değiştiriyorsa (aufwachen), haben yerine sein kullanılır.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Sinemaya gittim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Havalimanına gittik."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Natură și vreme",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Îmi voi face bagajul."
+            }
+          ]
+        },
+        {
+          "title": "sein pentru mișcare",
+          "text": "Dacă cineva se deplasează (gehen, fahren, kommen) sau își schimbă starea (aufwachen), în loc de haben punem sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Am mers la cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Am mers la aeroport."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Tabiat va ob-havo",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Chamadon yig'aman."
+            }
+          ]
+        },
+        {
+          "title": "Harakat uchun sein",
+          "text": "Odam bir joydan boshqasiga o'tsa (gehen, fahren, kommen) yoki holatini o'zgartirsa (aufwachen), haben o'rniga sein qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Men kinoga bordim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Biz aeroportga bordik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "प्रकृति और मौसम",
+      "points": [
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "मैं सूटकेस पैक करूँगा।"
+            }
+          ]
+        },
+        {
+          "title": "गति के लिए sein",
+          "text": "अगर कोई जगह बदलता है (gehen, fahren, kommen) या उसकी हालत बदलती है (aufwachen), तो haben की जगह sein।",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "मैं सिनेमा गया।"
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "हम हवाई अड्डे गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الطبيعة والطقس",
+      "points": [
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "سأحزم حقيبة."
+            }
+          ]
+        },
+        {
+          "title": "sein للحركة",
+          "text": "إذا تنقل الشخص من مكان إلى آخر (gehen، fahren، kommen) أو تغيرت حالته (aufwachen) نستعمل sein بدل haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "ذهبت إلى السينما."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "ذهبنا إلى المطار."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-thirteen": {
+    "ru": {
+      "title": "Транспорт и поездки",
+      "points": [
+        {
+          "title": "mit",
+          "text": "mit значит «с кем-то» и «на каком транспорте». После mit всегда Dativ.",
+          "examples": [
+            {
+              "de": "Ich fahre mit dem Fahrrad.",
+              "tr": "Я еду на велосипеде."
+            },
+            {
+              "de": "Er spricht mit dem Lehrer.",
+              "tr": "Он говорит с учителем."
+            }
+          ]
+        },
+        {
+          "title": "sein для движения",
+          "text": "Если человек перемещается (gehen, fahren, kommen) или меняет состояние (aufwachen), вместо haben ставим sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходил в кино."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Мы поехали в аэропорт."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Транспорт і поїздки",
+      "points": [
+        {
+          "title": "mit",
+          "text": "mit означає «з кимось» і «яким транспортом». Після mit завжди Dativ.",
+          "examples": [
+            {
+              "de": "Ich fahre mit dem Fahrrad.",
+              "tr": "Я їду на велосипеді."
+            },
+            {
+              "de": "Er spricht mit dem Lehrer.",
+              "tr": "Він говорить з учителем."
+            }
+          ]
+        },
+        {
+          "title": "sein для руху",
+          "text": "Якщо людина переміщується (gehen, fahren, kommen) або змінює стан (aufwachen), замість haben ставимо sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходив у кіно."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Ми поїхали в аеропорт."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Transport and trips",
+      "points": [
+        {
+          "title": "mit",
+          "text": "mit means \"with someone\" and \"by what transport\". mit always takes the dative.",
+          "examples": [
+            {
+              "de": "Ich fahre mit dem Fahrrad.",
+              "tr": "I go by bike."
+            },
+            {
+              "de": "Er spricht mit dem Lehrer.",
+              "tr": "He’s talking to the teacher."
+            }
+          ]
+        },
+        {
+          "title": "sein for movement",
+          "text": "If you move from place to place (gehen, fahren, kommen) or change state (aufwachen), use sein instead of haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "I went to the cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "We drove to the airport."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Transport i podróże",
+      "points": [
+        {
+          "title": "mit",
+          "text": "mit znaczy „z kimś” i „czym” jedziemy. Po mit zawsze Dativ.",
+          "examples": [
+            {
+              "de": "Ich fahre mit dem Fahrrad.",
+              "tr": "Jadę rowerem."
+            },
+            {
+              "de": "Er spricht mit dem Lehrer.",
+              "tr": "On rozmawia z nauczycielem."
+            }
+          ]
+        },
+        {
+          "title": "sein przy ruchu",
+          "text": "Jeśli ktoś się przemieszcza (gehen, fahren, kommen) albo zmienia stan (aufwachen), zamiast haben stawiamy sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Poszedłem do kina."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Pojechaliśmy na lotnisko."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Transporte y viajes",
+      "points": [
+        {
+          "title": "mit",
+          "text": "mit significa \"con alguien\" y \"en qué transporte\". Tras mit siempre dativo.",
+          "examples": [
+            {
+              "de": "Ich fahre mit dem Fahrrad.",
+              "tr": "Voy en bici."
+            },
+            {
+              "de": "Er spricht mit dem Lehrer.",
+              "tr": "Él habla con el profesor."
+            }
+          ]
+        },
+        {
+          "title": "sein para el movimiento",
+          "text": "Si alguien se desplaza (gehen, fahren, kommen) o cambia de estado (aufwachen), se usa sein en lugar de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Fui al cine."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Fuimos al aeropuerto."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Transports et trajets",
+      "points": [
+        {
+          "title": "mit",
+          "text": "mit veut dire « avec quelqu’un » et « en quel transport ». Après mit, toujours le datif.",
+          "examples": [
+            {
+              "de": "Ich fahre mit dem Fahrrad.",
+              "tr": "Je vais à vélo."
+            },
+            {
+              "de": "Er spricht mit dem Lehrer.",
+              "tr": "Il parle avec le professeur."
+            }
+          ]
+        },
+        {
+          "title": "sein pour le mouvement",
+          "text": "Si on se déplace (gehen, fahren, kommen) ou si on change d’état (aufwachen), on met sein au lieu de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Je suis allé au cinéma."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Nous sommes allés à l’aéroport."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Ulaşım ve yolculuk",
+      "points": [
+        {
+          "title": "mit",
+          "text": "mit \"biriyle\" ve \"hangi araçla\" demektir. mit’ten sonra her zaman Dativ.",
+          "examples": [
+            {
+              "de": "Ich fahre mit dem Fahrrad.",
+              "tr": "Bisikletle gidiyorum."
+            },
+            {
+              "de": "Er spricht mit dem Lehrer.",
+              "tr": "O öğretmenle konuşuyor."
+            }
+          ]
+        },
+        {
+          "title": "Hareket için sein",
+          "text": "Biri yer değiştiriyorsa (gehen, fahren, kommen) ya da durum değiştiriyorsa (aufwachen), haben yerine sein kullanılır.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Sinemaya gittim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Havalimanına gittik."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Transport și călătorii",
+      "points": [
+        {
+          "title": "mit",
+          "text": "mit înseamnă „cu cineva” și „cu ce mijloc de transport”. După mit mereu dativ.",
+          "examples": [
+            {
+              "de": "Ich fahre mit dem Fahrrad.",
+              "tr": "Merg cu bicicleta."
+            },
+            {
+              "de": "Er spricht mit dem Lehrer.",
+              "tr": "El vorbește cu profesorul."
+            }
+          ]
+        },
+        {
+          "title": "sein pentru mișcare",
+          "text": "Dacă cineva se deplasează (gehen, fahren, kommen) sau își schimbă starea (aufwachen), în loc de haben punem sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Am mers la cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Am mers la aeroport."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Transport va safarlar",
+      "points": [
+        {
+          "title": "mit",
+          "text": "mit \"kim bilandir\" va \"qanday transportda\" degani. mit dan keyin doim Dativ.",
+          "examples": [
+            {
+              "de": "Ich fahre mit dem Fahrrad.",
+              "tr": "Men velosipedda boraman."
+            },
+            {
+              "de": "Er spricht mit dem Lehrer.",
+              "tr": "U o'qituvchi bilan gaplashyapti."
+            }
+          ]
+        },
+        {
+          "title": "Harakat uchun sein",
+          "text": "Odam bir joydan boshqasiga o'tsa (gehen, fahren, kommen) yoki holatini o'zgartirsa (aufwachen), haben o'rniga sein qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Men kinoga bordim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Biz aeroportga bordik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "परिवहन और यात्राएँ",
+      "points": [
+        {
+          "title": "mit",
+          "text": "mit मतलब \"किसी के साथ\" और \"किस सवारी से\"। mit के बाद हमेशा Dativ।",
+          "examples": [
+            {
+              "de": "Ich fahre mit dem Fahrrad.",
+              "tr": "मैं साइकिल से जाता हूँ।"
+            },
+            {
+              "de": "Er spricht mit dem Lehrer.",
+              "tr": "वह शिक्षक से बात कर रहा है।"
+            }
+          ]
+        },
+        {
+          "title": "गति के लिए sein",
+          "text": "अगर कोई जगह बदलता है (gehen, fahren, kommen) या उसकी हालत बदलती है (aufwachen), तो haben की जगह sein।",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "मैं सिनेमा गया।"
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "हम हवाई अड्डे गए।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "النقل والرحلات",
+      "points": [
+        {
+          "title": "mit",
+          "text": "mit تعني \"مع شخص\" و\"بأي وسيلة نقل\". وبعد mit دائماً حالة الجر.",
+          "examples": [
+            {
+              "de": "Ich fahre mit dem Fahrrad.",
+              "tr": "أذهب بالدراجة."
+            },
+            {
+              "de": "Er spricht mit dem Lehrer.",
+              "tr": "هو يتكلم مع المعلم."
+            }
+          ]
+        },
+        {
+          "title": "sein للحركة",
+          "text": "إذا تنقل الشخص من مكان إلى آخر (gehen، fahren، kommen) أو تغيرت حالته (aufwachen) نستعمل sein بدل haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "ذهبت إلى السينما."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "ذهبنا إلى المطار."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-fourteen": {
+    "ru": {
+      "title": "Мир технологий",
+      "points": [
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я соберу чемодан."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Прошедшее в разговоре: haben на втором месте, а глагол в форме ge...t уходит в конец: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Я играл в футбол."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Мы учили немецкий."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Світ технологій",
+      "points": [
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я зберу валізу."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Минуле в розмові: haben на другому місці, а дієслово у формі ge...t іде в кінець: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Я грав у футбол."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Ми вчили німецьку."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "The world of technology",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "I’ll pack a suitcase."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Spoken past: haben in second place, and the verb in its ge...t form at the end: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "I played football."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "We learned German."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Świat technologii",
+      "points": [
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Spakuję walizkę."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Przeszłość w mowie: haben na drugim miejscu, a czasownik w formie ge...t na końcu: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Grałem w piłkę nożną."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Uczyliśmy się niemieckiego."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "El mundo de la tecnología",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Haré la maleta."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "El pasado hablado: haben en segundo lugar y el verbo en forma ge...t al final: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Jugué al fútbol."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Aprendimos alemán."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Le monde de la technologie",
+      "points": [
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Je vais faire ma valise."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt : haben + ge...t",
+          "text": "Le passé à l’oral : haben en deuxième position, et le verbe en ge...t à la fin : spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "J’ai joué au foot."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Nous avons appris l’allemand."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Teknoloji dünyası",
+      "points": [
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Bavul hazırlayacağım."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Konuşmada geçmiş: haben ikinci sırada, fiil ge...t biçiminde sonda: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Futbol oynadım."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Almanca öğrendik."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Lumea tehnologiei",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Îmi voi face bagajul."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Trecutul vorbit: haben pe locul doi, iar verbul în forma ge...t la final: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Am jucat fotbal."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Am învățat germana."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Texnologiyalar dunyosi",
+      "points": [
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Chamadon yig'aman."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "Og'zaki o'tgan zamon: haben ikkinchi o'rinda, fe'l ge...t shaklida oxirida: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "Men futbol o'ynadim."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "Biz nemis tilini o'rgandik."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "तकनीक की दुनिया",
+      "points": [
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "मैं सूटकेस पैक करूँगा।"
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "बोलचाल का भूतकाल: haben दूसरे स्थान पर, और क्रिया ge...t रूप में अंत में: spielen → gespielt।",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "मैंने फ़ुटबॉल खेला।"
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "हमने जर्मन सीखी।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "عالم التكنولوجيا",
+      "points": [
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "سأحزم حقيبة."
+            }
+          ]
+        },
+        {
+          "title": "Perfekt: haben + ge...t",
+          "text": "الماضي في الكلام: haben في المكان الثاني، والفعل بصيغة ge...t في الآخر: spielen → gespielt.",
+          "examples": [
+            {
+              "de": "Ich habe Fußball gespielt.",
+              "tr": "لعبت كرة القدم."
+            },
+            {
+              "de": "Wir haben Deutsch gelernt.",
+              "tr": "تعلمنا الألمانية."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "time-fifteen": {
+    "ru": {
+      "title": "Культура и искусство",
+      "points": [
+        {
+          "title": "Wohin? или Wo?",
+          "text": "in, an, auf, hinter, neben и другие: если движение «куда?», то Akkusativ (auf den Tisch). Если место «где?», то Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Я ставлю вазу на стол."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Ваза стоит на столе."
+            }
+          ]
+        },
+        {
+          "title": "sein для движения",
+          "text": "Если человек перемещается (gehen, fahren, kommen) или меняет состояние (aufwachen), вместо haben ставим sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходил в кино."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Мы поехали в аэропорт."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + инфинитив",
+          "text": "werden на втором месте, инфинитив в конце: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я соберу чемодан."
+            }
+          ]
+        }
+      ]
+    },
+    "uk": {
+      "title": "Культура й мистецтво",
+      "points": [
+        {
+          "title": "Wohin? чи Wo?",
+          "text": "in, an, auf, hinter, neben та інші: якщо рух «куди?», то Akkusativ (auf den Tisch). Якщо місце «де?», то Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Я ставлю вазу на стіл."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Ваза стоїть на столі."
+            }
+          ]
+        },
+        {
+          "title": "sein для руху",
+          "text": "Якщо людина переміщується (gehen, fahren, kommen) або змінює стан (aufwachen), замість haben ставимо sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Я ходив у кіно."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Ми поїхали в аеропорт."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + інфінітив",
+          "text": "werden на другому місці, інфінітив у кінці: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Я зберу валізу."
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Culture and art",
+      "points": [
+        {
+          "title": "Wohin? or Wo?",
+          "text": "in, an, auf, hinter, neben and others: movement \"where to?\" takes the accusative (auf den Tisch). Location \"where?\" takes the dative (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "I put the vase on the table."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "The vase is on the table."
+            }
+          ]
+        },
+        {
+          "title": "sein for movement",
+          "text": "If you move from place to place (gehen, fahren, kommen) or change state (aufwachen), use sein instead of haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "I went to the cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "We drove to the airport."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + infinitive",
+          "text": "werden in second place, infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "I’ll pack a suitcase."
+            }
+          ]
+        }
+      ]
+    },
+    "pl": {
+      "title": "Kultura i sztuka",
+      "points": [
+        {
+          "title": "Wohin? czy Wo?",
+          "text": "in, an, auf, hinter, neben i inne: ruch „dokąd?” to Akkusativ (auf den Tisch). Miejsce „gdzie?” to Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Stawiam wazon na stół."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Wazon stoi na stole."
+            }
+          ]
+        },
+        {
+          "title": "sein przy ruchu",
+          "text": "Jeśli ktoś się przemieszcza (gehen, fahren, kommen) albo zmienia stan (aufwachen), zamiast haben stawiamy sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Poszedłem do kina."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Pojechaliśmy na lotnisko."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + bezokolicznik",
+          "text": "werden na drugim miejscu, bezokolicznik na końcu: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Spakuję walizkę."
+            }
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Cultura y arte",
+      "points": [
+        {
+          "title": "¿Wohin? o Wo?",
+          "text": "in, an, auf, hinter, neben y otras: movimiento \"¿adónde?\" lleva acusativo (auf den Tisch). Lugar \"¿dónde?\" lleva dativo (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Pongo el jarrón en la mesa."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "El jarrón está en la mesa."
+            }
+          ]
+        },
+        {
+          "title": "sein para el movimiento",
+          "text": "Si alguien se desplaza (gehen, fahren, kommen) o cambia de estado (aufwachen), se usa sein en lugar de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Fui al cine."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Fuimos al aeropuerto."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + infinitivo",
+          "text": "werden en segundo lugar, infinitivo al final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Haré la maleta."
+            }
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Culture et art",
+      "points": [
+        {
+          "title": "Wohin ? ou Wo ?",
+          "text": "in, an, auf, hinter, neben et d’autres : un mouvement « vers où ? » prend l’accusatif (auf den Tisch). Un lieu « où ? » prend le datif (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Je pose le vase sur la table."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Le vase est sur la table."
+            }
+          ]
+        },
+        {
+          "title": "sein pour le mouvement",
+          "text": "Si on se déplace (gehen, fahren, kommen) ou si on change d’état (aufwachen), on met sein au lieu de haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Je suis allé au cinéma."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Nous sommes allés à l’aéroport."
+            }
+          ]
+        },
+        {
+          "title": "Futur I : werden + infinitif",
+          "text": "werden en deuxième position, infinitif à la fin : ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Je vais faire ma valise."
+            }
+          ]
+        }
+      ]
+    },
+    "tr": {
+      "title": "Kültür ve sanat",
+      "points": [
+        {
+          "title": "Wohin? mi, Wo? mu",
+          "text": "in, an, auf, hinter, neben ve diğerleri: \"nereye?\" hareketi Akkusativ (auf den Tisch), \"nerede?\" yeri Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Vazoyu masaya koyuyorum."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Vazo masada duruyor."
+            }
+          ]
+        },
+        {
+          "title": "Hareket için sein",
+          "text": "Biri yer değiştiriyorsa (gehen, fahren, kommen) ya da durum değiştiriyorsa (aufwachen), haben yerine sein kullanılır.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Sinemaya gittim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Havalimanına gittik."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + mastar",
+          "text": "werden ikinci sırada, mastar sonda: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Bavul hazırlayacağım."
+            }
+          ]
+        }
+      ]
+    },
+    "ro": {
+      "title": "Cultură și artă",
+      "points": [
+        {
+          "title": "Wohin? sau Wo?",
+          "text": "in, an, auf, hinter, neben și altele: mișcarea „încotro?” cere acuzativ (auf den Tisch). Locul „unde?” cere dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Pun vaza pe masă."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Vaza stă pe masă."
+            }
+          ]
+        },
+        {
+          "title": "sein pentru mișcare",
+          "text": "Dacă cineva se deplasează (gehen, fahren, kommen) sau își schimbă starea (aufwachen), în loc de haben punem sein.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Am mers la cinema."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Am mers la aeroport."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden pe locul doi, infinitivul la final: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Îmi voi face bagajul."
+            }
+          ]
+        }
+      ]
+    },
+    "uz": {
+      "title": "Madaniyat va san'at",
+      "points": [
+        {
+          "title": "Wohin? yoki Wo?",
+          "text": "in, an, auf, hinter, neben va boshqalar: \"qayerga?\" harakat Akkusativ (auf den Tisch), \"qayerda?\" joy Dativ (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "Vazani stolga qo'yaman."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "Vaza stol ustida turibdi."
+            }
+          ]
+        },
+        {
+          "title": "Harakat uchun sein",
+          "text": "Odam bir joydan boshqasiga o'tsa (gehen, fahren, kommen) yoki holatini o'zgartirsa (aufwachen), haben o'rniga sein qo'yiladi.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "Men kinoga bordim."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "Biz aeroportga bordik."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + infinitiv",
+          "text": "werden ikkinchi o'rinda, infinitiv oxirida: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "Chamadon yig'aman."
+            }
+          ]
+        }
+      ]
+    },
+    "hi": {
+      "title": "संस्कृति और कला",
+      "points": [
+        {
+          "title": "Wohin? या Wo?",
+          "text": "in, an, auf, hinter, neben आदि: \"किधर?\" गति हो तो Akkusativ (auf den Tisch), \"कहाँ?\" जगह हो तो Dativ (auf dem Tisch)।",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "मैं फूलदान मेज़ पर रखता हूँ।"
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "फूलदान मेज़ पर रखा है।"
+            }
+          ]
+        },
+        {
+          "title": "गति के लिए sein",
+          "text": "अगर कोई जगह बदलता है (gehen, fahren, kommen) या उसकी हालत बदलती है (aufwachen), तो haben की जगह sein।",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "मैं सिनेमा गया।"
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "हम हवाई अड्डे गए।"
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + इन्फ़िनिटिव",
+          "text": "werden दूसरे स्थान पर, इन्फ़िनिटिव अंत में: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden।",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "मैं सूटकेस पैक करूँगा।"
+            }
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "title": "الثقافة والفن",
+      "points": [
+        {
+          "title": "Wohin؟ أم Wo؟",
+          "text": "in وan وauf وhinter وneben وغيرها: الحركة \"إلى أين؟\" تأخذ المفعول (auf den Tisch)، والمكان \"أين؟\" يأخذ الجر (auf dem Tisch).",
+          "examples": [
+            {
+              "de": "Ich stelle die Vase auf den Tisch.",
+              "tr": "أضع المزهرية على الطاولة."
+            },
+            {
+              "de": "Die Vase steht auf dem Tisch.",
+              "tr": "المزهرية على الطاولة."
+            }
+          ]
+        },
+        {
+          "title": "sein للحركة",
+          "text": "إذا تنقل الشخص من مكان إلى آخر (gehen، fahren، kommen) أو تغيرت حالته (aufwachen) نستعمل sein بدل haben.",
+          "examples": [
+            {
+              "de": "Ich bin ins Kino gegangen.",
+              "tr": "ذهبت إلى السينما."
+            },
+            {
+              "de": "Wir sind zum Flughafen gefahren.",
+              "tr": "ذهبنا إلى المطار."
+            }
+          ]
+        },
+        {
+          "title": "Futur I: werden + المصدر",
+          "text": "werden في المكان الثاني والمصدر في الآخر: ich werde، du wirst، er wird، wir werden، ihr werdet، sie werden.",
+          "examples": [
+            {
+              "de": "Ich werde einen Koffer packen.",
+              "tr": "سأحزم حقيبة."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
